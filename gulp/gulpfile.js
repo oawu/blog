@@ -5,7 +5,7 @@ var gulp = require ('gulp'),
 gulp.task ('default', function () {
   livereload.listen ();
 
-  ['./root/*.html', './root/css/**/*.css', './root/res/**/*.js', './root/js/**/*.js'].forEach (function (t) {
+  ['./root/*.html', './root/css/**/*.css', './root/res/**/*.js', './root/*.php', './root/js/**/*.js'].forEach (function (t) {
     gulp.watch (t).on ('change', function () {
       gulp.run ('reload');
     });

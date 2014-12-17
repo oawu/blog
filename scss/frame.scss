@@ -186,6 +186,7 @@ html {
               float: left;
             }
             .tags {
+              display: inline-block;
               width: calc(100% - 100px);
               @include overflow-docx3();
             }
