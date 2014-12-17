@@ -38,11 +38,33 @@
 
     <div id='container' class='clearfix'>
       <div class='left'>
-        <!-- blocks -->
-        %s
+<?php   if ($blocks) {
+          foreach ($blocks as $block) { ?>
+            <div class='block paper'>
+              <div class='title clearfix'>
+                <a href="<?php echo $block['href'];?>"><h2><?php echo $block['name'];?></h2></a>
+                <div class='date'><?php echo $block['date'];?></div>
+              </div>
+              <div class='content'><?php echo $block['content'];?></div>
+              <div class='info clearfix'>
+                <div class='tags'>&nbsp;&nbsp;</div>
+                <div class='more'>
+                  <a href="<?php echo $block['href'];?>">閱讀更多 »</a>
+                </div>
+              </div>
+            </div>
+<?php     }
+        } ?>
 
-        <!-- pagination -->
-        %s
+        <div class='block pagination'>
+          <ul class="pagination clearfix">
+    <?php   if ($lis) {
+              foreach ($lis as $li) { ?>
+                <li<?php echo $li['active'] ? ' class="active"' : '' ;?>><a href="<?php echo $li['href'];?>"><?php echo $li['content'];?></a></li>
+        <?php }
+            } ?>
+          </ul>
+        </div>
       </div>
       <div class='right'>
         <div class='pin oa_infos'><div class='line1'></div><div class='line2'></div><div class='avatar_outline'><div class='avatar'><img src="https://graph.facebook.com/100000100541088/picture?width=100&height=100"></div></div><div class='info info1'>吳政賢(OA)</div><div class='info info2'>comdan66@gmail.com</div><div class='info info3'>職業: hTmL攻城獅</div><div class='info info4'>生日: 1989/07/21</div></div>

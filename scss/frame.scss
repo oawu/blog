@@ -159,14 +159,20 @@ html {
           .title {
             padding: 8px;
             border-bottom: 1px solid rgba(183, 184, 188, 0.5);
-
-            h2 {
-              float: left;
-              margin: 0;
-              width: calc(100% - 100px);
-              height: 100%;
+            a {
+              color: rgba(50, 50, 50, 0.7);
+              &:hover {
+                color: rgba(50, 50, 50, 0.9);
+              }
+              h2 {
+                float: left;
+                margin: 0;
+                width: calc(100% - 100px);
+                height: 100%;
+              }
             }
-            .time {
+
+            .date {
               text-align: right;
               display: inline-block;
               float: left;
