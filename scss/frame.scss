@@ -102,10 +102,12 @@ html {
           @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
           
           .title {
-            border-bottom: 1px solid rgba(213, 213, 213, 1);
             padding: 5px 0;
-            @include overflow-docx3();
+            text-align: left;
             margin-bottom: 10px;
+            border-bottom: 1px solid rgba(213, 213, 213, 1);
+            
+            @include overflow-docx3();
           }
 
           &.oa_infos {
@@ -223,9 +225,73 @@ html {
           &.githubbadge {
             iframe {
               border: 0;
-              height: 108px;
+              height: 120px;
               width: 100%;
               overflow: hidden;              
+            }
+          }
+          &.flickr {
+            .box {
+              position: relative;
+              height: 150px;
+              background: #fff url(data:image/gif;base64,R0lGODlhEAALAPQAAP///5qamu/v7+vr6/b29pycnJqamqysrM3Nzb+/v+Pj46enp7e3t9DQ0MHBweTk5KioqJubm7i4uPT09O/v7/r6+rCwsPDw8Pn5+eHh4djY2Onp6ff39wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA) no-repeat center center;
+              overflow: hidden;
+              
+              .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: inline-block;
+                padding: 5px;
+                border: 0;
+                color: rgba(255, 255, 255, 1);
+                font-size: 14px;
+                font-weight: bolder;
+
+                @include opacity(.6);
+                @include overflow-docx3();
+                @include transition(all .3s);
+                @include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.575));
+                @include background-image(linear-gradient(rgba(0,0,0, .9) 10%,
+                                                          rgba(0,0,0, .8) 20%,
+                                                          rgba(0,0,0, .7) 30%,
+                                                          rgba(0,0,0, .6) 40%,
+                                                          rgba(0,0,0, .5) 50%,
+                                                          rgba(0,0,0, .4) 60%,
+                                                          rgba(0,0,0, .3) 70%,
+                                                          rgba(0,0,0, .2) 80%,
+                                                          rgba(0,0,0, .1) 90%,
+                                                          rgba(0,0,0, .0) 100%));
+
+                &:hover {
+                  @include opacity(1);
+                  @include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.775));
+                }
+              }
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                @include opacity(0);
+                @include transition(all .8s);
+                
+                &.show {
+                  @include opacity(1);
+                }
+              }
+            }
+          }
+          &.plurk {
+            iframe {
+              @include border-radius(3px);
+            }
+          }
+          &.facebook {
+            text-align: center;
+            .img {
+              width: 160px;
             }
           }
         }
@@ -367,8 +433,8 @@ $arrowSize: 7px;
         padding: 0 10px;
         cursor: pointer;
         font-weight: bolder;
-        @include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.375));
         overflow: visible;
+        @include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.375));
         
         &, svg {
           &, * {
