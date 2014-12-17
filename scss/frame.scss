@@ -56,7 +56,7 @@ html {
       z-index: 100;
     }
 
-    $leftWidth: 720px; 
+    $leftWidth: 720px;
     #container {
       position: relative;
       display: inline-block;
@@ -82,10 +82,55 @@ html {
           border: 1px solid rgba(203, 204, 208, 1);
           border-bottom: 1px solid rgba(183, 184, 188, 1);
 
-          padding: 10px;
+          padding: 10px 15px;
 
           @include border-radius(3px);
           @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
+
+          .title, .content, .info {
+            position: relative;
+          }
+          .title {
+            padding: 8px;
+            border-bottom: 1px solid rgba(183, 184, 188, 0.5);
+
+            h2 {
+              float: left;
+              margin: 0;
+              width: calc(100% - 100px);
+              height: 100%;
+            }
+            .time {
+              text-align: right;
+              display: inline-block;
+              float: left;
+              height: 100%;
+              width: 100px;
+              margin-top: 8px;
+            }
+          }
+          .content {
+            padding: 10px 15px;
+            line-height: 22px;
+            @include white-space();
+          }
+          .info {
+            padding: 5px;
+            .tags, .more {
+              float: left;
+            }
+            .tags {
+              width: calc(100% - 100px);
+              @include overflow-docx3();
+            }
+            .more {
+              margin-top: -6px;
+              text-align: right;
+              width: 100px;
+              padding-right: 5px;
+              font-size: 12px;
+            }
+          }
         }
       }
       .right {
@@ -100,13 +145,13 @@ html {
 
           @include border-radius(3px);
           @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
-          
+
           .title {
             padding: 5px 0;
             text-align: left;
             margin-bottom: 10px;
             border-bottom: 1px solid rgba(213, 213, 213, 1);
-            
+
             @include overflow-docx3();
           }
 
@@ -160,7 +205,7 @@ html {
                 width: 100%;
                 height: 100%;
                 border: 1px solid rgba(130, 130, 130, 1);
-                
+
                 background: #fff;
                 line-height: 60px;
                 overflow: hidden;
@@ -227,7 +272,7 @@ html {
               border: 0;
               height: 120px;
               width: 100%;
-              overflow: hidden;              
+              overflow: hidden;
             }
           }
           &.flickr {
@@ -236,7 +281,7 @@ html {
               height: 150px;
               background: #fff url(data:image/gif;base64,R0lGODlhEAALAPQAAP///5qamu/v7+vr6/b29pycnJqamqysrM3Nzb+/v+Pj46enp7e3t9DQ0MHBweTk5KioqJubm7i4uPT09O/v7/r6+rCwsPDw8Pn5+eHh4djY2Onp6ff39wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA) no-repeat center center;
               overflow: hidden;
-              
+
               .title {
                 position: absolute;
                 top: 0;
@@ -276,7 +321,7 @@ html {
                 width: 100%;
                 @include opacity(0);
                 @include transition(all .8s);
-                
+
                 &.show {
                   @include opacity(1);
                 }
@@ -327,7 +372,7 @@ html {
     background: #777;
     max-height: 100px;
     min-height: 10px;
-    
+
     @include transform(rotate(-3deg));
     @include box-shadow(0 15px 10px #777);
   }
@@ -340,7 +385,7 @@ html {
 }
 $navbarHeight: 47px;
 $navMarginTop: 0;
-$navMarginBottom: 15px;
+$navMarginBottom: 8px;
 
 $navbarItemMarginTop: 18px;
 $navbarItemMarginRight: 2px;
@@ -435,12 +480,12 @@ $arrowSize: 7px;
         font-weight: bolder;
         overflow: visible;
         @include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.375));
-        
+
         &, svg {
           &, * {
             text-decoration: none;
             color: rgba(210, 210, 210, 1);
-            fill: rgba(210, 210, 210, 1);  
+            fill: rgba(210, 210, 210, 1);
             @include transition(all .8s cubic-bezier(0.25, 2, 0.69, 0.66));
           }
         }
