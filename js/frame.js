@@ -4,4 +4,5 @@
  */
 
 $(function () {
+  $('.avatar').OAimgLiquid ();
 });

@@ -3,8 +3,9 @@
  * @copyright   Copyright (c) 2014 OA Wu Design
  */
 
-@import "_oa";
 
+@import "_oa";
+@include font-face("Josefin Sans", font-files("josefin_sans/JosefinSans-Bold.ttf"));
 @include font-face(Monaco, font-files("monaco/monaco.ttf", "monaco/monaco.otf"));
 
 * {
@@ -18,10 +19,12 @@
 }
 
 a {
-  color: rgba(32, 80, 129, 0.8);
+  color: rgba(42, 90, 149, 0.7);
+  font-weight: bold;
+  @include transition(all .3s);
 
   &:hover {
-    color: rgba(32, 80, 129, 1);
+    color: rgba(12, 65, 109, .8);
   }
 }
 
@@ -36,9 +39,9 @@ html {
     width: 100%;
     height: 100%;
     font-size: medium;
-    font-family: Monaco;
-    color: #000;
-    background-color: $mainBackground;
+    font-family: "Josefin Sans" Monaco;
+    background: $mainBackgroundColor $mainBackgroundImage;
+    color: rgba(50, 50, 50, 0.7);
 
     @include font-smoothing(antialiased);
     @include box-shadow(none);
@@ -53,13 +56,180 @@ html {
       z-index: 100;
     }
 
+    $leftWidth: 720px; 
     #container {
       position: relative;
       display: inline-block;
       width: $mainWidth;
       margin: $mainTop auto $mainBottom auto;
       text-align: left;
-      color: rgba(39, 40, 34, 0.9);
+
+      .left, .right {
+        position: relative;
+        float: left;
+        // background-color: rgba(0, 0, 255, 0.1);
+
+        .block, .pin {
+          position: relative;
+          margin: 16px 8px;
+          // background-color: rgba(0, 128, 0, 0.1);
+        }
+      }
+      .left {
+        width: $leftWidth;
+        .block {
+          background-color: #fff;
+          border: 1px solid rgba(203, 204, 208, 1);
+          border-bottom: 1px solid rgba(183, 184, 188, 1);
+
+          padding: 10px;
+
+          @include border-radius(3px);
+          @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
+        }
+      }
+      .right {
+        width: calc(100% - #{$leftWidth});
+
+        .pin {
+          background-color: #fff;
+          border: 1px solid rgba(203, 204, 208, 1);
+          border-bottom: 1px solid rgba(183, 184, 188, 1);
+
+          padding: 10px;
+
+          @include border-radius(3px);
+          @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
+          
+          .title {
+            border-bottom: 1px solid rgba(213, 213, 213, 1);
+            padding: 5px 0;
+            @include overflow-docx3();
+            margin-bottom: 10px;
+          }
+
+          &.oa_infos {
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+
+            .line1, .line2 {
+              position: absolute;
+              top: 45px;
+              left: 10px;
+              width: 195px;
+              height: 1px;
+              background-color: rgba(213, 213, 213, 1);
+              @include animation (showOwnerDates 1s ease);
+            }
+            .line2 {
+              top: 10px;
+              left: 45px;
+              width: 1px;
+              height: 130px;
+            }
+
+            .avatar_outline {
+              position: absolute;
+              display: inline-block;
+              top: 20px;
+              left: 20px;
+              width: 50px;
+              height: 50px;
+              padding: 2px;
+
+              background: #fff;
+              border: 1px solid rgba(150, 150, 150, 1);
+              cursor: pointer;
+
+              @include scale(1);
+              @include rotate(0);
+              @include border-radius(50%);
+              @include transition(all .3s cubic-bezier(0.25, 2, 0.69, 0.66));
+              @include box-shadow(0 0 5px rgba(153, 153, 153, 0.3));
+              @include animation(avatarMove 0.7s ease);
+
+              &:hover {
+                @include scale(1.2);
+                @include box-shadow(0 0 7px 1px rgba(153, 153, 153, 0.5));
+              }
+              .avatar {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border: 1px solid rgba(130, 130, 130, 1);
+                
+                background: #fff;
+                line-height: 60px;
+                overflow: hidden;
+                color: rgba(70, 70, 70, 1);
+                text-align: center;
+
+                @include border-radius(50%);
+                @include text-shadow(0 -1px 2px rgba(0, 0, 0, 0.675));
+                @include box-shadow(inset 0 0 5px rgba(5, 5, 5, 0.5));
+              }
+            }
+            .info {
+              position: absolute;
+              width: 150px;
+              height: 20px;
+              line-height: 20px;
+              font-size: 14px;
+              left: 60px;
+              @include overflow-docx3();
+            }
+            .info1 {
+              top: 20px;
+              left: 75px;
+              width: 120px;
+              font-weight: bolder;
+              @include animation (showOwnerDates .8s ease);
+            }
+            .info2 {
+              top: 60px;
+              @include animation (showOwnerDates 1s ease);
+            }
+            .info3 {
+              top: 85px;
+              @include animation (showOwnerDates 1.2s ease);
+            }
+            .info4 {
+              top: 110px;
+              @include animation (showOwnerDates 1.4s ease);
+            }
+            @include keyframes(showOwnerDates) {
+              0% {
+                @include scale(1.5);
+                @include opacity(0);
+              }
+              85% {
+                @include scale(1.5);
+                @include opacity(0);
+              }
+              100% {
+                @include scale(1);
+                @include opacity(1);
+              }
+            }
+            @include keyframes(avatarMove) {
+              from {
+                left: 100%;
+                @include rotate(360deg);
+              }
+            }
+          }
+
+          &.githubbadge {
+            iframe {
+              border: 0;
+              height: 108px;
+              width: 100%;
+              overflow: hidden;              
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -72,5 +242,197 @@ html {
     content: "";
     line-height: 0;
     clear: both;
+  }
+}
+
+.paper {
+  position: relative;
+
+  &:before, &:after {
+    z-index: -1;
+    position: absolute;
+    display: inline-block;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    // top: 80%;
+    max-width:300px;
+    background: #777;
+    max-height: 100px;
+    min-height: 10px;
+    
+    @include transform(rotate(-3deg));
+    @include box-shadow(0 15px 10px #777);
+  }
+  &:after {
+    right: 10px;
+    left: auto;
+
+    @include transform(rotate(3deg));
+  }
+}
+$navbarHeight: 47px;
+$navMarginTop: 0;
+$navMarginBottom: 15px;
+
+$navbarItemMarginTop: 18px;
+$navbarItemMarginRight: 2px;
+$navbarItemMarginBottom: 5px;
+$navbarItemMarginLeft: 2px;
+$navbarTransparency: .8;
+
+$navbarBaseColor: 45;
+$navbarTransparency: 0.9;
+
+$lineColor: rgba(0, 0, 0, 0.14902);
+$arrowSize: 7px;
+.oa-navbar {
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  left: 0px;
+  height: $navbarHeight;
+  overflow: hidden;
+
+  @include background-image(linear-gradient(top, rgba($navbarBaseColor + 30, $navbarBaseColor + 30, $navbarBaseColor + 30, $navbarTransparency) 0%, rgba($navbarBaseColor + 20, $navbarBaseColor + 20, $navbarBaseColor + 20, $navbarTransparency) 20%, rgba($navbarBaseColor, $navbarBaseColor, $navbarBaseColor, $navbarTransparency) 90%, rgba(30, 30, 30, $navbarTransparency) 100%));
+  @include opacity(.9);
+  @include box-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid $lineColor;
+    @include box-shadow(0 0 15px rgba(0, 0, 0, .8));
+  }
+
+  @media screen and (min-width: 0px) and (max-width: $mainWidth + 1) {
+    & {
+      position: relative;
+      margin: $navMarginTop auto $navMarginBottom auto;
+      width: $mainWidth;
+    }
+  }
+  @media screen and (min-width: $mainWidth + 2) {
+    & {
+      position: fixed;
+      z-index: 99999;
+      top: $navMarginTop;
+
+      & + * {
+        margin-top: $navbarHeight + $navMarginTop + $navMarginBottom !important;
+      }
+    }
+  }
+  .oa-navbar-container {
+    position: relative;
+    display: inline-block;
+    width: $mainWidth;
+    height: $navbarHeight;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    text-align: left;
+
+    .oa-navbar-items {
+      max-width: $mainWidth;
+      display: inline-block;
+      overflow: visible;
+
+      &.clearfix {
+        *zoom: 1;
+
+        &:after {
+          display: table;
+          content: "";
+          line-height: 0;
+          clear: both;
+        }
+      }
+
+      .oa-navbar-item {
+        position: relative;
+        display: inline-block;
+        min-width: 50px;
+        height: $navbarHeight - $navbarItemMarginTop - $navbarItemMarginBottom;
+        float: left;
+        margin: $navbarItemMarginTop $navbarItemMarginRight $navbarItemMarginBottom $navbarItemMarginLeft;
+        text-align: center;
+        padding: 0 10px;
+        cursor: pointer;
+        font-weight: bolder;
+        @include text-shadow(1px 1px 3px rgba(0, 0, 0, 0.375));
+        overflow: visible;
+        
+        &, svg {
+          &, * {
+            text-decoration: none;
+            color: rgba(210, 210, 210, 1);
+            fill: rgba(210, 210, 210, 1);  
+            @include transition(all .8s cubic-bezier(0.25, 2, 0.69, 0.66));
+          }
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+          margin-top: -9px;
+        }
+        &:hover {
+          @include text-shadow(1px 1px 3px rgba(0, 0, 0, 1));
+          &, svg {
+            @include scale(1.1);
+            &, * {
+              color: rgba(255, 255, 255, 1);
+              fill: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.oa-footer {
+  margin: 50px auto;
+  width: $mainWidth;
+
+  .oa-footer-desc {
+    position: relative;
+    text-align: center;
+
+    .oa-footer-split-line {
+      position: absolute;
+      top: 50%;
+      z-index: -1;
+      width: 100%;
+      height: 2px;
+      @include opacity(.6);
+
+      hr {
+        margin-top: 0;
+      }
+    }
+    .oa-footer-content {
+      background-color: rgba(233, 234, 237, 1);
+      display: inline-block;
+      margin: 0 auto;
+      padding: 5px 10px;
+      background: $mainBackgroundColor $mainBackgroundImage;
+      line-height: 20px;
+
+      b {
+        color: rgba(50, 50, 50, 0.9);
+        font-weight: normal;
+      }
+      a {
+        font-weight: bold;
+      }
+    }
   }
 }
