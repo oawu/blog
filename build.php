@@ -32,9 +32,6 @@
 
   $tree = array ();
   foreach ($folders as $i => $folder) {
-    $folder['content'] = $_format == '.md' ? preg_replace ('#(!\[.*?\]\()\s?((?!https?:\/\/).*)(\))#', '$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']) : preg_replace ('#src=(["\'])((?!https?:\/\/).*)(["\'])#', 'src=$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']);
-    $html = mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($_format == '.md' ? Markdown::defaultTransform ($folder['content']) : pq ("body", phpQuery::newDocument ($folder['content']))->html ())), 0, 50, '…', 'UTF-8');
-
     $year = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})(_(\d{1,2})-(\d{1,2})-(\d{1,2}))?#', '$1', $folder['date']);
     $month = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})(_(\d{1,2})-(\d{1,2})-(\d{1,2}))?#', '$2', $folder['date']);
 
@@ -42,7 +39,7 @@
     else $tree[$year]['count']++;
     if (!isset ($tree[$year]['months'][$month])) $tree[$year]['months'][$month] = array ('count' => 1, 'blogs' => array ());
     else $tree[$year]['months'][$month]['count']++;
-    $tree[$year]['months'][$month]['blogs'][$_article . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . $folder['name'] . $_oput_format] = $html;
+    $tree[$year]['months'][$month]['blogs'][$_article . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . $folder['name'] . $_oput_format] = $folder['name'];
   }
 
   foreach ($folders as $i => $folder) {

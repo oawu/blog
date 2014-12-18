@@ -6,9 +6,3 @@ compass/.sass-cache/*
 gulp/node_modules/*
 gulp/.sass-cache/*
 gulp/npm-debug.log
-
-article/*
-articles/*
-tag/*
-
-/index.html
