@@ -9,7 +9,17 @@
 
 <br/>
 ## 簡介
-* 這是一個 OA's Blog。
+* 這是一個 OA's Blog
+* 適合環境 Mac OS
+* 要可以使用 php 指令
+* Demo：[http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
+
+
+<br/>
+## 使用
+* 終端機位置移到目錄 OA-blog 下
+* 環境建立，目錄下輸入指令：```chmod 777 .```
+* 建立靜態檔案，目錄下輸入指令：```php build.php```
 
 
 <br/>
@@ -22,4 +32,4 @@
 
 * GitHub - [OA-blog](https://github.com/comdan66/OA-blog)
 
-* 更新日期 - 2014/12/15
+* 更新日期 - 2014/12/19
