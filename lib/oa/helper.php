@@ -101,7 +101,7 @@ if (!function_exists ('load_view')) {
 }
 
 if (!function_exists ('list_blocks')) {
-  function list_blocks ($name, $blocks, $page_count) {
+  function list_blocks ($name, $blocks, $page_count, $tags, $tree) {
     global $_list, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev, $_pagination_limit, $_nav_items, $_pins, $_list_more;
     $lis = array ();
 
@@ -109,11 +109,11 @@ if (!function_exists ('list_blocks')) {
     for ($i = (!$_pagination_limit || (($name - $_pagination_limit) < 0)) ? 0 : ($name - $_pagination_limit); ($i < $page_count) && (!$_pagination_limit || ($i < ($name + $_pagination_limit + 1))); $i++) array_push ($lis, array ('href' => $i . $_oput_format, 'content' => $i + 1, 'active' => $name == $i));
     if ($_is_show_prev && (($name + 1) != $page_count)) array_push ($lis, array ('href' => ($name + 1) . $_oput_format, 'content' => '下一頁', 'active' => false));
 
-    return write_file ($_list . DIRECTORY_SEPARATOR . $name . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins)), 'w+');
+    return write_file ($_list . DIRECTORY_SEPARATOR . $name . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins, 'tags' => $tags, 'tree' => $tree)), 'w+');
   }
 }
 if (!function_exists ('tags_blocks')) {
-  function tags_blocks ($name, $blocks, $page_count, $tag) {
+  function tags_blocks ($name, $blocks, $page_count, $tag, $tags, $tree) {
     global $_tags, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev, $_pagination_limit, $_nav_items, $_pins, $_list_more;
     $lis = array ();
 
@@ -128,7 +128,7 @@ if (!function_exists ('tags_blocks')) {
     @mkdir ($p, 0777, true);
     umask ($o);
 
-    return write_file ($p . $n, load_view ($_template['tags']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins)), 'w+');
+    return write_file ($p . $n, load_view ($_template['tags']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins, 'tags' => $tags, 'tree' => $tree)), 'w+');
   }
 }
 

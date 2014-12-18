@@ -1,1 +1,1 @@
-mkdir article & chmod 777 article & mkdir list & chmod 777 list & mkdir tags & chmod 777 tags
+chmod 777 .

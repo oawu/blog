@@ -62,8 +62,14 @@ $_pins = array (
       'avatar' => 'https://graph.facebook.com/100000100541088/picture?width=100&height=100',
       'name'   => '吳政賢(OA)',
       'info_1' => 'comdan66@gmail.com',
-      'info_2' => '職業: hTmL攻城獅',
+      'info_2' => '職業: hTmL 攻城獅',
       'info_3' => '生日: 1989/07/21'
+      ),
+    'tree' => array (
+      'title'   => "OA's Date Tree"
+      ),
+    'tags' => array (
+      'title'   => "OA's Tags"
       ),
     'githubbadge' => array (
       'title'   => "OA's GitHub",

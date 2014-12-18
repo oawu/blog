@@ -71,7 +71,9 @@ html {
 
         .block, .pin {
           position: relative;
-          margin: 16px 8px;
+          display: inline-block;
+          width: calc(100% - 16px);
+          margin: 8px 8px;
           // background-color: rgba(0, 128, 0, 0.1);
         }
       }
@@ -412,12 +414,181 @@ html {
               width: 160px;
             }
           }
+          &.tags {
+            text-align: center;
+
+            $blockTagHeight: 20px;
+            $blockTagColor: rgba(246, 246, 246, 1);
+            $blockTagHoverColor: rgba(230, 230, 230, 1);
+            $TagNameMaxWidth: 70px;
+            .tag {
+              height: $blockTagHeight;
+              line-height: $blockTagHeight;
+              background-color: $blockTagColor;
+
+              &:hover {
+                background-color: $blockTagHoverColor;
+
+                &:after {
+                  border-color: transparent transparent transparent $blockTagHoverColor;
+                }
+              }
+              &:after, &:before {
+                top: $blockTagHeight / 2 - 1px;
+              }
+              &:after {
+                border-left-color: $blockTagColor;
+                border-width: $blockTagHeight / 2 - 1px;
+                margin-top: 0 - ($blockTagHeight / 2 - 1px);
+              }
+              &:before {
+                border-width: $blockTagHeight / 2;
+                margin-top: 0 - ($blockTagHeight / 2 );
+              }
+
+              .doc {
+                top: ($blockTagHeight - 10px) / 2 - 1px;
+              }
+              .name {
+                font-size: 8px;
+                max-width: $TagNameMaxWidth;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
+*.oa-tree {
+  ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding: 3px 3px 3px 18px;
+
+    li {
+      list-style-type: none;
+      @include overflow-docx3();
+
+      &.active {
+        font-weight: bold;
+      }
+      .folder {
+        display: inline;
+        width: 100%;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: rgba(60, 60, 60, 1);
+
+        & > span:first-child {
+          font-size: 12px;
+          color: rgba(120, 120, 120, 1);
+        }
+
+        & + ul {
+          display: none; 
+          margin-bottom: 3px;
+
+          &.tree-show {
+            display: block; 
+            @include animation (fadeIn 1s ease);
+          }
+        }
+      }
+      @include keyframes(fadeIn) {
+        from { @include opacity(0); }
+        to { @include opacity(1); }
+      }
+
+      .item {
+        width: 100%;
+        height: 100%;
+        display: inline;
+        font-size: 13px;
+
+        @include overflow-docx3();
+      }
+    }
+  } 
+}
+
+*.tag {
+  position: relative;
+  float: left;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 10px;
+  font-size: 10px;
+  margin: 2px;
+  margin-right: 14px;
+  height: 22px;
+  line-height: 22px;
+  background-color: rgba(240, 240, 240, 1);
+  cursor: pointer;
+  border: 1px solid rgba(180, 180, 180, 1);
+
+  @include border-radius(5px 2px 2px 5px);
+  @include box-shadow(-1px 1px 1px rgba(153, 153, 153, 0.5));
+
+  &:hover {
+    background-color: rgba(220, 220, 220, 1);
+
+    .doc {
+      @include box-shadow(inset 1px 1px 2px rgba(153, 153, 153, 0.7));
+    }
+    &:after {
+      border-color: transparent transparent transparent rgba(220, 220, 220, 1);
+    }
+    .name {
+      color: rgba(50, 50, 50, 1);
+    }
+  }
+  &:after, &:before {
+    left: 100%;
+    top: 22px / 2 - 1px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: transparent;
+    border-left-color: rgba(240, 240, 240, 1);
+    border-width: 22px / 2 - 1px;
+    margin-top: 0 - (22px / 2 - 1px);
+  }
+  &:before {
+    border-color: transparent;
+    border-left-color: rgba(160, 160, 160, 1);
+    border-width: 22px / 2;
+    margin-top: 0 - (22px / 2 );
+  }
+
+  .doc {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    top: (22px - 10px) / 2 - 1px;
+    right: -3px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(180, 180, 180, 1);
+    z-index: 1;
+
+    @include border-radius(100%);
+    @include box-shadow(inset 1px 1px 1px rgba(153, 153, 153, 0.5));
+  }
+  .name {
+    color: rgba(100, 100, 100, 1);
+    max-width: 100px;
+    @include overflow-docx3();
+  }
+}
 *.clearfix {
   *zoom: 1;
 

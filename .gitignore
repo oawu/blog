@@ -8,4 +8,7 @@ gulp/.sass-cache/*
 gulp/npm-debug.log
 
 article/*
-list/*
+articles/*
+tag/*
+
+/index.html

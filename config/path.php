@@ -5,10 +5,10 @@
  */
 
 // 靜態文章列表 存放位置
-$_list = './list';
+$_list = './articles';
 
 // 靜態標籤文章列表 存放位置
-$_tags = './tags';
+$_tags = './tag';
 
 // 靜態文章 存放位置
 $_article = './article';
@@ -25,3 +25,5 @@ $_template['list']['view']    = $_templates . DIRECTORY_SEPARATOR . 'list.html';
 $_template['tags']['index']    = $_templates . DIRECTORY_SEPARATOR . 'tags_index.html';
 $_template['tags']['view']    = $_templates . DIRECTORY_SEPARATOR . 'tags.html';
 $_template['article']['view'] = $_templates . DIRECTORY_SEPARATOR . 'article.html';
+
+$_template['main']['index'] = $_templates . DIRECTORY_SEPARATOR . 'main_index.html';

@@ -49,4 +49,14 @@ $(function () {
   }
 
 
+  $('.oa-tree li:has(ul) > .folder').click (function () {
+    var $ul = $(this).parent ('li').children ('ul'), $span = $(this).children ('span:first-child');
+    
+    if ($ul.length && ($span.text (!$ul.hasClass ("tree-show") ? $span.data ('open') : $span.data ('close'))))
+      if ($ul.hasClass ("tree-show")) $ul.removeClass ('tree-show');
+      else $ul.addClass ('tree-show');
+  });
+
+  $('.oa-tree li:first-child li:first-child li:first-child').parents ('ul').prev ('span').click ().parents ('ul').prev ('span');
+
 });
