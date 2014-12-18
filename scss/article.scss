@@ -10,6 +10,9 @@ html {
     #container {
       .left {
         .block {
+          &.article {
+            font-family: Monaco "Josefin Sans";
+          }
           .content {
             ul {
               margin: 0;
@@ -35,10 +38,12 @@ html {
               }
               th {
                 padding: 5px 10px;
+                background-color: rgba(246, 246, 246, 1);
               }
             }
             p {
               margin-bottom: 9px;
+              font-size: 16px;
             }
             h1, h2, h3, h4, h5, h6 {
               color: #404040;
@@ -56,20 +61,29 @@ html {
               border: 0;
               border-bottom: 1px solid #ccc;
             }
+            
             blockquote {
+              position: relative;
               padding: 13px 13px 21px 15px;
               margin-bottom: 18px;
-              font-family: "Josefin Sans" Monaco;
+              font-family: Monaco "Josefin Sans";
 
-              &:before {
-                content:"\201C";
-                font-size:40px;
-                margin-left:-10px;
-                font-family: "Josefin Sans" Monaco;
-                color:#eee;
+              &:before, &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "\201C";
+                font-size: 40px;
+                font-family: Monaco "Josefin Sans";
+                color: rgba(39, 40, 34, .4);
+              }
+              &:after {
+                left: auto;
+                right: 0;
+                content:"\201D";
               }
               p {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 300;
                 line-height: 18px;
                 margin-bottom: 0;
@@ -77,15 +91,19 @@ html {
               }
             }
             code, pre {
-              font-family: "Josefin Sans" Monaco;
+              font-family: Monaco "Josefin Sans";
             }
             code {
+              display: inline-block;
+              max-width: 100%;
               background-color: rgba(254, 233, 204, 1);
               color: rgba(0, 0, 0, 0.75);
-              padding: 2px 4px;
-              border: 1px solid rgba(224, 203, 174, 1);
+              padding: 1px 4px;
+              margin: 2px auto;
 
+              border: 1px solid rgba(224, 203, 174, 1);
               @include border-radius(3px);
+              @include overflow-break();
             }
             pre {
               display: block;
@@ -102,6 +120,9 @@ html {
                 color:#737373;
                 font-size: 11px;
                 padding: 0;
+
+                border: 0;
+                @include border-radius(0);
               }
             }
             sup {
