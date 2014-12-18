@@ -19,7 +19,7 @@
   foreach ($folders as $i => $folder) {
     write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
 
-    $folder['content'] = $_format == '.md' ? preg_replace ('#(!\[.*?\]\()\s?(.+?)(\))#', '$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']) : preg_replace ('#<img([^>]*)src="([^"/]*/?[^".]*\.[^"]*)"([^>]*)>#', '<img src="../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2"$3/>', $folder['content']);
+    $folder['content'] = $_format == '.md' ? preg_replace ('#(!\[.*?\]\()\s?((?!https?:\/\/).*)(\))#', '$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']) : preg_replace ('#src=(["\'])((?!https?:\/\/).*)(["\'])#', 'src=$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']);
     $html = $_format == '.md' ? Markdown::defaultTransform ($folder['content']) : pq ("body", phpQuery::newDocument ($folder['content']))->html ();
 
     array_push ($blocks, array (
