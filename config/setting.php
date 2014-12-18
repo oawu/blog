@@ -14,7 +14,7 @@
   $_tags_file_name = 'tags.txt';
 
   // list 一頁多少個預覽
-  $_a_page_limit = 5;
+  $_a_page_limit = 2;
 
   // 分頁是否顯示 下一頁
   $_is_show_next = true;

@@ -100,16 +100,35 @@ if (!function_exists ('load_view')) {
   }
 }
 
-if (!function_exists ('blocks')) {
-  function blocks ($name, $blocks, $page_count) {
-    global $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev, $_pagination_limit, $_nav_items, $_pins, $_list_more;
+if (!function_exists ('list_blocks')) {
+  function list_blocks ($name, $blocks, $page_count) {
+    global $_list, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev, $_pagination_limit, $_nav_items, $_pins, $_list_more;
     $lis = array ();
 
     if ($_is_show_next && $name) array_push ($lis, array ('href' => ($name - 1) . $_oput_format, 'content' => '上一頁', 'active' => false));
     for ($i = (!$_pagination_limit || (($name - $_pagination_limit) < 0)) ? 0 : ($name - $_pagination_limit); ($i < $page_count) && (!$_pagination_limit || ($i < ($name + $_pagination_limit + 1))); $i++) array_push ($lis, array ('href' => $i . $_oput_format, 'content' => $i + 1, 'active' => $name == $i));
     if ($_is_show_prev && (($name + 1) != $page_count)) array_push ($lis, array ('href' => ($name + 1) . $_oput_format, 'content' => '下一頁', 'active' => false));
 
-    return write_file ('list' . DIRECTORY_SEPARATOR . $name . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins)), 'w+');
+    return write_file ($_list . DIRECTORY_SEPARATOR . $name . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins)), 'w+');
+  }
+}
+if (!function_exists ('tags_blocks')) {
+  function tags_blocks ($name, $blocks, $page_count, $tag) {
+    global $_tags, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev, $_pagination_limit, $_nav_items, $_pins, $_list_more;
+    $lis = array ();
+
+    if ($_is_show_next && $name) array_push ($lis, array ('href' => ($name - 1) . $_oput_format, 'content' => '上一頁', 'active' => false));
+    for ($i = (!$_pagination_limit || (($name - $_pagination_limit) < 0)) ? 0 : ($name - $_pagination_limit); ($i < $page_count) && (!$_pagination_limit || ($i < ($name + $_pagination_limit + 1))); $i++) array_push ($lis, array ('href' => $i . $_oput_format, 'content' => $i + 1, 'active' => $name == $i));
+    if ($_is_show_prev && (($name + 1) != $page_count)) array_push ($lis, array ('href' => ($name + 1) . $_oput_format, 'content' => '下一頁', 'active' => false));
+
+    $p = $_tags . DIRECTORY_SEPARATOR . $tag . DIRECTORY_SEPARATOR;
+    $n = $name . $_oput_format;
+
+    $o = umask (0);
+    @mkdir ($p, 0777, true);
+    umask ($o);
+
+    return write_file ($p . $n, load_view ($_template['tags']['view'], array ('blocks' => $blocks, 'lis' => $lis, 'more' => $_list_more, 'nav_items' => $_nav_items, 'pins' => $_pins)), 'w+');
   }
 }
 
