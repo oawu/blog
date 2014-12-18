@@ -26,7 +26,7 @@
 
 @mixin overflow-break () {
   overflow: hidden;
-  word-break: normal; 
-  word-wrap: break-word; 
+  word-break: normal;
+  word-wrap: break-word;
   @include white-space();
 }

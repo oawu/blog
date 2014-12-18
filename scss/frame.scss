@@ -87,14 +87,14 @@ html {
 
           @include border-radius(3px);
           @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
-          
+
           &.pagination {
             background-color: transparent;
             border-color: transparent;
             padding: 3px;
 
             @include border-radius(0);
-            @include box-shadow(none);  
+            @include box-shadow(none);
 
             ul.pagination {
               margin: 0;
@@ -112,7 +112,7 @@ html {
                 border: 1px solid rgba(193, 194, 198, 1);
                 font-size: 14px;
                 overflow: hidden;
-                
+
                 @include transition(all .5s);
                 @include border-radius(30px);
                 @include box-shadow(1px 1px 3px 1px rgba(153, 153, 153, 0.3));
@@ -128,7 +128,7 @@ html {
                   background-color: rgba(86, 86, 86, 0.4);
                   @include text-shadow(1px 1px 2px rgba(0, 0, 0, 0.375));
                   @include box-shadow(inset 1px 2px 4px rgba(100, 100, 100, 0.3), 0 1px 2px rgba(255, 255, 255, 0.5));
-                  
+
                   a {
                     color: rgba(255, 255, 255, 1);
 
@@ -164,12 +164,12 @@ html {
               &:hover {
                 color: rgba(50, 50, 50, 0.9);
               }
-              h2 {
-                float: left;
-                margin: 0;
-                width: calc(100% - 100px);
-                height: 100%;
-              }
+            }
+            h2 {
+              float: left;
+              margin: 0;
+              width: calc(100% - 100px);
+              height: 100%;
             }
 
             .date {
@@ -179,12 +179,12 @@ html {
               height: 100%;
               width: 100px;
               margin-top: 8px;
+              font-size: 12px;
             }
           }
           .content {
             padding: 10px 15px;
             line-height: 22px;
-            @include white-space();
           }
           .info {
             padding: 5px;

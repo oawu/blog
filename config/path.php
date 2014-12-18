@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2014 OA Wu Design
+ */
 
 // 靜態文章列表 存放位置
 $_list = './list';
@@ -10,9 +14,9 @@ $_article = './article';
 $_mds = './mds';
 
 // 版型 存放位置
-$_models = './models';
+$_templates = './templates';
 
 // 各版型 路徑
-$_model['list']['index']   = $_models . DIRECTORY_SEPARATOR . 'list_index.html';
-$_model['list']['view']    = $_models . DIRECTORY_SEPARATOR . 'list.html';
-$_model['article']['view'] = $_models . DIRECTORY_SEPARATOR . 'article.html';
+$_template['list']['index']   = $_templates . DIRECTORY_SEPARATOR . 'list_index.html';
+$_template['list']['view']    = $_templates . DIRECTORY_SEPARATOR . 'list.html';
+$_template['article']['view'] = $_templates . DIRECTORY_SEPARATOR . 'article.html';

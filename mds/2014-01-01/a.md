@@ -2,11 +2,10 @@
 
 ## 系統
 * 更新 OSX  
-
 ![](./img/01.png)
 
 * 更新 Xcode
-* ![](./img/02.png)
+![](./img/02.png)
 
 
 ## Homebrew
