@@ -25,7 +25,7 @@
     array_push ($blocks, array (
       'name' => $folder['name'],
       'date' => preg_replace ('#(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
-      'content' => mb_strimwidth (preg_replace('/\n*/m', '', strip_tags ($html)), 0, $_list_preview_length, '…', 'UTF-8'),
+      'content' => mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($html)), 0, $_list_preview_length, '…', 'UTF-8'),
       'href' => '../' . $_article . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . $folder['name'] . $_oput_format,
       'tags' => $folder['tags']
       ));
