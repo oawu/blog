@@ -61,17 +61,22 @@
               </div>
             </div>
 <?php     }
-        } ?>
+        } else { ?>
+          <div class='block no-data'>
+            目前沒有任何文章
+          </div>
+  <?php } ?>
 
-        <div class='block pagination'>
-          <ul class="pagination clearfix">
-    <?php   if ($lis) {
-              foreach ($lis as $li) { ?>
+  <?php if ($lis) { ?>
+          <div class='block pagination'>
+            <ul class="pagination clearfix">
+        <?php foreach ($lis as $li) { ?>
                 <li<?php echo $li['active'] ? ' class="active"' : '' ;?>><a href="<?php echo $li['href'];?>"><?php echo $li['content'];?></a></li>
-        <?php }
-            } ?>
-          </ul>
-        </div>
+        <?php } ?>
+            </ul>
+          </div>
+  <?php } ?>
+
       </div>
       <div class='right'>
   <?php if ($pins) {
@@ -85,49 +90,53 @@
                 <input type='hidden' name='photoset_id' value='<?php echo $pin['photoset_id'];?>' />
                 <div class='box'></div>
               </div>
-      <?php } else if ($key == 'tags' && $tags) { ?>
-              <div class='pin tags clearfix'>
-                <div class='title'><?php echo $pin['title'];?></div>
-          <?php foreach ($tags as $tag => $folders) { ?>
-                  <a href='<?php echo '../' . $block['tag_base_url'] . $tag;?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
-          <?php } ?>
-              </div>
-      <?php } else if ($key == 'tree' && $tree) { ?>
-              <div class='pin tree'>
-                <div class='title'><?php echo $pin['title'];?></div>
-                <div class="oa-tree">
-                  <ul>
-              <?php foreach ($tree as $year => $year_value) { ?>
-                      <li>
-                        <span class='folder'>
-                          <span data-open='▼' data-close='►'>►</span>
-                          <?php echo $year;?>年 (<?php echo $year_value['count'];?>)
-                        </span>
-                  <?php if ($year_value['months']) { ?>
-                          <ul>
-                      <?php foreach ($year_value['months'] as $month => $month_value) { ?>
-                              <li>
-                                <span class='folder'>
-                                  <span data-open='▼' data-close='►'>►</span>
-                                  <?php echo sprintf ('%02s', $month);?>月 (<?php echo $month_value['count'];?>)
-                                </span>
-                          <?php if ($month_value['blogs']) { ?>
-                                  <ul>
-                              <?php foreach ($month_value['blogs'] as $href => $title) { ?>
-                                      <li><a class='item' href='<?php echo '../' . $href;?>'><?php echo $title;?></a></li>
-                              <?php } ?>
-                                  </ul>
-                          <?php } ?>
-                              </li>
-                      <?php } ?>
-                          </ul>
-                  <?php } ?>
-                      </li>
-              <?php } ?>
-                  </ul>
+      <?php } else if ($key == 'tags') {
+              if ($tags) { ?>
+                <div class='pin tags clearfix'>
+                  <div class='title'><?php echo $pin['title'];?></div>
+            <?php foreach ($tags as $tag => $folders) { ?>
+                    <a href='<?php echo '../' . $block['tag_base_url'] . $tag;?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
+            <?php } ?>
                 </div>
-              </div>
-      <?php } else { ?>
+        <?php }
+            } else if ($key == 'tree') {
+              if ($tree) { ?>
+                <div class='pin tree'>
+                  <div class='title'><?php echo $pin['title'];?></div>
+                  <div class="oa-tree">
+                    <ul>
+                <?php foreach ($tree as $year => $year_value) { ?>
+                        <li>
+                          <span class='folder'>
+                            <span data-open='▼' data-close='►'>►</span>
+                            <?php echo $year;?>年 (<?php echo $year_value['count'];?>)
+                          </span>
+                    <?php if ($year_value['months']) { ?>
+                            <ul>
+                        <?php foreach ($year_value['months'] as $month => $month_value) { ?>
+                                <li>
+                                  <span class='folder'>
+                                    <span data-open='▼' data-close='►'>►</span>
+                                    <?php echo sprintf ('%02s', $month);?>月 (<?php echo $month_value['count'];?>)
+                                  </span>
+                            <?php if ($month_value['blogs']) { ?>
+                                    <ul>
+                                <?php foreach ($month_value['blogs'] as $href => $title) { ?>
+                                        <li><a class='item' href='<?php echo '../' . $href;?>'><?php echo $title;?></a></li>
+                                <?php } ?>
+                                    </ul>
+                            <?php } ?>
+                                </li>
+                        <?php } ?>
+                            </ul>
+                    <?php } ?>
+                        </li>
+                <?php } ?>
+                    </ul>
+                  </div>
+                </div>
+        <?php }
+            } else { ?>
               <div class='pin <?php echo $key;?>'><div class='title'><?php echo $pin['title'];?></div><?php echo $pin['content'];?></div>
       <?php }
           }

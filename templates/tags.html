@@ -61,17 +61,21 @@
               </div>
             </div>
 <?php     }
-        } ?>
+        } else { ?>
+          <div class='block no-data'>
+            目前沒有任何文章
+          </div>
+  <?php } ?>
 
-        <div class='block pagination'>
-          <ul class="pagination clearfix">
-    <?php   if ($lis) {
-              foreach ($lis as $li) { ?>
+  <?php if ($lis) { ?>
+          <div class='block pagination'>
+            <ul class="pagination clearfix">
+        <?php foreach ($lis as $li) { ?>
                 <li<?php echo $li['active'] ? ' class="active"' : '' ;?>><a href="<?php echo $li['href'];?>"><?php echo $li['content'];?></a></li>
-        <?php }
-            } ?>
-          </ul>
-        </div>
+        <?php } ?>
+            </ul>
+          </div>
+  <?php } ?>
       </div>
       <div class='right'>
   <?php if ($pins) {
