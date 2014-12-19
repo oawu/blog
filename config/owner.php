@@ -61,6 +61,7 @@ $_pins = array (
     'owner_info' => array (
       'avatar' => 'https://graph.facebook.com/100000100541088/picture?width=100&height=100',
       'name'   => '吳政賢(OA)',
+      'href'   => 'http://www.ioa.tw',
       'info_1' => 'comdan66@gmail.com',
       'info_2' => '職業: hTmL 攻城獅',
       'info_3' => '生日: 1989/07/21'

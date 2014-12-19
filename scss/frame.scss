@@ -239,7 +239,9 @@ html {
             height: 150px;
 
             $size: 5px;
-
+            a {
+              text-decoration: none;
+            }
             .message {
               position: absolute;
               bottom: calc(100% - #{32px - $size - 5px});
@@ -292,34 +294,6 @@ html {
                 border-width: $size + 1;
                 margin-left: 0 - ($size + 1);
               }
-              // $size: 8px;
-              // &:after, &:before {
-              //   left: calc(100% - 1px);
-              //   bottom: $size - 2px;
-              //   border: solid transparent;
-              //   content: " ";
-              //   height: 0;
-              //   width: 0;
-              //   position: absolute;
-              //   pointer-events: none;
-              //   @include rotate(30deg);
-              // }
-
-              // &:after {
-              //   border-color: rgba(255, 255, 255, 0);
-              //   border-left-color: #fff;
-              //   border-bottom-color: #fff;
-              //   border-width: $size;
-              //   margin-bottom: 0 - $size;
-              // }
-              // &:before {
-              //   border-color: rgba(245, 37, 37, 0);
-              //   border-left-color: rgba(183, 184, 188, 1);
-              //   border-bottom-color: rgba(183, 184, 188, 1);
-              //   border-width: $size + 1;
-              //   margin-bottom: 0 - ($size + 1);
-              // }
-
             }
             .line1, .line2 {
               position: absolute;
