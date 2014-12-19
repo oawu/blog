@@ -82,7 +82,9 @@
   <?php if ($pins) {
           foreach ($pins as $key => $pin) {
             if ($key == 'owner_info') { ?>
-              <div class='pin oa_infos'><div class='line1'></div><div class='line2'></div><div class='avatar_outline'><div class='avatar'><img src="<?php echo $pin['avatar'];?>"></div></div><div class='info info1'><?php echo $pin['name'];?></div><div class='info info2'><?php echo $pin['info_1'];?></div><div class='info info3'><?php echo $pin['info_2'];?></div><div class='info info4'><?php echo $pin['info_3'];?></div></div>
+              <div class='pin oa_infos'>
+                <div class='message hide'></div>
+                <div class='line1'></div><div class='line2'></div><div class='avatar_outline'><div class='avatar'><img src="<?php echo $pin['avatar'];?>"></div></div><div class='info info1'><?php echo $pin['name'];?></div><div class='info info2'><?php echo $pin['info_1'];?></div><div class='info info3'><?php echo $pin['info_2'];?></div><div class='info info4'><?php echo $pin['info_3'];?></div></div>
       <?php } else if ($key == 'flickr') { ?>
               <div class='pin flickr'>
                 <div class='title'><?php echo $pin['title'];?></div>

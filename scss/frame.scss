@@ -237,8 +237,90 @@ html {
           &.oa_infos {
             position: relative;
             height: 150px;
-            overflow: hidden;
 
+            $size: 5px;
+
+            .message {
+              position: absolute;
+              bottom: calc(100% - #{32px - $size - 5px});
+              right: calc(100% - 38px);
+              display: inline-block;
+              padding: 5px;
+              border: 1px solid rgba(203, 204, 208, 1);
+              border: 1px solid rgba(183, 184, 188, 1);
+              z-index: 99;
+              font-size: 12px;
+              background-color: #fff;
+              line-height: 16px;
+
+              @include opacity(1);
+              @include scale(1);
+              @include border-radius(3px);
+              @include transition(all .5s cubic-bezier(0.25, 2, 0.69, 0.66));
+              @include box-shadow(1px 1px 6px rgba(100, 100, 100, .6));
+              @include overflow-docx3();
+              overflow: visible;
+
+              &.hide {
+                @include scale(0);
+                @include opacity(0);
+              }
+
+              &:after, &:before {
+                top: 100%;
+                left: calc(100% - 13px);
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                            //   @include rotate(30deg);
+              }
+
+              &:after {
+                border-color: rgba(255, 255, 255, 0);
+                border-top-color: #ffffff;
+                border-right-color: #ffffff;
+                border-width: $size;
+                margin-left: 0 - $size;
+              }
+              &:before {
+                border-color: rgba(194, 225, 245, 0);
+                border-top-color: rgba(183, 184, 188, 1);
+                border-right-color: rgba(183, 184, 188, 1);
+                border-width: $size + 1;
+                margin-left: 0 - ($size + 1);
+              }
+              // $size: 8px;
+              // &:after, &:before {
+              //   left: calc(100% - 1px);
+              //   bottom: $size - 2px;
+              //   border: solid transparent;
+              //   content: " ";
+              //   height: 0;
+              //   width: 0;
+              //   position: absolute;
+              //   pointer-events: none;
+              //   @include rotate(30deg);
+              // }
+
+              // &:after {
+              //   border-color: rgba(255, 255, 255, 0);
+              //   border-left-color: #fff;
+              //   border-bottom-color: #fff;
+              //   border-width: $size;
+              //   margin-bottom: 0 - $size;
+              // }
+              // &:before {
+              //   border-color: rgba(245, 37, 37, 0);
+              //   border-left-color: rgba(183, 184, 188, 1);
+              //   border-bottom-color: rgba(183, 184, 188, 1);
+              //   border-width: $size + 1;
+              //   margin-bottom: 0 - ($size + 1);
+              // }
+
+            }
             .line1, .line2 {
               position: absolute;
               top: 45px;
@@ -269,6 +351,7 @@ html {
               cursor: pointer;
 
               @include scale(1);
+              @include opacity(1);
               @include rotate(0);
               @include border-radius(50%);
               @include transition(all .3s cubic-bezier(0.25, 2, 0.69, 0.66));
@@ -341,6 +424,8 @@ html {
             @include keyframes(avatarMove) {
               from {
                 left: 100%;
+
+                @include opacity(0);
                 @include rotate(360deg);
               }
             }
@@ -634,7 +719,7 @@ html {
 }
 $navbarHeight: 47px;
 $navMarginTop: 0;
-$navMarginBottom: 8px;
+$navMarginBottom: 16px;
 
 $navbarItemMarginTop: 18px;
 $navbarItemMarginRight: 2px;
