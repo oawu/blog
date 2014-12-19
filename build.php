@@ -3,6 +3,7 @@
   include_once './config/path.php';
   include_once './config/setting.php';
   include_once './config/owner.php';
+  include_once './config/footer.php';
   include_once './lib/oa/helper.php';
   require_once $_format == '.md' ? './lib/Michelf/Markdown.inc.php' : './lib/phpQuery/phpQuery.php';
 
@@ -63,7 +64,13 @@
       @mkdir ($p, 0777, true);
       umask ($o);
 
-      write_file ($p . $n, load_view ($_template['article']['view'], array ('name' => $folder['name'], 'date' => preg_replace ('#(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})#', '$1-$2-$3 $4:$5:$6', $folder['date']), 'content' => $html, 'nav_items' => $_nav_items, 'pins' => $_pins, '_tags' => $_tags . DIRECTORY_SEPARATOR, 'tags' => $tags, 'tree' => $tree)), 'w+');
+      write_file ($p . $n,
+        load_view ($_template['article']['view'], array (
+          'name' => $folder['name'],
+          'date' => preg_replace ('#(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
+          'content' => $html,
+          'tags' => $tags,
+          'tree' => $tree)), 'w+');
     }
 
     $blocks && list_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tags, $tree) && write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
@@ -90,8 +97,8 @@
       $blocks && tags_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tag, $tags, $tree) && write_file ($_tags . DIRECTORY_SEPARATOR . $tag . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['tags']['index']), 'w+');
     }
 
-    write_file ('./index' . $_oput_format, load_view ($_template['main']['index'], array ('_list' => $_list)), 'w+');
+    write_file ('./index' . $_oput_format, load_view ($_template['main']['index']), 'w+');
   } else {
-    write_file ($_list . DIRECTORY_SEPARATOR . 0 . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => array (), 'lis' => array (), 'nav_items' => $_nav_items, 'pins' => $_pins, 'tags' => array (), 'tree' => array ())), 'w+');
+    write_file ($_list . DIRECTORY_SEPARATOR . 0 . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => array (), 'lis' => array (), 'tags' => array (), 'tree' => array ())), 'w+');
     write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
   }
