@@ -41,7 +41,7 @@
           foreach ($blocks as $block) { ?>
             <div class='block paper'>
               <div class='title clearfix'>
-                <a href="<?php echo $block['href'];?>"><h2><?php echo $block['name'];?></h2></a>
+                <a href="<?php echo '../' . $block['href'];?>"><h2><?php echo $block['name'];?></h2></a>
                 <div class='date timeago' data-time='<?php echo $block['date'];?>'><?php echo $block['date'];?></div>
               </div>
               <div class='content'><?php echo $block['content'];?></div>
@@ -56,7 +56,7 @@
                   }?>
                 </div>
                 <div class='more'>
-                  <a href="<?php echo $block['href'];?>"><?php echo $more;?></a>
+                  <a href="<?php echo '../' . $block['href'];?>"><?php echo $more;?></a>
                 </div>
               </div>
             </div>

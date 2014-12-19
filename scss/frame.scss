@@ -345,7 +345,8 @@ html {
           &.githubbadge {
             iframe {
               border: 0;
-              height: 120px;
+              height: 130px;
+              max-height: 145px;
               width: 100%;
               overflow: hidden;
             }
@@ -489,11 +490,11 @@ html {
         }
 
         & + ul {
-          display: none; 
+          display: none;
           margin-bottom: 3px;
 
           &.tree-show {
-            display: block; 
+            display: block;
             @include animation (fadeIn 1s ease);
           }
         }
@@ -512,7 +513,7 @@ html {
         @include overflow-docx3();
       }
     }
-  } 
+  }
 }
 
 *.tag {
