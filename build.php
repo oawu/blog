@@ -92,13 +92,6 @@
 
     write_file ('./index' . $_oput_format, load_view ($_template['main']['index'], array ('_list' => $_list)), 'w+');
   } else {
-    $a = write_file ($_list . DIRECTORY_SEPARATOR . 0 . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => array (), 'lis' => array (), 'nav_items' => $_nav_items, 'pins' => $_pins, 'tags' => array (), 'tree' => array ())), 'w+');
+    write_file ($_list . DIRECTORY_SEPARATOR . 0 . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => array (), 'lis' => array (), 'nav_items' => $_nav_items, 'pins' => $_pins, 'tags' => array (), 'tree' => array ())), 'w+');
     write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
-    // write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
-echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-var_dump ($a);
-exit ();
-    // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-    // var_dump (load_view ($_template['list']['view'], array ('blocks' => array (), 'lis' => array (), 'nav_items' => $_nav_items, 'pins' => $_pins, 'tags' => array (), 'tree' => array ())));
-    // exit ();
   }
