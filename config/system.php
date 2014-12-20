@@ -4,46 +4,62 @@
  * @copyright   Copyright (c) 2014 OA Wu Design
  */
 
-// domain name，結尾記得加 斜線
-$_domain = 'http://comdan66.github.io/';
+/* Build.php 相關程式設定 */
 
-// git repositories 名稱
-$_git_name = 'OA-blog';
+  /* Domain name，結尾記得加 斜線 */
+  $_domain = 'http://comdan66.github.io/';
 
-// 靜態文章列表 存放位置
-$_list = './articles';
+  /* Git Repository 名稱 */
+  $_git_name = 'OA-blog';
 
-// 靜態標籤文章列表 存放位置
-$_tags = './tag';
+  /* 靜態文章列表 存放位置 */
+  $_list = './articles';
 
-// 靜態文章 存放位置
-$_article = './article';
+  /* 靜態標籤文章列表 存放位置 */
+  $_tags = './tag';
 
-// 編輯文章 存放位置
-$_mds = './markdowns';
+  /* 靜態文章 存放位置 */
+  $_article = './article';
 
-// 版型 存放位置
-$_templates = './templates';
+  /* 編輯文章 存放位置 */
+  $_mds = './markdowns';
 
-// 存放 sitemap 的位置
-$_sitemap  = './sitemap';
-$_sitemap_url  = $_domain . '/' . $_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_sitemap) . '/' . 'sitemap_index.xml';
+  /* 版型 存放位置 */
+  $_templates = './templates';
 
-// 各版型 路徑
-$_template['list']['index']   = $_templates . DIRECTORY_SEPARATOR . 'list_index.html';
-$_template['list']['view']    = $_templates . DIRECTORY_SEPARATOR . 'list.html';
-$_template['tags']['index']   = $_templates . DIRECTORY_SEPARATOR . 'tags_index.html';
-$_template['tags']['view']    = $_templates . DIRECTORY_SEPARATOR . 'tags.html';
-$_template['article']['view'] = $_templates . DIRECTORY_SEPARATOR . 'article.html';
-$_template['main']['index']   = $_templates . DIRECTORY_SEPARATOR . 'main_index.html';
-$_template['seo']['robots']   = $_templates . DIRECTORY_SEPARATOR . 'robots.html';
+  /* 存放 sitemap 的位置 */
+  $_sitemap  = './sitemap';
 
-// 編輯轉靜態 讀取選擇，.html or .md
-$_format = '.html';
+  /* 存放 sitemap 的網址 */
+  $_sitemap_url  = $_domain . '/' . $_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_sitemap) . '/' . 'sitemap_index.xml';
 
-// 輸出靜態頁面的格式
-$_oput_format = '.html';
+  /* 各版型 路徑 */
+  $_template = array (
+    'list' => array (
+      'index' => $_templates . DIRECTORY_SEPARATOR . 'list_index.html',
+      'view' => $_templates . DIRECTORY_SEPARATOR . 'list.html'
+    ),
+    'tags' => array (
+      'index' => $_templates . DIRECTORY_SEPARATOR . 'tags_index.html',
+      'view' => $_templates . DIRECTORY_SEPARATOR . 'tags.html'
+    ),
+    'article' => array (
+      'view' => $_templates . DIRECTORY_SEPARATOR . 'article.html'
+    ),
+    'main' => array (
+      'index' => $_templates . DIRECTORY_SEPARATOR . 'main_index.html'
+    ),
+    'seo' => array (
+      'robots' => $_templates . DIRECTORY_SEPARATOR . 'robots.html'
+    )
+  );
 
-// 標簽檔案名稱
-$_tags_file_name = 'tags.txt';
+  /* 編輯轉靜態 讀取選擇，.html or .md */
+  $_format = '.html';
+
+  /* 輸出靜態頁面的格式 */
+  $_oput_format = '.html';
+
+  /* 標簽檔案名稱 */
+  $_tags_file_name = 'tags.txt';
 

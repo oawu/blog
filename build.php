@@ -5,7 +5,7 @@
   include_once './config/setting.php';
   include_once './config/owner.php';
   include_once './config/seo.php';
-  include_once './config/footer.php';
+  
   include_once './lib/oa/helper.php';
   require_once $_format == '.md' ? './lib/Michelf/Markdown.inc.php' : './lib/phpQuery/phpQuery.php';
   include_once './lib/Sitemap/Sitemap.php';
