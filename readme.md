@@ -35,6 +35,7 @@ Demo: [http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
 5. 新增、編輯、刪除 部落格(markdowns)內容。
 6. 執行 php 編譯出靜態頁面，輸入指令 ```php build.php```
 7. Push 至 [GitHub Pages](https://pages.github.com/)
+
 > **<span style="color: red">注意！</span>** 若是從 [OA-blog](https://github.com/comdan66/OA-blog) clone 下來的 Repository，請在 push 之前請先改成自己的 github！
 
 
@@ -48,6 +49,7 @@ Demo: [http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
 * $_nav_items - 網站上方的導航 bar
 * $_pins - 網站右方的 widget
 * $_footer - 網站下方的資訊
+
 > **<span style="color: red">注意！</span>** 若不想顯示，只要將 array 中的一項 element 移除或 隱藏即可。
 
 ### seo.php
@@ -59,6 +61,7 @@ Demo: [http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
 * $_keywords - 主要關鍵字
 * $_description - 主要敘述文字
 * $_og - Open Graph 相關設定
+
 > **<span style="color: red">注意！</span>** 這邊只是大致的 meta value 設定，若要更詳細可直接在 templates 內設定。
 
 ### setting.php
@@ -87,6 +90,7 @@ Build.php 相關程式設定
 * $_format - 編輯轉靜態 讀取選擇，.html or .md
 * $_oput_format - 輸出靜態頁面的格式
 * $_tags_file_name - 標簽檔案名稱
+
 > **<span style="color: red">注意！</span>** 此檔案內皆為重要性的設定，若不熟悉者請勿恣意更改。
 
 <br/>
