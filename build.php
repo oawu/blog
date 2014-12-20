@@ -33,8 +33,8 @@
       if (isset ($tags[$tag])) array_push ($tags[$tag], $folder);
       else $tags[$tag] = array ($folder);
 
-    $year = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', '$1', $folder['date']);
-    $month = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', '$2', $folder['date']);
+    $year = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1', $folder['date']);
+    $month = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$2', $folder['date']);
 
     if (!isset ($tree[$year])) $tree[$year] = array ('count' => 1, 'months' => array ());
     else $tree[$year]['count']++;
@@ -57,8 +57,7 @@
         'date' => preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
         'content' => mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($html)), 0, $_list_preview_length, '…', 'UTF-8'),
         'href' => '../' . $_article . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . $folder['name'] . $_oput_format,
-        'tags' => $folder['tags'],
-        'tag_base_url' => $_tags . DIRECTORY_SEPARATOR
+        'tags' => $folder['tags']
         ));
 
       !(($i + 1) % $_a_page_limit) && list_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tags, $tree) && $blocks = array ();

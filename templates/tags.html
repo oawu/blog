@@ -60,7 +60,7 @@
                 <div class='tags'>
             <?php if ($block['tags']) {
                     foreach ($block['tags'] as $tag) { ?>
-                      <span><a href="<?php echo '../../' . $block['tag_base_url'] . $tag;?>"><?php echo $tag;?></a></span>
+                      <span><a href="<?php echo '../../' . $_tags . '/' . $tag;?>"><?php echo $tag;?></a></span>
               <?php }
                   } else {
                     echo "&nbsp;&nbsp;";
@@ -123,7 +123,7 @@
                 <div class='pin tags clearfix'>
                   <div class='title'><?php echo $pin['title'];?></div>
             <?php foreach ($tags as $tag => $folders) { ?>
-                    <a href='<?php echo '../../' . $block['tag_base_url'] . $tag;?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
+                    <a href='<?php echo '../../' . $_tags . '/' . $tag;?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
             <?php } ?>
                 </div>
         <?php }

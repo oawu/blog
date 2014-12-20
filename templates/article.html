@@ -59,7 +59,7 @@
             <div class='tags all'>
         <?php if ($tag_list) {
                 foreach ($tag_list as $tag) { ?>
-                  <span><a href="<?php echo '../' . $block['tag_base_url'] . $tag;?>"><?php echo $tag;?></a></span>
+                  <span><a href="<?php echo '../../' . $_tags . '/' . $tag;?>"><?php echo $tag;?></a></span>
           <?php }
               } else {
                 echo "&nbsp;&nbsp;";
