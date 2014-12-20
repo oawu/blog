@@ -1,4 +1,5 @@
 <?php
+  date_default_timezone_set('Asia/Taipei');
 
   include_once './config/system.php';
   include_once './config/setting.php';
@@ -7,23 +8,23 @@
   include_once './config/footer.php';
   include_once './lib/oa/helper.php';
   require_once $_format == '.md' ? './lib/Michelf/Markdown.inc.php' : './lib/phpQuery/phpQuery.php';
+  include_once './lib/Sitemap/Sitemap.php';
 
-  $folders = array_filter (mds (), function ($t) { return $t['content']; });
+  $folders = array_filter (mds (), function ($t) { return $t['content'] && !preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '', $t['date']); });
   usort ($folders, function ($a, $b) { return ($a['date'] > $b['date']) ? -1 : 1; });
 
   $total      = count ($folders);
   $page_count = ceil ($total / $_a_page_limit);
   $blocks     = array ();
 
-  foreach (array ($_article, $_list, $_tags) as $n)
+  foreach (array ($_article, $_list, $_tags, $_sitemap) as $n)
     if (!file_exists ($n . DIRECTORY_SEPARATOR)) {
       $o = umask (0);
       @mkdir ($n . DIRECTORY_SEPARATOR, 0777, true);
       umask ($o);
+    } else {
+      directory_delete ($n . DIRECTORY_SEPARATOR);
     }
-
-  directory_delete ($_article . DIRECTORY_SEPARATOR);
-  directory_delete ($_list . DIRECTORY_SEPARATOR);
 
   $tags = array ();
   $tree = array ();
@@ -32,8 +33,8 @@
       if (isset ($tags[$tag])) array_push ($tags[$tag], $folder);
       else $tags[$tag] = array ($folder);
 
-    $year = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})(_(\d{1,2})-(\d{1,2})-(\d{1,2}))?#', '$1', $folder['date']);
-    $month = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})(_(\d{1,2})-(\d{1,2})-(\d{1,2}))?#', '$2', $folder['date']);
+    $year = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', '$1', $folder['date']);
+    $month = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', '$2', $folder['date']);
 
     if (!isset ($tree[$year])) $tree[$year] = array ('count' => 1, 'months' => array ());
     else $tree[$year]['count']++;
@@ -43,6 +44,10 @@
   }
 
   if ($folders) {
+    $sit_map = new Sitemap ($_domain);
+    $sit_map->setPath ($_sitemap . DIRECTORY_SEPARATOR);
+    $sit_map->setDomain ($_domain);
+
     foreach ($folders as $i => $folder) {
       $folder['content'] = $_format == '.md' ? preg_replace ('#(!\[.*?\]\()\s?((?!https?:\/\/).*)(\))#', '$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']) : preg_replace ('#src=(["\'])((?!https?:\/\/).*)(["\'])#', 'src=$1../../' . $_mds . DIRECTORY_SEPARATOR . $folder['date'] . DIRECTORY_SEPARATOR . '$2$3', $folder['content']);
       $html = $_format == '.md' ? Markdown::defaultTransform ($folder['content']) : pq ("body", phpQuery::newDocument ($folder['content']))->html ();
@@ -65,10 +70,12 @@
       @mkdir ($p, 0777, true);
       umask ($o);
 
+      $sit_map->addItem ($_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . $folder['date'] . '/' . $n, '0.8', 'daily', preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']));
+
       write_file ($p . $n,
         load_view ($_template['article']['view'], array (
           'name' => $folder['name'],
-          'date' => preg_replace ('#(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
+          'date' => preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
           'content' => $html,
           'tag_list' => $folder['tags'],
           'tags' => $tags,
@@ -84,7 +91,6 @@
       $blocks = array ();
 
       foreach ($folders as $i => $folder) {
-
         array_push ($blocks, array (
           'name' => $folder['name'],
           'date' => preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
@@ -104,3 +110,8 @@
     write_file ($_list . DIRECTORY_SEPARATOR . 0 . $_oput_format, load_view ($_template['list']['view'], array ('blocks' => array (), 'lis' => array (), 'tags' => array (), 'tree' => array ())), 'w+');
     write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
   }
+
+  $sit_map->createSitemapIndex ($_domain . $_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_sitemap) . '/', 'Today');
+
+  @unlink ('./robots.txt');
+  write_file ('./robots.txt', load_view ($_template['seo']['robots'], array ('_sitemap_url' => $_sitemap_url)), 'w+');
