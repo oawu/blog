@@ -88,13 +88,7 @@ if (!function_exists ('load_view')) {
     if (!$_oa_path) return '';
 
     extract ($data);
-    global $_footer_title;
-    global $_footer_content;
-    global $_list_more;
-    global $_nav_items;
-    global $_pins;
-    global $_tags;
-    global $_list;
+    global $_footer, $_list_more, $_nav_items, $_pins, $_tags, $_list, $_title, $_url, $_author, $_keywords, $_description, $_og;
     ob_start ();
 
     if (((bool)@ini_get ('short_open_tag') === FALSE) && (false == TRUE)) echo eval ('?>'.preg_replace ("/;*\s*\?>/", "; ?>", str_replace ('<?=', '<?php echo ', file_get_contents ($_oa_path))));
@@ -144,6 +138,7 @@ if (!function_exists ('tags_blocks')) {
       load_view ($_template['tags']['view'], array (
         'blocks' => $blocks,
         'lis' => $lis,
+        'tag' => $tag,
         'tags' => $tags,
         'tree' => $tree)), 'w+');
   }

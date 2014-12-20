@@ -3,9 +3,20 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-tw">
-    <title>OA-blog</title>
+    <title><?php echo $name;?> - <?php echo $_title;?></title>
 
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="<?php echo $_author;?>" />
+    <meta name="keywords" content="<?php echo implode (' | ', array_merge (array ($_author, $_title), array_map (function ($tag) { return $tag;}, $tag_list))); ?>" />
+    <meta name="description" content="<?php echo mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8');?>" />
+
+    <meta property="og:site_name" content="<?php echo $_title;?>" />
+    <meta property="og:type" content="<?php echo $_og['type'];?>" />
+    <meta property="og:image" content="<?php echo $_og['image'];?>" />
+    <meta property="og:title" content="<?php echo $name;?> - <?php echo $_title;?>" />
+    <meta property="og:locale" content="<?php echo $_og['locale'];?>" />
+    <meta property="og:description" content="<?php echo mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8');?>" />
+    <meta property="og:url" content="<?php echo $_url;?>" />
 
     <link href="../../css/frame.css" rel="stylesheet" type="text/css">
     <link href="../../css/article.css" rel="stylesheet" type="text/css">
@@ -44,6 +55,17 @@
             <div class='date timeago' data-time='<?php echo $date;?>'><?php echo $date;?></div>
           </div>
           <div class='content'><?php echo $content;?></div>
+          <div class='info clearfix'>
+            <div class='tags all'>
+        <?php if ($tag_list) {
+                foreach ($tag_list as $tag) { ?>
+                  <span><a href="<?php echo '../' . $block['tag_base_url'] . $tag;?>"><?php echo $tag;?></a></span>
+          <?php }
+              } else {
+                echo "&nbsp;&nbsp;";
+              } ?>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -134,11 +156,7 @@
     <div id='footer' class='oa-footer'>
       <div class='oa-footer-desc'>
         <div class='oa-footer-split-line'><hr></div>
-        <div class='oa-footer-content'>
-          <?php echo $_footer_title;?>
-          <br />
-          <?php echo $_footer_content;?>
-        </div>
+        <div class='oa-footer-content'><?php echo $_footer['title'];?><br /><?php echo $_footer['content'];?></div>
       </div>
     </div>
   </body>

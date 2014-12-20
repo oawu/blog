@@ -1,8 +1,9 @@
 <?php
 
-  include_once './config/path.php';
+  include_once './config/system.php';
   include_once './config/setting.php';
   include_once './config/owner.php';
+  include_once './config/seo.php';
   include_once './config/footer.php';
   include_once './lib/oa/helper.php';
   require_once $_format == '.md' ? './lib/Michelf/Markdown.inc.php' : './lib/phpQuery/phpQuery.php';
@@ -69,6 +70,7 @@
           'name' => $folder['name'],
           'date' => preg_replace ('#(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
           'content' => $html,
+          'tag_list' => $folder['tags'],
           'tags' => $tags,
           'tree' => $tree)), 'w+');
     }

@@ -200,6 +200,9 @@ html {
             .tags {
               display: inline-block;
               width: calc(100% - 100px);
+              &.all {
+                width: 100%;
+              }
               @include overflow-docx3();
             }
             .more {

@@ -14,7 +14,7 @@ $_tags = './tag';
 $_article = './article';
 
 // 編輯文章 存放位置
-$_mds = './mds';
+$_mds = './markdowns';
 
 // 版型 存放位置
 $_templates = './templates';
@@ -22,8 +22,16 @@ $_templates = './templates';
 // 各版型 路徑
 $_template['list']['index']   = $_templates . DIRECTORY_SEPARATOR . 'list_index.html';
 $_template['list']['view']    = $_templates . DIRECTORY_SEPARATOR . 'list.html';
-$_template['tags']['index']    = $_templates . DIRECTORY_SEPARATOR . 'tags_index.html';
+$_template['tags']['index']   = $_templates . DIRECTORY_SEPARATOR . 'tags_index.html';
 $_template['tags']['view']    = $_templates . DIRECTORY_SEPARATOR . 'tags.html';
 $_template['article']['view'] = $_templates . DIRECTORY_SEPARATOR . 'article.html';
+$_template['main']['index']   = $_templates . DIRECTORY_SEPARATOR . 'main_index.html';
 
-$_template['main']['index'] = $_templates . DIRECTORY_SEPARATOR . 'main_index.html';
+// 編輯轉靜態 讀取選擇，.html or .md
+$_format = '.html';
+
+// 輸出靜態頁面的格式
+$_oput_format = '.html';
+
+// 標簽檔案名稱
+$_tags_file_name = 'tags.txt';

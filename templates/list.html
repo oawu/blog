@@ -3,9 +3,20 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-tw">
-    <title>OA-blog</title>
+    <title><?php echo $_title;?></title>
+        
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="<?php echo $_author;?>" />
+    <meta name="keywords" content="<?php echo $_keywords;?>" />
+    <meta name="description" content="<?php echo $_description;?> <?php echo implode (', ', array_map (function ($block) { return $block['name'];}, $blocks)); ?>" />
 
-    <meta name="robots" content="index,follow">
+    <meta property="og:site_name" content="<?php echo $_title;?>" />
+    <meta property="og:type" content="<?php echo $_og['type'];?>" />
+    <meta property="og:image" content="<?php echo $_og['image'];?>" />
+    <meta property="og:title" content="<?php echo $_title;?>" />
+    <meta property="og:locale" content="<?php echo $_og['locale'];?>" />
+    <meta property="og:description" content="<?php echo $_description;?> <?php echo implode (', ', array_map (function ($block) { return $block['name'];}, $blocks)); ?>" />
+    <meta property="og:url" content="<?php echo $_url;?>" />
 
     <link href="../css/frame.css" rel="stylesheet" type="text/css">
     <link href="../css/list.css" rel="stylesheet" type="text/css">
@@ -165,11 +176,7 @@
     <div id='footer' class='oa-footer'>
       <div class='oa-footer-desc'>
         <div class='oa-footer-split-line'><hr></div>
-        <div class='oa-footer-content'>
-          <?php echo $_footer_title;?>
-          <br />
-          <?php echo $_footer_content;?>
-        </div>
+        <div class='oa-footer-content'><?php echo $_footer['title'];?><br /><?php echo $_footer['content'];?></div>
       </div>
     </div>
   </body>
