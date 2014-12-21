@@ -7,6 +7,9 @@
 
 這項作品基本上被需要幾個條件，因為我是在 Mac 系統上開發的，而其他系統我沒測試，所以不敢說可用！而 Mac 上也要開啟 apache 以及 php 的功能。
 
+P.S. 如果懶得看這些文字敘述的話..... 我也有製作了簡單的 Youtube Demo!  
+<iframe src="https://www.youtube.com/embed/pUBWKUEb7Do" width="90%" height="400" frameborder="0" allowfullscreen></iframe>
+
 <br/>
 ### 步驟開始
 首先，先至我的 [GitHub](https://github.com/comdan66/OA-blog) 將 OA-blog 這個 repository clone 下來！指令: ```git clone https://github.com/comdan66/OA-blog.git```。  
