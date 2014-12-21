@@ -10,7 +10,7 @@
   $_title       = "OA's blog";
 
   /* 網址 */
-  $_url         = $_domain . '/' . $_git_name;
+  $_url         = $_domain . $_git_name;
 
   /* 所屬者 */
   $_author      = '吳政賢(OA Wu)';
@@ -23,7 +23,7 @@
 
   /* Open Graph 相關設定 */
   $_og = array (
-    'image' => $_domain . '/' . $_git_name . '/img/og.png',
+    'image' => $_url . '/img/og.png',
     'type' => 'profile',
     'locale' => 'zh_TW'
   );
