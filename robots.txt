@@ -1,0 +1,2 @@
+Sitemap: http://comdan66.github.io//OA-blog/sitemap/sitemap_index.xml
+User-agent: *

@@ -200,10 +200,17 @@ html {
             .tags {
               display: inline-block;
               width: calc(100% - 100px);
+              @include overflow-docx3();
+
               &.all {
                 width: 100%;
+                padding-top: 5px;
+                border-top: 1px solid rgba(213, 213, 213, 1);
+
+                span {
+                  font-size: 14px;
+                }
               }
-              @include overflow-docx3();
             }
             .more {
               margin-top: -6px;
