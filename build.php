@@ -76,6 +76,7 @@
           'name' => $folder['name'],
           'date' => preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
           'content' => $html,
+          'my_url' => $_url . '/' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . $folder['date'] . '/' . $folder['name'] . $_oput_format,
           'tag_list' => $folder['tags'],
           'tags' => $tags,
           'tree' => $tree)), 'w+');

@@ -103,7 +103,7 @@ if (!function_exists ('load_view')) {
 
 if (!function_exists ('list_blocks')) {
   function list_blocks ($name, $blocks, $page_count, $tags, $tree) {
-    global $_list, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev;
+    global $_url, $_list, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev;
     $lis = array ();
 
     if ($_is_show_next && $name) array_push ($lis, array ('href' => ($name - 1) . $_oput_format, 'content' => '上一頁', 'active' => false));
@@ -115,12 +115,13 @@ if (!function_exists ('list_blocks')) {
         'blocks' => $blocks,
         'lis' => $lis,
         'tags' => $tags,
+        'my_url' => $_url . '/' . preg_replace ('#(^\.\/)#', '', $_list) . '/' . $name . $_oput_format,
         'tree' => $tree)), 'w+');
   }
 }
 if (!function_exists ('tags_blocks')) {
   function tags_blocks ($name, $blocks, $page_count, $tag, $tags, $tree) {
-    global $_tags, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev;
+    global $_url, $_tags, $_oput_format, $_template, $_pagination_limit, $_is_show_next, $_is_show_prev;
     $lis = array ();
 
     if ($_is_show_next && $name) array_push ($lis, array ('href' => ($name - 1) . $_oput_format, 'content' => '上一頁', 'active' => false));
@@ -140,6 +141,7 @@ if (!function_exists ('tags_blocks')) {
         'lis' => $lis,
         'tag' => $tag,
         'tags' => $tags,
+        'my_url' => $_url . '/' . preg_replace ('#(^\.\/)#', '', $_tags) . '/' . $tag . '/' . $n,
         'tree' => $tree)), 'w+');
   }
 }
