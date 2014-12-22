@@ -17,26 +17,26 @@
 
 <br/>
 ## Demo
-* Youtube Sample  
+* Youtube Sample
 <a href="https://www.youtube.com/watch?&v=pUBWKUEb7Do" target="_blank"><img width='50%' src="http://img.youtube.com/vi/pUBWKUEb7Do/0.jpg" alt="OA's Blog youtube demo!" /></a>
 
-* OA's Blog GitHub Pages  
-Demo: [http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
+* OA's Blog GitHub Pages
+Demo: [http://comdan66.github.io/blog/](http://comdan66.github.io/blog/)
 
 
 
 <br/>
 ## 使用
 1. 開啟終端機，並且位置移至 apache DocumentRoot 下。
-2. 輸入指令 ```git clone https://github.com/comdan66/OA-blog.git```
-2. 進入 OA-blog，輸入指令 ```cd OA-blog```
+2. 輸入指令 ```git clone https://github.com/comdan66/blog.git```
+2. 進入 blog，輸入指令 ```cd blog```
 3. Check out 到 gh-pages 分支下，輸入指令 ```git checkout gh-pages```
 4. 調整資料夾權限設定，輸入指令 ```chmod 777 .```
 5. 新增、編輯、刪除 部落格(markdowns)內容。
 6. 執行 php 編譯出靜態頁面，輸入指令 ```php build.php```
 7. Push 至 [GitHub Pages](https://pages.github.com/)
 
-> **<span style="color: red">注意！</span>** 若是從 [OA-blog](https://github.com/comdan66/OA-blog) clone 下來的 Repository，請在 push 之前請先改成自己的 github！
+> **<span style="color: red">注意！</span>** 若是從 [blog](https://github.com/comdan66/blog) clone 下來的 Repository，請在 push 之前請先改成自己的 github！
 
 
 <br/>
@@ -53,7 +53,7 @@ Demo: [http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
 > **<span style="color: red">注意！</span>** 若不想顯示，只要將 array 中的一項 element 移除或 隱藏即可。
 
 ### seo.php
-網站的 seo 設定  
+網站的 seo 設定
 
 * $_title - 主要的標題
 * $_url - 網址
@@ -75,7 +75,7 @@ Demo: [http://comdan66.github.io/OA-blog/](http://comdan66.github.io/OA-blog/)
 * $_list_more - 列表 閱讀更多文字
 
 ### system.php
-Build.php 相關程式設定  
+Build.php 相關程式設定
 
 * $_domain - Domain name，結尾記得加 斜線
 * $_git_name - Git Repository 名稱
@@ -99,8 +99,8 @@ Build.php 相關程式設定
 
 * E-mail - <comdan66@gmail.com>
 
-* 作品名稱 - OA-blog
+* 作品名稱 - blog
 
-* GitHub - [OA-blog](https://github.com/comdan66/OA-blog)
+* GitHub - [blog](https://github.com/comdan66/blog)
 
 * 更新日期 - 2014/12/21

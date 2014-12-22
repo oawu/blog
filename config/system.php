@@ -10,7 +10,7 @@
   $_domain = 'http://comdan66.github.io/';
 
   /* Git Repository 名稱 */
-  $_git_name = 'OA-blog';
+  $_git_name = 'blog';
 
   /* 靜態文章列表 存放位置 */
   $_list = './articles';
