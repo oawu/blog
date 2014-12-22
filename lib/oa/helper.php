@@ -61,6 +61,7 @@ if (!function_exists ('mds')) {
             'path' => $_mds,
             'date' => $file,
             'name' => $name,
+            'file_name' => $name,
             'content' => read_file ($_mds . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . $name . $_format),
             'tags' => tags ($_mds . DIRECTORY_SEPARATOR . $file . DIRECTORY_SEPARATOR . $_tags_file_name)
             ));
