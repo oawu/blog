@@ -64,7 +64,6 @@
       !(($i + 1) % $_a_page_limit) && list_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tags, $tree) && $blocks = array ();
 
       $sit_map->addItem ($_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . rawurlencode ($folder['file_name'] . $_oput_format), '0.8', 'daily', preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']));
-
       write_file ($_article . DIRECTORY_SEPARATOR . $folder['file_name'] . $_oput_format,
         load_view ($_template['article']['view'], array (
           'name' => $folder['file_name'],
