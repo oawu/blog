@@ -12,7 +12,7 @@
 
     <meta property="og:site_name" content="<?php echo $_title;?>" />
     <meta property="og:type" content="<?php echo $_og['type'];?>" />
-    <meta property="og:image" content="<?php echo $_og['image'];?>" />
+    <meta property="og:image" content="<?php echo preg_match ('/<img.+src=[\'"](?P<src>.+)[\'"].*>/i', $content, $image) && isset ($image['src']) ? $_url . '/' . preg_replace ('/^\.\.?\/(\.\.?\/)+/', '', $image['src']) : $_og['image'];?>" />
     <meta property="og:title" content="<?php echo $name;?> - <?php echo $_title;?>" />
     <meta property="og:locale" content="<?php echo $_og['locale'];?>" />
     <meta property="og:description" content="<?php echo mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8');?>" />
