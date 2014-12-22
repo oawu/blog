@@ -63,7 +63,7 @@ $(function () {
     var message = '', timeRange = 60 * 3, last = localStorage.getItem ('messages');
     if (last) {
       last = JSON.parse (last);
-      message = (Math.abs ($.timeago.parse (new Date ().getFullYear () + '-' + (new Date ().getMonth () + 1) + '-' + new Date ().getDate () + ' ' + new Date ().getHours () + ':' + new Date ().getMinutes () + ':' + new Date ().getSeconds ())) - Math.abs ($.timeago.parse (last.d.Y + '-' + last.d.M + '-' + last.d.D + ' ' + last.d.h + ':' + last.d.m + ':' + last.d.s))) / 1000 < timeRange ? '' : ('你在' + jQuery.timeago (last.d.Y + '-' + last.d.M + '-' + last.d.D + ' ' + last.d.h + ':' + last.d.m + ':' + last.d.s, true) + '有來過喔！' + (last.n && last.n.length ? '<br/>你上次看的是：<b>' + last.n + '</b>': ''));
+      message = (Math.abs ($.timeago.parse (new Date ().getFullYear () + '-' + (new Date ().getMonth () + 1) + '-' + new Date ().getDate () + ' ' + new Date ().getHours () + ':' + new Date ().getMinutes () + ':' + new Date ().getSeconds ())) - Math.abs ($.timeago.parse (last.d.Y + '-' + last.d.M + '-' + last.d.D + ' ' + last.d.h + ':' + last.d.m + ':' + last.d.s))) / 1000 < timeRange ? '' : ('你在 ' + jQuery.timeago (last.d.Y + '-' + last.d.M + '-' + last.d.D + ' ' + last.d.h + ':' + last.d.m + ':' + last.d.s, true) + '有來過喔！' + (last.n && last.n.length ? '<br/>你上次看的是：<b>' + last.n + '</b>': ''));
     } else {
       message = 'Hi, 這是你第一次光臨耶！';
     }
