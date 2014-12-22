@@ -15,7 +15,6 @@
 
   $total      = count ($folders);
   $page_count = ceil ($total / $_a_page_limit);
-  $blocks     = array ();
 
   foreach (array ($_article, $_list, $_tags, $_sitemap) as $n)
     if (!file_exists ($n . DIRECTORY_SEPARATOR)) {
@@ -26,9 +25,7 @@
       directory_delete ($n . DIRECTORY_SEPARATOR);
     }
 
-  $tags = array ();
-  $tree = array ();
-  $temp = array ();
+  $blocks = $tags = $tree = $temp = array ();
   foreach ($folders as $i => $folder) {
     if (array_push ($temp, $folder['file_name']) && ($count = count (array_filter ($temp, function ($t) use ($folder) { return $t == $folder['file_name']; })) - 1))
       $folders[$i]['file_name'] = $folder['file_name'] = $folder['file_name'] . '(' . ($count + 1) . ')';

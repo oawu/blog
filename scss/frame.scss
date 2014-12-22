@@ -24,7 +24,7 @@ a {
   @include transition(all .3s);
 
   &:hover {
-    color: rgba(12, 65, 109, .8);
+    color: rgba(12, 65, 109, .85);
   }
 }
 
@@ -67,14 +67,12 @@ html {
       .left, .right {
         position: relative;
         float: left;
-        // background-color: rgba(0, 0, 255, 0.1);
 
         .block, .pin {
           position: relative;
           display: inline-block;
           width: calc(100% - 16px);
           margin: 8px 8px;
-          // background-color: rgba(0, 128, 0, 0.1);
         }
       }
       .left {
@@ -89,6 +87,31 @@ html {
 
           @include border-radius(3px);
           @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
+
+          &.tag_title {
+            position: relative;
+            background-color: transparent;
+            border-color: transparent;
+            font-size: 30px;
+
+            @include border-radius(0);
+            @include box-shadow(none);
+
+            &:before {
+              content: '#';
+              display: inline-block;
+              margin-right: 3px;
+              color: rgba(50, 50, 50, 0.3);
+            }
+
+            a {
+              text-decoration: none;
+              color: rgba(50, 50, 50, 0.7);
+              &:hover {
+                color: rgba(50, 50, 50, 0.9);
+              }
+            }
+          }
           &.no-data {
             text-align: center;
             font-size: 20px;
