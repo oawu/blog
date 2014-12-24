@@ -140,7 +140,7 @@ if (!function_exists ('tags_blocks')) {
       load_view ($_template['tags']['view'], array (
         'blocks' => $blocks,
         'lis' => $lis,
-        'tag' => $tag,
+        'now_tag' => $tag,
         'tags' => $tags,
         'my_url' => $_url . '/' . preg_replace ('#(^\.\/)#', '', $_tags) . '/' . $tag . '/' . $n,
         'tree' => $tree)), 'w+');

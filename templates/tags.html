@@ -2,7 +2,7 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-tw">
-    <title><?php echo $tag;?> - <?php echo $_title;?></title>
+    <title><?php echo $now_tag;?> - <?php echo $_title;?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="<?php echo $_title;?>" />
     <meta property="og:type" content="<?php echo $_og['type'];?>" />
     <meta property="og:image" content="<?php echo $_og['image'];?>" />
-    <meta property="og:title" content="<?php echo $tag;?> - <?php echo $_title;?>" />
+    <meta property="og:title" content="<?php echo $now_tag;?> - <?php echo $_title;?>" />
     <meta property="og:locale" content="<?php echo $_og['locale'];?>" />
     <meta property="og:description" content="<?php echo $_description;?> <?php echo implode (', ', array_map (function ($block) { return $block['name'];}, $blocks)); ?>" />
     <meta property="og:url" content="<?php echo $my_url;?>" />
@@ -90,7 +90,7 @@
 
     <div id="container" class="clearfix">
       <div class="left">
-        <div class='block tag_title'><a href='<?php echo '../../' . $_tags . '/' . rawurlencode ($tag);?>'><?php echo $tag;?></a></div>
+        <div class='block tag_title'><a href='<?php echo '../../' . $_tags . '/' . rawurlencode ($now_tag);?>'><?php echo $now_tag;?></a></div>
 <?php   if ($blocks) {
           foreach ($blocks as $block) { ?>
             <div class='block paper'>
@@ -110,7 +110,7 @@
                   } ?>
                 </div>
                 <div class='more'>
-                  <a href="<?php echo '../' . $block['href'];?>"><?php echo $_list_more;?></a>
+                  <a href="<?php echo $block['href'];?>"><?php echo $_list_more;?></a>
                 </div>
               </div>
             </div>
