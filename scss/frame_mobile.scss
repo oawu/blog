@@ -164,7 +164,6 @@
           }
         }
       }
-
       #container {
         width: 100%;
         position: relative;
@@ -178,17 +177,23 @@
         .left {
           position: relative;
           float: left;
+            width: 100%;
 
           .block {
             position: relative;
             display: inline-block;
             margin: 16px;
+            width: calc(100% - 32px);
 
             background-color: #fff;
             border: 1px solid rgba(203, 204, 208, 1);
             border-bottom: 1px solid rgba(183, 184, 188, 1);
+            word-break: break-all;
 
             padding: 10px 15px;
+            @include border-radius(3px);
+            @include box-shadow(0 1px 1px rgba(153, 153, 153, 0.5));
+
 
             &.tag_title {
               position: relative;
@@ -319,6 +324,7 @@
             }
             .info {
               padding: 5px;
+              overflow: hidden;
               .tags, .more {
                 float: left;
               }
@@ -330,7 +336,6 @@
                 &.all {
                   width: 100%;
                   padding-top: 5px;
-                  border-top: 1px solid rgba(213, 213, 213, 1);
 
                   span {
                     font-size: 16px;
