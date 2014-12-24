@@ -31,7 +31,7 @@
   $_sitemap  = './sitemap';
 
   /* 存放 sitemap 的網址 */
-  $_sitemap_url  = $_domain . '/' . $_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_sitemap) . '/' . 'sitemap_index.xml';
+  $_sitemap_url  = $_domain . $_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_sitemap) . '/' . 'sitemap_index.xml';
 
   /* 各版型 路徑 */
   $_template = array (

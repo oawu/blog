@@ -99,3 +99,62 @@
     'content' => "如有 <u>相關問題</u> 歡迎來信 <b>comdan66@gmail.com</b> 或至 <a href='https://www.facebook.com/comdan66' target='_blank'>作者臉書</a> 留言。"
   );
 
+  /* 手機檢視 網頁上方的導航 bar */
+  $_navbar_mobile = array (
+    'title' => "OA'blog",
+    'avatar' => 'https://graph.facebook.com/100000100541088/picture?width=100&height=100',
+  );
+
+  /* 手機檢視 右邊選單 */
+  $_mobile_right_slides = array (
+    'info' =>  array (
+      'title' => "OA's Info",
+      'items' => array (
+        array ('value' => 'comdan66@gmail.com', 'class' => 'shimmer', 'link' => array ()),
+        array ('value' => '職業: hTmL 攻城獅', 'class' => 'shimmer', 'link' => array ()),
+        array ('value' => '生日: 1989/07/21', 'class' => 'shimmer', 'link' => array ())
+      )
+    ),
+    'other' => array (
+      'tags' => array (
+        'title' => "OA's Tags",
+      )
+    ),
+    'link' => array (
+      'title' => "OA's Link",
+      'items' => array (
+        array (
+          'value' => 'Facebook',
+          'class' => '',
+          'link' => array (
+            'href' => 'https://www.facebook.com/comdan66',
+            'title' => "oa's facebook",
+            'target' => '_blank'
+        )),
+        array (
+          'value' => 'GitHub',
+          'class' => '',
+          'link' => array (
+            'href' => 'https://github.com/comdan66',
+            'title' => "oa's github",
+            'target' => '_blank'
+        )),
+        array (
+          'value' => 'flickr',
+          'class' => '',
+          'link' => array (
+            'href' => 'https://www.flickr.com/comdan66',
+            'title' => "oa's flickr",
+            'target' => '_blank'
+        )),
+        array (
+          'value' => 'youtube',
+          'class' => '',
+          'link' => array (
+            'href' => 'https://www.youtube.com/user/comdan66',
+            'title' => "oa's youtube",
+            'target' => '_blank'
+        ))
+      )
+    )
+  );
