@@ -89,7 +89,7 @@ if (!function_exists ('load_view')) {
     if (!$_oa_path) return '';
 
     extract ($data);
-    global $_footer, $_list_more, $_nav_items, $_pins, $_tags, $_list, $_title, $_url, $_author, $_keywords, $_description, $_og;
+    global $_navbar_mobile, $_footer, $_list_more, $_mobile_right_slides, $_nav_items, $_pins, $_tags, $_list, $_title, $_url, $_author, $_keywords, $_description, $_og;
     ob_start ();
 
     if (((bool)@ini_get ('short_open_tag') === FALSE) && (false == TRUE)) echo eval ('?>'.preg_replace ("/;*\s*\?>/", "; ?>", str_replace ('<?=', '<?php echo ', file_get_contents ($_oa_path))));

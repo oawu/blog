@@ -57,13 +57,13 @@
         'name' => $folder['file_name'],
         'date' => preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
         'content' => mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($html)), 0, $_list_preview_length, '…', 'UTF-8'),
-        'href' => '../' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . $folder['file_name'] . $_oput_format,
+        'href' => '../' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . rawurlencode ($folder['file_name']) . $_oput_format,
         'tags' => $folder['tags']
         ));
 
       !(($i + 1) % $_a_page_limit) && list_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tags, $tree) && $blocks = array ();
 
-      $sit_map->addItem ($_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . rawurlencode ($folder['file_name'] . $_oput_format), '0.8', 'daily', preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']));
+      $sit_map->addItem ($_git_name . '/' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . rawurlencode ($folder['file_name']) . $_oput_format, '0.8', 'daily', preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']));
       write_file ($_article . DIRECTORY_SEPARATOR . $folder['file_name'] . $_oput_format,
         load_view ($_template['article']['view'], array (
           'name' => $folder['file_name'],
@@ -75,7 +75,8 @@
           'tree' => $tree)), 'w+');
     }
 
-    $blocks && list_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tags, $tree) && write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
+    $blocks && list_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tags, $tree);
+    write_file ($_list . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['list']['index']), 'w+');
 
     directory_delete ($_tags . DIRECTORY_SEPARATOR);
     foreach ($tags as $tag => $folders) {
@@ -88,14 +89,15 @@
           'name' => $folder['file_name'],
           'date' => preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1-$2-$3 $4:$5:$6', $folder['date']),
           'content' => mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($html)), 0, $_list_preview_length, '…', 'UTF-8'),
-          'href' => '../../' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . $folder['file_name'] . $_oput_format,
+          'href' => '../../' . preg_replace ('#(^\.\/)#', '', $_article) . '/' . rawurlencode ($folder['file_name'] ). $_oput_format,
           'tags' => $folder['tags'],
           'tag_base_url' => $_tags . DIRECTORY_SEPARATOR
           ));
 
         !(($i + 1) % $_a_page_limit) && tags_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tag, $tags, $tree) && $blocks = array ();
       }
-      $blocks && tags_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tag, $tags, $tree) && write_file ($_tags . DIRECTORY_SEPARATOR . $tag . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['tags']['index']), 'w+');
+      $blocks && tags_blocks (floor ($i / $_a_page_limit), $blocks, $page_count, $tag, $tags, $tree);
+      write_file ($_tags . DIRECTORY_SEPARATOR . $tag . DIRECTORY_SEPARATOR . 'index' . $_oput_format, load_view ($_template['tags']['index']), 'w+');
     }
 
     write_file ('./index' . $_oput_format, load_view ($_template['main']['index']), 'w+');

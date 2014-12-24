@@ -32,11 +32,6 @@ html {
               margin: 4px auto;
               @include box-shadow(0 0 5px rgba(153, 153, 153, 0.5));
               @include transition(all .6s cubic-bezier(0.25, 2, 0.69, 0.66));
-
-              &:hover {
-                @include scale(1.1);
-
-              }
             }
             iframe {
               background-color: #fff;
@@ -76,7 +71,7 @@ html {
               border: 0;
               border-bottom: 1px solid #ccc;
             }
-            
+
             blockquote {
               position: relative;
               padding: 10px;
