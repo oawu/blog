@@ -1,4 +1,4 @@
-Apache
+Apache2
 PHP
 MySQL
 phpMyAdmin

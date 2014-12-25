@@ -9,14 +9,14 @@
     <meta name="robots" content="index,follow">
     <meta name="author" content="吳政賢(OA Wu)" />
     <meta name="keywords" content="吳政賢 | OA Wu | comdan66 | blog | php | javascript | jQuery | html | html | css | java" />
-    <meta name="description" content="紀錄生活、工作，這是一個屬於 OA 的個人部落格，內容皆屬於靜態 html 公開，版面也是自己實作切板，空間則是使用 github.io，如果對這 blog 技術有興趣的，非常歡迎到我 GitHub 參考囉！ github上建立自己的blog, mac os 安裝 ruby on rails, mac os 安裝 mysql, mac os 安裝 homebrew, 當 codeigniter 碰上 redis, phpredisadmin 安裝" />
+    <meta name="description" content="紀錄生活、工作，這是一個屬於 OA 的個人部落格，內容皆屬於靜態 html 公開，版面也是自己實作切板，空間則是使用 github.io，如果對這 blog 技術有興趣的，非常歡迎到我 GitHub 參考囉！ github上建立自己的blog, mac os 安裝 ruby on rails, mac os 安裝 mysql, mac os 安裝 homebrew, codeigniter 隱藏 index.php 的設定, 當 codeigniter 碰上 redis" />
 
     <meta property="og:site_name" content="OA's blog" />
     <meta property="og:type" content="profile" />
     <meta property="og:image" content="http://comdan66.github.io/blog/img/og.png" />
     <meta property="og:title" content="OA's blog" />
     <meta property="og:locale" content="zh_TW" />
-    <meta property="og:description" content="紀錄生活、工作，這是一個屬於 OA 的個人部落格，內容皆屬於靜態 html 公開，版面也是自己實作切板，空間則是使用 github.io，如果對這 blog 技術有興趣的，非常歡迎到我 GitHub 參考囉！ github上建立自己的blog, mac os 安裝 ruby on rails, mac os 安裝 mysql, mac os 安裝 homebrew, 當 codeigniter 碰上 redis, phpredisadmin 安裝" />
+    <meta property="og:description" content="紀錄生活、工作，這是一個屬於 OA 的個人部落格，內容皆屬於靜態 html 公開，版面也是自己實作切板，空間則是使用 github.io，如果對這 blog 技術有興趣的，非常歡迎到我 GitHub 參考囉！ github上建立自己的blog, mac os 安裝 ruby on rails, mac os 安裝 mysql, mac os 安裝 homebrew, codeigniter 隱藏 index.php 的設定, 當 codeigniter 碰上 redis" />
     <meta property="og:url" content="http://comdan66.github.io/blog/articles/0.html" />
 
     <link href="../css/frame.css" rel="stylesheet" type="text/css">
@@ -42,20 +42,21 @@
                                 <div class='unit shimmer'>生日: 1989/07/21</div>
                                 <div class='unit title'>OA's Tags</div>
 
-                                    <a href='.././tag/php'><div class='unit'>php(7)</div></a>
-                                    <a href='.././tag/codeigniter'><div class='unit'>codeigniter(4)</div></a>
+                                    <a href='.././tag/php'><div class='unit'>php(9)</div></a>
+                                    <a href='.././tag/codeigniter'><div class='unit'>codeigniter(6)</div></a>
+                                    <a href='.././tag/apache2'><div class='unit'>apache2(4)</div></a>
                                     <a href='.././tag/mysql'><div class='unit'>mysql(3)</div></a>
                                     <a href='.././tag/redis'><div class='unit'>redis(3)</div></a>
                                     <a href='.././tag/mac%20osx'><div class='unit'>mac osx(3)</div></a>
-                                    <a href='.././tag/apache'><div class='unit'>apache(3)</div></a>
                                     <a href='.././tag/phpmyadmin'><div class='unit'>phpmyadmin(2)</div></a>
                                     <a href='.././tag/php%20activerecord'><div class='unit'>php activerecord(2)</div></a>
+                                    <a href='.././tag/github'><div class='unit'>github(1)</div></a>
                                     <a href='.././tag/ruby%20on%20rails'><div class='unit'>ruby on rails(1)</div></a>
                                     <a href='.././tag/homebrew'><div class='unit'>homebrew(1)</div></a>
                                     <a href='.././tag/usbwebserver'><div class='unit'>usbwebserver(1)</div></a>
                                     <a href='.././tag/phpredisadmin'><div class='unit'>phpredisadmin(1)</div></a>
                                     <a href='.././tag/sublime%20text'><div class='unit'>sublime text(1)</div></a>
-                                    <a href='.././tag/github'><div class='unit'>github(1)</div></a>
+                                    <a href='.././tag/phpquery'><div class='unit'>phpquery(1)</div></a>
                                     <a href='.././tag/lamp'><div class='unit'>lamp(1)</div></a>
                             <div class='unit title'>OA's Link</div>
                             <a href='https://www.facebook.com/comdan66' target='_blank' title='oa's facebook'><div class='unit'>Facebook</div></a>
@@ -157,6 +158,23 @@
             </div>
             <div class='block paper'>
               <div class='title clearfix'>
+                <a href="../article/codeigniter%20%E9%9A%B1%E8%97%8F%20index.php%20%E7%9A%84%E8%A8%AD%E5%AE%9A.html"><h2>codeigniter 隱藏 index.php 的設定</h2></a>
+                <div class='date timeago' data-time='2013-12-23 11:42:35'>2013-12-23 11:42:35</div>
+              </div>
+              <div class='content'>說明每次在建立起新環境後，都會面臨到 CodeIgniter 上的一點小問題，所以此篇筆記筆記。規格Http server - Apache2Framework - CodeIgniter狀況、解法通常我會習慣把 index.php 給隱藏，這時候就得借助 .htaccess …</div>
+              <div class='info clearfix'>
+                <div class='tags'>
+                                  <span><a href=".././tag/CodeIgniter">CodeIgniter</a></span>
+                                    <span><a href=".././tag/Apache2">Apache2</a></span>
+                                    <span><a href=".././tag/PHP">PHP</a></span>
+                              </div>
+                <div class='more'>
+                  <a href="../article/codeigniter%20%E9%9A%B1%E8%97%8F%20index.php%20%E7%9A%84%E8%A8%AD%E5%AE%9A.html">閱讀更多 »</a>
+                </div>
+              </div>
+            </div>
+            <div class='block paper'>
+              <div class='title clearfix'>
                 <a href="../article/%E7%95%B6%20codeigniter%20%E7%A2%B0%E4%B8%8A%20redis.html"><h2>當 codeigniter 碰上 redis</h2></a>
                 <div class='date timeago' data-time='2013-12-23 11:42:34'>2013-12-23 11:42:34</div>
               </div>
@@ -169,23 +187,6 @@
                               </div>
                 <div class='more'>
                   <a href="../article/%E7%95%B6%20codeigniter%20%E7%A2%B0%E4%B8%8A%20redis.html">閱讀更多 »</a>
-                </div>
-              </div>
-            </div>
-            <div class='block paper'>
-              <div class='title clearfix'>
-                <a href="../article/phpredisadmin%20%E5%AE%89%E8%A3%9D.html"><h2>phpredisadmin 安裝</h2></a>
-                <div class='date timeago' data-time='2013-12-23 11:42:33'>2013-12-23 11:42:33</div>
-              </div>
-              <div class='content'>說明通常 Redis 開發，大多都是開啟 Redis 的 Client 後，進去下指令查詢的，不過為了快速一點，最近找到一套不錯又有熟悉感的工具！ 就是 phpRedisAdmin ！ 基本上在 Mac OS 上只要有 apache、php 就可開啦！規格O…</div>
-              <div class='info clearfix'>
-                <div class='tags'>
-                                  <span><a href=".././tag/phpRedisAdmin">phpRedisAdmin</a></span>
-                                    <span><a href=".././tag/Redis">Redis</a></span>
-                                    <span><a href=".././tag/PHP">PHP</a></span>
-                              </div>
-                <div class='more'>
-                  <a href="../article/phpredisadmin%20%E5%AE%89%E8%A3%9D.html">閱讀更多 »</a>
                 </div>
               </div>
             </div>
@@ -254,18 +255,28 @@
                                         <li>
                           <span class='folder'>
                             <span data-open='▼' data-close='►'>►</span>
-                            2013年 (9)
+                            2013年 (11)
                           </span>
                                                 <ul>
                                                         <li>
                                   <span class='folder'>
                                     <span data-open='▼' data-close='►'>►</span>
-                                    12月 (3)
+                                    12月 (4)
                                   </span>
                                                                 <ul>
+                                                                        <li><a class='item' href='../article/codeigniter 隱藏 index.php 的設定.html'>codeigniter 隱藏 index.php 的設定</a></li>
                                                                         <li><a class='item' href='../article/當 codeigniter 碰上 redis.html'>當 codeigniter 碰上 redis</a></li>
                                                                         <li><a class='item' href='../article/phpredisadmin 安裝.html'>phpredisadmin 安裝</a></li>
                                                                         <li><a class='item' href='../article/mac os 安裝 redis.html'>mac os 安裝 redis</a></li>
+                                                                    </ul>
+                                                            </li>
+                                                        <li>
+                                  <span class='folder'>
+                                    <span data-open='▼' data-close='►'>►</span>
+                                    11月 (1)
+                                  </span>
+                                                                <ul>
+                                                                        <li><a class='item' href='../article/phpquery 寫爬蟲變得簡單.html'>phpquery 寫爬蟲變得簡單</a></li>
                                                                     </ul>
                                                             </li>
                                                         <li>
@@ -297,20 +308,21 @@
                 </div>
                         <div class='pin tags clearfix'>
                   <div class='title'>OA's Tags</div>
-                                <a href='.././tag/php'><span class="tag"><div class="doc"></div><div class="name">php (7)</div></span></a>
-                                <a href='.././tag/codeigniter'><span class="tag"><div class="doc"></div><div class="name">codeigniter (4)</div></span></a>
+                                <a href='.././tag/php'><span class="tag"><div class="doc"></div><div class="name">php (9)</div></span></a>
+                                <a href='.././tag/codeigniter'><span class="tag"><div class="doc"></div><div class="name">codeigniter (6)</div></span></a>
+                                <a href='.././tag/apache2'><span class="tag"><div class="doc"></div><div class="name">apache2 (4)</div></span></a>
                                 <a href='.././tag/mysql'><span class="tag"><div class="doc"></div><div class="name">mysql (3)</div></span></a>
                                 <a href='.././tag/redis'><span class="tag"><div class="doc"></div><div class="name">redis (3)</div></span></a>
                                 <a href='.././tag/mac%20osx'><span class="tag"><div class="doc"></div><div class="name">mac osx (3)</div></span></a>
-                                <a href='.././tag/apache'><span class="tag"><div class="doc"></div><div class="name">apache (3)</div></span></a>
                                 <a href='.././tag/phpmyadmin'><span class="tag"><div class="doc"></div><div class="name">phpmyadmin (2)</div></span></a>
                                 <a href='.././tag/php%20activerecord'><span class="tag"><div class="doc"></div><div class="name">php activerecord (2)</div></span></a>
+                                <a href='.././tag/github'><span class="tag"><div class="doc"></div><div class="name">github (1)</div></span></a>
                                 <a href='.././tag/ruby%20on%20rails'><span class="tag"><div class="doc"></div><div class="name">ruby on rails (1)</div></span></a>
                                 <a href='.././tag/homebrew'><span class="tag"><div class="doc"></div><div class="name">homebrew (1)</div></span></a>
                                 <a href='.././tag/usbwebserver'><span class="tag"><div class="doc"></div><div class="name">usbwebserver (1)</div></span></a>
                                 <a href='.././tag/phpredisadmin'><span class="tag"><div class="doc"></div><div class="name">phpredisadmin (1)</div></span></a>
                                 <a href='.././tag/sublime%20text'><span class="tag"><div class="doc"></div><div class="name">sublime text (1)</div></span></a>
-                                <a href='.././tag/github'><span class="tag"><div class="doc"></div><div class="name">github (1)</div></span></a>
+                                <a href='.././tag/phpquery'><span class="tag"><div class="doc"></div><div class="name">phpquery (1)</div></span></a>
                                 <a href='.././tag/lamp'><span class="tag"><div class="doc"></div><div class="name">lamp (1)</div></span></a>
                             </div>
                       <div class='pin githubbadge'><div class='title'>OA's GitHub</div><iframe src="http://githubbadge.appspot.com/comdan66" frameBorder="0"></iframe></div>
