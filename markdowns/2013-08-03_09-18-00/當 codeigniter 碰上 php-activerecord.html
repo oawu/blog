@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>說明</title>
+
+</head>
+<body>
+<h3>說明</h3>
+
+<p>再來安裝一次 CodeIgniter、PHP-ActiveRecord，這篇之前有教過了，但這次我要講詳細一點點!<br/>
+因為網路上資源真的不多，可能很多東西還太新或者根本沒什麼人用吧^^<br/>
+不過我個人真的大力推薦 CodeIgniter 加上 PHP-ActiveRecord 來增強 Model 的功能！！</p>
+
+<p><br/></p>
+
+<h3>規格</h3>
+
+<ul>
+<li><p>OS - Windows 7</p>
+
+<ul>
+<li>請先安裝好 PHP 版本3以上!</li>
+<li>以及注意 php.ini 內的 php_pdo_mysql.dll 是要被啟用的</li>
+</ul>
+</li>
+<li><p>CodeIgniter - CodeIgniter_2.1.4</p>
+
+<ul>
+<li><a href="http://www.codeigniter.org.tw/">http://www.codeigniter.org.tw/</a></li>
+</ul>
+</li>
+<li><p>Spark Manager - spark-manager-0.0.9.zip</p>
+
+<ul>
+<li><a href="http://getsparks.org/install">http://getsparks.org/install</a> (請用 Ctrl+F 搜尋 spark-manager )</li>
+</ul>
+</li>
+<li><p>MY_Loader.php</p>
+
+<ul>
+<li><a href="http://getsparks.org/install">http://getsparks.org/install</a> (請用 Ctrl+F 搜尋 MY_Loader.php ，下載後記得副檔名要改成 .php )</li>
+</ul>
+</li>
+</ul>
+
+
+<p><br/></p>
+
+<h3>步驟</h3>
+
+<p>如果你是 Mac OSX 系統的，就直接跳過這個章節！ 往<a href="#Mac%20OSX">下一步</a>看吧！<br/>
+有了以上幾樣東西，就可以來製作一個有加上 PHP-ActiveRecord 的 CodeIgniter Framework 囉! <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<ul>
+<li><p>將 CodeIgniter_2.1.4.zip 解開壓縮，並且放置你的 Web Server 的根目錄(DocumentRoot)，然後將資料夾命名成 CodeIgniter</p></li>
+<li><p>在 CodeIgniter 底下新增一個資料夾命名為 <strong><em>tools</em></strong> 並且將 <strong><em>spark-manager-0.0.9.zip</em></strong> 解壓縮至 <code>./CodeIgniter/tools/</code> 內，此時裡面要確認有 spark 這隻檔案! 沒有就不能進行下一步驟囉!</p></li>
+<li><p>將 <strong><em>MY_Loader.php</em></strong> 放置 <code>./application/core/</code> 內。</p></li>
+<li><p>使用管理員權限打開 <strong><em>cmd.exe</em></strong> 不會的話請自行 Google，首先移到 CodeIgniter 資料夾內，然後輸入指令 <code>php tools\spark install -v0.0.2 php-activerecord</code> 完後應該會發現 CodeIgniter 內多一個 <strong><em>sparks</em></strong> 的資料夾。</p></li>
+<li><p>打開 <code>./application/config/autoload.php</code> 將 <code>$autoload['libraries'] = array();</code> 調整成 <code>$autoload['libraries'] = array('database');</code>，在檔案最後面加上這一行 <code>$autoload['sparks'] = array('php-activerecord/0.0.2');</code>。</p></li>
+<li><p>打開 <code>./application/config/database.php</code>，請輸入你的資料庫 hostname、username、password、database 的值。</p></li>
+<li><p>打開 <code>./index.php</code> 於 php 開頭加入 <code>date_default_timezone_set('Asia/Taipei');</code> 將系統時區設定成台北!</p></li>
+<li><p>如果連線時出現資料庫 datetime 之類的問題，很有可能是因為 MySQL 版本太新，所以需要調整一下 <code>./sparks/php-activerecord/0.0.2/vendor/php-activerecord/lib/Connection.php</code>， 將 <strong><em>datetime_to_string</em></strong>、 <strong><em>string_to_datetime</em></strong> 這兩隻 Method 內的 <code>'Y-m-d H:i:s T'</code> 調整成 <code>'Y-m-d H:i:s'</code>。</p></li>
+</ul>
+
+
+<p><br/></p>
+
+<h3><a name='Mac OSX'></a>Mac OSX</h3>
+
+<p>這是因為 Windows 比較麻煩一點，如果是使用 OSX 或者 Linux 就簡單多了!<br/>
+OSX 或者 Linux 系統，只要下載 CodeIgniter_2.1.4.zip 後開啟終端機，並且到該 CodeIgniter 目錄下分別執行:</p>
+
+<pre><code>php -r "$(curl -fsSL http://getsparks.org/go-sparks)"
+
+php tools\spark install -v0.0.2 php-activerecord
+</code></pre>
+
+<p>然後再執行以下步驟:</p>
+
+<ul>
+<li><p>打開 <code>./application/config/autoload.php</code> 將 <code>$autoload['libraries'] = array();</code> 調整成 <code>$autoload['libraries'] = array('database');</code>，在檔案最後面加上這一行 <code>$autoload['sparks'] = array('php-activerecord/0.0.2');</code>。</p></li>
+<li><p>打開 <code>./application/config/database.php</code>，請輸入你的資料庫 hostname、username、password、database 的值。</p></li>
+<li><p>打開 <code>./index.php</code> 於 php 開頭加入 <code>date_default_timezone_set('Asia/Taipei');</code> 將系統時區設定成台北!</p></li>
+<li><p>如果連線時出現資料庫 datetime 之類的問題，很有可能是因為 MySQL 版本太新，所以需要調整一下 <code>./sparks/php-activerecord/0.0.2/vendor/php-activerecord/lib/Connection.php</code>， 將 <strong><em>datetime_to_string</em></strong>、 <strong><em>string_to_datetime</em></strong> 這兩隻 Method 內的 <code>'Y-m-d H:i:s T'</code> 調整成 <code>'Y-m-d H:i:s'</code>。</p></li>
+</ul>
+
+
+<p><br/></p>
+
+<h3>小總結</h3>
+
+<p>以上步驟完後就完成了!! (這花了我一天研究 ((汗</p>
+
+<p>Windows 基本上，我由重灌 Apache、MySQL、php 完後依照這些步驟，都沒問題，也可以寫 PHP-ActiveRecord 了! 至少用 Apache 版本 2.2.25-win32-x86-openssl-0.9.8y、MySQL 版本 community-5.6.13.0、php 版本 5.4.17-Win32-VC9-x86 沒問題的!</p>
+
+<p>以上是我 CodeIgniter PHP-Activerecord 的經驗! 至少目前是OK的，至於如何使用...，可以參考官網 <a href="http://www.codeigniter.org.tw/">CodeIgniter</a>、<a href="http://www.phpactiverecord.org/">PHP-ActiveRecord</a>，以上 謝謝。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>安裝步驟主要參考: <a href="http://getsparks.org/install%E3%80%81http://getsparks.org/packages/php-activerecord/versions/HEAD/show">http://getsparks.org/install、http://getsparks.org/packages/php-activerecord/versions/HEAD/show</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</body>
+</html>

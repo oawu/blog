@@ -1,0 +1,5 @@
+LAMP
+Apache
+PHP
+MySQL
+phpMyAdmin

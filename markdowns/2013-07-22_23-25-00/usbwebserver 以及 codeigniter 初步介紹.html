@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>說明</title>
+
+</head>
+<body>
+<h3>說明</h3>
+
+<p>這篇主是要將 USB 變成行動的 Web Server，先Google一下，下載主要程式 <a href="http://www.usbwebserver.net/en/download.php">USBWebserver v8.5.rar</a> 和 <a href="https://ellislab.com/codeigniter/user-guide/installation/downloads.html">CodeIgniter_2.1.3.zip</a>，這兩個東西都是免費的。</p>
+
+<p><br/></p>
+
+<h3>規格</h3>
+
+<p>作業系統: Windows7 or XP (其他系統我沒側試過)</p>
+
+<p><br/></p>
+
+<h3>步驟</h3>
+
+<ul>
+<li><p>USBWebserver v8.5 是一套免安裝版的 Apache + php + MySQL on USB Device!</p>
+
+<ul>
+<li><p>解開壓縮後，根目錄 <code>./USBWebserver v8.5/8.5/root/</code>。</p></li>
+<li><p>執行檔在 <code>./USBWebserver v8.5/8.5/usbwebserver.exe</code> 將其啟動後，便可以使用了。</p></li>
+<li><p>Algemeen - 選項會有一些關於 Server 的初步相關設定位置。</p></li>
+<li><p>Apache - 選項則是可以 Start、Stop Web-Server。</p></li>
+<li><p>MySQL - 選項則是可以 Start、Stop MySQL-Server。</p></li>
+<li><p>Instellingen - 選項主要是設定本程式的語言、以及根目錄位置還有 Web-Server、MySQL-Server 的 Port<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p></li>
+</ul>
+</li>
+<li><p>Codeigniter 是一套 <strong>MVC架構</strong><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> 的Framework 框架，解開壓縮後主要先注意幾個地方！</p>
+
+<ul>
+<li><p>系統開啟後網頁首頁會在 <code>./CodeIgniter_2.1.3/index.php</code>，但點開來看內容後會發現裡面都跟顯示出來的網頁不一樣。</p></li>
+<li><p>首先開啟 <code>./CodeIgniter_2.1.3/application/config/routes.php</code> 會發現裡面有一行 <code>$route['default_controller'] = "welcome";</code> 便可以知道首頁是指向了welcome頁面。</p></li>
+<li><p>開啟 <code>./CodeIgniter_2.1.3/application/controllers/welcome.php</code> 這隻檔案就是 Controller 的程式。</p></li>
+<li><p>開啟 <code>./CodeIgniter_2.1.3/application/views/welcome_message.php</code> 這隻檔案就是 View 的程式。</p></li>
+<li><p>Model 的程式則是放在 <code>./CodeIgniter_2.1.3/application/models/</code> 裡面，但 Welcome 的範例沒有使用的 Model 的功能所以就看不到相關檔案了。</p></li>
+<li><p>所以重點是 application 下面的 controllers、views、models 這三個資料夾。</p></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>小總結</h3>
+
+<p>對於我來說 MVC，簡單說就是一種人家做好的介在 <strong>php邏輯判斷</strong> 與 <strong>html版面排版</strong> 以及 <strong>資料庫</strong> 等資料處理間的工具，都以php物件的概念處理，但還是要稍微學一下，它將很多東西都包好了包含了 url處理、Database工具... 等的 Class、Function。</p>
+
+<p>相關學習可以先參考以下網頁 :</p>
+
+<ul>
+<li><a href="http://www.codeigniter.org.tw/user_guide/index.html">http://www.codeigniter.org.tw/user_guide/index.html</a></li>
+<li><a href="http://www.slideshare.net/appleboy/introduction-to-mvc-of-codeigniter-21x">http://www.slideshare.net/appleboy/introduction-to-mvc-of-codeigniter-21x</a></li>
+</ul>
+
+
+<p>以上我也還在學習，有興趣的話，可以看看一起分享成長，如果有誤的話歡迎指教，謝謝囉。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>通常習慣上，會這樣設定 Web-Server Port : 80, MySQL-Server : 3306<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>MVC 架構概念最主要是將網頁分成三大部分 Model、View、Controller，主要概意就是將網站拆開 邏輯、版型，好讓設計者容易維護，更多ＭVC: <a href="http://zh.wikipedia.org/zh-tw/MVC">http://zh.wikipedia.org/zh-tw/MVC</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</body>
+</html>

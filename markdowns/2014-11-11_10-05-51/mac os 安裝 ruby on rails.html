@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>說明</title>
+
+</head>
+<body>
+<h3>說明</h3>
+
+<p>這是最近在玩 ruby on rails 的安裝心得，因為一直安裝失敗，於是我只好重灌電腦並且完整的重新安裝與記錄！</p>
+
+<p><br/></p>
+
+<h3>規格</h3>
+
+<ul>
+<li>作業系統 Mac OS x 10.9.5</li>
+</ul>
+
+
+<p><br/></p>
+
+<h3>系統</h3>
+
+<ul>
+<li><p>更新 OSX。<br/>
+  <img src="./img/01.png" alt="update os" /></p></li>
+<li><p>下載 &amp; 更新 Xcode。<br/>
+  <img src="./img/02.png" alt="update xcode" /></p></li>
+</ul>
+
+
+<p><br/></p>
+
+<h3>步驟</h3>
+
+<ul>
+<li><p>安裝 homebrew 可以參考<a href="mac%20os%20%E5%AE%89%E8%A3%9D%20homebrew.html">這篇</a>。</p></li>
+<li><p>安裝 XQuartz。</p>
+
+<ul>
+<li>安裝 ImageMagick 需先有 X11 的 support,OSX 10.8 拿掉了..，<a href="http://xquartz.macosforge.org/landing">載點</a>。</li>
+<li><p>它是 <strong>.dmg</strong> 檔案，基本上就是下一步、下一步的安裝就可以，安裝完後重開。</p>
+
+<p>  <img src="./img/08.png" width="300" alt="install XQuartz" /></p></li>
+</ul>
+</li>
+<li><p>安裝 ImageMagick <code>brew install imagemagick</code>。<br/>
+  <img src="./img/09.png" alt="brew install imagemagick" /></p></li>
+<li><p>安裝 MySQL 可以參考<a href="mac%20os%20%E5%AE%89%E8%A3%9D%20mysql.html">這篇</a>。</p></li>
+<li><p>安裝 <a href="https://rvm.io/">RVM</a></p>
+
+<ul>
+<li><p>參考 <a href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a>，輸入指令: <code>curl -L https://get.rvm.io | bash -s stable</code>。<br/>
+  <img src="./img/17.png" alt="install rvm" /></p></li>
+<li><p>檢查是否安裝成功，重新開啟 iTerm，輸入 <code>rvm -v</code>。<br/>
+  <img src="./img/18.png" alt="check rvm" /></p></li>
+<li><p>若尚未安裝 <a href="https://github.com/robbyrussell/oh-my-zsh">oh my zsh</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> 就執行指令    : <code>echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function' &gt;&gt; ~/.bash_profile</code>。</p></li>
+<li><p>若安裝 rvm 後才安裝 <a href="https://github.com/robbyrussell/oh-my-zsh">oh my zsh</a> 就執行: <code>echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function' &gt;&gt; ~/.zshrc</code>。</p></li>
+<li><p>若指定預設 ruby 版本時出現權限問題可以這樣做，輸入指令: <code>suod chown xxx:root /usr/local/bin #xxx 是你的user</code>。</p></li>
+</ul>
+</li>
+</ul>
+
+
+<blockquote><p>rvm 使用<a href="http://beginrescueend.com/rvm/basics/">範例</a></p>
+
+<pre><code>  rvm list                      # 列出電腦中已經安裝的 ruby 版本
+  rvm list known                # 列出所有可安裝的 ruby 版本
+  rvm ruby-1.8.7-p334           # 切換ruby 版本到 ruby-1.8.7-p334
+  rvm ruby-1.8.7-p334 --default # 設定 ruby-1.8.7-p334 為預設的版本
+  rvm install ruby-1.8.7-p334   # 安裝 ruby-1.8.7-p334
+</code></pre></blockquote>
+
+<ul>
+<li>安裝 <a href="https://www.ruby-lang.org/zh_tw/">ruby</a>
+
+<ul>
+<li><p>首先使用 rvm 列出可以安裝的 ruby 版本，指令: <code>rvm list known</code>。<br/>
+  <img src="./img/19.png" alt="rvm list known" /></p></li>
+<li><p>安裝 2.1.3，指令: <code>rvm install 2.1.3</code>。<br/>
+  <img src="./img/20.png" alt="rvm install 2.1.3" /></p></li>
+<li><p>測試是否安裝成功，指令: <code>ruby -v</code>。<br/>
+  <img src="./img/21.png" alt="ruby -v" /></p></li>
+</ul>
+</li>
+</ul>
+
+
+<blockquote><p>若有出現 readline.c 的錯誤時，可以試著以下指令:</p>
+
+<pre><code>rvm package install readline
+# 然後在安裝指令的後面加上 -C --with-readline-dir=$rvm_path/usr
+rvm install 1.9.3 -C --with-readline-dir=$rvm_path/usr
+</code></pre></blockquote>
+
+<ul>
+<li><p>安裝 gem</p>
+
+<ul>
+<li><p>指令: <code>rvm rubygems current</code>。<br/>
+  <img src="./img/22.png" alt="rvm rubygems current" /></p></li>
+<li><p>檢查是否安裝成功，指令: <code>gem -v</code>。<br/>
+  <img src="./img/23.png" alt="gem -v" /></p></li>
+<li><p>設定 <code>--no-ri --no-rdoc</code> 的參數，一般安裝 gem 也會同時安裝該 gem 的文件，但通常這些文件都是在網路上看的，因此不需要浪費空間和時間安裝在自己的電腦。</p>
+
+<pre><code>vim ~/.gemrc   # 打開 ~/.gemrc
+# 加上以下後, 存檔重新登入命令列即可
+gem: --no-ri --no-rdoc
+</code></pre></li>
+</ul>
+</li>
+<li><p>安裝 bundler</p>
+
+<ul>
+<li>指令<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>: <code>gem install bundler --no-ri --no-rdoc</code>。<br/>
+  <img src="./img/24.png" alt="gem install bundler" /></li>
+</ul>
+</li>
+<li><p>安裝 rails</p>
+
+<ul>
+<li><p>如果是要安裝目前最穩定版本，指令: <code>gem install rails --no-ri --no-rdoc</code>。<br/>
+  <img src="./img/25.png" alt="gem install rails" /></p></li>
+<li><p>檢查是否安裝成功，指令: <code>rails -v</code>。<br/>
+  <img src="./img/26.png" alt="rails -v" /></p></li>
+<li><p>如果是要安裝特別版本，指令: <code>gem install rails -v=3.2.8 --no-ri --no-rdoc</code>。</p></li>
+</ul>
+</li>
+</ul>
+
+
+<p><br/></p>
+
+<h3>以上參考</h3>
+
+<ul>
+<li>Rails 101 - <a href="https://readmoo.com/book/210010467000101">https://readmoo.com/book/210010467000101</a></li>
+<li>五樓專業團隊 - <a href="http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails">http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS<em>-</em>Ruby_on_Rails</a></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>一般新的 mac 都不會安裝 oh my zsh。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>若已經有設定 <code>--no-ri --no-rdoc</code> 為預設參數，則就不需要再加上 <code>--no-ri --no-rdoc</code>。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</body>
+</html>

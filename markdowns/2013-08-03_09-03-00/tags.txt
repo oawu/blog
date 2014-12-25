@@ -1,0 +1,4 @@
+Apache
+PHP
+MySQL
+phpMyAdmin
