@@ -7,7 +7,7 @@
 /* 網站基本設定 */
 
   /* 列表一頁多少個預覽 */
-  $_a_page_limit = 8;
+  $_a_page_limit = 6;
 
   /* 分頁是否顯示 下一頁 */
   $_is_show_next = true;

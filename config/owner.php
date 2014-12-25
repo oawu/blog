@@ -87,10 +87,10 @@
       'title'   => "OA's Plurk",
       'content' => '<iframe src="//www.plurk.com/getWidget?uid=4434433&amp;h=120&amp;w=200&amp;u_info=2&amp;bg=E6E6E6&tl=EEEEEE" width="200" frameborder="0" height="120" scrolling="no"></iframe>'
     ),
-    'facebook' => array (
-      'title'   => "OA's Facebook",
-      'content' => '<a href="https://www.facebook.com/comdan66" title="&#x5433;&#x653f;&#x8ce2;" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/100000100541088.2769.32453715.png" style="border: 0px;" alt="" /></a>'
-    )
+    // 'facebook' => array (
+    //   'title'   => "OA's Facebook",
+    //   'content' => '<a href="https://www.facebook.com/comdan66" title="&#x5433;&#x653f;&#x8ce2;" target="_TOP"><img class="img" src="https://badge.facebook.com/badge/100000100541088.2769.32453715.png" style="border: 0px;" alt="" /></a>'
+    // )
   );
 
   /* 網頁下方的資訊 */
