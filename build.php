@@ -31,8 +31,8 @@
       $folders[$i]['file_name'] = $folder['file_name'] = $folder['file_name'] . '(' . ($count + 1) . ')';
 
     foreach ($folder['tags'] as $tag)
-      if (isset ($tags[$tag])) array_push ($tags[$tag], $folder);
-      else $tags[$tag] = array ($folder);
+      if (isset ($tags[strtolower ($tag)])) array_push ($tags[strtolower ($tag)], $folder);
+      else $tags[strtolower ($tag)] = array ($folder);
 
     $year = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$1', $folder['date']);
     $month = preg_replace ('#(\d{4})-(\d{1,2})-(\d{1,2})_(\d{1,2})-(\d{1,2})-(\d{1,2})#', '$2', $folder['date']);
