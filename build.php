@@ -44,6 +44,7 @@
     $tree[$year]['months'][$month]['blogs'][preg_replace ('#(^\.\/)#', '', $_article) . '/' . $folder['file_name'] . $_oput_format] = $folder['name'];
   }
   unset ($temp);
+  uasort ($tags, function ($a, $b) { return (count ($a) > count ($b)) ? -1 : 1; });
 
   if ($folders) {
     $sit_map = new Sitemap ($_domain);
