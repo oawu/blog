@@ -101,7 +101,7 @@
 
   /* 手機檢視 網頁上方的導航 bar */
   $_navbar_mobile = array (
-    'title' => "OA'blog",
+    'title' => "OA's blog",
     'avatar' => 'https://graph.facebook.com/100000100541088/picture?width=100&height=100',
   );
 
