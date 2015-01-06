@@ -13,6 +13,7 @@
           .block {
             .content {
               img {
+                cursor: pointer;
                 &:hover {
                   @include scale(1.1);
                 }
@@ -22,5 +23,23 @@
         }
       }
     }
+  }
+  .fancybox-title {
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    @include text-shadow(1px 1px 1px rgba(53, 53, 53, 0.5));
+
+    @include background-image(
+                  linear-gradient(
+                      rgba(0,0,0, .0) 10%,
+                      rgba(0,0,0, .7) 100%
+                  ));
+  }
+  .fancybox-type-image {
+    z-index: 99999 !important;
   }
 }
