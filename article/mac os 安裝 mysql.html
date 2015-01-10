@@ -19,6 +19,10 @@
     <meta property="og:description" content="說明Mac OS X 安裝 MySQL！規格作業系統 Mac OS x 10.9.5MySQL 5.6.21步驟官網下載 .dmg 檔 http://dev.mysql.com/downloads/file.php?id=454017。一直下一步、下一步安裝。打開系統偏好設定，點選 MySQL。加 MySQL PATH 至 ZSH。vim ~/.zshrc確認是否成功 echo $PATH。重新開啟 iTerm。設定 root 密碼1。進入 MySQL，指令: mysql -u root。選擇資料庫，指令: use mysql;。更新資料，指令: update user set password=PASSWORD("你的密碼") where User='root';。刷新 MySQL 系統，指令: flush privileges;。離開 MySQL，指令: quit。注意…" />
     <meta property="og:url" content="http://comdan66.github.io/blog/article/mac os 安裝 mysql.html" />
 
+    <link href="../res/fancyBox_v2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="../res/fancyBox_v2.1.5/jquery.fancybox-buttons.css" rel="stylesheet" type="text/css">
+    <link href="../res/fancyBox_v2.1.5/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css">
+
     <link href="../css/frame.css" rel="stylesheet" type="text/css">
     <link href="../css/frame_pc.css" rel="stylesheet" type="text/css">
     <link href="../css/frame_mobile.css" rel="stylesheet" type="text/css">
@@ -32,8 +36,14 @@
     <script src="../res/jquery-timeago_v1.3.1/jquery.timeago.js" language="javascript" type="text/javascript"></script>
     <script src="../res/jquery-timeago_v1.3.1/locales/jquery.timeago.zh-TW.js" language="javascript" type="text/javascript"></script>
     <script src="../res/jQuery-Mobile-v1.3.0/swipe.js" language="javascript" type="text/javascript"></script>
+    
+    <script src="../res/fancyBox_v2.1.5/jquery.fancybox.js" language="javascript" type="text/javascript"></script>
+    <script src="../res/fancyBox_v2.1.5/jquery.fancybox-buttons.js" language="javascript" type="text/javascript"></script>
+    <script src="../res/fancyBox_v2.1.5/jquery.fancybox-thumbs.js" language="javascript" type="text/javascript"></script>
+    <script src="../res/fancyBox_v2.1.5/jquery.fancybox-media.js" language="javascript" type="text/javascript"></script>
 
     <script src="../js/frame.js" language="javascript" type="text/javascript"></script>
+    <script src="../js/article.js" language="javascript" type="text/javascript"></script>
   </head>
   <body lang="zh-tw">
 
@@ -48,18 +58,23 @@
                                     <a href='.././tag/php'><div class='unit'>php(9)</div></a>
                                     <a href='.././tag/codeigniter'><div class='unit'>codeigniter(6)</div></a>
                                     <a href='.././tag/apache2'><div class='unit'>apache2(4)</div></a>
-                                    <a href='.././tag/mysql'><div class='unit'>mysql(3)</div></a>
-                                    <a href='.././tag/redis'><div class='unit'>redis(3)</div></a>
                                     <a href='.././tag/mac%20osx'><div class='unit'>mac osx(3)</div></a>
+                                    <a href='.././tag/redis'><div class='unit'>redis(3)</div></a>
+                                    <a href='.././tag/mysql'><div class='unit'>mysql(3)</div></a>
                                     <a href='.././tag/phpmyadmin'><div class='unit'>phpmyadmin(2)</div></a>
                                     <a href='.././tag/php%20activerecord'><div class='unit'>php activerecord(2)</div></a>
-                                    <a href='.././tag/github'><div class='unit'>github(1)</div></a>
-                                    <a href='.././tag/ruby%20on%20rails'><div class='unit'>ruby on rails(1)</div></a>
-                                    <a href='.././tag/homebrew'><div class='unit'>homebrew(1)</div></a>
-                                    <a href='.././tag/usbwebserver'><div class='unit'>usbwebserver(1)</div></a>
                                     <a href='.././tag/phpredisadmin'><div class='unit'>phpredisadmin(1)</div></a>
-                                    <a href='.././tag/sublime%20text'><div class='unit'>sublime text(1)</div></a>
+                                    <a href='.././tag/github'><div class='unit'>github(1)</div></a>
+                                    <a href='.././tag/%E5%85%A8%E6%99%AF'><div class='unit'>全景(1)</div></a>
+                                    <a href='.././tag/ruby%20on%20rails'><div class='unit'>ruby on rails(1)</div></a>
+                                    <a href='.././tag/usbwebserver'><div class='unit'>usbwebserver(1)</div></a>
+                                    <a href='.././tag/%E5%8C%97%E6%B8%AF%E9%9A%85%E6%99%AF'><div class='unit'>北港隅景(1)</div></a>
+                                    <a href='.././tag/%E6%94%9D%E5%BD%B1'><div class='unit'>攝影(1)</div></a>
                                     <a href='.././tag/phpquery'><div class='unit'>phpquery(1)</div></a>
+                                    <a href='.././tag/homebrew'><div class='unit'>homebrew(1)</div></a>
+                                    <a href='.././tag/iphone%206'><div class='unit'>iphone 6(1)</div></a>
+                                    <a href='.././tag/sublime%20text'><div class='unit'>sublime text(1)</div></a>
+                                    <a href='.././tag/%E5%8C%97%E6%B8%AF'><div class='unit'>北港(1)</div></a>
                                     <a href='.././tag/lamp'><div class='unit'>lamp(1)</div></a>
                             <div class='unit title'>OA's Link</div>
                             <a href='https://www.facebook.com/comdan66' target='_blank' title='oa's facebook'><div class='unit'>Facebook</div></a>
@@ -189,6 +204,23 @@
                                         <li>
                           <span class='folder'>
                             <span data-open='▼' data-close='►'>►</span>
+                            2015年 (1)
+                          </span>
+                                                <ul>
+                                                        <li>
+                                  <span class='folder'>
+                                    <span data-open='▼' data-close='►'>►</span>
+                                    01月 (1)
+                                  </span>
+                                                                <ul>
+                                                                        <li><a class='item' href='../article/iphone6 全景心得.html'>iphone6 全景心得</a></li>
+                                                                    </ul>
+                                                            </li>
+                                                    </ul>
+                                            </li>
+                                        <li>
+                          <span class='folder'>
+                            <span data-open='▼' data-close='►'>►</span>
                             2014年 (4)
                           </span>
                                                 <ul>
@@ -273,18 +305,23 @@
                                 <a href='.././tag/php'><span class="tag"><div class="doc"></div><div class="name">php (9)</div></span></a>
                                 <a href='.././tag/codeigniter'><span class="tag"><div class="doc"></div><div class="name">codeigniter (6)</div></span></a>
                                 <a href='.././tag/apache2'><span class="tag"><div class="doc"></div><div class="name">apache2 (4)</div></span></a>
-                                <a href='.././tag/mysql'><span class="tag"><div class="doc"></div><div class="name">mysql (3)</div></span></a>
-                                <a href='.././tag/redis'><span class="tag"><div class="doc"></div><div class="name">redis (3)</div></span></a>
                                 <a href='.././tag/mac%20osx'><span class="tag"><div class="doc"></div><div class="name">mac osx (3)</div></span></a>
+                                <a href='.././tag/redis'><span class="tag"><div class="doc"></div><div class="name">redis (3)</div></span></a>
+                                <a href='.././tag/mysql'><span class="tag"><div class="doc"></div><div class="name">mysql (3)</div></span></a>
                                 <a href='.././tag/phpmyadmin'><span class="tag"><div class="doc"></div><div class="name">phpmyadmin (2)</div></span></a>
                                 <a href='.././tag/php%20activerecord'><span class="tag"><div class="doc"></div><div class="name">php activerecord (2)</div></span></a>
-                                <a href='.././tag/github'><span class="tag"><div class="doc"></div><div class="name">github (1)</div></span></a>
-                                <a href='.././tag/ruby%20on%20rails'><span class="tag"><div class="doc"></div><div class="name">ruby on rails (1)</div></span></a>
-                                <a href='.././tag/homebrew'><span class="tag"><div class="doc"></div><div class="name">homebrew (1)</div></span></a>
-                                <a href='.././tag/usbwebserver'><span class="tag"><div class="doc"></div><div class="name">usbwebserver (1)</div></span></a>
                                 <a href='.././tag/phpredisadmin'><span class="tag"><div class="doc"></div><div class="name">phpredisadmin (1)</div></span></a>
-                                <a href='.././tag/sublime%20text'><span class="tag"><div class="doc"></div><div class="name">sublime text (1)</div></span></a>
+                                <a href='.././tag/github'><span class="tag"><div class="doc"></div><div class="name">github (1)</div></span></a>
+                                <a href='.././tag/%E5%85%A8%E6%99%AF'><span class="tag"><div class="doc"></div><div class="name">全景 (1)</div></span></a>
+                                <a href='.././tag/ruby%20on%20rails'><span class="tag"><div class="doc"></div><div class="name">ruby on rails (1)</div></span></a>
+                                <a href='.././tag/usbwebserver'><span class="tag"><div class="doc"></div><div class="name">usbwebserver (1)</div></span></a>
+                                <a href='.././tag/%E5%8C%97%E6%B8%AF%E9%9A%85%E6%99%AF'><span class="tag"><div class="doc"></div><div class="name">北港隅景 (1)</div></span></a>
+                                <a href='.././tag/%E6%94%9D%E5%BD%B1'><span class="tag"><div class="doc"></div><div class="name">攝影 (1)</div></span></a>
                                 <a href='.././tag/phpquery'><span class="tag"><div class="doc"></div><div class="name">phpquery (1)</div></span></a>
+                                <a href='.././tag/homebrew'><span class="tag"><div class="doc"></div><div class="name">homebrew (1)</div></span></a>
+                                <a href='.././tag/iphone%206'><span class="tag"><div class="doc"></div><div class="name">iphone 6 (1)</div></span></a>
+                                <a href='.././tag/sublime%20text'><span class="tag"><div class="doc"></div><div class="name">sublime text (1)</div></span></a>
+                                <a href='.././tag/%E5%8C%97%E6%B8%AF'><span class="tag"><div class="doc"></div><div class="name">北港 (1)</div></span></a>
                                 <a href='.././tag/lamp'><span class="tag"><div class="doc"></div><div class="name">lamp (1)</div></span></a>
                             </div>
                       <div class='pin githubbadge'><div class='title'>OA's GitHub</div><iframe src="http://githubbadge.appspot.com/comdan66" frameBorder="0"></iframe></div>
