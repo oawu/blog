@@ -2,22 +2,22 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-tw">
-    <title>當 codeigniter 碰上 redis - OA's blog</title>
+    <title>當了一年 web 工程師的心得.. - OA's blog</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <meta name="robots" content="index,follow" />
     <meta name="author" content="吳政賢(OA Wu)" />
-    <meta name="keywords" content="吳政賢(OA Wu) | OA's blog | CodeIgniter | Redis | PHP" />
-    <meta name="description" content="說明因為都是使用 CodeIgniter 做專案開發，所以最近研究了一下，終於在 GitHub 上找到一位大大的 Redis Library！規格Framework - CodeIgniter步驟至 Joël Cox 大大的 GitHub 下載 codeigniter-redis。如果可以的話，也確保你的 Redis 已經可以使用，到時候好測試！CodeIgniter 內加入檔案。./application/libraries/ 目錄下加入 Redis.php./application/config/ 目錄下加入 redis.php設定 Redis Server 位置、Port、密碼。編輯 ./application/config/redis.php$config['redis_default']['host'] = '127.0.0.1';   // IP address or hos…" />
+    <meta name="keywords" content="吳政賢(OA Wu) | OA's blog | 流水文" />
+    <meta name="description" content="這幾天，在 ptt 上面看到一篇文章其中有說到一句話，令我有所感觸...一間公司會不會賺錢 問工程師就對了!!我怎覺得貌似有幾分道理... 各位覺得呢？有時候，工程師對產品不提意見不代表沒意見，只是不想讓穩定的生活改變，也懶得爭辯..漸漸的，自己痲痹於只專注技術、技術、技術..卻忘記當初自己也是因為想做出個成功產品，而去學習這些技術的...每個ＲＤ心中都有一個很棒的夢，但睡醒後，隔天還是夢醒了，乖乖的去上班。回想起以前我學程式，目的只有一個我要做出個一個可以讓人 '哇' 的一聲的作品！同時也是因為作品的成就感，讓我一步…" />
 
     <meta property="og:site_name" content="OA's blog" />
     <meta property="og:type" content="profile" />
     <meta property="og:image" content="http://comdan66.github.io/blog/img/og.png" />
-    <meta property="og:title" content="當 codeigniter 碰上 redis - OA's blog" />
+    <meta property="og:title" content="當了一年 web 工程師的心得.. - OA's blog" />
     <meta property="og:locale" content="zh_TW" />
-    <meta property="og:description" content="說明因為都是使用 CodeIgniter 做專案開發，所以最近研究了一下，終於在 GitHub 上找到一位大大的 Redis Library！規格Framework - CodeIgniter步驟至 Joël Cox 大大的 GitHub 下載 codeigniter-redis。如果可以的話，也確保你的 Redis 已經可以使用，到時候好測試！CodeIgniter 內加入檔案。./application/libraries/ 目錄下加入 Redis.php./application/config/ 目錄下加入 redis.php設定 Redis Server 位置、Port、密碼。編輯 ./application/config/redis.php$config['redis_default']['host'] = '127.0.0.1';   // IP address or hos…" />
-    <meta property="og:url" content="http://comdan66.github.io/blog/article/當 codeigniter 碰上 redis.html" />
+    <meta property="og:description" content="這幾天，在 ptt 上面看到一篇文章其中有說到一句話，令我有所感觸...一間公司會不會賺錢 問工程師就對了!!我怎覺得貌似有幾分道理... 各位覺得呢？有時候，工程師對產品不提意見不代表沒意見，只是不想讓穩定的生活改變，也懶得爭辯..漸漸的，自己痲痹於只專注技術、技術、技術..卻忘記當初自己也是因為想做出個成功產品，而去學習這些技術的...每個ＲＤ心中都有一個很棒的夢，但睡醒後，隔天還是夢醒了，乖乖的去上班。回想起以前我學程式，目的只有一個我要做出個一個可以讓人 '哇' 的一聲的作品！同時也是因為作品的成就感，讓我一步…" />
+    <meta property="og:url" content="http://comdan66.github.io/blog/article/當了一年 web 工程師的心得...html" />
 
     <link href="../res/fancyBox_v2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css">
     <link href="../res/fancyBox_v2.1.5/jquery.fancybox-buttons.css" rel="stylesheet" type="text/css">
@@ -113,66 +113,98 @@
       <div class='left'>
         <div class='block paper article'>
           <div class='title clearfix'>
-            <h2>當 codeigniter 碰上 redis</h2>
-            <div class='date timeago' data-time='2013-12-23 11:42:34'>2013-12-23 11:42:34</div>
+            <h2>當了一年 web 工程師的心得..</h2>
+            <div class='date timeago' data-time='2015-01-11 02:35:33'>2015-01-11 02:35:33</div>
           </div>
           <div class='content'>
-<h3>說明</h3>
+<p>這幾天，在 ptt 上面看到一篇文章</p>
 
-<p>因為都是使用 CodeIgniter 做專案開發，所以最近研究了一下，終於在 GitHub 上找到一位大大的 <a href="https://github.com/joelcox/codeigniter-redis">Redis Library</a>！</p>
+<p>其中有說到一句話，令我有所感觸...</p>
 
-<p><br></p>
+<p><br><strong>一間公司會不會賺錢 問工程師就對了!!</strong></p>
 
-<h3>規格</h3>
+<p><br>
+我怎覺得貌似有幾分道理... 各位覺得呢？</p>
 
-<ul>
-<li>Framework - <a href="http://www.codeigniter.org.tw/">CodeIgniter</a>
-</li>
-</ul>
-<p><br></p>
+<p>有時候，工程師對產品不提意見不代表沒意見，</p>
 
-<h3>步驟</h3>
+<p>只是不想讓穩定的生活改變，也懶得爭辯..</p>
 
-<ul>
-<li><p>至 <a href="https://github.com/joelcox">Joël Cox</a> 大大的 <a href="https://github.com/joelcox/codeigniter-redis">GitHub</a> 下載 codeigniter-redis。</p></li>
-<li><p>如果可以的話，也確保你的 Redis 已經可以使用，到時候好測試！</p></li>
-<li>
-<p>CodeIgniter 內加入檔案。</p>
+<p><br>
+漸漸的，自己痲痹於只專注技術、技術、技術..</p>
 
-<ul>
-<li><p><code>./application/libraries/</code> 目錄下加入 <strong>Redis.php</strong></p></li>
-<li><p><code>./application/config/</code> 目錄下加入 <strong>redis.php</strong></p></li>
-</ul>
-</li>
-<li>
-<p>設定 Redis Server 位置、Port、密碼。</p>
+<p>卻忘記當初自己也是因為想做出個成功產品，而去學習這些技術的...</p>
 
-<ul>
-<li>
-<p>編輯 <code>./application/config/redis.php</code></p>
+<p><br>
+每個ＲＤ心中都有一個很棒的夢，</p>
 
-<pre><code>$config['redis_default']['host'] = '127.0.0.1';   // IP address or host
-$config['redis_default']['port'] = '6379';        // Default Redis port is 6379
-$config['redis_default']['password'] = '';        // Can be left empty when the server does not require AUTH
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
+<p>但睡醒後，隔天還是夢醒了，乖乖的去上班。</p>
 
-<h3>小筆記</h3>
+<p><br><br>
+回想起以前我學程式，目的只有一個</p>
 
-<ul>
-<li>Mac OSX 上安裝 Redis 可以參考 <a href="mac%20os%20%E5%AE%89%E8%A3%9D%20redis.html">這篇</a>。</li>
-<li>使用 phpRedisAdmin 管理 Redis 資料，的話可以參考 <a href="phpredisadmin%20%E5%AE%89%E8%A3%9D.html">這篇</a>。</li>
-</ul>
+<p>我要做出個一個可以讓人 '哇' 的一聲的作品！</p>
+
+<p>同時也是因為作品的成就感，讓我一步步的往前走..</p>
+
+<p><br>
+回到 web 後，雖然每天都可以開心寫程式</p>
+
+<p>一樣是寫 code，卻跟我大學時候感受不一樣...</p>
+
+<p><br>
+我發現，大學我寫的 code 是在寫我自己的</p>
+
+<p>出社會後，我是在為別人完成作品的...</p>
+
+<p><br><br>
+當然，當中也會想，如果工作內容是我自己想完成的作品</p>
+
+<p>不就跟大學一樣，每天開開心心地做事ＸＤ</p>
+
+<p>不過資源是公司的，當然 決定 是公司的！</p>
+
+<p><br>
+幾次的溝通，漸漸的，心態慢慢的轉變了..</p>
+
+<p>慢慢地察覺，其實公司真正想要的只是一雙手</p>
+
+<p><br><strong>一雙... 會幫你實作出產品、作品的手</strong></p>
+
+<p><br>
+RD 到公司，看需求，實作，看 issue、bug，fix code，下班..</p>
+
+<p>作品實作出來了，產品完成了！</p>
+
+<p>但我真不覺得它有生命力..</p>
+
+<p><br>
+其實，放眼望去這麼多成功的例子..</p>
+
+<p>Facebook、watch、plurk 有哪個不是工程師造成的？</p>
+
+<p>好吧，當然阿里巴巴的馬雲大大好像不是</p>
+
+<p>但他有些點，我個人覺得是另一種道理！
+(改天再討論ＸＤ</p>
+
+<p><br>
+回歸開頭，其實每當 RD 看到需求時，真的蠻多 OS 的..</p>
+
+<p>畢竟東西是他們在做，最有感覺的... 也應該就是他們吧！！？</p>
+
+<p>以上.. 只是牙痛癢癢的一篇流水文章</p>
+
+<p>大家看看就好XDD</p>
+
+<p><br>
+看完... 睡醒，我們都還是要上班滴～～～</p>
+
+<p>--</p>
 </div>
           <div class='info clearfix'>
             <div class='tags all'>
-                          <span><a href=".././tag/CodeIgniter">CodeIgniter</a></span>
-                            <span><a href=".././tag/Redis">Redis</a></span>
-                            <span><a href=".././tag/PHP">PHP</a></span>
+                          <span><a href=".././tag/%E6%B5%81%E6%B0%B4%E6%96%87">流水文</a></span>
                       </div>
           </div>
         </div>
@@ -180,7 +212,7 @@ $config['redis_default']['password'] = '';        // Can be left empty when the 
 
       <div class='right'>
                 <div class='pin oa_infos'>
-                <div class='message hide' data-name='當 codeigniter 碰上 redis'></div>
+                <div class='message hide' data-name='當了一年 web 工程師的心得..'></div>
                 <div class='line1'></div><div class='line2'></div>
                 <a href='http://www.ioa.tw' target='_blank'>
                   <div class='avatar_outline'>
