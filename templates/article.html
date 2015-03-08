@@ -58,7 +58,7 @@
                     <div class='unit title'><?php echo $value['title'];?></div>
 
               <?php foreach ($tags as $tag => $folders) { ?>
-                      <a href='<?php echo '../' . $_tags . '/' . rawurlencode ($tag);?>'><div class='unit'><?php echo $tag;?>(<?php echo count ($folders);?>)</div></a>
+                      <a href='<?php echo '../' . $_tags . '/' . rawurlencode (strtolower ($tag));?>'><div class='unit'><?php echo $tag;?>(<?php echo count ($folders);?>)</div></a>
               <?php }
                   }
                 }
@@ -113,7 +113,7 @@
             <div class='tags all'>
         <?php if ($tag_list) {
                 foreach ($tag_list as $tag) { ?>
-                  <span><a href="<?php echo '../' . $_tags . '/' . rawurlencode ($tag);?>"><?php echo $tag;?></a></span>
+                  <span><a href="<?php echo '../' . $_tags . '/' . rawurlencode (strtolower ($tag));?>"><?php echo $tag;?></a></span>
           <?php }
               } else {
                 echo "&nbsp;&nbsp;";
@@ -158,7 +158,7 @@
                 <div class='pin tags clearfix'>
                   <div class='title'><?php echo $pin['title'];?></div>
             <?php foreach ($tags as $tag => $folders) { ?>
-                    <a href='<?php echo '../' . $_tags . '/' . rawurlencode ($tag);?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
+                    <a href='<?php echo '../' . $_tags . '/' . rawurlencode (strtolower ($tag));?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
             <?php } ?>
                 </div>
         <?php }
