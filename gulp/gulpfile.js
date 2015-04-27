@@ -2,7 +2,7 @@ var gulp = require ('gulp'),
     notify = require('gulp-notify'),
     uglifyJS = require ('gulp-uglify'),
     livereload = require('gulp-livereload'),
-    minifyHTML = require('gulp-minify-html'),
+    htmlmin = require('gulp-html-minifier'),
     del = require('del');
 
 gulp.task ('default', function () {
@@ -23,7 +23,7 @@ gulp.task ('reload', function () {
 gulp.task ('minify', function () {
   gulp.run ('js-uglify');
   gulp.run ('res-uglify');
-  // gulp.run ('minify-html');
+  gulp.run ('minify-html');
 });
 gulp.task ('gh-pages', function () {
   del (['./root']);
@@ -33,23 +33,23 @@ gulp.task ('js-uglify', function () {
       .pipe (uglifyJS ())
       .pipe (gulp.dest ('./root/js/'));
 });
+
 gulp.task ('res-uglify', function () {
   gulp.src ('./root/res/**/*.js')
       .pipe (uglifyJS ())
       .pipe (gulp.dest ('./root/res/'));
 });
-gulp.task ('minify-html', function () {
-  var opts = {comments: true, spare:true};
 
+gulp.task ('minify-html', function () {
   gulp.src ('./root/article/**/*.html')
-      .pipe (minifyHTML (opts))
-      .pipe (gulp.dest ('./root/article/'))
+      .pipe (htmlmin ({collapseWhitespace: true}))
+      .pipe (gulp.dest ('./root/article/'));
 
   gulp.src ('./root/articles/**/*.html')
-      .pipe (minifyHTML (opts))
-      .pipe (gulp.dest ('./root/articles/'))
+      .pipe (htmlmin ({collapseWhitespace: true}))
+      .pipe (gulp.dest ('./root/articles/'));
 
   gulp.src ('./root/tag/**/*.html')
-      .pipe (minifyHTML (opts))
-      .pipe (gulp.dest ('./root/tag/'))
+      .pipe (htmlmin ({collapseWhitespace: true}))
+      .pipe (gulp.dest ('./root/tag/'));
 });
