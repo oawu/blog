@@ -9,22 +9,22 @@ Mac OS X 安裝 MySQL！
 <br/>
 ### 步驟
 * 官網下載 .dmg 檔 [http://dev.mysql.com/downloads/file.php?id=454017](http://dev.mysql.com/downloads/file.php?id=454017)。  
-	![download MySQL](./img/10.png)
+	![download MySQL](./img/10-compressor.png)
 
 * 一直下一步、下一步安裝。  
-	![install MySQL](./img/11.png)
+	![install MySQL](./img/11-compressor.png)
 
 * 打開系統偏好設定，點選 MySQL。  
-	![start Mysql](./img/12.png)  
-	![start Mysql](./img/13.png)  
-	![start Mysql](./img/14.png)
+	![start Mysql](./img/12-compressor.png)  
+	![start Mysql](./img/13-compressor.png)  
+	![start Mysql](./img/14-compressor.png)
 
 * 加 MySQL PATH 至 ZSH。
 	* ```vim ~/.zshrc```  
-		![add MySQL commend to ZSH](./img/15.png)
+		![add MySQL commend to ZSH](./img/15-compressor.png)
 
 	* 確認是否成功 ```echo $PATH```。  
-		![add MySQL commend to ZSH](./img/16.png)
+		![add MySQL commend to ZSH](./img/16-compressor.png)
 
 	* 重新開啟 iTerm。
 

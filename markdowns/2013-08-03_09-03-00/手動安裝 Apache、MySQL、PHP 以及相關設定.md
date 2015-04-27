@@ -72,9 +72,9 @@
 * 舉例，將根目錄更改至 ```D:/www/```。
 * 開啟 Apache2.2 資料夾，編輯 ```./conf/httpd.conf```。
 * 尋找 **DocumentRoot**，修改其路徑。  
-	![windows_httpd_conf_document_root_03](img/windows_httpd_conf_document_root_03.png)
+	![windows_httpd_conf_document_root_03](img/windows_httpd_conf_document_root_03-compressor.png)
 * 尋找標籤 **Directory**，將其路徑值更改。
-	![windows_httpd_conf_document_root_05](img/windows_httpd_conf_document_root_05.png)
+	![windows_httpd_conf_document_root_05](img/windows_httpd_conf_document_root_05-compressor.png)
 
 <br/>
 ### 小總結

@@ -24,10 +24,10 @@ Sets、Sorted Sets、Pub/Sub
 	* 安裝，輸入指令: ```make```
 	
 * 啓動 Redis Server，輸入指令: ```redis-server```
-	![redis_server](img/redis_server.png)
+	![redis_server](img/redis_server-compressor.png)
 	
 * 接下來啟動 Redis 的 Client，輸入指令: ```redis-cli```
-	![redis_cli](img/redis_cli.png)
+	![redis_cli](img/redis_cli-compressor.png)
 	
 	
 <br/>

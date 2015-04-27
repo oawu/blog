@@ -22,7 +22,7 @@
 	* 開啟檔案 ```./phpRedisAdmin/includes/config.sample.inc.php```，依需求設定內容。
 
 * 開啓網頁 [http://127.0.0.1/phpRedisAdmin/](http://127.0.0.1/phpRedisAdmin/)
-	![php_redis_admin](img/php_redis_admin.png)
+	![php_redis_admin](img/php_redis_admin-compressor.png)
 	
 <br/>
 ### 小筆記

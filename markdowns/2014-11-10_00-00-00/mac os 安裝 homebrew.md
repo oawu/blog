@@ -8,17 +8,17 @@ Mac OS X 安裝 Homebrew！
 <br/>
 ### 步驟
 * 下載安裝，指令: ```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```。  
-	![ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)](./img/03.png)
+	![ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)](./img/03-compressor.png)
 
 * 安裝 git，指令: ```brew install git```。  
-	![brew install git](./img/04.png)
+	![brew install git](./img/04-compressor.png)
 
 * 更新 Homebrew，指令: ```brew update```。  
-	![brew update](./img/05.png)
+	![brew update](./img/05-compressor.png)
 
 * 指令: ```brew tap homebrew/dupes```。  
-	![brew tap homebrew/dupes](./img/06.png)
+	![brew tap homebrew/dupes](./img/06-compressor.png)
 
 
 * 安裝 apple-gcc，指令: ```brew install apple-gcc42```。
-	![brew install apple-gcc42](./img/07.png)
+	![brew install apple-gcc42](./img/07-compressor.png)
