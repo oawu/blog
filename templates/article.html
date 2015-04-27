@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <meta name="robots" content="index,follow" />
-    <meta name="author" content="<?php echo $_author;?>" />
-    <meta name="keywords" content="<?php echo implode (' | ', array_merge (array ($_author, $_title), array_map (function ($tag) { return $tag;}, $tag_list))); ?>" />
-    <meta name="description" content="<?php echo mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8');?>" />
+    <meta name="author" content="<?php echo preg_replace ('/"/m', "'", $_author);?>" />
+    <meta name="keywords" content="<?php echo preg_replace ('/"/m', "'", implode (' | ', array_merge (array ($_author, $_title), array_map (function ($tag) { return $tag;}, $tag_list)))); ?>" />
+    <meta name="description" content="<?php echo preg_replace ('/"/m', "'", mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8'));?>" />
 
-    <meta property="og:site_name" content="<?php echo $_title;?>" />
-    <meta property="og:type" content="<?php echo $_og['type'];?>" />
-    <meta property="og:image" content="<?php echo preg_match ('/<img.+src=[\'"](?P<src>.+)[\'"].*>/i', $content, $image) && isset ($image['src']) ? $_url . '/' . preg_replace ('/^\.\.?\/(\.\.?\/)+/', '', $image['src']) : $_og['image'];?>" />
-    <meta property="og:title" content="<?php echo $name;?> - <?php echo $_title;?>" />
-    <meta property="og:locale" content="<?php echo $_og['locale'];?>" />
-    <meta property="og:description" content="<?php echo mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8');?>" />
-    <meta property="og:url" content="<?php echo $my_url;?>" />
+    <meta property="og:site_name" content="<?php echo preg_replace ('/"/m', "'", $_title);?>" />
+    <meta property="og:type" content="<?php echo preg_replace ('/"/m', "'", $_og['type']);?>" />
+    <meta property="og:image" content="<?php echo preg_replace ('/"/m', "'", preg_match ('/<img.+src=[\'"](?P<src>[^ ]+)[\'"].*>/i', $content, $image) && isset ($image['src']) ? $_url . '/' . preg_replace ('/^\.\.?\/(\.\.?\/)+/', '', $image['src']) : $_og['image']);?>" />
+    <meta property="og:title" content="<?php echo preg_replace ('/"/m', "'", $name);?> - <?php echo preg_replace ('/"/m', "'", $_title);?>" />
+    <meta property="og:locale" content="<?php echo preg_replace ('/"/m', "'", $_og['locale']);?>" />
+    <meta property="og:description" content="<?php echo preg_replace ('/"/m', "'", mb_strimwidth (preg_replace ('/\n*/m', '', strip_tags ($content)), 0, 500, '…', 'UTF-8'));?>" />
+    <meta property="og:url" content="<?php echo preg_replace ('/"/m', "'", $my_url);?>" />
 
     <link href="../res/fancyBox_v2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css">
     <link href="../res/fancyBox_v2.1.5/jquery.fancybox-buttons.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,7 @@
                     <div class='unit title'><?php echo $value['title'];?></div>
 
               <?php foreach ($tags as $tag => $folders) { ?>
-                      <a href='<?php echo '../' . $_tags . '/' . rawurlencode (strtolower ($tag));?>'><div class='unit'><?php echo $tag;?>(<?php echo count ($folders);?>)</div></a>
+                      <a href="<?php echo preg_replace ('/"/m', "'", '../' . $_tags . '/' . rawurlencode (strtolower ($tag)));?>"><div class='unit'><?php echo $tag;?>(<?php echo count ($folders);?>)</div></a>
               <?php }
                   }
                 }
@@ -68,9 +68,9 @@
         <?php if ($mobile_right_slide['items']) {
                 foreach ($mobile_right_slide['items'] as $item) {
                   if (isset ($item['link']) && $item['link']) { ?>
-                    <a href='<?php echo $item['link']['href'];?>' target='<?php echo $item['link']['target'];?>' title='<?php echo $item['link']['title'];?>'><div class='unit<?php echo isset ($item['class']) && $item['class'] ? ' ' . $item['class'] : '';?>'><?php echo $item['value'];?></div></a>
+                    <a href="<?php echo preg_replace ('/"/m', "'", $item['link']['href']);?>" target="<?php echo preg_replace ('/"/m', "'", $item['link']['target']);?>" title="<?php echo preg_replace ('/"/m', "'", $item['link']['title']);?>"><div class="unit<?php echo isset ($item['class']) && $item['class'] ? ' ' . $item['class'] : '';?>"><?php echo $item['value'];?></div></a>
             <?php } else { ?>
-                    <div class='unit<?php echo isset ($item['class']) && $item['class'] ? ' ' . $item['class'] : '';?>'><?php echo $item['value'];?></div>
+                    <div class="unit<?php echo isset ($item['class']) && $item['class'] ? ' ' . $item['class'] : '';?>"><?php echo $item['value'];?></div>
             <?php }
                 }
               }
@@ -84,19 +84,19 @@
     <div id="header" class="oa-navbar">
       <div class="oa-navbar-container">
         <div class="oa-navbar-items clearfix">
-          <div class="oa-navbar-mobile home"><a href='../' alt="<?php echo $_navbar_mobile['title'];?>" title="<?php echo $_navbar_mobile['title'];?>"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><path d="M7.987 0h0.026c-0.005 0.001-0.009 0.002-0.013 0.002s-0.008-0.001-0.013-0.002zM15.424 6.834c0.771 0.771 0.771 2.023 0 2.795l-0.371 0.371h-1.053v4c0 1.104-0.896 2-2 2h-8c-1.104 0-2-0.896-2-2v-4h-1.053l-0.371-0.371c-0.771-0.772-0.771-2.024 0-2.795l6.289-6.288c0.319-0.319 0.72-0.492 1.135-0.544 0.415 0.052 0.816 0.225 1.135 0.544l6.289 6.288zM12 8h1.572c-0.042-0.17-0.112-0.334-0.244-0.468l-4.891-4.891c-0.125-0.125-0.278-0.194-0.437-0.238-0.159 0.044-0.312 0.114-0.436 0.238l-4.891 4.891c-0.133 0.134-0.203 0.298-0.245 0.468h1.572v5c0 0.553 0.447 1 1 1h1v-5h4v5h1c0.553 0 1-0.447 1-1v-5z" fill="#000000"></path></svg></a></div>
+          <div class="oa-navbar-mobile home"><a href='../' alt="<?php echo preg_replace ('/"/m', "'", $_navbar_mobile['title']);?>" title="<?php echo preg_replace ('/"/m', "'", $_navbar_mobile['title']);?>"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><path d="M7.987 0h0.026c-0.005 0.001-0.009 0.002-0.013 0.002s-0.008-0.001-0.013-0.002zM15.424 6.834c0.771 0.771 0.771 2.023 0 2.795l-0.371 0.371h-1.053v4c0 1.104-0.896 2-2 2h-8c-1.104 0-2-0.896-2-2v-4h-1.053l-0.371-0.371c-0.771-0.772-0.771-2.024 0-2.795l6.289-6.288c0.319-0.319 0.72-0.492 1.135-0.544 0.415 0.052 0.816 0.225 1.135 0.544l6.289 6.288zM12 8h1.572c-0.042-0.17-0.112-0.334-0.244-0.468l-4.891-4.891c-0.125-0.125-0.278-0.194-0.437-0.238-0.159 0.044-0.312 0.114-0.436 0.238l-4.891 4.891c-0.133 0.134-0.203 0.298-0.245 0.468h1.572v5c0 0.553 0.447 1 1 1h1v-5h4v5h1c0.553 0 1-0.447 1-1v-5z" fill="#000000"></path></svg></a></div>
           <div class="oa-navbar-mobile"><?php echo $_navbar_mobile['title'];?></div>
-          <div class='oa-navbar-item'><a href='../' alt="<?php echo $_navbar_mobile['title'];?>" title="<?php echo $_navbar_mobile['title'];?>"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><path d="M7.987 0h0.026c-0.005 0.001-0.009 0.002-0.013 0.002s-0.008-0.001-0.013-0.002zM15.424 6.834c0.771 0.771 0.771 2.023 0 2.795l-0.371 0.371h-1.053v4c0 1.104-0.896 2-2 2h-8c-1.104 0-2-0.896-2-2v-4h-1.053l-0.371-0.371c-0.771-0.772-0.771-2.024 0-2.795l6.289-6.288c0.319-0.319 0.72-0.492 1.135-0.544 0.415 0.052 0.816 0.225 1.135 0.544l6.289 6.288zM12 8h1.572c-0.042-0.17-0.112-0.334-0.244-0.468l-4.891-4.891c-0.125-0.125-0.278-0.194-0.437-0.238-0.159 0.044-0.312 0.114-0.436 0.238l-4.891 4.891c-0.133 0.134-0.203 0.298-0.245 0.468h1.572v5c0 0.553 0.447 1 1 1h1v-5h4v5h1c0.553 0 1-0.447 1-1v-5z" fill="#000000"></path></svg></a></div>
+          <div class='oa-navbar-item'><a href='../' alt="<?php echo preg_replace ('/"/m', "'", $_navbar_mobile['title']);?>" title="<?php echo preg_replace ('/"/m', "'", $_navbar_mobile['title']);?>"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><path d="M7.987 0h0.026c-0.005 0.001-0.009 0.002-0.013 0.002s-0.008-0.001-0.013-0.002zM15.424 6.834c0.771 0.771 0.771 2.023 0 2.795l-0.371 0.371h-1.053v4c0 1.104-0.896 2-2 2h-8c-1.104 0-2-0.896-2-2v-4h-1.053l-0.371-0.371c-0.771-0.772-0.771-2.024 0-2.795l6.289-6.288c0.319-0.319 0.72-0.492 1.135-0.544 0.415 0.052 0.816 0.225 1.135 0.544l6.289 6.288zM12 8h1.572c-0.042-0.17-0.112-0.334-0.244-0.468l-4.891-4.891c-0.125-0.125-0.278-0.194-0.437-0.238-0.159 0.044-0.312 0.114-0.436 0.238l-4.891 4.891c-0.133 0.134-0.203 0.298-0.245 0.468h1.572v5c0 0.553 0.447 1 1 1h1v-5h4v5h1c0.553 0 1-0.447 1-1v-5z" fill="#000000"></path></svg></a></div>
     <?php if ($_nav_items) {
             foreach ($_nav_items as $nav_item) { ?>
-              <div class='oa-navbar-item'><a href='<?php echo $nav_item['href'];?>' alt="<?php echo $nav_item['title'];?>" title="<?php echo $nav_item['title'];?>" target='<?php echo $nav_item['target'];?>'><?php echo $nav_item['svg'];?></a></div>
+              <div class='oa-navbar-item'><a href="<?php echo preg_replace ('/"/m', "'", $nav_item['href']);?>" alt="<?php echo preg_replace ('/"/m', "'", $nav_item['title']);?>" title="<?php echo preg_replace ('/"/m', "'", $nav_item['title']);?>" target="<?php echo preg_replace ('/"/m', "'", $nav_item['target']);?>"><?php echo $nav_item['svg'];?></a></div>
     <?php   }
           } ?>
         </div>
       </div>
       <div class="avatar_outline">
         <div class="avatar">
-          <img src="<?php echo $_navbar_mobile['avatar'];?>" style="position: absolute; width: 44px; height: 44px; top: 0px; left: 0px;">
+          <img src="<?php echo preg_replace ('/"/m', "'", $_navbar_mobile['avatar']);?>" style="position: absolute; width: 44px; height: 44px; top: 0px; left: 0px;">
         </div>
       </div>
     </div>
@@ -106,14 +106,14 @@
         <div class='block paper article'>
           <div class='title clearfix'>
             <h2><?php echo $name;?></h2>
-            <div class='date timeago' data-time='<?php echo $date;?>'><?php echo $date;?></div>
+            <div class='date timeago' data-time="<?php echo preg_replace ('/"/m', "'", $date);?>"><?php echo $date;?></div>
           </div>
           <div class='content'><?php echo $content;?></div>
           <div class='info clearfix'>
             <div class='tags all'>
         <?php if ($tag_list) {
                 foreach ($tag_list as $tag) { ?>
-                  <span><a href="<?php echo '../' . $_tags . '/' . rawurlencode (strtolower ($tag));?>"><?php echo $tag;?></a></span>
+                  <span><a href="<?php echo preg_replace ('/"/m', "'", '../' . $_tags . '/' . rawurlencode (strtolower ($tag)));?>"><?php echo $tag;?></a></span>
           <?php }
               } else {
                 echo "&nbsp;&nbsp;";
@@ -128,17 +128,17 @@
           foreach ($_pins as $key => $pin) {
             if ($key == 'owner_info') { ?>
               <div class='pin oa_infos'>
-                <div class='message hide' data-name='<?php echo $name;?>'></div>
+                <div class='message hide' data-name="<?php echo preg_replace ('/"/m', "'", $name);?>"></div>
                 <div class='line1'></div><div class='line2'></div>
-                <a href='<?php echo $pin['href'];?>' target='_blank'>
+                <a href="<?php echo preg_replace ('/"/m', "'", $pin['href']);?>" target='_blank'>
                   <div class='avatar_outline'>
                     <div class='avatar'>
-                      <img src="<?php echo $pin['avatar'];?>">
+                      <img src="<?php echo preg_replace ('/"/m', "'", $pin['avatar']);?>">
                     </div>
                   </div>
                 </a>
                 <div class='info info1'>
-                  <a href='<?php echo $pin['href'];?>' target='_blank'>
+                  <a href="<?php echo preg_replace ('/"/m', "'", $pin['href']);?>" target='_blank'>
                     <?php echo $pin['name'];?>
                   </a>
                 </div>
@@ -149,8 +149,8 @@
       <?php } else if ($key == 'flickr') { ?>
               <div class='pin flickr'>
                 <div class='title'><?php echo $pin['title'];?></div>
-                <input type='hidden' name='api_key' value='<?php echo $pin['api_key'];?>' />
-                <input type='hidden' name='photoset_id' value='<?php echo $pin['photoset_id'];?>' />
+                <input type='hidden' name='api_key' value="<?php echo preg_replace ('/"/m', "'", $pin['api_key']);?>" />
+                <input type='hidden' name='photoset_id' value="<?php echo preg_replace ('/"/m', "'", $pin['photoset_id']);?>" />
                 <div class='box'></div>
               </div>
       <?php } else if ($key == 'tags') {
@@ -158,7 +158,7 @@
                 <div class='pin tags clearfix'>
                   <div class='title'><?php echo $pin['title'];?></div>
             <?php foreach ($tags as $tag => $folders) { ?>
-                    <a href='<?php echo '../' . $_tags . '/' . rawurlencode (strtolower ($tag));?>'><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
+                    <a href="<?php echo preg_replace ('/"/m', "'", '../' . $_tags . '/' . rawurlencode (strtolower ($tag)));?>"><span class="tag"><div class="doc"></div><div class="name"><?php echo $tag;?> (<?php echo count ($folders);?>)</div></span></a>
             <?php } ?>
                 </div>
         <?php }
@@ -185,7 +185,7 @@
                             <?php if ($month_value['blogs']) { ?>
                                     <ul>
                                 <?php foreach ($month_value['blogs'] as $href => $title) { ?>
-                                        <li><a class='item' href='<?php echo '../' . $href;?>'><?php echo $title;?></a></li>
+                                        <li><a class='item' href="<?php echo preg_replace ('/"/m', "'", '../' . $href);?>"><?php echo $title;?></a></li>
                                 <?php } ?>
                                     </ul>
                             <?php } ?>
@@ -200,7 +200,7 @@
                 </div>
         <?php }
             } else { ?>
-              <div class='pin <?php echo $key;?>'><div class='title'><?php echo $pin['title'];?></div><?php echo $pin['content'];?></div>
+              <div class="pin <?php echo $key;?>"><div class='title'><?php echo $pin['title'];?></div><?php echo $pin['content'];?></div>
       <?php }
           }
         } ?>
