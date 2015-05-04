@@ -9,14 +9,14 @@
     <meta name="robots" content="index,follow" />
     <meta name="author" content="吳政賢(OA Wu)" />
     <meta name="keywords" content="吳政賢(OA Wu) | OA's blog | Mac OSX | MySQL" />
-    <meta name="description" content="說明Mac OS X 安裝 MySQL！規格作業系統 Mac OS x 10.9.5MySQL 5.6.21步驟官網下載 .dmg 檔 http://dev.mysql.com/downloads/file.php?id=454017。一直下一步、下一步安裝。打開系統偏好設定，點選 MySQL。加 MySQL PATH 至 ZSH。vim ~/.zshrc確認是否成功 echo $PATH。重新開啟 iTerm。設定 root 密碼1。進入 MySQL，指令: mysql -u root。選擇資料庫，指令: use mysql;。更新資料，指令: update user set password=PASSWORD('你的密碼') where User='root';。刷新 MySQL 系統，指令: flush privileges;。離開 MySQL，指令: quit。注意…" />
+    <meta name="description" content="說明Mac OS X 安裝 MySQL！規格作業系統 Mac OS x 10.9.5MySQL 5.6.21步驟官網下載 .dmg 檔 http://dev.mysql.com/downloads/file.php?id=454017。一直下一步、下一步安裝。打開系統偏好設定，點選 MySQL。若是 OSX 10.10 以上，請把選項 startup Item 取消！  加 MySQL PATH 至 ZSH。vim ~/.zshrc確認是否成功 echo $PATH。重新開啟 iTerm。設定 root 密碼1。進入 MySQL，指令: mysql -u root。選擇資料庫，指令: use mysql;。更新資料，指令: update user set password=PASSWORD('你的密碼') where User='root';。刷新 MySQL 系統，指…" />
 
     <meta property="og:site_name" content="OA's blog" />
     <meta property="og:type" content="profile" />
     <meta property="og:image" content="http://comdan66.github.io/blog/markdowns/2014-11-10_01-00-00/./img/10-compressor.png" />
     <meta property="og:title" content="mac os 安裝 mysql - OA's blog" />
     <meta property="og:locale" content="zh_TW" />
-    <meta property="og:description" content="說明Mac OS X 安裝 MySQL！規格作業系統 Mac OS x 10.9.5MySQL 5.6.21步驟官網下載 .dmg 檔 http://dev.mysql.com/downloads/file.php?id=454017。一直下一步、下一步安裝。打開系統偏好設定，點選 MySQL。加 MySQL PATH 至 ZSH。vim ~/.zshrc確認是否成功 echo $PATH。重新開啟 iTerm。設定 root 密碼1。進入 MySQL，指令: mysql -u root。選擇資料庫，指令: use mysql;。更新資料，指令: update user set password=PASSWORD('你的密碼') where User='root';。刷新 MySQL 系統，指令: flush privileges;。離開 MySQL，指令: quit。注意…" />
+    <meta property="og:description" content="說明Mac OS X 安裝 MySQL！規格作業系統 Mac OS x 10.9.5MySQL 5.6.21步驟官網下載 .dmg 檔 http://dev.mysql.com/downloads/file.php?id=454017。一直下一步、下一步安裝。打開系統偏好設定，點選 MySQL。若是 OSX 10.10 以上，請把選項 startup Item 取消！  加 MySQL PATH 至 ZSH。vim ~/.zshrc確認是否成功 echo $PATH。重新開啟 iTerm。設定 root 密碼1。進入 MySQL，指令: mysql -u root。選擇資料庫，指令: use mysql;。更新資料，指令: update user set password=PASSWORD('你的密碼') where User='root';。刷新 MySQL 系統，指…" />
     <meta property="og:url" content="http://comdan66.github.io/blog/article/mac os 安裝 mysql.html" />
 
     <link href="../res/fancyBox_v2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css">
@@ -140,6 +140,8 @@
 <li><p>官網下載 .dmg 檔 <a href="http://dev.mysql.com/downloads/file.php?id=454017">http://dev.mysql.com/downloads/file.php?id=454017</a>。<br><img src=".././markdowns/2014-11-10_01-00-00/./img/10-compressor.png" alt="download MySQL"></p></li>
 <li><p>一直下一步、下一步安裝。<br><img src=".././markdowns/2014-11-10_01-00-00/./img/11-compressor.png" alt="install MySQL"></p></li>
 <li><p>打開系統偏好設定，點選 MySQL。<br><img src=".././markdowns/2014-11-10_01-00-00/./img/12-compressor.png" alt="start Mysql"><br><img src=".././markdowns/2014-11-10_01-00-00/./img/13-compressor.png" alt="start Mysql"><br><img src=".././markdowns/2014-11-10_01-00-00/./img/14-compressor.png" alt="start Mysql"></p></li>
+<li><p>若是 <strong>OSX 10.10 以上</strong>，請把選項 <code>startup Item</code> 取消！
+  <img src=".././markdowns/2014-11-10_01-00-00/./img/17-compressor.png" alt="OSX 10.10 Mysql startup Item"></p></li>
 <li>
 <p>加 MySQL PATH 至 ZSH。</p>
 
@@ -294,7 +296,7 @@
                                   </span>
                                                                 <ul>
                                                                         <li><a class='item' href="../article/當 codeigniter 碰上 php-activerecord.html">當 codeigniter 碰上 php-activerecord</a></li>
-                                                                        <li><a class='item' href="../article/手動安裝 apache、mysql、php 以及相關設定.html">手動安裝 apache、mysql、php 以及相關設定</a></li>
+                                                                        <li><a class='item' href="../article/手動安裝 Apache、MySQL、PHP 以及相關設定.html">手動安裝 Apache、MySQL、PHP 以及相關設定</a></li>
                                                                     </ul>
                                                             </li>
                                                         <li>

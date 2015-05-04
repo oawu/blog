@@ -18,6 +18,9 @@ Mac OS X 安裝 MySQL！
 	![start Mysql](./img/12-compressor.png)  
 	![start Mysql](./img/13-compressor.png)  
 	![start Mysql](./img/14-compressor.png)
+	
+* 若是 **OSX 10.10 以上**，請把選項 `startup Item` 取消！
+	![OSX 10.10 Mysql startup Item](./img/17-compressor.png)
 
 * 加 MySQL PATH 至 ZSH。
 	* ```vim ~/.zshrc```  
