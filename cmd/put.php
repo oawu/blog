@@ -62,7 +62,7 @@ try {
 // // ========================================================================
 
 $i = 0;
-$c = 9;
+$c = 10;
 $local_files = array ();
 echo ' ➜ ' . color ('列出即將上傳所有檔案', 'g');
 
@@ -117,6 +117,12 @@ echo "\r ➜ " . color ('列出即將上傳所有檔案', 'g') . color ('(' . co
 $files = array ();
 merge_array_recursive (directory_map ('../articles'), $files, '../articles');
 $files = array_filter ($files, function ($file) { return in_array (pathinfo ($file, PATHINFO_EXTENSION), array ('html')); });
+$files = array_map (function ($file) { return array ('path' => $file, 'md5' => md5_file ($file), 'uri' => preg_replace ('/^(\.\.\/)/', '', $file)); }, $files);
+echo "\r ➜ " . color ('列出即將上傳所有檔案', 'g') . color ('(' . count ($local_files = array_merge ($local_files, $files)) . ')', 'g') . ' - ' . sprintf ('% 3d%% ', (100 / $c) * ++$i);
+
+$files = array ();
+merge_array_recursive (directory_map ('../markdowns'), $files, '../markdowns');
+$files = array_filter ($files, function ($file) { return in_array (pathinfo ($file, PATHINFO_EXTENSION), array ('html', 'png', 'jpg', 'jpeg', 'gif', 'svg')); });
 $files = array_map (function ($file) { return array ('path' => $file, 'md5' => md5_file ($file), 'uri' => preg_replace ('/^(\.\.\/)/', '', $file)); }, $files);
 echo "\r ➜ " . color ('列出即將上傳所有檔案', 'g') . color ('(' . count ($local_files = array_merge ($local_files, $files)) . ')', 'g') . ' - ' . sprintf ('% 3d%% ', (100 / $c) * ++$i);
 
