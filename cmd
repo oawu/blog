@@ -1,1 +1,0 @@
-chmod 777 . && php build.php
