@@ -20,7 +20,7 @@
 <a href="https://www.youtube.com/watch?&v=pUBWKUEb7Do" target="_blank"><img width='50%' src="http://img.youtube.com/vi/pUBWKUEb7Do/0.jpg" alt="OA's Blog youtube demo!" /></a>
 
 * OA's Blog GitHub Pages
-Demo: [http://comdan66.github.io/blog/](http://comdan66.github.io/blog/)
+Demo: [https://goo.gl/aCmGDm](https://goo.gl/aCmGDm)
 
 
 
