@@ -6,7 +6,6 @@
 本作品授權採用 姓名標示-非商業性 2.0 台灣 (CC BY-NC 2.0 TW) 授權，詳見 [http://creativecommons.org/licenses/by-nc/2.0/tw/](http://creativecommons.org/licenses/by-nc/2.0/tw/) 
 
 
-<br/>
 ## 簡介
 * 利用 [GitHub Pages](https://pages.github.com/) 建立個人部落格。
 * 適用於 Mac os 並且可使用 apache、php 指令為前提條件。
@@ -14,7 +13,7 @@
 * 可調整屬於個人的相關資料。
 * 此功能也可以放置於 [Dropbox](https://www.dropbox.com/) 的 public 資料夾。
 
-<br/>
+
 ## Demo
 * Youtube Sample
 <a href="https://www.youtube.com/watch?&v=pUBWKUEb7Do" target="_blank"><img width='50%' src="http://img.youtube.com/vi/pUBWKUEb7Do/0.jpg" alt="OA's Blog youtube demo!" /></a>
@@ -24,7 +23,7 @@ Demo: [https://goo.gl/aCmGDm](https://goo.gl/aCmGDm)
 
 
 
-<br/>
+
 ## 使用
 1. 開啟終端機，並且位置移至 apache DocumentRoot 下。
 2. 輸入指令 ```git clone https://github.com/comdan66/blog.git```
@@ -38,7 +37,7 @@ Demo: [https://goo.gl/aCmGDm](https://goo.gl/aCmGDm)
 > **<span style="color: red">注意！</span>** 若是從 [blog](https://github.com/comdan66/blog) clone 下來的 Repository，請在 push 之前請先改成自己的 github！
 
 
-<br/>
+
 ## 解說
 一般設定皆在 ```./config/``` 目錄下，以下分別解說個檔案主要功能設定。
 
@@ -92,7 +91,7 @@ Build.php 相關程式設定
 
 > **<span style="color: red">注意！</span>** 此檔案內皆為重要性的設定，若不熟悉者請勿恣意更改。
 
-<br/>
+
 ## 關於
 * 作者名稱 - [OA Wu](http://www.ioa.tw/)
 
