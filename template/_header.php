@@ -14,7 +14,7 @@
       <span>Blog、Album</span>
     </a>
     
-    <form class='search' method="get" action="<?php echo BASE_URL;?>search.html">
+    <form class='search' method="get" action="<?php echo Search::url();?>">
       <input type="text" id="q" name="q" placeholder="搜尋 OA Wu.." value="" pattern=".{1,}" required="" title="搜尋">
       <button type="submit" class="icon-1"></button>
     </form>

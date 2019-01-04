@@ -20,7 +20,7 @@
     <?php echo $_header;?>
     <?php echo $_menu;?>
 
-    <main id="main"><div id="search" data-api="<?php echo Search::allJsonUrl();?>"></div></main>
+    <main id="main"><div id="search" data-api="<?php echo Search::url();?>"></div></main>
 
     <?php echo $_info;?>
 

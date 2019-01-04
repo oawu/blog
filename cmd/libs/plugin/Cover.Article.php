@@ -57,9 +57,9 @@ class Article extends Item {
     return [];
   }
 
-  public function writeHtml() {
+  public function write() {
     $this->others();
-    return fileWrite($this->htmlPath(), loadView(PATH_TEMPLATE . 'Article.php', [
+    return fileWrite($this->writePath(), loadView(PATH_TEMPLATE . 'Article.php', [
       '_header' => loadView(PATH_TEMPLATE . '_header.php', ['item' => $this]),
       '_menu' => loadView(PATH_TEMPLATE . '_menu.php', ['currentUrl' => $this->currentUrl()]),
       'article' => $this,

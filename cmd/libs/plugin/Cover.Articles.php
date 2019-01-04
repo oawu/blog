@@ -10,7 +10,7 @@
 class Articles extends Items {
   const CHILD_CLASS = 'Article';
 
-  public function writeHtml() {
+  public function write() {
     $tmp = PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : ''). trim(Page::DIR_NAME, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
     is_dir($tmp) || mkdir777($tmp);
 
@@ -18,7 +18,7 @@ class Articles extends Items {
       return false;
 
     return !array_filter($this->pages(), function($page)  {
-      return !fileWrite($page->htmlPath(), loadView(PATH_TEMPLATE . 'Articles.php', [
+      return !fileWrite($page->writePath(), loadView(PATH_TEMPLATE . 'Articles.php', [
         '_header' => loadView(PATH_TEMPLATE . '_header.php'),
         '_menu' => loadView(PATH_TEMPLATE . '_menu.php', ['currentUrl' => $this->currentUrl()]),
         'page' => $page,

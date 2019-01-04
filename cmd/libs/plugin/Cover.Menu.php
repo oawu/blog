@@ -22,7 +22,6 @@ abstract class Menu {
       Articles::create('003 | unboxing', 'icon-f', '開箱文章'),
       Articles::create('004 | mazu', 'icon-20', '鄉土北港'),
       Albums::create('005 | album', 'icon-14', '生活相簿'),
-      Search::create(),
     ]));
   
     Item::modifyAllContent();
@@ -102,9 +101,7 @@ abstract class Menu {
       ];
 
       echo '<a' . attr($attrs) . '>' . $menu->text() . '</a>';
-    }, array_filter(self::all(), function($t) {
-      return $t instanceof Menu;
-    }));
+    }, self::all());
   }
 
   abstract public function url();

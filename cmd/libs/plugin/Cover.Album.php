@@ -49,8 +49,8 @@ class Album extends Item {
 
     return $this;
   }
-  public function writeHtml() {
-    return fileWrite($this->htmlPath(), loadView(PATH_TEMPLATE . 'Album.php', [
+  public function write() {
+    return fileWrite($this->writePath(), loadView(PATH_TEMPLATE . 'Album.php', [
       '_header' => loadView(PATH_TEMPLATE . '_header.php', ['item' => $this]),
       '_menu' => loadView(PATH_TEMPLATE . '_menu.php', ['currentUrl' => $this->currentUrl()]),
       'album' => $this,

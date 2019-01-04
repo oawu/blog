@@ -49,7 +49,7 @@ abstract class Item extends Menu {
   public function uris() { return $this->uris; }
   
   public function url() { return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . rawurlencode($this->htmlName) . '.html'; }
-  public function htmlPath() { return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : '') . $this->htmlName . '.html'; }
+  public function writePath() { return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : '') . $this->htmlName . '.html'; }
   public function page() { return $this->page; }
   public function items() { return $this->items; }
 
@@ -288,5 +288,5 @@ abstract class Item extends Menu {
     return $this;
   }
   
-  abstract public function writeHtml();
+  abstract public function write();
 }

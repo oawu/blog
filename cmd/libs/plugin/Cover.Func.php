@@ -8,7 +8,7 @@
  */
 
 spl_autoload_register(function($className) {
-  if (!in_array($className, ['Parsedown', 'Page', 'Pagination', 'Menu', 'EmptyItem', 'Item', 'Search', 'Article', 'ArticleIndex', 'ArticleReview', 'Album', 'Items', 'Articles', 'Albums']))
+  if (!in_array($className, ['Parsedown', 'Page', 'Pagination', 'Menu', 'SingleItem', 'Item', 'AllJson', 'Search', 'Article', 'ArticleIndex', 'ArticleReview', 'Album', 'Items', 'Articles', 'Albums']))
     return false;
 
   if (!is_readable($path = PATH_CMD_LIB_PLUGIN . 'Cover.' . $className . '.php'))
@@ -139,6 +139,22 @@ if (!function_exists('removeRootFiles')) {
   }
 }
 
+if (!function_exists('removeSingleItem')) {
+  function removeSingleItem($classes) {
+    return array_filter($classes, function($class) {
+      if (!class_exists($class))
+        return true;
+
+      if (!file_exists($class::writePath()))
+        return false;
+
+      @unlink($class::writePath());
+
+      return file_exists($class::writePath());
+    });
+  }
+}
+
 if (!function_exists('createGitignoreFiles')) {
   function createGitignoreFiles($path) {
     return file_exists($tmp = $path . '.gitignore') || (is_dir($path) && is_writable($path) && fileWrite($tmp, '*') && file_exists($tmp));
@@ -195,52 +211,31 @@ if (!function_exists('arrayFlatten')) {
   }
 }
 
-if (!function_exists('writePagesHtml')) {
-  function writePagesHtml($itemsList) {
+if (!function_exists('writePages')) {
+  function writePages($itemsList) {
     return array_map(function($items) {
       return implode(DIRECTORY_SEPARATOR, $items->uris()) . DIRECTORY_SEPARATOR;
     }, array_filter($itemsList, function($items) {
-      return !$items->writeHtml();
+      return !$items->write();
     }));
   }
 }
 
-if (!function_exists('writeItemsHtml')) {
-  function writeItemsHtml($items) {
+if (!function_exists('writeItems')) {
+  function writeItems($items) {
     return array_map(function($item) {
-      return pathReplace(PATH, $item->htmlPath());
+      return pathReplace(PATH, $item->writePath());
     }, array_filter($items, function($item) {
-      return !$item->writeHtml();
+      return !$item->write();
     }));
   }
 }
 
-if (!function_exists('writeAllJson')) {
-  function writeAllJson($items) {
-    // Article
-
-    $items = array_values(array_filter($items, function($item) {
-      return $item->items() && ($item instanceof Article || $item instanceof Album);
-    }));
-
-    $all = [];
-    foreach ($items as $item) {
-      isset($all[$key = $item->items()->url()]) || $all[$key] = [
-        't' => $item->items()->text(),
-        'u' => $item->items()->url(),
-        's' => []
-      ];
-
-      array_push($all[$key]['s'], [
-        't' => $item->title,
-        'd' => $item->description,
-        'h' => $item->tags,
-        'u' => $item->url(),
-        'i' => $item->ogImage
-      ]);
-    }
-
-    return !fileWrite(Search::allJsonPath(), json_encode(array_values($all)));
+if (!function_exists('writeSingleItem')) {
+  function writeSingleItem($classes) {
+    return array_filter($classes, function($class) {
+      return !$class::write();
+    });
   }
 }
 

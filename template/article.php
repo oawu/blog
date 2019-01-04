@@ -40,7 +40,7 @@
         </div>
 
         <section class="md"><?php echo $article->content;?></section>
-        <div class="tags"><?php echo implode('', array_map(function($tag) { return '<a href="' . $tag . '">' . $tag . '</a>'; }, $article->tags));?></div>
+        <div class="tags"><?php echo implode('', array_map(function($tag) { return '<a href="' . Search::url() . '?q=' . $tag . '">' . $tag . '</a>'; }, $article->tags));?></div>
         <time datetime="<?php echo $article->updateAt->format('Y-m-d 00:00:00');?>" date="<?php echo $article->updateAt->format('Y.m.d');?>" editdate="editdate"><?php echo $article->updateAt->format('Y-m-d 00:00:00');?></time>
       </article>
     
@@ -74,9 +74,7 @@
       </div>
 
 
-      <div id="comments" class="panel">
-        <div class="fb-comments" data-order-by="reverse_time" width="100%" data-href="<?php echo $article->url();?>" data-numposts="5"></div>
-      </div>
+      <div id="comments" class="panel"><div class="fb-comments" data-order-by="reverse_time" width="100%" data-href="<?php echo $article->url();?>" data-numposts="5"></div></div>
 
     </div></main>
 

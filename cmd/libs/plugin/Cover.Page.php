@@ -56,7 +56,7 @@ class Page {
     return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . trim(Page::DIR_NAME, '/') . '/' . rawurlencode($this->htmlName()) . '.html';
   }
 
-  public function htmlPath() {
+  public function writePath() {
     return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : ''). trim(Page::DIR_NAME, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $this->htmlName() . '.html';
   }
 }

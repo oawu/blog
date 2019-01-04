@@ -91,5 +91,5 @@ abstract class Items extends Menu {
     return new static($dirPath, $uris);
   }
 
-  abstract public function writeHtml();
+  abstract public function write();
 }

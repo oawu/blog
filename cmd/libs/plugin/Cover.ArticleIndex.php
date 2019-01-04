@@ -8,8 +8,8 @@
  */
 
 class ArticleIndex extends Article {
-  public function writeHtml() {
-    return fileWrite($this->htmlPath(), loadView(PATH_TEMPLATE . 'ArticleIndex.php', [
+  public function write() {
+    return fileWrite($this->writePath(), loadView(PATH_TEMPLATE . 'ArticleIndex.php', [
       '_header' => loadView(PATH_TEMPLATE . '_header.php'),
       '_menu' => loadView(PATH_TEMPLATE . '_menu.php', ['currentUrl' => $this->currentUrl()]),
       'article' => $this,
