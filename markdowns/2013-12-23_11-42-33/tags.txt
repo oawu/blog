@@ -1,3 +1,0 @@
-phpRedisAdmin
-Redis
-PHP

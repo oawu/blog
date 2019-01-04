@@ -1,3 +1,0 @@
-CodeIgniter
-Apache2
-PHP

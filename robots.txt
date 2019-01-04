@@ -1,2 +1,0 @@
-Sitemap: http://comdan66.github.io/blog/sitemap/sitemap_index.xml
-User-agent: *

@@ -1,3 +1,0 @@
-phpQuery
-CodeIgniter
-PHP
