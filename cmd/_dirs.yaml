@@ -8,10 +8,10 @@
 - path: ''
   formats: ['.html', '.txt']
   hidden: No
-  recursive: No
+  recursive: Yes
 
 - path: "js"
-  formats: [".js"]
+  formats: [".js", '.json']
   hidden: No
   recursive: Yes
 
@@ -27,5 +27,10 @@
 
 - path: "img"
   formats: [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+  hidden: No
+  recursive: Yes
+
+- path: "markdown"
+  formats: [".md", ".png", ".jpg", ".jpeg", ".gif", ".svg"]
   hidden: No
   recursive: Yes

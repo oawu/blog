@@ -30,9 +30,11 @@ const _v = {
   },
   dirs: [],
   plugins: [
-    // {title: '轉換1', cmd: 'php', file: 'cover.php', argv: ''},
+    {title: '編譯 Markdown', cmd: 'php', file: 'Cover.php', argv: null},
   ]
 };
+
+_v.plugins[0].argv = '-u https://' + _v.s3Info.domain + '/' + (_v.s3Info.folder.length ? _v.s3Info.folder + '/' : '');
 
 Ginkgo.init('Ginkgo 上傳工具', function() {
 
