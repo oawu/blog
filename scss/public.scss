@@ -46,6 +46,7 @@ $mainColor: rgba(241, 104, 78, 1.00);
 
 
 $height: (
+  main: 960px,
   header: 56px,
   headerMenu: 40px,
   headerMore: 40px
@@ -1149,6 +1150,61 @@ section.md {
   }
 }
 
+@mixin min-list() {
+  > a {
+    padding: 12px;
+
+    &:before {
+      width: calc(100% - #{12px + 44px + 16px / 4 * 3});
+    }
+
+    > figure {
+      width: 44px;
+      height: 44px;
+    }
+
+    > b, > div, > section {
+      width: calc(100% - #{44px + 16px});
+    }
+    > b {
+      font-size: 15px;
+      padding-right: #{32px - 12px};
+    }
+
+    > div {
+      display: none;
+    }
+    
+    > section {
+      height: 20px !important;
+      line-height: 20px !important;
+      margin-top: 0;
+      font-size: 12px;
+      padding-right: #{32px - 12px};
+      @include overflow-docx3();
+      color: rgba(165, 165, 165, 1.00);
+    }
+    > time {
+      right: 0;
+      top: 12px;
+      width: 32px;
+      height: calc(100% - #{12px * 2});
+      
+      &:before {
+        display: inline-block;
+      }
+      &[data-ago]:after {
+        display: none;
+      }
+    }
+    &:hover {
+      > section {
+        color: rgba(140, 140, 140, 1.00);
+      }
+    }
+  }
+}
+
 .list {
   position: relative;
   text-align: left;
@@ -1398,58 +1454,7 @@ section.md {
   }
 
   &.min {
-    > a {
-      padding: 12px;
-
-      &:before {
-        width: calc(100% - #{12px + 44px + 16px / 4 * 3});
-      }
-
-      > figure {
-        width: 44px;
-        height: 44px;
-      }
-
-      > b, > div, > section {
-        width: calc(100% - #{44px + 16px});
-      }
-      > b {
-        font-size: 15px;
-        padding-right: #{32px - 12px};
-      }
-
-      > div {
-        display: none;
-      }
-      
-      > section {
-        height: 20px !important;
-        line-height: 20px !important;
-        margin-top: 0;
-        font-size: 12px;
-        padding-right: #{32px - 12px};
-        @include overflow-docx3();
-        color: rgba(165, 165, 165, 1.00);
-      }
-      > time {
-        right: 0;
-        top: 12px;
-        width: 32px;
-        height: calc(100% - #{12px * 2});
-        
-        &:before {
-          display: inline-block;
-        }
-        &[data-ago]:after {
-          display: none;
-        }
-      }
-      &:hover {
-        > section {
-          color: rgba(140, 140, 140, 1.00);
-        }
-      }
-    }
+    @include min-list;
   }
 }
 
@@ -2594,58 +2599,7 @@ section.md {
 
   .list {
     &:not(.min) {
-      > a {
-        padding: 12px;
-
-        &:before {
-          width: calc(100% - #{12px + 44px + 16px / 4 * 3});
-        }
-
-        > figure {
-          width: 44px;
-          height: 44px;
-        }
-
-        > b, > div, > section {
-          width: calc(100% - #{44px + 16px});
-        }
-        > b {
-          font-size: 15px;
-          padding-right: #{32px - 12px};
-        }
-
-        > div {
-          display: none;
-        }
-        
-        > section {
-          height: 20px !important;
-          line-height: 20px !important;
-          margin-top: 0;
-          font-size: 12px;
-          padding-right: #{32px - 12px};
-          @include overflow-docx3();
-          color: rgba(165, 165, 165, 1.00);
-        }
-        > time {
-          right: 0;
-          top: 12px;
-          width: 32px;
-          height: calc(100% - #{12px * 2});
-          
-          &:before {
-            display: inline-block;
-          }
-          &[data-ago]:after {
-            display: none;
-          }
-        }
-        &:hover {
-          > section {
-            color: rgba(140, 140, 140, 1.00);
-          }
-        }
-      }
+      @include min-list;
     }
 
     > div {
@@ -2848,4 +2802,10 @@ section.md {
     //   }
     // }
   // }
+}
+
+@include range-height(0, map-get($height, main)) {
+  .list {
+    @include min-list;
+  }
 }
