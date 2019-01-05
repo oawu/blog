@@ -37,7 +37,7 @@
           </header>
 
           <section class="md"><?php echo $album->content;?></section>
-          <time datetime="<?php echo $album->updateAt->format('Y-m-d 00:00:00');?>" date="<?php echo $album->updateAt->format('Y.m.d');?>" editdate="editdate"><?php echo $album->updateAt->format('Y-m-d 00:00:00');?></time>
+          <time datetime="<?php echo $album->updateAt->format('Y-m-d');?>" date="<?php echo $album->updateAt->format('Y.m.d');?>" editdate="editdate"><?php echo $album->updateAt->format('Y-m-d 00:00:00');?></time>
         </article>
 
         <div id='pics'><?php echo implode('', array_map(function($image) use ($album) {
