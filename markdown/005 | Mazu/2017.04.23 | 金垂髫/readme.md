@@ -19,4 +19,4 @@
 * [北港朝天宮金垂髫太子爺](https://www.facebook.com/ChinChuiTiao1946/)
 * [吳政賢 攝影集](https://www.facebook.com/comdan66)
 
-`#北港` `#陣頭` `#神轎`
+`#北港` `#朝天宮` `#陣頭` `#神轎`
