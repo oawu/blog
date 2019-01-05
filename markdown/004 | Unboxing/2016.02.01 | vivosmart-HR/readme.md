@@ -58,3 +58,5 @@
 
 ### 相關參考
 * [vívosmart HR 開箱文 - ZEUS // Design Studio](https://www.zeusdesign.com.tw/article/2-vívosmart HR 開箱文.html)
+
+`#開箱` `#穿戴` `#手環`

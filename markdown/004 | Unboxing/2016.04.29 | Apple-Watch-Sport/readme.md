@@ -67,3 +67,5 @@
 
 ### 相關參考
 * [Apple Watch Sport 開箱文 - ZEUS // Design Studio](https://www.zeusdesign.com.tw/article/9-Apple Watch Sport 開箱文.html)
+
+`#開箱` `#Apple` `#Watch` `#穿戴` `#手錶`

@@ -58,3 +58,5 @@
 * [Plantronics BackBeat FIT 運動無線藍牙耳機 開箱文 - ZEUS // Design Studio](https://www.zeusdesign.com.tw/article/Plantronics BackBeat FIT 運動無線藍牙耳機 開箱文.html)
 * [Plantronics 官網](http://www.plantronics.com/us/product/backbeat-fit)
 * [PChome 賣場](http://24h.pchome.com.tw/prod/DGBT0Y-A900569PA)
+
+`#開箱` `#運動` `#耳機` `#Plantronics`

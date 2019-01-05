@@ -150,3 +150,5 @@ Nintendo Switch 有看影片介紹的人都會知道，他的 [Joy-Con](http://w
 * [Nintendo Switch™ - Official site – Nintendo gaming system](http://www.nintendo.com/switch/)
 * [Nintendo Switch｜任天堂(香港)有限公司](http://www.nintendo.com.hk/hardware/switch/)
 * [1-2-Switch for Nintendo Switch - Nintendo Game Details](http://www.nintendo.com/games/detail/1-2-switch)
+
+`#開箱` `#Nintendo` `#Switch` `#薩爾達傳說` `#荒野之息`

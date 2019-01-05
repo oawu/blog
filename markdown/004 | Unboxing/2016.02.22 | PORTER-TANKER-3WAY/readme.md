@@ -64,3 +64,5 @@
 
 ### 相關參考
 * [PORTER TANKER 3WAY 開箱文 - ZEUS // Design Studio](https://www.zeusdesign.com.tw/article/8-PORTER TANKER 3WAY 開箱文.html)
+
+`#開箱` `#包包` `#PORTER`

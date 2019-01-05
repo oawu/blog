@@ -36,3 +36,5 @@
 
 ### 相關參考
 * [iPad - 遲來的 iPad4 不專業開箱文 - 蘋果討論區 - Mobile01](http://www.mobile01.com/topicdetail.php?f=563&t=3120100)
+
+`#開箱` `#Apple` `#iPad`

@@ -38,3 +38,5 @@
 
 ### 相關參考
 * [SYM(250cc以下) - [開箱] SYM GT 125 噴射 前碟煞版!! - 機車討論區 - Mobile01](http://www.mobile01.com/topicdetail.php?f=660&t=1918824)
+
+`#開箱` `#機車`

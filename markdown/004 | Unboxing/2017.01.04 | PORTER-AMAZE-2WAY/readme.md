@@ -57,3 +57,5 @@
 * [吉田カバンホームページ | YOSHIDA ＆ CO., LTD.](http://www.yoshidakaban.com/)
 * [表參道 Kura Chika Yoshida - 東京旅遊 | ULifestyle Travel](http://travel.ulifestyle.com.hk/DetailSpot.php?id=ADkRYhEoA3M)
 * [[轉錄] PORTER超詳細大哉問](https://www.ptt.cc/man/bag/DDC5/D59E/D233/D293/M.1158196303.A.763.html)
+
+`#開箱` `#包包` `#PORTER`

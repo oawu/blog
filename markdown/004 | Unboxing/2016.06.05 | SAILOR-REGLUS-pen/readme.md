@@ -36,3 +36,5 @@
 
 ### 相關參考
 * [日本 SAILOR 寫樂 REGLUS 新青年鋼筆 - ZEUS // Design Studio](https://www.zeusdesign.com.tw/article/11-日本 SAILOR 寫樂 REGLUS 新青年鋼筆.html)
+
+`#開箱` `#鋼筆` `#SAILOR` `#寫樂`
