@@ -8,6 +8,7 @@
  */
 
 class Article extends Item {
+
   public function others($length = 4) {
     $uris = implode('_', $this->uris());
     $groups = Item::groups();
@@ -37,18 +38,28 @@ class Article extends Item {
             break;
 
         $tags = array_merge(array_splice($tags, $i), $tags);
-        array_shift($tags);
+        $i == $c || array_shift($tags);
 
-        $tags = array_merge($tags, array_values(array_filter($group, function($other) use ($tags) {
-          return !array_filter($other->tags, function($tag) {
-            return in_array($tag, $this->tags);
+
+        $tmps = array_values(array_filter($group, function($other) use ($tags) {
+          return !array_filter($other->tags, function($tag) use ($tags) {
+            return in_array($tag, $tags);
           });
-        })));
+        }));
+
+        for ($i = 0, $c = count($tmps); $i < $c; $i++)
+          if ($tmps[$i] == $this)
+            break;
+        
+        $tmps = array_merge(array_splice($tmps, $i), $tmps);
+        $i == $c || array_shift($tmps);
+
+        $tags = array_values(array_merge($tags, $tmps));
       } else {
-        $tags = array_values($group);
+        $tags = $group;
       }
       
-      $others = array_merge($others, $tags);
+      $others = array_values(array_merge($others, $tags));
 
       if (count($others) >= $length)
         return array_slice($others, 0, $length);

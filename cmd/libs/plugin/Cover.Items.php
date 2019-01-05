@@ -8,22 +8,25 @@
  */
 
 abstract class Items extends Menu {
-  const ITEM_FORMAT = '/^(?P<createAt>\d\d\d\d\.(0?[1-9]|1[0-2])\.(0?[1-9]|[12][0-9]|3[01]))\s+\|\s+(?P<htmlName>.*)/';
+  const ITEM_FORMAT_WITH_CREATE_AT = '/^(?P<createAt>\d\d\d\d\.(0?[1-9]|1[0-2])\.(0?[1-9]|[12][0-9]|3[01]))\s+\|\s+(?P<htmlName>.*)/';
+  const ITEM_FORMAT_WITH_ID = '/^(?P<id>\d+)\s+\|\s+(?P<htmlName>.*)/';
 
-  protected $items = [], $pages = [], $uris = [], $markdownPath;
+  protected $items = [], $pages = [], $uris = [], $markdownPath, $desc = true;
   private static $all = [];
 
+  public function __construct($dirPath, $uris, $desc) {
+    $this->desc = $desc;
 
-  public function __construct($dirPath, $uris) {
     $this->items = array_values(array_filter(array_map(function($item) use ($dirPath, $uris) {
-      if (!preg_match_all(Items::ITEM_FORMAT, $item, $matches))
+      
+      if (preg_match_all(Items::ITEM_FORMAT_WITH_CREATE_AT, $item, $matches)) {
+        if (empty($matches['createAt']) || !($createAt = array_shift($matches['createAt'])) || ($createAt = DateTime::createFromFormat('Y.m.d', $createAt)) === false)
+          $createAt = null;
+      } else if (preg_match_all(Items::ITEM_FORMAT_WITH_ID, $item, $matches)) {
+        $createAt = null;
+      } else {
         return null;
-
-      if (empty($matches['createAt']) || !($createAt = array_shift($matches['createAt'])))
-        return null;
-
-      if (($createAt = DateTime::createFromFormat('Y.m.d', $createAt)) === false)
-        return null;
+      }
 
       if (empty($matches['htmlName']) || !($htmlName = array_shift($matches['htmlName'])))
         return null;
@@ -51,7 +54,7 @@ abstract class Items extends Menu {
 
     $this->pages = [];
 
-    for ($i = 0, $j = 0, $c = count($items = array_reverse($this->items())); $i < $c; $i += Page::OFFSET)
+    for ($i = 0, $j = 0, $c = count($items = $this->desc ? array_reverse($this->items()) : $this->items()); $i < $c; $i += Page::OFFSET)
       if ($page = Page::create($j++, $uris, array_slice($items, $i, Page::OFFSET)))
         array_push($this->pages, $page);
 
@@ -87,8 +90,8 @@ abstract class Items extends Menu {
     return $this->items;
   }
 
-  public static function init($dirPath, $uris) {
-    return new static($dirPath, $uris);
+  public static function init($dirPath, $uris, $desc) {
+    return new static($dirPath, $uris, $desc);
   }
 
   abstract public function write();

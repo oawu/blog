@@ -18,17 +18,28 @@ abstract class Menu {
 
     self::$all = array_values(array_filter([
       ArticleIndex::create('001 | index', 'icon-d', '網站首頁'),
-      Articles::create('002 | develop', 'icon-e', '心得筆記'),
-      Articles::create('003 | unboxing', 'icon-f', '開箱文章'),
-      Articles::create('004 | mazu', 'icon-20', '鄉土北港'),
-      Albums::create('005 | album', 'icon-14', '生活相簿'),
+      Articles::create('002 | Develop', 'icon-e', '心得筆記'),
+      Articles::create('003 | MacEnvInit', 'icon-1b', '環境建置', 'asc'),
+      Articles::create('004 | Unboxing', 'icon-f', '開箱文章'),
+      Articles::create('005 | Mazu', 'icon-1a', '鄉土北港'),
+      Albums::create('006 | Album', 'icon-14', '生活相簿'),
     ]));
   
     Item::modifyAllContent();
     return self::$all;
   }
 
-  public static function create($dirName, $class, $text) {
+  public static function create() {
+    $args = func_get_args();
+    $dirName = array_shift($args);
+    $class = array_shift($args);
+    $text = array_shift($args);
+
+    $desc = array_shift($args);
+    $desc && $desc = strtolower(trim($desc));
+    in_array($desc, ['asc', 'desc']) || $desc = 'desc';
+    $desc = $desc == 'desc';
+
     if (!preg_match_all(self::FORMAT, $dirName, $matches))
       return null;
 
@@ -50,7 +61,7 @@ abstract class Menu {
       return null;
     
     if (is_subclass_of($staticClass, 'Items'))
-      return $staticClass::init($tmp, [$key])
+      return $staticClass::init($tmp, [$key], $desc)
                          ->setClass($class)
                          ->setText($text);
 

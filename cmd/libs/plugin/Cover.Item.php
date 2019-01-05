@@ -15,7 +15,7 @@ abstract class Item extends Menu {
   private static $all = [];
 
   protected $markdownPath, $htmlName, $uris = [], $page = null, $items = null;
-  public $title, $description, $ogImage, $iconImage, $content, $tags, $createAt, $updateAt;
+  public $title, $description, $bio, $ogImage, $iconImage, $content, $tags, $createAt, $updateAt;
 
   public function setPage(Page $page) { $this->page = $page; return $this; }
   public function setMarkdownPath($markdownPath) { $this->markdownPath = $markdownPath; return $this; }
@@ -267,13 +267,18 @@ abstract class Item extends Menu {
   }
 
   protected function getContentDescription() {
+    $this->bio = '';
     $this->description = DESCRIPTION;
     $pattern = '/^<p[^>]*?>(?P<desc>.*)<\/p>/u';
 
-    if ($this->description = preg_match_all($pattern, $this->content, $matches) && isset($matches['desc'][0]) ? $matches['desc'][0] : '')
+    if ($this->bio = preg_match_all($pattern, $this->content, $matches) && isset($matches['desc'][0]) ? $matches['desc'][0] : '') {
       $this->replaceContentSpace($pattern);
+      $this->description = $this->bio;
+    } else {
+      $this->description = $this->content;
+    }
 
-    $this->description || $this->description = $this->content;
+    $this->bio && $this->bio = mb_strimwidth(removeHtmlTag($this->description), 0, 300, '…','UTF-8');
     $this->description = mb_strimwidth(removeHtmlTag($this->description), 0, 300, '…','UTF-8');
     return $this;
   }
