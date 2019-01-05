@@ -46,7 +46,7 @@ $mainColor: rgba(241, 104, 78, 1.00);
 
 
 $height: (
-  main: 960px,
+  main: 850px,
   header: 56px,
   headerMenu: 40px,
   headerMore: 40px
@@ -598,6 +598,9 @@ article.panel {
         height: 100%;
         background-color: rgba(230, 230, 230, 1);
       }
+      &:empty {
+        display: none;
+      }
     }
   }
 
@@ -641,7 +644,7 @@ article.panel {
         }
 
         &:before {
-          content: '\9e19' '  讚 0';
+          content: '\a0019' '  讚 0';
           font-family: "icon";
         }
 
@@ -785,6 +788,8 @@ section.md {
   letter-spacing: .3px;
   line-height: 27px;
   font-size: 16px;
+  word-wrap: break-word;
+  word-break: normal;
 
   > *:first-child {
     margin-top: 0;
@@ -868,7 +873,7 @@ section.md {
     }
 
     &:before {
-      content: '\9e1';
+      content: '\a0001';
       font-family: "icon";
 
       position: absolute;
@@ -1069,7 +1074,7 @@ section.md {
       @include transition(color .3s);
     }
     &:after {
-      content: '\9e5';
+      content: '\a0005';
       font-family: "icon";
       right: 0;
       color: rgba(175, 175, 175, 1);
@@ -1368,7 +1373,7 @@ section.md {
       }
 
       &:before {
-        content: '\9e5';
+        content: '\a0005';
         font-family: "icon";
         height: 44px;
         line-height: 44px;
@@ -1576,10 +1581,10 @@ section.md {
         background-color: rgba(240, 240, 240, 1.00); 
         font-weight: bold;
       }
-      &.nn:before { content: '\9e7'; font-family: "icon";}
-      &.n:before {  content: '\9e5'; font-family: "icon";}
-      &.p:before {  content: '\9e4'; font-family: "icon";}
-      &.pp:before { content: '\9e6'; font-family: "icon";}
+      &.nn:before { content: '\a0007'; font-family: "icon";}
+      &.n:before {  content: '\a0005'; font-family: "icon";}
+      &.p:before {  content: '\a0004'; font-family: "icon";}
+      &.pp:before { content: '\a0006'; font-family: "icon";}
     }
   }
 }
@@ -2754,7 +2759,7 @@ section.md {
       }
       
       &:after {
-        content: '\9e5';
+        content: '\a0005';
         font-family: "icon";
         top: 12px;
 

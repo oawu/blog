@@ -91,13 +91,14 @@ article.panel { padding: 20px 32px; margin-top: -16px; }
 article.panel > header h1 { margin-bottom: 6px; }
 article.panel > header span { position: relative; display: block; font-size: 13px; color: #a0a0a0; margin-bottom: 12px; font-style: italic; padding: 6px 12px; padding-right: 0; letter-spacing: 1.8px; line-height: 20px; }
 article.panel > header span:before { content: ''; position: absolute; left: 0; top: 0; display: inline-block; width: 4px; height: 100%; background-color: #e6e6e6; }
+article.panel > header span:empty { display: none; }
 article.panel > .info { display: block; margin: 23px 0; margin-bottom: 39px; height: 36px; *zoom: 1; }
 article.panel > .info:after { display: table; content: ""; line-height: 0; clear: both; }
 article.panel > .info > * { display: inline-block; float: right; height: 36px; }
 article.panel > .info > span { width: 100%; text-align: left; padding-top: 6px; }
 article.panel > .info > span > div:not(:empty):before, article.panel > .info > span > div:not(:empty):after { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 article.panel > .info > span > div:empty:before, article.panel > .info > span > div:empty:after { font-size: 12px; display: inline-block; height: 21px; line-height: 21px; padding: 0 5px; background-color: #4267b2; color: white; cursor: not-allowed; background-color: #7591cc; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
-article.panel > .info > span > div:empty:before { content: '\9e19' '  讚 0'; font-family: "icon"; }
+article.panel > .info > span > div:empty:before { content: '\a0019' '  讚 0'; font-family: "icon"; }
 article.panel > .info > span > div:empty:after { content: '分享'; margin-left: 4px; }
 article.panel > .info > time { text-align: right; width: 50%; }
 article.panel > .info > time + span { width: 50%; }
@@ -121,7 +122,7 @@ article.panel > time[editdate] { display: block; height: 28px; line-height: 28px
 article.panel > time[editdate]:before { content: '最後編輯日期 - '; color: #bebebe; font-size: 12px; }
 article.panel > time[editdate]:after { content: attr(datetime); color: #a0a0a0; font-size: 14px; }
 
-section.md { letter-spacing: .3px; line-height: 27px; font-size: 16px; }
+section.md { letter-spacing: .3px; line-height: 27px; font-size: 16px; word-wrap: break-word; word-break: normal; }
 section.md > *:first-child { margin-top: 0; }
 section.md h2 { font-size: 22px; }
 section.md h3 { font-size: 18px; }
@@ -137,7 +138,7 @@ section.md > figure:after { border: 1px solid rgba(0, 0, 0, 0.2); -moz-border-ra
 section.md > figure.desc { margin-bottom: 49px; }
 section.md > figure > figcaption { top: calc(100% + 4px); bottom: auto; height: 22px; line-height: 22px; padding: 0 8px; font-size: 14px; }
 section.md > figure > figcaption:before { display: inline-block; margin-right: 4px; color: #969696; -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
-section.md > figure:before { content: '\9e1'; font-family: "icon"; position: absolute; top: 0; right: 0; width: 40px; height: 40px; line-height: 40px; background-color: rgba(0, 0, 0, 0.3); color: white; text-align: center; font-size: 16px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; -moz-transition: opacity 0.3s, background-color 0.3s; -o-transition: opacity 0.3s, background-color 0.3s; -webkit-transition: opacity 0.3s, background-color 0.3s; transition: opacity 0.3s, background-color 0.3s; text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px, rgba(0, 0, 0, 0.3) 0px 0px 1px; z-index: 1; }
+section.md > figure:before { content: '\a0001'; font-family: "icon"; position: absolute; top: 0; right: 0; width: 40px; height: 40px; line-height: 40px; background-color: rgba(0, 0, 0, 0.3); color: white; text-align: center; font-size: 16px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; -moz-transition: opacity 0.3s, background-color 0.3s; -o-transition: opacity 0.3s, background-color 0.3s; -webkit-transition: opacity 0.3s, background-color 0.3s; transition: opacity 0.3s, background-color 0.3s; text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px, rgba(0, 0, 0, 0.3) 0px 0px 1px; z-index: 1; }
 section.md > p > img { display: none; }
 section.md > ul, section.md > ol, section.md > table, section.md > pre { margin: 23px 0; margin-bottom: 31px; }
 section.md ul, section.md ol { display: block; padding-left: 28px; }
@@ -169,7 +170,7 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
 #info > a { position: relative; display: block; width: 100%; height: 45px; line-height: 45px; text-align: left; padding: 0; text-decoration: none; }
 #info > a:before, #info > a:after { position: absolute; top: 0; display: inline-block; width: 40px; height: 45px; line-height: 45px; text-align: center; }
 #info > a:before { left: 4px; font-size: 20px; color: #b4b4b4; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
-#info > a:after { content: '\9e5'; font-family: "icon"; right: 0; color: #afafaf; font-size: 30px; z-index: 1; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+#info > a:after { content: '\a0005'; font-family: "icon"; right: 0; color: #afafaf; font-size: 30px; z-index: 1; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 #info > a span { position: relative; display: block; color: #484848; height: 45px; line-height: 30px; padding: 0 40px; padding-left: 48px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 #info > a span:before, #info > a span:after { content: ''; position: absolute; left: 0; bottom: 0; display: inline-block; color: #242424; }
 #info > a span:before { left: 40px; width: calc(100% - 40px); height: 1px; background-color: #e7e8e9; }
@@ -209,7 +210,7 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
 .list > a > time, .list > a > time:after { font-size: 10px; color: #a8a8a8; text-align: right; height: 24px; line-height: 24px; }
 .list > a > time:before, .list > a > time:after { position: absolute; display: none; top: 0; left: 0; width: 100%; }
 .list > a > time:after { text-align: right; font-size: 12px; color: #a8a8a8; }
-.list > a > time:before { content: '\9e5'; font-family: "icon"; height: 44px; line-height: 44px; text-align: center; color: #afafaf; font-size: 24px; }
+.list > a > time:before { content: '\a0005'; font-family: "icon"; height: 44px; line-height: 44px; text-align: center; color: #afafaf; font-size: 24px; }
 .list > a > time[data-ago]:after { content: attr(data-ago); display: inline-block; }
 .list > a:hover > figure:after { border-color: rgba(0, 0, 0, 0.2); }
 .list > a:hover > b { color: #404040; }
@@ -259,10 +260,10 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
 .page > span > * { float: left; display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; text-decoration: none; color: #646464; background-color: white; -moz-transition: color 0.3s, background-color 0.3s; -o-transition: color 0.3s, background-color 0.3s; -webkit-transition: color 0.3s, background-color 0.3s; transition: color 0.3s, background-color 0.3s; }
 .page > span > *:hover { color: #545454; background-color: #f7f7f7; }
 .page > span > *.a { color: #ed401f; background-color: #f0f0f0; font-weight: bold; }
-.page > span > *.nn:before { content: '\9e7'; font-family: "icon"; }
-.page > span > *.n:before { content: '\9e5'; font-family: "icon"; }
-.page > span > *.p:before { content: '\9e4'; font-family: "icon"; }
-.page > span > *.pp:before { content: '\9e6'; font-family: "icon"; }
+.page > span > *.nn:before { content: '\a0007'; font-family: "icon"; }
+.page > span > *.n:before { content: '\a0005'; font-family: "icon"; }
+.page > span > *.p:before { content: '\a0004'; font-family: "icon"; }
+.page > span > *.pp:before { content: '\a0006'; font-family: "icon"; }
 
 .album { display: inline-block; width: 100%; margin-top: -16px; }
 .album > .cover { position: relative; display: inline-block; width: 100%; -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15); -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15); box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15); overflow: hidden; }
@@ -488,10 +489,10 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
   #other > a > span { height: 20px; line-height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px; font-size: 12px; color: rgba(65, 65, 65, 0.75); -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
   #other > a:before, #other > a:after { position: absolute; top: 0; right: 0; display: inline-block; }
   #other > a:before { content: ''; width: calc(100% - 44px - 22px); height: 1px; border-top: 1px solid rgba(0, 0, 0, 0.1); display: none; }
-  #other > a:after { content: '\9e5'; font-family: "icon"; top: 12px; width: 32px; height: 44px; line-height: 44px; text-align: center; color: #afafaf; font-size: 24px; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+  #other > a:after { content: '\a0005'; font-family: "icon"; top: 12px; width: 32px; height: 44px; line-height: 44px; text-align: center; color: #afafaf; font-size: 24px; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
   #other > a + a:before { display: inline-block; }
   #comments { padding: 10px 8px; } }
-@media screen and (max-height: 959px) and (min-height: 0) { .list > a { padding: 12px; }
+@media screen and (max-height: 849px) and (min-height: 0) { .list > a { padding: 12px; }
   .list > a:before { width: calc(100% - 68px); }
   .list > a > figure { width: 44px; height: 44px; }
   .list > a > b, .list > a > div, .list > a > section { width: calc(100% - 60px); }
