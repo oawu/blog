@@ -817,8 +817,15 @@ section.md {
   }
 
   a {
-    @include a(1px, true);
+    // @include a(1px, true);
+    display: inline;
+    $color: rgba(66, 133, 244, 1.00);
+    $hoverColor: adjust-lightness($color, -15%);
+    color: rgba(66, 133, 244, 1.00);
 
+    &.active, &:hover {
+      color: $hoverColor;
+    }
     strong, b {
       color: rgba(66, 133, 244, 1.00);
       font-weight: bold;
