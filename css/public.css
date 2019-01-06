@@ -130,7 +130,7 @@ article.panel > .tags > a:before { content: '#'; display: inline-block; margin-r
 article.panel > .tags:empty { display: none; }
 article.panel > time[editdate] { display: block; height: 28px; line-height: 28px; text-align: right; margin: 23px 0; margin-bottom: 11.5px; font-style: italic; }
 article.panel > time[editdate]:before { content: '最後編輯日期 - '; color: #bebebe; font-size: 12px; }
-article.panel > time[editdate]:after { content: attr(datetime); color: #a0a0a0; font-size: 14px; }
+article.panel > time[editdate]:after { content: attr(date); color: #a0a0a0; font-size: 14px; }
 
 section.md { line-height: 27px; font-size: 16px; word-wrap: break-word; word-break: normal; }
 section.md > *:first-child { margin-top: 0; }
@@ -297,7 +297,7 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
 .album > .cover > .md blockquote { color: #a0a0a0; }
 .album > .cover > time[editdate] { margin-top: 16px; margin-bottom: 5%; height: 28px; line-height: 28px; text-align: right; font-style: italic; }
 .album > .cover > time[editdate]:before { content: '最後編輯日期 - '; color: #a0a0a0; font-size: 12px; }
-.album > .cover > time[editdate]:after { content: attr(datetime); color: gainsboro; font-size: 14px; }
+.album > .cover > time[editdate]:after { content: attr(date); color: gainsboro; font-size: 14px; }
 
 #pics { display: inline-block; width: 100%; margin-top: 16px; *zoom: 1; }
 #pics:after { display: table; content: ""; line-height: 0; clear: both; }

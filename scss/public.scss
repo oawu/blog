@@ -832,7 +832,7 @@ article.panel {
       font-size: 12px;
     }
     &:after {
-      content: attr(datetime);
+      content: attr(date);
       color: rgba(160, 160, 160, 1.00);
       font-size: 14px;
     }
@@ -1837,7 +1837,7 @@ section.md {
         font-size: 12px;
       }
       &:after {
-        content: attr(datetime);
+        content: attr(date);
         color: rgba(220, 220, 220, 1.00);
         font-size: 14px;
       }

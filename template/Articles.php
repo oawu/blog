@@ -44,7 +44,7 @@
           $return .= '<b>' . $item->title . '</b>';
           $return .= '<div>' . implode('', array_map(function($t) { return '<span>' . $t . '</span>'; }, $item->tags)) . '</div>';
           $return .= '<section>' . $item->description . '</section>';
-          $return .= '<time datetime="' . $item->createAt->format('Y-m-d') . '" date="' . $item->createAt->format('Y.m.d') . '" pubdate="pubdate">' . $item->createAt->format('Y.m.d') . '</time>';
+          $return .= '<time datetime="' . $item->createAt->format('Y-m-d 00:00:00') . '" date="' . $item->createAt->format('Y.m.d') . '" pubdate="pubdate">' . $item->createAt->format('Y.m.d') . '</time>';
 
         $return .= '</a>';
         return $return;
