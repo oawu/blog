@@ -566,14 +566,58 @@ $zIndexTb: (
   @include box-shadow(0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.1));
 }
 
+figure.before-article {
+  position: relative;
+  
+  display: inline-block;
+  width: 100%;
+  height: 0;
+
+  padding: 0;
+  padding-top: 52.5%;
+  
+  margin: 0 auto;
+  margin-top: -16px;
+  z-index: 3;
+  @include box-shadow(0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.1));
+
+  > figcaption, &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    @include overflow-docx3();
+  }
+
+  > figcaption {
+    height: 32px;
+    line-height: 32px;
+    @include opacity(0);
+  }
+
+  &:after {
+    content: '';
+    height: 100%;
+    @include background-image(linear-gradient(top, rgba(39, 40, 34, 0 / 2) 0%, rgba(39, 40, 34, .2 / 2) 50%, rgba(39, 40, 34, .3 / 2) 60%, rgba(39, 40, 34, .7 / 2) 100%));
+  }
+  + article.panel {
+    border-top: 0;
+    z-index: 4;
+    @include box-shadow(0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.1));
+  }
+}
+
 article.panel {
   $space: 23px;
   padding: 20px 32px;
-  margin-top: -16px;
-  
+
   > header {
+    display: inline-block;
+    width: 100%;
+    
     h1 {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     span {
@@ -715,52 +759,6 @@ article.panel {
     }
   }
 
-  > figure, > section > figure {
-    position: relative;
-    display: inline-block;
-    height: 0;
-    padding: 0;
-    padding-top: 52.5%;
-    
-
-    > img {
-      display: none;
-    }
-
-    > figcaption, &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: inline-block;
-      width: 100%;
-      @include overflow-docx3();
-    }
-
-    &:after {
-      content: '';
-      height: 100%;
-    }
-  }
-
-  > figure {
-    width: calc(100% + 32px * 2);
-    
-    margin: 0;
-    margin-top: -20px;
-    margin-left: -32px;
-    margin-bottom: 0;
-
-    > figcaption {
-      height: 32px;
-      line-height: 32px;
-      @include opacity(0);
-    }
-
-    &:after {
-      @include background-image(linear-gradient(top, rgba(39, 40, 34, 0 / 2) 0%, rgba(39, 40, 34, .2 / 2) 50%, rgba(39, 40, 34, .3 / 2) 60%, rgba(39, 40, 34, .7 / 2) 100%));
-    }
-  }
-
   > time[editdate] {
     display: block;
     height: 28px;
@@ -817,7 +815,6 @@ section.md {
   }
 
   a {
-    // @include a(1px, true);
     display: inline;
     $color: rgba(66, 133, 244, 1.00);
     $hoverColor: adjust-lightness($color, -15%);
@@ -841,27 +838,42 @@ section.md {
   }
 
   > figure {
-    display: block;
+    position: relative;
+
+    display: inline-block;
     width: calc(100% + 16px * 2);
+    height: 0;
+
+    padding: 0;
+    padding-top: 56.25%;
+
     margin-left: -16px;
     margin-top: $space;
     margin-bottom: $space;
+
     cursor: pointer;
-    
-    width: calc(100% + 16px * 2);
-    margin-left: -16px;
     @include border-radius(2px);
     
+    > figcaption, &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      @include overflow-docx3();
+    }
+
     &:after {
+      content: '';
+      height: 100%;
       border: 1px solid rgba(0, 0, 0, 0.2);
-      @include border-radius(2px);
       z-index: 2;
+      @include border-radius(2px);
     }
     
     &.desc {
       margin-bottom: $space + 26px;
     }
-
 
     > figcaption {
       top: calc(100% + 4px);
@@ -900,6 +912,27 @@ section.md {
       @include transition(opacity .3s, background-color .3s);
       @include text-shadow(rgba(0, 0, 0, 0.2) 0px 0px 10px, rgba(0, 0, 0, 0.3) 0px 0px 1px);
       z-index: 1;
+    }
+  }
+
+  > .iframe {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    padding: 0 auto;
+    padding-top: 56.25%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    @include border-radius(2px);
+
+    > iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -2414,22 +2447,6 @@ section.md {
 @include range-width(0, 450px) {
   article.panel {
     padding: 16px;
-    margin-top: 0;
-    > figure, > section > figure {
-      width: calc(100% + #{16px * 2}) !important;
-      margin-left: -16px !important;
-      margin-right: 0 !important;
-    }
-    > figure {
-      margin-top: -16px;
-    }
-
-    > section > figure:before {
-      border-left: 0;
-      border-right: 0;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
   }
 
   .page {
@@ -2642,6 +2659,11 @@ section.md {
     > figure {
       margin-top: $space;
       margin-bottom: $space;
+
+      width: calc(100% + #{16px * 2}) !important;
+      margin-left: -16px !important;
+      margin-right: 0 !important;
+
       &.desc {
         margin-bottom: $space + 26px;
       }
@@ -2651,6 +2673,28 @@ section.md {
       &, &:after {
         @include border-radius(0);
       }
+      &:after {
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    > .iframe {
+      margin-top: $space;
+      margin-bottom: $space;
+
+      width: calc(100% + #{16px * 2}) !important;
+      margin-left: -16px !important;
+      margin-right: 0 !important;
+
+      border-left: 0;
+      border-right: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      @include border-radius(0);
     }
 
     > ul, > ol, > table, > pre {

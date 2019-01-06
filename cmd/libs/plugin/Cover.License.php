@@ -7,15 +7,23 @@
  * @link        https://www.ioa.tw/
  */
 
-class Search extends SingleItem {
+class License extends SingleItem {
+  private static $article = null;
+
+  protected static function init() {
+    static::$article = Article::init(PATH_MARKDOWN . static::id() . ' | ' . static::htmlName() . DIRECTORY_SEPARATOR, static::htmlName(), [], null);
+  }
+
+  protected static function id() { return '007'; }
   protected static function uris() { return []; }
   protected static function format() { return 'html'; }
-  protected static function htmlName() { return 'search'; }
+  protected static function htmlName() { return 'license'; }
 
   public static function write() {
-    return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'Search.php', [
+    return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'License.php', [
       '_header' => loadView(PATH_TEMPLATE . '_header.php'),
       '_menu' => loadView(PATH_TEMPLATE . '_menu.php'),
+      'article' => static::$article,
       '_info' => loadView(PATH_TEMPLATE . '_info.php'),
     ]));
   }

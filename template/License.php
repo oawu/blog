@@ -23,11 +23,8 @@
     <?php echo $_menu;?>
 
     <main id="main"><div>
+
       <article class="panel">
-        <figure data-bgurl="<?php echo $article->ogImage;?>">
-          <img src="<?php echo $article->ogImage;?>" />
-          <figcaption><?php echo $article->description ? $article->description : $article->title;?></figcaption>
-        </figure>
 
         <header>
           <h1><?php echo $article->title;?></h1>
@@ -44,38 +41,6 @@
         <time datetime="<?php echo $article->updateAt->format('Y-m-d');?>" date="<?php echo $article->updateAt->format('Y.m.d');?>" editdate="editdate"><?php echo $article->updateAt->format('Y-m-d 00:00:00');?></time>
       </article>
     
-      <div id="other">
-        <?php 
-        echo implode('', array_map(function($other) {
-          $aAttrs = [
-            'href' => $other->url(),
-          ];
-          $figureAttrs = [
-            'data-bgurl' => $other->iconImage,
-          ];
-          $imgAttrs = [
-            'alt' => $other->title . ' - ' . TITLE,
-            'src' => $other->iconImage
-          ];
-
-          $return = '';
-          $return .= '<a' . attr($aAttrs) . '>';
-            $return .= '<figure' . attr($figureAttrs) . '>';
-              $return .= '<img' . attr($imgAttrs) . '/>';
-              $return .= '<figcaption>' . $other->title . '</figcaption>';
-            $return .= '</figure>';
-            $return .= '<b>' . $other->title . '</b>';
-            $return .= '<span>' . $other->description . '</span>';
-          $return .= '</a>';
-
-          return $return;
-        }, $article->others()));?>
-        
-      </div>
-
-
-      <div id="comments" class="panel"><div class="fb-comments" data-order-by="reverse_time" width="100%" data-href="<?php echo $article->url();?>" data-numposts="5"></div></div>
-
     </div></main>
 
     <?php echo $_info;?>

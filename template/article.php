@@ -23,11 +23,13 @@
     <?php echo $_menu;?>
 
     <main id="main"><div>
+
+      <figure class='before-article' data-bgurl="<?php echo $article->ogImage;?>">
+        <img src="<?php echo $article->ogImage;?>" />
+        <figcaption><?php echo $article->description ? $article->description : $article->title;?></figcaption>
+      </figure>
+
       <article class="panel">
-        <figure data-bgurl="<?php echo $article->ogImage;?>">
-          <img src="<?php echo $article->ogImage;?>" />
-          <figcaption><?php echo $article->description ? $article->description : $article->title;?></figcaption>
-        </figure>
 
         <header>
           <h1><?php echo $article->title;?></h1>

@@ -24,6 +24,8 @@ abstract class Menu {
       Articles::create('005 | Mazu', 'icon-1a', '鄉土北港'),
       Albums::create('006 | Album', 'icon-14', '生活相簿'),
     ]));
+
+    SingleItem::initAll('AllJson', 'Search', 'License');
   
     Item::modifyAllContent();
     return self::$all;

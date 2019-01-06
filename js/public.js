@@ -41,15 +41,25 @@ $(function() {
     $(this).empty().removeAttr('title').append($('<span />').attr('title', title).text(text));
   });
 
-  $('article.panel > section > p > img').each(function() {
-    var $parent = $(this).parent(),
-        src = $(this).attr('src'),
-        text = $(this).attr('alt'),
-        $figure = $('<figure />');
+  $('article.panel > section').each(function() {
+    $(this).find('> p > img').each(function() {
+      var $parent = $(this).parent(),
+          src = $(this).attr('src'),
+          text = $(this).attr('alt'),
+          $figure = $('<figure />');
 
-    $figure.attr('data-bgurl', src).css({'background-image': 'url(' + src + ')'}).addClass(text.length ? 'desc' : null).append(
-      $(this).clone()).append(
-      text.length ? $('<figcaption />').addClass('icon-18').text(text) : null).insertBefore($parent);
+      $figure.attr('data-bgurl', src).css({'background-image': 'url(' + src + ')'}).addClass(text.length ? 'desc' : null).append(
+        $(this).clone()).append(
+        text.length ? $('<figcaption />').addClass('icon-18').text(text) : null).insertBefore($parent);
+    });
+
+    $(this).find('> iframe').each(function() {
+      var $that = $(this).clone(true);
+      $('<div />').addClass('iframe').append($that).insertBefore($(this));
+      $(this).remove();
+    });
+
+    $(this).addClass('show');
   });
   
   $('article.panel > section a[href]:not([target])').each(function() {

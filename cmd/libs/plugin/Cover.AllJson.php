@@ -13,7 +13,7 @@ class AllJson extends SingleItem {
   protected static function htmlName() { return 'all'; }
 
   public static function write() {
-    $items = array_values(array_filter(Item::all(), function($item) {
+    $items = array_values(array_filter(array_reverse(Item::all()), function($item) {
       return $item->items() && ($item instanceof Article || $item instanceof Album);
     }));
 
@@ -34,6 +34,6 @@ class AllJson extends SingleItem {
       ]);
     }
 
-    return fileWrite(AllJson::writePath(), json_encode(array_values($all)));
+    return fileWrite(static::writePath(), json_encode(array_values($all)));
   }
 }

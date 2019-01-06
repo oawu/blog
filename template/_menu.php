@@ -9,7 +9,7 @@
   ?>
 
   <footer>
-    <a href="">服務條款 - 授權聲明</a>
+    <a href="<?php echo License::url();?>">服務條款 - 授權聲明</a>
     <span>©2014 - <?php echo date('Y');?> WWW.IOA.TW</span>
   </footer>
 </div>

@@ -8,6 +8,18 @@
  */
 
 abstract class SingleItem {
+  private static $all = [];
+  
+  public static function initAll() {
+    foreach (self::$all = func_get_args() as $class)
+      if (class_exists($class) && method_exists($class, 'init') && is_callable($class . '::init'))
+        $class::init();
+    return self::$all;
+  }
+  
+  public static function all() {
+    return self::$all;
+  }
 
   abstract protected static function uris();
   abstract protected static function format();

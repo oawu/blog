@@ -51,7 +51,7 @@ try {
   if ($errs = removeRootFiles())
     throw new Exception('以下根目錄 html 無法移除：' . implode(', ', $errs));
 
-  if ($errs = removeSingleItem(['AllJson', 'Search']))
+  if ($errs = removeSingleItem(SingleItem::all()))
     throw new Exception('以下檔案無法移除：' . implode(', ', $errs));
 
   if ($errs = mkdirDirs($dirs))
@@ -63,7 +63,7 @@ try {
   if ($errs = writeItems(Item::all()))
     throw new Exception('以下 html 無法建立：' . implode(', ', $errs));
 
-  if ($errs = writeSingleItem(['AllJson', 'Search']))
+  if ($errs = writeSingleItem(SingleItem::all()))
     throw new Exception('以下檔案無法建立：' . implode(', ', $errs));
 
 } catch (Exception $e) {
