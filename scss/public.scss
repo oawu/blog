@@ -228,23 +228,6 @@ $zIndexTb: (
           @include opacity(.75);
         }
       }
-
-      // > b {
-      //   height: 32px;
-      //   line-height: 32px;
-      //   font-size: 28px;
-      //   width: 100px;
-      //   margin-top: 6px;
-      //   @include text-shadow(1px 1px 1px rgba(0,0,0,0.2));
-      // }
-
-      // > span {
-      //   height: #{map-get($height, header) - 32px - 6px * 2};
-      //   line-height: #{map-get($height, header) - 32px - 6px * 2};
-      //   font-size: 11px;
-      //   margin-top: -2px;
-      //   color: rgba(255, 255, 255, .75);
-      // }
     }
 
     .search {
@@ -326,8 +309,6 @@ $zIndexTb: (
 
       cursor: pointer;
       color: rgba(255, 255, 255, .85);
-      overflow: hidden;
-      // @include box-shadow(1px 1px 3px rgba(0, 0, 0, .35));
       
       @include border-radius(50%);
 
@@ -336,15 +317,35 @@ $zIndexTb: (
         position: absolute;
         display: inline-block;
         @include border-radius(50%);
+      }
+
+      &:before {
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-      }
-
-      &:after {
         border: 2px solid rgba(255, 255, 255, 1);
-          @include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, .2), inset 0 0 1px rgba(0, 0, 0, .2));
+        @include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, .2), inset 0 0 1px rgba(0, 0, 0, .2));
+      }
+      &:after {
+        right: 1px;
+        bottom: 1px;
+        width: 11px;
+        height: 11px;
+        background-color: rgba(255, 0, 0, 1.00);
+        border: 1.4px solid rgba(255, 255, 255, 1);
+        @include opacity(0);
+        @include scale(0);
+        @include box-shadow(-1px -1px 2px rgba(0,0,0,0.2), inset -1px 1px 2px rgba(0,0,0,0.1));
+        @include transition(transform .3s cubic-bezier(0.245, 3, 0.840, 0.845), opacity .3s);
+      }
+    }
+  }
+  &.new {
+    .container {
+      .oa-avatar:after {
+        @include opacity(1);
+        @include scale(1);
       }
     }
   }
@@ -615,8 +616,11 @@ article.panel {
   > header {
     display: inline-block;
     width: 100%;
-    
+
     h1 {
+      display: inline-block;
+      width: 100%;
+      margin-top: 16px;
       margin-bottom: 8px;
     }
 
@@ -644,6 +648,60 @@ article.panel {
       }
       &:empty {
         display: none;
+      }
+    }
+
+    + section.md {
+      margin-top: 16px;
+    }
+  }
+
+  &.index {
+    > header {
+      position: absolute;
+      top: 0-80px / 2;
+      left: 32px;
+      width: calc(100% - 32px);
+      padding-left: 80px + 16px;
+
+      figure {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin: 0;
+        @include border-radius(50%);
+        border: 3px solid white;
+        @include box-shadow(0 0 5px 2px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.5), inset 1px 1px 3px -1px rgba(0,0,0,0.5), inset -1px -1px 3px -1px rgba(0,0,0,0.5));
+      }
+      h1, span {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        color: white;
+        font-weight: normal;
+        @include text-shadow(0 0 3px rgba(0, 0, 0, .4));
+        @include overflow-docx3();
+      }
+      span {
+        padding: 0;
+        font-size: 10px;
+        line-height: 20px;
+        padding-top: 10px;
+
+        &:before {
+          display: none;
+        }
+      }
+      + * {
+        margin-top: 40px + 8px !important;
       }
     }
   }
@@ -783,7 +841,7 @@ article.panel {
 
 section.md {
   $space: 23px;
-  letter-spacing: .3px;
+  // letter-spacing: .3px;
   line-height: 27px;
   font-size: 16px;
   word-wrap: break-word;
@@ -947,7 +1005,7 @@ section.md {
 
   ul, ol {
     display: block;
-    padding-left: 28px;
+    padding-left: 23px;
     ul, ol {
       padding-left: 18px;
     }
@@ -1961,6 +2019,10 @@ section.md {
   padding-top: 0 !important;
   @include clearfix();
 
+  > a:nth-child(1) div { background-color: rgba(121, 169, 247, 1.00); }
+  > a:nth-child(2) div { background-color: adjust-lightness(rgba(52, 165, 81, 1.00), 15%); }
+  > a:nth-child(3) div { background-color: adjust-lightness(rgba(246, 114, 128, 1.00), 5%); }
+  > a:nth-child(4) div { background-color: adjust-lightness(rgba(255, 212, 128, 1.00), -5%); }
   > a {
     float: left;
     display: inline-block;
@@ -1975,15 +2037,15 @@ section.md {
       margin-left: 16px;
     }
 
-    figure {
+    div, figure {
       position: relative;
       display: inline-block;
       width: 100%;
       height: 0;
       margin: 0;
-      padding-top: 50%;
+      padding-top: 62.5%;
 
-      > figcaption, &:after {
+      figcaption, &:before, &:after {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -1992,7 +2054,7 @@ section.md {
         @include overflow-docx3();
       }
 
-      > figcaption {
+      figcaption {
         @include opacity(0);
       }
 
@@ -2000,7 +2062,20 @@ section.md {
         content: '';
         height: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
+        z-index: 1;
       }
+    }
+    div:before {
+      z-index: 2;
+      text-align: center;
+      top: calc(50% - 36px / 2);
+      font-size: 36px;
+      color: rgba(255, 255, 255, 0.75);
+      @include text-shadow(0 0 2px rgba(0, 0, 0, .1), 1px 1px 2px rgba(0, 0, 0, .05));
+      @include transition(color .3s, text-shadow .3s);
+    }
+    div ~ span {
+      height: 18px * 2;
     }
     b, span {
       display: inline-block;
@@ -2026,6 +2101,10 @@ section.md {
       overflow: hidden;
     }
     &:hover {
+      div:before {
+        color: rgba(255, 255, 255, 0.9);
+        @include text-shadow(0 0 2px rgba(0, 0, 0, .15), 1px 1px 2px rgba(0, 0, 0, .1));
+      }
       b {
         color: rgba(60, 60, 60, 1.00);
       }
@@ -2447,6 +2526,28 @@ section.md {
 @include range-width(0, 450px) {
   article.panel {
     padding: 16px;
+    
+    &.index {
+      > header {
+        top: -30px;
+        left: 16px;
+        width: calc(100% - 16px);
+        padding-left: 60px + 12px;
+        figure {
+          width: 60px;
+          height: 60px;
+        }
+        h1 {
+          height: 30px;
+          line-height: 30px;
+          font-size: 22px;
+        }
+        span {
+          line-height: 18px;
+          padding-top: 8px;
+        }
+      }
+    }
   }
 
   .page {
@@ -2741,14 +2842,15 @@ section.md {
       @include box-shadow(none);
       @include border-radius(0);
       
-      > figure {
+      div, figure {
         float: left;
         width: 44px;
         height: 44px;
         padding-top: 0;
         overflow: hidden;
         @include border-radius(3px);
-        
+      }
+      figure {
         &:after {
           display: none;
         }
@@ -2762,6 +2864,17 @@ section.md {
           height: 100%;
           border: 1px solid rgba(0, 0, 0, 0.2);
           @include border-radius(3px);
+        }
+      }
+      div {
+        &:after {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          @include border-radius(3px);
+        }
+        &:before {
+          top: 0;
+          font-size: 20px;
+          line-height: 44px;
         }
       }
 
@@ -2784,8 +2897,8 @@ section.md {
 
       > span {
         $h: 44px - 20px - 4px;
-        height: $h;
-        line-height: $h;
+        height: $h !important;
+        line-height: $h !important;
         @include overflow-docx3();
 
         margin-top: 2px;

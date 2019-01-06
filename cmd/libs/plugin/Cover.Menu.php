@@ -10,19 +10,19 @@
 abstract class Menu {
   const FORMAT = '/^(?P<id>\d{3})\s+\|\s+(?P<key>.*)/';
   private static $all = null;
-  protected $class = '', $text = '', $currentUrl = null;
+  protected $class = '', $text = '', $subText = '', $currentUrl = null;
 
   public static function all() {
     if (self::$all !== null)
       return self::$all;
 
     self::$all = array_values(array_filter([
-      ArticleIndex::create('001 | index', 'icon-d', '網站首頁'),
-      Articles::create('002 | Develop', 'icon-e', '心得筆記'),
-      Articles::create('003 | MacEnvInit', 'icon-1b', '環境建置', 'asc'),
-      Articles::create('004 | Unboxing', 'icon-f', '開箱文章'),
-      Articles::create('005 | Mazu', 'icon-1a', '鄉土北港'),
-      Albums::create('006 | Album', 'icon-14', '生活相簿'),
+      ArticleIndex::create('001 | index', 'icon-d', '網站首頁', '網站首頁'),
+      Articles::create('002 | Develop', 'icon-e', '心得筆記', '前後端的實作心得，相關資訊技術研究筆記。'),
+      Articles::create('003 | MacEnvInit', 'icon-1b', '環境建置', 'MacOS 重灌完後，開發環境的建置。', 'asc'),
+      Articles::create('004 | Unboxing', 'icon-f', '開箱文章', 'OA 的玩具開箱文，意外與驚喜的收納盒。'),
+      Articles::create('005 | Mazu', 'icon-1a', '鄉土北港', '不只是熱情也不僅僅是信仰，更是一種習慣、參與感、責任感。'),
+      Albums::create('006 | Album', 'icon-14', '生活相簿', '點點滴滴，喜歡用相簿紀錄每次精彩的活動。'),
     ]));
 
     SingleItem::initAll('AllJson', 'Search', 'License');
@@ -36,11 +36,12 @@ abstract class Menu {
     $dirName = array_shift($args);
     $class = array_shift($args);
     $text = array_shift($args);
+    $subText = array_shift($args);
 
-    $desc = array_shift($args);
-    $desc && $desc = strtolower(trim($desc));
-    in_array($desc, ['asc', 'desc']) || $desc = 'desc';
-    $desc = $desc == 'desc';
+    $descSort = array_shift($args);
+    $descSort && $descSort = strtolower(trim($descSort));
+    in_array($descSort, ['asc', 'desc']) || $descSort = 'desc';
+    $descSort = $descSort == 'desc';
 
     if (!preg_match_all(self::FORMAT, $dirName, $matches))
       return null;
@@ -63,9 +64,10 @@ abstract class Menu {
       return null;
     
     if (is_subclass_of($staticClass, 'Items'))
-      return $staticClass::init($tmp, [$key], $desc)
+      return $staticClass::init($tmp, [$key], $descSort)
                          ->setClass($class)
-                         ->setText($text);
+                         ->setText($text)
+                         ->setSubText($subText);
 
     if (!is_file($tmp . Item::INDEX_MD))
       return null;
@@ -75,7 +77,8 @@ abstract class Menu {
 
     return $staticClass::init($tmp, $key, [])
                        ->setClass($class)
-                       ->setText($text);
+                       ->setText($text)
+                       ->setSubText($subText);
   }
 
   public function setClass($class) {
@@ -85,6 +88,11 @@ abstract class Menu {
 
   public function setText($text) {
     $this->text = $text;
+    return $this;
+  }
+
+  public function setSubText($subText) {
+    $this->subText = $subText;
     return $this;
   }
 
@@ -103,6 +111,10 @@ abstract class Menu {
 
   public function currentUrl() {
     return $this->currentUrl;
+  }
+
+  public function subText() {
+    return $this->subText;
   }
 
   public static function links($currentUrl = null) {

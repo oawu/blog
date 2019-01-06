@@ -29,17 +29,15 @@
         <figcaption><?php echo $article->description ? $article->description : $article->title;?></figcaption>
       </figure>
 
-      <article class="panel">
+      <article class="panel index">
 
         <header>
           <h1><?php echo $article->title;?></h1>
           <span><?php echo $article->bio;?></span>
+          <figure data-bgurl="<?php echo $article->iconImage;?>">
+            <img src="<?php echo $article->iconImage;?>" />
+          </figure>
         </header>
-        
-        <div class="info">
-          <time datetime="<?php echo $article->createAt->format('Y-m-d');?>" date="<?php echo $article->createAt->format('Y.m.d');?>" pubdate="pubdate"><?php echo $article->createAt->format('Y-m-d 00:00:00');?></time>
-          <span><div class="fb-like" data-href="<?php echo $article->url();?>" data-send="false" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></span>
-        </div>
 
         <section class="md"><?php echo $article->content;?></section>
         <div class="tags"><?php echo implode('', array_map(function($tag) { return '<a href="' . Search::url() . '?q=' . $tag . '">' . $tag . '</a>'; }, $article->tags));?></div>
@@ -52,22 +50,16 @@
           $aAttrs = [
             'href' => $other->url(),
           ];
-          $figureAttrs = [
-            'data-bgurl' => $other->iconImage,
-          ];
-          $imgAttrs = [
-            'alt' => $other->title . ' - ' . TITLE,
-            'src' => $other->iconImage
+          $divAttrs = [
+            'class' => $other->className(),
           ];
 
           $return = '';
           $return .= '<a' . attr($aAttrs) . '>';
-            $return .= '<figure' . attr($figureAttrs) . '>';
-              $return .= '<img' . attr($imgAttrs) . '/>';
-              $return .= '<figcaption>' . $other->title . '</figcaption>';
-            $return .= '</figure>';
-            $return .= '<b>' . $other->title . '</b>';
-            $return .= '<span>' . $other->description . '</span>';
+            $return .= '<div' . attr($divAttrs) . '>';
+            $return .= '</div>';
+            $return .= '<b>' . $other->text() . '</b>';
+            $return .= '<span>' . $other->subText() . '</span>';
           $return .= '</a>';
 
           return $return;

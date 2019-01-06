@@ -19,6 +19,32 @@ $(function() {
   // if (function(){ return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375); }())
   // $body.addClass('iPhoneX');
 
+  var Header = {
+    $el: $('#header'),
+    key: 'ioa.header.ttl',
+    ttl: 1000 * 60 * 60 * 24, // 1天
+    set: function() {
+      var val = getStorage(Header.key);
+      var timer = setTimeout(function() {
+        Header.$el.addClass('new');
+      }, 2400);
+
+      Header.$el.find('.oa-avatar').click(function() {
+        Header.$el.removeClass('new');
+        setStorage(Header.key, time());
+      });
+
+      if (!val || (time() >= val + Header.ttl))
+        return;
+
+      Header.$el.removeClass('new');
+      clearTimeout(timer);
+    }
+  };
+
+  Header.set();
+
+
   $('*[pubdate], *[editdate]').each(function() {
     $(this).attr('data-ago', $.timeago($(this).attr('datetime'))).empty();
   });

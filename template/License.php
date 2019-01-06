@@ -31,11 +31,6 @@
           <span><?php echo $article->bio;?></span>
         </header>
         
-        <div class="info">
-          <time datetime="<?php echo $article->createAt->format('Y-m-d');?>" date="<?php echo $article->createAt->format('Y.m.d');?>" pubdate="pubdate"><?php echo $article->createAt->format('Y-m-d 00:00:00');?></time>
-          <span><div class="fb-like" data-href="<?php echo $article->url();?>" data-send="false" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></span>
-        </div>
-
         <section class="md"><?php echo $article->content;?></section>
         <div class="tags"><?php echo implode('', array_map(function($tag) { return '<a href="' . Search::url() . '?q=' . $tag . '">' . $tag . '</a>'; }, $article->tags));?></div>
         <time datetime="<?php echo $article->updateAt->format('Y-m-d');?>" date="<?php echo $article->updateAt->format('Y.m.d');?>" editdate="editdate"><?php echo $article->updateAt->format('Y-m-d 00:00:00');?></time>
