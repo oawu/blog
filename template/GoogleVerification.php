@@ -1,0 +1,1 @@
+google-site-verification: <?php echo $value;?>

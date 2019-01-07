@@ -25,7 +25,7 @@ abstract class Menu {
       Albums::create('006 | Album', 'icon-14', '生活相簿', '點點滴滴，喜歡用相簿紀錄每次精彩的活動。'),
     ]));
 
-    SingleItem::initAll('AllJson', 'Search', 'License', 'Sitemap', 'Robots');
+    SingleItem::initAll('AllJson', 'Search', 'License', 'Sitemap', 'Robots', 'GoogleVerification');
   
     Item::modifyAllContent();
     return self::$all;
