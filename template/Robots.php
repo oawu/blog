@@ -1,4 +1,4 @@
-Sitemap: <?php echo Sitemap::url();?>
+Sitemap: <?php echo Sitemap::SITEMAP_URL;?>
 
 
 User-agent: *

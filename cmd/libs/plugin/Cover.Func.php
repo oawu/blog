@@ -8,7 +8,7 @@
  */
 
 spl_autoload_register(function($className) {
-  if (!in_array($className, ['Sitemap', 'Robots', 'GoogleVerification', 'Parsedown', 'Page', 'Pagination', 'Menu', 'SingleItem', 'Item', 'License', 'AllJson', 'Search', 'Article', 'ArticleIndex', 'ArticleReview', 'Album', 'Items', 'Articles', 'Albums']))
+  if (!in_array($className, ['Sitemap', 'GoogleVerification', 'Parsedown', 'Page', 'Pagination', 'Menu', 'SingleItem', 'Item', 'License', 'AllJson', 'Search', 'Article', 'ArticleIndex', 'ArticleReview', 'Album', 'Items', 'Articles', 'Albums']))
     return false;
 
   if (!is_readable($path = PATH_CMD_LIB_PLUGIN . 'Cover.' . $className . '.php'))

@@ -13,6 +13,7 @@ abstract class Item extends Menu {
 
   private static $groups = [];
   private static $all = [];
+  private static $sitemaps = null;
 
   protected $markdownPath, $fileName, $uris = [], $page = null, $items = null;
   public $title, $description, $bio, $ogImage, $iconImage, $content, $tags, $createAt, $updateAt;
@@ -44,9 +45,18 @@ abstract class Item extends Menu {
     return Item::append($key, $obj);
   }
 
+  public function markdownPath() { return $this->markdownPath; }
+  public function fileName() { return $this->fileName; }
+  public function uris() { return $this->uris; }
+  
+  public function url() { return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . rawurlencode($this->fileName) . '.html'; }
+  public function writePath() { return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : '') . $this->fileName . '.html'; }
+  public function page() { return $this->page; }
+  public function items() { return $this->items; }
+
   public function sitemap() {
-    
     return [
+      'type' => $this instanceof Album ? 'album' : 'article',
       'loc' => $this->url(),
       'priority' => $this->uris() ? '0.7' : '0.3',
       'changefreq' => 'daily',
@@ -58,18 +68,9 @@ abstract class Item extends Menu {
           'caption' => $image['alt'] ? $image['alt'] : $this->title,
           'license' => License::url(),
         ];
-      }, $this->images), 0, 1000) : null
+      }, $this->images), 0, 1000) : []
     ];
   }
-
-  public function markdownPath() { return $this->markdownPath; }
-  public function fileName() { return $this->fileName; }
-  public function uris() { return $this->uris; }
-  
-  public function url() { return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . rawurlencode($this->fileName) . '.html'; }
-  public function writePath() { return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : '') . $this->fileName . '.html'; }
-  public function page() { return $this->page; }
-  public function items() { return $this->items; }
 
   public static function existsByUris($fileName, $key = null) {
     $groups = array_key_exists($key, Item::$groups) ? [Item::$groups[$key]] : Item::$groups;
@@ -100,6 +101,29 @@ abstract class Item extends Menu {
 
   public static function groups() {
     return Item::$groups;
+  }
+
+  public static function sitemaps($key = null) {
+    Item::$sitemaps !== null || Item::$sitemaps = array_values(array_filter(array_map(function($item) {
+      $sitemap = $item->sitemap();
+      
+      if (empty($sitemap['loc']))
+        return null;
+
+      if ($sitemap['type'] == 'album' && !($sitemap['images'] = array_values(array_filter($sitemap['images'], function($image) { return !empty($image['loc']); }))))
+        return null;
+
+      return $sitemap;
+    }, Item::all())));
+
+    $sitemaps = $key === null ? Item::$sitemaps : array_filter(Item::$sitemaps, function($sitemap) use ($key) {
+      return isset($sitemap['type']) && $sitemap['type'] == $key;
+    });
+
+    return array_values(array_map(function($sitemap) {
+      unset($sitemap['type']);
+      return $sitemap;
+    }, $sitemaps));
   }
 
   public static function all() {

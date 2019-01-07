@@ -8,147 +8,125 @@
  */
 
 class Sitemap extends SingleItem {
-  private $writer;
-  private $path;
-  private $filename = 'sitemap';
-  private $current_item = 0;
-  private $current_sitemap = 0;
-
   const SCHEMA = 'http://www.sitemaps.org/schemas/sitemap/0.9';
-  const DEFAULT_PRIORITY = 0.5;
-  const ITEM_PER_SITEMAP = 200;
+  const SCHEMA_IMAGE = 'http://www.google.com/schemas/sitemap-image/1.1';
 
-  const FILENAME = 'sitemap';
-  const SEPERATOR = '_';
-  const INDEX_SUFFIX = 'index';
+  const OFFSET = 200;
+  const SITEMAP_PATH = PATH_SITEMAP . 'sitemap_index.xml';
+  const SITEMAP_URL  = BASE_URL . 'sitemap/sitemap_index.xml';
 
-  public function __construct() {
-  }
-
-  public static function create() {
-    return new static();
-  }
-
-  private function getWriter() {
-    return $this->writer;
-  }
-
-  private function setWriter(XMLWriter $writer) {
-    $this->writer = $writer;
-  }
-
-  private function getPath() {
-    return $this->path;
-  }
-
-  public function setPath($path) {
-    $this->path = $path;
-    return $this;
+  protected static function uris() { return []; }
+  protected static function format() { return 'txt'; }
+  protected static function fileName() { return 'robots'; }
+  
+  private $fileName, $items = [], $type = 'article';
+  public function __construct($fileName, $items, $type) {
+    $this->fileName = $fileName;
+    $this->items = $items;
+    $this->type = $type;
   }
 
 
-  private function getCurrentItem() {
-    return $this->current_item;
+  public function newXml() {
+    $path = PATH_SITEMAP . $this->fileName . '.xml';
+
+    $xml = new XMLWriter();
+    $xml->openURI($path);
+    $xml->startDocument('1.0', 'UTF-8');
+    $xml->setIndent(true);
+    $xml->startElement('urlset');
+    $xml->writeAttribute('xmlns', Sitemap::SCHEMA);
+    return $xml;
   }
 
-  private function incCurrentItem() {
-    $this->current_item = $this->current_item + 1;
+  public function endXml(XMLWriter $xml) {
+    $xml->endDocument();
+    return true;
   }
 
-  private function getCurrentSitemap() {
-    return $this->current_sitemap;
-  }
+  public function writeArticleXml() {
+    $xml = $this->newXml();
+    
+    foreach ($this->items as $item) {
+      $xml->startElement('url');
 
-  private function incCurrentSitemap() {
-    $this->current_sitemap = $this->current_sitemap + 1;
-  }
+      foreach ($item as $key => $value)
+        if (in_array($key, ['loc', 'priority', 'changefreq', 'lastmod']))
+          $xml->writeElement($key, $value);
 
-  private function startSitemap() {
-    $this->setWriter(new XMLWriter());
-    $this->getWriter()->openURI($this->getPath() . self::FILENAME . self::SEPERATOR . $this->getCurrentSitemap() . '.' . self::format());
-    $this->getWriter()->startDocument('1.0', 'UTF-8');
-    $this->getWriter()->setIndent(true);
-    $this->getWriter()->startElement('urlset');
-    $this->getWriter()->writeAttribute('xmlns', self::SCHEMA);
-  }
-
-  public function add() {
-    if (($this->getCurrentItem() % self::ITEM_PER_SITEMAP) == 0) {
-      if ($this->getWriter() instanceof XMLWriter)
-        $this->endSitemap();
-
-      $this->startSitemap();
-      $this->incCurrentSitemap();
+      $xml->endElement();
     }
 
-    $this->incCurrentItem();
-    return $this;
+    return $this->endXml($xml);
   }
 
-  public function addItems($items) {
-    foreach ($items as $item)
-      $this->addItem($item->sitemap());
-    return $this;
-  }
+  public function writeAlbumXml() {
+    $xml = $this->newXml();
+    $xml->writeAttribute('xmlns:image', Sitemap::SCHEMA_IMAGE);
 
-  public function addItem($params) {
-    if (!isset($params['loc']))
-      return $this;
+    foreach ($this->items as $item) {
+      $xml->startElement('url');
 
-    $this->add()
-         ->getWriter()->startElement('url');
+      foreach ($item as $key => $value)
+        if (in_array($key, ['loc', 'priority', 'changefreq', 'lastmod']))
+          $xml->writeElement($key, $value);
 
-    foreach ($params as $key => $param)
-      if (in_array($key, ['loc', 'priority', 'changefreq', 'lastmod']))
-        $this->getWriter()->writeElement($key, $param);
+      foreach ($item['images'] as $image) {
+        $xml->startElement('image:image');
 
-    if (isset($params['images']) && ($images = array_filter($params['images'], function($image) { return isset($image['loc']); }))) {
-      foreach ($images as $image) {
-        $this->getWriter()->startElement('image:image');
-        foreach ($image as $iKey => $img)
-          if (in_array($iKey, ['loc', 'caption', 'geo_location', 'title', 'license']))
-            $this->getWriter()->writeElement('image:' . $iKey, $img);
-        $this->getWriter()->endElement();
+        foreach ($image as $key => $img)
+          if (in_array($key, ['loc', 'caption', 'geo_location', 'title', 'license']))
+            $xml->writeElement('image:' . $key, $img);
+
+        $xml->endElement();
       }
+
+      $xml->endElement();
     }
 
-    $this->getWriter()->endElement();
-    return $this;
+    return $this->endXml($xml);
   }
 
-  private function endSitemap() {
-    $this->getWriter()->endElement();
-    $this->getWriter()->endDocument();
-    return $this;
+  public function writeXml(XMLWriter $parentWriter) {
+    $url = BASE_URL . 'sitemap/' . $this->fileName . '.xml';
+
+    if (!($this->type == 'album' ? $this->writeAlbumXml() : $this->writeArticleXml()))
+      return;
+
+    $parentWriter->startElement('sitemap');
+    $parentWriter->writeElement('loc', $url);
+    $parentWriter->writeElement('lastmod', date ('c'));
+    $parentWriter->endElement();
   }
 
-  public function createSitemapIndex($loc, $lastmod = 'Today') {
-    $this->endSitemap();
-    $indexwriter = new XMLWriter();
-    $indexwriter->openURI($this->getPath() . self::fileName() . '.' . self::format());
-    $indexwriter->startDocument('1.0', 'UTF-8');
-    $indexwriter->setIndent(true);
-    $indexwriter->startElement('sitemapindex');
-    $indexwriter->writeAttribute('xmlns', self::SCHEMA);
-    for ($index = 0; $index < $this->getCurrentSitemap(); $index++) {
-      $indexwriter->startElement('sitemap');
-      $indexwriter->writeElement('loc', $loc . self::FILENAME . self::SEPERATOR . $index . '.' . self::format());
-      $indexwriter->writeElement('lastmod', $lastmod);
-      $indexwriter->endElement();
-    }
-    $indexwriter->endElement();
-    $indexwriter->endDocument();
-    return $this;
+  public static function create($fileName, $items, $type) {
+    return new static($fileName, $items, $type);
   }
-
-  protected static function uris() { return ['sitemap']; }
-  protected static function format() { return 'xml'; }
-  protected static function fileName() { return self::FILENAME . self::SEPERATOR . self::INDEX_SUFFIX; }
 
   public static function write() {
-    return Sitemap::create()
-                  ->setPath(PATH_SITEMAP)
-                  ->addItems(Item::all())
-                  ->createSitemapIndex(BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, PATH_SITEMAP)))), date('c'));
+    $articles = Item::sitemaps('article');
+    $albums   = Item::sitemaps('album');
+
+    $sitemaps = [];
+    for ($i = $j = 0, $c = count($articles), $t = strlen(ceil($c / Sitemap::OFFSET)); $i < $c; $i += Sitemap::OFFSET)
+      $sitemaps[] = static::create('sitemap_' . sprintf('%0' . $t . 'd', $j++), array_slice($articles, $i, Sitemap::OFFSET), 'article');
+
+    for ($i = $j = 0, $c = count($albums), $t = strlen(ceil($c / Sitemap::OFFSET)); $i < $c; $i += Sitemap::OFFSET)
+      $sitemaps[] = static::create('sitemap_album_' . sprintf('%0' . $t . 'd', $j++), array_slice($albums, $i, Sitemap::OFFSET), 'album');
+
+    $xml = new XMLWriter();
+    $xml->openURI(Sitemap::SITEMAP_PATH);
+    $xml->startDocument('1.0', 'UTF-8');
+    $xml->setIndent(true);
+    $xml->startElement('sitemapindex');
+    $xml->writeAttribute('xmlns', self::SCHEMA);
+    
+    foreach ($sitemaps as $items)
+      $items->writeXml($xml);
+
+    $xml->endElement();
+    $xml->endDocument();
+
+    return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'Robots.php'));
   }
 }
