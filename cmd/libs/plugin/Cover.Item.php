@@ -44,6 +44,24 @@ abstract class Item extends Menu {
     return Item::append($key, $obj);
   }
 
+  public function sitemap() {
+    
+    return [
+      'loc' => $this->url(),
+      'priority' => $this->uris() ? '0.7' : '0.3',
+      'changefreq' => 'daily',
+      'lastmod' => $this->updateAt->format('c'),
+      'images' => isset($this->images) ? array_slice(array_map(function($image) {
+        return [
+          'loc' => $image['src'],
+          'title' => $this->title,
+          'caption' => $image['alt'] ? $image['alt'] : $this->title,
+          'license' => License::url(),
+        ];
+      }, $this->images), 0, 1000) : null
+    ];
+  }
+
   public function markdownPath() { return $this->markdownPath; }
   public function htmlName() { return $this->htmlName; }
   public function uris() { return $this->uris; }

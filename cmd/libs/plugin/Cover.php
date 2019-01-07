@@ -66,6 +66,9 @@ try {
   if ($errs = writeSingleItem(SingleItem::all()))
     throw new Exception('以下檔案無法建立：' . implode(', ', $errs));
 
+  // if (!$errs = writeSitemap(Item::all()))
+  //   throw new Exception('無法建立 Sitemap 檔案！');
+
 } catch (Exception $e) {
   echo $e->getMessage();
   exit(1);

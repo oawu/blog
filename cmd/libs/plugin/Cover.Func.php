@@ -8,7 +8,7 @@
  */
 
 spl_autoload_register(function($className) {
-  if (!in_array($className, ['Parsedown', 'Page', 'Pagination', 'Menu', 'SingleItem', 'Item', 'License', 'AllJson', 'Search', 'Article', 'ArticleIndex', 'ArticleReview', 'Album', 'Items', 'Articles', 'Albums']))
+  if (!in_array($className, ['Sitemap', 'Robots', 'Parsedown', 'Page', 'Pagination', 'Menu', 'SingleItem', 'Item', 'License', 'AllJson', 'Search', 'Article', 'ArticleIndex', 'ArticleReview', 'Album', 'Items', 'Articles', 'Albums']))
     return false;
 
   if (!is_readable($path = PATH_CMD_LIB_PLUGIN . 'Cover.' . $className . '.php'))
@@ -238,6 +238,17 @@ if (!function_exists('writeSingleItem')) {
     });
   }
 }
+
+// if (!function_exists('writeSitemap')) {
+//   function writeSitemap($items) {
+//     Sitemap::create()
+//            ->setPath(PATH_SITEMAP)
+//            ->addItems($items)
+//            ->createSitemapIndex(BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, PATH_SITEMAP)))), date('c'));
+    
+//     return true;
+//   }
+// }
 
 if (!function_exists('loadView')) {
   function loadView($___B10g___aT_GiNkg0___path___B10g___aT_GiNkg0___, $___B10g___aT_GiNkg0___pARams___B10g___aT_GiNkg0___ = []) {
