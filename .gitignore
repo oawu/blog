@@ -6,4 +6,5 @@ sftp-config*
 **/package-lock.json
 
 /*.html
+/robots.txt
 /js/all.json
