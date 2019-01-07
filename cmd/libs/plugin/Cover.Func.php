@@ -239,17 +239,6 @@ if (!function_exists('writeSingleItem')) {
   }
 }
 
-// if (!function_exists('writeSitemap')) {
-//   function writeSitemap($items) {
-//     Sitemap::create()
-//            ->setPath(PATH_SITEMAP)
-//            ->addItems($items)
-//            ->createSitemapIndex(BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, PATH_SITEMAP)))), date('c'));
-    
-//     return true;
-//   }
-// }
-
 if (!function_exists('loadView')) {
   function loadView($___B10g___aT_GiNkg0___path___B10g___aT_GiNkg0___, $___B10g___aT_GiNkg0___pARams___B10g___aT_GiNkg0___ = []) {
     if (!is_readable($___B10g___aT_GiNkg0___path___B10g___aT_GiNkg0___))

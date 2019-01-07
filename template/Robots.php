@@ -1,3 +1,4 @@
-Sitemap: https://www.ioa.tw/sitemap/sitemap_index.xml
+Sitemap: <?php echo Sitemap::url();?>
+
 
 User-agent: *
