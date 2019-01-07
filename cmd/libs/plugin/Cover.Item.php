@@ -167,6 +167,26 @@ abstract class Item extends Menu {
     return $this->replaceContentSpace('/^[\n ]*|[\n ]*$/u', false);
   }
 
+  private function moveImage2Asset($file) {
+    if (!MOVE_TO_ASSET)
+      return BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file))));
+
+    $dest = PATH_ASSET . md5_file($file) . '.' . pathinfo($file, PATHINFO_EXTENSION);
+    file_exists($dest) && is_readable($dest) || @copy($file, $dest);
+    
+    if (!is_readable($dest)) {
+      if (CHECK_IMAGE_EXIST)
+        throw new Exception(json_encode([
+          '錯誤原因' => '搬移圖片至 Asset 錯誤！',
+          '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
+          '圖片位置' => pathReplace(PATH, $dest)
+        ]));
+
+      return D4_IMG_URL;
+    }
+
+    return BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $dest))));
+  }
   protected function searchImages() {
     $pattern = '/<img.*?src=(["\'])(?P<imgs>.*?)\1[^\>]*>/u';
 
@@ -183,7 +203,8 @@ abstract class Item extends Menu {
           throw new Exception(json_encode([
             '錯誤原因' => '圖片遺失，找不到圖片！',
             '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
-            '圖片位置' => $img]));
+            '圖片位置' => $img
+          ]));
 
         return [
           'search' => $img,
@@ -191,27 +212,7 @@ abstract class Item extends Menu {
         ];
       }
 
-      if (MOVE_TO_ASSET) {
-        $dest = PATH_ASSET . md5_file($file) . '.' . pathinfo($file, PATHINFO_EXTENSION);
-        file_exists($dest) && is_readable($dest) || @copy($file, $dest);
-        
-        if (!is_readable($dest)) {
-          if (CHECK_IMAGE_EXIST)
-            throw new Exception(json_encode([
-              '錯誤原因' => '圖片遺失，找不到圖片！',
-              '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
-              '圖片位置' => $img]));
-
-          return [
-            'search' => $img,
-            'replace' => D4_IMG_URL,
-          ];
-        }
-
-        $src = BASE_URL . pathReplace(PATH, $dest);
-      } else {
-        $src = BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file))));
-      }
+      $src = $this->moveImage2Asset($file);
 
       return [
         'search' => $img,
@@ -260,7 +261,8 @@ abstract class Item extends Menu {
           throw new Exception(json_encode([
             '錯誤原因' => '鏈結遺失，找不到鏈結！',
             '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
-            '鏈結字串' => $href]));
+            '鏈結字串' => $href
+          ]));
 
         return [
           'search' => $href,
@@ -286,7 +288,8 @@ abstract class Item extends Menu {
         throw new Exception(json_encode([
           '錯誤原因' => '鏈結遺失，找不到鏈結！',
           '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
-          '鏈結字串' => $href]));
+          '鏈結字串' => $href
+        ]));
 
       return [
         'search' => $href,
@@ -357,7 +360,7 @@ abstract class Item extends Menu {
 
     foreach (Item::IMG_FORMATS as $format)
       if (file_exists($file = $this->markdownPath() . 'cover.' . $format) && is_readable($file))
-        $this->ogImage = BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, realpath($file)))));
+        $this->ogImage = $this->moveImage2Asset($file);
 
     return $this;
   }
@@ -367,7 +370,7 @@ abstract class Item extends Menu {
 
     foreach (Item::IMG_FORMATS as $format)
       if (file_exists($file = $this->markdownPath() . 'icon.' . $format) && is_readable($file))
-        $this->iconImage = BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, realpath($file)))));
+        $this->iconImage = $this->moveImage2Asset($file);
 
     return $this;
   }
