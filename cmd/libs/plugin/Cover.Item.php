@@ -168,7 +168,7 @@ abstract class Item extends Menu {
   }
 
   private function moveImage2Asset($file) {
-    if (!MOVE_TO_ASSET)
+    if (!defined('PATH_ASSET'))
       return BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file))));
 
     $dest = PATH_ASSET . md5_file($file) . '.' . pathinfo($file, PATHINFO_EXTENSION);

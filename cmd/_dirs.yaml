@@ -30,11 +30,6 @@
   hidden: No
   recursive: Yes
 
-- path: "asset"
-  formats: [".js", ".css", ".png", ".jpg", ".jpeg", ".gif", ".svg"]
-  hidden: No
-  recursive: Yes
-
 - path: "sitemap"
   formats: [".xml"]
   hidden: No

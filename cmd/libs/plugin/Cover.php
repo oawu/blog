@@ -20,9 +20,9 @@ define('DIRNAME',             basename(PATH));
 define('PATH_SITEMAP',  PATH . 'sitemap'  . DIRECTORY_SEPARATOR);
 define('PATH_MARKDOWN', PATH . 'markdown' . DIRECTORY_SEPARATOR);
 define('PATH_TEMPLATE', PATH . 'template' . DIRECTORY_SEPARATOR);
-define('PATH_ASSET',    PATH . 'asset'    . DIRECTORY_SEPARATOR);
+define('PATH_ASSET',    PATH . 'img' . DIRECTORY_SEPARATOR . 'md5' . DIRECTORY_SEPARATOR);
 
-define('MOVE_TO_ASSET', true);
+
 define('CHECK_LINK_EXIST', true);
 define('CHECK_IMAGE_EXIST', true);
 
