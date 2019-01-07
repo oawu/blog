@@ -304,3 +304,10 @@ if (!function_exists('scope')) {
     })));
   }
 }
+
+
+if (!function_exists('typeOfImg')) {
+  function typeOfImg($t) {
+    return 'image/' . (($t = pathinfo(OG_IMG_URL)) && isset($t['extension']) && $t['extension'] ? $t['extension'] : 'jpg');
+  }
+}

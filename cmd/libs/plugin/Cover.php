@@ -40,8 +40,10 @@ try {
 
   define('BASE_URL', $url);
   define('TITLE', "OA Wu's Blog");
+  define('KEYWORDS', "OA Wu, 吳政賢, 開發, 全端工程師, 北港, 朝天宮, 媽祖, 北港迓媽祖, 北港迎媽祖, 陣頭, 廟會, 遶境");
   define('DESCRIPTION', "敘述");
   define('D4_IMG_URL', BASE_URL . 'img/d4.jpg');
+  define('OG_IMG_URL', BASE_URL . 'img/og.jpg');
   define('OA_IMG_URL', BASE_URL . 'img/oa.jpg');
   define('LOGO_IMG_URL', BASE_URL . 'img/logo.png');
 

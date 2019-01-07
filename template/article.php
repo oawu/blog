@@ -5,7 +5,38 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
+    <meta name="google-site-verification" content="oP5AjoCz_SS0W6OeLiynUxpE7hnFdhWVZ6zDxRiJQqY" />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="<?php echo KEYWORDS;?>" />
+    <meta name="description" content="<?php echo $article->description;?>" />
+
+    <meta property="og:url" content="<?php echo $article->url();?>" />
+    <meta property="og:title" content="<?php echo $article->title;?>" />
+    <meta property="og:description" content="<?php echo $article->description;?>" />
+
+    <meta property="og:site_name" content="<?php echo TITLE;?>" />
+    <meta property="fb:admins" content="100000100541088" />
+    <meta property="fb:app_id" content="1033322433418965" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="https://www.facebook.com/comdan66" />
+    <meta property="article:publisher" content="https://www.facebook.com/comdan66" />
+
+    <meta property="article:published_time" content="<?php echo $article->createAt->format('c');?>" />
+    <meta property="article:modified_time" content="<?php echo $article->updateAt->format('c');?>" />
+
+    <meta property="og:image" tag="larger" content="<?php echo $article->ogImage;?>" alt="<?php echo TITLE;?>" />
+    <meta property="og:image:type" tag="larger" content="<?php echo typeOfImg($article->ogImage);?>" />
+    <meta property="og:image:width" tag="larger" content="1200" />
+    <meta property="og:image:height" tag="larger" content="630" />
+
     <title><?php echo ($article->title ? $article->title . ' - ' : '') . TITLE;?></title>
+
+    <link rel="canonical" href="<?php echo $article->url();?>" />
+    <link rel="alternate" href="<?php echo $article->url();?>" hreflang="zh-Hant" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/icon.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/oaips.css">

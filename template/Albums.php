@@ -5,7 +5,38 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 
+    <meta name="google-site-verification" content="oP5AjoCz_SS0W6OeLiynUxpE7hnFdhWVZ6zDxRiJQqY" />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="<?php echo KEYWORDS;?>" />
+    <meta name="description" content="<?php echo mb_strimwidth(removeHtmlTag(DESCRIPTION), 0, 300, '…','UTF-8');?>" />
+
+    <meta property="og:url" content="<?php echo $page->url();?>" />
+    <meta property="og:title" content="<?php echo $articles->text();?>" />
+    <meta property="og:description" content="<?php echo mb_strimwidth(removeHtmlTag(DESCRIPTION), 0, 300, '…','UTF-8');?>" />
+
+    <meta property="og:site_name" content="<?php echo TITLE;?>" />
+    <meta property="fb:admins" content="100000100541088" />
+    <meta property="fb:app_id" content="1033322433418965" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="https://www.facebook.com/comdan66" />
+    <meta property="article:publisher" content="https://www.facebook.com/comdan66" />
+
+    <meta property="article:published_time" content="<?php echo date('c');?>" />
+    <meta property="article:modified_time" content="<?php echo date('c');?>" />
+
+    <meta property="og:image" tag="larger" content="<?php echo OG_IMG_URL;?>" alt="<?php echo TITLE;?>" />
+    <meta property="og:image:type" tag="larger" content="<?php echo typeOfImg(OG_IMG_URL);?>" />
+    <meta property="og:image:width" tag="larger" content="1200" />
+    <meta property="og:image:height" tag="larger" content="630" />
+
     <title><?php echo ($articles->text() ? $articles->text() . ' - ' : '') . TITLE;?></title>
+    
+    <link rel="canonical" href="<?php echo $page->url();?>" />
+    <link rel="alternate" href="<?php echo $page->url();?>" hreflang="zh-Hant" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/icon.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/public.css">
@@ -51,7 +82,7 @@
       '@type' => 'BreadcrumbList',
       'itemListElement' => $scopes = array_values(array_filter([
         ['@type' => 'ListItem', 'position' => 1, 'item' => ['@id' => BASE_URL, 'name' => TITLE, 'url' => BASE_URL] ],
-        ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => $articles->url(), 'name' => $articles->text(), 'url' => $articles->url()] ]
+        ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => $page->url(), 'name' => $articles->text(), 'url' => $page->url()] ]
       ]))
     ]); ?>
   </head>

@@ -385,7 +385,7 @@ abstract class Item extends Menu {
   }
 
   protected function getContentOgImage() {
-    $this->ogImage = D4_IMG_URL;
+    $this->ogImage = OG_IMG_URL;
 
     foreach (Item::IMG_FORMATS as $format)
       if (file_exists($file = $this->markdownPath() . 'cover.' . $format) && is_readable($file))
@@ -395,7 +395,7 @@ abstract class Item extends Menu {
   }
 
   protected function getContentIconImage() {
-    $this->iconImage = $this->ogImage;
+    $this->iconImage = D4_IMG_URL;
 
     foreach (Item::IMG_FORMATS as $format)
       if (file_exists($file = $this->markdownPath() . 'icon.' . $format) && is_readable($file))
