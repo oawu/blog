@@ -49,7 +49,7 @@
       ];}, $page->items(), array_keys($page->items()))], [
       '@context' => 'http://schema.org',
       '@type' => 'BreadcrumbList',
-      'itemListElement' => array_values(array_filter([
+      'itemListElement' => $scopes = array_values(array_filter([
         ['@type' => 'ListItem', 'position' => 1, 'item' => ['@id' => BASE_URL, 'name' => TITLE, 'url' => BASE_URL] ],
         ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => $articles->url(), 'name' => $articles->text(), 'url' => $articles->url()] ]
       ]))
@@ -91,6 +91,7 @@
 
     <?php echo $_info;?>
 
+    <?php echo scope($scopes);?>
     <div id="fb-root"></div>
   </body>
 </html>
