@@ -10,7 +10,7 @@
 class Robots extends SingleItem {
   protected static function uris() { return []; }
   protected static function format() { return 'txt'; }
-  protected static function htmlName() { return 'robots'; }
+  protected static function fileName() { return 'robots'; }
 
   public static function write() {
     return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'Robots.php', [

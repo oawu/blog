@@ -48,15 +48,15 @@ class Page {
     return $this;
   }
 
-  public function htmlName() {
+  public function fileName() {
     return $this->index ? $this->index + 1 : 'index';
   }
 
   public function url() {
-    return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . trim(Page::DIR_NAME, '/') . '/' . rawurlencode($this->htmlName()) . '.html';
+    return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . trim(Page::DIR_NAME, '/') . '/' . rawurlencode($this->fileName()) . '.html';
   }
 
   public function writePath() {
-    return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : ''). trim(Page::DIR_NAME, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $this->htmlName() . '.html';
+    return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : ''). trim(Page::DIR_NAME, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $this->fileName() . '.html';
   }
 }

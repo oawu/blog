@@ -10,7 +10,7 @@
 class AllJson extends SingleItem {
   protected static function uris() { return ['js']; }
   protected static function format() { return 'json'; }
-  protected static function htmlName() { return 'all'; }
+  protected static function fileName() { return 'all'; }
 
   public static function write() {
     $items = array_values(array_filter(array_reverse(Item::all()), function($item) {

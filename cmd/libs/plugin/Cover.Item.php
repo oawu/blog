@@ -14,29 +14,29 @@ abstract class Item extends Menu {
   private static $groups = [];
   private static $all = [];
 
-  protected $markdownPath, $htmlName, $uris = [], $page = null, $items = null;
+  protected $markdownPath, $fileName, $uris = [], $page = null, $items = null;
   public $title, $description, $bio, $ogImage, $iconImage, $content, $tags, $createAt, $updateAt;
 
   public function setPage(Page $page) { $this->page = $page; return $this; }
   public function setMarkdownPath($markdownPath) { $this->markdownPath = $markdownPath; return $this; }
-  public function setHtmlName($htmlName) { $this->htmlName = $htmlName; return $this; }
+  public function setHtmlName($fileName) { $this->fileName = $fileName; return $this; }
   public function setUris($uris) { $this->uris = $uris; return $this; }
   public function setItems(Items $items) { $this->items = $items; return $this; }
 
-  public static function init($markdownPath, $htmlName, $uris, $createAt = null) {
+  public static function init($markdownPath, $fileName, $uris, $createAt = null) {
     
     array_key_exists($key = implode('_', $uris), Item::$groups) || Item::$groups[$key] = [];
 
     $i = '';
     while(true) {
-      if (!Item::existsByUris($htmlName . $i, $key))
+      if (!Item::existsByUris($fileName . $i, $key))
         break;
       $i = $i ? ++$i : 2;
     }
 
     $obj = new static();
     $obj->setMarkdownPath($markdownPath);
-    $obj->setHtmlName($htmlName . $i);
+    $obj->setHtmlName($fileName . $i);
     $obj->setUris($uris);
     $obj->createAt = $createAt;
     $obj->setCurrentUrl($obj->url());
@@ -63,20 +63,20 @@ abstract class Item extends Menu {
   }
 
   public function markdownPath() { return $this->markdownPath; }
-  public function htmlName() { return $this->htmlName; }
+  public function fileName() { return $this->fileName; }
   public function uris() { return $this->uris; }
   
-  public function url() { return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . rawurlencode($this->htmlName) . '.html'; }
-  public function writePath() { return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : '') . $this->htmlName . '.html'; }
+  public function url() { return BASE_URL . ($this->uris ? implode('/', array_map('rawurlencode', $this->uris)) . '/' : '') . rawurlencode($this->fileName) . '.html'; }
+  public function writePath() { return PATH . ($this->uris ? implode(DIRECTORY_SEPARATOR, $this->uris) . DIRECTORY_SEPARATOR : '') . $this->fileName . '.html'; }
   public function page() { return $this->page; }
   public function items() { return $this->items; }
 
-  public static function existsByUris($htmlName, $key = null) {
+  public static function existsByUris($fileName, $key = null) {
     $groups = array_key_exists($key, Item::$groups) ? [Item::$groups[$key]] : Item::$groups;
 
     foreach ($groups as $group)
       foreach ($group as $item)
-        if ($item->htmlName() == $htmlName)
+        if ($item->fileName() == $fileName)
           return true;
 
     return false;

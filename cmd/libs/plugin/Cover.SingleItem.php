@@ -23,14 +23,14 @@ abstract class SingleItem {
 
   abstract protected static function uris();
   abstract protected static function format();
-  abstract protected static function htmlName();
+  abstract protected static function fileName();
 
   public static function url() {
-    return BASE_URL . (static::uris() ? implode('/', static::uris()) . '/' : '') . static::htmlName() . '.' . static::format();
+    return BASE_URL . (static::uris() ? implode('/', static::uris()) . '/' : '') . static::fileName() . '.' . static::format();
   }
 
   public static function writePath() {
-    return PATH . (static::uris() ? implode(DIRECTORY_SEPARATOR, static::uris()) . DIRECTORY_SEPARATOR : '') . static::htmlName() . '.' . static::format();
+    return PATH . (static::uris() ? implode(DIRECTORY_SEPARATOR, static::uris()) . DIRECTORY_SEPARATOR : '') . static::fileName() . '.' . static::format();
   }
 
   abstract static public function write();

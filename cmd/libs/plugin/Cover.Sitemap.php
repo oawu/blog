@@ -125,7 +125,7 @@ class Sitemap extends SingleItem {
   public function createSitemapIndex($loc, $lastmod = 'Today') {
     $this->endSitemap();
     $indexwriter = new XMLWriter();
-    $indexwriter->openURI($this->getPath() . self::htmlName() . '.' . self::format());
+    $indexwriter->openURI($this->getPath() . self::fileName() . '.' . self::format());
     $indexwriter->startDocument('1.0', 'UTF-8');
     $indexwriter->setIndent(true);
     $indexwriter->startElement('sitemapindex');
@@ -143,7 +143,7 @@ class Sitemap extends SingleItem {
 
   protected static function uris() { return ['sitemap']; }
   protected static function format() { return 'xml'; }
-  protected static function htmlName() { return self::FILENAME . self::SEPERATOR . self::INDEX_SUFFIX; }
+  protected static function fileName() { return self::FILENAME . self::SEPERATOR . self::INDEX_SUFFIX; }
 
   public static function write() {
     return Sitemap::create()

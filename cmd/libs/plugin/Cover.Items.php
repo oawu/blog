@@ -8,8 +8,8 @@
  */
 
 abstract class Items extends Menu {
-  const ITEM_FORMAT_WITH_CREATE_AT = '/^(?P<createAt>\d\d\d\d\.(0?[1-9]|1[0-2])\.(0?[1-9]|[12][0-9]|3[01]))\s+\|\s+(?P<htmlName>.*)/';
-  const ITEM_FORMAT_WITH_ID = '/^(?P<id>\d+)\s+\|\s+(?P<htmlName>.*)/';
+  const ITEM_FORMAT_WITH_CREATE_AT = '/^(?P<createAt>\d\d\d\d\.(0?[1-9]|1[0-2])\.(0?[1-9]|[12][0-9]|3[01]))\s+\|\s+(?P<fileName>.*)/';
+  const ITEM_FORMAT_WITH_ID = '/^(?P<id>\d+)\s+\|\s+(?P<fileName>.*)/';
 
   protected $items = [], $pages = [], $uris = [], $markdownPath, $desc = true;
   private static $all = [];
@@ -28,7 +28,7 @@ abstract class Items extends Menu {
         return null;
       }
 
-      if (empty($matches['htmlName']) || !($htmlName = array_shift($matches['htmlName'])))
+      if (empty($matches['fileName']) || !($fileName = array_shift($matches['fileName'])))
         return null;
 
       if (!is_dir($tmp = $dirPath . $item . DIRECTORY_SEPARATOR))
@@ -46,7 +46,7 @@ abstract class Items extends Menu {
       if (!class_exists($class = static::CHILD_CLASS))
         return null;
 
-      return $class::init($tmp, $htmlName, $uris, $createAt);
+      return $class::init($tmp, $fileName, $uris, $createAt);
     }, @scandir($dirPath) ?: [])));
     
     $this->uris = $uris;

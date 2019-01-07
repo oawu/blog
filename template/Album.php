@@ -33,7 +33,7 @@
           
           <header>
             <h1><?php echo $album->title;?></h1>
-            <span><?php echo str_replace('-', ' ', $album->htmlName());?></span>
+            <span><?php echo str_replace('-', ' ', $album->fileName());?></span>
           </header>
 
           <section class="md"><?php echo $album->content;?></section>

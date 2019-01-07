@@ -10,7 +10,7 @@
 class Search extends SingleItem {
   protected static function uris() { return []; }
   protected static function format() { return 'html'; }
-  protected static function htmlName() { return 'search'; }
+  protected static function fileName() { return 'search'; }
 
   public static function write() {
     return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'Search.php', [

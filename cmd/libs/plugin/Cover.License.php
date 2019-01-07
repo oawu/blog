@@ -11,13 +11,13 @@ class License extends SingleItem {
   private static $article = null;
 
   protected static function init() {
-    static::$article = Article::init(PATH_MARKDOWN . static::id() . ' | ' . static::htmlName() . DIRECTORY_SEPARATOR, static::htmlName(), [], null);
+    static::$article = Article::init(PATH_MARKDOWN . static::id() . ' | ' . static::fileName() . DIRECTORY_SEPARATOR, static::fileName(), [], null);
   }
 
   protected static function id() { return '007'; }
   protected static function uris() { return []; }
   protected static function format() { return 'html'; }
-  protected static function htmlName() { return 'license'; }
+  protected static function fileName() { return 'license'; }
 
   public static function write() {
     return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'License.php', [
