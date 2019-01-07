@@ -21,6 +21,9 @@ define('PATH_SITEMAP',  PATH . 'sitemap'  . DIRECTORY_SEPARATOR);
 define('PATH_MARKDOWN', PATH . 'markdown' . DIRECTORY_SEPARATOR);
 define('PATH_TEMPLATE', PATH . 'template' . DIRECTORY_SEPARATOR);
 
+define('CHECK_LINK_EXIST', true);
+define('CHECK_IMAGE_EXIST', true);
+
 include PATH_CMD_LIB_PLUGIN . 'Cover.Func.php';
 
 try {

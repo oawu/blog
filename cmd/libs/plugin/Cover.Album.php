@@ -11,45 +11,14 @@ class Album extends Item {
   public $images = [];
 
   protected function coverImages() {
-    $pattern = '/<img.*?src=(["\'])(?P<imgs>.*?)\1[^\>]*>/u';
-
-    $images = preg_match_all($pattern, $this->content, $matches) ? array_filter(array_map(function($img) {
-      if (preg_match('/^https?:\/\/.*/ui', $img) || preg_match('/^mailto:/ui', $img) || preg_match('/^tel:/ui', $img) || preg_match('/^s?ftp:/ui', $img)) {
-        return [
-          'search' => $img,
-          'replace' => $img,
-        ];
-      }
-
-      if (!(($file = realpath($this->markdownPath() . $img)) && is_readable($file))) {
-        echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-        var_dump(1);
-        exit();
-        return [
-          'search' => $img,
-          'replace' => D4_IMG_URL,
-        ];
-      }
-
-      return [
-        'search' => $img,
-        'replace' => BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file)))),
-      ];
-    }, array_unique(array_filter($matches['imgs'], function($t) {
-      return $t;
-    })))) : [];
-
-    $tmps = [];
-    foreach ($images as $image)
-      if (!isset($tmps[$image['search']]))
-        $tmps[$image['search']] = $image['replace'];
+    $images = $this->searchImages();
 
     $pattern = '/<img.*?src=(["\'])(.*?)\1(.*?alt=(["\'])(.*?)\1)?([^\>]*)>/u';
 
-    $this->content = preg_replace_callback($pattern, function($matches) use ($tmps) {
-      if (isset($tmps[$matches[2]]) && $tmps[$matches[2]] != D4_IMG_URL)
+    $this->content = preg_replace_callback($pattern, function($matches) use ($images) {
+      if (isset($images[$matches[2]]) && $images[$matches[2]] != D4_IMG_URL)
         array_push($this->images, [
-          'src' => $tmps[$matches[2]],
+          'src' => $images[$matches[2]],
           'alt' => $matches[5]
         ]);
       return '';

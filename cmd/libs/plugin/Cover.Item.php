@@ -167,7 +167,7 @@ abstract class Item extends Menu {
     return $this->replaceContentSpace('/^[\n ]*|[\n ]*$/u', false);
   }
 
-  protected function coverImages() {
+  protected function searchImages() {
     $pattern = '/<img.*?src=(["\'])(?P<imgs>.*?)\1[^\>]*>/u';
 
     $images = preg_match_all($pattern, $this->content, $matches) ? array_filter(array_map(function($img) {
@@ -179,7 +179,11 @@ abstract class Item extends Menu {
       }
 
       if (!(($file = realpath($this->markdownPath() . $img)) && is_readable($file))) {
-        throw new Exception('以下檔案無法建立：' . 'xxx');
+        if (CHECK_IMAGE_EXIST)
+          throw new Exception(json_encode([
+            '錯誤原因' => '圖片遺失，找不到圖片！',
+            '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
+            '圖片位置' => $img]));
 
         return [
           'search' => $img,
@@ -200,16 +204,26 @@ abstract class Item extends Menu {
       if (!isset($tmps[$image['search']]))
         $tmps[$image['search']] = $image['replace'];
 
-    $pattern = '/<img.*?src=(["\'])(.*?)\1([^\>]*)>/u';
+    return $tmps;
+  }
 
-    $this->content = preg_replace_callback($pattern, function($matches) use ($tmps) {
-      return '<img src=' . $matches[1] . (isset($tmps[$matches[2]]) ? $tmps[$matches[2]] : D4_IMG_URL) . $matches[1] . $matches[3] . '>';
+  protected function coverImages() {
+    $images = $this->searchImages();
+
+    $pattern = '/<img.*?src=(["\'])(.*?)\1(.*?alt=(["\'])(.*?)\1)?([^\>]*)>/u';
+
+    $this->content = preg_replace_callback($pattern, function($matches) use ($images) {
+      $attrs = [
+        'src' => isset($images[$matches[2]]) ? $images[$matches[2]] : D4_IMG_URL,
+        'alt' => $matches[5]
+      ];
+      return '<img' . attr($attrs) . '>';
     }, $this->content);
 
     return $this;
   }
 
-  protected function coverLinks() {
+  protected function searchLinks() {
     $pattern = '/<a.*?href=(["\'])(?P<hrefs>.*?)\1[^\>]*>/u';
     
     $links = preg_match_all($pattern, $this->content, $matches) ? array_filter(array_map(function($href) {
@@ -219,7 +233,13 @@ abstract class Item extends Menu {
           'replace' => $href,
         ];
 
-      if (!is_readable($search = realpath($this->markdownPath() . $href))) {
+      if (!(($search = realpath($this->markdownPath() . $href)) && is_readable($search))) {
+        if (CHECK_LINK_EXIST)
+          throw new Exception(json_encode([
+            '錯誤原因' => '鏈結遺失，找不到鏈結！',
+            '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
+            '鏈結字串' => $href]));
+
         return [
           'search' => $href,
           'replace' => Page404::url()
@@ -239,6 +259,12 @@ abstract class Item extends Menu {
           'search' => $href,
           'replace' => $tmp->url()
         ];
+      
+      if (CHECK_LINK_EXIST)
+        throw new Exception(json_encode([
+          '錯誤原因' => '鏈結遺失，找不到鏈結！',
+          '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
+          '鏈結字串' => $href]));
 
       return [
         'search' => $href,
@@ -252,11 +278,17 @@ abstract class Item extends Menu {
     foreach ($links as $link)
       if (!isset($tmps[$link['search']]))
         $tmps[$link['search']] = $link['replace'];
+   
+    return $tmps;
+  }
+
+  protected function coverLinks() {
+    $links = $this->searchLinks();
 
     $pattern = '/<a.*?href=(["\'])(?P<hrefs>.*?)\1[^\>]*>/u';
     
-    $this->content = preg_replace_callback($pattern, function($matches) use ($tmps) {
-      return '<a href=' . $matches[1] . (isset($tmps[$matches[2]]) ? $tmps[$matches[2]] : $matches[2]) . $matches[1] . '>';
+    $this->content = preg_replace_callback($pattern, function($matches) use ($links) {
+      return '<a href=' . $matches[1] . (isset($links[$matches[2]]) ? $links[$matches[2]] : $matches[2]) . $matches[1] . '>';
     }, $this->content);
 
     return $this;
