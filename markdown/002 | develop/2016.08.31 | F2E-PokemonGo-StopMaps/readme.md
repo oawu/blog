@@ -15,7 +15,7 @@
 * 範圍公式：(進化前CP * 進化前最小CP) / 進化前最小CP 與 (進化前CP * 進化前最大CP) / 進化前最大CP。
 * [巢穴地圖](https://works.ioa.tw/evolution/maps.html) 是使用各位網友回報的數據實作的，所以不是 100% 會出現的，一切僅供參考。
 * [巢穴地圖](https://works.ioa.tw/evolution/maps.html) 的數據目前放置在 [Google 文件](https://docs.google.com/spreadsheets/d/1fMYgcbQV0haZcoKTdUYZaoorKaFCl8cFIF0aD4KDpHM/edit#gid=0) 上，藉由 Pokémon Go 同好玩家們共同編輯。
-* 若想共同編輯[巢穴地圖 Google 文件](https://docs.google.com/spreadsheets/d/1fMYgcbQV0haZcoKTdUYZaoorKaFCl8cFIF0aD4KDpHM/edit#gid=0) 的話，歡迎與[我](http://www.ioa.tw/)聯絡，亦或者發 [E-Mail](comdan66@gmail.com) 給他！
+* 若想共同編輯[巢穴地圖 Google 文件](https://docs.google.com/spreadsheets/d/1fMYgcbQV0haZcoKTdUYZaoorKaFCl8cFIF0aD4KDpHM/edit#gid=0) 的話，歡迎與[我](http://www.ioa.tw/)聯絡，亦或者發 [E-Mail](mailto:comdan66@gmail.com) 給他！
 * 網頁上的查詢都是 HTML、JavaScript 前端檔案處理，所以後端並不會存取任何使用者的查詢資料喔！
 * [補給站、道館分佈地圖](https://works.ioa.tw/evolution/stops.html)，是我、小編們踏遍全台灣收集校正的！若是各位大大們想引用的話，請標註出處 [Go Evolution！](https://works.ioa.tw/evolution/index.html)
 

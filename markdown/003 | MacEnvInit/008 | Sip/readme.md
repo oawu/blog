@@ -1,5 +1,5 @@
 # 安裝 Sip 螢幕顏色吸取器
-* 若在 [設定 Xcode 與基礎環境](../01-Base) 有在 App Store 下載安裝過 **Sip** 的話就不用做此步驟
+* 若在 [設定 Xcode 與基礎環境](../001 | Base) 有在 App Store 下載安裝過 **Sip** 的話就不用做此步驟
 * 官網下載 - [https://sipapp.io/](https://sipapp.io/)
 * 備用載點 - [sip.dmg](https://cdn.ioa.tw/MacEnvInit/sip.dmg)
 * 把它移到**應用程式資料夾**，並開啟

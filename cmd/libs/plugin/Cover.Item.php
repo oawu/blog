@@ -178,9 +178,18 @@ abstract class Item extends Menu {
         ];
       }
 
+      if (!(($file = realpath($this->markdownPath() . $img)) && is_readable($file))) {
+        throw new Exception('以下檔案無法建立：' . 'xxx');
+
+        return [
+          'search' => $img,
+          'replace' => D4_IMG_URL,
+        ];
+      }
+
       return [
         'search' => $img,
-        'replace' => is_readable($file = realpath($this->markdownPath() . $img)) ? BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file)))) : D4_IMG_URL,
+        'replace' => BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file)))),
       ];
     }, array_unique(array_filter($matches['imgs'], function($t) {
       return $t;
@@ -210,11 +219,12 @@ abstract class Item extends Menu {
           'replace' => $href,
         ];
 
-      if (!is_readable($search = realpath($this->markdownPath() . $href)))
+      if (!is_readable($search = realpath($this->markdownPath() . $href))) {
         return [
           'search' => $href,
-          'replace' => BASE_URL . '404.html'
+          'replace' => Page404::url()
         ];
+      }
 
       $search = (is_dir($search) ? $search : dirname($search)) . DIRECTORY_SEPARATOR;
 

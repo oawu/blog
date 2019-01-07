@@ -14,12 +14,29 @@ class Album extends Item {
     $pattern = '/<img.*?src=(["\'])(?P<imgs>.*?)\1[^\>]*>/u';
 
     $images = preg_match_all($pattern, $this->content, $matches) ? array_filter(array_map(function($img) {
+      if (preg_match('/^https?:\/\/.*/ui', $img) || preg_match('/^mailto:/ui', $img) || preg_match('/^tel:/ui', $img) || preg_match('/^s?ftp:/ui', $img)) {
+        return [
+          'search' => $img,
+          'replace' => $img,
+        ];
+      }
+
+      if (!(($file = realpath($this->markdownPath() . $img)) && is_readable($file))) {
+        echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+        var_dump(1);
+        exit();
+        return [
+          'search' => $img,
+          'replace' => D4_IMG_URL,
+        ];
+      }
+
       return [
         'search' => $img,
-        'replace' => is_readable($file = realpath($this->markdownPath() . $img)) ? BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file)))) : D4_IMG_URL,
+        'replace' => BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file)))),
       ];
     }, array_unique(array_filter($matches['imgs'], function($t) {
-      return $t && !preg_match('/^https?:\/\/.*/ui', $t) && !preg_match('/^mailto:/ui', $t) && !preg_match('/^tel:/ui', $t) && !preg_match('/^s?ftp:/ui', $t);
+      return $t;
     })))) : [];
 
     $tmps = [];

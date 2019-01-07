@@ -1,7 +1,7 @@
 # 安裝 PHP 語言
 
 ## 安裝前準備
-* 請先安裝 [Apache](../12-Apache/)
+* 請先安裝 [Apache](../011 | Apache/)
 
 ## 安裝各版本的 PHP
 * 安裝 PHP 5.6 版本 `brew install php@5.6`
