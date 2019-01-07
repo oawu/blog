@@ -9,11 +9,11 @@
 
     <meta name="robots" content="index,follow" />
     <meta name="keywords" content="<?php echo KEYWORDS;?>" />
-    <meta name="description" content="<?php echo str_replace('"', "'", mb_strimwidth(removeHtmlTag(DESCRIPTION), 0, 300, '…','UTF-8'));?>" />
+    <meta name="description" content="<?php echo mb_strimwidth(removeHtmlTag(str_replace('"', "'", DESCRIPTION)), 0, 150, '…','UTF-8');?>" />
 
     <meta property="og:url" content="<?php echo $page->url();?>" />
     <meta property="og:title" content="<?php echo $articles->text();?>" />
-    <meta property="og:description" content="<?php echo str_replace('"', "'", mb_strimwidth(removeHtmlTag(DESCRIPTION), 0, 300, '…','UTF-8'));?>" />
+    <meta property="og:description" content="<?php echo mb_strimwidth(removeHtmlTag(str_replace('"', "'", DESCRIPTION)), 0, 200, '…','UTF-8');?>" />
 
     <meta property="og:site_name" content="<?php echo TITLE;?>" />
     <meta property="fb:admins" content="100000100541088" />
