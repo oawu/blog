@@ -34,3 +34,8 @@
   formats: [".md", ".png", ".jpg", ".jpeg", ".gif", ".svg"]
   hidden: No
   recursive: Yes
+
+- path: "sitemap"
+  formats: [".xml"]
+  hidden: No
+  recursive: Yes
