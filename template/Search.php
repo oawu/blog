@@ -20,8 +20,7 @@
         '@type' => 'SearchAction',
         'target' => BASE_URL . 'search.html?q={keyword}&referrer=jsonLd_searchbox',
         'query-input' => 'required name=keyword'
-      ]]); ?>
-    <?php echo jsonLd([
+      ]], [
       '@context' => 'http://schema.org',
       '@type' => 'BreadcrumbList',
       'itemListElement' => array_values(array_filter([

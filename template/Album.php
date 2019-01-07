@@ -48,8 +48,7 @@
       'articleBody' => removeHtmlTag($album->content),
       'mainEntityOfPage' => [
         '@type' => 'WebPage',
-        '@id' => $album->url()]]); ?>
-    <?php echo jsonLd([
+        '@id' => $album->url()]], [
       '@context' => 'http://schema.org',
       '@type' => 'BreadcrumbList',
       'itemListElement' => array_values(array_filter([

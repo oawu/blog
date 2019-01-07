@@ -48,8 +48,7 @@
       'articleBody' => removeHtmlTag($article->content),
       'mainEntityOfPage' => [
         '@type' => 'WebPage',
-        '@id' => $article->url()]]); ?>
-    <?php echo jsonLd([
+        '@id' => $article->url()]], [
       '@context' => 'http://schema.org',
       '@type' => 'BreadcrumbList',
       'itemListElement' => array_values(array_filter([

@@ -289,6 +289,21 @@ if (!function_exists('oasort')) {
 
 if (!function_exists('jsonLd')) {
   function jsonLd($jsonLd = []) {
-    return $jsonLd ? '<script type="application/ld+json">' . json_encode ($jsonLd, JSON_UNESCAPED_SLASHES) . '</script>' : '';
+    return implode('', array_map(function($jsonLd) {
+      return '<script type="application/ld+json">' . json_encode ($jsonLd, JSON_UNESCAPED_SLASHES) . '</script>';
+    }, array_filter(func_get_args())));
+  }
+}
+
+if (!function_exists('scope')) {
+  function scope() {
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+var_dump(func_get_args());
+exit();
+    return implode("\n", array_map(function($scope) {
+      return '<div class="_s" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="' . $scope['href'] . '"><span itemprop="title">' . $scope['title'] . '</span></a></div>';
+    }, array_filter(func_get_args(), function($scope) {
+      return !empty($scope['href']) && !empty($scope['title']);
+    })));
   }
 }

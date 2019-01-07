@@ -46,8 +46,7 @@
             ]
           ],
           'description' => $item->description,
-      ];}, $page->items(), array_keys($page->items()))]); ?>
-    <?php echo jsonLd([
+      ];}, $page->items(), array_keys($page->items()))], [
       '@context' => 'http://schema.org',
       '@type' => 'BreadcrumbList',
       'itemListElement' => array_values(array_filter([
