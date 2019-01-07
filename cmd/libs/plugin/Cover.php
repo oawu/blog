@@ -20,7 +20,9 @@ define('DIRNAME',             basename(PATH));
 define('PATH_SITEMAP',  PATH . 'sitemap'  . DIRECTORY_SEPARATOR);
 define('PATH_MARKDOWN', PATH . 'markdown' . DIRECTORY_SEPARATOR);
 define('PATH_TEMPLATE', PATH . 'template' . DIRECTORY_SEPARATOR);
+define('PATH_ASSET',    PATH . 'asset'    . DIRECTORY_SEPARATOR);
 
+define('MOVE_TO_ASSET', true);
 define('CHECK_LINK_EXIST', true);
 define('CHECK_IMAGE_EXIST', true);
 
@@ -38,15 +40,25 @@ try {
   define('DESCRIPTION', "敘述");
   define('D4_IMG_URL', BASE_URL . 'img/d4.jpg');
 
+  $dirs = [PATH_SITEMAP, PATH_ASSET];
+
+  if ($errs = removeDirs($dirs))
+    throw new Exception('以下其他目錄無法移除：' . implode(', ', $errs));
+
+  if ($errs = mkdirDirs($dirs))
+    throw new Exception('以下其他目錄無法建立：' . implode(', ', $errs));
+
+
+
   $menus = Menu::all();
 
   $itemsList = array_filter($menus, function($menu) {
     return $menu instanceof Items;
   });
   
-  $dirs = array_merge(array_map(function($menu) {
+  $dirs = array_map(function($menu) {
     return PATH . implode(DIRECTORY_SEPARATOR, $menu->uris()) . DIRECTORY_SEPARATOR;
-  }, $itemsList), [PATH_SITEMAP]);
+  }, $itemsList);
   
   if ($errs = removeDirs($dirs))
     throw new Exception('以下其他目錄無法移除：' . implode(', ', $errs));

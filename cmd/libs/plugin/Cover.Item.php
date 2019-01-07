@@ -191,9 +191,31 @@ abstract class Item extends Menu {
         ];
       }
 
+      if (MOVE_TO_ASSET) {
+        $dest = PATH_ASSET . md5_file($file) . '.' . pathinfo($file, PATHINFO_EXTENSION);
+        file_exists($dest) && is_readable($dest) || @copy($file, $dest);
+        
+        if (!is_readable($dest)) {
+          if (CHECK_IMAGE_EXIST)
+            throw new Exception(json_encode([
+              '錯誤原因' => '圖片遺失，找不到圖片！',
+              '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
+              '圖片位置' => $img]));
+
+          return [
+            'search' => $img,
+            'replace' => D4_IMG_URL,
+          ];
+        }
+
+        $src = BASE_URL . pathReplace(PATH, $dest);
+      } else {
+        $src = BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file))));
+      }
+
       return [
         'search' => $img,
-        'replace' => BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file)))),
+        'replace' => $src
       ];
     }, array_unique(array_filter($matches['imgs'], function($t) {
       return $t;

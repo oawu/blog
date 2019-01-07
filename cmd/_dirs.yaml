@@ -30,8 +30,8 @@
   hidden: No
   recursive: Yes
 
-- path: "markdown"
-  formats: [".md", ".png", ".jpg", ".jpeg", ".gif", ".svg"]
+- path: "asset"
+  formats: [".js", ".css", ".png", ".jpg", ".jpeg", ".gif", ".svg"]
   hidden: No
   recursive: Yes
 
