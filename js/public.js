@@ -239,8 +239,10 @@ $(function() {
       n = url.pathname.substring(url.pathname.lastIndexOf('/') + 1), q = url.searchParams.get('q');
 
   if (n === 'search.html') {
+    url = url.href.replace(n, '');
+
     if (!(q && q.length))
-      return window.location.replace(url.origin);
+      return window.location.replace(url);
 
     if (q.match(/^tags?:(.*)/))
       q = q.match(/^tags?:(.*)/)[1].split(',').map(Function.prototype.call, String.prototype.trim);
@@ -260,7 +262,14 @@ $(function() {
 
     All.get(
       function(result) { $search.attr('data-title', '找不到符合的資料。').append($(searchRun(result, q).map(searchItems)).map($.fn.toArray)); },
-      function() { return window.location.replace(url.origin); });
+      function() { return window.location.replace(url); });
+  }
+  
+  if (n === '404.html') {
+    url = url.href.replace(n, '');
+    var $q = $('#q'), timer = null;
+    $q.focus(function() { clearTimeout(timer); });
+    timer = setTimeout(function() {window.location.replace(url); }, 7.5 * 1000);
   }
 
   window.oaips.listenUrl();
