@@ -289,6 +289,6 @@ if (!function_exists('oasort')) {
 
 if (!function_exists('jsonLd')) {
   function jsonLd($jsonLd = []) {
-    return $jsonLd ? '<script type="application/ld+json">' . json_encode ($jsonLd, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . '</script>' : '';
+    return $jsonLd ? '<script type="application/ld+json">' . json_encode ($jsonLd, JSON_UNESCAPED_SLASHES) . '</script>' : '';
   }
 }
