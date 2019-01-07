@@ -12,6 +12,49 @@
 
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org',
+      '@type' => 'ItemList',
+      'itemListElement' => array_map(function($item, $i) {
+        return [
+          '@type' => 'Article',
+          'position' => $item->page()->index() * Page::OFFSET + $i + 1,
+          'url' => $item->url(),
+          'mainEntityOfPage' => [
+            '@type' => 'WebPage',
+            '@id' => $item->url()
+          ],
+          'headline' => $item->title,
+          'image' => $item->ogImage,
+          'datePublished' => $item->createAt->format('c'),
+          'dateModified' => $item->updateAt->format('c'),
+          'author' => [
+            '@type' => 'Person',
+            'name' => '吳政賢(OA Wu)',
+            'url' => BASE_URL,
+            'image' => [
+              '@type' => 'ImageObject',
+              'url' => OA_IMG_URL
+            ]
+          ],
+          'publisher' => [  
+            '@type' => 'Organization',
+            'name' => TITLE,
+            'logo' => [  
+              '@type' => 'ImageObject',
+              'url' => LOGO_IMG_URL,
+            ]
+          ],
+          'description' => $item->description,
+      ];}, $page->items(), array_keys($page->items()))]); ?>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => array_values(array_filter([
+        ['@type' => 'ListItem', 'position' => 1, 'item' => ['@id' => BASE_URL, 'name' => TITLE, 'url' => BASE_URL] ],
+        ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => $articles->url(), 'name' => $articles->text(), 'url' => $articles->url()] ]
+      ]))
+    ]); ?>
   </head>
   <body>
     <input type="checkbox" id="menu-ckb" class="_ckbh">

@@ -286,3 +286,9 @@ if (!function_exists('oasort')) {
     return array_merge($s == 3 ? $c ? ['n3 n34', 'n3 n35', 'n3 n36'] : ['n3 n31', 'n3 n32', 'n3 n33'] : ['n2 n21', 'n2 n22'], oasort($v, !$b, $s == 3 ? $c ? false : true : $c));
   }
 }
+
+if (!function_exists('jsonLd')) {
+  function jsonLd($jsonLd = []) {
+    return $jsonLd ? '<script type="application/ld+json">' . json_encode ($jsonLd, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . '</script>' : '';
+  }
+}

@@ -12,6 +12,23 @@
 
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org', 
+      '@type' => 'WebSite', 
+      'url' => BASE_URL, 
+      'potentialAction' => [
+        '@type' => 'SearchAction',
+        'target' => BASE_URL . 'search.html?q={keyword}&referrer=jsonLd_searchbox',
+        'query-input' => 'required name=keyword'
+      ]]); ?>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => array_values(array_filter([
+        ['@type' => 'ListItem', 'position' => 1, 'item' => ['@id' => BASE_URL, 'name' => TITLE, 'url' => BASE_URL] ],
+        ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => Search::url(), 'name' => '搜尋結果', 'url' => Search::url()] ],
+      ]))
+    ]); ?>
   </head>
   <body>
     <input type="checkbox" id="menu-ckb" class="_ckbh">

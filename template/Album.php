@@ -14,6 +14,50 @@
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/oaips.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org', 
+      '@type' => 'Article',
+      'url' => $album->url(),
+      'headline' => $album->title,
+      'image' => $album->ogImage,
+      'datePublished' => $album->createAt->format('c'),
+      'dateModified' => $album->updateAt->format('c'),
+      'author' => [
+        '@type' => 'Person',
+        'name' => '吳政賢(OA Wu)',
+        'url' => BASE_URL,
+        'image' => [
+          '@type' => 'ImageObject',
+          'url' => OA_IMG_URL
+        ]
+      ],
+      'publisher' => [  
+        '@type' => 'Organization',
+        'name' => TITLE,
+        'logo' => [  
+          '@type' => 'ImageObject',
+          'url' => LOGO_IMG_URL,
+        ]
+      ],
+      'description' => $album->description,
+      'dateCreated' => $album->createAt->format('c'),
+      'dateModified' => $album->updateAt->format('c'),
+      'alternativeHeadline' => TITLE,
+      'keywords' => implode(' ', $album->tags), 
+      'genre' => $album->items() ? $album->items()->text() : TITLE, 
+      'articleBody' => removeHtmlTag($album->content),
+      'mainEntityOfPage' => [
+        '@type' => 'WebPage',
+        '@id' => $album->url()]]); ?>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => array_values(array_filter([
+        ['@type' => 'ListItem', 'position' => 1, 'item' => ['@id' => BASE_URL, 'name' => TITLE, 'url' => BASE_URL] ],
+        $album->items() ? ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => $album->items()->url(), 'name' => $album->items()->text(), 'url' => $album->items()->url()] ] : null,
+        ['@type' => 'ListItem', 'position' => $album->items() ? 3 : 2, 'item' => ['@id' => $album->url(), 'name' => $album->title, 'url' => $album->url()] ]
+      ]))
+    ]); ?>
   </head>
   <body>
     <input type="checkbox" id="menu-ckb" class="_ckbh">
@@ -40,7 +84,7 @@
           <time datetime="<?php echo $album->updateAt->format('Y-m-d 00:00:00');?>" date="<?php echo $album->updateAt->format('Y.m.d');?>" editdate="editdate"><?php echo $album->updateAt->format('Y-m-d 00:00:00');?></time>
         </article>
 
-        <div id='pics'><?php echo implode('', array_map(function($image) use ($album) {
+        <div id="pics"><?php echo implode('', array_map(function($image) use ($album) {
           $figureAttrs = [
             'data-bgurl' => $image['src'],
             'class' => $image['class'],

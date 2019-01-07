@@ -42,6 +42,8 @@ try {
   define('TITLE', "OA Wu's Blog");
   define('DESCRIPTION', "敘述");
   define('D4_IMG_URL', BASE_URL . 'img/d4.jpg');
+  define('OA_IMG_URL', BASE_URL . 'img/oa.jpg');
+  define('LOGO_IMG_URL', BASE_URL . 'img/logo.png');
 
   $menus = Menu::all();
 
@@ -82,8 +84,6 @@ try {
   exit(1);
 }
 
-echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-var_dump(number_format(microtime(true) - $sTime, 6));
-exit();
+echo "\n" . '耗時：' . number_format(microtime(true) - $sTime, 6) . '秒' . "\n\n";
 
 exit(0);

@@ -14,6 +14,50 @@
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/oaips.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org', 
+      '@type' => 'Article',
+      'url' => $article->url(),
+      'headline' => $article->title,
+      'image' => $article->ogImage,
+      'datePublished' => $article->createAt->format('c'),
+      'dateModified' => $article->updateAt->format('c'),
+      'author' => [
+        '@type' => 'Person',
+        'name' => '吳政賢(OA Wu)',
+        'url' => BASE_URL,
+        'image' => [
+          '@type' => 'ImageObject',
+          'url' => OA_IMG_URL
+        ]
+      ],
+      'publisher' => [  
+        '@type' => 'Organization',
+        'name' => TITLE,
+        'logo' => [  
+          '@type' => 'ImageObject',
+          'url' => LOGO_IMG_URL,
+        ]
+      ],
+      'description' => $article->description,
+      'dateCreated' => $article->createAt->format('c'),
+      'dateModified' => $article->updateAt->format('c'),
+      'alternativeHeadline' => TITLE,
+      'keywords' => implode(' ', $article->tags), 
+      'genre' => $article->items() ? $article->items()->text() : TITLE, 
+      'articleBody' => removeHtmlTag($article->content),
+      'mainEntityOfPage' => [
+        '@type' => 'WebPage',
+        '@id' => $article->url()]]); ?>
+    <?php echo jsonLd([
+      '@context' => 'http://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => array_values(array_filter([
+        ['@type' => 'ListItem', 'position' => 1, 'item' => ['@id' => BASE_URL, 'name' => TITLE, 'url' => BASE_URL] ],
+        $article->items() ? ['@type' => 'ListItem', 'position' => 2, 'item' => ['@id' => $article->items()->url(), 'name' => $article->items()->text(), 'url' => $article->items()->url()] ] : null,
+        ['@type' => 'ListItem', 'position' => $article->items() ? 3 : 2, 'item' => ['@id' => $article->url(), 'name' => $article->title, 'url' => $article->url()] ]
+      ]))
+    ]); ?>
   </head>
   <body>
     <input type="checkbox" id="menu-ckb" class="_ckbh">
@@ -24,7 +68,7 @@
 
     <main id="main"><div>
 
-      <figure class='before-article' data-bgurl="<?php echo $article->ogImage;?>">
+      <figure class="before-article" data-bgurl="<?php echo $article->ogImage;?>">
         <img src="<?php echo $article->ogImage;?>" />
         <figcaption><?php echo $article->description ? $article->description : $article->title;?></figcaption>
       </figure>
