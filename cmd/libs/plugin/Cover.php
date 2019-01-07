@@ -20,16 +20,19 @@ define('DIRNAME',             basename(PATH));
 define('PATH_SITEMAP',  PATH . 'sitemap'  . DIRECTORY_SEPARATOR);
 define('PATH_MARKDOWN', PATH . 'markdown' . DIRECTORY_SEPARATOR);
 define('PATH_TEMPLATE', PATH . 'template' . DIRECTORY_SEPARATOR);
-define('PATH_ASSET',    PATH . 'img' . DIRECTORY_SEPARATOR . 'md5' . DIRECTORY_SEPARATOR);
 
+define('CACHE_IMG_TMP', true);
+define('PATH_IMG_TMP',  PATH . 'img' . DIRECTORY_SEPARATOR . 'md5' . DIRECTORY_SEPARATOR);
 
 define('CHECK_LINK_EXIST', true);
 define('CHECK_IMAGE_EXIST', true);
 
 include PATH_CMD_LIB_PLUGIN . 'Cover.Func.php';
 
+$sTime = microtime(true);
+
 try {
-  
+
   $argv = argv(array_slice($argv, 1), [['-u', '--url']]);
 
   if (!($argv && array_key_exists('-u', $argv) && $argv['-u'] && ($url = rtrim(array_shift($argv['-u']), '/') . '/')))
@@ -40,25 +43,15 @@ try {
   define('DESCRIPTION', "敘述");
   define('D4_IMG_URL', BASE_URL . 'img/d4.jpg');
 
-  $dirs = [PATH_SITEMAP, PATH_ASSET];
-
-  if ($errs = removeDirs($dirs))
-    throw new Exception('以下其他目錄無法移除：' . implode(', ', $errs));
-
-  if ($errs = mkdirDirs($dirs))
-    throw new Exception('以下其他目錄無法建立：' . implode(', ', $errs));
-
-
-
   $menus = Menu::all();
 
   $itemsList = array_filter($menus, function($menu) {
     return $menu instanceof Items;
   });
   
-  $dirs = array_map(function($menu) {
+  $dirs = array_merge(array_map(function($menu) {
     return PATH . implode(DIRECTORY_SEPARATOR, $menu->uris()) . DIRECTORY_SEPARATOR;
-  }, $itemsList);
+  }, $itemsList), [PATH_SITEMAP]);
   
   if ($errs = removeDirs($dirs))
     throw new Exception('以下其他目錄無法移除：' . implode(', ', $errs));
@@ -81,9 +74,16 @@ try {
   if ($errs = writeSingleItem(SingleItem::all()))
     throw new Exception('以下檔案無法建立：' . implode(', ', $errs));
 
+  if ($errs = Item::cleanTmpDir())
+    throw new Exception('以下暫存圖片檔案無法移除：' . implode(', ', $errs));
+
 } catch (Exception $e) {
   echo $e->getMessage();
   exit(1);
 }
+
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+var_dump(number_format(microtime(true) - $sTime, 6));
+exit();
 
 exit(0);

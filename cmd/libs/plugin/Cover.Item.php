@@ -11,6 +11,10 @@ abstract class Item extends Menu {
   const INDEX_MD = 'readme.md';
   const IMG_FORMATS = ['jpg', 'jpeg', 'gif', 'png'];
 
+  private static $images = null;
+  private static $oldImages = null;
+
+  private static $initTmpDir = false;
   private static $groups = [];
   private static $all = [];
   private static $sitemaps = null;
@@ -81,6 +85,15 @@ abstract class Item extends Menu {
           return true;
 
     return false;
+  }
+
+  public static function cleanTmpDir() {
+    return defined('CACHE_IMG_TMP') && CACHE_IMG_TMP ? array_filter(array_filter(array_diff(array_flip(self::$oldImages), self::$images), function($dir) {
+      return !in_array($dir, ['.', '..', '.gitignore']);
+    }), function($dir) {
+      @unlink(PATH_IMG_TMP . $dir);
+      return file_exists(PATH_IMG_TMP . $dir);
+    }) : [];
   }
 
   public static function append($key, Item $item) {
@@ -167,26 +180,42 @@ abstract class Item extends Menu {
     return $this->replaceContentSpace('/^[\n ]*|[\n ]*$/u', false);
   }
 
-  private function moveImage2Asset($file) {
-    if (!defined('PATH_ASSET'))
+  private function moveImage2Tmp($file) {
+    if (!defined('PATH_IMG_TMP'))
       return BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $file))));
 
-    $dest = PATH_ASSET . md5_file($file) . '.' . pathinfo($file, PATHINFO_EXTENSION);
-    file_exists($dest) && is_readable($dest) || @copy($file, $dest);
-    
-    if (!is_readable($dest)) {
-      if (CHECK_IMAGE_EXIST)
-        throw new Exception(json_encode([
-          '錯誤原因' => '搬移圖片至 Asset 錯誤！',
-          '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
-          '圖片位置' => pathReplace(PATH, $dest)
-        ]));
-
-      return D4_IMG_URL;
+    if (!Item::$initTmpDir) {
+      if (!is_dir(PATH_IMG_TMP) && ($errs = mkdirDirs([PATH_IMG_TMP])))
+        throw new Exception('以下其他目錄無法建立：' . implode(', ', $errs));
+      
+      Item::$initTmpDir = true;
+      CACHE_IMG_TMP && Item::$images = [];
+      CACHE_IMG_TMP && Item::$oldImages = array_flip(array_filter(@scandir(PATH_IMG_TMP) ?: [], function($file) { return !in_array($file, ['.', '..', '.gitignore']); }));
     }
+
+    $fileName = md5_file($file) . '.' . pathinfo($file, PATHINFO_EXTENSION);
+    $dest = PATH_IMG_TMP . $fileName;
+
+    if (!CACHE_IMG_TMP || !isset(Item::$oldImages[$fileName])) {
+      file_exists($dest) && is_readable($dest) || @copy($file, $dest);
+
+      if (!is_readable($dest)) {
+        if (CHECK_IMAGE_EXIST)
+          throw new Exception(json_encode([
+            '錯誤原因' => '搬移圖片至 Asset 錯誤！',
+            '檔案位置' => pathReplace(PATH, $this->markdownPath() . Item::INDEX_MD),
+            '圖片位置' => pathReplace(PATH, $dest)
+          ]));
+
+        return D4_IMG_URL;
+      }
+    }
+
+    CACHE_IMG_TMP && array_push(Item::$images, $fileName);
 
     return BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $dest))));
   }
+
   protected function searchImages() {
     $pattern = '/<img.*?src=(["\'])(?P<imgs>.*?)\1[^\>]*>/u';
 
@@ -212,7 +241,7 @@ abstract class Item extends Menu {
         ];
       }
 
-      $src = $this->moveImage2Asset($file);
+      $src = $this->moveImage2Tmp($file);
 
       return [
         'search' => $img,
@@ -360,7 +389,7 @@ abstract class Item extends Menu {
 
     foreach (Item::IMG_FORMATS as $format)
       if (file_exists($file = $this->markdownPath() . 'cover.' . $format) && is_readable($file))
-        $this->ogImage = $this->moveImage2Asset($file);
+        $this->ogImage = $this->moveImage2Tmp($file);
 
     return $this;
   }
@@ -370,7 +399,7 @@ abstract class Item extends Menu {
 
     foreach (Item::IMG_FORMATS as $format)
       if (file_exists($file = $this->markdownPath() . 'icon.' . $format) && is_readable($file))
-        $this->iconImage = $this->moveImage2Asset($file);
+        $this->iconImage = $this->moveImage2Tmp($file);
 
     return $this;
   }

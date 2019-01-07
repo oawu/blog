@@ -8,7 +8,7 @@
  */
 
 class AllJson extends SingleItem {
-  protected static function uris() { return ['asset']; }
+  protected static function uris() { return ['js']; }
   protected static function format() { return 'json'; }
   protected static function fileName() { return 'all'; }
 
