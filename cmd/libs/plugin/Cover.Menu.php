@@ -29,7 +29,7 @@ abstract class Menu {
         Albums::create('008 | Album', 'icon-14', '生活相簿', '點點滴滴，喜歡用相簿紀錄每次精彩的活動。'),
     ]));
 
-    SingleItem::initAll('AllJson', 'Search', 'License', 'Sitemap', 'GoogleVerification', 'Page404');
+    SingleItem::initAll('AllJson', 'Search', 'License', 'Sitemap', 'Robots', 'GoogleVerification', 'Page404');
   
     Item::modifyAllContent();
     return self::$all;

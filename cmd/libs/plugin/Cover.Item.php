@@ -11,7 +11,7 @@ abstract class Item extends Menu {
   const INDEX_MD = 'readme.md';
   const IMG_FORMATS = ['jpg', 'jpeg', 'gif', 'png'];
 
-  private static $images = null;
+  private static $newImages = null;
   private static $oldImages = null;
 
   private static $initTmpDir = false;
@@ -88,7 +88,7 @@ abstract class Item extends Menu {
   }
 
   public static function cleanTmpDir() {
-    return defined('CACHE_IMG_TMP') && CACHE_IMG_TMP ? array_filter(array_filter(array_diff(array_flip(self::$oldImages), self::$images), function($dir) {
+    return defined('CACHE_IMG_TMP') && CACHE_IMG_TMP ? array_filter(array_filter(array_diff(array_flip(self::$oldImages), self::$newImages), function($dir) {
       return !in_array($dir, ['.', '..', '.gitignore']);
     }), function($dir) {
       @unlink(PATH_IMG_TMP . $dir);
@@ -189,7 +189,7 @@ abstract class Item extends Menu {
         throw new Exception('以下其他目錄無法建立：' . implode(', ', $errs));
       
       Item::$initTmpDir = true;
-      CACHE_IMG_TMP && Item::$images = [];
+      CACHE_IMG_TMP && Item::$newImages = [];
       CACHE_IMG_TMP && Item::$oldImages = array_flip(array_filter(@scandir(PATH_IMG_TMP) ?: [], function($file) { return !in_array($file, ['.', '..', '.gitignore']); }));
     }
 
@@ -211,7 +211,7 @@ abstract class Item extends Menu {
       }
     }
 
-    CACHE_IMG_TMP && array_push(Item::$images, $fileName);
+    CACHE_IMG_TMP && array_push(Item::$newImages, $fileName);
 
     return BASE_URL . implode('/', array_map('rawurlencode', explode(DIRECTORY_SEPARATOR, pathReplace(PATH, $dest))));
   }

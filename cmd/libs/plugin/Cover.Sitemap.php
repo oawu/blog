@@ -16,8 +16,8 @@ class Sitemap extends SingleItem {
   const SITEMAP_URL  = BASE_URL . 'sitemap/sitemap_index.xml';
 
   protected static function uris() { return []; }
-  protected static function format() { return 'txt'; }
-  protected static function fileName() { return 'robots'; }
+  protected static function format() { return 'xml'; }
+  protected static function fileName() { return 'sitemap'; }
   
   private $fileName, $items = [], $type = 'article';
   public function __construct($fileName, $items, $type) {
@@ -87,46 +87,52 @@ class Sitemap extends SingleItem {
     return $this->endXml($xml);
   }
 
-  public function writeXml(XMLWriter $parentWriter) {
+  public function writeSubXml() {
     $url = BASE_URL . 'sitemap/' . $this->fileName . '.xml';
 
     if (!($this->type == 'album' ? $this->writeAlbumXml() : $this->writeArticleXml()))
-      return;
+      return false;
 
-    $parentWriter->startElement('sitemap');
-    $parentWriter->writeElement('loc', $url);
-    $parentWriter->writeElement('lastmod', date ('c'));
-    $parentWriter->endElement();
+    return $url;
   }
 
   public static function create($fileName, $items, $type) {
     return new static($fileName, $items, $type);
   }
 
-  public static function write() {
-    $articles = Item::sitemaps('article');
-    $albums   = Item::sitemaps('album');
+  private static function writeXml($sitemaps) {
+    foreach ([Sitemap::SITEMAP_PATH, static::writePath()] as $path) {
+      $xml = new XMLWriter();
+      $xml->openURI($path);
+      $xml->startDocument('1.0', 'UTF-8');
+      $xml->setIndent(true);
+      $xml->startElement('sitemapindex');
+      $xml->writeAttribute('xmlns', self::SCHEMA);
 
+      $xml->startElement('sitemap');
+      foreach ($sitemaps as $sitemap)
+        $xml->writeElement('loc', $sitemap);
+
+      $xml->writeElement('lastmod', date ('c'));
+      $xml->endElement();
+
+      $xml->endElement();
+      $xml->endDocument();
+    }
+  }
+  public static function write() {
     $sitemaps = [];
-    for ($i = $j = 0, $c = count($articles), $t = strlen(ceil($c / Sitemap::OFFSET)); $i < $c; $i += Sitemap::OFFSET)
+
+    for ($i = $j = 0, $c = count($articles = Item::sitemaps('article')), $t = strlen(ceil($c / Sitemap::OFFSET)); $i < $c; $i += Sitemap::OFFSET)
       $sitemaps[] = static::create('sitemap_' . sprintf('%0' . $t . 'd', $j++), array_slice($articles, $i, Sitemap::OFFSET), 'article');
 
-    for ($i = $j = 0, $c = count($albums), $t = strlen(ceil($c / Sitemap::OFFSET)); $i < $c; $i += Sitemap::OFFSET)
+    for ($i = $j = 0, $c = count($albums = Item::sitemaps('album')), $t = strlen(ceil($c / Sitemap::OFFSET)); $i < $c; $i += Sitemap::OFFSET)
       $sitemaps[] = static::create('sitemap_album_' . sprintf('%0' . $t . 'd', $j++), array_slice($albums, $i, Sitemap::OFFSET), 'album');
 
-    $xml = new XMLWriter();
-    $xml->openURI(Sitemap::SITEMAP_PATH);
-    $xml->startDocument('1.0', 'UTF-8');
-    $xml->setIndent(true);
-    $xml->startElement('sitemapindex');
-    $xml->writeAttribute('xmlns', self::SCHEMA);
-    
-    foreach ($sitemaps as $items)
-      $items->writeXml($xml);
+    self::writeXml(array_map(function($sitemap) {
+      return $sitemap->writeSubXml();
+    }, $sitemaps));
 
-    $xml->endElement();
-    $xml->endDocument();
-
-    return fileWrite(static::writePath(), loadView(PATH_TEMPLATE . 'Robots.php'));
+    return true;
   }
 }
