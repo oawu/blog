@@ -4,15 +4,14 @@
     <meta http-equiv="Content-Language" content="zh-tw">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-
     <meta name="google-site-verification" content="oP5AjoCz_SS0W6OeLiynUxpE7hnFdhWVZ6zDxRiJQqY" />
 
     <meta name="robots" content="index,follow" />
     <meta name="keywords" content="<?php echo KEYWORDS;?>" />
-    <meta name="description" content="<?php echo mb_strimwidth(str_replace('"', "'", $article->description), 0, 150, '…','UTF-8');?>" />
+    <meta name="description" content="<?php echo mb_strimwidth(str_replace('"', "'", $article->description), 0, 120, '…','UTF-8');?>" />
 
     <meta property="og:url" content="<?php echo $article->url();?>" />
-    <meta property="og:title" content="<?php echo $article->title;?>" />
+    <meta property="og:title" content="<?php echo ($article->title ? $article->title . SEPARATE : '') . TITLE;?>" />
     <meta property="og:description" content="<?php echo mb_strimwidth(str_replace('"', "'", $article->description), 0, 200, '…','UTF-8');?>" />
 
     <meta property="og:site_name" content="<?php echo TITLE;?>" />
@@ -20,7 +19,6 @@
     <meta property="fb:app_id" content="1033322433418965" />
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:locale:alternate" content="en_US" />
-
     <meta property="og:type" content="article" />
     <meta property="article:author" content="https://www.facebook.com/comdan66" />
     <meta property="article:publisher" content="https://www.facebook.com/comdan66" />
@@ -33,7 +31,7 @@
     <meta property="og:image:width" tag="larger" content="1200" />
     <meta property="og:image:height" tag="larger" content="630" />
 
-    <title><?php echo ($article->title ? $article->title . ' - ' : '') . TITLE;?></title>
+    <title><?php echo ($article->title ? $article->title . SEPARATE : '') . TITLE;?></title>
 
     <link rel="canonical" href="<?php echo $article->url();?>" />
     <link rel="alternate" href="<?php echo $article->url();?>" hreflang="zh-Hant" />
@@ -130,7 +128,7 @@
             'data-bgurl' => $other->iconImage,
           ];
           $imgAttrs = [
-            'alt' => $other->title . ' - ' . TITLE,
+            'alt' => ($other->title ? $other->title . SEPARATE : '') . TITLE,
             'src' => $other->iconImage
           ];
 
