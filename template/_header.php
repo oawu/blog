@@ -19,7 +19,7 @@
       <button type="submit" class="icon-1"></button>
     </form>
 
-    <label class="oa-avatar" for="info-ckb" data-bgurl="https://graph.facebook.com/100000100541088/picture?width=100&height=100"></label>
+    <label class="oa-avatar" for="info-ckb" data-bgurl="<?php echo OA_IMG_URL;?>"></label>
 
   </div>
 </header>
