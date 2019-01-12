@@ -28,4 +28,4 @@ App 沒什麼主要方向，這就只是個到處模仿的小作品，一開始�
 * [Facebook Video Demo](https://www.facebook.com/comdan66/videos/1115490615130946/)
 * [PTT Soft_Job](https://www.ptt.cc/bbs/MacDev/M.1436114088.A.832.html)
 
-`#iOs` `#Google Maps` `#Instagram` `#Object-C`
+`#iOS` `#Google Maps` `#Instagram` `#Object-C` `#App`

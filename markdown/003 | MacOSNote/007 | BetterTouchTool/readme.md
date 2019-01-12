@@ -18,3 +18,5 @@
 * 打開 Gmail，搜尋 `bettertouchtool license mail`，點選 `http://lostlicense.boastr.net` 鏈結，輸入信箱，下載 License
 * 點選右上角的 `About` > `Buy/Register BetterTouchTool now` > `Load Existing License` > `Import License file`，選擇剛剛下載的 License 檔案
 * 驗證完後，因為 License 只能用兩年，所以可以選擇最後版本就好，所以可以選 `Downgrade to last covered version`
+
+`#MacOS` `#BetterTouchTool` `#系統輔助`

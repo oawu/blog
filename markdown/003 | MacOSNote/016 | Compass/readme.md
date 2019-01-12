@@ -4,3 +4,6 @@
 * 終端機執行指令 `gem update --system`
 * 終端機執行指令 `gem install compass`
 * 檢查是否安裝成功，重新開啟終端機，執行指令 `compass -v`
+
+
+`#Gem` `#Compass` `#SCSS` `#CSS` `#前端`

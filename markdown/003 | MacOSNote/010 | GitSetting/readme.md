@@ -22,3 +22,5 @@
 
 ## 修改 git 編輯器改用 Sublime Text 2
 * 終端機執行指令 `git config --global core.editor "subl -n -w"`
+
+`#Git` `#管控工具`

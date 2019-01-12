@@ -22,3 +22,5 @@
 > 注意！設置密碼時，要記得加上引號，假設密碼為 1234，應該為:  
 > `update user set password=PASSWORD("1234") where User='root';`  
 > 以上參考: [http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx)
+
+`#MySQL` `#後端`

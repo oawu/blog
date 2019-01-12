@@ -55,3 +55,6 @@ import urllib2,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18c
 ## 授權
 * 打開 Gmail，搜尋 `sublime license`，複製授權碼
 * 點擊上方 `Help` > `Enter License`，貼上授權碼
+
+
+`#Sublime` `#文字編輯` `#寫程式`

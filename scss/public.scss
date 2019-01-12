@@ -1394,6 +1394,26 @@ section.md {
       color: rgba(94, 94, 94, 1.00);
       padding-right: 80px;
       @include overflow-docx3();
+      &:before {
+        display: inline-block;
+        margin-right: 4px;
+        padding: 0 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(71, 187, 100, .75);
+        height: 20px;
+        line-height: #{20px - 2px};
+        font-size: 10px;
+        color: white;
+        font-weight: normal;
+        margin-top: #{(24px - 20px) / 2};
+        @include border-radius(3px);
+        @include transition(background-color .3s);
+      }
+      &[data-id]:not([data-id="0"]) {
+        &:before {
+          content: '第 ' attr(data-id)  ' 步';
+        }
+      }
     }
 
     > div {
@@ -1492,6 +1512,9 @@ section.md {
       }
       > b {
         color: rgba(64, 64, 64, 1.00);
+        &:before {
+          background-color: rgba(91, 203, 119, 1);
+        }
       }
 
       > div {

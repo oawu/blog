@@ -76,3 +76,5 @@
 * 開啟 Apache，終端機執行指令 `sudo apachectl start`
 * 關閉 Apache，終端機執行指令 `sudo apachectl stop`
 * 重開 Apache，終端機執行指令 `sudo apachectl -k restart`
+
+`#Apache` `#後端`

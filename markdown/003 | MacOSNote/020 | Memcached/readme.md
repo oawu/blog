@@ -37,3 +37,5 @@
 
 ## 相關參考
 * [Install Memcached on Mac OS X](https://www.hacksparrow.com/install-memcached-on-mac-os-x.html)
+
+`#Memcached` `#後端`

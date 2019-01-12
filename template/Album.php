@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="oP5AjoCz_SS0W6OeLiynUxpE7hnFdhWVZ6zDxRiJQqY" />
 
     <meta name="robots" content="index,follow" />
-    <meta name="keywords" content="<?php echo KEYWORDS;?>" />
+    <meta name="keywords" content="<?php echo $article->tags ? implode(', ', $article->tags) : KEYWORDS;?>" />
     <meta name="description" content="<?php echo mb_strimwidth(str_replace('"', "'", $article->description), 0, 120, '…','UTF-8');?>" />
 
     <meta property="og:url" content="<?php echo $article->url();?>" />

@@ -7,3 +7,5 @@
 ## 安裝 Gulp
 * 終端機執行指令 `sudo npm install gulp-cli -g`
 * 檢查是否安裝成功，重新開啟終端機，執行指令 `gulp -v`
+
+`#Node.js` `#Gulp` `#前端` `#後端`

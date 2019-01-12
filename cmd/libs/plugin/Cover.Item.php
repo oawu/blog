@@ -20,7 +20,7 @@ abstract class Item extends Menu {
   private static $sitemaps = null;
 
   protected $markdownPath, $fileName, $uris = [], $page = null, $items = null;
-  public $title, $description, $bio, $ogImage, $iconImage, $content, $tags, $createAt, $updateAt;
+  public $id, $title, $description, $bio, $ogImage, $iconImage, $content, $tags, $createAt, $updateAt;
 
   public function setPage(Page $page) { $this->page = $page; return $this; }
   public function setMarkdownPath($markdownPath) { $this->markdownPath = $markdownPath; return $this; }
@@ -28,7 +28,7 @@ abstract class Item extends Menu {
   public function setUris($uris) { $this->uris = $uris; return $this; }
   public function setItems(Items $items) { $this->items = $items; return $this; }
 
-  public static function init($markdownPath, $fileName, $uris, $createAt = null) {
+  public static function init($markdownPath, $fileName, $uris, $createAt = null, $id = null) {
     
     array_key_exists($key = implode('_', $uris), Item::$groups) || Item::$groups[$key] = [];
 
@@ -44,6 +44,7 @@ abstract class Item extends Menu {
     $obj->setHtmlName($fileName . $i);
     $obj->setUris($uris);
     $obj->createAt = $createAt;
+    $obj->id = $id;
     $obj->setCurrentUrl($obj->url());
 
     return Item::append($key, $obj);
@@ -428,6 +429,8 @@ abstract class Item extends Menu {
     if ($this->title = preg_match_all($pattern, $this->content, $matches) && isset($matches['title'][0]) ? $matches['title'][0] : '')
       $this->replaceContentSpace($pattern);
 
+    // isset($this->id) && $this->id && $this->title = '第' . (int)$this->id . '步 ' . $this->title;
+    
     return $this;
   }
   

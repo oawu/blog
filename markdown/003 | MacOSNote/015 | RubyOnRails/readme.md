@@ -56,3 +56,5 @@ gem: --no-ri --no-rdoc
   * RVM - https://rvm.io/rvm/install/
   * Rails 101 - https://readmoo.com/book/210010467000101
   * 五樓專業團隊 - http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails
+
+`#Ruby` `#Rails` `#Ruby on Rails` `#後端`

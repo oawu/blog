@@ -11,3 +11,6 @@
 * `General` > `Project folder` > 選擇你放專案的資料夾
 * `General` > `Terminal app` > 選擇 `iTerm2`
 * `Commit` > 下方可以填寫懶的填註解的預設文字
+
+
+`#Git` `#Sourcetree` `#bitbucket` `#管控工具`

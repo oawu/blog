@@ -47,3 +47,6 @@ $config = array(
 * [Redis | OA's 常用設定](https://comdan66.github.io/configs/book/mds/mac/redis.html)
 * [補充](https://blog.miniasp.com/post/2018/09/26/Redis-Desktop-Manager-for-Windows-Build-from-Source.aspx)
 * [UI](https://redisdesktop.com/)
+
+
+`#Redis` `#後端`

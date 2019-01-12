@@ -12,3 +12,6 @@
 * 先點選 `Test Connection` 測試是否可以成功
 * 若是 `Connection Succeeded` 則是成功
 * 儲存點選 `Save change`
+
+
+`#MySQL` `#Sequel Pro` `#後端`

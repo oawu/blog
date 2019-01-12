@@ -132,3 +132,5 @@
 ## 關閉按住輸入重音字元
 * 終端機執行指令 `defaults write -g ApplePressAndHoldEnabled -bool false`
 
+
+`#MacOS` `#Xcode` `#Finder` `#系統`

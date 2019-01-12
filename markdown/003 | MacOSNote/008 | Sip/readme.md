@@ -16,3 +16,4 @@
 * 打開 Gmail，搜尋 `sip`，複製授權碼
 * 選擇 `Activate License`，輸入信箱、License Code，點選 `Activate License`
 
+`#Sip` `#前端` `#取色`

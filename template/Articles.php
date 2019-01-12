@@ -105,6 +105,9 @@
           'alt' => ($item->title ? $item->title . SEPARATE : '') . TITLE,
           'src' => $item->iconImage
         ];
+        $bAttrs = [
+          'data-id' => $item->id ? (int)$item->id : null,
+        ];
 
         $return = '';
         $return .= '<a' . attr($aAttrs) . '>';
@@ -112,7 +115,7 @@
             $return .= '<img' . attr($imgAttrs) . '/>';
             $return .= '<figcaption>' . $item->title . '</figcaption>';
           $return .= '</figure>';
-          $return .= '<b>' . $item->title . '</b>';
+          $return .= '<b' . attr($bAttrs) . '>' . $item->title . '</b>';
           $return .= '<div>' . implode('', array_map(function($t) { return '<span>' . $t . '</span>'; }, $item->tags)) . '</div>';
           $return .= '<section>' . $item->description . '</section>';
           $return .= '<time datetime="' . $item->createAt->format('Y-m-d 00:00:00') . '" date="' . $item->createAt->format('Y.m.d') . '" pubdate="pubdate">' . $item->createAt->format('Y.m.d') . '</time>';

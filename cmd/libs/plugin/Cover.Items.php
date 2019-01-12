@@ -22,7 +22,9 @@ abstract class Items extends Menu {
       if (preg_match_all(Items::ITEM_FORMAT_WITH_CREATE_AT, $item, $matches)) {
         if (empty($matches['createAt']) || !($createAt = array_shift($matches['createAt'])) || ($createAt = DateTime::createFromFormat('Y.m.d', $createAt)) === false)
           $createAt = null;
+        $id = null;
       } else if (preg_match_all(Items::ITEM_FORMAT_WITH_ID, $item, $matches)) {
+        $id = isset($matches['id']) && is_numeric($matches['id'] = array_shift($matches['id'])) ? $matches['id'] : null;
         $createAt = null;
       } else {
         return null;
@@ -46,7 +48,7 @@ abstract class Items extends Menu {
       if (!class_exists($class = static::CHILD_CLASS))
         return null;
 
-      return $class::init($tmp, $fileName, $uris, $createAt);
+      return $class::init($tmp, $fileName, $uris, $createAt, $id);
     }, @scandir($dirPath) ?: [])));
     
     $this->uris = $uris;

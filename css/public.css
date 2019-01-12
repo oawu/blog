@@ -211,6 +211,8 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
 .list > a > b, .list > a > div, .list > a > section { float: right; width: calc(100% - 114px); }
 .list > a > b, .list > a > section, .list > a > time, .list > a > time:before, .list > a > time:after, .list > a > div > *, .list > a > div > *:before { -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .list > a > b { height: 24px; line-height: 24px; font-size: 18px; color: #5e5e5e; padding-right: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.list > a > b:before { display: inline-block; margin-right: 4px; padding: 0 8px; border: 1px solid rgba(0, 0, 0, 0.1); background-color: rgba(71, 187, 100, 0.75); height: 20px; line-height: 18px; font-size: 10px; color: white; font-weight: normal; margin-top: 2px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-transition: background-color 0.3s; -o-transition: background-color 0.3s; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; }
+.list > a > b[data-id]:not([data-id="0"]):before { content: "第 " attr(data-id) " 步"; }
 .list > a > div { font-size: 13px; height: 20px; line-height: 20px; overflow: hidden; *zoom: 1; }
 .list > a > div:after { display: table; content: ""; line-height: 0; clear: both; }
 .list > a > div > * { float: left; display: inline-block; font-size: 10px; color: #969696; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
@@ -227,6 +229,7 @@ section.md > *:not(pre) code { padding: 1px 4px; padding-bottom: 2px; border: 1p
 .list > a > time[data-ago]:after { content: attr(data-ago); display: inline-block; }
 .list > a:hover > figure:after { border-color: rgba(0, 0, 0, 0.2); }
 .list > a:hover > b { color: #404040; }
+.list > a:hover > b:before { background-color: #5bcb77; }
 .list > a:hover > div > * { color: #787878; }
 .list > a:hover > div > *:before { color: #aaaaaa; }
 .list > a:hover > section { color: #5a5a5a; }

@@ -15,7 +15,32 @@ ga('send', 'pageview');
 function time() { return new Date().getTime(); }
 function getStorage(key) { return (typeof Storage !== 'undefined') && (value = localStorage.getItem (key)) && (value = JSON.parse (value)) ? value : undefined; }
 function setStorage(key, data) { try { if (typeof Storage === 'undefined') return false; localStorage.setItem (key, JSON.stringify (data)); return true; } catch (err) { console.error ('設定 storage 失敗！', error); return false; } }
-function searchRun(objs, q) { q = typeof q === 'string' ? new RegExp(q, 'gi') : q.map(function(q) { return new RegExp('^' + q + '$', 'gi'); }); return objs.map(function(obj) { obj.s = obj.s.filter(function(s) { return !Array.isArray(q) ? !!(s.t.match(q) || s.d.match(q)) : s.h.filter(function(h) { return q.filter(function(q) { return h.match(q); }).length; }).length; }); return obj; }).filter(function(obj) { return obj.s.length; }); }
+function searchRun(objs, q) {
+  q = typeof q === 'string' ? new RegExp(q, 'gi') : q.map(function(q) { return new RegExp('^' + q + '$', 'gi'); });
+  
+  return objs.map(function(obj) {
+    if (!Array.isArray(q) ? obj.t.match(q) : q.filter(function(q) {
+        return obj.t.match(q);
+      }).length)
+    return obj;
+
+    obj.s = obj.s.filter(function(s) {
+      return !Array.isArray(q) ? !!(s.t.match(q) || s.d.match(q) || s.h.filter(function(h) {
+        return !Array.isArray(q) ? h.match(q) : q.filter(function(q) {
+          return h.match(q);
+        }).length;
+      }).length) : s.h.filter(function(h) {
+        return q.filter(function(q) {
+          return h.match(q);
+        }).length;
+      }).length;
+    });
+
+    return obj;
+  }).filter(function(obj) {
+    return obj.s.length;
+  });
+}
 function searchItem(t) { return $('<a />').attr('href', t.u).append($('<figure />').attr('data-bgurl', t.i).css({'background-image': 'url(' + t.i + ')'})).append($('<b />').text(t.t)).append($('<div />').append($(t.h.map(function(t) { return $('<span />').text(t); })).map($.fn.toArray))).append($('<section />').text(t.d)).append($('<time />')); }
 function searchItems(t) { return $('<div />').addClass('list').addClass(t.s.length > 10 ? 'min' : null).addClass('more').append($('<div />').append($('<span />').text(t.t)).append($('<a />').attr('href', t.u).text('更多…'))).append($(t.s.map(searchItem)).map($.fn.toArray)); }
 
@@ -256,7 +281,10 @@ $(function() {
       get: function(ok, no) {
         var val = getStorage(All.key);
         if (val && val.time && (time() < val.time + All.ttl)) return ok && ok(val.content);
-        return $.get(All.api, function(result) { setStorage(All.key, { time: time(), content: result }); return ok && ok(result); }).fail(no);
+        return $.get(All.api, function(result) {
+          setStorage(All.key, { time: time(), content: result });
+          return ok && ok(result);
+        }).fail(no);
       }
     };
 
