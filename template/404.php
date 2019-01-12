@@ -4,8 +4,11 @@
     <meta http-equiv="Content-Language" content="zh-tw">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="google-site-verification" content="oP5AjoCz_SS0W6OeLiynUxpE7hnFdhWVZ6zDxRiJQqY" />
 
-    <title><?php echo '404 Not Found - ' . TITLE;?></title>
+    <meta name="robots" content="noindex,nofollow" />
+
+    <title><?php echo '404 Not Found' . SEPARATE . TITLE;?></title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/icon.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/public.css">

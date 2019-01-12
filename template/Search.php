@@ -4,15 +4,14 @@
     <meta http-equiv="Content-Language" content="zh-tw">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-
     <meta name="google-site-verification" content="oP5AjoCz_SS0W6OeLiynUxpE7hnFdhWVZ6zDxRiJQqY" />
 
     <meta name="robots" content="index,follow" />
     <meta name="keywords" content="<?php echo KEYWORDS;?>" />
-    <meta name="description" content="<?php echo mb_strimwidth(removeHtmlTag(str_replace('"', "'", DESCRIPTION)), 0, 150, '…','UTF-8');?>" />
+    <meta name="description" content="<?php echo mb_strimwidth(removeHtmlTag(str_replace('"', "'", DESCRIPTION)), 0, 120, '…','UTF-8');?>" />
 
     <meta property="og:url" content="<?php echo Search::url();?>" />
-    <meta property="og:title" content="<?php echo '搜尋結果';?>" />
+    <meta property="og:title" content="<?php echo '搜尋結果' . SEPARATE . TITLE;?>" />
     <meta property="og:description" content="<?php echo mb_strimwidth(removeHtmlTag(str_replace('"', "'", DESCRIPTION)), 0, 200, '…','UTF-8');?>" />
 
     <meta property="og:site_name" content="<?php echo TITLE;?>" />
@@ -20,7 +19,6 @@
     <meta property="fb:app_id" content="1033322433418965" />
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:locale:alternate" content="en_US" />
-
     <meta property="og:type" content="article" />
     <meta property="article:author" content="https://www.facebook.com/comdan66" />
     <meta property="article:publisher" content="https://www.facebook.com/comdan66" />
@@ -33,7 +31,7 @@
     <meta property="og:image:width" tag="larger" content="1200" />
     <meta property="og:image:height" tag="larger" content="630" />
 
-    <title><?php echo '搜尋結果' . ' - ' . TITLE;?></title>
+    <title><?php echo '搜尋結果' . SEPARATE . TITLE;?></title>
 
     <link rel="canonical" href="<?php echo Search::url();?>" />
     <link rel="alternate" href="<?php echo Search::url();?>" hreflang="zh-Hant" />

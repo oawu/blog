@@ -5,13 +5,13 @@
 #   recursive: No                # 是否包含子資料夾，Yes 與 No 兩種選項
 #                                #
 
-- path: ''
-  formats: ['.html', '.txt']
+- path: ""
+  formats: [".html", ".txt", ".xml"]
   hidden: No
   recursive: Yes
 
 - path: "js"
-  formats: [".js", '.json']
+  formats: [".js", ".json"]
   hidden: No
   recursive: Yes
 
