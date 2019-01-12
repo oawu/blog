@@ -1,3 +1,5 @@
+不多作解釋，大家熟悉的 Google Chrome 瀏覽器安裝步驟。
+
 # macOS 上安裝 Chrome 瀏覽器
 * 開啟 **Safari**
 * 官網下載 - [https://www.google.com/intl/zh-TW_ALL/chrome/](https://www.google.com/intl/zh-TW_ALL/chrome/)

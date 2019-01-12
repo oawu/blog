@@ -1,3 +1,5 @@
+macOS 上安裝 Memcached 來作為 memory cache 工具。
+
 # macOS 上安裝 Memcached
 
 ## 安裝方法有兩種：
@@ -35,7 +37,7 @@
 * 使用 [memcached](https://github.com/memcached/memcached)
 * 使用 [phpMemcacheAdmin](https://github.com/hgschmie/phpmemcacheadmin)
 
-## 相關參考
+### 相關參考
 * [Install Memcached on Mac OS X](https://www.hacksparrow.com/install-memcached-on-mac-os-x.html)
 
 `#Memcached` `#後端`

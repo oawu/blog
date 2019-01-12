@@ -1,3 +1,5 @@
+OA 個人的 macOS 環境配置與操作習慣設定。
+
 # 設定 Xcode 與基礎環境
 
 ## App Store
@@ -133,4 +135,4 @@
 * 終端機執行指令 `defaults write -g ApplePressAndHoldEnabled -bool false`
 
 
-`#MacOS` `#Xcode` `#Finder` `#系統`
+`#macOS` `#Xcode` `#Finder` `#系統`

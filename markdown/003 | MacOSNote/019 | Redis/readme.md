@@ -1,3 +1,5 @@
+macOS 上安裝 Redis 來作為 memory cache 工具。
+
 # macOS 上安裝 Redis
 
 ## 安裝方法有兩種：  
@@ -43,7 +45,7 @@ $config = array(
     .....
 ```
 
-## 相關參考
+### 相關參考
 * [Redis | OA's 常用設定](https://comdan66.github.io/configs/book/mds/mac/redis.html)
 * [補充](https://blog.miniasp.com/post/2018/09/26/Redis-Desktop-Manager-for-Windows-Build-from-Source.aspx)
 * [UI](https://redisdesktop.com/)

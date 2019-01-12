@@ -1,3 +1,5 @@
+知名的文字編輯器，雖然 Sublime Text 已經出到了 3，但個人習慣依然是使用 Sublime Text，以下介紹安裝以及使用相關的 Packages。
+
 # macOS 上安裝 Sublime Text 2 文字編輯器
 * 官網下載 - [https://www.sublimetext.com/2](https://www.sublimetext.com/2)
 * 備用載點 - (Sublime Text 2.0.2.dmg)[https://cdn.ioa.tw/MacEnvInit/Sublime+Text+2.0.2.dmg]

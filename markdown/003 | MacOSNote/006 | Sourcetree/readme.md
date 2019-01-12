@@ -1,3 +1,5 @@
+Git 是多數程式開發者會使用的版本控制工具，而 Sourcetree 則是將 Git 圖形化呈現以方便管理。
+
 # macOS 上安裝 Sourcetree Git 管理介面
 * 官網下載 - [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 * 備用載點 - [Sourcetree_2.7.6a.zip](https://cdn.ioa.tw/MacEnvInit/Sourcetree_2.7.6a.zip)

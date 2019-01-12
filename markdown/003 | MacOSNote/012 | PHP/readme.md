@@ -1,3 +1,5 @@
+在 macOS Apache 下所搭配的後端語言，以下會依據步驟在 macOS 上安裝各種版的 PHP。
+
 # macOS 上安裝 PHP 語言
 
 ## 安裝前準備

@@ -1,3 +1,5 @@
+在 macOS 下安裝 MySQL 資料庫，並且基本的設定 root 密碼。
+
 # macOS 上安裝 MySQL
 * 頁面下方 `No thanks, just start my download.` 點擊下載 - [http://dev.mysql.com/downloads/file.php?id=454017](http://dev.mysql.com/downloads/file.php?id=454017)
 * 備用載點 - [mysql-5.6.21-osx10.9-x86_64.dmg](https://cdn.ioa.tw/MacEnvInit/mysql-5.6.21-osx10.9-x86_64.dmg)
@@ -20,7 +22,9 @@
 * 執行指令 `quit` 離開 MySQL
 
 > 注意！設置密碼時，要記得加上引號，假設密碼為 1234，應該為:  
-> `update user set password=PASSWORD("1234") where User='root';`  
-> 以上參考: [http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx)
+> `update user set password=PASSWORD("1234") where User='root';`
+
+### 相關參考
+* [北http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx)
 
 `#MySQL` `#後端`

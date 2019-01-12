@@ -1,3 +1,5 @@
+BetterTouchTool 是一款可以修改系統操作的工具，例如視窗控制等。不過目前已經要收費囉！
+
 # macOS 必裝的輔助工具 BetterTouchTool
 * 官網下載 - [https://folivora.ai/](https://folivora.ai/)
 * 備用載點 - [BetterTouchTool.zip](https://cdn.ioa.tw/MacEnvInit/BetterTouchTool.zip)
@@ -19,4 +21,4 @@
 * 點選右上角的 `About` > `Buy/Register BetterTouchTool now` > `Load Existing License` > `Import License file`，選擇剛剛下載的 License 檔案
 * 驗證完後，因為 License 只能用兩年，所以可以選擇最後版本就好，所以可以選 `Downgrade to last covered version`
 
-`#MacOS` `#BetterTouchTool` `#系統輔助`
+`#macOS` `#BetterTouchTool` `#系統輔助`

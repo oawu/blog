@@ -1,3 +1,5 @@
+想要寫 SCSS 嗎？可以使用 Compass 來編譯 SCSS，讓 CSS 開發上更加快速與方便。
+
 # macOS 上安裝 Compass
 
 * 官方網站 - [http://compass-style.org/install/](http://compass-style.org/install/)
