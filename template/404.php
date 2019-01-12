@@ -17,14 +17,11 @@
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
     <script type="text/javascript">
       $(function() {
-        var url = new URL(location.href),
-            n = url.pathname.substring(url.pathname.lastIndexOf('/') + 1),
-            $q = $('#q'),
+        var $q = $('#q'),
             timer = null;
       
-        url = url.href.replace(n, '');
         $q.focus(function() { clearTimeout(timer); });
-        timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000);
+        timer = setTimeout(function() { window.location.replace(<?php echo BASE_URL;?>); }, 7.5 * 1000);
     });
     </script>
   </head>
