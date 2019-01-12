@@ -96,7 +96,7 @@
       <article class="panel index">
 
         <header>
-          <h1><?php echo $article->title;?></h1>
+          <h1 data-sub='OA Wu'><?php echo $article->title;?></h1>
           <span><?php echo $article->bio;?></span>
           <figure data-bgurl="<?php echo $article->iconImage;?>">
             <img src="<?php echo $article->iconImage;?>" />

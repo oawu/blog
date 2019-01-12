@@ -689,6 +689,16 @@ article.panel {
         font-weight: normal;
         @include text-shadow(0 0 3px rgba(0, 0, 0, .4));
         @include overflow-docx3();
+        &:after {
+          display: inline-block;
+          margin-left: 4px;
+          font-size: 16px;
+          line-height: 44px;
+          color: rgba(220, 220, 220, 1.00);
+        }
+        &[data-sub]:not([data-sub='']):after {
+          content: '(' attr(data-sub) ')';
+        }
       }
       span {
         padding: 0;
@@ -1734,7 +1744,6 @@ section.md {
       line-height: 32px;
       font-size: 14px;
       z-index: 3;
-      cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 1);
       color: rgba(180, 180, 180, 1);
       font-weight: bold;
@@ -2660,6 +2669,9 @@ section.md {
           height: 30px;
           line-height: 30px;
           font-size: 22px;
+          &:after {
+            line-height: 32px;
+          }
         }
         span {
           line-height: 18px;
