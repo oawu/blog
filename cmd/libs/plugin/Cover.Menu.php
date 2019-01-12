@@ -19,7 +19,7 @@ abstract class Menu {
     self::$all = array_values(array_filter([
       ArticleIndex::create('001 | index',    'icon-d',  '網站首頁', '網站首頁'),
           Articles::create('002 | Develop',  'icon-e',  '開發心得', '前後端的實作心得，相關資訊技術研究筆記。'),
-          Articles::create('003 | MacOSNote',    'icon-1b', '蘋果環境', 'MacOS 重灌完後，開發環境的建置。', 'asc'),
+          Articles::create('003 | macOSNote',    'icon-1b', '蘋果環境', 'MacOS 重灌完後，開發環境的建置。', 'asc'),
           Articles::create('004 | Mazu',     'icon-1a', '鄉土北港', '不只是熱情也不僅僅是信仰，更是一種習慣、參與感、責任感。'),
           Articles::create('005 | Blog',     'icon-1e', '生活文章', '現在還流行部落格嗎？不管，我就是想寫！'),
           Articles::create('006 | Unboxing', 'icon-f',  '開箱文章', 'OA 的玩具開箱文，意外與驚喜的收納盒。'),
