@@ -292,13 +292,6 @@ $(function() {
       function(result) { $search.attr('data-title', '找不到符合的資料。').append($(searchRun(result, q).map(searchItems)).map($.fn.toArray)); },
       function() { return window.location.replace(url); });
   }
-  
-  if (n === '404.html') {
-    url = url.href.replace(n, '');
-    var $q = $('#q'), timer = null;
-    $q.focus(function() { clearTimeout(timer); });
-    timer = setTimeout(function() {window.location.replace(url); }, 7.5 * 1000);
-  }
 
   window.oaips.listenUrl();
 });
