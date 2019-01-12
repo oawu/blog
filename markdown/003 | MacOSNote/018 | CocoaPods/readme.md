@@ -1,4 +1,4 @@
-# 安裝 CocoaPods iOS 套件管理
+# macOS 上安裝 CocoaPods iOS 套件管理
 
   * 終端機執行指令 `sudo gem install cocoapods`，會有點久，別緊張 :grin:
   * 檢查是否安裝成功，重新開啟終端機，執行指令 `pod --version`

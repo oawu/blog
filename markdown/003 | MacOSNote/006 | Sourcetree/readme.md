@@ -1,4 +1,4 @@
-# 安裝 Sourcetree Git 圖形化軟體
+# macOS 上安裝 Sourcetree Git 管理介面
 * 官網下載 - [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 * 備用載點 - [Sourcetree_2.7.6a.zip](https://cdn.ioa.tw/MacEnvInit/Sourcetree_2.7.6a.zip)
 * 把它移到**應用程式資料夾**，並開啟

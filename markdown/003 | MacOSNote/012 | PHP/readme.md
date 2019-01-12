@@ -1,4 +1,4 @@
-# 安裝 PHP 語言
+# macOS 上安裝 PHP 語言
 
 ## 安裝前準備
 * 請先安裝 [Apache](../011 | Apache/)

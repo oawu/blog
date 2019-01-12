@@ -1,4 +1,4 @@
-# 安裝 Apache Http 服務器
+# macOS 上安裝 Apache
 * 更新 xcode command line，終端機下 `xcode-select --install`
 * 更新 Brew `brew update`
 * 移除停止使用 mac 原生的 Apache

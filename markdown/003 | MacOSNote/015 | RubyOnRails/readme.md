@@ -1,4 +1,4 @@
-# 安裝 Ruby on Rails
+# macOS 上安裝 Ruby on Rails
 * 更新 macOS，點選左上角 `` > `關於這台 Mac` > `軟體更新...`
 * 安裝更新 `xcode`
 

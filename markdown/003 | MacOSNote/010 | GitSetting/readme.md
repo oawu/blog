@@ -1,4 +1,4 @@
-# 設定 Git 版本控制軟體
+# OA 個人常用的 Git 設定
 * 用 Sublime Text 2 打開編輯 `~/.gitconfig`，終端機執行指令 `subl ~/.gitconfig`
 * 將內容修改成如下，主要針對 `user` 與 `alias` 做修改
 

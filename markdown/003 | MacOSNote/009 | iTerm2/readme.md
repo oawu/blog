@@ -1,4 +1,4 @@
-# 安裝 iTerm2 終端機
+# macOS 開發者必安裝的終端機 - iTerm2
 * 官網下載 - [https://www.iterm2.com/](https://www.iterm2.com/)
 * 備用載點 - [iTerm2-3_2_0.zip](https://cdn.ioa.tw/MacEnvInit/iTerm2-3_2_0.zip)
 * 解壓縮，把它移到**應用程式資料夾**，並開啟

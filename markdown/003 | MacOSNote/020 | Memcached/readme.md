@@ -1,4 +1,4 @@
-# 安裝 Memcached
+# macOS 上安裝 Memcached
 
 ## 安裝方法有兩種：
 1. 指令安裝(推薦)

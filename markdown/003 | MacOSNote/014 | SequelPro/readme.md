@@ -1,4 +1,5 @@
-# 安裝 Sequel Pro 資料庫軟體
+# macOS 上安裝 Sequel Pro 資料庫管理介面
+
 * 官網下載 - [https://sequelpro.com/download](https://sequelpro.com/download)
 * 備用載點 - [sequel-pro-1.1.2.dmg](https://cdn.ioa.tw/MacEnvInit/sequel-pro-1.1.2.dmg)
 * 把它移到**應用程式資料夾**，並開啟

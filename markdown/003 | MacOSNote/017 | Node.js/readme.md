@@ -1,4 +1,4 @@
-# 安裝 Node.js
+# macOS 上安裝 Node.js
 * 官網下載 - [https://nodejs.org/en/](https://nodejs.org/en/)，選擇 `Recommended For Most Users`
 * 備用載點 - [node-v8.11.4.pkg](https://cdn.ioa.tw/MacEnvInit/node-v8.11.4.pkg)
 * 點擊兩下進行安裝，一步步的安裝即可

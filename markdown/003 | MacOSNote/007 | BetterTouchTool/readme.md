@@ -1,4 +1,4 @@
-# 安裝 BetterTouchTool 系統軟體
+# macOS 必裝的輔助工具 BetterTouchTool
 * 官網下載 - [https://folivora.ai/](https://folivora.ai/)
 * 備用載點 - [BetterTouchTool.zip](https://cdn.ioa.tw/MacEnvInit/BetterTouchTool.zip)
 * 把它移到**應用程式資料夾**，並開啟
