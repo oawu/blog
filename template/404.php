@@ -15,15 +15,7 @@
 
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        var $q = $('#q'),
-            timer = null;
-      
-        $q.focus(function() { clearTimeout(timer); });
-        timer = setTimeout(function() { window.location.replace(<?php echo BASE_URL;?>); }, 7.5 * 1000);
-    });
-    </script>
+    <script type="text/javascript">$(function() { var $q = $('#q'), timer = null; $q.focus(function() { clearTimeout(timer); }); timer = setTimeout(function() { window.location.replace("<?php echo BASE_URL;?>"); }, 7.5 * 1000); });</script>
   </head>
   <body>
     <input type="checkbox" id="menu-ckb" class="_ckbh">
