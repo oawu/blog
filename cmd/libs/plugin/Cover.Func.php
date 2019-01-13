@@ -155,8 +155,14 @@ if (!function_exists('removeSingleItem')) {
   }
 }
 
-if (!function_exists('createGitignoreFiles')) {
-  function createGitignoreFiles($path) {
+if (!function_exists('createDirIndex')) {
+  function createDirIndex($path) {
+    return file_exists($tmp = $path . 'index.html') || (is_dir($path) && is_writable($path) && fileWrite($tmp, '<!DOCTYPE html><html lang="tw"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta http-equiv="Content-Language" content="zh-tw"><title>' . TITLE . '</title><meta name="robots" content="noindex,nofollow"></head><body lang="zh-tw"><script type="text/javascript">var url = "pages/index.html"; window.location.assign(url);</script> </body></html>') && file_exists($tmp));
+  }
+}
+
+if (!function_exists('createGitignoreFile')) {
+  function createGitignoreFile($path) {
     return file_exists($tmp = $path . '.gitignore') || (is_dir($path) && is_writable($path) && fileWrite($tmp, '*') && file_exists($tmp));
   }
 }
@@ -194,7 +200,7 @@ if (!function_exists('mkdir777')) {
 if (!function_exists('mkdirDirs')) {
   function mkdirDirs($dirs) {
     return array_filter(array_map(function($dir) {
-      return mkdir777($dir) && createGitignoreFiles($dir) ? null : pathReplace(PATH, $dir);
+      return mkdir777($dir) && createGitignoreFile($dir) && createDirIndex($dir) ? null : pathReplace(PATH, $dir);
     }, $dirs));
   }
 }
