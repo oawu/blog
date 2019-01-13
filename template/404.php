@@ -24,6 +24,8 @@
         url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html?f=404-1';
       else if (window.location.pathname.slice(-16, -11) == 'index')
         url =  "<?php echo BASE_URL . '?f=404-3';?>";
+      else if (window.location.pathname.slice(-5) != '.html')
+        url =  "<?php echo BASE_URL . '';?>" + window.location.pathname + '.html';
       else if (window.location.pathname.slice(-5) == '.html')
         url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1, -5) + '/index.html?f=404-2';
       else
