@@ -34,7 +34,7 @@
 
      $q.focus(function() { clearTimeout(timer); });
 
-     if (url == "<?php echo BASE_URL . '?f=404';?>")
+     if (url != "<?php echo BASE_URL . '?f=404';?>")
        window.location.replace(url);
      else
        timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000); 
