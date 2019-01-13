@@ -15,32 +15,7 @@
 
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
-    <script type="text/javascript">
-    $(function() {
-      var url = "<?php echo BASE_URL . '?f=404';?>";
-
-      if (window.location.pathname.slice(-1) == '/')
-        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html';
-      else if (window.location.pathname.slice(-16) == 'index/index.html')
-        url =  "<?php echo BASE_URL . '?f=404';?>";
-      else if (window.location.pathname.slice(-5) != '.html')
-        url =  "<?php echo BASE_URL . '';?>" + window.location.pathname.slice(1) + '.html';
-      else if (window.location.pathname.slice(-5) == '.html')
-        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1, -5) + '/index.html';
-      else
-        url =  "<?php echo BASE_URL . '?f=404';?>";
-     
-     var $q = $('#q'), timer = null;
-
-     $q.focus(function() { clearTimeout(timer); });
-
-     if (url != "<?php echo BASE_URL . '?f=404';?>")
-       window.location.replace(url);
-     else
-       timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000); 
-    });
-
-    </script>
+    <script type="text/javascript">$(function() { var url = "<?php echo BASE_URL . '?f=404';?>"; if (window.location.pathname.slice(-1) == '/') url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html'; else if (window.location.pathname.slice(-16) == 'index/index.html') url =  "<?php echo BASE_URL . '?f=404';?>"; else if (window.location.pathname.slice(-5) != '.html') url =  "<?php echo BASE_URL . '';?>" + window.location.pathname.slice(1) + '.html'; else if (window.location.pathname.slice(-5) == '.html') url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1, -5) + '/index.html'; else url = "<?php echo BASE_URL . '?f=404';?>";  var $q = $('#q'), timer = null; $q.focus(function() { clearTimeout(timer); }); if (url != "<?php echo BASE_URL . '?f=404';?>") window.location.replace(url); else timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000); });</script>
   </head>
   <body>
     <input type="checkbox" id="menu-ckb" class="_ckbh">
