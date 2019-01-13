@@ -21,11 +21,11 @@
       var url = "<?php echo BASE_URL . '?f=404';?>";
 
       if (window.location.pathname.slice(-1) == '/')
-        url = "<?php echo BASE_URL;?>" + window.location.pathname + 'index.html?f=403';
+        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html?f=404-1';
       else if (window.location.pathname.slice(-5) != '.html')
-        url = "<?php echo BASE_URL;?>" + window.location.pathname + '/index.html?f=403';
+        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + '/index.html?f=404-2';
       else
-        url =  "<?php echo BASE_URL . '?f=404';?>";
+        url =  "<?php echo BASE_URL . '?f=404-3';?>";
       console.error(url);
       
       // window.location.assign (url);
