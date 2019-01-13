@@ -17,23 +17,23 @@
     <script language="javascript" type="text/javascript" src="<?php echo BASE_URL;?>js/public.js"></script>
     <script type="text/javascript">
     $(function() {
-     // var $q = $('#q'), timer = null; $q.focus(function() { clearTimeout(timer); }); timer = setTimeout(function() { window.location.replace("<?php echo BASE_URL;?>?f=404"); }, 7.5 * 1000); 
       var url = "<?php echo BASE_URL . '?f=404';?>";
 
       if (window.location.pathname.slice(-1) == '/')
-        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html?f=404-1';
+        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html';
       else if (window.location.pathname.slice(-16, -11) == 'index')
-        url =  "<?php echo BASE_URL . '?f=404-3';?>";
+        url =  "<?php echo BASE_URL . '?f=404';?>";
       else if (window.location.pathname.slice(-5) != '.html')
-        url =  "<?php echo BASE_URL . '';?>" + window.location.pathname + '.html';
+        url =  "<?php echo BASE_URL . '';?>" + window.location.pathname.slice(1) + '.html';
       else if (window.location.pathname.slice(-5) == '.html')
-        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1, -5) + '/index.html?f=404-2';
+        url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1, -5) + '/index.html';
       else
-        url =  "<?php echo BASE_URL . '?f=404-3';?>";
-      console.error(url);
-      
-      // window.location.assign (url);
+        url =  "<?php echo BASE_URL . '?f=404';?>";
+     
+     var $q = $('#q'), timer = null;
 
+     $q.focus(function() { clearTimeout(timer); });
+     timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000); 
     });
 
     </script>
