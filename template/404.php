@@ -33,7 +33,11 @@
      var $q = $('#q'), timer = null;
 
      $q.focus(function() { clearTimeout(timer); });
-     timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000); 
+
+     if (url == "<?php echo BASE_URL . '?f=404';?>")
+       window.location.replace(url);
+     else
+       timer = setTimeout(function() { window.location.replace(url); }, 7.5 * 1000); 
     });
 
     </script>
