@@ -21,7 +21,7 @@
 
       if (window.location.pathname.slice(-1) == '/')
         url = "<?php echo BASE_URL;?>" + window.location.pathname.slice(1) + 'index.html';
-      else if (window.location.pathname.slice(-16, -11) == 'index')
+      else if (window.location.pathname.slice(-16) == 'index/index.html')
         url =  "<?php echo BASE_URL . '?f=404';?>";
       else if (window.location.pathname.slice(-5) != '.html')
         url =  "<?php echo BASE_URL . '';?>" + window.location.pathname.slice(1) + '.html';
