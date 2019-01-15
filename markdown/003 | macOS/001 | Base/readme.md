@@ -1,11 +1,14 @@
 OA 個人的 macOS 環境配置與操作習慣設定。
 
 # 設定 Xcode 與基礎環境
+* 環境 macOS MoJave 10.14.2
+* 這一版本的主要特色就是桌布會隨時間改變，並且有黑主題ＸＤ
 
 ## App Store
 * 重新設定國籍  
 * 下載安裝 Xcode - [https://itunes.apple.com/tw/app/xcode/id497799835?mt=12](https://itunes.apple.com/tw/app/xcode/id497799835?mt=12)
-* 下載安裝 Line - [https://itunes.apple.com/tw/app/line/id539883307?mt=12](https://itunes.apple.com/tw/app/line/id539883307?mt=12)
+	* 安裝好啟動
+	* 依序步驟按同意
 * 下載安裝 LunarCal - [https://itunes.apple.com/tw/app/lunarcal/id459976036?mt=12](https://itunes.apple.com/tw/app/lunarcal/id459976036?mt=12)
 	* 基本選項
 		* 在登入時自動開啟 `勾選` 
@@ -13,15 +16,17 @@ OA 個人的 macOS 環境配置與操作習慣設定。
 		* 游標離開時自動關閉 `取消勾選` 
 		* 地區改為 `台灣`
 		* 顯示日期與時間 `取消勾選`
-	* 下載安裝 Sip(Apple Store 已無販售)
-		* 下拉點選齒輪
-		* General
-			* Number of colors in color history `取消勾選`
-		* Formats
-			* CSS 將 All caps `取消勾選`
-			* 將不必要的類型 `取消勾選`
-		* Shortcuts
-			* 只留 `General` 的 `Show Magnifier`，並且設定快捷鍵為 `command + shift + e`
+* 下載安裝 Sip(Apple Store 已無販售)
+	* 下拉點選齒輪
+	* General
+		* Number of colors in color history `取消勾選`
+	* Formats
+		* CSS 將 All caps `取消勾選`
+		* 將不必要的類型 `取消勾選`
+	* Shortcuts
+		* 只留 `General` 的 `Show Magnifier`，並且設定快捷鍵為 `command + shift + e`
+
+* 下載安裝 Line - [https://itunes.apple.com/tw/app/line/id539883307?mt=12](https://itunes.apple.com/tw/app/line/id539883307?mt=12)
 
 ## 建立截圖位置
 主要就是將 `截圖` 目錄建立在 `圖片` 目錄之下，步驟如下：
