@@ -16,7 +16,7 @@ OA 個人的 macOS 環境配置與操作習慣設定。
 		* 游標離開時自動關閉 `取消勾選` 
 		* 地區改為 `台灣`
 		* 顯示日期與時間 `取消勾選`
-* 下載安裝 Sip(Apple Store 已無販售)
+* 下載安裝 Sip(Apple Store 已無販售，付費版本請看 [螢幕顏色吸取器 - Sip](../008 | Sip/))
 	* 下拉點選齒輪
 	* General
 		* Number of colors in color history `取消勾選`
