@@ -2,7 +2,7 @@
 
 # macOS 上安裝 Sublime Text 2 文字編輯器
 * 官網下載 - [https://www.sublimetext.com/2](https://www.sublimetext.com/2)
-* 備用載點 - (Sublime Text 2.0.2.dmg)[https://cdn.ioa.tw/MacEnvInit/Sublime+Text+2.0.2.dmg]
+* 備用載點 - [Sublime Text 2.0.2.dmg](https://cdn.ioa.tw/MacEnvInit/Sublime+Text+2.0.2.dmg)
 * 把它移到**應用程式資料夾**，並開啟
 
 ## 啟用 Packages  
