@@ -21,13 +21,13 @@ rvm install ruby-1.8.7-p334   # 安裝 ruby-1.8.7-p334
 ## 安裝 Ruby
 * 官方網站 - [https://www.ruby-lang.org/zh_tw/](https://www.ruby-lang.org/zh_tw/)
 * 列出可以安裝的 Ruby 版本 `rvm list known`，按 `q` 可以離開
-* 安裝 2.1.3 終端機執行指令 `rvm install 2.1.3`，這邊可能會有點久，別緊張 :sweat_smile:
+* 安裝 2.5.3 終端機執行指令 `rvm install 2.5.3`，這邊可能會有點久，別緊張 :sweat_smile:
 * 檢查是否安裝成功，重新開啟終端機，執行指令 `ruby -v`
 * 若有出現 readline.c 的錯誤時，可以試著以下指令:
 
 ```
 rvm package install readline
-rvm install 2.1.3 -C --with-readline-dir=$rvm_path/usr
+rvm install 2.5.3 -C --with-readline-dir=$rvm_path/usr
 ```
 
 ## 安裝 RubyGems
@@ -44,7 +44,7 @@ gem: --no-ri --no-rdoc
 
 ## 安裝 Bundler
 * 終端機執行指令 `gem install bundler --no-ri --no-rdoc`，這邊也可能會有點久，別緊張 :joy:
-* 若有發生 `Unable to require openssl, install OpenSSL and rebuild Ruby (preferred) or use non-HTTPS sources` 錯誤，那就先執行 `brew install openssl` 完後，重裝 ruby 並加入參數 ` --with-openssl-dir`，終端機執行指令 `rvm reinstall 2.1.3 --with-openssl-dir=/usr/local/opt/openssl`
+* 若有發生 `Unable to require openssl, install OpenSSL and rebuild Ruby (preferred) or use non-HTTPS sources` 錯誤，那就先執行 `brew install openssl` 完後，重裝 ruby 並加入參數 ` --with-openssl-dir`，終端機執行指令 `rvm reinstall 2.5.3 --with-openssl-dir=/usr/local/opt/openssl`
 
 > 若已經有設定 --no-ri --no-rdoc 為預設參數，則就不需要再加上 --no-ri --no-rdoc
 
