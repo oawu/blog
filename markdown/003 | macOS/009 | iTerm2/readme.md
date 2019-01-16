@@ -4,6 +4,7 @@
 * 官網下載 - [https://www.iterm2.com/](https://www.iterm2.com/)
 * 備用載點 - [iTerm2-3_2_0.zip](https://cdn.ioa.tw/MacEnvInit/iTerm2-3_2_0.zip)
 * 解壓縮，把它移到**應用程式資料夾**，並開啟
+* 第一次開啟後，請按 `command + q` 關閉 iterm2，此時系統會跳出請你去設定權限的東西，就讓它通過就好，記得先解左下方的鎖！
 
 ## 安裝 Homebrew
 * 終端機執行指令 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -37,8 +38,8 @@
 	* `Window` > `Settings for New Windows`，Columns 調整為 `120`，Rows 調整為 `38`
 * 調整快捷鍵
 * `Keys`
-	* 游標移至最前，此組設定已經存在，快捷鍵為 `command + ←`，Action 選 `Send Hex Code`，輸入 `0x01`
-	* 游標移至最後，此組設定已經存在，只要修改 Action，快捷鍵為 `command + →`，Action 選 `Send Hex Code`，輸入 `0x05`
+	* 游標移至最前，快捷鍵為 `command + ←`，Action 選 `Send Hex Code`，輸入 `0x01`
+	* 游標移至最後，快捷鍵為 `command + →`，Action 選 `Send Hex Code`，輸入 `0x05`
 	* 切換左邊頁籤，點選 `+` 新增，快捷鍵為 `command ＋ option + ←`，Action 選 `Next Tab`
 	* 切換右邊頁籤，點選 `+` 新增，快捷鍵為 `command ＋ option + →`，Action 選 `Previous Tab`
 	* 切換左方分頁，點選 `+` 新增，快捷鍵為 `command ＋ control + ←`，Action 選 `Select Split Page on Left`
