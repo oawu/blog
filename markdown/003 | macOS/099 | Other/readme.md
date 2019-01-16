@@ -1,7 +1,23 @@
 OA 的一些零星的小筆記！
 
-# 指令筆記
+# 其他雜記
 
+## 收尾
+* 下方 Dock 排序
+  * Finder
+  * 啟動台
+  * Chrome
+  * Sublime Text
+  * iTerm
+  * Sourcetree
+  * Sequel Pro
+  * line
+  * 下載
+  * 垃圾桶
+* Finder 左邊 `位置` 將安裝過的軟體退出
+
+
+## 指令筆記
 * `pwd` - 顯示目前的位置
 * `which 指令` - 顯示此指令的位置
 * `ln -s 真實檔案 捷徑檔案` - 建立捷徑指令
