@@ -10,9 +10,14 @@ Git 是多數程式開發者會使用的版本控制工具，而 Sourcetree 則�
 
 ## 設定
 * 快捷鍵 `command + ,`
-* `General` > `Project folder` > 選擇你放專案的資料夾
-* `General` > `Terminal app` > 選擇 `iTerm2`
-* `Commit` > 下方可以填寫懶的填註解的預設文字
+* General
+        * `Project folder` 選擇你放專案的資料夾
+        * `Terminal app` 選擇 `iTerm2`
+* Accounts
+        * 按 `Add..` 新增一個帳戶，Host 選擇 `Github`，Auth Type 選擇 `Basic`，然後輸入 `帳密` 後 `Save`
+        * 點選 GitHub 帳戶，並設為 `Default`，然後將原本的 Bitbucket `Remove` 掉。
+* Commit
+        * 下方可以填寫懶的填註解的預設文字
 
 
 `#Git` `#Sourcetree` `#bitbucket` `#管控工具`
