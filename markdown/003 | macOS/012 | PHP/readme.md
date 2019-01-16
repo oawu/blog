@@ -6,29 +6,29 @@
 * 請先安裝 [Apache](../011 | Apache/)
 
 ## 安裝各版本的 PHP
-* 安裝 PHP 5.6 版本 `brew install php@5.6`
-* 安裝 PHP 7.0 版本 `brew install php@7.0`
+2019.01.16 發現，建議直接安裝最新的 PHP 或者 7.1 以上即可，5.6 與 7.0 都很容易失敗。
 * 安裝 PHP 7.1 版本 `brew install php@7.1`
-* 安裝 PHP 最新 版本 `brew install php`
+* 安裝 PHP 7.2 版本 `brew install php@7.2`
+* 安裝 PHP 最新 版本 `brew install php`，目前已經到 7.3
+
+> * 不要安裝 PHP 5.6 版本 `brew install php@5.6`，不建議安裝此版，據說已經被 [EOL](https://community.chakralinux.org/t/php-5-6-removed-due-to-being-eol/8176) 囉！  
+> * 不要安裝 PHP 7.0 版本 `brew install php@7.0`，應該也是ＧＧ惹，所以不建議安裝此版
+
 
 ## Cli 指令模式設定
-* 用 Sublime Text 2 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`
+* 用 Sublime Text 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`
 * 稍微檢查一下以下路徑是否存在後在檔案最後方新增以下內容
 
 ```
-## PHP 5.6
-#export PATH="/usr/local/opt/php@5.6/bin:$PATH"
-#export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
-
-## PHP 7.0
-#export PATH="/usr/local/opt/php@7.0/bin:$PATH"
-#export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
-
 ## PHP 7.1
 #export PATH="/usr/local/opt/php@7.1/bin:$PATH"
 #export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 
-## PHP 7
+## PHP 7.2
+#export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+#export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+
+## PHP 7(7.3)
 #export PATH="/usr/local/opt/php/bin:$PATH"
 #export PATH="/usr/local/opt/php/sbin:$PATH"
 ```
@@ -37,20 +37,19 @@
 * 然後終端機執行指令 `source ~/.zshrc`
 
 ## Apache 模式設定
-* 用 Sublime Text 2 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`
+* 用 Sublime Text 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`
 * 稍微檢查一下以下路徑是否存在後在檔案最後方加入以下內容
 
 ```
-#LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so
-#LoadModule php7_module /usr/local/opt/php@7.0/lib/httpd/modules/libphp7.so
 #LoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so
 #LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so
+#LoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so
 ```
 
 * 若要更換版本，就把 **LoadModule** 該版本註解拿掉後，重開 Apache 即可
 
 ## 設定 Apache 讀取執行 PHP
-* 用 Sublime Text 2 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`，修改以下內容
+* 用 Sublime Text 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`，修改以下內容
 
 ```
 <IfModule dir_module>
@@ -71,10 +70,11 @@
 * 重開 Apache，終端機執行指令 `sudo apachectl -k restart`
 
 ## 各版本的 php.ini
-* PHP 5.6 版本 - `/usr/local/etc/php/5.6/php.ini`
-* PHP 7.0 版本 - `/usr/local/etc/php/7.0/php.ini`
+* PHP 5.6 版本 - `/usr/local/etc/php/5.6/php.ini`(該放棄惹)
+* PHP 7.0 版本 - `/usr/local/etc/php/7.0/php.ini`(該放棄惹)
 * PHP 7.1 版本 - `/usr/local/etc/php/7.1/php.ini`
 * PHP 7.2 版本 - `/usr/local/etc/php/7.2/php.ini`
+* PHP 7.3 版本 - `/usr/local/etc/php/7.3/php.ini`
 
 ## 安裝 imagick
 * 先要安裝 **imagemagick**，終端機執行指令 `brew install imagemagick`
@@ -108,11 +108,11 @@
 * 檢查是否安裝成功，重新開啟終端機，執行指令 `composer -v`
 
 ## 重點整理
-* PHP 5.6 版本 ini 檔案 - `/usr/local/etc/php/5.6/php.ini`
-* PHP 7.0 版本 ini 檔案 - `/usr/local/etc/php/7.0/php.ini`
+* PHP 5.6 版本 ini 檔案 - `/usr/local/etc/php/5.6/php.ini`(該放棄惹)
+* PHP 7.0 版本 ini 檔案 - `/usr/local/etc/php/7.0/php.ini`(該放棄惹)
 * PHP 7.1 版本 ini 檔案 - `/usr/local/etc/php/7.1/php.ini`
 * PHP 7.2 版本 ini 檔案 - `/usr/local/etc/php/7.2/php.ini`
-* Apache 若要更換版本，就用 Sublime Text 2 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`，把 **LoadModule** 該版本註解拿掉後，重開 Apache 即可
+* Apache 若要更換版本，就用 Sublime Text 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`，把 **LoadModule** 該版本註解拿掉後，重開 Apache 即可
 * Cli 要切換版本的話，就用 Sublime Text 2 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`，把要的版本註解拿掉，然後終端機執行指令 `source ~/.zshrc` 即可
 
 `#PHP` `#後端`
