@@ -16,6 +16,12 @@ BetterTouchTool 是一款可以修改系統操作的工具，例如視窗控制�
 	* 快捷鍵 `option + command + 上`，設定為 `Maximize Window to Next Monitor`
 	* 快捷鍵 `option + command + 下`，設定為 `Maximize Window to Next Monitor`
 
+
+* 選擇 `Simple` > `Gestures` > `Normal Mice`
+* 點選 `+ Add New Button`
+	* 感應區內，按下滑鼠 `滾輪往左`，然後下方勾選 `cmd`，最後 Predefined Action 選擇 `3F Swipe Left(Page Back)`
+	* 感應區內，按下滑鼠 `滾輪往右`，然後下方勾選 `cmd`，最後 Predefined Action 選擇 `3F Swipe Right(Page Forward)`
+
 ## 授權
 * 打開 Gmail，搜尋 `bettertouchtool license mail`，點選 `http://lostlicense.boastr.net` 鏈結，輸入信箱，下載 License
 * 點選右上角的 `About` > `Buy/Register BetterTouchTool now` > `Load Existing License` > `Import License file`，選擇剛剛下載的 License 檔案
