@@ -25,6 +25,6 @@
 > `update user set password=PASSWORD("1234") where User='root';`
 
 ### 相關參考
-* [北http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx)
+* [http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx](http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx)
 
 `#MySQL` `#後端`
