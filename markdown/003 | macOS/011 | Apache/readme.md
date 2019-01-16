@@ -24,13 +24,13 @@
 	* 拿掉註解，並改成 `ServerName localhost`
 	* 拿掉註解 `Include /usr/local/etc/httpd/extra/httpd-vhosts.conf`
 	* 為了之後方便常常設定，不用每次輸入密碼，開啟終端機，輸入指令 `sudo chmod 777 /usr/local/etc/httpd/httpd.conf` 將權限打開
-	* 為了之後方便常常設定，所以建立一個鏈結，開啟終端機，輸入指令 `ln -s /usr/local/etc/httpd/httpd.conf /Users/oa/Documents/httpd.conf`
+	* 為了之後方便常常設定，所以建立一個鏈結，開啟終端機，輸入指令 `ln -s /usr/local/etc/httpd/httpd.conf ~/Documents/httpd.conf`
 * 重開 Apache `sudo apachectl -k restart`
 
 ## 設定 Host
 * 位置在 `/etc/hosts`
 * 為了之後方便常常設定，不用每次輸入密碼，終端機執行指令 `sudo chmod 777 /etc/hosts` 將權限打開
-* 為了之後方便常常設定，所以建立一個鏈結，終端機執行指令 `ln -s /etc/hosts /Users/oa/Documents/hosts`
+* 為了之後方便常常設定，所以建立一個鏈結，終端機執行指令 `ln -s /etc/hosts ~/Documents/hosts`
 * 用 Sublime Text 打開編輯 `/etc/hosts`，終端機執行指令 `subl /etc/hosts`，將內容調整一下，常用內容如下：
 
 ```
@@ -40,7 +40,7 @@
 ## 設定 Virtual Host
 * 位置在 `/usr/local/etc/httpd/extra/httpd-vhosts.conf`
 * 為了之後方便常常設定，不用每次輸入密碼，開啟終端機，輸入指令 `sudo chmod 777 /usr/local/etc/httpd/extra/httpd-vhosts.conf` 將權限打開
-* 為了之後方便常常設定，所以建立一個鏈結，開啟終端機，輸入指令 `ln -s /usr/local/etc/httpd/extra/httpd-vhosts.conf /Users/oa/Documents/httpd-vhosts.conf`
+* 為了之後方便常常設定，所以建立一個鏈結，開啟終端機，輸入指令 `ln -s /usr/local/etc/httpd/extra/httpd-vhosts.conf ~/Documents/httpd-vhosts.conf`
 * 用 Sublime Text 打開編輯 `/usr/local/etc/httpd/extra/httpd-vhosts.conf`，終端機執行指令 `subl /usr/local/etc/httpd/extra/httpd-vhosts.conf`，將內容調整一下，常用內容如下：
 
 ```
@@ -71,6 +71,10 @@
   </Directory>
 </VirtualHost>
 ```
+
+* 設定好後，記得重開 Apache，終端機執行指令 `sudo apachectl -k restart`
+
+> 請注意路徑，此 `vhosts.conf` 的 `DocumentRoot` 與 `Directory` 路徑為 OA 本人的，請注意自己的路徑是否正確。
 
 ## 重點整理
 * Conf 位置 `/usr/local/etc/httpd/httpd.conf`
