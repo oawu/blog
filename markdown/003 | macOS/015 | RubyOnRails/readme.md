@@ -44,6 +44,7 @@ gem: --no-ri --no-rdoc
 
 ## 安裝 Bundler
 * 終端機執行指令 `gem install bundler --no-ri --no-rdoc`，這邊也可能會有點久，別緊張 :joy:
+* 若有發生 `Unable to require openssl, install OpenSSL and rebuild Ruby (preferred) or use non-HTTPS sources` 錯誤，那加入參數 ` --with-openssl-dir` 就重裝 ruby，終端機執行指令 `rvm reinstall 2.1.3 --with-openssl-dir=/usr/local/opt/openssl`
 
 > 若已經有設定 --no-ri --no-rdoc 為預設參數，則就不需要再加上 --no-ri --no-rdoc
 
