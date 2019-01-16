@@ -11,7 +11,7 @@ Sequel Pro 是多數 macOS 程式開發者會使用的 MySQL 管理工具，使�
 * 點選左下 `+` 輸入 `Localhost`
 * Host 輸入 `127.0.0.1`
 * Username 輸入 `root`
-* Password 輸入剛剛 [MySQL](../013 | MySQL) 設定的密碼
+* Password 輸入剛剛 [MySQL](../011 | MySQL) 設定的密碼
 * 先點選 `Test Connection` 測試是否可以成功
 * 若是 `Connection Succeeded` 則是成功
 * 儲存點選 `Save change`

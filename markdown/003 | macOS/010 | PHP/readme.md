@@ -3,7 +3,7 @@
 # macOS 上安裝 PHP 語言
 
 ## 安裝前準備
-* 請先安裝 [Apache](../011 | Apache/)
+* 請先安裝 [Apache](../009 | Apache/)
 
 ## 安裝各版本的 PHP
 2019.01.16 發現，建議直接安裝最新的 PHP 或者 7.1 以上即可，5.6 與 7.0 都很容易失敗。
@@ -113,6 +113,6 @@
 * PHP 7.1 版本 ini 檔案 - `/usr/local/etc/php/7.1/php.ini`
 * PHP 7.2 版本 ini 檔案 - `/usr/local/etc/php/7.2/php.ini`
 * Apache 若要更換版本，就用 Sublime Text 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`，把 **LoadModule** 該版本註解拿掉後，重開 Apache 即可
-* Cli 要切換版本的話，就用 Sublime Text 2 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`，把要的版本註解拿掉，然後終端機執行指令 `source ~/.zshrc` 即可
+* Cli 要切換版本的話，就用 Sublime Text 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`，把要的版本註解拿掉，然後終端機執行指令 `source ~/.zshrc` 即可
 
 `#PHP` `#後端`

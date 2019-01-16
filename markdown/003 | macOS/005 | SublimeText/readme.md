@@ -38,7 +38,7 @@
 * 將下載的檔案複製到 `User` 資料夾
 
 ### 安裝指令  
-* 打開 `iTerm2` 終端機(若尚未安裝 `iTerm2` 請先參考 [此篇](../009 | iTerm2) 安裝)，建立 bin 目錄執行指令 `mkdir ~/bin`
+* 打開 `iTerm2` 終端機(若尚未安裝 `iTerm2` 請先參考 [此篇](../004 | iTerm2) 安裝)，建立 bin 目錄執行指令 `mkdir ~/bin`
 * 打開終端機，輸入指令 `ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl  ~/bin/subl`
 * 打開 Finder，然後快捷鍵 `command + shift + g` 輸入 `~/.zshrc`，拖曳至 Sublime Text 編輯
 * 在檔案最下面新增 `export PATH=$PATH:$HOME/bin`
@@ -94,7 +94,7 @@
 * 將下載的檔案複製到 `User` 資料夾，將原本的 `Default (OSX).sublime-keymap` 取代
 
 ### 安裝指令  
-* 打開 `iTerm2` 終端機(若尚未安裝 `iTerm2` 請先參考 [此篇](../009 | iTerm2) 安裝)，建立 bin 目錄執行指令 `mkdir ~/bin`
+* 打開 `iTerm2` 終端機(若尚未安裝 `iTerm2` 請先參考 [此篇](../004 | iTerm2) 安裝)，建立 bin 目錄執行指令 `mkdir ~/bin`
 * 打開終端機，輸入指令 `ln -s /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl ~/bin/subl`
 * 用 Sublime Text 2 打開編輯 `~/.zshrc`
 * 在檔案最下面新增 `export PATH=$PATH:$HOME/bin`

@@ -9,7 +9,7 @@
 * 若 `系統偏好設定` 裡面沒看到 `MySQL` 的話，請重開 `系統偏好設定`
 
 ## 加入指令  
-* 用 Sublime Text 2 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`
+* 用 Sublime Text 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`
 * 在檔案最下面新增 `export PATH="/usr/local/mysql/bin:$PATH"`
 * 重開終端機
 
