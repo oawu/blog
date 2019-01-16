@@ -1,4 +1,4 @@
-BetterTouchTool 是一款可以修改系統操作的工具，例如視窗控制等。不過目前已經要收費囉！
+BetterTouchTool 是一款可以修改系統操作的工具，例如視窗控制等。不過目前已經要收費囉，所以各位自己可以斟酌是否使用！
 
 # macOS 必裝的輔助工具 BetterTouchTool
 * 官網下載 - [https://folivora.ai/](https://folivora.ai/)
