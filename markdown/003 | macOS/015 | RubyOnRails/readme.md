@@ -8,7 +8,6 @@
 * 官方網站 - [https://rvm.io/](https://rvm.io/)
 * 終端機執行指令 `curl -L https://get.rvm.io | bash -s stable`
 * 檢查是否安裝成功，重新開啟終端機，執行指令 `rvm -v`
-* 用 Sublime Text 2 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`
 
 ## RVM 使用範例  
 ```
