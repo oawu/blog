@@ -1,6 +1,11 @@
 在 macOS 下安裝 MySQL 資料庫，並且基本的設定 root 密碼。
 
 # macOS 上安裝 MySQL
+
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=xRyxQ1qmj2c](https://www.youtube.com/watch?v=xRyxQ1qmj2c)
+
+## 安裝步驟
 * 頁面下方 `No thanks, just start my download.` 點擊下載 - [http://dev.mysql.com/downloads/file.php?id=454017](http://dev.mysql.com/downloads/file.php?id=454017)
 * 備用載點 - [mysql-5.6.21-osx10.9-x86_64.dmg](https://cdn.ioa.tw/MacEnvInit/mysql-5.6.21-osx10.9-x86_64.dmg)
 * 對 `mysql-5.6.21-osx10.9-x86_64.dmg` 點擊兩下進行安裝，點擊兩下 `mysql-5.6.21-osx10.8-x86_64.pkg` 開始安裝

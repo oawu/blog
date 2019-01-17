@@ -2,13 +2,16 @@
 
 # macOS 上安裝 Sublime Text 文字編輯器
 
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=nPlPOmX1aME](https://www.youtube.com/watch?v=nPlPOmX1aME)
+
 ## Sublime Text 3
 * 官網下載 - [https://www.sublimetext.com/3](https://www.sublimetext.com/3)
 * 下載來後，就移到**應用程式資料夾**，並開啟
 
 ### 啟用 Packages
 * 官方網站介紹 - [https://packagecontrol.io/installation#st3](https://packagecontrol.io/installation#st3)
-* 打開 Sublime Text，按下 ctrl + `
+* 打開 Sublime Text，按下 <code>ctrl + `</code>
 * 輸入官網給的那串文字 `import urllib.request,os,hashl...` 的(請至官網複製)，然後重開 Sublime Text
 
 ### 安裝套件

@@ -1,6 +1,11 @@
 用不慣 macOS 原生的終端機嗎？可以試試 iTerm2，並且搭配 Zsh 的主題套件，讓你在指令模式上操作更為順暢喔！
 
 # macOS 開發者必安裝的終端機 - iTerm2
+
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=4A3L1kJ6q5Q](https://www.youtube.com/watch?v=4A3L1kJ6q5Q)
+
+## 安裝步驟
 * 官網下載 - [https://www.iterm2.com/](https://www.iterm2.com/)
 * 備用載點 - [iTerm2-3_2_0.zip](https://cdn.ioa.tw/MacEnvInit/iTerm2-3_2_0.zip)
 * 解壓縮，把它移到**應用程式資料夾**，並開啟

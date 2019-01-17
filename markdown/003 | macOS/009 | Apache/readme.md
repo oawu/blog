@@ -1,6 +1,10 @@
 本機開發者又不想架設 VM 怎麼辦？那就直接在 macOS 下安裝 Apache 吧！
 
 # macOS 上安裝 Apache
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=V32zn8xtGnM](https://www.youtube.com/watch?v=V32zn8xtGnM)
+
+## 安裝步驟
 * 更新 xcode command line，終端機下 `xcode-select --install`
 * 更新 Brew `brew update`
 * 移除停止使用 mac 原生的 Apache

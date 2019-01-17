@@ -2,6 +2,10 @@ Sequel Pro 是多數 macOS 程式開發者會使用的 MySQL 管理工具，使�
 
 # macOS 上安裝 Sequel Pro 資料庫管理介面
 
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=xRyxQ1qmj2c](https://www.youtube.com/watch?v=xRyxQ1qmj2c)
+
+## 安裝步驟
 * 官網下載 - [https://sequelpro.com/download](https://sequelpro.com/download)
 * 備用載點 - [sequel-pro-1.1.2.dmg](https://cdn.ioa.tw/MacEnvInit/sequel-pro-1.1.2.dmg)
 * 把它移到**應用程式資料夾**，並開啟

@@ -1,6 +1,10 @@
 在 macOS 作業系統上安裝 Ruby on Rails，並且依序安裝 RVM、Ruby、RubyGems、Rails.. 等。
 
 # macOS 上安裝 Ruby on Rails
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=sQ5WyNwGhuE](https://www.youtube.com/watch?v=sQ5WyNwGhuE)
+
+## 安裝之前
 * 更新 macOS，點選左上角 `` > `關於這台 Mac` > `軟體更新...`
 * 安裝更新 `xcode`
 

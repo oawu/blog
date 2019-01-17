@@ -4,6 +4,9 @@ OA 個人的 macOS 環境配置與操作習慣設定。
 * 環境 macOS MoJave 10.14.2
 * 這一版本的主要特色就是桌布會隨時間改變，並且有黑主題ＸＤ
 
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=WyucHMsF6_A](https://www.youtube.com/watch?v=WyucHMsF6_A)
+
 ## App Store
 * 重新設定國籍  
 * 下載安裝 Xcode - [https://itunes.apple.com/tw/app/xcode/id497799835?mt=12](https://itunes.apple.com/tw/app/xcode/id497799835?mt=12)

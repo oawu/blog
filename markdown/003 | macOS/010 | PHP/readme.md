@@ -5,6 +5,9 @@
 ## 安裝前準備
 * 請先安裝 [Apache](../009 | Apache/)
 
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=AV_6pXd-Crk](https://www.youtube.com/watch?v=AV_6pXd-Crk)
+
 ## 安裝各版本的 PHP
 2019.01.16 發現，建議直接安裝最新的 PHP 或者 7.1 以上即可，5.6 與 7.0 都很容易失敗。
 * 安裝 PHP 7.1 版本 `brew install php@7.1`

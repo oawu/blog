@@ -2,6 +2,9 @@ OA 的一些零星的小筆記！
 
 # 其他雜記
 
+## Youtube 影音教學版
+* [https://www.youtube.com/watch?v=nIf-_9mTGOg](https://www.youtube.com/watch?v=nIf-_9mTGOg)
+
 ## 收尾
 * 下方 Dock 排序
   * Finder
