@@ -38,7 +38,7 @@
 
 ## Apache 模式設定
 * 用 Sublime Text 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`
-* 稍微檢查一下以下路徑是否存在後在檔案最後方加入以下內容
+* 搜尋一下檔案內的 LoadModule 都擺在哪邊，將以下內容擺在 LoadModule 區塊的後面，不要直接放在檔案最後面，會有順序性的問題。
 
 ```
 #LoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so
