@@ -6,7 +6,7 @@
 * [https://www.youtube.com/watch?v=xRyxQ1qmj2c](https://www.youtube.com/watch?v=xRyxQ1qmj2c)
 
 ## 安裝步驟
-* 頁面下方 `No thanks, just start my download.` 點擊下載 - [http://dev.mysql.com/downloads/file.php?id=454017](http://dev.mysql.com/downloads/file.php?id=454017)
+* [官網頁面](http://dev.mysql.com/downloads/file.php?id=454017)下方 `No thanks, just start my download.`
 * 備用載點 - [mysql-5.6.21-osx10.9-x86_64.dmg](https://cdn.ioa.tw/MacEnvInit/mysql-5.6.21-osx10.9-x86_64.dmg)
 * 對 `mysql-5.6.21-osx10.9-x86_64.dmg` 點擊兩下進行安裝，點擊兩下 `mysql-5.6.21-osx10.8-x86_64.pkg` 開始安裝
 * :exclamation: 若是 OSX 10.10 以上，請在 `安裝類型` 的步驟時點擊 `自訂`，把 `Startup Item` 選項 `取消勾選`！
