@@ -9,7 +9,7 @@
 * [官網頁面](http://dev.mysql.com/downloads/file.php?id=454017)下方 `No thanks, just start my download.`
 * 備用載點 - [mysql-5.6.21-osx10.9-x86_64.dmg](https://cdn.ioa.tw/MacEnvInit/mysql-5.6.21-osx10.9-x86_64.dmg)
 * 對 `mysql-5.6.21-osx10.9-x86_64.dmg` 點擊兩下進行安裝，點擊兩下 `mysql-5.6.21-osx10.8-x86_64.pkg` 開始安裝
-* :exclamation: 若是 OSX 10.10 以上，請在 `安裝類型` 的步驟時點擊 `自訂`，把 `Startup Item` 選項 `取消勾選`！
+* ‼️若是 OSX 10.10 以上，請在 `安裝類型` 的步驟時點擊 `自訂`，把 `Startup Item` 選項 `取消勾選`！
 * 安裝完成後，打開 `系統偏好設定` > `MySQL` > `Start MySQL Server`
 * 若 `系統偏好設定` 裡面沒看到 `MySQL` 的話，請重開 `系統偏好設定`
 
