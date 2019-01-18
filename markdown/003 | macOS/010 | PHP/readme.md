@@ -115,6 +115,7 @@
 * PHP 7.0 版本 ini 檔案 - `/usr/local/etc/php/7.0/php.ini`(該放棄惹)
 * PHP 7.1 版本 ini 檔案 - `/usr/local/etc/php/7.1/php.ini`
 * PHP 7.2 版本 ini 檔案 - `/usr/local/etc/php/7.2/php.ini`
+* PHP 7.3 版本 ini 檔案 - `/usr/local/etc/php/7.3/php.ini`
 * Apache 若要更換版本，就用 Sublime Text 打開編輯 `/usr/local/etc/httpd/httpd.conf`，終端機執行指令 `subl /usr/local/etc/httpd/httpd.conf`，把 **LoadModule** 該版本註解拿掉後，重開 Apache 即可
 * Cli 要切換版本的話，就用 Sublime Text 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`，把要的版本註解拿掉，然後終端機執行指令 `source ~/.zshrc` 即可
 
