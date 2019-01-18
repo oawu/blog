@@ -81,7 +81,7 @@
 
 ## 安裝 imagick
 * 先要安裝 **imagemagick**，終端機執行指令 `brew install imagemagick`
-* :exclamation: 請先將 Cli 的 php 切換到指定的版本，可以用 `php -v` 檢查目前 Cli 的 php 版本
+* ‼️請先將 Cli 的 php 切換到指定的版本，可以用 `php -v` 檢查目前 Cli 的 php 版本
 * 終端機執行指令 `pecl install imagick`，中間有個 `Please provide the prefix of Imagemagick installation [autodetect]`，直接按 `enter` 即可
 * 結果若是失敗如果出現 `configure: error: Please reinstall the pkg-config distribution`，那就終端機執行指令 `brew reinstall pkg-config` 後再執行 `pecl install imagick` 即可
 * 檢查該版本的 `php.ini` 內是否有 `extension="imagick.so"`
@@ -90,7 +90,7 @@
 
 ## 安裝 redis
 * 先要安裝 **redis**，終端機執行指令 `brew install redis`
-* :exclamation: 請先將 Cli 的 php 切換到指定的版本，可以用 `php -v` 檢查目前 Cli 的 php 版本
+* ‼️請先將 Cli 的 php 切換到指定的版本，可以用 `php -v` 檢查目前 Cli 的 php 版本
 * 終端機執行指令 `pecl install redis`，中間有個 `enable igbinary serializer support? [no] :` 與 `enable lzf compression support? [no] :`，都直接按 `enter` 即可
 * 結果若是失敗如果出現 `configure: error: Please reinstall the pkg-config distribution`，那就終端機執行指令 `brew reinstall pkg-config` 後再執行 `pecl install redis` 即可
 * 檢查該版本的 `php.ini` 內是否有 `extension="redis.so"`
