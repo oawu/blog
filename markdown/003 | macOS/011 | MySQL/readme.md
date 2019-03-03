@@ -13,6 +13,9 @@
 * 安裝完成後，打開 `系統偏好設定` > `MySQL` > `Start MySQL Server`
 * 若 `系統偏好設定` 裡面沒看到 `MySQL` 的話，請重開 `系統偏好設定`
 
+## 變更啟動鈕權限
+* 每次啟動 MySQL 都要輸入密碼，很麻煩，所以變更一下權限，終端機輸入指令 `sudo chmod 777 /usr/local/mysql/support-files/mysql.server`
+
 ## 加入指令  
 * 用 Sublime Text 打開編輯 `~/.zshrc`，終端機執行指令 `subl ~/.zshrc`
 * 在檔案最下面新增 `export PATH="/usr/local/mysql/bin:$PATH"`
