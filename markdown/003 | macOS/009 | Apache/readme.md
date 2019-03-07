@@ -80,11 +80,58 @@
 
 > 請注意路徑，此 `vhosts.conf` 的 `DocumentRoot` 與 `Directory` 路徑為 OA 本人的，請注意自己的路徑是否正確。
 
+## 設定 https 的 ssl 功能
+此功能一般來說不太會用到，所以不一定要安裝，不需要的話直接跳過即可！
+
+因為通常都是本機開發，所以就藉由 openssl 來做本機開發吧！
+
+* 編輯 Conf，指令輸入 `subl /usr/local/etc/httpd/httpd.conf`
+* 將以下三個註解拿掉
+
+```
+LoadModule socache_shmcb_module lib/httpd/modules/mod_socache_shmcb.so
+```
+
+```
+LoadModule ssl_module lib/httpd/modules/mod_ssl.so
+```
+
+```
+Include /usr/local/etc/httpd/extra/httpd-ssl.conf
+```
+
+* 編輯 SSL Conf，指令輸入 `subl /usr/local/etc/httpd/extra/httpd-ssl.conf`
+* 將 `Listen 8443` 改為 `Listen 443`
+* 將 `<VirtualHost _default_:8443>` 改為 `<VirtualHost _default_:443>`
+* 將 `DocumentRoot` 與 `ServerName` 註解
+* 編輯 vhost，指令輸入 `subl /usr/local/etc/httpd/extra/httpd-vhosts.conf`
+* 新增以下
+
+```
+<VirtualHost *:443>
+    DocumentRoot "/Users/oa/www"
+    ServerName localhost
+    SSLEngine on
+    SSLCertificateFile "/usr/local/etc/httpd/server.crt"
+    SSLCertificateKeyFile "/usr/local/etc/httpd/server.key"
+</VirtualHost>
+```
+
+* 第一次設定，需要產生 key，所以要執行 openssl
+* 終端機進入目錄，指令 `cd /usr/local/etc/httpd`
+* 產生 ssl key，指令 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt`，中間要你輸入資料，因為是本機開發，所以簡單輸入即可
+* 執行 `sudo apachectl configtest`
+* 重新啟動 `sudo apachectl -k restart`
+
 ## 重點整理
 * Conf 位置 `/usr/local/etc/httpd/httpd.conf`
 * Vhosts 位置 `/usr/local/etc/httpd/extra/httpd-vhosts.conf`
 * 開啟 Apache，終端機執行指令 `sudo apachectl start`
 * 關閉 Apache，終端機執行指令 `sudo apachectl stop`
 * 重開 Apache，終端機執行指令 `sudo apachectl -k restart`
+
+
+### 相關參考
+* [https://getgrav.org/blog/macos-mojave-apache-ssl](https://getgrav.org/blog/macos-mojave-apache-ssl)
 
 `#Apache` `#後端`
