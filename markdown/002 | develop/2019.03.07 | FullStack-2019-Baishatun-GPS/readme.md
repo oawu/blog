@@ -126,3 +126,4 @@ Api.post.location { json in
 * [http://mchoe.github.io/SwiftSVG/](http://mchoe.github.io/SwiftSVG/)
 * [https://github.com/Alamofire/Alamofire](https://github.com/Alamofire/Alamofire)
 
+`#Google Maps` `#GPS` `#白沙屯` `#媽祖` `#iOS` `#Swift` `#HUD` `#App` `#Alamofire` `#AFNetworking`

@@ -25,4 +25,4 @@
 ### 相關參考
 * [GitHub 原始碼](https://github.com/comdan66/baishatun)
 
-`#Google Maps` `#GPS` `白沙屯` `媽祖`
+`#Google Maps` `#GPS` `#白沙屯` `#媽祖`
