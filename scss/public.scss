@@ -802,7 +802,9 @@ article.panel {
       float: left;
       display: inline-block;
       margin: 2px 4px;
-      padding: 1px 2px;
+      padding: 0 2px;
+      height: 21px;
+      line-height: 21px;
       cursor: pointer;
       text-decoration: none;
       color: rgba(100, 100, 100, 1);
