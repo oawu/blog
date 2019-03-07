@@ -7,19 +7,25 @@
 
 這個專案每年從的資訊工程幾乎都是由我完成的，以下就是這次我個人完成的項目：
 
-* 後端程式碼 - PHP
-* AWS 系統架設
-	* EC2 - 後端伺服器
-	* RDS - 資料庫
-	* S3 - 雲端空間
-	* CloudFront - CDN
-	* Certificate Manager - 憑證管理
+* 後端程式碼 - [PHP](https://zh.wikipedia.org/zh-tw/PHP)
+* [AWS](https://aws.amazon.com/tw/) 系統架設
+	* [EC2](https://aws.amazon.com/tw/ec2/) - 後端伺服器
+	* [RDS](https://aws.amazon.com/tw/rds/) - 資料庫
+	* [S3](https://aws.amazon.com/tw/s3/) - 雲端空間
+	* [CloudFront](https://aws.amazon.com/tw/cloudfront/) - CDN
+	* [Certificate Manager](https://aws.amazon.com/tw/certificate-manager/) - 憑證管理
 * GPS 訊號後台收集與校正
 * 前端網頁地圖功能
 
 都是一個人完成，而這次也加入了開發 iOS App，其實成就感頗高！所以這篇會著重在 iOS Swift 的學習心得，若要看其他部分也可以參考[2016 的心得](../2016.03.15 | FullStack-2016-Baishatun-GPS)！
 
+廢話不多說。寫 App，當然是直接先給鏈結下載呀，有興趣的夥伴歡迎下載囉！
 
+* App - [白沙屯 GPS](https://itunes.apple.com/tw/app/id1455045995)
+* 網站 - [2019 白沙屯 GPS](https://gps.godmaps.tw/)
+* 粉專 - [白沙屯媽祖在哪裡？](https://www.facebook.com/baishatunGPS/)
+
+### 開發心得
 回想起當初想學 App 已經是三年前了，當初還是寫 Object-C，但因為本身工作是專職的網站前後端工程師，所以一直沒有時間好好的專研，頂多就是想到就寫個小 App，了解一下推播、Watch App.. 等，但都一直沒上架過，所以就默默的繳了三年的開發者費用，這就是信仰！？（疑）
 
 在今年，我終於上架了我第一個 App
