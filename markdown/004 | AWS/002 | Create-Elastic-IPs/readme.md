@@ -1,4 +1,4 @@
-# 綁定 Elastic IPs
+# AWS Elastic IPs
 
 每次重開 EC2 都會變換 Public IP，然後都要重新設定 DNS(Domain Name Server)，還要等他生肖，實在有點兒麻煩，所以我們可以設定 `Elastic IPs`，藉由聲請一個 Elastic IPs，然後關聯指定的 EC2 Instance，如此一來只要控制指向，IP 就不會一直亂變囉。
 
