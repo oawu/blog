@@ -1,6 +1,6 @@
 # EC2 上的 Ubuntu
 
-* 以下會教學新的 Ubuntu 常用的幾項基本設定，主要有 `Git`、`Zsh`、`SSH`、`Let's Encrypt` 設定。
+* 以下會教學新的 Ubuntu 常用的幾項基本設定，主要有 `Git`、`Zsh`、`SSH` 設定。
 * 經過設定 `Elastic IPs` 後，我們就可以藉由其 IP 與下載的 .pem 檔案做第一次的 ssh 連線遠端登入 Server
 
 ## 假設
@@ -59,115 +59,10 @@
 * 如此一來，你就不用每次都要藉由 `test.pem` 的方式登入，但也記得請好好的保存 `test.pem`
 
 
-
-
-
-
-
-
-
-
-## Let's Encrypt(ssl)
-
-* 安裝 curl，指令 `sudo apt install curl`
-* 進入 www 目錄，指令 `cd ~/www`
-* 從 Git 下載最新 dehydrated，指令 `git clone https://github.com/lukas2511/dehydrated.git`
-* 進入專案，指令 `cd dehydrated`
-* 新增目錄，指令 `sduo mkdir /etc/dehydrated/`
-* 修改權限，指令 `sudo chmod 777 /etc/dehydrated/`
-* 將檔案移進去，指令 `cp dehydrated /etc/dehydrated/`
-* 修改 dehydrated 權限 `chmod a+x /etc/dehydrated/dehydrated`
-* 建立證驗時所需目錄，指令 `mkdir -p /var/www/dehydrated/`
-
-* 第一次執行同意 Let's Encrypt 的條款，指令 `/etc/dehydrated/dehydrated --register --accept-terms`
-
-
-## 新增 SSL by Let's Encrypt
-* 以下用 ``
-* Apache
-  * 在該專案下的 `http` vhost 內，加入指令 `Alias /.well-known/acme-challenge/ /var/www/dehydrated/`
-
-* nginx
-  * 在該專案下的 `http` vhost 中的 server 內加入以下指令：
-
-```
-location /.well-known/acme-challenge/ {
-    alias /var/www/dehydrated/;
-}
-```
-
-* 重新載入 Apache 設定，指令：`sudo systemctl reload apache2`
-
-* 取得憑證 `/etc/dehydrated/dehydrated -c -d your.url.tw`
-
-
-## 啟用 Apache SSL 功能
-
-* 指令：`sudo a2enmod ssl`
-
-* 複製一份 ssl vhost 檔案指令 `sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/my-ssl.conf`
-
-* 啟用 `my-ssl.conf`，指令：`sudo a2ensite my-ssl.conf`
-
-* 重新載入 Apache 設定，指令：`sudo systemctl reload apache2`
-
-* 編輯 `my-ssl.conf`，指令：`sudo nano /etc/apache2/sites-available/my-ssl.conf`，可以用以下當範例：
-
-```
-<IfModule mod_ssl.c>
-
-  <VirtualHost _default_:443>
-    # 你的 Domain
-    ServerName  your.url.tw
-    ServerAlias your.url.tw
-
-    # 你的 E-Mail
-    ServerAdmin your.email@gmail.com
-
-    # 你的專案目錄
-    DocumentRoot /var/www
-
-    # Log 的儲存位置
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-	
-	 ## SSL 設定
-    SSLEngine on
-    SSLCertificateFile /etc/dehydrated/certs/your.url.tw/cert.pem
-    SSLCertificateKeyFile /etc/dehydrated/certs/your.url.tw/privkey.pem
-    SSLCertificateChainFile /etc/dehydrated/certs/your.url.tw/chain.pem
-
-    # 記得也要是你的專案目錄
-    <Directory /var/www>
-      Options FollowSymLinks MultiViews
-      AllowOverride All
-      Order allow,deny
-      Allow from all
-    </Directory>
-  </VirtualHost>
-
-</IfModule>
-```
-
-* 重啟 Apache 即可，指令：`sudo service apache2 restart`
-
-* 若出現以下錯誤，代表你還沒申請 ssl 的憑證檔案，所以出錯。
-
-```
-Job for apache2.service failed because the control process exited with error code.
-See "systemctl status apache2.service" and "journalctl -xe" for details.
-```
-
-* 所以，先把 `my-ssl.conf` 停用再重開 Apache，指令：`sudo a2dissite my-ssl.conf`
-* 重新載入 Apache 設定，指令：`sudo systemctl reload apache2`
-* 重啟 Apache 即可，指令：`sudo service apache2 restart`
-* 然後 執行上述的 `新增 SSL by Let's Encrypt`
-
-
 ## 以上參考：
 
 * [http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html](http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html)
 
 * [https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/](https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/)
 
-`#AWS` `#EC2` `#Git` `#Zsh` `#SSH` `#Let's Encrypt` `#https`
+`#AWS` `#EC2` `#Git` `#Zsh` `#SSH`
