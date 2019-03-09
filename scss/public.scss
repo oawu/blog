@@ -1116,9 +1116,9 @@ section.md {
 
   > *:not(pre) {
     code {
-      display: inline-block;
       // display: inline-block;
-      padding: 1px 4px;
+      // display: inline-block;
+      padding: 0 4px;
       padding-bottom: 2px;
       border: 1px solid rgba(220, 220, 220, 1.00);
       background-color: rgba(243, 244, 244, 1.00);
