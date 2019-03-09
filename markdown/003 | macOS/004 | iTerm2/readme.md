@@ -53,4 +53,4 @@
 	* 切換下方分頁，點選 `+` 新增，快捷鍵為 `command ＋ control + ↑`，Action 選 `Select Split Page on Below`
 
 
-`#iTerm2` `#終端機`
+`#iTerm2` `#終端機` `#Zsh` `#SSH`

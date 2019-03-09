@@ -20,11 +20,12 @@ abstract class Menu {
       ArticleIndex::create('001 | index',    'icon-d',  '網站首頁', '網站首頁'),
           Articles::create('002 | Develop',  'icon-e',  '開發心得', '前後端的實作心得，相關資訊技術研究筆記。'),
           Articles::create('003 | macOS',    'icon-1b', '蘋果環境', 'MacOS 重灌完後，開發環境的建置。', 'asc'),
-          Articles::create('004 | Mazu',     'icon-1a', '鄉土北港', '不只是熱情也不僅僅是信仰，更是一種習慣、參與感、責任感。'),
-          Articles::create('005 | Blog',     'icon-1e', '生活文章', '現在還流行部落格嗎？不管，我就是想寫！'),
-          Articles::create('006 | Unboxing', 'icon-f',  '開箱文章', 'OA 的玩具開箱文，意外與驚喜的收納盒。'),
-          Articles::create('007 | Food',     'icon-1f', '景點美食', '吃吃走走、走走吃吃，到處吃吃喝喝的筆記本。'),
-            Albums::create('008 | Album',    'icon-14', '生活相簿', '點點滴滴，喜歡用相簿紀錄每次精彩的活動。'),
+          Articles::create('004 | AWS',      'icon-22', 'AWS 筆記', 'Amazon Web Services(AWS) 雲端運算服務學習心得筆記！', 'asc'),
+          Articles::create('005 | Mazu',     'icon-1a', '鄉土北港', '不只是熱情也不僅僅是信仰，更是一種習慣、參與感、責任感。'),
+          Articles::create('006 | Blog',     'icon-1e', '生活文章', '現在還流行部落格嗎？不管，我就是想寫！'),
+          Articles::create('007 | Unboxing', 'icon-f',  '開箱文章', 'OA 的玩具開箱文，意外與驚喜的收納盒。'),
+          Articles::create('008 | Food',     'icon-1f', '景點美食', '吃吃走走、走走吃吃，到處吃吃喝喝的筆記本。'),
+            Albums::create('009 | Album',    'icon-14', '生活相簿', '點點滴滴，喜歡用相簿紀錄每次精彩的活動。'),
     ]));
 
     SingleItem::initAll('AllJson', 'Search', 'License', 'Sitemap', 'Robots', 'GoogleVerification', 'Page404');
