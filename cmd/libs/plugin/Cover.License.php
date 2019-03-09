@@ -14,7 +14,7 @@ class License extends SingleItem {
     static::$article = Article::init(PATH_MARKDOWN . static::id() . ' | ' . static::fileName() . DIRECTORY_SEPARATOR, static::fileName(), [], null);
   }
 
-  protected static function id() { return '009'; }
+  protected static function id() { return '010'; }
   protected static function uris() { return []; }
   protected static function format() { return 'html'; }
   protected static function fileName() { return 'license'; }
