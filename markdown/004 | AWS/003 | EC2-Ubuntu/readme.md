@@ -44,6 +44,11 @@
 * 設定本地區域，輸入指令：`sudo timedatectl set-timezone Asia/Taipei`
 * 校正時間，檢查時間與本地端(你的電腦)是否正確，輸入指令：`timedatectl`
 
+## 排程時間
+
+* 指令輸入 `sudo dpkg-reconfigure tzdata`，選擇時區
+* 重新啟動排程 `sudo service cron restart`
+
 ## 設定語系
 * 設定中文語系，沒設定會有亂碼，指令：`sudo locale-gen zh_TW.UTF-8`
 

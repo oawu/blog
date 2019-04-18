@@ -66,6 +66,11 @@
 
 * 重啟 Apache 即可，指令：`sudo service apache2 restart`
 
+## 打開 rewrite mode
+
+* 指令輸入 `sudo a2enmod rewrite`
+* 重新開啟 `sudo service apache2 restart`
+
 ## 以上參考：
 * [http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html](http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html)
 
