@@ -53,7 +53,6 @@
 ![活動當天管理人員必然會在外面忙碌，所以有關電腦的相關設定或者 GPS Tracker 狀態管理、聊天室的狀況，都做成手機 App，以達到有效的管理](img/013.jpg)
 
 ### 相關參考
-* [Live Demo](https://mazu.ioa.tw/)
 * [GitHub 原始碼](https://github.com/comdan66/mazu)
 * [PTT Yunlin](https://www.ptt.cc/bbs/Yunlin/M.1460567509.A.8BE.html)
 * [PTT Soft_Job](https://www.ptt.cc/bbs/Soft_Job/M.1460607450.A.36A.html)
