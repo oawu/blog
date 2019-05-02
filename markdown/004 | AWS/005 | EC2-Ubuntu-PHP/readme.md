@@ -12,7 +12,7 @@
 > 記得去你的 DNS(Domain Name Server) 設定，新增 `A` 紀錄 `your.url.tw`，指向 IP `123.456.789`
 
 ## 安裝 PHP
-* 使用 apt 安裝，指令 `sudo apt install php-fpm libapache2-mod-php php-curl php-imagick php-mysql php-gd php-mbstring`
+* 使用 apt 安裝，指令 `sudo apt install php-fpm libapache2-mod-php php-curl php-imagick php-mysql php-gd php-mbstring php-xml`
 * 檢查版本，確認是否安裝成功，指令：`php -v`
 * 在 www 下新增 PHP 檔案，指令 `nano phpinfo.php`，內容為如下：
 

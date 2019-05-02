@@ -17,7 +17,7 @@
 * 進入 www 目錄，指令 `cd ~/www`
 * 從 Git 下載最新 dehydrated，指令 `git clone https://github.com/lukas2511/dehydrated.git`
 * 進入專案，指令 `cd dehydrated`
-* 新增目錄，指令 `sduo mkdir /etc/dehydrated/`
+* 新增目錄，指令 `sudo mkdir /etc/dehydrated/`
 * 修改權限，指令 `sudo chmod 777 /etc/dehydrated/`
 * 將檔案移進去，指令 `cp dehydrated /etc/dehydrated/`
 * 修改 dehydrated 權限 `chmod a+x /etc/dehydrated/dehydrated`
