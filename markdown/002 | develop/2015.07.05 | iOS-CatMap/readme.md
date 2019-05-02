@@ -24,8 +24,7 @@ App 沒什麼主要方向，這就只是個到處模仿的小作品，一開始�
 * [Youtube 影片](https://www.youtube.com/watch?&v=HTgfTjmS2UI)
 * [GitHub 原始碼](https://github.com/comdan66/catmap_ios)
 * [WEB GitHub 原始碼](https://github.com/comdan66/catmap_php)
-* [WEB Demo](http://catmap.ioa.tw/maps)
 * [Facebook Video Demo](https://www.facebook.com/comdan66/videos/1115490615130946/)
-* [PTT Soft_Job](https://www.ptt.cc/bbs/MacDev/M.1436114088.A.832.html)
+* [PTT MacDev](https://www.ptt.cc/bbs/MacDev/M.1436114088.A.832.html)
 
 `#iOS` `#Google Maps` `#Instagram` `#Object-C` `#App`
