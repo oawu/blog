@@ -19,7 +19,7 @@
 若是覺得不錯，可以對 [GitHub](https://github.com/comdan66/taipei_activities) 按個星星，鼓勵一下作者吧：）
 
 ### 相關參考
-* [GitHub 原始碼](https://github.com/comdan66/activities.taipei)
+* [GitHub 原始碼](https://github.com/comdan66/taipei_activities)
 * [新北市政府資料開放平台](http://data.ntpc.gov.tw/)
 * [新北市政府文化局藝文活動](http://data.ntpc.gov.tw/od/detail?oid=781B822E-214A-4B9A-B4DB-32C9F4626D98)
 * [PTT Soft_Job](https://www.ptt.cc/bbs/Soft_Job/M.1467160346.A.EE9.html)
