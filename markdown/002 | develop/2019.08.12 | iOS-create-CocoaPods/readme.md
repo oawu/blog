@@ -7,6 +7,8 @@
 以下會用 `OAPodTest` 當作套件名稱範例，各位要做自己的套件請用自己的名稱捏！
 由於 pod 套件可與 [GitHub](https://github.com/) 綁定，讓他自動去抓上面的原始碼，所以請先開一個 GitHub repository！
 
+這是我自己的 GitHun Repository：[https://github.com/comdan66/OAPodTest](https://github.com/comdan66/OAPodTest)
+
 * 先把 GitHub 上的專案 Clone 下來
 * 進入專案，然後執行指令 `pod lib create OAPodTest`，Pod 會自動去 `https://github.com/CocoaPods/pod-template.git` 複製一份 `.podspec` 樣式下來
 
@@ -71,6 +73,8 @@ public func testFunc(_ a: Int) -> String {
 	* 丟上去，這邊會有點久，執行指令：`pod trunk push OAPodTest.podspec`
 	* 如果有警告的情況，要忽略警告可以加上 `--allow-warnings` 參數，指令：`pod trunk push OAPodTest.podspec --allow-warnings`，通常你如果 `.podspec` 內容沒修改敘述之類的，他會警告你
 	* 成功的話 理論上 `https://cocoapods.org/pods/OAPodTest` 可以直接有網頁看得到，或者可以用指令 `pod trunk info OAPodTest` 檢查是否有存在以及其線上相關版號資訊
+
+![成功資訊](img/002.png)
 
 ## 取用
 * 測試有無存在，執行指令：`pod trunk info OAPodTest`
