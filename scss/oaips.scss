@@ -6,7 +6,6 @@
 //
 
 @import "Ginkgo";
-
 $zIndex: 100000;
 
 .oaips {
@@ -33,7 +32,7 @@ $zIndex: 100000;
 }
 
 .oaips--animate_opacity {
-  will-change:opacity;
+  will-change: opacity;
   @include transition(opacity 333ms cubic-bezier(0.4, 0, 0.22, 1));
   @include opacity(.001);
 }

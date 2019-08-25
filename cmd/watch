@@ -5,74 +5,29 @@
  * @link        https://www.ioa.tw/
  */
 
-const rq = require;
-const Ginkgo = rq('./libs/node/Ginkgo');
-const cc = Ginkgo.cc;
-const ln = Ginkgo.ln;
-const pp = Ginkgo.pp;
+const Path    = require('path')
 
-const Path = require('path');
-const root = '..' + Path.sep;
+Path.root     = Path.resolve(__dirname, '..' + Path.sep) + Path.sep
+Path.cmd      = Path.root + 'cmd'  + Path.sep
 
-const _v = {
-  font: {
-    isListen: false,
-    isReady: false,
-    timer: 1000,
-  },
-  scss: {
-    isListen: false,
-    isReady: false,
-    timer: 2500,
-  },
-  live: {
-    isListen: false,
-    isReady: false,
-    divs: []
-  },
-  divs: {
-    _:    Path.resolve(__dirname, root + '')     + Path.sep,
-    cmd:  Path.resolve(__dirname, root + 'cmd')  + Path.sep,
-    css:  Path.resolve(__dirname, root + 'css')  + Path.sep,
-    font: Path.resolve(__dirname, root + 'font') + Path.sep,
-    js:   Path.resolve(__dirname, root + 'js')   + Path.sep,
-    scss: Path.resolve(__dirname, root + 'scss') + Path.sep,
-    img:  Path.resolve(__dirname, root + 'img')  + Path.sep,
-  }
-};
+Path.icon     = Path.root + 'font' + Path.sep
+Path.scss     = Path.root + 'scss' + Path.sep
+Path.css      = Path.root + 'css'  + Path.sep
+Path.iconHtml = Path.cmd  + 'libs' + Path.sep + 'node'  + Path.sep + 'watch'  + Path.sep + 'icon.html'
 
-_v.live.divs = [
-  _v.divs.css,
-  _v.divs.js,
-  _v.divs.img,
-  _v.divs._ + '**' + Path.sep + '*.html'
-];
+const Loader = require('./libs/node/Ginkgo').load
+const Load   = Loader('Ginkgo').loadWatch
 
-Ginkgo.init('Ginkgo 開發工具', function() {
+const watchFormats = ['html', 'css', 'js', 'png', 'jpg', 'php']
 
-  pp(cc('    ➤ ', 'C') + Ginkgo.ctrlC() + ln + cc(' 【監控目錄】', 'y') + ln);
+process.stdout.write('\x1b[2J')
+process.stdout.write('\x1b[0f')
 
-  rq('./libs/node/watch/icon').run(_v, function() {
-    rq('./libs/node/watch/scss').run(_v, function() {
-      rq('./libs/node/watch/livereload').run(_v, function() {
-        pp(ln + cc(' 【開發工具狀態】', 'y') + ln);
+Loader('Display').mainTitle('Ginkgo 開發工具')
 
-        if (!(_v.font.isListen || _v.scss.isListen || _v.live.isListen))
-          return pp(cc('    ➤ ', 'C') + '開發工具沒有開啟..' + ln);
-
-        pp(cc('    ➤ ', 'C') + 'Watch Icon Fonts' + cc(' ─ ', 'w0') + (_v.font.isListen ? cc('已經啟動', 'g') : cc('尚未啟動', 'r')) + ln);
-        pp(cc('    ➤ ', 'C') + 'Watch Scss Files' + cc(' ─ ', 'w0') + (_v.scss.isListen ? cc('已經啟動', 'g') : cc('尚未啟動', 'r')) + ln);
-        pp(cc('    ➤ ', 'C') + 'Watch Livereload' + cc(' ─ ', 'w0') + (_v.live.isListen ? cc('已經啟動', 'g') : cc('尚未啟動', 'r')) + ln);
-        
-        pp(ln + cc(' 【完成】', 'y') + ln);
-        pp(cc('    ➤ ', 'C') + '您可以開始開發囉！' + ln);
-        pp(cc('    ➤ ', 'C') + Ginkgo.ctrlC());
-        
-        pp(ln + cc(' 【開發紀錄】', 'R') + ln);
-
-        return;
-      });
-    });
-  });
-  
-});
+Loader('EnvCheck')('檢查環境', Load('Check'),
+  () => Load('WatchIcon')('Watch icon 目錄',
+    Load('WatchSCSS').bind(null, 'Watch SCSS 目錄',
+      Load('OpenServer').bind(null, '開啟開發伺服器', 
+        Load('WatchFile').bind(null, 'Watch 專案', watchFormats,
+          Load('Ready').bind(null, '準備開發'))))))

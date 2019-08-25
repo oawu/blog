@@ -11,83 +11,45 @@ mb_regex_encoding('UTF-8');
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('Asia/Taipei');
 
-define('PATH_CMD_LIB_PLUGIN', dirname(__FILE__) . DIRECTORY_SEPARATOR);
-define('PATH_CMD_LIB',        dirname(PATH_CMD_LIB_PLUGIN) . DIRECTORY_SEPARATOR);
-define('PATH_CMD',            dirname(PATH_CMD_LIB) . DIRECTORY_SEPARATOR);
-define('PATH',                dirname(PATH_CMD) . DIRECTORY_SEPARATOR);
-define('DIRNAME',             basename(PATH));
-
-define('PATH_SITEMAP',  PATH . 'sitemap'  . DIRECTORY_SEPARATOR);
-define('PATH_MARKDOWN', PATH . 'markdown' . DIRECTORY_SEPARATOR);
-define('PATH_TEMPLATE', PATH . 'template' . DIRECTORY_SEPARATOR);
-
-define('CACHE_IMG_TMP', true);
-define('PATH_IMG_TMP',  PATH . 'img' . DIRECTORY_SEPARATOR . 'md5' . DIRECTORY_SEPARATOR);
-
-define('CHECK_LINK_EXIST', true);
-define('CHECK_IMAGE_EXIST', true);
-
-include PATH_CMD_LIB_PLUGIN . 'Cover.Func.php';
+include __DIR__ . DIRECTORY_SEPARATOR . '_' . DIRECTORY_SEPARATOR . 'core.php';
+include __DIR__ . DIRECTORY_SEPARATOR . 'Cover' . DIRECTORY_SEPARATOR . '_Define.php';
+include PATH_CMD_LIB_PLUGIN_COVER . '_Func.php';
+include PATH_CMD_LIB_PLUGIN_COVER . 'HTML.php';
 
 $sTime = microtime(true);
 
-try {
+$argv = argv(array_slice($argv, 1), [['-u', '--url']]);
 
-  $argv = argv(array_slice($argv, 1), [['-u', '--url']]);
+if (!($argv && array_key_exists('-u', $argv) && $argv['-u'] && ($url = rtrim(array_shift($argv['-u']), '/') . '/')))
+  throw new PluginException('請傳入參數 -u 或 --url，設定網址！');
 
-  if (!($argv && array_key_exists('-u', $argv) && $argv['-u'] && ($url = rtrim(array_shift($argv['-u']), '/') . '/')))
-    throw new Exception('請傳入參數 -u 或 --url，設定網址！');
+define('BASE_URL', $url);
+include PATH_CMD_LIB_PLUGIN_COVER . '_Define2.php';
 
-  define('BASE_URL', $url);
-  define('TITLE', "OA Wu's Blog");
-  define('KEYWORDS', "OA Wu, 吳政賢, 開發, 全端工程師, PHP, JavaScript, CSS, 北港, 朝天宮, 媽祖, 北港迓媽祖, 北港迎媽祖, 陣頭, 廟會, 遶境");
-  define('DESCRIPTION', "叫我 OA 吧！我是個愛寫程式又愛鄉土藝術活動的工程師，也是個道地的雲林北港囝仔。因大學時主修資訊工程，所以踏進了資訊這個行業，這個領域內我很喜歡嘗試的做些創新、有趣、實用的程式作品，對我來說程式設計是種可以創作出不同的玩具與工具！");
-  define('SEPARATE', ' - ');
+if (cleanDist(PATH_DIST))
+  throw new PluginException('清除 Dist 目錄發生錯誤！');
 
-  define('D4_IMG_URL',   BASE_URL . 'img/v1/d4.png');
-  define('OG_IMG_URL',   BASE_URL . 'img/v1/og.png');
-  define('OA_IMG_URL',   BASE_URL . 'img/v1/oa.jpg');
-  define('LOGO_IMG_URL', BASE_URL . 'img/v1/logo.png');
+if ($errs = cloneDirs([PATH_IMG => PATH_DIST_IMG, PATH_CSS => PATH_DIST_CSS, PATH_JS => PATH_DIST_JS, PATH_FONT => PATH_DIST_FONT]))
+  throw new PluginException('以下其他目錄無法複製：' . implode(', ', arrayFlatten($errs)));
 
-  $menus = Menu::all();
+$menus = Menu::all();
 
-  $itemsList = array_filter($menus, function($menu) {
-    return $menu instanceof Items;
-  });
+$itemsList = array_filter($menus, function($menu) {
+  return $menu instanceof Items;
+});
   
-  $dirs = array_merge(array_map(function($menu) {
-    return PATH . implode(DIRECTORY_SEPARATOR, $menu->uris()) . DIRECTORY_SEPARATOR;
-  }, $itemsList), [PATH_SITEMAP]);
-  
-  if ($errs = removeDirs($dirs))
-    throw new Exception('以下其他目錄無法移除：' . implode(', ', $errs));
+$dirs = array_merge(array_map(function($menu) {
+  return PATH_DIST . implode(DIRECTORY_SEPARATOR, $menu->uris()) . DIRECTORY_SEPARATOR;
+}, $itemsList), [PATH_SITEMAP]);
 
-  if ($errs = removeRootFiles())
-    throw new Exception('以下根目錄 html 無法移除：' . implode(', ', $errs));
+if ($errs = mkdirDirs($dirs))
+  throw new PluginException('以下其他目錄無法建立：' . implode(', ', $errs));
 
-  if ($errs = removeSingleItem(SingleItem::all()))
-    throw new Exception('以下檔案無法移除：' . implode(', ', $errs));
+if ($errs = writePages($itemsList))
+  throw new PluginException('以下列表 html 無法建立：' . implode(', ', $errs));
 
-  if ($errs = mkdirDirs($dirs))
-    throw new Exception('以下其他目錄無法建立：' . implode(', ', $errs));
+if ($errs = writeItems(Item::all()))
+  throw new PluginException('以下 html 無法建立：' . implode(', ', $errs));
 
-  if ($errs = writePages($itemsList))
-    throw new Exception('以下列表 html 無法建立：' . implode(', ', $errs));
-
-  if ($errs = writeItems(Item::all()))
-    throw new Exception('以下 html 無法建立：' . implode(', ', $errs));
-
-  if ($errs = writeSingleItem(SingleItem::all()))
-    throw new Exception('以下檔案無法建立：' . implode(', ', $errs));
-
-  if ($errs = Item::cleanTmpDir())
-    throw new Exception('以下暫存圖片檔案無法移除：' . implode(', ', $errs));
-
-} catch (Exception $e) {
-  echo $e->getMessage();
-  exit(1);
-}
-
-echo "\n" . '耗時：' . number_format(microtime(true) - $sTime, 6) . '秒' . "\n\n";
-
-exit(0);
+if ($errs = writeSingleItem(SingleItem::all()))
+  throw new PluginException('以下檔案無法建立：' . implode(', ', $errs));
