@@ -7,7 +7,6 @@
 
 const Display    = require('../Display')
 const Xterm      = require('../Xterm')
-const Rollback   = require('./Rollback')
 const Argv       = require('./Argv')
 const MinifyHTML = require('html-minifier').minify
 const UglifyJS   = require('uglify-js')
@@ -69,11 +68,11 @@ const minifyHTML = closure => {
     try {
       html = MinifyHTML(ReadFile(files[i].path, 'utf8'), { collapseWhitespace: true, continueOnParseError: false })
     } catch(error) {
-      return Display.line(false) || Rollback(['壓縮 ' + files[i].path.replace(Path.root, '') + ' 時發生錯誤！', '錯誤訊息：' + error.message])
+      return Display.line(false, ['壓縮 ' + files[i].path.replace(Path.root, '') + ' 時發生錯誤！', '錯誤訊息：' + error.message])
     }
 
     if (html === null)
-      return Display.line(false) || Rollback(['壓縮 ' + files[i].path.replace(Path.root, '') + ' 時發生不明原因錯誤！'])
+      return Display.line(false, ['壓縮 ' + files[i].path.replace(Path.root, '') + ' 時發生不明原因錯誤！'])
     else
       WriteFile(files[i].path, (easterEgg !== null && easterEgg.length ? '<!-- ' + Display.LN + easterEgg + Display.LN + '-->' + Display.LN : '') + html, 'utf8')
    
@@ -101,7 +100,7 @@ const uglifyJS = closure => {
     const result = UglifyJS.minify(ReadFile(files[i].path, 'utf8'), { mangle: { toplevel: true } })
 
     if (result.error)
-      return Display.line(false) || Rollback(['壓縮 ' + files[i].path.replace(Path.root, '') + ' 時發生錯誤！', '錯誤訊息：' + result.error.message, '錯誤位置：第 ' + result.error.line + ' 行，第 ' + result.error.col + ' 個字'])
+      return Display.line(false, ['壓縮 ' + files[i].path.replace(Path.root, '') + ' 時發生錯誤！', '錯誤訊息：' + result.error.message, '錯誤位置：第 ' + result.error.line + ' 行，第 ' + result.error.col + ' 個字'])
     else
       WriteFile(files[i].path, (easterEgg !== null && easterEgg.length ? easterEgg.replace(/^\n+/g, '') + Display.LN : '') + result.code, 'utf8')
     minSize += FileStat(files[i].path).size

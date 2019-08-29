@@ -8,7 +8,6 @@
 const print      = require('../Ginkgo').print
 const Display    = require('../Display')
 const Xterm      = require('../Xterm')
-const Rollback   = require('./Rollback')
 const Argv       = require('./Argv')
 const CmdExists  = require('command-exists').sync
 const Exec       = require('child_process').exec
@@ -54,7 +53,7 @@ const checkPlugins = () => {
 
     return Display.line() && Exists(plugin.file)
       ? plugin
-      : Display.line(false) || Rollback(['「' + plugin.title + '」外掛檔案不存在！', '檔案位置：' + plugin.file])
+      : Display.line(false, ['「' + plugin.title + '」外掛檔案不存在！', '檔案位置：' + plugin.file])
   })
 
   return Display.line(true) && Argv.plugins.length
@@ -85,7 +84,7 @@ const execPlugins = (i, closure) => {
           for (var key in stdout)
             error.push(key + '：' + stdout[key])
 
-      return Display.line(false) || Rollback(error)
+      return Display.line(false, error)
     }
 
     result[Argv.plugins[i].title] = stdout
@@ -105,7 +104,7 @@ const runPlugins = (i, closure) => {
     return Display.line(true) && execPlugins(i, closure)
 
   if (!CmdExists(Argv.plugins[i].cmd))
-    return Display.line(false) || Rollback(['外掛「' + Argv.plugins[i].title + '」所需的指令「' + Argv.plugins[i].cmd + '」不存在！', '請先確認目前環境下是否可以執行「' + Argv.plugins[i].cmd + '」指令！'])
+    return Display.line(false, ['外掛「' + Argv.plugins[i].title + '」所需的指令「' + Argv.plugins[i].cmd + '」不存在！', '請先確認目前環境下是否可以執行「' + Argv.plugins[i].cmd + '」指令！'])
 
   cmds.push(Argv.plugins[i].cmd)
 

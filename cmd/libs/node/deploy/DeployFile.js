@@ -9,7 +9,6 @@ const windowPath = require('../Ginkgo').windowPath
 const GetYamlFile = require('../Ginkgo').getYamlFile
 const Display     = require('../Display')
 const Xterm       = require('../Xterm')
-const Rollback    = require('./Rollback')
 const Argv        = require('./Argv')
 const Path        = require('path')
 
@@ -34,7 +33,7 @@ module.exports = (title, minifyClosure, notMinifyClosure) => {
     ['執行動作', 'read deploy.rule.yaml'])
 
   if (!require('fs').existsSync(Path.yaml))
-    return Display.line(false) || Rollback(['deploy.rule.yaml 不存在！'])
+    return Display.line(false, ['deploy.rule.yaml 不存在！'])
 
   let yaml = require('fs').readFileSync(Path.yaml, 'utf8')
   Display.line(true)
@@ -44,7 +43,7 @@ module.exports = (title, minifyClosure, notMinifyClosure) => {
 
   yaml = GetYamlFile(yaml)
   if (typeof yaml.error !== 'undefined')
-    return Display.line(false) || Rollback(['轉譯 deploy.rule.yaml 失敗！', yaml.error.message])
+    return Display.line(false, ['轉譯 deploy.rule.yaml 失敗！', yaml.error.message])
   Display.line(true)
 
  return localFiles('整理本機內檔案', yaml,

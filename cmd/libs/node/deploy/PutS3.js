@@ -10,7 +10,6 @@ const Xterm    = require('../Xterm')
 const Argv     = require('./Argv')
 const FileRead = require('fs').readFileSync
 const Mime     = require('mime')
-const Rollback = require('./Rollback')
 const md5File  = require('md5-file')
 
 const putS3Options = {
@@ -21,7 +20,7 @@ const putS3Options = {
 
 const listObjects = (options, items, closure) => Argv.s3.listObjectsV2(options, (error, data) => {
   if (error)
-    return Display.line(false) || Rollback(['相關原因：' + error.message])
+    return Display.line(false, ['相關原因：' + error.message])
   
   items = items.concat(data.Contents.map(t => true && {
     name: t.Key,
@@ -82,7 +81,7 @@ const uploadFiles = closure => true &&
           ? reject(error)
           : Display.line() && resolve(data)))))
   .then(() => Display.line(true) && closure && closure())
-  .catch(error => Display.line(false) || Rollback(['相關原因：' + error.message]))
+  .catch(error => Display.line(false, ['相關原因：' + error.message]))
 
 const deleteFiles = closure => true &&
   Display.line('刪除 S3 的檔案') &&
@@ -94,7 +93,7 @@ const deleteFiles = closure => true &&
           ? reject(error)
           : Display.line() && resolve(data)))))
   .then(() => Display.line(true) && closure && closure())
-  .catch(error => Display.line(false) || Rollback(['相關原因：' + error.message]))
+  .catch(error => Display.line(false, ['相關原因：' + error.message]))
 
 module.exports = (title, closure) => true &&
   Display.title(title) &&
