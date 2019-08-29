@@ -5,7 +5,4 @@ sftp-config*
 **/node_modules/*
 **/package-lock.json
 
-/*.html
-/*.xml
-/robots.txt
-/js/all.json
+dist/*
