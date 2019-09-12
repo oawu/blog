@@ -61,7 +61,7 @@ $(function() {
           text = $(this).attr('alt'),
           $figure = $('<figure />');
 
-      $figure.css({'background-image': 'url(' + src + ')'}).addClass(text.length ? 'desc' : null).append(
+      $figure.css({'background-image': 'url(' + src + ')'}).attr('data-bgurl', src).addClass(text.length ? 'desc' : null).append(
         $(this).clone()).append(
         text.length ? $('<figcaption />').addClass('icon-18').text(text) : null).insertBefore($parent);
 
