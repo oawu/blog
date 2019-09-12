@@ -79,7 +79,7 @@ $main = main(
       div(array_map(function($image) use ($article) {
         return figure(
           img()->alt(($image['alt'] ? $item['alt'] . SEPARATE : '') . $article->title)->src($image['src']),
-          figcaption($image['alt'] ? $item['alt'] : $article->title))->class($image['class'])->url($image['src']); }, $article->images))->id('pics') )->class('album')))->id('main');
+          figcaption($image['alt'] ? $item['alt'] : $article->title))->data('bgurl', $image['src'])->class($image['class'])->url($image['src']); }, $article->images))->id('pics') )->class('album')))->id('main');
 
 echo html(
   head(
