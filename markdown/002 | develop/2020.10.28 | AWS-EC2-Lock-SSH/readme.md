@@ -5,11 +5,11 @@
 
 ## 緣起
 
-為了限制 AWS EC2 上某個 user 僅能使用 **sftp** 在自己的 **家目錄** 內運作，於是我更改 Server 的 `sshd_config`，加入了對該 **user** 的 `ChrootDirectory`、`ForceCommand` 與 `AllowTcpForwarding` 設定。
+為了限制 AWS EC2 上某個 user 僅能使用 **SFTP** 在自己的 **家目錄** 內運作，於是我更改 Server 的 `sshd_config`，加入了對該 **user** 的 `ChrootDirectory`、`ForceCommand` 與 `AllowTcpForwarding` 設定。
 
 但手殘卻不小心把 `Match User` 註解了..
 
-如此一來會造成所有 User 皆只能使用 sftp 連上 Server，並且根目錄僅能在自己的 **家目錄** 內，而且 **不能往上層移動** 😢
+如此一來會造成所有 User 皆只能使用 SFTP 連上 Server，並且根目錄僅能在自己的 **家目錄** 內，而且 **不能往上層移動** 😢
 
 
 ## 處理過程
@@ -24,7 +24,7 @@
 
 
 
-那試著 `sftp` 上去看能不能修改與更新 `sshd_config`，然後 **重啟** 上系統自動 `ssh reload`
+那試著 `SFTP` 上去看能不能修改與更新 `sshd_config`，然後 **重啟** 上系統自動 `ssh reload`
 
 但是由於 **不能往上層移動** 的限制，自然的也就無法變更到 `sshd_config` 😫
 
@@ -192,3 +192,5 @@
 * [使 Amazon EBS 磁碟區可供在 Linux 上使用 - Amazon Elastic Compute Cloud](https://docs.aws.amazon.com/zh_tw/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 * [Locked myself out of Amazon EC2 SSH - This service allows sftp connections only](https://unix.stackexchange.com/questions/143925/locked-myself-out-of-amazon-ec2-ssh-this-service-allows-sftp-connections-only)
 * [This service allows sftp connections only - pu20065226 - 博客园](https://www.cnblogs.com/pu20065226/p/10962906.html)
+
+`#AWS` `#EC2` `#Volume` `#Snapshot` `#SSH` `#SFTP`
