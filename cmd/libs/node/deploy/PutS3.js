@@ -50,11 +50,12 @@ const filterLocalFiles = closure => true &&
 
   Display.line(true) && closure && closure()
 
-const filterS3Files = closure => true &&
-  Display.line('過濾刪除的檔案') &&
-  Display.line(Argv.s3Files.length) &&
+const filterS3Files = closure => {
+  Display.line('過濾刪除的檔案')
 
-  (Argv.deleteFiles = Argv.s3Files.filter(s3File => {
+  Display.line(Argv.s3Files.length)
+
+  Argv.deleteFiles = Argv.s3Files.filter(s3File => {
     Display.line()
   
     for (let i = 0; i < Argv.localFiles.length; i++)
@@ -62,9 +63,11 @@ const filterS3Files = closure => true &&
         return false
 
     return true
-  })) &&
+  })
 
-  Display.line(true) && closure && closure()
+  Display.line(true)
+  closure && closure()
+}
 
 const s3Files = closure => true &&
   Display.line('取得 S3 上檔案') &&
@@ -83,9 +86,11 @@ const uploadFiles = closure => true &&
   .then(() => Display.line(true) && closure && closure())
   .catch(error => Display.line(false, ['相關原因：' + error.message]))
 
-const deleteFiles = closure => true &&
-  Display.line('刪除 S3 的檔案') &&
-  Display.line(Argv.deleteFiles.length) &&
+const deleteFiles = closure => {
+  Display.line('刪除 S3 的檔案')
+  
+  Display.line(Argv.deleteFiles.length)
+  
   Promise.all(Argv.deleteFiles.map(
     file => new Promise(
       (resolve, reject) => Argv.s3.deleteObject({ Bucket: Argv.data.bucket, Key: file.name },
@@ -94,6 +99,7 @@ const deleteFiles = closure => true &&
           : Display.line() && resolve(data)))))
   .then(() => Display.line(true) && closure && closure())
   .catch(error => Display.line(false, ['相關原因：' + error.message]))
+}
 
 module.exports = (title, closure) => true &&
   Display.title(title) &&

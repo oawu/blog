@@ -37,7 +37,7 @@ $menus = Menu::all();
 $itemsList = array_filter($menus, function($menu) {
   return $menu instanceof Items;
 });
-  
+
 $dirs = array_merge(array_map(function($menu) {
   return PATH_DIST . implode(DIRECTORY_SEPARATOR, $menu->uris()) . DIRECTORY_SEPARATOR;
 }, $itemsList), [PATH_SITEMAP]);
