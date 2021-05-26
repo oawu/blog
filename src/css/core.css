@@ -291,7 +291,7 @@ body {
   margin-top: 24px;
 }
 #main ol + blockquote, #main ul + blockquote, #main ol + pre, #main ul + pre {
-  margin-top: 24px;
+  margin-top: 8px;
 }
 #main ol + ol, #main ul + ol, #main ol + ul, #main ul + ul {
   margin-top: 8px;
@@ -307,13 +307,13 @@ body {
   margin-top: 12px;
 }
 #main span + blockquote, #main span + pre, #main code + blockquote, #main code + pre {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 #main span + ol, #main span + ul, #main code + ol, #main code + ul {
   margin-top: 8px;
 }
 #main span + figure, #main span + .iframe, #main code + figure, #main code + .iframe, #main span + table, #main code + table {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 #main figure + p, #main .iframe + p, #main table + p {
@@ -503,6 +503,38 @@ body {
   display: inline-block;
   color: var(--ui-color-secondaryLabel);
   content: "上次更新約：";
+}
+#main table {
+  display: table;
+  table-layout: fixed;
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid var(--ui-color-separator);
+}
+#main table th, #main table td {
+  padding: 2px 6px;
+}
+#main table th + th, #main table th + td, #main table td + th, #main table td + td {
+  border-left: 1px solid var(--ui-color-separator);
+}
+#main table thead tr:nth-child(2n+1) {
+  background-color: var(--ui-color-secondarySystemBackground);
+}
+#main table thead tr:nth-child(2n+2) {
+  background-color: var(--ui-color-tertiarySystemBackground);
+}
+#main table tbody tr:nth-child(2n+1) {
+  background-color: var(--ui-color-tertiarySystemBackground);
+}
+#main table tbody tr:nth-child(2n+2) {
+  background-color: var(--ui-color-secondarySystemBackground);
+}
+#main table tr + tr th, #main table tr + tr td {
+  border-top: 1px solid var(--ui-color-separator);
+}
+#main table thead tr th {
+  border-bottom: 1px solid var(--ui-color-separator);
 }
 #main h1, #main h2, #main h3, #main h4, #main h5 {
   display: inline-block;
@@ -856,6 +888,7 @@ body {
   background-color: var(--ui-color-systemRed);
 }
 #main blockquote.warning:before {
+  top: 20px;
   content: "򠀥";
   color: var(--ui-color-systemRed);
 }
@@ -877,10 +910,18 @@ body {
 }
 #main ol ol, #main ol ul, #main ul ol, #main ul ul {
   padding-left: 16px;
+}
+#main ol ol:last-child, #main ol ul:last-child, #main ul ol:last-child, #main ul ul:last-child {
   margin-bottom: 20px;
 }
-#main ol pre, #main ol blockquote, #main ul pre, #main ul blockquote {
+#main ol pre:last-child, #main ol blockquote:last-child, #main ul pre:last-child, #main ul blockquote:last-child {
   margin-bottom: 20px;
+}
+#main ol:last-child ol:last-child, #main ol:last-child ul:last-child, #main ul:last-child ol:last-child, #main ul:last-child ul:last-child {
+  margin-bottom: 0;
+}
+#main ol:last-child pre:last-child, #main ol:last-child blockquote:last-child, #main ul:last-child pre:last-child, #main ul:last-child blockquote:last-child {
+  margin-bottom: 0;
 }
 #main ol li + li, #main ul li + li {
   margin-top: 4px;

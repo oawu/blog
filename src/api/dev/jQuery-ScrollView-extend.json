@@ -1,1 +1,81 @@
-{"k":"jQuery-ScrollView-extend","t":"實作 jQuery ScrollView 套件","i":"2016-03-14","a":[{"e":"p","s":[{"e":"span","t":"為了讓手機水平瀏覽圖片的操作更像 App 的介面，所以利用 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/zh-tw/JavaScript","target":"_blank"},"t":"JavaScript"},{"e":"span","t":"、"},{"e":"a","attr":{"href":"https://jquery.com/","target":"_blank"},"t":"jQuery"},{"e":"span","t":"、"},{"e":"a","attr":{"href":"https://jqueryui.com/","target":"_blank"},"t":"jQuery-UI"},{"e":"span","t":"、"},{"e":"a","attr":{"href":"http://touchpunch.furf.com/","target":"_blank"},"t":"jQuery.UI.Touch-Punch"},{"e":"span","t":" 等套件，實作 ScrollView 的水平滑動效果。"}]},{"e":"p","s":[{"e":"span","t":"功能主要是依賴 jQuery 與 jquery-UI 實作，再利用 jQuery-UI 的 "},{"e":"a","attr":{"href":"https://jqueryui.com/draggable/","target":"_blank"},"t":"Draggable"},{"e":"span","t":" 實作拖曳的效果，則 Draggable 需要設定 "},{"e":"code","t":"axis: 'x'"},{"e":"span","t":" 來固定水平拖曳移動。不過此時會發現手機的滑動時 Draggable 會失效，所以還需仰賴 jQuery.UI.Touch-Punch 修正！然後我再利用這些巨人大大的 library 作出這個 jQuery extend function！"}]},{"e":"h3","t":"特別注意"},{"e":"ul","s":[{"e":"li","t":"手機上實測好像還會頓頓的.. 還在調整中.."},{"e":"li","s":[{"e":"span","t":"Demo 頁面所有元素都是採用 "},{"e":"code","t":"box-sizing: border-box;"},{"e":"span","t":" 操作，所以要改的話，要稍微注意版型 "},{"e":"a","attr":{"href":"https://developer.mozilla.org/zh-TW/docs/Web/CSS","target":"_blank"},"t":"CSS"},{"e":"span","t":" 部分。"}]},{"e":"li","s":[{"e":"span","t":"因為是使用 "},{"e":"a","attr":{"href":"http://sass-lang.com/","target":"_blank"},"t":"SCSS"},{"e":"span","t":" 撰寫，故此專案會有 SCSS、CSS 的資料夾。"}]},{"e":"li","t":"目前最多容納 100 個水平元素！"},{"e":"li","s":[{"e":"span","t":"Demo 頁面中 "},{"e":"a","attr":{"href":"https://github.com/karacas/imgLiquid","target":"_blank"},"t":"imgLiquid"},{"e":"span","t":" 只是讓我調整圖片的顯示，非主要功能！"}]}]}],"r":[{"e":"ul","s":[{"e":"li","s":[{"e":"a","attr":{"href":"https://works.ioa.tw/OA-mobileScrollView/index.html","target":"_blank"},"t":"Live Demo"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://github.com/comdan66/OA-mobileScrollView","target":"_blank"},"t":"GitHub 原始碼"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.ptt.cc/bbs/Soft_Job/M.1457948370.A.BE9.html","target":"_blank"},"t":"PTT Soft_Job"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.facebook.com/groups/f2e.tw/permalink/960507037319995/","target":"_blank"},"t":"Facebook Front-End Developers Taiwan"}]}]}],"g":["jQuery","jQuery UI","ScrollView"]}
+{
+  "k":"jQuery-ScrollView-extend",
+  "t":"實作 jQuery ScrollView 套件",
+  "i":"2016-03-14",
+  "a":[
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"為了讓手機水平瀏覽圖片的操作更像 App 的介面，所以利用 " },
+        { "e":"a", "t":"JavaScript", "attr":{ "href":"https://zh.wikipedia.org/zh-tw/JavaScript", "target":"_blank" } },
+        { "e":"span", "t":"、" },
+        { "e":"a", "t":"jQuery", "attr":{ "href":"https://jquery.com/", "target":"_blank" } },
+        { "e":"span", "t":"、" },
+        { "e":"a", "t":"jQuery-UI", "attr":{ "href":"https://jqueryui.com/", "target":"_blank" } },
+        { "e":"span", "t":"、" },
+        { "e":"a", "t":"jQuery.UI.Touch-Punch", "attr":{ "href":"http://touchpunch.furf.com/", "target":"_blank" } },
+        { "e":"span", "t":" 等套件，實作 ScrollView 的水平滑動效果。" }
+      ]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"功能主要是依賴 jQuery 與 jquery-UI 實作，再利用 jQuery-UI 的 " },
+        { "e":"a", "t":"Draggable", "attr":{ "href":"https://jqueryui.com/draggable/", "target":"_blank" } },
+        { "e":"span", "t":" 實作拖曳的效果，則 Draggable 需要設定 " },
+        { "e":"code", "t":"axis: 'x'" },
+        { "e":"span", "t":" 來固定水平拖曳移動。不過此時會發現手機的滑動時 Draggable 會失效，所以還需仰賴 jQuery.UI.Touch-Punch 修正！然後我再利用這些巨人大大的 library 作出這個 jQuery extend function！" }
+      ]
+    },
+    { "e":"h2", "t":"特別注意" },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "t":"手機上實測好像還會頓頓的… 還在調整中…" },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"Demo 頁面所有元素都是採用 " },
+            { "e":"code", "t":"box-sizing: border-box;" },
+            { "e":"span", "t":" 操作，所以要改的話，要稍微注意版型 " },
+            { "e":"a", "t":"CSS", "attr":{ "href":"https://developer.mozilla.org/zh-TW/docs/Web/CSS", "target":"_blank" } },
+            { "e":"span", "t":" 部分。" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"因為是使用 " },
+            { "e":"a", "t":"SCSS", "attr":{ "href":"http://sass-lang.com/", "target":"_blank" } },
+            { "e":"span", "t":" 撰寫，故此專案會有 SCSS、CSS 的資料夾。" }
+          ]
+        },
+        { "e":"li", "t":"目前最多容納 100 個水平元素！" },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"Demo 頁面中 " },
+            { "e":"a", "t":"imgLiquid", "attr":{ "href":"https://github.com/karacas/imgLiquid", "target":"_blank" } },
+            { "e":"span", "t":" 只是讓我調整圖片的顯示，非主要功能！" }
+          ]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/OA-mobileScrollView/index.html", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/OA-mobileScrollView", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1457948370.A.BE9.html", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/960507037319995/", "target":"_blank" } }] }
+      ]
+    }
+  ],
+  "g":[
+    "jQuery",
+    "jQuery UI",
+    "ScrollView"
+  ]
+}

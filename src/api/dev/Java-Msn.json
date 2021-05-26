@@ -1,1 +1,64 @@
-{"k":"Java-Msn","t":"用 Java 實作 MSN","i":"2008-10-01","a":[{"e":"p","s":[{"e":"span","t":"因為學習 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/Java","target":"_blank"},"t":"Java"},{"e":"span","t":" 語言而發現了有 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/UDT","target":"_blank"},"t":"UDT"},{"e":"span","t":"、"},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E6%8E%A7%E5%88%B6%E5%8D%94%E5%AE%9A","target":"_blank"},"t":"TCP"},{"e":"span","t":" 通訊協定的 "},{"e":"a","attr":{"href":"https://en.wikipedia.org/wiki/Network_socket","target":"_blank"},"t":"Socket"},{"e":"span","t":" 物件可以使用，所以就在利用 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/Swing_(Java)","target":"_blank"},"t":"Java GUI"},{"e":"span","t":" 與 Socket 做了簡單結合，由基本的 Java Socket 實作基本的"},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/%E4%B8%BB%E5%BE%9E%E5%BC%8F%E6%9E%B6%E6%A7%8B","target":"_blank"},"t":"主從式架構（Client-Server）"},{"e":"span","t":"的伺服端、客戶端，藉由伺服器的角色幫助客服端建立連線而達到通訊的功能，並且模擬 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/%E5%B0%8D%E7%AD%89%E7%B6%B2%E8%B7%AF","target":"_blank"},"t":"P2P"},{"e":"span","t":" 的連線機制，以自定義簡單的格式來達到基本的溝通串流。"}]},{"e":"p","s":[{"e":"a","attr":{"href":"https://github.com/comdan66/sophomore-java-msn","target":"_blank"},"t":"GitHub"},{"e":"span","t":" 上目前提供 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/JAR_(%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F)","target":"_blank"},"t":".jar 檔案"},{"e":"span","t":"，之後會補上原始碼，而以下是的 Demo 影片，裡面會有詳細的功能介紹。"}]},{"e":"iframe","attr":{"allowfullscreen":"","frameborder":"0","src":"https://www.youtube.com/embed/Z8ozcKeDsbk"},"s":[]}],"r":[{"e":"ul","s":[{"e":"li","s":[{"e":"a","attr":{"href":"https://github.com/comdan66/sophomore-java-msn","target":"_blank"},"t":"GitHub jar 檔案"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.youtube.com/watch?v=Z8ozcKeDsbk","target":"_blank"},"t":"Youtube 影片"}]}]}],"g":["Java","MSM"]}
+{
+  "k":"Java-Msn",
+  "t":"用 Java 實作 MSN",
+  "i":"2008-10-01",
+  "a":[
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"因為學習 " },
+        { "e":"a", "t":"Java", "attr":{ "href":"https://zh.wikipedia.org/wiki/Java", "target":"_blank" } },
+        { "e":"span", "t":" 語言而發現了有 " },
+        { "e":"a", "t":"UDT", "attr":{ "href":"https://zh.wikipedia.org/wiki/UDT", "target":"_blank" } },
+        { "e":"span", "t":"、" },
+        { "e":"a", "t":"TCP", "attr":{ "href":"https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E6%8E%A7%E5%88%B6%E5%8D%94%E5%AE%9A", "target":"_blank" } },
+        { "e":"span", "t":" 通訊協定的 " },
+        { "e":"a", "t":"Socket", "attr":{ "href":"https://en.wikipedia.org/wiki/Network_socket", "target":"_blank" } },
+        { "e":"span", "t":" 物件可以使用，所以就在利用 " },
+        { "e":"a", "t":"Java GUI", "attr":{ "href":"https://zh.wikipedia.org/wiki/Swing_(Java)", "target":"_blank" } },
+        { "e":"span", "t":" 與 Socket 做了簡單結合，由基本的 Java Socket 實作基本的" },
+        { "e":"a", "t":"主從式架構（Client-Server）", "attr":{ "href":"https://zh.wikipedia.org/wiki/%E4%B8%BB%E5%BE%9E%E5%BC%8F%E6%9E%B6%E6%A7%8B", "target":"_blank" } },
+        { "e":"span", "t":"的伺服端、客戶端，藉由伺服器的角色幫助客服端建立連線而達到通訊的功能，並且模擬 " },
+        { "e":"a", "t":"P2P", "attr":{ "href":"https://zh.wikipedia.org/wiki/%E5%B0%8D%E7%AD%89%E7%B6%B2%E8%B7%AF", "target":"_blank" } },
+        { "e":"span", "t":" 的連線機制，以自定義簡單的格式來達到基本的溝通串流。" }
+      ]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"a", "t":"GitHub", "attr":{ "href":"https://github.com/comdan66/sophomore-java-msn", "target":"_blank" } },
+        { "e":"span", "t":" 上目前提供 " },
+        { "e":"a", "t":".jar 檔案", "attr":{ "href":"https://zh.wikipedia.org/wiki/JAR_(%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F)", "target":"_blank" } },
+        { "e":"span", "t":"，之後會補上原始碼，而以下是的 Demo 影片，裡面會有詳細的功能介紹。" }
+      ]
+    },
+    {
+      "e":"div",
+      "attr": { "class": "iframe" },
+      "s":[
+        {
+          "e":"iframe",
+          "attr":{
+            "allowfullscreen":"",
+            "frameborder":"0",
+            "src":"https://www.youtube.com/embed/Z8ozcKeDsbk"
+          },
+          "s":[]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub jar 檔案", "attr":{ "href":"https://github.com/comdan66/sophomore-java-msn", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "attr":{ "href":"https://www.youtube.com/watch?v=Z8ozcKeDsbk", "target":"_blank" } }] }
+      ]
+    }
+  ],
+  "g":[
+    "Java",
+    "MSM"
+  ]
+}

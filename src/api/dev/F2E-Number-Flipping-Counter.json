@@ -1,1 +1,173 @@
-{"k":"F2E-Number-Flipping-Counter","t":"數字翻轉計數器","i":"2016-06-12","a":[{"e":"p","s":[{"e":"span","t":"使用簡單的 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/JavaScript","target":"_blank"},"t":"JavaScript"},{"e":"span","t":" 與 "},{"e":"a","attr":{"href":"http://sass-lang.com/","target":"_blank"},"t":"SCSS"},{"e":"span","t":" 實作"},{"e":"b","t":"數字翻轉計數器"},{"e":"span","t":"，藉由設定每個計數器元素的 class 來達成不同數字的顯示，分別以 n0~n9 的 class 來設定子元素 top 的位置。GitHub 內的關鍵 css 與 JavaScript 分別在"},{"e":"a","attr":{"href":"https://github.com/comdan66/number_flipping_counter/blob/master/scss/counter.scss","target":"_blank"},"t":"這裡"},{"e":"span","t":"和"},{"e":"a","attr":{"href":"https://github.com/comdan66/number_flipping_counter/blob/master/js/counter.js","target":"_blank"},"t":"這裡"},{"e":"span","t":"，以下依照步驟配合圖片講解一下！"}]},{"e":"p","t":"首先建立要用的 HTML 結構，基本上就是 span 代表一個位數，裡面的 i 代表 10 個數字。"},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/2801c06c35f663ef0c30af54e3296a88.png","alt":["基本上就是","span","代表一個位數，裡面的","i","代表","10","個數字"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/375a359957fa2610ba8ae738f43c1c1c.png","alt":"瀏覽器畫面"},"s":[]}]},{"e":"p","s":[{"e":"span","t":"設定 scss(css)，將 span 給予 "},{"e":"code","t":"position: relative;"},{"e":"span","t":" 的屬性，然後針對子元素 i 設定 "},{"e":"code","t":"position: absolute;"},{"e":"span","t":"，此時看到瀏覽器畫面 span 內的 i 都疊在一起了。"}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/014d67cb0d6e860623e6411bd907fd7d.png","alt":["設定","scss(css)，將","span","給予","position:","relative;","的屬性，然後針對子元素","i","設定","position:","absolute"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/81e99970fb8d9146573f67f6621992b3.png","alt":["瀏覽器畫面","span","內的","i","都疊在一起了"]},"s":[]}]},{"e":"p","s":[{"e":"span","t":"利用 scss 的 "},{"e":"code","t":"for 迴圈"},{"e":"span","t":"，針對 "},{"e":"code","t":"nth-child"},{"e":"span","t":" 設定 "},{"e":"code","t":"top"},{"e":"span","t":" 的位置。瀏覽器使用開發者檢視，可以發現每個 i 都因為 for 迴圈加上使用 calc，所以有不同的設定值。"}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/3493aaa5d8bb32e5fe24a0672d06d262.png","alt":["利用","scss","的","for","迴圈，針對","nth-child","設定","top","的位置"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/9824199dce9cf2b03a36c83b6d1badc7.png","alt":"瀏覽器畫面"},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/4ae48229b9aba63b55e048019d4b9c78.png","alt":["使用開發者檢視，可以發現每個","i","都因為","for","迴圈加上使用","calc，所以有不同的設定值"]},"s":[]}]},{"e":"p","t":"接著改變一下 HTML，將每個 span 加上 n5 的 class，並且修改 scss，將原本的 for 迴圈移除，改在 span 設定，使用雙層迴圈，分別針對 n0~n9 去設定 i 的不同位置。開啟瀏覽器，可以發現 i 被移到指定的 5。"},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/013a8babf4a02fe47258e221af01a503.png","alt":["接著改變一下","HTML，將每個","span","加上","n5","的","class，並且修改","scss，將原本的","for","迴圈移除，改在","span","設定，使用雙層迴圈，分別針對","n0~n9","去設定","i","的不同位置"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/5ad5cced6346490c45727f7697db085b.png","alt":["開啟瀏覽器，可以發現","i","被移到指定的","5"]},"s":[]}]},{"e":"p","s":[{"e":"span","t":"使用 JavaScript 輔助，使用簡單的數學運算(/、%、pow)，切割出各個位數，並且利用 jQuery 的 "},{"e":"b","t":"eq"},{"e":"span","t":" 來取得指定的 span。"}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/5e32728d07ec829704fab4fb4ba1715b.png","alt":["使用","JavaScript","輔助，使用簡單的數學運算(/、%、pow)，切割出各個位數，並且利用","jQuery","的","eq","來取得指定的","span"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/a4e3096f78b39cbcd0af7acc5f407c54.png","alt":"瀏覽器畫面，可以看到已經可以跑到指定的位置了"},"s":[]}]},{"e":"p","t":"加上個 input，並且修改一下 JavaScript，讓使用者輸入數字時改變計數器。"},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/155ad1d26642e4ba9c0e63266ae03667.png","alt":["加上個","input，並且修改一下","JavaScript，讓使用者輸入數字時改變計數器"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/7e52aa0de7da600ff7cc78ee2bf961e9.png","alt":["修改一下","JavaScript，讓使用者輸入數字時改變計數器"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/a1e57c86c9a5e066e9ee2415f9142e60.png","alt":"瀏覽器畫面，可以讓使用者輸入數字時改變計數器"},"s":[]}]},{"e":"p","s":[{"e":"span","t":"最後在 span 上加入 "},{"e":"code","t":"overflow: hidden;"},{"e":"span","t":"，如此就可以將不再位置內的 i 隱藏囉！同時 i 加上 transition 優化 top 移動的效果！"}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/98b84e653734213eed5d74fa27f1c5a6.png","alt":["最後在","span","上加入","overflow:","hidden;，如此就可以將不再位置內的","i","隱藏囉"]},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/1e2167c0a3602c58619e834128ee8c5b.png","alt":"隱藏其他的數字"},"s":[]}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/a1e13883ff3d61d48914c7ae70c27955.png","alt":["加上","transition","優化","top","移動的效果"]},"s":[]}]}],"r":[{"e":"ul","s":[{"e":"li","s":[{"e":"a","attr":{"href":"https://works.ioa.tw/number_flipping_counter/index.html","target":"_blank"},"t":"Live Demo"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://github.com/comdan66/number_flipping_counter/","target":"_blank"},"t":"GitHub 原始碼"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.ptt.cc/bbs/Soft_Job/M.1465779607.A.89F.html","target":"_blank"},"t":"PTT Soft_Job"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.facebook.com/groups/f2e.tw/permalink/1012215045482527/","target":"_blank"},"t":"Facebook Front-End Developers Taiwan"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.facebook.com/groups/javascript.tw/permalink/790143711086969","target":"_blank"},"t":"Facebook JavaScript.tw"}]}]}],"g":["jQuery"]}
+{
+  "k":"F2E-Number-Flipping-Counter",
+  "t":"數字翻轉計數器",
+  "i":"2016-06-12",
+  "a":[
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"使用簡單的 " },
+        { "e":"a", "t":"JavaScript", "attr":{ "href":"https://zh.wikipedia.org/wiki/JavaScript", "target":"_blank" } },
+        { "e":"span", "t":" 與 " },
+        { "e":"a", "t":"SCSS", "attr":{ "href":"http://sass-lang.com/", "target":"_blank" } },
+        { "e":"span", "t":" 實作" },
+        { "e":"b", "t":"數字翻轉計數器" },
+        { "e":"span", "t":"，藉由設定每個計數器元素的 class 來達成不同數字的顯示，分別以 n0~n9 的 class 來設定子元素 top 的位置。GitHub 內的關鍵 css 與 JavaScript 分別在" },
+        { "e":"a", "t":"這裡", "attr":{ "href":"https://github.com/comdan66/number_flipping_counter/blob/master/scss/counter.scss", "target":"_blank" } },
+        { "e":"span", "t":"和" },
+        { "e":"a", "t":"這裡", "attr":{ "href":"https://github.com/comdan66/number_flipping_counter/blob/master/js/counter.js", "target":"_blank" } },
+        { "e":"span", "t":"，以下依照步驟配合圖片講解一下！" }
+      ]
+    },
+    {
+      "e":"p",
+      "t":"首先建立要用的 HTML 結構，基本上就是 span 代表一個位數，裡面的 i 代表 10 個數字。"
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"基本上就是 span 代表一個位數，裡面的 i 代表 10 個數字" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/2801c06c35f663ef0c30af54e3296a88.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"瀏覽器畫面" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/375a359957fa2610ba8ae738f43c1c1c.png" }, "s":[] }]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"設定 scss(css)，將 span 給予 " },
+        { "e":"code", "t":"position: relative;" },
+        { "e":"span", "t":" 的屬性，然後針對子元素 i 設定 " },
+        { "e":"code", "t":"position: absolute;" },
+        { "e":"span", "t":"，此時看到瀏覽器畫面 span 內的 i 都疊在一起了。" }
+      ]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"設定 scss(css)，將 span 給予 position: relative; 的屬性，然後針對子元素 i 設定 position: absolute" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/014d67cb0d6e860623e6411bd907fd7d.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"瀏覽器畫面 span 內的 i 都疊在一起了" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/81e99970fb8d9146573f67f6621992b3.png" }, "s":[] }]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"利用 scss 的 " },
+        { "e":"code", "t":"for 迴圈" },
+        { "e":"span", "t":"，針對 " },
+        { "e":"code", "t":"nth-child" },
+        { "e":"span", "t":" 設定 " },
+        { "e":"code", "t":"top" },
+        { "e":"span", "t":" 的位置。瀏覽器使用開發者檢視，可以發現每個 i 都因為 for 迴圈加上使用 calc，所以有不同的設定值。" }
+      ]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"利用 scss 的 for 迴圈，針對 nth-child 設定 top 的位置" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/3493aaa5d8bb32e5fe24a0672d06d262.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"瀏覽器畫面" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/9824199dce9cf2b03a36c83b6d1badc7.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"使用開發者檢視，可以發現每個 i 都因為 for 迴圈加上使用 calc，所以有不同的設定值" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/4ae48229b9aba63b55e048019d4b9c78.png" }, "s":[] }]
+    },
+    {
+      "e":"p",
+      "t":"接著改變一下 HTML，將每個 span 加上 n5 的 class，並且修改 scss，將原本的 for 迴圈移除，改在 span 設定，使用雙層迴圈，分別針對 n0~n9 去設定 i 的不同位置。開啟瀏覽器，可以發現 i 被移到指定的 5。"
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"接著改變一下 HTML，將每個 span 加上 n5 的 class，並且修改 scss，將原本的 for 迴圈移除，改在 span 設定，使用雙層迴圈，分別針對 n0~n9 去設定 i 的不同位置" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/013a8babf4a02fe47258e221af01a503.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"開啟瀏覽器，可以發現 i 被移到指定的 5" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/5ad5cced6346490c45727f7697db085b.png" }, "s":[] }]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"使用 JavaScript 輔助，使用簡單的數學運算(/、%、pow)，切割出各個位數，並且利用 jQuery 的 " },
+        { "e":"b", "t":"eq" },
+        { "e":"span", "t":" 來取得指定的 span。" }
+      ]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"使用 JavaScript 輔助，使用簡單的數學運算(/、%、pow)，切割出各個位數，並且利用 jQuery 的 eq 來取得指定的 span" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/5e32728d07ec829704fab4fb4ba1715b.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"瀏覽器畫面，可以看到已經可以跑到指定的位置了" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a4e3096f78b39cbcd0af7acc5f407c54.png" }, "s":[] }]
+    },
+    {
+      "e":"p",
+      "t":"加上個 input，並且修改一下 JavaScript，讓使用者輸入數字時改變計數器。"
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"加上個 input，並且修改一下 JavaScript，讓使用者輸入數字時改變計數器" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/155ad1d26642e4ba9c0e63266ae03667.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"修改一下 JavaScript，讓使用者輸入數字時改變計數器" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/7e52aa0de7da600ff7cc78ee2bf961e9.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"瀏覽器畫面，可以讓使用者輸入數字時改變計數器" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a1e57c86c9a5e066e9ee2415f9142e60.png" }, "s":[] }]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"最後在 span 上加入 " },
+        { "e":"code", "t":"overflow: hidden;" },
+        { "e":"span", "t":"，如此就可以將不再位置內的 i 隱藏囉！同時 i 加上 transition 優化 top 移動的效果！" }
+      ]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"最後在 span 上加入 overflow: hidden;，如此就可以將不再位置內的 i 隱藏囉" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/98b84e653734213eed5d74fa27f1c5a6.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"隱藏其他的數字" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/1e2167c0a3602c58619e834128ee8c5b.png" }, "s":[] }]
+    },
+    {
+      "e":"figure",
+      "attr": { "alt":"加上 transition 優化 top 移動的效果" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a1e13883ff3d61d48914c7ae70c27955.png" }, "s":[] }]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/number_flipping_counter/index.html", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/number_flipping_counter/", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1465779607.A.89F.html", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/1012215045482527/", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook JavaScript.tw", "attr":{ "href":"https://www.facebook.com/groups/javascript.tw/permalink/790143711086969", "target":"_blank" } }] }
+      ]
+    }
+  ],
+  "g":[
+    "jQuery"
+  ]
+}

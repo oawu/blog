@@ -82,6 +82,7 @@
     {
       "k":"F2E-Firebase-LiveMaps",
       "t":"聊天地圖 LiveMaps",
+      "st":"LiveMaps 是一個即時地圖聊天室，讓你在世界上任何位置都可以發出自己的感想動態。",
       "i":"2016-10-13",
       "g":[
         "Firebase",
@@ -92,6 +93,7 @@
     {
       "k":"GoogleMaps-Marker-Clustering",
       "t":"Google Maps 標記叢集 Marker Clustering",
+      "st":"各位 Google 地圖 玩家都應該有過當 Marker 太多時，視角一拉遠後全部 Marker 擠在一起的困擾吧！沒錯 OA's Marker Clustering 就是要來處理這個困擾！",
       "i":"2016-10-03",
       "g":[
         "Google Maps",
@@ -102,6 +104,7 @@
     {
       "k":"GoogleSheets-API",
       "t":"Google 試算表當資料庫並取得 API",
+      "st":"Google 試算表其實不只提供了 Excel 的表格功能試算外，其實也可以使用 API 取得文件內容… 等功能。",
       "i":"2016-09-06",
       "g":[
         "Google sheets",
@@ -111,6 +114,7 @@
     {
       "k":"F2E-PokemonGo-StopMaps",
       "t":"Pokémon Go 補給站地圖",
+      "st":"這是一個 Pokémon Go 進化後 CP 推測工具，可以快速查詢寶可夢進化後的 CP 範圍值，讓大家可以查詢各精靈在台灣的分佈！",
       "i":"2016-08-31",
       "g":[
         "Pokémon",
@@ -121,6 +125,7 @@
     {
       "k":"FullStack-Taipei-Activities",
       "t":"實作台北 • 藝文活動",
+      "st":"這是項利用新北市政府資料開放平台提供的新北市政府文化局藝文活動 API 所製作的台北 • 藝文活動。使用 PHP 將 API 資料取下來後編輯成 HTML 頁面…",
       "i":"2016-06-27",
       "g":[
         "PHP",
@@ -132,6 +137,7 @@
     {
       "k":"F2E-2016-Taipei-Child-Art-Festival",
       "t":"2016 新北兒藝節",
+      "st":"這是一個前端技術的外包案實作，其網站名稱為 2016 新北市兒童藝術節，主要就是承接新北市 2016 年兒童藝術節的活動官網。此活動網站最具特色的地方是動畫的呈現…",
       "i":"2016-06-18",
       "g":[
         "接案"
@@ -140,6 +146,7 @@
     {
       "k":"F2E-Number-Flipping-Counter",
       "t":"數字翻轉計數器",
+      "st":"使用簡單的 JavaScript 與 SCSS 實作數字翻轉計數器，藉由設定每個計數器元素的 class 來達成不同數字的顯示，分別以 n0~n9 的 class 來設定子元素 top 的位置…",
       "i":"2016-06-12",
       "g":[
         "jQuery"
@@ -148,6 +155,7 @@
     {
       "k":"FullStack-Browser-Console-QRcode",
       "t":"瀏覽器 Console 上畫 QR Code",
+      "st":"來用瀏覽器除錯器畫一個屬於個人的彩蛋吧！",
       "i":"2016-06-04",
       "g":[
         "Google Chrome",
@@ -157,6 +165,7 @@
     {
       "k":"FullStack-2016-LiuFangMazu-GPS",
       "t":"2016 六房媽祖過爐 GPS 系統",
+      "st":"雲林六房媽一年一度過爐活動今年也與我的 GPS 系統結合，六房媽在幾年前早已經有在做繞境定位…",
       "i":"2016-05-01",
       "g":[
         "Google Maps",
@@ -167,6 +176,7 @@
     {
       "k":"FullStack-2016-Mazu-GPS",
       "t":"2016 北港迎媽祖",
+      "st":"北港迎媽祖，這是個為我的家鄉的活動製作網站，幾本上是屬於義務性幫忙、沒盈利的非官方服務。每年我都會在 北港農曆三月十九迎媽祖 前數個月開始製作…",
       "i":"2016-04-25",
       "g":[
         "Google Maps",
@@ -179,6 +189,7 @@
     {
       "k":"FullStack-2016-Haotien-GPS",
       "t":"2016 大庄媽 GPS 系統",
+      "st": "大庄媽組南下北港進香的活動今年也特別的加入了 GPS 定位的功能，而這次協同開發的夥伴是…",
       "i":"2016-04-02",
       "g":[
         "Google Maps",
@@ -190,6 +201,7 @@
     {
       "k":"case-Hoga",
       "t":"嘉豪光學",
+      "st":"這是一個前、後端技術的外包案實作，其網站名稱為嘉豪光學，嘉豪光學有限公司為多國外知名品牌之總代理。於2007成立至今，憑著經營團隊專業的知識領域和熱誠的服務態度…",
       "i":"2016-03-21",
       "g":[
         "接案",
@@ -200,6 +212,7 @@
     {
       "k":"case-VG",
       "t":"VG 鉅臣",
+      "st":"這是一個前端技術的外包案實作，其網站名稱為 VG 鉅臣，此專案主要負責前端刻板部份，版型設計則由宙思設計所製作…",
       "i":"2016-03-18",
       "g":[
         "接案",
@@ -209,6 +222,7 @@
     {
       "k":"FullStack-2016-Baishatun-GPS",
       "t":"2016 白沙屯媽祖南下進香 GPS 系統",
+      "st":"白沙屯媽祖南下北港遶境 GPS 定位實作，是我目前 Google Analytics(GA) 即時流量 最高…",
       "i":"2016-03-15",
       "g":[
         "Google Maps",
@@ -220,6 +234,7 @@
     {
       "k":"jQuery-ScrollView-extend",
       "t":"實作 jQuery ScrollView 套件",
+      "st":"為了讓手機水平瀏覽圖片的操作更像 App 的介面，所以利用 JavaScript、jQuery…",
       "i":"2016-03-14",
       "g":[
         "jQuery",
@@ -230,6 +245,7 @@
     {
       "k":"FullStack-2016-ZEUS-Design-Studio",
       "t":"宙思設計",
+      "st":"宙思設計團隊，是一家服務廣泛，凡舉網頁、平面、包裝、印刷及攝影皆可製作的設計公司。",
       "i":"2016-01-11",
       "g":[
         "PHP",
@@ -239,6 +255,7 @@
     {
       "k":"F2E-TaipeiTowns",
       "t":"雙北市行政區域範圍座標",
+      "st":"藉由大家一起來維護劃分出雙北市甚至於全台灣的行政區域、鄉鎮區域的範圍座標。",
       "i":"2015-12-09",
       "g":[
         "Google Maps",
@@ -248,6 +265,7 @@
     {
       "k":"case-Bto",
       "t":"億進建築經理",
+      "st":"這是一個前端技術的外包案實作，其網站名稱為億進建築經理，此專案主要負責前端部份，版型設計則由宙思設計所製作。",
       "i":"2015-12-07",
       "g":[
         "接案"
@@ -256,6 +274,7 @@
     {
       "k":"F2E-Theta-S-360",
       "t":"全景相簿 Theta S 360",
+      "st":"這是一項特別的作品，由於近幾年全景攝影器材的進步，所以全景影片、全景照片漸漸的流行起來…",
       "i":"2015-11-30",
       "g":[
         "JavaScript",
@@ -267,6 +286,7 @@
     {
       "k":"GoogleMaps-Point-in-Polygon",
       "t":"在 Google Maps 內多邊形取點 Point in Polygon",
+      "st":"這是項個人開發的工具，而且需要前後端配合一起弄的作品，主要目的是撈出藉由不規則多邊形範圍內的點座標…",
       "i":"2015-11-26",
       "g":[
         "Google Maps",
@@ -275,6 +295,7 @@
     },
     {
       "k":"GoogleMaps-MarkerMenu",
+      "st":"此作品主要在於開發出可以在 Google Maps 上面編輯基本路徑的功能，利用 Google Maps…",
       "t":"實作 Google Maps 右鍵選單",
       "i":"2015-11-05",
       "g":[
@@ -285,6 +306,7 @@
     {
       "k":"PHP-ElasticSearch-PDO",
       "t":"PHP 實作 ElasticSearch PDO 物件",
+      "st":"這是一套 ElasticSearch 基本 Create、Read、Update、Delete(CRUD) 的使用工具，其工具主要…",
       "i":"2015-08-26",
       "g":[
         "PHP",
@@ -294,6 +316,7 @@
     {
       "k":"FullStack-Weather-Maps",
       "t":"天氣地圖 Weather Maps",
+      "st":"這項做主要是藉由中央氣象局的網站資料建置出來的，其中主要功能是可以藉由 Google Maps 查詢各地方的天氣預報…",
       "i":"2015-07-10",
       "g":[
         "jQuery",
@@ -307,6 +330,7 @@
     {
       "k":"iOS-OAHUD",
       "t":"OAHUD",
+      "st":"因為看到很多 GitHub 上的專案都寫 HUD，這幾天再研究一種東西，一開始我還不知道怎去下關鍵字 Google…",
       "i":"2015-07-09",
       "g":[
         "iOS",
@@ -318,6 +342,7 @@
     {
       "k":"iOS-CatMap",
       "t":"CatMap",
+      "st":"此作是我第一個比較完整的 iOS 的 App，主要利用基本的 iOS 元件製作照相上傳、分享、地圖功能，以下是我一些學習的筆記與心得…",
       "i":"2015-07-05",
       "g":[
         "iOS",
@@ -329,6 +354,7 @@
     },
     {
       "k":"GoogleMaps-Instagram-ImageMaps",
+      "st":"Instagram App 當中有一項很特別的功能是我很喜愛的，就是地圖模式的瀏覽照片，而且…",
       "t":"實作 Instagram Maps 相片地圖",
       "i":"2015-06-29",
       "g":[
@@ -340,6 +366,7 @@
     {
       "k":"GoogleMaps-Richman-Game",
       "t":"Google Maps 大富翁",
+      "st":"這是一個使用 Google Maps JavaScript API 製作的大富翁遊戲！基本上是利用 Google Maps Markers 以及 Polyline 所建置出…",
       "i":"2015-05-04",
       "g":[
         "Google Maps"
@@ -348,6 +375,7 @@
     {
       "k":"case-OFNA",
       "t":"歐芙娜 OFNA",
+      "st":"這是一個前、後、系統端技術的外包案實作，其網站名稱為歐芙娜 OFNA，此專案主要負責前端刻板、後端串接、系統端部署部份，版型設計則由宙思設計所製作…",
       "i":"2015-04-03",
       "g":[
         "接案"
@@ -356,6 +384,7 @@
     {
       "k":"case-Harmonize",
       "t":"寬堂空間設計",
+      "st":"這是一個前、後端技術的外包案實作，其網站名稱為寬堂空間設計，此專案主要負責前端刻板、後端串接部份，版型設計則由宙思設計所製作…",
       "i":"2015-02-26",
       "g":[
         "接案"
@@ -364,6 +393,7 @@
     {
       "k":"Flickr-Search-API",
       "t":"實作 Flickr API 搜尋器",
+      "st":"簡單快速搜尋 Flickr 的前端工具，借由輸入想搜尋的圖片關鍵字而撈取出 Flickr 上面的熱門照片…",
       "i":"2015-01-28",
       "g":[
         "Flickr"
@@ -372,6 +402,7 @@
     {
       "k":"jQuery-Youtube-Player",
       "t":"用 jQuery 實作 Youtube 播放器",
+      "st":"主要是練習 Youtube API 的運用，主要功能是利用 API 來操作播放清單以及播放參數的設定…",
       "i":"2014-12-29",
       "g":[
         "jQuery",
@@ -381,6 +412,7 @@
     {
       "k":"GitHub-Blog",
       "t":"用 GitHub 架設 Blog",
+      "st":"使用 GitHub 架設個人 Blog 不僅可以節省伺服器空間，同時也可以使用 Markdown 語法做文章管理…",
       "i":"2014-12-16",
       "g":[
         "GitHub",
@@ -390,6 +422,7 @@
     {
       "k":"F2E-Material-Web-Design",
       "t":"實作 Material Web Design",
+      "st":"這套前端工具主要是參考 Material UI 風格設計，並且這是一個藉由 Compass、HTML 以及 jQuery…",
       "i":"2014-12-08",
       "g":[
         "jQuery",
@@ -400,6 +433,7 @@
     {
       "k":"jQuery-Navbar-extend",
       "t":"實作 jQuery Navbar 套件",
+      "st":"這是一個前端 jQuery Extend Function，主要架構於 jQuery 以及 SCSS、SASS…",
       "i":"2014-12-04",
       "g":[
         "jQuery",
@@ -409,6 +443,7 @@
     {
       "k":"jQuery-Maze-Game",
       "t":"用 jQuery 做迷宮遊戲",
+      "st":"此作品主要架構於 jQuery 之下實作，它不是一個前端 jQuery extend function，而是 based on jQuery…",
       "i":"2014-12-03",
       "g":[
         "jQuery",
@@ -418,6 +453,7 @@
     {
       "k":"case-Chitorch",
       "t":"奇拓室內裝修設計",
+      "st":"這是一個後端技術的外包案實作，其網站名稱為奇拓室內裝修設計，奇拓室內裝修設計是我近年來第一個與宙思設計承接的網站外包案，不過這專案我並非為全端作業，而是…",
       "i":"2014-12-03",
       "g":[
         "接案"
@@ -426,6 +462,7 @@
     {
       "k":"jQuery-scrollSliderView-extend",
       "t":"實作 jQuery scrollSliderView 套件",
+      "st":"前端 jQuery Extend Function，主要架構於 jQuery，此版本是支援…",
       "i":"2014-12-01",
       "g":[
         "jQuery"
@@ -434,6 +471,7 @@
     {
       "k":"jQuery-imgLiquid-extend",
       "t":"實作 jQuery imgLiquid 套件",
+      "st":"處理前端圖片置中的 jQuery Extend Function，其中參考了 imgLiquid，但其架構與做法不大相同…",
       "i":"2014-11-28",
       "g":[
         "jQuery"
@@ -442,6 +480,7 @@
     {
       "k":"PHP-2014-OACI",
       "t":"2014 OACI",
+      "st":"這是一個以 CodeIgniter 2.1.4 為基礎版本，將其新增進階功能的一套好用的 PHP Framework，加入了 PHP ActiveRecord 並且與 OrmUploader 讓圖片網址處理更方便，以及多樣的前後端整併…",
       "i":"2014-11-11",
       "g":[
         "PHP",
@@ -453,6 +492,7 @@
     {
       "k":"C-language-ComicBook",
       "t":"用C語言寫漫畫下載器",
+      "st":"這是個使用 C 語言 的 Console 畫面去繪出模擬 BBS 版型，並且利用 wget 指令將知名網站 8comic 上的原始碼轉譯出漫畫並下載…",
       "i":"2012-11-17",
       "g":[
         "C 語言",
@@ -462,6 +502,7 @@
     {
       "k":"PHP-Blog",
       "t":"用 PHP 實作雲端空間與部落格",
+      "st":"此作品是大四作品之一，因為製作了相簿系統完後有了更多對於網站開發的心得，於是就馬上開啟了新專案，逐步的開發這個平台，這個作品主要是加強了相簿系統，加入…",
       "i":"2012-02-21",
       "g":[
         "PHP"
@@ -470,6 +511,7 @@
     {
       "k":"jQuery-Pokemon-Game",
       "t":"用 jQuery 做一套遊戲",
+      "st":"大學期間學習網頁開發過程中，總是會有一些有趣的靈感，而我總是喜歡使用我所會的語言工具，去將想法實現出來，而使用 jQuery 製作遊戲也是我的一項小小里程碑…",
       "i":"2010-07-01",
       "g":[
         "jQuery",
@@ -479,6 +521,7 @@
     {
       "k":"PHP-Album",
       "t":"用 PHP 實作網路相簿",
+      "st":"因為大三專題有接觸網頁設計，所以就利用課餘時間開發了簡單的一套相簿系統，這套系統是使用 php 版本 5.4 開發，內容包含基本的登入、上傳、編輯..等 Create、Read、Update、Delete(CRUD) 功能…",
       "i":"2010-07-01",
       "g":[
         "PHP"
@@ -487,6 +530,7 @@
     {
       "k":"Arduino-Competition",
       "t":"Arduino 新銳展翅創意競賽",
+      "st":"大三專題中使用了 Arduino UNO 以及多項 Sensor 組合出多項功能作品，主要架構是以 Arduino 與各個裝置互相溝通，溝通的方式使用 XBee 無線套件…",
       "i":"2010-04-17",
       "g":[
         "Arduino",
@@ -496,6 +540,7 @@
     {
       "k":"Java-Assembler",
       "t":"用 Java 實作 Assembler",
+      "st":"這是大學二年級時在系統程式課程中所實作的 Assembler 組譯器，主功能是將 SIC XE Literal 的組合語言編譯成機械語言，借由實作這個轉換器的同時…",
       "i":"2009-05-01",
       "g":[
         "Java",
@@ -505,6 +550,7 @@
     {
       "k":"Java-Plurker",
       "t":"用 Java 實作 Plurker",
+      "st":"當年大學三年級時期藉由噗浪官方提供的 API、SDK 實作了一個以 Java GUI 呈現的作品，主要功能是結合噗浪微網誌的社群管理軟體。其中更包含了軟體安裝、多角色登入、發訊息、回復訊息、智慧回復機器人…",
       "i":"2009-04-07",
       "g":[
         "Java",
@@ -514,6 +560,7 @@
     {
       "k":"Java-Msn",
       "t":"用 Java 實作 MSN",
+      "st":"因為學習 Java 語言而發現了有 UDT、TCP 通訊協定的 Socket 物件可以使用，所以就在利用 Java GUI 與 Socket 做了簡單結合，由基本的…",
       "i":"2008-10-01",
       "g":[
         "Java",
@@ -523,6 +570,7 @@
     {
       "k":"Java-Painter",
       "t":"用 Java 實作小畫家",
+      "st":"這是大學一年級的下學期高等程式設計的學期作業，因為實作讓我對物件導向語言的 封裝、繼承、多型..等特性更加熟悉！有別於上學期的 C，Java 可以利用 GUI 介面實作出我理想中的作品…",
       "i":"2008-05-01",
       "g":[
         "Java",

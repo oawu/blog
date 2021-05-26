@@ -184,16 +184,16 @@ body {
 }
 %-ulol {
   + %-p { margin-top: 24px; }
-  + %-pre { margin-top: 24px; }
+  + %-pre { margin-top: 8px; }
   + %-ulol { margin-top: 8px; }
   + %-h { margin-top: 60px; }
   + %-img { margin-top: 24px; }
 }
 %-span {
   + %-p { margin-top: 12px; }
-  + %-pre { margin-top: 12px; }
+  + %-pre { margin-top: 8px; }
   + %-ulol { margin-top: 8px; }
-  + %-img { margin-top: 12px; }
+  + %-img { margin-top: 8px; }
 }
 %-img {
   + %-p { margin-top: 48px; }
@@ -372,6 +372,38 @@ body {
 
   table {
     @extend %-img;
+  
+    display: table;
+    table-layout: fixed;
+    
+    max-width: 100%;
+
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid var(--ui-color-separator);
+
+    th, td {
+      padding: 2px 6px;
+      
+      + th, + td {
+        border-left: 1px solid var(--ui-color-separator)
+      }
+    }
+    thead tr:nth-child(2n + 1) { background-color: var(--ui-color-secondarySystemBackground); }
+    thead tr:nth-child(2n + 2) { background-color: var(--ui-color-tertiarySystemBackground); }
+    
+    tbody tr:nth-child(2n + 1) { background-color: var(--ui-color-tertiarySystemBackground); }
+    tbody tr:nth-child(2n + 2) { background-color: var(--ui-color-secondarySystemBackground); }
+
+    tr + tr {
+      th, td {
+        border-top: 1px solid var(--ui-color-separator)
+      }
+    }
+
+    thead tr th {
+      border-bottom: 1px solid var(--ui-color-separator);
+    }
   }
 
   time {
@@ -707,6 +739,7 @@ body {
       &:after { background-color: var(--ui-color-systemRed); }
       &:before {
         @extend %-icon;
+        top: 20px;
         content: '\a0025';
         color: var(--ui-color-systemRed); }
     }
@@ -728,10 +761,26 @@ body {
     padding-left: 28px;
     %-ulol {
       padding-left: 16px;
-      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 20px;
+      }
     }
     %-pre {
-      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+    &:last-child {
+      %-ulol {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      %-pre {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     li {

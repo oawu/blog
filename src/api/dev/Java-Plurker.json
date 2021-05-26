@@ -1,1 +1,69 @@
-{"k":"Java-Plurker","t":"用 Java 實作 Plurker","i":"2009-04-07","a":[{"e":"p","s":[{"e":"span","t":"當年大學三年級時期藉由"},{"e":"a","attr":{"href":"https://www.plurk.com/","target":"_blank"},"t":"噗浪"},{"e":"span","t":"官方提供的 "},{"e":"a","attr":{"href":"http://www.plurk.com/API","target":"_blank"},"t":"API"},{"e":"span","t":"、"},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85","target":"_blank"},"t":"SDK"},{"e":"span","t":" 實作了一個以 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/Swing_(Java)","target":"_blank"},"t":"Java GUI"},{"e":"span","t":" 呈現的作品，主要功能是結合噗浪微網誌的社群管理軟體。其中更包含了"},{"e":"b","t":"軟體安裝"},{"e":"span","t":"、"},{"e":"b","t":"多角色登入"},{"e":"span","t":"、"},{"e":"b","t":"發訊息"},{"e":"span","t":"、"},{"e":"b","t":"回復訊息"},{"e":"span","t":"、"},{"e":"b","t":"智慧回復機器人"},{"e":"span","t":".. 等。"}]},{"e":"p","s":[{"e":"span","t":"會取名 "},{"e":"b","t":"Plurker"},{"e":"span","t":" 主要是因為噗浪英文名稱 “Plurk”，所以加個 “er”，"},{"e":"a","attr":{"href":"https://github.com/comdan66/junior-java-plurker","target":"_blank"},"t":"GitHub"},{"e":"span","t":" 上有提供當年的程式碼，有興趣的各位歡迎點閱，不過年代久遠，所以程式碼架構與寫法並不是很美觀，所以建議先觀看以下是的 Demo 影片，影片裡面會有詳細的功能介紹！"}]},{"e":"iframe","attr":{"allowfullscreen":"","frameborder":"0","src":"https://www.youtube.com/embed/12P3aX6LQac"},"s":[]}],"r":[{"e":"ul","s":[{"e":"li","s":[{"e":"a","attr":{"href":"https://github.com/comdan66/junior-java-plurker","target":"_blank"},"t":"GitHub 原始碼"}]},{"e":"li","s":[{"e":"a","attr":{"href":"https://www.youtube.com/watch?v=12P3aX6LQac","target":"_blank"},"t":"Youtube 影片"}]}]}],"g":["Java","Plurk"]}
+{
+  "k":"Java-Plurker",
+  "t":"用 Java 實作 Plurker",
+  "i":"2009-04-07",
+  "a":[
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"當年大學三年級時期藉由" },
+        { "e":"a", "t":"噗浪", "attr":{ "href":"https://www.plurk.com/", "target":"_blank" } },
+        { "e":"span", "t":"官方提供的 " },
+        { "e":"a", "t":"API", "attr":{ "href":"http://www.plurk.com/API", "target":"_blank" } },
+        { "e":"span", "t":"、" },
+        { "e":"a", "t":"SDK", "attr":{ "href":"https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85", "target":"_blank" } },
+        { "e":"span", "t":" 實作了一個以 " },
+        { "e":"a", "t":"Java GUI", "attr":{ "href":"https://zh.wikipedia.org/wiki/Swing_(Java)", "target":"_blank" } },
+        { "e":"span", "t":" 呈現的作品，主要功能是結合噗浪微網誌的社群管理軟體。其中更包含了" },
+        { "e":"b", "t":"軟體安裝" },
+        { "e":"span", "t":"、" },
+        { "e":"b", "t":"多角色登入" },
+        { "e":"span", "t":"、" },
+        { "e":"b", "t":"發訊息" },
+        { "e":"span", "t":"、" },
+        { "e":"b", "t":"回復訊息" },
+        { "e":"span", "t":"、" },
+        { "e":"b", "t":"智慧回復機器人" },
+        { "e":"span", "t":".. 等。" }
+      ]
+    },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"會取名 " },
+        { "e":"b", "t":"Plurker" },
+        { "e":"span", "t":" 主要是因為噗浪英文名稱 “Plurk”，所以加個 “er”，" },
+        { "e":"a", "t":"GitHub", "attr":{ "href":"https://github.com/comdan66/junior-java-plurker", "target":"_blank" } },
+        { "e":"span", "t":" 上有提供當年的程式碼，有興趣的各位歡迎點閱，不過年代久遠，所以程式碼架構與寫法並不是很美觀，所以建議先觀看以下是的 Demo 影片，影片裡面會有詳細的功能介紹！" }
+      ]
+    },
+    {
+      "e":"div",
+      "attr": { "class": "iframe" },
+      "s":[
+        {
+          "e":"iframe",
+          "attr":{
+            "allowfullscreen":"",
+            "frameborder":"0",
+            "src":"https://www.youtube.com/embed/12P3aX6LQac"
+          },
+          "s":[]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/junior-java-plurker", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "attr":{ "href":"https://www.youtube.com/watch?v=12P3aX6LQac", "target":"_blank" } }] }
+      ]
+    }
+  ],
+  "g":[
+    "Java",
+    "Plurk"
+  ]
+}

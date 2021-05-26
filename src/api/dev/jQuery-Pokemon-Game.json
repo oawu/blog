@@ -1,1 +1,50 @@
-{"k":"jQuery-Pokemon-Game","t":"用 jQuery 做一套遊戲","i":"2010-07-01","a":[{"e":"p","t":"大學期間學習網頁開發過程中，總是會有一些有趣的靈感，而我總是喜歡使用我所會的語言工具，去將想法實現出來，而使用 jQuery 製作遊戲也是我的一項小小里程碑。"},{"e":"p","s":[{"e":"span","t":"這作品相信大家會有似曾相似感，靈感來自於 "},{"e":"a","attr":{"href":"http://www.nintendo.tw/","target":"_blank"},"t":"Nintendo"},{"e":"span","t":" 的一款遊戲，叫做 "},{"e":"a","attr":{"href":"https://en.wikipedia.org/wiki/Pok%C3%A9mon","target":"_blank"},"t":"Pokémon"},{"e":"span","t":"，當初構想曾有過大至商城化、地圖化劇情，但由於多項因素就沒將它完整的完成。其中個人最滿意的部分是全部網站效果皆由 jQuery 製作，而圖示、視覺，則利用"},{"e":"a","attr":{"href":"http://windows.microsoft.com/zh-tw/windows-vista/open-paint","target":"_blank"},"t":"小畫家"},{"e":"span","t":"、"},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/Ulead_PhotoImpact","target":"_blank"},"t":"PhotoImpact"},{"e":"span","t":" 獨立完成。"}]},{"e":"p","t":"以下是 Demo 影片，演釋了整個遊戲的流程，歡迎有興趣者點閱。"},{"e":"iframe","attr":{"allowfullscreen":"","frameborder":"0","src":"https://www.youtube.com/embed/9cPiXCAnA6E"},"s":[]}],"r":[{"e":"ul","s":[{"e":"li","s":[{"e":"a","attr":{"href":"https://www.youtube.com/embed/9cPiXCAnA6E","target":"_blank"},"t":"Youtube 影片"}]}]}],"g":["jQuery","Pokémon"]}
+{
+  "k":"jQuery-Pokemon-Game",
+  "t":"用 jQuery 做一套遊戲",
+  "i":"2010-07-01",
+  "a":[
+    { "e":"p", "t":"大學期間學習網頁開發過程中，總是會有一些有趣的靈感，而我總是喜歡使用我所會的語言工具，去將想法實現出來，而使用 jQuery 製作遊戲也是我的一項小小里程碑。" },
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"這作品相信大家會有似曾相似感，靈感來自於 " },
+        { "e":"a", "t":"Nintendo", "attr":{ "href":"http://www.nintendo.tw/", "target":"_blank" } },
+        { "e":"span", "t":" 的一款遊戲，叫做 " },
+        { "e":"a", "t":"Pokémon", "attr":{ "href":"https://en.wikipedia.org/wiki/Pok%C3%A9mon", "target":"_blank" } },
+        { "e":"span", "t":"，當初構想曾有過大至商城化、地圖化劇情，但由於多項因素就沒將它完整的完成。其中個人最滿意的部分是全部網站效果皆由 jQuery 製作，而圖示、視覺，則利用" },
+        { "e":"a", "t":"小畫家", "attr":{ "href":"http://windows.microsoft.com/zh-tw/windows-vista/open-paint", "target":"_blank" } },
+        { "e":"span", "t":"、" },
+        { "e":"a", "t":"PhotoImpact", "attr":{ "href":"https://zh.wikipedia.org/wiki/Ulead_PhotoImpact", "target":"_blank" } },
+        { "e":"span", "t":" 獨立完成。" }
+      ]
+    },
+    { "e":"p", "t":"以下是 Demo 影片，演釋了整個遊戲的流程，歡迎有興趣者點閱。" },
+    {
+      "e":"div",
+      "attr": { "class": "iframe" },
+      "s": [
+        {
+          "e":"iframe",
+          "attr":{
+            "allowfullscreen":"",
+            "frameborder":"0",
+            "src":"https://www.youtube.com/embed/9cPiXCAnA6E"
+          },
+          "s":[]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "attr":{ "href":"https://www.youtube.com/embed/9cPiXCAnA6E", "target":"_blank" } }] }
+      ]
+    }
+  ],
+  "g":[
+    "jQuery",
+    "Pokémon"
+  ]
+}

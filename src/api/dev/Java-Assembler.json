@@ -1,1 +1,42 @@
-{"k":"Java-Assembler","t":"用 Java 實作 Assembler","i":"2009-05-01","a":[{"e":"p","s":[{"e":"span","t":"這是大學二年級時在系統程式課程中所實作的 "},{"e":"a","attr":{"href":"https://en.wikipedia.org/wiki/Assembly_language#Assembler","target":"_blank"},"t":"Assembler 組譯器"},{"e":"span","t":"，主功能是將 "},{"e":"a","attr":{"href":"https://en.wikipedia.org/wiki/SIC/XE","target":"_blank"},"t":"SIC XE Literal"},{"e":"span","t":" 的"},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80","target":"_blank"},"t":"組合語言"},{"e":"span","t":"編譯成"},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80","target":"_blank"},"t":"機械語言"},{"e":"span","t":"，借由實作這個轉換器的同時，可以更加的了解組合語言與機械語言間的關係與原理。當時會選擇使用 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/Java","target":"_blank"},"t":"Java"},{"e":"span","t":" 是因為 "},{"e":"a","attr":{"href":"https://zh.wikipedia.org/wiki/Swing_(Java)","target":"_blank"},"t":"GUI"},{"e":"span","t":" 介面更容易表現出理想的操作介面，更可以讓使用者更加方便轉換組合語言。"}]},{"e":"p","s":[{"e":"img","attr":{"src":"https://www.ioa.tw/img/fd3b42f24e5b8e9a406f9a270f872137.jpg","alt":["Java","Assembler"]},"s":[]}]}],"r":[{"e":"ul","s":[{"e":"li","s":[{"e":"a","attr":{"href":"https://github.com/comdan66/sophomore-java-assembler","target":"_blank"},"t":"GitHub 原始碼"}]}]}],"g":["Java","Assembler"]}
+{
+  "k":"Java-Assembler",
+  "t":"用 Java 實作 Assembler",
+  "i":"2009-05-01",
+  "a":[
+    {
+      "e":"p",
+      "s":[
+        { "e":"span", "t":"這是大學二年級時在系統程式課程中所實作的 " },
+        { "e":"a", "t":"Assembler 組譯器", "attr":{ "href":"https://en.wikipedia.org/wiki/Assembly_language#Assembler", "target":"_blank" } },
+        { "e":"span", "t":"，主功能是將 " },
+        { "e":"a", "t":"SIC XE Literal", "attr":{ "href":"https://en.wikipedia.org/wiki/SIC/XE", "target":"_blank" } },
+        { "e":"span", "t":" 的" },
+        { "e":"a", "t":"組合語言", "attr":{ "href":"https://zh.wikipedia.org/wiki/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80", "target":"_blank" } },
+        { "e":"span", "t":"編譯成" },
+        { "e":"a", "t":"機械語言", "attr":{ "href":"https://zh.wikipedia.org/wiki%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80", "target":"_blank" } },
+        { "e":"span", "t":"，借由實作這個轉換器的同時，可以更加的了解組合語言與機械語言間的關係與原理。當時會選擇使用 " },
+        { "e":"a", "t":"Java", "attr":{ "href":"https://zh.wikipedia.org/wiki/Java", "target":"_blank" } },
+        { "e":"span", "t":" 是因為 " },
+        { "e":"a", "t":"GUI", "attr":{ "href":"https://zh.wikipedia.org/wiki/Swing_(Java)", "target":"_blank" } },
+        { "e":"span", "t":" 介面更容易表現出理想的操作介面，更可以讓使用者更加方便轉換組合語言。" }
+      ]
+    },
+    {
+      "e":"figure",
+      "attr":{ "alt":"Java Assembler" },
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/fd3b42f24e5b8e9a406f9a270f872137.jpg" }, "s":[] }]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/sophomore-java-assembler", "target":"_blank" } }] }
+      ]
+    }
+  ],
+  "g":[
+    "Java",
+    "Assembler"
+  ]
+}
