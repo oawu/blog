@@ -123,14 +123,14 @@ Load.init({
     title: "OA Wu's Blog",
     item: null,
     items: [
-      { k: 'index',   c: 'd', t: '個人簡介' },
-      { k: 'dev',     c: 'e', t: '開發心得' },
-      { k: 'mac',     c: '1b', t: '蘋果環境' },
-      { k: 'aws',     c: '22', t: 'AWS筆記' },
-      { k: 'note',    c: '1e', t: '隨筆雜記' },
-      { k: 'mazu',    c: '1a', t: '鄉土北港' },
-      { k: 'unbox',   c: 'f', t: '開箱文章' },
-      { k: 'license', c: '16', t: '授權聲明' }
+      { k: 'index',   st: 0, c: 'd', t: '個人簡介' },
+      { k: 'dev',     st: 0, c: 'e', t: '開發心得' },
+      { k: 'mac',     st: 0, c: '1b', t: '蘋果環境' },
+      { k: 'aws',     st: 0, c: '22', t: 'AWS筆記' },
+      { k: 'note',    st: 0, c: '1e', t: '隨筆雜記' },
+      { k: 'mazu',    st: 0, c: '1a', t: '鄉土北港' },
+      { k: 'unbox',   st: 0, c: 'f', t: '開箱文章' },
+      { k: 'license', st: 0, c: '16', t: '授權聲明' }
     ],
   },
   mounted () {
@@ -153,7 +153,8 @@ Load.init({
           const n = i == main.s.length - 1 ? null : main.s[i + 1]
           return item ? API.GET('/api/' + this.item.k + '/' + item.k + '.json').done(main => next({ ...main, p, n })).fail(_ => next(main, Toastr.failure('找不到資料！'))) : next(main)
         })
-        .enqueue((next, main) => this.main = main)
+        .enqueue((next, main) => next(this.main = main))
+        .enqueue(next => next(this.items.forEach(item => API.GET('/api/' + item.k + '.json').done(({ s }) => item.st = s && s.length).send())))
     }
   },
   template: El.render(`
@@ -162,7 +163,7 @@ Load.init({
 
       div#menu => :class={ on: on }
         a => *for=t in items   :key=t.k   :class=['icon-' + t.c, { active: item === t }]   :href=t.u
-          span => *text=t.t   :text=t.s ? t.s.length : 0
+          span => *text=t.t   :text=t.st
 
       header#header
         label.icon-0 => @click=on=true
