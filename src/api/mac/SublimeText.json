@@ -1,607 +1,29 @@
 {
   "k":"SublimeText",
   "t":"macOS 上安裝 Sublime Text 文字編輯器",
-  "i":"2020-03-17",
+  "i":"2021-06-02",
   "a":[
-    {
-      "e":"h2",
-      "t":"Youtube 影音教學版"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.youtube.com/watch?v=nPlPOmX1aME",
-                "target":"_blank"
-              },
-              "t":"https://www.youtube.com/watch?v=nPlPOmX1aME"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"Sublime Text 3"
-    },
+
+    { "e":"blockquote", "attr":{"class": "info"}, "s": [
+      { "e": "span", "t":"若無特殊需求，安裝最新版本的 " },
+      { "e": "code", "t":"Sublime Text 4" },
+      { "e": "span", "t":" 即可！" }
+    ] },
+
+    { "e":"h2", "t":"Sublime Text 4" },
     {
       "e":"ul",
       "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"官網下載 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.sublimetext.com/3",
-                "target":"_blank"
-              },
-              "t":"https://www.sublimetext.com/3"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"下載來後，就移到"
-            },
-            {
-              "e":"b",
-              "t":"應用程式資料夾"
-            },
-            {
-              "e":"span",
-              "t":"，並開啟"
-            }
-          ]
-        }
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.sublimetext.com/download", "attr":{ "href":"https://www.sublimetext.com/download", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"點擊 macOS 下載，完成來後，就移到" }, { "e":"b", "t":"應用程式目錄" }, { "e":"span", "t":"，並開啟" }] }
       ]
     },
-    {
-      "e":"h3",
-      "t":"啟用 Packages"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"官方網站介紹 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://packagecontrol.io/installation#st3",
-                "target":"_blank"
-              },
-              "t":"https://packagecontrol.io/installation#st3"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開 Sublime Text，按下 "
-            },
-            {
-              "e":"code",
-              "t":"ctrl + `"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"輸入官網給的那串文字 "
-            },
-            {
-              "e":"code",
-              "t":"import urllib.request,os,hashl..."
-            },
-            {
-              "e":"span",
-              "t":" 的(請至官網複製)，然後重開 Sublime Text"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h3",
-      "t":"安裝套件"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"p",
-              "t":"SublimeLinter"
-            },
-            {
-              "e":"ul",
-              "s":[
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"打開 Sublime Text，按下 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"command + shift + p"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"install"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Package Control: Install Package"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"接著輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SublimeLinter"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SublimeLinter"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "t":"重新開啟 Sublime Text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"p",
-              "t":"SCSS"
-            },
-            {
-              "e":"ul",
-              "s":[
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"打開 Sublime Text，按下 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"command + shift + p"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"install"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Package Control: Install Package"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"接著輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SCSS"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SCSS"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "t":"重新開啟 Sublime Text"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h3",
-      "t":"環境設定"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"開啟 Sublime Text，點擊左上 "
-            },
-            {
-              "e":"code",
-              "t":"Sublime Text"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"preferences"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"Browser Packages.."
-            },
-            {
-              "e":"span",
-              "t":" 後出現一個資料夾"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"進入資料夾 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"下載 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/Preferences.sublime-settings",
-                "target":"_blank"
-              },
-              "t":"Preferences.sublime-settings"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"將下載的檔案複製到 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            },
-            {
-              "e":"span",
-              "t":" 資料夾，將原本的 "
-            },
-            {
-              "e":"code",
-              "t":"Preferences.sublime-settings"
-            },
-            {
-              "e":"span",
-              "t":" 取代"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h3",
-      "t":"快捷鍵設定"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"開啟 Sublime Text，點擊左上 "
-            },
-            {
-              "e":"code",
-              "t":"Sublime Text"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"preferences"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"Browser Packages.."
-            },
-            {
-              "e":"span",
-              "t":" 後出現一個資料夾"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"進入資料夾 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"下載 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/Default+(OSX).sublime-keymap",
-                "target":"_blank"
-              },
-              "t":"Default (OSX).sublime-keymap"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"注意！下載下來的檔案是 "
-            },
-            {
-              "e":"code",
-              "t":"Default+(OSX).sublime-keymap"
-            },
-            {
-              "e":"span",
-              "t":"，記得把中間的 "
-            },
-            {
-              "e":"code",
-              "t":"+"
-            },
-            {
-              "e":"span",
-              "t":" 改為 "
-            },
-            {
-              "e":"code",
-              "t":"空格"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"將下載的檔案複製到 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            },
-            {
-              "e":"span",
-              "t":" 資料夾"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h3",
-      "t":"安裝指令"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開 "
-            },
-            {
-              "e":"code",
-              "t":"iTerm2"
-            },
-            {
-              "e":"span",
-              "t":" 終端機(若尚未安裝 "
-            },
-            {
-              "e":"code",
-              "t":"iTerm2"
-            },
-            {
-              "e":"span",
-              "t":" 請先參考 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.ioa.tw/macOS/iTerm2.html",
-                "target":"_blank"
-              },
-              "t":"此篇"
-            },
-            {
-              "e":"span",
-              "t":" 安裝)，建立 bin 目錄執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"mkdir ~/bin"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開終端機，輸入指令 "
-            },
-            {
-              "e":"code",
-              "t":"ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  ~/bin/subl"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開 Finder，然後快捷鍵 "
-            },
-            {
-              "e":"code",
-              "t":"command + shift + g"
-            },
-            {
-              "e":"span",
-              "t":" 輸入 "
-            },
-            {
-              "e":"code",
-              "t":"~/.zshrc"
-            },
-            {
-              "e":"span",
-              "t":"，拖曳至 Sublime Text 編輯"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"在檔案最下面新增 "
-            },
-            {
-              "e":"code",
-              "t":"export PATH=$PATH:$HOME/bin"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"Sublime Text 2"
-    },
+    { "e":"h3", "t":"啟用 Packages" },
     {
       "e":"p",
-      "t":"目前官方好像不太支援，反正可以的話就用 3 試試看吧！"
+      "s":[
+        { "e":"span", "t":"官方網站介紹 － " }, { "e":"a", "t":"https://packagecontrol.io/installation", "attr":{ "href":"https://packagecontrol.io/installation", "target":"_blank" } }
+      ]
     },
     {
       "e":"ul",
@@ -609,162 +31,78 @@
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"官網下載 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.sublimetext.com/2",
-                "target":"_blank"
-              },
-              "t":"https://www.sublimetext.com/2"
-            }
+            { "e":"span", "t":"下載 " },
+            { "e":"b", "t":"Swift.sublime-package" },
+            { "e":"span", "t":" 網址 " },
+            { "e":"a", "t":"https://packagecontrol.io/installation", "attr":{ "href":"https://packagecontrol.io/installation", "target":"_blank" } }
           ]
         },
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"把它移到"
-            },
-            {
-              "e":"b",
-              "t":"應用程式資料夾"
-            },
-            {
-              "e":"span",
-              "t":"，並開啟"
-            }
+            { "e":"span", "t":"畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" },
+            { "e":"br" },
+            { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/1.jpg" }, "s":[] }] }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"Swift.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" },
+            { "e":"br" },
+            { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/2.jpg" }, "s":[] }] }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }
           ]
         }
       ]
     },
-    {
-      "e":"h3",
-      "t":"啟用 Packages"
-    },
+
+    { "e":"h3", "t":"快捷鍵設定" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"網站介紹 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://packagecontrol.io/installation#st2",
-                "target":"_blank"
-              },
-              "t":"https://packagecontrol.io/installation#st2"
-            }
-          ]
+          "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"Default (OSX).sublime-keymap", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/Default+(OSX).sublime-keymap", "target":"_blank" } }]
         },
         {
           "e":"li",
-          "t":"打開 Sublime Text 2，按下 ctrl + `"
+          "s":[{ "e":"span", "t":"剛下載的檔案名稱可能為 " }, { "e":"code", "t":"Default+(OSX).sublime-keymap" }, { "e":"span", "t":"，請先將他更名為 " }, { "e":"code", "t":"Default (OSX).sublime-keymap", "copy":"Default (OSX).sublime-keymap" }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"輸入官網給的那串文字 "
-            },
-            {
-              "e":"code",
-              "t":"import urllib2,os,hashl..."
-            },
-            {
-              "e":"span",
-              "t":" 的(請至官網複製)，然後重開 Sublime Text 2"
-            }
-          ]
+          "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"進入 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Default (OSX).sublime-keymap" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/4.jpg" }, "s":[] }] }]
         }
       ]
     },
-    {
-      "e":"h3",
-      "t":"安裝套件"
-    },
+    { "e":"h3", "t":"主題設定" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
-            {
-              "e":"p",
-              "t":"SublimeLinter"
-            },
+            { "e":"span", "t":"OA Theme 目錄" },
             {
               "e":"ul",
               "s":[
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"打開 Sublime Text 2，按下 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"command + shift + p"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"install"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Package Control: Install Package"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"接著輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SublimeLinter"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SublimeLinter"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "t":"重新開啟 Sublime Text 2"
-                }
+                { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.zip", "target":"_blank" } }] },
+                { "e":"li", "s":[{ "e":"span", "t":"將 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 解開壓縮，解開後會是一個名為 " }, { "e":"code", "t":"OA Theme" }, { "e":"span", "t":" 目錄" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"將剛剛解開壓縮的 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 目錄複製至 " }, { "e":"code", "t":"Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/5.png" }, "s":[] }] }] }
               ]
             }
           ]
@@ -772,604 +110,193 @@
         {
           "e":"li",
           "s":[
-            {
-              "e":"p",
-              "t":"Scss"
-            },
+            { "e":"span", "t":"OA Theme Package" },
             {
               "e":"ul",
               "s":[
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"打開 Sublime Text 2，按下 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"command + shift + p"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"install"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Package Control: Install Package"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "s":[
-                    {
-                      "e":"span",
-                      "t":"接著輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SCSS"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"SCSS"
-                    }
-                  ]
-                },
-                {
-                  "e":"li",
-                  "t":"重新開啟 Sublime Text 2"
-                }
+                { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.sublime-package", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.sublime-package", "target":"_blank" } }] },
+                { "e":"li", "s":[{ "e":"span", "t":"剛下載的檔案名稱可能為 " }, { "e":"code", "t":"OA+Theme.sublime-package" }, { "e":"span", "t":"，請先將他更名為 " }, { "e":"code", "t":"OA Theme.sublime-package", "copy":"OA Theme.sublime-package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"OA Theme.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/6.png" }, "s":[] }] }] }
               ]
             }
           ]
         }
       ]
     },
-    {
-      "e":"h3",
-      "t":"主題"
-    },
+    { "e":"h3", "t":"安裝套件" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":"SublimeLinter" },
             {
-              "e":"span",
-              "t":"下載 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/OA.tmTheme",
-                "target":"_blank"
-              },
-              "t":"OA.tmTheme"
-            },
-            {
-              "e":"span",
-              "t":" 與 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":[
-                  "https://cdn.ioa.tw/MacEnvInit/Theme",
-                  "-",
-                  "OA.zip"
-                ],
-                "target":"_blank"
-              },
-              "t":"Theme - OA.zip"
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SublimeLinter" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SublimeLinter" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
             }
           ]
         },
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":"SCSS" },
             {
-              "e":"span",
-              "t":"將 "
-            },
-            {
-              "e":"b",
-              "t":"Theme - OA.zip"
-            },
-            {
-              "e":"span",
-              "t":" 解開壓縮，"
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SCSS" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SCSS" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
             }
           ]
         },
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":"安裝 OA Theme" },
             {
-              "e":"span",
-              "t":"點擊左上 "
-            },
-            {
-              "e":"code",
-              "t":"Sublime Text 2"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"preferences"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"Browser Packages.."
-            },
-            {
-              "e":"span",
-              "t":" 後出現一個資料夾"
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"theme" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"UI: Select Theme" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"oa" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"OA.sublime-theme" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
             }
           ]
         },
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":"OA Color Scheme" },
             {
-              "e":"span",
-              "t":"將資料夾 "
-            },
-            {
-              "e":"b",
-              "t":"Theme - OA"
-            },
-            {
-              "e":"span",
-              "t":" 複製到這個資料夾內(沒意外會在 Theme - Default 下面)"
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"color" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"UI:: Select Color Scheme" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"oa" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"OA Theme/OA Theme.sublime-package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
             }
           ]
         },
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":"A File Icon" },
             {
-              "e":"span",
-              "t":"將 "
-            },
-            {
-              "e":"b",
-              "t":"OA.tmTheme"
-            },
-            {
-              "e":"span",
-              "t":" 複製到 "
-            },
-            {
-              "e":"code",
-              "t":"Color Scheme - Default"
-            },
-            {
-              "e":"span",
-              "t":" 裡面"
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"a file icon" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"A File Icon" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
             }
           ]
         }
       ]
     },
-    {
-      "e":"h3",
-      "t":"環境設定"
-    },
+    { "e":"h3", "t":"環境設定" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"點擊左上 "
-            },
-            {
-              "e":"code",
-              "t":"Sublime Text 2"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"preferences"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"Browser Packages.."
-            },
-            {
-              "e":"span",
-              "t":" 後出現一個資料夾"
-            }
-          ]
+          "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"Preferences.sublime-settings", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/Preferences.sublime-settings", "target":"_blank" } }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"進入資料夾 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            }
-          ]
+          "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"下載 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/Preferences.sublime-settings",
-                "target":"_blank"
-              },
-              "t":"Preferences.sublime-settings"
-            }
-          ]
+          "s":[{ "e":"span", "t":"進入 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄" }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"將下載的檔案複製到 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            },
-            {
-              "e":"span",
-              "t":" 資料夾，將原本的 "
-            },
-            {
-              "e":"code",
-              "t":"Preferences.sublime-settings"
-            },
-            {
-              "e":"span",
-              "t":" 取代"
-            }
-          ]
+          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內，將原本的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 取代" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/3.jpg" }, "s":[] }] }]
         }
       ]
     },
-    {
-      "e":"h3",
-      "t":"快捷鍵設定"
-    },
+
+    { "e":"h3", "t":"安裝指令" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"點擊左上 "
-            },
-            {
-              "e":"code",
-              "t":"Sublime Text 2"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"preferences"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"Browser Packages.."
-            },
-            {
-              "e":"span",
-              "t":" 後出現一個資料夾"
-            }
+            { "e":"span", "t":"打開 " },
+            { "e":"code", "t":"iTerm2" },
+            { "e":"span", "t":" 終端機(若尚未安裝 " },
+            { "e":"code", "t":"iTerm2" },
+            { "e":"span", "t":" 請先參考 " },
+            { "e":"a", "t":"此篇", "attr":{ "href":"https://www.ioa.tw/macOS/iTerm2.html", "target":"_blank" } },
+            { "e":"span", "t":" 安裝)，建立 bin 目錄執行指令 " },
+            { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"打開終端機，輸入指令 " }, { "e":"code", "t":"ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  ~/bin/subl", "copy":"ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  ~/bin/subl" }]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"新增 Sublime Text 指令，終端機執行指令 " },
+            { "e":"code", "t":"echo '\\n# My bin files\\nexport PATH=$PATH:$HOME/bin' >> ~/.zshrc", "copy":"echo '\\n# My bin files\\nexport PATH=$PATH:$HOME/bin' >> ~/.zshrc" }
           ]
         },
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"進入資料夾 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"下載 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/Default+(OSX).sublime-keymap",
-                "target":"_blank"
-              },
-              "t":"Default (OSX).sublime-keymap"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"注意！下載下來的檔案是 "
-            },
-            {
-              "e":"code",
-              "t":"Default+(OSX).sublime-keymap"
-            },
-            {
-              "e":"span",
-              "t":"，記得把中間的 "
-            },
-            {
-              "e":"code",
-              "t":"+"
-            },
-            {
-              "e":"span",
-              "t":" 改為 "
-            },
-            {
-              "e":"code",
-              "t":"空格"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"將下載的檔案複製到 "
-            },
-            {
-              "e":"code",
-              "t":"User"
-            },
-            {
-              "e":"span",
-              "t":" 資料夾，將原本的 "
-            },
-            {
-              "e":"code",
-              "t":"Default (OSX).sublime-keymap"
-            },
-            {
-              "e":"span",
-              "t":" 取代"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h3",
-      "t":"安裝指令"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開 "
-            },
-            {
-              "e":"code",
-              "t":"iTerm2"
-            },
-            {
-              "e":"span",
-              "t":" 終端機(若尚未安裝 "
-            },
-            {
-              "e":"code",
-              "t":"iTerm2"
-            },
-            {
-              "e":"span",
-              "t":" 請先參考 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.ioa.tw/macOS/iTerm2.html",
-                "target":"_blank"
-              },
-              "t":"此篇"
-            },
-            {
-              "e":"span",
-              "t":" 安裝)，建立 bin 目錄執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"mkdir ~/bin"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開終端機，輸入指令 "
-            },
-            {
-              "e":"code",
-              "t":"ln -s /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl ~/bin/subl"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"用 Sublime Text 2 打開編輯 "
-            },
-            {
-              "e":"code",
-              "t":"~/.zshrc"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"在檔案最下面新增 "
-            },
-            {
-              "e":"code",
-              "t":"export PATH=$PATH:$HOME/bin"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"授權"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"打開 Gmail，搜尋 "
-            },
-            {
-              "e":"code",
-              "t":"sublime license"
-            },
-            {
-              "e":"span",
-              "t":"，複製授權碼"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"點擊上方 "
-            },
-            {
-              "e":"code",
-              "t":"Help"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"Enter License"
-            },
-            {
-              "e":"span",
-              "t":"，貼上授權碼"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"相關參考"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"安裝指令參考 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://gist.github.com/barnes7td/3804534",
-                "target":"_blank"
-              },
-              "t":"https://gist.github.com/barnes7td/3804534"
-            }
+            { "e":"span", "t":"重新載入終端機設定，終端機執行指令 " },
+            { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
           ]
         }
       ]
     }
   ],
   "r":[
-    
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=nPlPOmX1aME", "target":"_blank" } }]
+        }
+      ]
+    },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"[備份] Sublime Text 3、2 安裝設定", "attr":{ "href":"/?k=mac&id=Backup-SublimeText", "target":"_blank" } }]
+        }
+      ]
+    },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"安裝指令參考 " },
+            { "e":"a", "t":"https://gist.github.com/barnes7td/3804534", "attr":{ "href":"https://gist.github.com/barnes7td/3804534", "target":"_blank" } }
+          ]
+        }
+      ]
+    }
   ],
   "g":[
     "Sublime",

@@ -438,7 +438,6 @@ body {
   
   code {
     @extend %-span;
-    // @extend %-copy;
 
     position: relative;
     padding: 2px 6px;
@@ -467,6 +466,14 @@ body {
       width: 20px;
       margin-left: 6px;
       color: var(--ui-color-link);
+    }
+    &.red {
+      color: white;
+      background-color: var(--ui-color-systemRed);
+    }
+    &.green {
+      color: white;
+      background-color: var(--ui-color-systemGreen);
     }
   }
   span {
@@ -516,18 +523,26 @@ body {
     word-spacing: normal;
     overflow: auto;
 
-    &.code:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      display: inline-block;
-      width: 24px + 26px - 8px;
-      height: 100%;
-      z-index: 10;
-      background-color: rgba(255, 255, 255, .01);
-      @include box-shadow(0 0 4px 1px rgba(0, 0, 0, .3));
+    &.code {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 24px + 26px - 8px;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, .01);
+        @include box-shadow(0 0 4px 1px rgba(0, 0, 0, .3));
+      }
+      div {
+        padding-left: 26px + 16px + 8px;
+        &:before {
+          content: counter(line);
+        }
+      }
     }
 
     div {
@@ -538,7 +553,7 @@ body {
       font-size: small;
       height: $h;
       line-height: $h;
-      padding-left: 26px + 16px + 8px;
+      padding-left: 12px;
       counter-increment: line;
       @include border-radius(2px);
       @include transition(background-color .3s);
@@ -549,7 +564,6 @@ body {
         top: 0;
         display: inline-block;
 
-        content: counter(line);
         width: 26px;
         height: $h;
         line-height: $h;
@@ -561,6 +575,34 @@ body {
       }
     }
 
+    &.zshrc {
+      color: rgba(255, 255, 255, 1.00);
+      background-color: rgba(36, 36, 40, 1.00);
+      .r {
+        color: rgba(255, 55, 95, 1.00);
+      }
+      .y {
+        color: rgba(255, 232, 148, 1.00);
+      }
+      .g {
+        color: rgba(125, 140, 152, 1.00);
+      }
+      .b {
+        color: rgba(100, 210, 255, 1.00);
+      }
+
+      // div {
+      //   &:before {
+      //     color: rgba(110, 110, 110, 1.00);
+      //   }
+      //   &:hover {
+      //     background-color: rgba(100, 100, 100, .2);
+      //     &:before {
+      //       color: rgba(255, 255, 255, 1.00);
+      //     }
+      //   }
+      // }
+    }
     &.term {
       color: rgba(255, 255, 255, .90);
       background-color: rgba(36, 36, 40, 1.00);
@@ -570,6 +612,23 @@ body {
         }
         &:hover {
           background-color: rgba(100, 100, 100, .2);
+          &:before {
+            color: rgba(255, 255, 255, 1.00);
+          }
+        }
+      }
+    }
+    &.gitconfig {
+      color: rgba(255, 255, 255, 1.00);
+      background-color: rgba(36, 36, 40, 1.00);
+      .r { color: rgba(255, 51, 92, 1.00); }
+      .y { color: rgba(255, 233, 143, 1.00); }
+      div {
+        &:before {
+          color: rgba(110, 110, 113, 1.00);
+        }
+        &:hover {
+          background-color: rgba(100, 111, 131, .2);
           &:before {
             color: rgba(255, 255, 255, 1.00);
           }
@@ -711,6 +770,10 @@ body {
     overflow: hidden;
     background: var(--ui-color-secondarySystemBackground);
     @include border-radius(3px);
+
+    code {
+      background-color: var(--ui-color-opaqueSeparator);
+    }
     
     &:after {
       content: '';
@@ -748,6 +811,7 @@ body {
       &:after { background-color: var(--ui-color-systemGreen); }
       &:before {
         @extend %-icon;
+        top: 20px;
         content: '\a0024';
         color: var(--ui-color-systemGreen); }
     }
@@ -867,23 +931,26 @@ body {
     width: $width;
     height: $height;
     background-color: var(--ui-color-secondaryLabel);
-    @include opacity(0);
+    @include opacity(.5);
 
     @include border-radius(math.div($width, 2));
     @include transform(translate(-50%, -50%));
     @include transition(opacity .1s);
     @include animation(loop 1.2s linear infinite);
+    $total: 8;
+    $unit: math.div(360deg, $total);
 
-    @for $i from 0 through 11 {
+    @for $i from 0 through ($total - 1) {
       &.n#{$i} {
         @include animation-delay(.1s * $i);
-        @include transform(translate(-50%, -50%) rotate($i * 30deg));
-        top: calc(50% - #{math.cos($i * 30deg)} * #{($size - $height)} / 2);
-        left: calc(50% + #{math.sin($i * 30deg)} * #{($size - $height)} / 2);
+        @include transform(translate(-50%, -50%) rotate($i * $unit));
+        top: calc(50% - #{math.cos($i * $unit)} * #{($size - $height)} / 2);
+        left: calc(50% + #{math.sin($i * $unit)} * #{($size - $height)} / 2);
       }
     }
   }
   span {
+    @extend %-user-select-none;
     flex-shrink: 0;
     display: inline-block;
     margin-left: 6px;

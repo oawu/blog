@@ -1,1121 +1,496 @@
 {
   "k":"PHP",
   "t":"macOS 上安裝 PHP 語言",
-  "i":"2020-03-17",
+  "i":"2021-06-02",
   "a":[
     {
-      "e":"h2",
-      "t":"安裝前準備"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"請先安裝 "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.ioa.tw/macOS/Apache.html",
-                "target":"_blank"
-              },
-              "t":"Apache"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"Youtube 影音教學版"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.youtube.com/watch?v=AV_6pXd-Crk",
-                "target":"_blank"
-              },
-              "t":"https://www.youtube.com/watch?v=AV_6pXd-Crk"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝各版本的 PHP"
-    },
-    {
-      "e":"p",
-      "t":"2019.01.16 發現，建議直接安裝最新的 PHP 或者 7.1 以上即可，5.6 與 7.0 都很容易失敗。"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"安裝 PHP 7.1 版本 "
-            },
-            {
-              "e":"code",
-              "t":"brew install php@7.1"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"安裝 PHP 7.2 版本 "
-            },
-            {
-              "e":"code",
-              "t":"brew install php@7.2"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"安裝 PHP 最新 版本 "
-            },
-            {
-              "e":"code",
-              "t":"brew install php"
-            },
-            {
-              "e":"span",
-              "t":"，目前已經到 7.3"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "e":"blockquote",
+      "attr":{"class": "info"},
+      "s":[
+        { "e":"span", "t":"請先安裝 " },
+        { "e":"a", "t":"Apache", "attr":{ "href":"/?k=mac&id=Apache", "target":"_blank" } }
+      ]
+    },
+    { "e":"h2", "t":"安裝 imagick" },
+    {
+      "e":"ul",
       "s":[
         {
-          "e":"ul",
+          "e":"li",
           "s":[
+            { "e":"span", "t":"先要安裝 " },
+            { "e":"b", "t":"imagemagick" },
+            { "e":"span", "t":"，終端機執行指令 " },
+            { "e":"code", "t":"brew install imagemagick", "copy":"brew install imagemagick" }
+          ]
+        }
+      ]
+    },
+    { "e":"h2", "t":"安裝 redis" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"先要安裝 " },
+            { "e":"b", "t":"redis" },
+            { "e":"span", "t":"，終端機執行指令 " },
+            { "e":"code", "t":"brew install redis", "copy":"brew install redis" }
+          ]
+        }
+      ]
+    },
+    { "e":"h2", "t":"安裝各版本的 PHP" },
+    { "e":"p", "t":"請依據自己需求安裝指定的版本，以目前（2021-05-31）多數專案來說，安裝 7.3 即可，初次安裝會有點久，請保持網路暢通並且耐心等待安裝 🤪" },
+    { "e":"h3", "t":"5.6 版本" },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@5.6", "copy":"brew install shivammathur/php/php@5.6" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 5.6\\nexport PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 5.6\\nexport PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 5.6\\nLoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 5.6\\nLoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick － " }, { "e":"code", "t":"已棄用", "attr": {"class":"red"} }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h3", "t":"7.0 版本，終端機執行指令 " },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@7.0", "copy":"brew install shivammathur/php/php@7.0" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.0\\nexport PATH=\"/usr/local/opt/php@7.0/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.0/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 7.0\\nexport PATH=\"/usr/local/opt/php@7.0/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.0/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.0\\nLoadModule php7_module /usr/local/opt/php@7.0/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 7.0\\nLoadModule php7_module /usr/local/opt/php@7.0/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "Please provide the prefix of Imagemagick installation [autodetect]" }, {"e": "span", "t": "，直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h3", "t":"7.1 版本，終端機執行指令 " },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@7.1", "copy":"brew install shivammathur/php/php@7.1" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.1\\nexport PATH=\"/usr/local/opt/php@7.1/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.1/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 7.1\\nexport PATH=\"/usr/local/opt/php@7.1/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.1/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.1\\nLoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 7.1\\nLoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "Please provide the prefix of Imagemagick installation [autodetect]" }, {"e": "span", "t": "，直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h3", "t":"7.2 版本，終端機執行指令 " },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@7.2", "copy":"brew install shivammathur/php/php@7.2" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.2\\nexport PATH=\"/usr/local/opt/php@7.2/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.2/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 7.2\\nexport PATH=\"/usr/local/opt/php@7.2/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.2/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.2\\nLoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 7.2\\nLoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "Please provide the prefix of Imagemagick installation [autodetect]" }, {"e": "span", "t": "，直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h3", "t":"7.3 版本，終端機執行指令 " },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@7.3", "copy":"brew install shivammathur/php/php@7.3" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.3\\nexport PATH=\"/usr/local/opt/php@7.3/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.3/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 7.3\\nexport PATH=\"/usr/local/opt/php@7.3/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.3/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.3\\nLoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 7.3\\nLoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "Please provide the prefix of Imagemagick installation [autodetect]" }, {"e": "span", "t": "，直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h3", "t":"7.4 版本，終端機執行指令 " },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@7.4", "copy":"brew install shivammathur/php/php@7.4" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.4\\nexport PATH=\"/usr/local/opt/php@7.4/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.4/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 7.4\\nexport PATH=\"/usr/local/opt/php@7.4/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@7.4/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 7.4\\nLoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 7.4\\nLoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "Please provide the prefix of Imagemagick installation [autodetect]" }, {"e": "span", "t": "，直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install imagick", "copy": "pecl install imagick" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h3", "t":"8.0 版本，終端機執行指令 " },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"安裝，終端機執行指令 " }, { "e":"code", "t":"brew install shivammathur/php/php@8.0", "copy":"brew install shivammathur/php/php@8.0" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 8.0\\nexport PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 8.0\\nexport PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"' >> ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 8.0\\nLoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 8.0\\nLoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so' >> /usr/local/etc/httpd/httpd.conf" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick － " }, { "e":"code", "t":"未支援", "attr": {"class":"red"} }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 redis" },
+          {"e": "ul", "s": [
+            {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
+            {"e": "li", "s": [{"e": "span", "t": "結果若是失敗如果出現 " }, {"e": "code", "t": "configure: error: Please reinstall the pkg-config distribution" }, {"e": "span", "t": "，那就終端機執行指令" }, {"e": "code", "t": "brew reinstall pkg-config", "copy": "brew reinstall pkg-config" }, {"e": "span", "t": " 後再執行 " }, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }] },
+            {"e": "li", "s": [{"e": "span", "t": "若要檢查是否成功，檢查該版本的 " }, {"e": "code", "t": "php.ini" }] }
+          ]}
+        ] }
+      ]
+    },
+    { "e":"h2", "t":"設定 Apache 讀取執行 PHP" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"用 Sublime Text 編輯 " },
+            { "e":"code", "t":"httpd.conf" },
+            { "e":"span", "t":"，終端機執行指令 " },
+            { "e":"code", "t":"subl /usr/local/etc/httpd/httpd.conf", "copy":"subl /usr/local/etc/httpd/httpd.conf" },
+            { "e":"span", "t":"，修改 " },
+            { "e":"code", "t":"DirectoryIndex", "copy": "DirectoryIndex" },
+            { "e":"span", "t":" 內容" },
             {
-              "e":"li",
+              "e":"pre",
+              "attr":{ "class":"code term" },
               "s":[
-                {
-                  "e":"span",
-                  "t":"不要安裝 PHP 5.6 版本 "
-                },
-                {
-                  "e":"code",
-                  "t":"brew install php@5.6"
-                },
-                {
-                  "e":"span",
-                  "t":"，不建議安裝此版，據說已經被 "
-                },
-                {
-                  "e":"a",
-                  "attr":{
-                    "href":"https://community.chakralinux.org/t/php-5-6-removed-due-to-being-eol/8176",
-                    "target":"_blank"
-                  },
-                  "t":"EOL"
-                },
-                {
-                  "e":"span",
-                  "t":" 囉！  "
-                }
+                { "e":"label", "copy": "<IfModule dir_module>\n  DirectoryIndex index.php index.html\n</IfModule>" },
+                { "e":"div", "t":"<IfModule dir_module>" },
+                { "e":"div", "t":"  DirectoryIndex index.php index.html" },
+                { "e":"div", "t":"</IfModule>" }
               ]
             },
             {
-              "e":"li",
+              "e":"pre",
+              "attr":{ "class":"code term" },
               "s":[
-                {
-                  "e":"span",
-                  "t":"不要安裝 PHP 7.0 版本 "
-                },
-                {
-                  "e":"code",
-                  "t":"brew install php@7.0"
-                },
-                {
-                  "e":"span",
-                  "t":"，應該也是ＧＧ惹，所以不建議安裝此版"
-                }
+                { "e":"label", "copy": "<FilesMatch \\.php$>\n  SetHandler application/x-httpd-php\n</FilesMatch>" },
+                { "e":"div", "t":"<FilesMatch \\.php$>" },
+                { "e":"div", "t":"  SetHandler application/x-httpd-php" },
+                { "e":"div", "t":"</FilesMatch>" }
               ]
             }
           ]
         }
       ]
     },
+    { "e":"h2", "t":"CLI 指令切換版本" },
+    { "e":"p", "t":"如果有安裝各種不同版本，並且要在指令下切換 PHP 版本，可以參考以下步驟：" },
     {
-      "e":"h2",
-      "t":"Cli 指令模式設定"
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"用 Sublime Text 編輯 " }, { "e":"code", "t":".zshrc" }, { "e":"span", "t":"，終端機執行指令 " }, { "e":"code", "t":"subl ~/.zshrc", "copy":"subl ~/.zshrc" }] },
+        { "e":"li", "s":[
+          {"e":"span","t":"將不使用的版本隱藏，以下為使用 PHP 7.3 的範例樣式"},
+          {
+            "e":"pre",
+            "attr":{ "class":"code zshrc" },
+            "s":[
+              { "e":"div", "t":"# PHP 5.6", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.0", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.0/bin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.0/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.1", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.1/bin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.1/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.2", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.2/bin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.2/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.3", "attr": {"class": "g"} },
+              { "e":"div", "s":[{"e": "span", "t": "export", "attr": {"class": "r"} }, {"e": "span", "t": " PATH" }, {"e": "span", "t": "=", "attr": {"class": "r"} }, {"e": "span", "t": "\"/usr/local/opt/php@7.3/bin:$PATH\"", "attr": {"class": "y"} }] },
+              { "e":"div", "s":[{"e": "span", "t": "export", "attr": {"class": "r"} }, {"e": "span", "t": " PATH" }, {"e": "span", "t": "=", "attr": {"class": "r"} }, {"e": "span", "t": "\"/usr/local/opt/php@7.3/sbin:$PATH\"", "attr": {"class": "y"} }] },
+              { "e":"div", "t":"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.4", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.4/bin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.4/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 8.0", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"", "attr": {"class": "g"} }
+            ]
+          }
+        ] },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"儲存後，終端機執行指令 " },
+            { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
+          ]
+        }
+      ]
     },
+    { "e":"h2", "t":"Apache 設定" },
+    { "e":"p", "t":"如果有安裝各種不同版本，並且要讓 Apache 執行不同的 PHP 版本，可以參考以下步驟：" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":"用 Sublime Text 編輯 " },
+            { "e":"code", "t":"httpd.conf" },
+            { "e":"span", "t":"，終端機執行指令 " },
+            { "e":"code", "t":"subl /usr/local/etc/httpd/httpd.conf", "copy":"subl /usr/local/etc/httpd/httpd.conf" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"將不使用的版本隱藏，以下為使用 PHP 7.3 的範例樣式" },
             {
-              "e":"span",
-              "t":"用 Sublime Text 打開編輯 "
-            },
-            {
-              "e":"code",
-              "t":"~/.zshrc"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"subl ~/.zshrc"
+              "e":"pre",
+              "attr":{ "class":"code zshrc" },
+              "s":[
+                { "e":"div", "t":"# PHP 5.6", "attr": {"class": "g"} },
+                { "e":"div", "t":"# LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.0", "attr": {"class": "g"} },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.0/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.1", "attr": {"class": "g"} },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.2", "attr": {"class": "g"} },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.3", "attr": {"class": "g"} },
+                { "e":"div", "s":[{"e": "span", "t": "LoadModule", "attr": {"class": "b"} }, {"e": "span", "t": " php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so" }] },
+                { "e":"div", "t":"", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.4", "attr": {"class": "g"} },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 8.0", "attr": {"class": "g"} },
+                { "e":"div", "t":"# LoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so", "attr": {"class": "g"} }
+              ]
             }
           ]
         },
         {
           "e":"li",
-          "t":"稍微檢查一下以下路徑是否存在後在檔案最後方新增以下內容"
+          "s":[
+            { "e":"span", "t":"儲存後，重啟 Apache，終端機執行指令 " },
+            { "e":"code", "t":"sudo apachectl -k restart", "copy":"sudo apachectl -k restart" }
+          ]
         }
       ]
     },
-    {
-      "e":"pre",
-      "s":[
-        {
-          "e":"code",
-          "t":"## PHP 7.1\n#export PATH=\"/usr/local/opt/php@7.1/bin:$PATH\"\n#export PATH=\"/usr/local/opt/php@7.1/sbin:$PATH\"\n\n## PHP 7.2\n#export PATH=\"/usr/local/opt/php@7.2/bin:$PATH\"\n#export PATH=\"/usr/local/opt/php@7.2/sbin:$PATH\"\n\n## PHP 7(7.3)\n#export PATH=\"/usr/local/opt/php/bin:$PATH\"\n#export PATH=\"/usr/local/opt/php/sbin:$PATH\""
-        }
-      ]
-    },
+    { "e":"h2", "t":"安裝 Composer 套件管理" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
-            {
-              "e":"b",
-              "t":"Cli"
-            },
-            {
-              "e":"span",
-              "t":" 要切換版本的話，就把 "
-            },
-            {
-              "e":"code",
-              "t":"~/.zshrc"
-            },
-            {
-              "e":"span",
-              "t":" 該版的註解拿掉"
-            }
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"php -r \"readfile('https://getcomposer.org/installer');\" > composer-setup.php", "copy":"php -r \"readfile('https://getcomposer.org/installer');\" > composer-setup.php" }
           ]
         },
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"然後終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"source ~/.zshrc"
-            }
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"php composer-setup.php", "copy":"php composer-setup.php" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"php -r \"unlink('composer-setup.php');\"", "copy":"php -r \"unlink('composer-setup.php');\"" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"mv composer.phar /usr/local/bin/composer", "copy":"mv composer.phar /usr/local/bin/composer" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"檢查是否安裝成功，重新開啟終端機，執行指令 " },
+            { "e":"code", "t":"composer -v", "copy":"composer -v" }
           ]
         }
       ]
     },
-    {
-      "e":"h2",
-      "t":"Apache 模式設定"
-    },
+    { "e":"h2", "t":"安裝 Deployer 部署器" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"用 Sublime Text 打開編輯 "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/httpd/httpd.conf"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"subl /usr/local/etc/httpd/httpd.conf"
-            }
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"curl -LO https://deployer.org/deployer.phar", "copy":"curl -LO https://deployer.org/deployer.phar" }
           ]
         },
         {
           "e":"li",
-          "t":"搜尋一下檔案內的 LoadModule 都擺在哪邊，將以下內容擺在 LoadModule 區塊的後面，不要直接放在檔案最後面，會有順序性的問題。"
-        }
-      ]
-    },
-    {
-      "e":"pre",
-      "s":[
+          "s":[
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"mv deployer.phar /usr/local/bin/dep", "copy":"mv deployer.phar /usr/local/bin/dep" }
+          ]
+        },
         {
-          "e":"code",
-          "t":"#LoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so\n#LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so\n#LoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so"
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"chmod +x /usr/local/bin/dep", "copy":"chmod +x /usr/local/bin/dep" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"檢查是否安裝成功，重新開啟終端機，執行指令 " },
+            { "e":"code", "t":"dep -v", "copy":"dep -v" }
+          ]
         }
       ]
     },
+    { "e":"h2", "t":"重點整理" },
     {
       "e":"ul",
       "s":[
+        
+
         {
           "e":"li",
           "s":[
+            { "e":"span", "t":".ini 檔案位置" },
+
             {
-              "e":"span",
-              "t":"若要更換版本，就把 "
-            },
-            {
-              "e":"b",
-              "t":"LoadModule"
-            },
-            {
-              "e":"span",
-              "t":" 該版本註解拿掉後，重開 Apache 即可"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"設定 Apache 讀取執行 PHP"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"用 Sublime Text 打開編輯 "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/httpd/httpd.conf"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"subl /usr/local/etc/httpd/httpd.conf"
-            },
-            {
-              "e":"span",
-              "t":"，修改以下內容"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"pre",
-      "s":[
-        {
-          "e":"code",
-          "t":"&lt;IfModule dir_module&gt;\n  DirectoryIndex index.html\n&lt;/IfModule&gt;"
-        }
-      ]
-    },
-    {
-      "e":"pre",
-      "s":[
-        {
-          "e":"code",
-          "t":"&lt;IfModule dir_module&gt;\n  DirectoryIndex index.php index.html\n&lt;/IfModule&gt;\n\n&lt;FilesMatch \\.php$&gt;\n  SetHandler application/x-httpd-php\n&lt;/FilesMatch&gt;"
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"重開 Apache，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"sudo apachectl -k restart"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"各版本的 php.ini"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 5.6 版本 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/5.6/php.ini"
-            },
-            {
-              "e":"span",
-              "t":"(該放棄惹)"
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 5.6 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/5.6/php.ini", "copy":"/usr/local/etc/php/5.6/php.ini" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 7.0 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/7.0/php.ini", "copy":"/usr/local/etc/php/7.0/php.ini" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 7.1 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/7.1/php.ini", "copy":"/usr/local/etc/php/7.1/php.ini" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 7.2 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/7.2/php.ini", "copy":"/usr/local/etc/php/7.2/php.ini" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 7.3 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/7.3/php.ini", "copy":"/usr/local/etc/php/7.3/php.ini" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 7.4 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/7.4/php.ini", "copy":"/usr/local/etc/php/7.4/php.ini" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"PHP 8.0 版本 .ini 檔案位置 － " }, { "e":"code", "t":"/usr/local/etc/php/8.0/php.ini", "copy":"/usr/local/etc/php/8.0/php.ini" }] }
+              ]
             }
           ]
         },
+
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.0 版本 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.0/php.ini"
-            },
-            {
-              "e":"span",
-              "t":"(該放棄惹)"
-            }
+            { "e":"span", "t":"CLI 要切換版本的話，就用 Sublime Text 編輯 " },
+            { "e":"code", "t":".zshrc" },
+            { "e":"span", "t":"，終端機執行指令 " },
+            { "e":"code", "t":"subl ~/.zshrc", "copy":"subl ~/.zshrc" },
+            { "e":"span", "t":"，把要執行的版本註解拿掉，其他不使用的版本註解，儲存後終端機執行指令 " },
+            { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
           ]
         },
+
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.1 版本 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.1/php.ini"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.2 版本 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.2/php.ini"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.3 版本 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.3/php.ini"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝 imagick"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"先要安裝 "
-            },
-            {
-              "e":"b",
-              "t":"imagemagick"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"brew install imagemagick"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"‼️請先將 Cli 的 php 切換到指定的版本，可以用 "
-            },
-            {
-              "e":"code",
-              "t":"php -v"
-            },
-            {
-              "e":"span",
-              "t":" 檢查目前 Cli 的 php 版本"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"pecl install imagick"
-            },
-            {
-              "e":"span",
-              "t":"，中間有個 "
-            },
-            {
-              "e":"code",
-              "t":"Please provide the prefix of Imagemagick installation [autodetect]"
-            },
-            {
-              "e":"span",
-              "t":"，直接按 "
-            },
-            {
-              "e":"code",
-              "t":"enter"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"結果若是失敗如果出現 "
-            },
-            {
-              "e":"code",
-              "t":"configure: error: Please reinstall the pkg-config distribution"
-            },
-            {
-              "e":"span",
-              "t":"，那就終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"brew reinstall pkg-config"
-            },
-            {
-              "e":"span",
-              "t":" 後再執行 "
-            },
-            {
-              "e":"code",
-              "t":"pecl install imagick"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查該版本的 "
-            },
-            {
-              "e":"code",
-              "t":"php.ini"
-            },
-            {
-              "e":"span",
-              "t":" 內是否有 "
-            },
-            {
-              "e":"code",
-              "t":"extension=\"imagick.so\""
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"Cli 下要找 php.ini 位置，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"php --ini"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"完成後重開 Apache，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"sudo apachectl -k restart"
-            },
-            {
-              "e":"span",
-              "t":"，然後看 "
-            },
-            {
-              "e":"code",
-              "t":"phpinfo()"
-            },
-            {
-              "e":"span",
-              "t":" 是否有 "
-            },
-            {
-              "e":"code",
-              "t":"imagick"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝 redis"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"先要安裝 "
-            },
-            {
-              "e":"b",
-              "t":"redis"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"brew install redis"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"‼️請先將 Cli 的 php 切換到指定的版本，可以用 "
-            },
-            {
-              "e":"code",
-              "t":"php -v"
-            },
-            {
-              "e":"span",
-              "t":" 檢查目前 Cli 的 php 版本"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"pecl install redis"
-            },
-            {
-              "e":"span",
-              "t":"，中間有個 "
-            },
-            {
-              "e":"code",
-              "t":"enable igbinary serializer support? [no] :"
-            },
-            {
-              "e":"span",
-              "t":" 與 "
-            },
-            {
-              "e":"code",
-              "t":"enable lzf compression support? [no] :"
-            },
-            {
-              "e":"span",
-              "t":"，都直接按 "
-            },
-            {
-              "e":"code",
-              "t":"enter"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"結果若是失敗如果出現 "
-            },
-            {
-              "e":"code",
-              "t":"configure: error: Please reinstall the pkg-config distribution"
-            },
-            {
-              "e":"span",
-              "t":"，那就終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"brew reinstall pkg-config"
-            },
-            {
-              "e":"span",
-              "t":" 後再執行 "
-            },
-            {
-              "e":"code",
-              "t":"pecl install redis"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查該版本的 "
-            },
-            {
-              "e":"code",
-              "t":"php.ini"
-            },
-            {
-              "e":"span",
-              "t":" 內是否有 "
-            },
-            {
-              "e":"code",
-              "t":"extension=\"redis.so\""
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"Cli 下要找 php.ini 位置，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"php --ini"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"完成後重開 Apache，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"sudo apachectl -k restart"
-            },
-            {
-              "e":"span",
-              "t":"，然後看 "
-            },
-            {
-              "e":"code",
-              "t":"phpinfo()"
-            },
-            {
-              "e":"span",
-              "t":" 是否有 "
-            },
-            {
-              "e":"code",
-              "t":"redis"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝 Deployer 部署器"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"curl -LO https://deployer.org/deployer.phar"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"mv deployer.phar /usr/local/bin/dep"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"chmod +x /usr/local/bin/dep"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查是否安裝成功，重新開啟終端機，執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"dep -v"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝 Composer 套件管理"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"php -r \"readfile('https://getcomposer.org/installer');\" &gt; composer-setup.php"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"php composer-setup.php"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"php -r \"unlink('composer-setup.php');\""
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"mv composer.phar /usr/local/bin/composer"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查是否安裝成功，重新開啟終端機，執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"composer -v"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"重點整理"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 5.6 版本 ini 檔案 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/5.6/php.ini"
-            },
-            {
-              "e":"span",
-              "t":"(該放棄惹)"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.0 版本 ini 檔案 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.0/php.ini"
-            },
-            {
-              "e":"span",
-              "t":"(該放棄惹)"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.1 版本 ini 檔案 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.1/php.ini"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.2 版本 ini 檔案 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.2/php.ini"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"PHP 7.3 版本 ini 檔案 - "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/php/7.3/php.ini"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"Apache 若要更換版本，就用 Sublime Text 打開編輯 "
-            },
-            {
-              "e":"code",
-              "t":"/usr/local/etc/httpd/httpd.conf"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"subl /usr/local/etc/httpd/httpd.conf"
-            },
-            {
-              "e":"span",
-              "t":"，把 "
-            },
-            {
-              "e":"b",
-              "t":"LoadModule"
-            },
-            {
-              "e":"span",
-              "t":" 該版本註解拿掉後，重開 Apache 即可"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"Cli 要切換版本的話，就用 Sublime Text 打開編輯 "
-            },
-            {
-              "e":"code",
-              "t":"~/.zshrc"
-            },
-            {
-              "e":"span",
-              "t":"，終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"subl ~/.zshrc"
-            },
-            {
-              "e":"span",
-              "t":"，把要的版本註解拿掉，然後終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"source ~/.zshrc"
-            },
-            {
-              "e":"span",
-              "t":" 即可"
-            }
+            { "e":"span", "t":"Apache 若要更換版本，就用 Sublime Text 編輯 " },
+            { "e":"code", "t":"httpd.conf" },
+            { "e":"span", "t":"，終端機執行指令 " },
+            { "e":"code", "t":"subl /usr/local/etc/httpd/httpd.conf", "copy":"subl /usr/local/etc/httpd/httpd.conf" },
+            { "e":"span", "t":"，把要執行的版本註解拿掉，其他不使用的版本註解，儲存後重啟 Apache，終端機執行指令 " },
+            { "e":"code", "t":"sudo apachectl -k restart", "copy":"sudo apachectl -k restart" }
           ]
         }
       ]
     }
   ],
   "r":[
-    
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=AV_6pXd-Crk", "target":"_blank" } }]
+        }
+      ]
+    },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"a", "t":"macOS 11.0 Big Sur Apache Setup: Multiple PHP Versions | Grav CMS", "attr":{ "href":"https://getgrav.org/blog/macos-bigsur-apache-multiple-php-versions", "target":"_blank" } }
+          ]
+        }
+      ]
+    }
   ],
   "g":[
     "PHP",

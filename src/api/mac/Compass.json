@@ -1,53 +1,15 @@
 {
   "k":"Compass",
   "t":"macOS 上安裝 Compass",
-  "i":"2020-03-17",
+  "i":"2021-06-02",
   "a":[
-    {
-      "e":"h2",
-      "t":"Youtube 影音教學版"
-    },
+    { "e":"h2", "t":"安裝步驟" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
-          "s":[
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.youtube.com/watch?v=9Ut_y7BcyQg",
-                "target":"_blank"
-              },
-              "t":"https://www.youtube.com/watch?v=9Ut_y7BcyQg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝步驟"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"官方網站 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"http://compass-style.org/install/",
-                "target":"_blank"
-              },
-              "t":"http://compass-style.org/install/"
-            }
-          ]
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"http://compass-style.org/install/", "attr":{ "href":"http://compass-style.org/install/", "target":"_blank" } }]
         },
         {
           "e":"li",
@@ -55,48 +17,33 @@
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"gem update --system"
-            }
-          ]
+          "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"sudo gem update --system", "copy":"sudo gem update --system" }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"gem install compass"
-            }
-          ]
+          "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"sudo gem install compass -n /usr/local/bin", "copy":"sudo gem install compass -n /usr/local/bin" }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查是否安裝成功，重新開啟終端機，執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"compass -v"
-            }
-          ]
+          "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"compass -v", "copy":"compass -v" }]
         }
       ]
     }
   ],
   "r":[
-    
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=9Ut_y7BcyQg", "target":"_blank" } }]
+        }
+      ]
+    }
   ],
   "g":[
     "Gem",

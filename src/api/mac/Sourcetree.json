@@ -1,182 +1,75 @@
 {
   "k":"Sourcetree",
   "t":"macOS 上安裝 Sourcetree Git 管理介面",
-  "i":"2020-03-17",
+  "i":"2021-06-02",
   "a":[
-    {
-      "e":"h2",
-      "t":"Youtube 影音教學版"
-    },
+    { "e":"h2", "t":"安裝步驟" },
     {
       "e":"ul",
       "s":[
-        {
-          "e":"li",
-          "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.sourcetreeapp.com/", "attr":{ "href":"https://www.sourcetreeapp.com/", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"備用載點 － " }, { "e":"a", "t":"Sourcetree_4.1.1_237.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/Sourcetree_4.1.1_237.zip", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"解壓縮完後，把它移到" }, { "e":"b", "t":"應用程式資料夾" }, { "e":"span", "t":"，並開啟" }] },
+        { "e":"li", "s":[
+          {"e":"span", "t":"如有安全性提醒，就選擇 "},
+          {"e":"code", "t":"打開"},
+          {"e":"span", "t":" "},
+          { "e":"ul", "s":[
             {
-              "e":"a",
-              "attr":{
-                "href":"https://www.youtube.com/watch?v=LoZLPcMPmiM",
-                "target":"_blank"
-              },
-              "t":"https://www.youtube.com/watch?v=LoZLPcMPmiM"
+              "e":"li",
+              "s":[
+                { "e":"span", "t":"Install － 什麼都不用選，直接點選 " },
+                { "e":"code", "t":"Continue" }
+              ]
+            },
+            {
+              "e":"li",
+              "s":[
+                { "e":"span", "t":"Account － " },
+                { "e":"code", "attr": {"class": "green"}, "t":"勾選" },
+                { "e":"span", "t":" " },
+                { "e":"code", "t":"Set global…" },
+                { "e":"span", "t":" 並且輸入你本地端的 Git 帳戶，然後 " },
+                { "e":"code", "t":"Continue" }
+              ]
             }
-          ]
-        }
+          ] }
+        ] }
       ]
     },
-    {
-      "e":"h2",
-      "t":"安裝步驟"
-    },
+    { "e":"h2", "t":"設定" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"官網下載 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.sourcetreeapp.com/",
-                "target":"_blank"
-              },
-              "t":"https://www.sourcetreeapp.com/"
-            }
+            { "e":"span", "t":"快捷鍵 " },
+            { "e":"code", "t":"command + ," }
           ]
         },
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"備用載點 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/Sourcetree_2.7.6a.zip",
-                "target":"_blank"
-              },
-              "t":"Sourcetree_2.7.6a.zip"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"把它移到"
-            },
-            {
-              "e":"b",
-              "t":"應用程式資料夾"
-            },
-            {
-              "e":"span",
-              "t":"，並開啟"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "t":"同意，下一步"
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"選擇 "
-            },
-            {
-              "e":"code",
-              "t":"Use an existing account"
-            },
-            {
-              "e":"span",
-              "t":" 登入，使用 Google 登入，下一步"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"選擇 "
-            },
-            {
-              "e":"code",
-              "t":"Skip Setup"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"設定"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"快捷鍵 "
-            },
-            {
-              "e":"code",
-              "t":"command + ,"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"General"
-            },
+            { "e":"span", "t":"General" },
             {
               "e":"ul",
               "s":[
                 {
                   "e":"li",
                   "s":[
-                    {
-                      "e":"code",
-                      "t":"Project folder"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 選擇你放專案的資料夾"
-                    }
+                    { "e":"span", "t":"Project folder － 點選 " },
+                    { "e":"code", "t":"Browse…" },
+                    { "e":"span", "t":" 選擇你放專案的資料夾，通常會選擇 " },
+                    { "e":"code", "t":"www" },
+                    { "e":"span", "t":" 目錄 " }
                   ]
                 },
                 {
                   "e":"li",
                   "s":[
-                    {
-                      "e":"code",
-                      "t":"Terminal app"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"iTerm2"
-                    }
+                    { "e":"span", "t":"Terminal app － 選擇 " },
+                    { "e":"code", "t":"iTerm2" }
                   ]
                 }
               ]
@@ -186,81 +79,33 @@
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"Accounts"
-            },
+            { "e":"span", "t":"Accounts" },
             {
               "e":"ul",
               "s":[
                 {
                   "e":"li",
                   "s":[
-                    {
-                      "e":"span",
-                      "t":"按 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Add.."
-                    },
-                    {
-                      "e":"span",
-                      "t":" 新增一個帳戶，Host 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Github"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，Auth Type 選擇 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Basic"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，然後輸入 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"帳密"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 後 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Save"
-                    }
+                    { "e":"span", "t":"按 " },
+                    { "e":"code", "t":"Add…" },
+                    { "e":"span", "t":" 新增一個帳戶，Host 選擇 " },
+                    { "e":"code", "t":"Github" },
+                    { "e":"span", "t":"，Auth Type 選擇 " },
+                    { "e":"code", "t":"Basic" },
+                    { "e":"span", "t":"，然後輸入 " },
+                    { "e":"code", "t":"帳密" },
+                    { "e":"span", "t":" 後 " },
+                    { "e":"code", "t":"Save" }
                   ]
                 },
                 {
                   "e":"li",
                   "s":[
-                    {
-                      "e":"span",
-                      "t":"點選 GitHub 帳戶，並設為 "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Default"
-                    },
-                    {
-                      "e":"span",
-                      "t":"，然後將原本的 Bitbucket "
-                    },
-                    {
-                      "e":"code",
-                      "t":"Remove"
-                    },
-                    {
-                      "e":"span",
-                      "t":" 掉。"
-                    }
+                    { "e":"span", "t":"點選 GitHub 帳戶，並設為 " },
+                    { "e":"code", "t":"Default" },
+                    { "e":"span", "t":"，然後將原本的 Bitbucket " },
+                    { "e":"code", "t":"Remove" },
+                    { "e":"span", "t":" 掉。" }
                   ]
                 }
               ]
@@ -270,26 +115,23 @@
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"Commit"
-            },
-            {
-              "e":"ul",
-              "s":[
-                {
-                  "e":"li",
-                  "t":"下方可以填寫懶的填註解的預設文字"
-                }
-              ]
-            }
+            { "e":"span", "t":"Commit" },
+            { "e":"ul", "s":[{ "e":"li", "t":"下方可以填寫懶的填註解的預設文字" }] }
           ]
         }
       ]
     }
   ],
   "r":[
-    
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=LoZLPcMPmiM", "target":"_blank" } }]
+        }
+      ]
+    }
   ],
   "g":[
     "Git",

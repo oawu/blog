@@ -1,60 +1,21 @@
 {
   "k":"MacDown",
   "t":"macOS 上安裝 Markdown 文件編輯器",
-  "i":"2020-03-17",
+  "i":"2021-06-02",
   "a":[
+    { "e":"h2", "t":"安裝步驟" },
+    
     {
       "e":"ul",
       "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://macdown.uranusjr.com/", "attr":{ "href":"https://macdown.uranusjr.com/", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"備用載點 － " }, { "e":"a", "t":"MacDown.app.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/MacDown.app.zip", "target":"_blank" } }] },
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"官網下載 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://macdown.uranusjr.com/",
-                "target":"_blank"
-              },
-              "t":"https://macdown.uranusjr.com/"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"備用載點 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/MacDown.app.zip",
-                "target":"_blank"
-              },
-              "t":"MacDown.app.zip"
-            }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"把它移到"
-            },
-            {
-              "e":"b",
-              "t":"應用程式資料夾"
-            },
-            {
-              "e":"span",
-              "t":"，並開啟"
-            }
+            { "e":"span", "t":"把它移到" },
+            { "e":"b", "t":"應用程式資料夾" },
+            { "e":"span", "t":"，並開啟" }
           ]
         }
       ]
@@ -62,55 +23,17 @@
     {
       "e":"blockquote",
       "s":[
-        {
-          "e":"p",
-          "s":[
-            {
-              "e":"span",
-              "t":"若出現 "
-            },
-            {
-              "e":"b",
-              "t":"無法打開「MacDown.app」，因為它來自未識別的開發者。"
-            },
-            {
-              "e":"span",
-              "t":"，因為蘋果懷疑這是個怪怪的 App，所以只要到 "
-            },
-            {
-              "e":"code",
-              "t":"系統偏好設定"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"安全性與隱私權"
-            },
-            {
-              "e":"span",
-              "t":" &gt; "
-            },
-            {
-              "e":"code",
-              "t":"一般"
-            },
-            {
-              "e":"span",
-              "t":" 點選 "
-            },
-            {
-              "e":"code",
-              "t":"強制打開"
-            },
-            {
-              "e":"span",
-              "t":" 即可。"
-            }
-          ]
-        }
+        { "e":"span", "t":"若出現 " },
+        { "e":"b", "t":"無法打開「MacDown.app」，因為它來自未識別的開發者。" },
+        { "e":"span", "t":"，因為蘋果懷疑這是個怪怪的 App，所以只要到 " },
+        { "e":"code", "t":"系統偏好設定" },
+        { "e":"span", "t":" > " },
+        { "e":"code", "t":"安全性與隱私權" },
+        { "e":"span", "t":" > " },
+        { "e":"code", "t":"一般" },
+        { "e":"span", "t":" 點選 " },
+        { "e":"code", "t":"強制打開" },
+        { "e":"span", "t":" 即可。" }
       ]
     }
   ],

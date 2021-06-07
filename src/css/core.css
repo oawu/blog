@@ -7,7 +7,7 @@
   font-variant: normal;
 }
 
-#toastr .toastr label, #main figure, #prev-next a *, #menu a span {
+#toastr .toastr label, #loading span, #main figure, #prev-next a *, #menu a span {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -595,6 +595,14 @@ body {
   margin-left: 6px;
   color: var(--ui-color-link);
 }
+#main code.red {
+  color: white;
+  background-color: var(--ui-color-systemRed);
+}
+#main code.green {
+  color: white;
+  background-color: var(--ui-color-systemGreen);
+}
 #main pre {
   position: relative;
   display: inline-block;
@@ -657,6 +665,12 @@ body {
   -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
 }
+#main pre.code div {
+  padding-left: 50px;
+}
+#main pre.code div:before {
+  content: counter(line);
+}
 #main pre div {
   z-index: 5;
   position: relative;
@@ -664,7 +678,7 @@ body {
   font-size: small;
   height: 22px;
   line-height: 22px;
-  padding-left: 50px;
+  padding-left: 12px;
   counter-increment: line;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -681,7 +695,6 @@ body {
   left: 0;
   top: 0;
   display: inline-block;
-  content: counter(line);
   width: 26px;
   height: 22px;
   line-height: 22px;
@@ -692,6 +705,22 @@ body {
   transition: color 0.3s;
   font-size: small;
   font-family: Content-font, Roboto, sans-serif;
+}
+#main pre.zshrc {
+  color: white;
+  background-color: #242428;
+}
+#main pre.zshrc .r {
+  color: #ff375f;
+}
+#main pre.zshrc .y {
+  color: #ffe894;
+}
+#main pre.zshrc .g {
+  color: #7d8c98;
+}
+#main pre.zshrc .b {
+  color: #64d2ff;
 }
 #main pre.term {
   color: rgba(255, 255, 255, 0.9);
@@ -704,6 +733,25 @@ body {
   background-color: rgba(100, 100, 100, 0.2);
 }
 #main pre.term div:hover:before {
+  color: white;
+}
+#main pre.gitconfig {
+  color: white;
+  background-color: #242428;
+}
+#main pre.gitconfig .r {
+  color: #ff335c;
+}
+#main pre.gitconfig .y {
+  color: #ffe98f;
+}
+#main pre.gitconfig div:before {
+  color: #6e6e71;
+}
+#main pre.gitconfig div:hover {
+  background-color: rgba(100, 111, 131, 0.2);
+}
+#main pre.gitconfig div:hover:before {
   color: white;
 }
 #main pre.language-Swift {
@@ -860,6 +908,9 @@ body {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
+#main blockquote code {
+  background-color: var(--ui-color-opaqueSeparator);
+}
 #main blockquote:after {
   content: "";
   position: absolute;
@@ -899,6 +950,7 @@ body {
   background-color: var(--ui-color-systemGreen);
 }
 #main blockquote.info:before {
+  top: 20px;
   content: "򠀤";
   color: var(--ui-color-systemGreen);
 }
@@ -994,8 +1046,8 @@ body {
   width: 2px;
   height: 6px;
   background-color: var(--ui-color-secondaryLabel);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -1036,13 +1088,13 @@ body {
   -ms-animation-delay: 0.1s;
   -o-animation-delay: 0.1s;
   animation-delay: 0.1s;
-  -webkit-transform: translate(-50%, -50%) rotate(30deg);
-  -moz-transform: translate(-50%, -50%) rotate(30deg);
-  -ms-transform: translate(-50%, -50%) rotate(30deg);
-  -o-transform: translate(-50%, -50%) rotate(30deg);
-  transform: translate(-50%, -50%) rotate(30deg);
-  top: calc(50% - 0.8660254038 * 14px / 2);
-  left: calc(50% + 0.5 * 14px / 2);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: calc(50% - 0.7071067812 * 14px / 2);
+  left: calc(50% + 0.7071067812 * 14px / 2);
 }
 #loading i.n2 {
   -webkit-animation-delay: 0.2s;
@@ -1050,20 +1102,6 @@ body {
   -ms-animation-delay: 0.2s;
   -o-animation-delay: 0.2s;
   animation-delay: 0.2s;
-  -webkit-transform: translate(-50%, -50%) rotate(60deg);
-  -moz-transform: translate(-50%, -50%) rotate(60deg);
-  -ms-transform: translate(-50%, -50%) rotate(60deg);
-  -o-transform: translate(-50%, -50%) rotate(60deg);
-  transform: translate(-50%, -50%) rotate(60deg);
-  top: calc(50% - 0.5 * 14px / 2);
-  left: calc(50% + 0.8660254038 * 14px / 2);
-}
-#loading i.n3 {
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -ms-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  animation-delay: 0.3s;
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
   -moz-transform: translate(-50%, -50%) rotate(90deg);
   -ms-transform: translate(-50%, -50%) rotate(90deg);
@@ -1072,40 +1110,26 @@ body {
   top: calc(50% - 0 * 14px / 2);
   left: calc(50% + 1 * 14px / 2);
 }
+#loading i.n3 {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+  -moz-transform: translate(-50%, -50%) rotate(135deg);
+  -ms-transform: translate(-50%, -50%) rotate(135deg);
+  -o-transform: translate(-50%, -50%) rotate(135deg);
+  transform: translate(-50%, -50%) rotate(135deg);
+  top: calc(50% - -0.7071067812 * 14px / 2);
+  left: calc(50% + 0.7071067812 * 14px / 2);
+}
 #loading i.n4 {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   -ms-animation-delay: 0.4s;
   -o-animation-delay: 0.4s;
   animation-delay: 0.4s;
-  -webkit-transform: translate(-50%, -50%) rotate(120deg);
-  -moz-transform: translate(-50%, -50%) rotate(120deg);
-  -ms-transform: translate(-50%, -50%) rotate(120deg);
-  -o-transform: translate(-50%, -50%) rotate(120deg);
-  transform: translate(-50%, -50%) rotate(120deg);
-  top: calc(50% - -0.5 * 14px / 2);
-  left: calc(50% + 0.8660254038 * 14px / 2);
-}
-#loading i.n5 {
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -ms-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-  -webkit-transform: translate(-50%, -50%) rotate(150deg);
-  -moz-transform: translate(-50%, -50%) rotate(150deg);
-  -ms-transform: translate(-50%, -50%) rotate(150deg);
-  -o-transform: translate(-50%, -50%) rotate(150deg);
-  transform: translate(-50%, -50%) rotate(150deg);
-  top: calc(50% - -0.8660254038 * 14px / 2);
-  left: calc(50% + 0.5 * 14px / 2);
-}
-#loading i.n6 {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  -ms-animation-delay: 0.6s;
-  -o-animation-delay: 0.6s;
-  animation-delay: 0.6s;
   -webkit-transform: translate(-50%, -50%) rotate(180deg);
   -moz-transform: translate(-50%, -50%) rotate(180deg);
   -ms-transform: translate(-50%, -50%) rotate(180deg);
@@ -1114,40 +1138,26 @@ body {
   top: calc(50% - -1 * 14px / 2);
   left: calc(50% + 0 * 14px / 2);
 }
-#loading i.n7 {
-  -webkit-animation-delay: 0.7s;
-  -moz-animation-delay: 0.7s;
-  -ms-animation-delay: 0.7s;
-  -o-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-  -webkit-transform: translate(-50%, -50%) rotate(210deg);
-  -moz-transform: translate(-50%, -50%) rotate(210deg);
-  -ms-transform: translate(-50%, -50%) rotate(210deg);
-  -o-transform: translate(-50%, -50%) rotate(210deg);
-  transform: translate(-50%, -50%) rotate(210deg);
-  top: calc(50% - -0.8660254038 * 14px / 2);
-  left: calc(50% + -0.5 * 14px / 2);
+#loading i.n5 {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-transform: translate(-50%, -50%) rotate(225deg);
+  -moz-transform: translate(-50%, -50%) rotate(225deg);
+  -ms-transform: translate(-50%, -50%) rotate(225deg);
+  -o-transform: translate(-50%, -50%) rotate(225deg);
+  transform: translate(-50%, -50%) rotate(225deg);
+  top: calc(50% - -0.7071067812 * 14px / 2);
+  left: calc(50% + -0.7071067812 * 14px / 2);
 }
-#loading i.n8 {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  -ms-animation-delay: 0.8s;
-  -o-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  -webkit-transform: translate(-50%, -50%) rotate(240deg);
-  -moz-transform: translate(-50%, -50%) rotate(240deg);
-  -ms-transform: translate(-50%, -50%) rotate(240deg);
-  -o-transform: translate(-50%, -50%) rotate(240deg);
-  transform: translate(-50%, -50%) rotate(240deg);
-  top: calc(50% - -0.5 * 14px / 2);
-  left: calc(50% + -0.8660254038 * 14px / 2);
-}
-#loading i.n9 {
-  -webkit-animation-delay: 0.9s;
-  -moz-animation-delay: 0.9s;
-  -ms-animation-delay: 0.9s;
-  -o-animation-delay: 0.9s;
-  animation-delay: 0.9s;
+#loading i.n6 {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
   -webkit-transform: translate(-50%, -50%) rotate(270deg);
   -moz-transform: translate(-50%, -50%) rotate(270deg);
   -ms-transform: translate(-50%, -50%) rotate(270deg);
@@ -1156,33 +1166,19 @@ body {
   top: calc(50% - 0 * 14px / 2);
   left: calc(50% + -1 * 14px / 2);
 }
-#loading i.n10 {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -ms-animation-delay: 1s;
-  -o-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-transform: translate(-50%, -50%) rotate(300deg);
-  -moz-transform: translate(-50%, -50%) rotate(300deg);
-  -ms-transform: translate(-50%, -50%) rotate(300deg);
-  -o-transform: translate(-50%, -50%) rotate(300deg);
-  transform: translate(-50%, -50%) rotate(300deg);
-  top: calc(50% - 0.5 * 14px / 2);
-  left: calc(50% + -0.8660254038 * 14px / 2);
-}
-#loading i.n11 {
-  -webkit-animation-delay: 1.1s;
-  -moz-animation-delay: 1.1s;
-  -ms-animation-delay: 1.1s;
-  -o-animation-delay: 1.1s;
-  animation-delay: 1.1s;
-  -webkit-transform: translate(-50%, -50%) rotate(330deg);
-  -moz-transform: translate(-50%, -50%) rotate(330deg);
-  -ms-transform: translate(-50%, -50%) rotate(330deg);
-  -o-transform: translate(-50%, -50%) rotate(330deg);
-  transform: translate(-50%, -50%) rotate(330deg);
-  top: calc(50% - 0.8660254038 * 14px / 2);
-  left: calc(50% + -0.5 * 14px / 2);
+#loading i.n7 {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  -ms-animation-delay: 0.7s;
+  -o-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-transform: translate(-50%, -50%) rotate(315deg);
+  -moz-transform: translate(-50%, -50%) rotate(315deg);
+  -ms-transform: translate(-50%, -50%) rotate(315deg);
+  -o-transform: translate(-50%, -50%) rotate(315deg);
+  transform: translate(-50%, -50%) rotate(315deg);
+  top: calc(50% - 0.7071067812 * 14px / 2);
+  left: calc(50% + -0.7071067812 * 14px / 2);
 }
 #loading span {
   flex-shrink: 0;

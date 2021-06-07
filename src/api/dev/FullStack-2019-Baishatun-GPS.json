@@ -13,7 +13,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"後端程式碼 - " },
+            { "e":"span", "t":"後端程式碼 － " },
             {
               "e":"a",
               "t":"PHP",
@@ -41,7 +41,7 @@
                       "t":"EC2",
                       "attr":{ "href":"https://aws.amazon.com/tw/ec2/", "target":"_blank" }
                     },
-                    { "e":"span", "t":" - 後端伺服器" }
+                    { "e":"span", "t":" － 後端伺服器" }
                   ]
                 },
                 {
@@ -52,7 +52,7 @@
                       "t":"RDS",
                       "attr":{ "href":"https://aws.amazon.com/tw/rds/", "target":"_blank" }
                     },
-                    { "e":"span", "t":" - 資料庫" }
+                    { "e":"span", "t":" － 資料庫" }
                   ]
                 },
                 {
@@ -63,7 +63,7 @@
                       "t":"S3",
                       "attr":{ "href":"https://aws.amazon.com/tw/s3/", "target":"_blank" }
                     },
-                    { "e":"span", "t":" - 雲端空間" }
+                    { "e":"span", "t":" － 雲端空間" }
                   ]
                 },
                 {
@@ -74,7 +74,7 @@
                       "t":"CloudFront",
                       "attr":{ "href":"https://aws.amazon.com/tw/cloudfront/", "target":"_blank" }
                     },
-                    { "e":"span", "t":" - CDN" }
+                    { "e":"span", "t":" － CDN" }
                   ]
                 },
                 {
@@ -85,7 +85,7 @@
                       "t":"Certificate Manager",
                       "attr":{ "href":"https://aws.amazon.com/tw/certificate-manager/", "target":"_blank" }
                     },
-                    { "e":"span", "t":" - 憑證管理" }
+                    { "e":"span", "t":" － 憑證管理" }
                   ]
                 }
               ]
@@ -115,7 +115,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"App - " },
+            { "e":"span", "t":"App － " },
             {
               "e":"a",
               "t":"白沙屯 GPS",
@@ -126,7 +126,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"網站 - " },
+            { "e":"span", "t":"網站 － " },
             {
               "e":"a",
               "t":"2019 白沙屯 GPS",
@@ -137,7 +137,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"粉專 - " },
+            { "e":"span", "t":"粉專 － " },
             {
               "e":"a",
               "t":"白沙屯媽祖在哪裡？",
@@ -155,13 +155,13 @@
     {
       "e":"ol",
       "s":[
-        { "e":"li", "t":"UI - Constraint" },
-        { "e":"li", "t":"API - Alamofire" },
-        { "e":"li", "t":"Maps - Google Maps" },
-        { "e":"li", "t":"送審 - Reject" }
+        { "e":"li", "t":"UI － Constraint" },
+        { "e":"li", "t":"API － Alamofire" },
+        { "e":"li", "t":"Maps － Google Maps" },
+        { "e":"li", "t":"送審 － Reject" }
       ]
     },
-    { "e":"h2", "t":"UI - Constraint" },
+    { "e":"h2", "t":"UI － Constraint" },
     {
       "e":"p",
       "s":[
@@ -281,7 +281,7 @@
         { "e":"span", "t":" 這個套件，所以 App 中的圖示，都是採用 SVG 的方式呈現。" }
       ]
     },
-    { "e":"h2", "t":"API - Alamofire" },
+    { "e":"h2", "t":"API － Alamofire" },
     {
       "e":"p",
       "s":[
@@ -605,7 +605,7 @@
         { "e":"span", "t":" 之類的，打造出自己的 Call Api 工具，這等之後熟一點後，在重新送一版好了ＸＤ" }
       ]
     },
-    { "e":"h2", "t":"Maps - Google Maps" },
+    { "e":"h2", "t":"Maps － Google Maps" },
     {
       "e":"p",
       "s":[
@@ -684,7 +684,7 @@
         { "e":"span", "t":" 來呈現動畫的效果，不過我對 iOS App 的 UI 效能還沒有很熟，所以我也不知道我的作法會不會有效能上的問題就是了ＸＤ" }
       ]
     },
-    { "e":"h2", "t":"送審 - Reject" },
+    { "e":"h2", "t":"送審 － Reject" },
     { "e":"p", "t":"最後送審了！" },
     {
       "e":"p",

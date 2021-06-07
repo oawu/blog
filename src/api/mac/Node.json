@@ -1,136 +1,53 @@
 {
   "k":"Node",
   "t":"macOS 上安裝 Node.js",
-  "i":"2020-03-17",
+  "i":"2021-06-02",
   "a":[
-    {
-      "e":"h2",
-      "t":"Youtube 影音教學版"
-    },
+    { "e":"h2", "t":"安裝步驟" },
     {
       "e":"ul",
       "s":[
         {
           "e":"li",
           "s":[
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://www.youtube.com/watch?v=TCsj116U-uY",
-                "target":"_blank"
-              },
-              "t":"https://www.youtube.com/watch?v=TCsj116U-uY"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝步驟"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"官網下載 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://nodejs.org/en/",
-                "target":"_blank"
-              },
-              "t":"https://nodejs.org/en/"
-            },
-            {
-              "e":"span",
-              "t":"，選擇 "
-            },
-            {
-              "e":"code",
-              "t":"Recommended For Most Users"
-            }
+            { "e":"span", "t":"官網下載 － " },
+            { "e":"a", "t":"https://nodejs.org/en/", "attr":{ "href":"https://nodejs.org/en/", "target":"_blank" } },
+            { "e":"span", "t":"，選擇 " },
+            { "e":"code", "t":"Recommended For Most Users" }
           ]
         },
         {
           "e":"li",
           "s":[
-            {
-              "e":"span",
-              "t":"備用載點 - "
-            },
-            {
-              "e":"a",
-              "attr":{
-                "href":"https://cdn.ioa.tw/MacEnvInit/node-v8.11.4.pkg",
-                "target":"_blank"
-              },
-              "t":"node-v8.11.4.pkg"
-            }
+            { "e":"span", "t":"備用載點 － " },
+            { "e":"a", "t":"node-v14.17.0.pkg", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/node-v14.17.0.pkg", "target":"_blank" } }
           ]
         },
         {
           "e":"li",
-          "t":"點擊兩下進行安裝，一步步的安裝即可"
+          "t":"點擊兩下進行安裝，一步步的安裝即可，安裝好後可以選擇移至垃圾桶～"
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查是否安裝成功，重新開啟終端機，執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"node -v"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"h2",
-      "t":"安裝 Gulp"
-    },
-    {
-      "e":"ul",
-      "s":[
-        {
-          "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"終端機執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"sudo npm install gulp-cli -g"
-            }
-          ]
+          "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }]
         },
         {
           "e":"li",
-          "s":[
-            {
-              "e":"span",
-              "t":"檢查是否安裝成功，重新開啟終端機，執行指令 "
-            },
-            {
-              "e":"code",
-              "t":"gulp -v"
-            }
-          ]
+          "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"node -v", "copy":"node -v" }]
         }
       ]
     }
   ],
   "r":[
-    
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=TCsj116U-uY", "target":"_blank" } }]
+        }
+      ]
+    }
   ],
   "g":[
     "Node.js",

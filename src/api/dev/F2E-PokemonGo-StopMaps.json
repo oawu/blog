@@ -38,7 +38,7 @@
           "s":[
             { "e":"span", "t":"使用 " },
             { "e":"a", "t":"PTT PokeMon", "attr":{ "href":"https://www.ptt.cc/bbs/PokeMon/index.html", "target":"_blank" } },
-            { "e":"span", "t":" 版文章 - " },
+            { "e":"span", "t":" 版文章 － " },
             { "e":"a", "t":"菜鳥致新手: CP、等級、IV、...", "attr":{ "href":"https://www.ptt.cc/bbs/PokeMon/M.1470508630.A.DF6.html", "target":"_blank" } },
             { "e":"span", "t":" 提及的公式演算。" }
           ]
