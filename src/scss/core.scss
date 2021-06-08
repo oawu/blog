@@ -523,35 +523,13 @@ body {
     word-spacing: normal;
     overflow: auto;
 
-    &.code {
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        display: inline-block;
-        width: 24px + 26px - 8px;
-        height: 100%;
-        z-index: 10;
-        background-color: rgba(255, 255, 255, .01);
-        @include box-shadow(0 0 4px 1px rgba(0, 0, 0, .3));
-      }
-      div {
-        padding-left: 26px + 16px + 8px;
-        &:before {
-          content: counter(line);
-        }
-      }
-    }
-
     div {
       $h: 22px;
       z-index: 5;
       position: relative;
       display: block;
       font-size: small;
-      height: $h;
+      // height: $h;
       line-height: $h;
       padding-left: 12px;
       counter-increment: line;
@@ -575,6 +553,27 @@ body {
       }
     }
 
+    &.code {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 24px + 26px - 8px;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, .01);
+        @include box-shadow(0 0 4px 1px rgba(0, 0, 0, .3));
+      }
+      div {
+        padding-left: 26px + 16px + 8px;
+        &:before {
+          content: counter(line);
+        }
+      }
+    }
     &.zshrc {
       color: rgba(255, 255, 255, 1.00);
       background-color: rgba(36, 36, 40, 1.00);
@@ -591,17 +590,11 @@ body {
         color: rgba(100, 210, 255, 1.00);
       }
 
-      // div {
-      //   &:before {
-      //     color: rgba(110, 110, 110, 1.00);
-      //   }
-      //   &:hover {
-      //     background-color: rgba(100, 100, 100, .2);
-      //     &:before {
-      //       color: rgba(255, 255, 255, 1.00);
-      //     }
-      //   }
-      // }
+      div {
+        &:before {
+          color: rgba(110, 110, 110, 1.00);
+        }
+      }
     }
     &.term {
       color: rgba(255, 255, 255, .90);
@@ -657,6 +650,24 @@ body {
           background-color: rgba(100, 111, 131, .2);
           &:before {
             color: rgba(255, 255, 255, 1.00);
+          }
+        }
+      }
+    }
+    &.php {
+      color: rgba(255, 255, 255, 1.00);
+      background-color: rgba(36, 36, 40, 1.00);
+
+      .b { color: rgba(100, 210, 255, 1.00); }
+
+      div {
+        &:before {
+          color: rgba(146, 146, 148, 1.00);
+        }
+        &:hover {
+          background-color: rgba(68, 68, 72, 1.00);
+          &:before {
+            color: rgba(166, 166, 168, 1.00);
           }
         }
       }

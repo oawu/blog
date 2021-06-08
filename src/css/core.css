@@ -650,33 +650,11 @@ body {
 #main pre label:before {
   content: "򠀨";
 }
-#main pre.code:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: inline-block;
-  width: 42px;
-  height: 100%;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.01);
-  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-}
-#main pre.code div {
-  padding-left: 50px;
-}
-#main pre.code div:before {
-  content: counter(line);
-}
 #main pre div {
   z-index: 5;
   position: relative;
   display: block;
   font-size: small;
-  height: 22px;
   line-height: 22px;
   padding-left: 12px;
   counter-increment: line;
@@ -706,6 +684,27 @@ body {
   font-size: small;
   font-family: Content-font, Roboto, sans-serif;
 }
+#main pre.code:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 42px;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.01);
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+#main pre.code div {
+  padding-left: 50px;
+}
+#main pre.code div:before {
+  content: counter(line);
+}
 #main pre.zshrc {
   color: white;
   background-color: #242428;
@@ -721,6 +720,9 @@ body {
 }
 #main pre.zshrc .b {
   color: #64d2ff;
+}
+#main pre.zshrc div:before {
+  color: #6e6e6e;
 }
 #main pre.term {
   color: rgba(255, 255, 255, 0.9);
@@ -796,6 +798,22 @@ body {
 }
 #main pre.language-Swift div:hover:before {
   color: white;
+}
+#main pre.php {
+  color: white;
+  background-color: #242428;
+}
+#main pre.php .b {
+  color: #64d2ff;
+}
+#main pre.php div:before {
+  color: #929294;
+}
+#main pre.php div:hover {
+  background-color: #444448;
+}
+#main pre.php div:hover:before {
+  color: #a6a6a8;
 }
 #main p {
   display: inline-block;
