@@ -11,7 +11,7 @@
           "e":"li",
           "s":[
             {
-              "e":"span",
+              "e":"p",
               "t":"以下操作先做假設"
             },
             {
@@ -98,7 +98,7 @@
         {
           "e": "li",
           "s": [
-            {"e": "span", "t": "一步一步" },
+            {"e": "p", "t": "一步一步" },
             {
               "e":"ul",
               "s":[
@@ -170,7 +170,7 @@
         {
           "e": "li",
           "s": [
-            {"e": "span", "t": "一步一步" },
+            {"e": "p", "t": "一步一步" },
             
             {
               "e":"ul",
@@ -224,47 +224,47 @@
         { "e":"code", "t": "VirtualHost", "copy":"\n  <VirtualHost _default_:443>\n    # 你的 Domain\n    ServerName  your.url.tw\n    ServerAlias your.url.tw\n\n    # 你的 E-Mail\n    ServerAdmin your.email@gmail.com\n\n    # 你的專案目錄\n    DocumentRoot /var/www\n\n    # Log 的儲存位置\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    # SSL 設定\n    SSLEngine on\n    SSLCertificateFile /etc/dehydrated/certs/your.url.tw/cert.pem\n    SSLCertificateKeyFile /etc/dehydrated/certs/your.url.tw/privkey.pem\n    SSLCertificateChainFile /etc/dehydrated/certs/your.url.tw/chain.pem\n\n    # 記得也要是你的專案目錄\n    <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n    </Directory>\n  </VirtualHost>" },
         { "e":"span", "t":"，然後 " },
         { "e":"code", "t":"重啟 Apache", "copy":"sudo service apache2 restart" },
-        { "e":"span", "t":" 即可，範例：" },
-        {
-          "e":"pre",
-          "attr":{ "class":"code zshrc" },
-          "s":[
-            { "e":"label", "copy":"\n  <VirtualHost _default_:443>\n    # 你的 Domain\n    ServerName  your.url.tw\n    ServerAlias your.url.tw\n\n    # 你的 E-Mail\n    ServerAdmin your.email@gmail.com\n\n    # 你的專案目錄\n    DocumentRoot /var/www\n\n    # Log 的儲存位置\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    # SSL 設定\n    SSLEngine on\n    SSLCertificateFile /etc/dehydrated/certs/your.url.tw/cert.pem\n    SSLCertificateKeyFile /etc/dehydrated/certs/your.url.tw/privkey.pem\n    SSLCertificateChainFile /etc/dehydrated/certs/your.url.tw/chain.pem\n\n    # 記得也要是你的專案目錄\n    <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n    </Directory>\n  </VirtualHost>" },
-            { "e":"div", "s":[{"e": "span", "t": "<IfModule", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "mod_ssl.c", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "<VirtualHost", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "_default_:443", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-            { "e":"div", "t":"        # 你的 Domain", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerName", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAlias", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"        # 你的 E-Mail", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAdmin", "attr": {"class": "b"} }, {"e": "span", "t": " your.email@gmail.com" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"        # 你的專案目錄", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "DocumentRoot", "attr": {"class": "b"} }, {"e": "span", "t": " /var/www" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"        # Log 的儲存位置", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ErrorLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "CustomLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"        # SSL 設定", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLEngine", "attr": {"class": "b"} }, {"e": "span", "t": " on" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/cert.pem" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateKeyFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/privkey.pem" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateChainFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/chain.pem" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"        # 記得也要是你的專案目錄", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "<Directory", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "/var/www", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-            { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Options", "attr": {"class": "b"} }, {"e": "span", "t": " FollowSymLinks MultiViews" }] },
-            { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "AllowOverride", "attr": {"class": "b"} }, {"e": "span", "t": " All" }] },
-            { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Order", "attr": {"class": "b"} }, {"e": "span", "t": " allow,deny" }] },
-            { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Allow", "attr": {"class": "b"} }, {"e": "span", "t": " from all" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "</Directory>", "attr": {"class": "r"} }] },
-            { "e":"div", "s":[{"e": "span", "t": "    </VirtualHost>", "attr": {"class": "r"} }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "s":[{"e": "span", "t": "</IfModule>", "attr": {"class": "r"} }] }
-          ]
-        }
+        { "e":"span", "t":" 即可，範例：" }
+      ]
+    },
+    {
+      "e":"pre",
+      "attr":{ "class":"code zshrc" },
+      "s":[
+        { "e":"label", "copy":"\n  <VirtualHost _default_:443>\n    # 你的 Domain\n    ServerName  your.url.tw\n    ServerAlias your.url.tw\n\n    # 你的 E-Mail\n    ServerAdmin your.email@gmail.com\n\n    # 你的專案目錄\n    DocumentRoot /var/www\n\n    # Log 的儲存位置\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    # SSL 設定\n    SSLEngine on\n    SSLCertificateFile /etc/dehydrated/certs/your.url.tw/cert.pem\n    SSLCertificateKeyFile /etc/dehydrated/certs/your.url.tw/privkey.pem\n    SSLCertificateChainFile /etc/dehydrated/certs/your.url.tw/chain.pem\n\n    # 記得也要是你的專案目錄\n    <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n    </Directory>\n  </VirtualHost>" },
+        { "e":"div", "s":[{"e": "span", "t": "<IfModule", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "mod_ssl.c", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "<VirtualHost", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "_default_:443", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
+        { "e":"div", "t":"        # 你的 Domain", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerName", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAlias", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"        # 你的 E-Mail", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAdmin", "attr": {"class": "b"} }, {"e": "span", "t": " your.email@gmail.com" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"        # 你的專案目錄", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "DocumentRoot", "attr": {"class": "b"} }, {"e": "span", "t": " /var/www" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"        # Log 的儲存位置", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ErrorLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "CustomLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"        # SSL 設定", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLEngine", "attr": {"class": "b"} }, {"e": "span", "t": " on" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/cert.pem" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateKeyFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/privkey.pem" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateChainFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/chain.pem" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"        # 記得也要是你的專案目錄", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "<Directory", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "/var/www", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
+        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Options", "attr": {"class": "b"} }, {"e": "span", "t": " FollowSymLinks MultiViews" }] },
+        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "AllowOverride", "attr": {"class": "b"} }, {"e": "span", "t": " All" }] },
+        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Order", "attr": {"class": "b"} }, {"e": "span", "t": " allow,deny" }] },
+        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Allow", "attr": {"class": "b"} }, {"e": "span", "t": " from all" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "</Directory>", "attr": {"class": "r"} }] },
+        { "e":"div", "s":[{"e": "span", "t": "    </VirtualHost>", "attr": {"class": "r"} }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "s":[{"e": "span", "t": "</IfModule>", "attr": {"class": "r"} }] }
       ]
     },
 
@@ -276,7 +276,7 @@
           "e":"li",
           "s":[
             {
-              "e":"span",
+              "e":"p",
               "t":"若出現以下錯誤，代表你還沒申請 ssl 的憑證檔案，所以出錯。"
             },
             {

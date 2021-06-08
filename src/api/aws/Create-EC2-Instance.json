@@ -71,15 +71,17 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"第六頁 " },
-            { "e":"code", "t":"Configure Security Group" },
-            { "e":"span", "t":"，這頁是讓你設定「安全群組」，你可以設定你的 EC2 要採用哪個安全設定，若第一次應該沒有任何的 " },
-            { "e":"code", "t":"Group" },
-            { "e":"span", "t":"，所以你可以在 " },
-            { "e":"code", "t":"Assign a security group" },
-            { "e":"span", "t":" 選擇 " },
-            { "e":"code", "t":"Create a new security group" },
-            { "e":"span", "t":"，然後下方去設定這次要新增的 「Group」細節" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"第六頁 " },
+              { "e":"code", "t":"Configure Security Group" },
+              { "e":"span", "t":"，這頁是讓你設定「安全群組」，你可以設定你的 EC2 要採用哪個安全設定，若第一次應該沒有任何的 " },
+              { "e":"code", "t":"Group" },
+              { "e":"span", "t":"，所以你可以在 " },
+              { "e":"code", "t":"Assign a security group" },
+              { "e":"span", "t":" 選擇 " },
+              { "e":"code", "t":"Create a new security group" },
+              { "e":"span", "t":"，然後下方去設定這次要新增的 「Group」細節" }
+            ] },
             {
               "e":"ul",
               "s":[

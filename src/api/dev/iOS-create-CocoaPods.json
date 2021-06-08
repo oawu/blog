@@ -113,7 +113,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"通常需要以下幾個項目：" },
+            { "e":"p", "t":"通常需要以下幾個項目：" },
             {
               "e":"ul",
               "s":[
@@ -143,7 +143,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "s":[{ "e":"span", "t":"打開 " }, { "e":"code", "t":"Example/OAPodTest.xcworkspace" }] },
+            { "e":"p", "s":[{ "e":"span", "t":"打開 " }, { "e":"code", "t":"Example/OAPodTest.xcworkspace" }] },
             {
               "e":"ul",
               "s":[
@@ -172,7 +172,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"ReplaceMe.swift 內容範例" },
+            { "e":"p", "t":"ReplaceMe.swift 內容範例" },
             {
               "e":"pre",
               "attr":{ "class":"code language-Swift" },
@@ -183,12 +183,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[
@@ -233,14 +228,14 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"先做 git push 以及 tag 的 push" },
+            { "e":"p", "t":"先做 git push 以及 tag 的 push" },
             {
               "e":"ul",
               "s":[
                 {
                   "e":"li",
                   "s":[
-                    { "e":"span", "t":"全部加入並且丟到 origin，執行指令：" },
+                    { "e":"p", "t":"全部加入並且丟到 origin，執行指令：" },
                     {
                       "e":"pre",
                       "attr":{ "class":"code term" },
@@ -269,7 +264,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"更新至 pod" },
+            { "e":"p", "t":"更新至 pod" },
             {
               "e":"ul",
               "s":[
@@ -303,11 +298,13 @@
                 {
                   "e":"li",
                   "s":[
-                    { "e":"span", "t":"成功的話 理論上 " },
-                    { "e":"code", "t":"https://cocoapods.org/pods/OAPodTest" },
-                    { "e":"span", "t":" 可以直接有網頁看得到，或者可以用指令 " },
-                    { "e":"code", "t":"pod trunk info OAPodTest" },
-                    { "e":"span", "t":" 檢查是否有存在以及其線上相關版號資訊！" },
+                    { "e":"p", "s":[
+                      { "e":"span", "t":"成功的話 理論上 " },
+                      { "e":"code", "t":"https://cocoapods.org/pods/OAPodTest" },
+                      { "e":"span", "t":" 可以直接有網頁看得到，或者可以用指令 " },
+                      { "e":"code", "t":"pod trunk info OAPodTest" },
+                      { "e":"span", "t":" 檢查是否有存在以及其線上相關版號資訊！" }
+                    ] },
                     { "e":"figure", "attr":{ "alt":"成功資訊" }, "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/3593d8b07ff9e731583a8387fc8a29cc.png" }, "s":[] }] }
                   ]
                 }
@@ -350,10 +347,13 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"執行安裝 pod 執行指令：" },
-            { "e":"code", "t":"pod install" },
-            { "e":"span", "t":"，然後執行 " },
-            { "e":"code", "t":"Test.xcworkspace" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"執行安裝 pod 執行指令：" },
+              { "e":"code", "t":"pod install" },
+              { "e":"span", "t":"，然後執行 " },
+              { "e":"code", "t":"Test.xcworkspace" }
+            ] },
+
             {
               "e":"ul",
               "s":[

@@ -12,7 +12,7 @@
           "e":"li",
           "s":[
             {
-              "e":"span",
+              "e":"p",
               "t":"以下操作先做假設"
             },
             {
@@ -125,7 +125,7 @@
           {"e": "code", "t": "點我複製", "copy": "sudo chmod -R 777 /var/www && cd /var/www && rm -rf html && echo \"Hello World\" > index.html && ln -s /var/www ~/www" }
         ] },
         { "e": "li", "s": [
-          {"e": "span", "t": "一步一步" },
+          {"e": "p", "t": "一步一步" },
           {
             "e":"ul",
             "s":[
@@ -189,7 +189,7 @@
 
           ] },
           { "e": "li", "s": [
-            {"e": "span", "t": "一步一步" },
+            {"e": "p", "t": "一步一步" },
             {
               "e":"ul",
               "s":[
@@ -242,37 +242,37 @@
         { "e":"code", "t": "VirtualHost", "copy":"<VirtualHost *:80>\n  # 你的 Domain\n  ServerName your.url.tw\n  ServerAlias your.url.tw\n\n  # 你的 E-Mail\n  ServerAdmin your.email@gmail.com\n\n  # 你的專案目錄\n  DocumentRoot /var/www\n\n  # Log 的儲存位置\n  ErrorLog ${APACHE_LOG_DIR}/error.log\n  CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n  # 記得也要是你的專案目錄\n  <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>" },
         { "e":"span", "t":"，然後 " },
         { "e":"code", "t":"重啟 Apache", "copy":"sudo service apache2 restart" },
-        { "e":"span", "t":" 即可，範例：" },
-        {
-          "e":"pre",
-          "attr":{ "class":"code zshrc" },
-          "s":[
-            { "e":"label", "copy":"<VirtualHost *:80>\n  # 你的 Domain\n  ServerName your.url.tw\n  ServerAlias your.url.tw\n\n  # 你的 E-Mail\n  ServerAdmin your.email@gmail.com\n\n  # 你的專案目錄\n  DocumentRoot /var/www\n\n  # Log 的儲存位置\n  ErrorLog ${APACHE_LOG_DIR}/error.log\n  CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n  # 記得也要是你的專案目錄\n  <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>" },
-            { "e":"div", "s":[{"e": "span", "t": "<VirtualHost", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "*:80", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-            { "e":"div", "t":"    # 你的 Domain", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ServerName", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ServerAlias", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"    # 你的 E-Mail", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ServerAdmin", "attr": {"class": "b"} }, {"e": "span", "t": " your.email@gmail.com" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"    # 你的專案目錄", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "DocumentRoot", "attr": {"class": "b"} }, {"e": "span", "t": " /var/www" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"    # Log 的儲存位置", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ErrorLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "CustomLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
-            { "e":"div", "t":" " },
-            { "e":"div", "t":"    # 記得也要是你的專案目錄", "attr": {"class": "g"} },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "<Directory", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "/var/www", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "Options", "attr": {"class": "b"} }, {"e": "span", "t": " FollowSymLinks MultiViews" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "AllowOverride", "attr": {"class": "b"} }, {"e": "span", "t": " All" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "Order", "attr": {"class": "b"} }, {"e": "span", "t": " allow,deny" }] },
-            { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "Allow", "attr": {"class": "b"} }, {"e": "span", "t": " from all" }] },
-            { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "</Directory>", "attr": {"class": "r"} }] },
-            { "e":"div", "s":[{"e": "span", "t": "</VirtualHost>", "attr": {"class": "r"} }] }
-          ]
-        }
+        { "e":"span", "t":" 即可，範例：" }
+      ]
+    },
+    {
+      "e":"pre",
+      "attr":{ "class":"code zshrc" },
+      "s":[
+        { "e":"label", "copy":"<VirtualHost *:80>\n  # 你的 Domain\n  ServerName your.url.tw\n  ServerAlias your.url.tw\n\n  # 你的 E-Mail\n  ServerAdmin your.email@gmail.com\n\n  # 你的專案目錄\n  DocumentRoot /var/www\n\n  # Log 的儲存位置\n  ErrorLog ${APACHE_LOG_DIR}/error.log\n  CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n  # 記得也要是你的專案目錄\n  <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>" },
+        { "e":"div", "s":[{"e": "span", "t": "<VirtualHost", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "*:80", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
+        { "e":"div", "t":"    # 你的 Domain", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ServerName", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ServerAlias", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"    # 你的 E-Mail", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ServerAdmin", "attr": {"class": "b"} }, {"e": "span", "t": " your.email@gmail.com" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"    # 你的專案目錄", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "DocumentRoot", "attr": {"class": "b"} }, {"e": "span", "t": " /var/www" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"    # Log 的儲存位置", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "ErrorLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "CustomLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
+        { "e":"div", "t":" " },
+        { "e":"div", "t":"    # 記得也要是你的專案目錄", "attr": {"class": "g"} },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "<Directory", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "/var/www", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "Options", "attr": {"class": "b"} }, {"e": "span", "t": " FollowSymLinks MultiViews" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "AllowOverride", "attr": {"class": "b"} }, {"e": "span", "t": " All" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "Order", "attr": {"class": "b"} }, {"e": "span", "t": " allow,deny" }] },
+        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "Allow", "attr": {"class": "b"} }, {"e": "span", "t": " from all" }] },
+        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "</Directory>", "attr": {"class": "r"} }] },
+        { "e":"div", "s":[{"e": "span", "t": "</VirtualHost>", "attr": {"class": "r"} }] }
       ]
     },
 

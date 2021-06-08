@@ -142,17 +142,21 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"複製公鑰，終端機執行指令 " },
-            { "e":"code", "t":"pbcopy < ~/.ssh/id_rsa.pub", "copy":"pbcopy < ~/.ssh/id_rsa.pub" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"複製公鑰，終端機執行指令 " },
+              { "e":"code", "t":"pbcopy < ~/.ssh/id_rsa.pub", "copy":"pbcopy < ~/.ssh/id_rsa.pub" }
+            ] },
             {
               "e":"ul",
               "s":[
                 {
                   "e":"li",
                   "s":[
-                    { "e":"span", "t":"貼到 " },
-                    { "e":"a", "t":"GitHub", "attr":{ "href":"https://github.com/", "target":"_blank" } },
-                    { "e":"span", "t":" 上" },
+                    { "e":"p", "s":[
+                      { "e":"span", "t":"貼到 " },
+                      { "e":"a", "t":"GitHub", "attr":{ "href":"https://github.com/", "target":"_blank" } },
+                      { "e":"span", "t":" 上" }
+                    ] },
                     {
                       "e":"ul",
                       "s":[
@@ -175,9 +179,11 @@
                 {
                   "e":"li",
                   "s":[
-                    { "e":"span", "t":"貼到 " },
-                    { "e":"a", "t":"BitBucket", "attr":{ "href":"https://bitbucket.org/", "target":"_blank" } },
-                    { "e":"span", "t":" 上" },
+                    { "e":"p", "s":[
+                      { "e":"span", "t":"貼到 " },
+                      { "e":"a", "t":"BitBucket", "attr":{ "href":"https://bitbucket.org/", "target":"_blank" } },
+                      { "e":"span", "t":" 上" }
+                    ] },
                     {
                       "e":"ul",
                       "s":[
@@ -227,10 +233,12 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"Profiles" },
-            { "e":"span", "t":"，先選擇左邊的 " },
-            { "e":"code", "t":"Default" },
-            { "e":"span", "t":" 再進行以下設定" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"Profiles" },
+              { "e":"span", "t":"，先選擇左邊的 " },
+              { "e":"code", "t":"Default" },
+              { "e":"span", "t":" 再進行以下設定" }
+            ] },
             {
               "e":"ul",
               "s":[
@@ -249,7 +257,7 @@
                 {
                   "e":"li",
                   "s":[
-                    { "e":"span", "t":"Text" },
+                    { "e":"p", "t":"Text" },
                     {
                       "e":"ul",
                       "s":[
@@ -307,7 +315,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"Keys" },
+            { "e":"p", "t":"Keys" },
             {
               "e":"ul",
               "s":[
@@ -346,7 +354,6 @@
                     { "e":"code", "t":"Send Hex Code", "copy":"Send Hex Code" },
                     { "e":"span", "t":"，輸入 " },
                     { "e":"code", "t":"0x05", "copy":"0x05" }
-                    
                   ]
                 },
                 {

@@ -44,11 +44,12 @@ Vue.component('main-article', {
         h1 => *text=article.t
         span => *text=article.st   *if=article.st
 
-      el => *for=(el, i) in article.a   :key=i   :el=el
+      section
+        el => *for=(el, i) in article.a   :key=i   :el=el
 
-      div#reference => *if=article.r.length
-        h2 => *text='相關參考'
-        el => *for=(el, i) in article.r   :key=i   :el=el
+        template => *if=article.r.length
+          h2 => *text='相關參考'
+          el => *for=(el, i) in article.r   :key=i   :el=el
 
       div#prev-next => *if=article.p || article.n   :class='n' + [article.p, article.n].filter(t => t).length
         a.icon-a.prev => *if=article.p   :href=article.p.u

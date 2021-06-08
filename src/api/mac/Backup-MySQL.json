@@ -356,12 +356,7 @@
         {
           "e":"li",
           "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c", "target":"_blank" } }]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[

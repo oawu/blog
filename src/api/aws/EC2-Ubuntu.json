@@ -36,7 +36,7 @@
           "e":"li",
           "s":[
             {
-              "e":"span",
+              "e":"p",
               "t":"以下操作先做假設"
             },
             {
@@ -144,7 +144,7 @@
     },
 
     { "e":"h2", "t":"系統設定" },
-    { "e":"span", "t":"方法有兩種，自己選擇 " },
+    { "e":"p", "t":"方法有兩種，自己選擇" },
     { "e":"ul", "s":[
       {"e": "li", "s": [
         {"e": "span", "t": "快速指令" },
@@ -160,7 +160,7 @@
             {
               "e":"li",
               "s":[
-                { "e":"span", "t":"安裝 Git" },
+                { "e":"p", "t":"安裝 Git" },
                 {
                   "e":"ul",
                   "s":[
@@ -186,7 +186,7 @@
             {
               "e":"li",
               "s":[
-                { "e":"span", "t":"安裝 Oh My Zsh" },
+                { "e":"p", "t":"安裝 Oh My Zsh" },
                 {
                   "e":"ul",
                   "s":[
@@ -202,10 +202,12 @@
                     {
                       "e":"li",
                       "s":[
-                        { "e":"span", "t":"將 " },
-                        { "e":"code", "t":"auth required pam_shells.so" },
-                        { "e":"span", "t":" 改為  " },
-                        { "e":"code", "t":"auth sufficient pam_shells.so", "copy":"auth sufficient pam_shells.so" },
+                        { "e":"p", "s":[
+                          { "e":"span", "t":"將 " },
+                          { "e":"code", "t":"auth required pam_shells.so" },
+                          { "e":"span", "t":" 改為  " },
+                          { "e":"code", "t":"auth sufficient pam_shells.so", "copy":"auth sufficient pam_shells.so" }
+                        ] },
                         {
                           "e":"blockquote",
                           "s":[
@@ -267,7 +269,7 @@
             {
               "e":"li",
               "s":[
-                { "e":"span", "t":"調整時間" },
+                { "e":"p", "t":"調整時間" },
                 {
                   "e":"ul",
                   "s":[
@@ -302,7 +304,7 @@
             {
               "e":"li",
               "s":[
-                { "e":"span", "t":"設定編碼語系" },
+                { "e":"p", "t":"設定編碼語系" },
                 {
                   "e":"ul",
                   "s":[

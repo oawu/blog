@@ -59,7 +59,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"SublimeLinter" },
+            { "e":"p", "t":"SublimeLinter" },
             {
               "e":"ul",
               "s":[
@@ -96,7 +96,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"SCSS" },
+            { "e":"p", "t":"SCSS" },
             {
               "e":"ul",
               "s":[
@@ -319,7 +319,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"SublimeLinter" },
+            { "e":"p", "t":"SublimeLinter" },
             {
               "e":"ul",
               "s":[
@@ -356,7 +356,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"Scss" },
+            { "e":"p", "t":"Scss" },
             {
               "e":"ul",
               "s":[
@@ -612,13 +612,7 @@
         {
           "e":"li",
           "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=nPlPOmX1aME", "target":"_blank" } }]
-        }
-      ]
-    },
-
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[

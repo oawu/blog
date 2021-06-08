@@ -24,12 +24,10 @@
         {
           "e":"li",
           "s":[
-            {
-              "e":"a",
-              "t":"AWS",
-              "attr":{ "href":"https://aws.amazon.com/tw/", "target":"_blank" }
-            },
-            { "e":"span", "t":" 系統架設" },
+            { "e":"p", "s":[
+              { "e":"a", "t":"AWS", "attr":{ "href":"https://aws.amazon.com/tw/", "target":"_blank" } },
+              { "e":"span", "t":" 系統架設" }
+            ] },
             {
               "e":"ul",
               "s":[

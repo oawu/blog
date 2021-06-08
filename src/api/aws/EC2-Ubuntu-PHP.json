@@ -11,7 +11,7 @@
           "e":"li",
           "s":[
             {
-              "e":"span",
+              "e":"p",
               "t":"以下操作先做假設"
             },
             {
@@ -96,7 +96,7 @@
           ]
         },
         { "e": "li", "s": [
-          {"e": "span", "t": "一步一步" },
+          {"e": "p", "t": "一步一步" },
           {
             "e":"ul",
             "s":[
@@ -117,9 +117,11 @@
               {
                 "e":"li",
                 "s":[
-                  { "e":"span", "t":"在 www 下新增測試 PHP 檔案，指令 " },
-                  { "e":"code", "t":"nano phpinfo.php", "copy":"nano phpinfo.php" },
-                  { "e":"span", "t":"，內容為如下：" },
+                  { "e":"p", "s":[
+                    { "e":"span", "t":"在 www 下新增測試 PHP 檔案，指令 " },
+                    { "e":"code", "t":"nano phpinfo.php", "copy":"nano phpinfo.php" },
+                    { "e":"span", "t":"，內容為如下：" }
+                  ] },
                   {
                     "e":"pre",
                     "attr":{ "class":"code php" },

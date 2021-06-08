@@ -145,7 +145,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"修改一下項目" },
+            { "e":"p", "t":"修改一下項目" },
             {
               "e":"ul",
               "s":[
@@ -210,8 +210,10 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"改使用 5.6 " },
-            { "e":"code", "t":"brew link php56", "copy":"brew link php56" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"改使用 5.6 " },
+              { "e":"code", "t":"brew link php56", "copy":"brew link php56" }
+            ] },
             {
               "e":"blockquote",
               "attr": { "class": "warning" },

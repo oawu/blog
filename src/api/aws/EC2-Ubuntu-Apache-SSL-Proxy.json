@@ -56,15 +56,17 @@
           { "e":"a", "t":"此篇", "attr": {"href": "/?k=aws&id=EC2-Ubuntu-LetsEncrypt", "target":"_blank" } }
         ] },
         { "e":"li", "s":[
-          { "e":"span", "t":"以下範例是假設 Port 為 " }, 
-          { "e":"b", "t":"8101" }, 
-          { "e":"span", "t":" 就修改 " }, 
-          { "e":"code", "t":"Https VirtualHost", "copy":"sudo nano /etc/apache2/sites-available/my-ssl.conf" },
-          { "e":"span", "t":"，加入 " }, 
-          { "e":"code", "t":"Proxy 設定", "copy":"\n\n    # 覆寫\n    RewriteEngine On\n    RewriteCond %{QUERY_STRING} transport=websocket    [NC]\n    RewriteRule /(.*)           ws://127.0.0.1:8101/$1 [P,L]\n\n    # 啟用代理\n    ProxyRequests On\n    ProxyPass / http://127.0.0.1:8101/\n    ProxyPassReverse / http://127.0.0.1:8101/" },
-          { "e":"span", "t":" 與移除 " }, 
-          { "e":"code", "t":"Directory" }, 
-          { "e":"span", "t":"，可以參考以下範例" }, 
+          { "e":"p", "s":[
+            { "e":"span", "t":"以下範例是假設 Port 為 " }, 
+            { "e":"b", "t":"8101" }, 
+            { "e":"span", "t":" 就修改 " }, 
+            { "e":"code", "t":"Https VirtualHost", "copy":"sudo nano /etc/apache2/sites-available/my-ssl.conf" },
+            { "e":"span", "t":"，加入 " }, 
+            { "e":"code", "t":"Proxy 設定", "copy":"\n\n    # 覆寫\n    RewriteEngine On\n    RewriteCond %{QUERY_STRING} transport=websocket    [NC]\n    RewriteRule /(.*)           ws://127.0.0.1:8101/$1 [P,L]\n\n    # 啟用代理\n    ProxyRequests On\n    ProxyPass / http://127.0.0.1:8101/\n    ProxyPassReverse / http://127.0.0.1:8101/" },
+            { "e":"span", "t":" 與移除 " }, 
+            { "e":"code", "t":"Directory" }, 
+            { "e":"span", "t":"，可以參考以下範例" }
+          ] }, 
           {
             "e":"pre",
             "attr":{ "class":"code zshrc" },

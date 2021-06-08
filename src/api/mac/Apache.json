@@ -38,7 +38,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"移除停止使用 mac 原生的 Apache" },
+            { "e":"p", "t":"移除停止使用 mac 原生的 Apache" },
             {
               "e":"ul",
               "s":[
@@ -63,7 +63,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"安裝新的 Apache" },
+            { "e":"p", "t":"安裝新的 Apache" },
             {
               "e":"ul",
               "s":[
@@ -104,7 +104,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"設定" },
+            { "e":"p", "t":"設定" },
             {
               "e":"ul",
               "s":[
@@ -214,11 +214,13 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"用 Sublime Text 編輯 " },
-            { "e":"code", "t":"hosts" },
-            { "e":"span", "t":"，終端機執行指令 " },
-            { "e":"code", "t":"subl /etc/hosts", "copy":"subl /etc/hosts" },
-            { "e":"span", "t":"，將內容調整一下，常用內容如下：" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"用 Sublime Text 編輯 " },
+              { "e":"code", "t":"hosts" },
+              { "e":"span", "t":"，終端機執行指令 " },
+              { "e":"code", "t":"subl /etc/hosts", "copy":"subl /etc/hosts" },
+              { "e":"span", "t":"，將內容調整一下，常用內容如下：" }
+            ] },
             {
               "e":"pre",
               "attr":{ "class":"code term" },
@@ -259,11 +261,13 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"用 Sublime Text 編輯 " },
-            { "e":"code", "t":"httpd-vhosts.conf" },
-            { "e":"span", "t":"，終端機執行指令 " },
-            { "e":"code", "t":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf", "copy":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf" },
-            { "e":"span", "t":"，將內容調整一下，常用內容如下：" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"用 Sublime Text 編輯 " },
+              { "e":"code", "t":"httpd-vhosts.conf" },
+              { "e":"span", "t":"，終端機執行指令 " },
+              { "e":"code", "t":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf", "copy":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf" },
+              { "e":"span", "t":"，將內容調整一下，常用內容如下：" }
+            ] },
             {
               "e":"pre",
               "attr":{ "class":"code term" },
@@ -273,7 +277,7 @@
                 { "e":"div", "t":"<VirtualHost *:80>" },
                 { "e":"div", "t":"  ServerAdmin comdan66@gmail.com" },
                 { "e":"div", "t":"  DocumentRoot \"/Users/oa/www\"" },
-                { "e":"div", "t":"" },
+                { "e":"div", "t":" " },
                 { "e":"div", "t":"  <Directory \"/Users/oa/www\">" },
                 { "e":"div", "t":"      Options FollowSymLinks MultiViews" },
                 { "e":"div", "t":"      AllowOverride All" },
@@ -281,12 +285,12 @@
                 { "e":"div", "t":"      Allow from all" },
                 { "e":"div", "t":"  </Directory>" },
                 { "e":"div", "t":"</VirtualHost>" },
-                { "e":"div", "t":"" },
+                { "e":"div", "t":" " },
                 { "e":"div", "t":"# Case" },
                 { "e":"div", "t":"<VirtualHost *:80>" },
                 { "e":"div", "t":"  ServerName dev.case.ioa.tw" },
                 { "e":"div", "t":"  ServerAlias dev.case.ioa.tw" },
-                { "e":"div", "t":"" },
+                { "e":"div", "t":" " },
                 { "e":"div", "t":"  DocumentRoot \"/Users/oa/www/case\"" },
                 { "e":"div", "t":"  <Directory \"/Users/oa/www/case\">" },
                 { "e":"div", "t":"      Options FollowSymLinks MultiViews" },
@@ -339,36 +343,37 @@
             { "e":"code", "t":"subl /usr/local/etc/httpd/httpd.conf", "copy":"subl /usr/local/etc/httpd/httpd.conf" }
           ]
         },
-        { "e":"li", "t":"將以下三個註解拿掉" },
         {
-          "e":"pre",
-          "attr":{ "class":"code term" },
-          "s":[
-            { "e":"label", "copy":"mod_socache_shmcb.so" },
-            { "e":"div", "t": "LoadModule socache_shmcb_module lib/httpd/modules/mod_socache_shmcb.so" }
+          "e":"li",
+          "s": [
+            {"e": "p", "t": "將以下三個註解拿掉"},
+            {
+              "e":"pre",
+              "attr":{ "class":"code term" },
+              "s":[
+                { "e":"label", "copy":"mod_socache_shmcb.so" },
+                { "e":"div", "t": "LoadModule socache_shmcb_module lib/httpd/modules/mod_socache_shmcb.so" }
+              ]
+            },
+            {
+              "e":"pre",
+              "attr":{ "class":"code term" },
+              "s":[
+                { "e":"label", "copy":"mod_ssl.so" },
+                { "e":"div", "t":"LoadModule ssl_module lib/httpd/modules/mod_ssl.so" }
+              ]
+            },
+            {
+              "e":"pre",
+              "attr":{ "class":"code term" },
+              "s":[
+                { "e":"label", "copy":"httpd-ssl.conf" },
+                { "e":"div", "t":"Include /usr/local/etc/httpd/extra/httpd-ssl.conf" }
+              ]
+            }
           ]
         },
-        {
-          "e":"pre",
-          "attr":{ "class":"code term" },
-          "s":[
-            { "e":"label", "copy":"mod_ssl.so" },
-            { "e":"div", "t":"LoadModule ssl_module lib/httpd/modules/mod_ssl.so" }
-          ]
-        },
-        {
-          "e":"pre",
-          "attr":{ "class":"code term" },
-          "s":[
-            { "e":"label", "copy":"httpd-ssl.conf" },
-            { "e":"div", "t":"Include /usr/local/etc/httpd/extra/httpd-ssl.conf" }
-          ]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+
         {
           "e":"li",
           "s":[
@@ -407,8 +412,10 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"編輯 vhost，指令輸入 " },
-            { "e":"code", "t":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf", "copy":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf" },
+            { "e":"p", "s":[
+              { "e":"span", "t":"編輯 vhost，指令輸入 " },
+              { "e":"code", "t":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf", "copy":"subl /usr/local/etc/httpd/extra/httpd-vhosts.conf" }
+            ] },
             {
               "e":"pre",
               "attr":{ "class":"code term" },
@@ -424,12 +431,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         { "e":"li", "t":"第一次設定，需要產生 key，所以要執行 openssl" },
         {
           "e":"li",
@@ -511,23 +513,13 @@
         {
           "e":"li",
           "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=V32zn8xtGnM", "target":"_blank" } }]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[
             { "e":"a", "t":"macOS 11.0 Big Sur Apache Setup: Multiple PHP Versions | Grav CMS", "attr":{ "href":"https://getgrav.org/blog/macos-bigsur-apache-multiple-php-versions", "target":"_blank" } }
           ]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[

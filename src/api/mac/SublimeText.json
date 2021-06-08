@@ -95,7 +95,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"OA Theme 目錄" },
+            { "e":"p", "t":"OA Theme 目錄" },
             {
               "e":"ul",
               "s":[
@@ -110,7 +110,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"OA Theme Package" },
+            { "e":"p", "t":"OA Theme Package" },
             {
               "e":"ul",
               "s":[
@@ -131,7 +131,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"SublimeLinter" },
+            { "e":"p", "t":"SublimeLinter" },
             {
               "e":"ul",
               "s":[
@@ -146,7 +146,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"SCSS" },
+            { "e":"p", "t":"SCSS" },
             {
               "e":"ul",
               "s":[
@@ -161,7 +161,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"安裝 OA Theme" },
+            { "e":"p", "t":"安裝 OA Theme" },
             {
               "e":"ul",
               "s":[
@@ -176,7 +176,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"OA Color Scheme" },
+            { "e":"p", "t":"OA Color Scheme" },
             {
               "e":"ul",
               "s":[
@@ -191,7 +191,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"A File Icon" },
+            { "e":"p", "t":"A File Icon" },
             {
               "e":"ul",
               "s":[
@@ -273,26 +273,21 @@
         {
           "e":"li",
           "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=nPlPOmX1aME", "target":"_blank" } }]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[{ "e":"a", "t":"[備份] Sublime Text 3、2 安裝設定", "attr":{ "href":"/?k=mac&id=Backup-SublimeText", "target":"_blank" } }]
-        }
-      ]
-    },
-    {
-      "e":"ul",
-      "s":[
+        },
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"安裝指令參考 " },
             { "e":"a", "t":"https://gist.github.com/barnes7td/3804534", "attr":{ "href":"https://gist.github.com/barnes7td/3804534", "target":"_blank" } }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"a", "t":"https://stackoverflow.com/questions/25152711/subl-command-not-working-command-not-found", "attr":{ "href":"https://stackoverflow.com/questions/25152711/subl-command-not-working-command-not-found", "target":"_blank" } }
           ]
         }
       ]
