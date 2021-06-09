@@ -39,21 +39,9 @@
         { "e":"span", "t":"，而這些 Marker 用來代表著是多數 Marker 集合。如下圖 1 是 zoom 為 16 時的狀況圖，地圖上分別有 A、B 以及 C 三個點，而圖 2 代表在 zoom 為 13 時，因為地圖視角拉遠了，所以造成 A 與 B 互相太靠近，所以必須隱藏 B 只顯示 A，所以作法如圖 3，產生一個 集合 Marker 放置在 A 的位置，並且記錄著數量為 2。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"zoom 為 16 時的狀況圖，地圖上分別有 A、B 以及 C 三個點" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/9190dca50dbba113005516d63bda5275.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"地圖視角 zoom 為 13 時，因為視角拉遠所以造成 A 與 B 互相太靠近" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/0439d416ff167cd08d4157d335b57b4d.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"因靠太近，故隱藏 B 只顯示 A，產生一個 集合 Marker 放置在 A 的位置，並且記錄著數量為 2" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/32743d52503d5fb6ba8442f6bf18a4b6.png" } }]
-    },
+    { "e":"img", "alt":"zoom 為 16 時的狀況圖，地圖上分別有 A、B 以及 C 三個點", "src":"https://www.ioa.tw/img/9190dca50dbba113005516d63bda5275.png" },
+    { "e":"img", "alt":"地圖視角 zoom 為 13 時，因為視角拉遠所以造成 A 與 B 互相太靠近", "src":"https://www.ioa.tw/img/0439d416ff167cd08d4157d335b57b4d.png" },
+    { "e":"img", "alt":"因靠太近，故隱藏 B 只顯示 A，產生一個 集合 Marker 放置在 A 的位置，並且記錄著數量為 2", "src":"https://www.ioa.tw/img/32743d52503d5fb6ba8442f6bf18a4b6.png" },
     {
       "e":"p",
       "s":[

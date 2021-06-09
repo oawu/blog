@@ -12,7 +12,7 @@
       "e": "p",
       "s": [
         { "e": "span", "t": "我叫吳政賢，就叫我 OA 吧！我是個愛寫程式又愛鄉土藝術活動的工程師，也是個道地的雲林北港囝仔。因為" },
-        { "e": "a", "t": "大學", "attr": { "href": "https://www.tku.edu.tw/", "target": "_blank" } },
+        { "e": "a", "t": "大學", "href": "https://www.tku.edu.tw/" },
         { "e": "span", "t": "時主修資訊工程，所以踏進了資訊這個行業，這個領域內我很喜歡嘗試的做些創新、有趣、實用的程式作品，對我來說程式設計是種可以創作出不同的玩具與工具！" }
       ]
     },
@@ -31,13 +31,13 @@
       "e": "p",
       "s": [
         { "e": "span", "t": "資源取之於網路，所以要回饋於網路。我習慣分享程式作品與原始碼，將目前有紀錄保存的作品盡可能的都放至 " },
-        { "e": "a", "t": "GitHub", "attr": { "href": "https://github.com/comdan66", "target": "_blank" } },
+        { "e": "a", "t": "GitHub", "href": "https://github.com/comdan66" },
         { "e": "span", "t": " 上，而近期也在" },
-        { "e": "a", "t": "臉書", "attr": { "href": "https://www.facebook.com/LiveCoding.tw", "target": "_blank" } },
+        { "e": "a", "t": "臉書", "href": "https://www.facebook.com/LiveCoding.tw" },
         { "e": "span", "t": "與 " },
-        { "e": "a", "t": "Youtube", "attr": { "href": "https://www.youtube.com/c/LiveCodingTw", "target": "_blank" } },
+        { "e": "a", "t": "Youtube", "href": "https://www.youtube.com/c/LiveCodingTw" },
         { "e": "span", "t": " 上經營 " },
-        { "e": "a", "t": "LiveCoding.tw", "attr": { "href": "https://www.livecoding.tw/", "target": "_blank" } },
+        { "e": "a", "t": "LiveCoding.tw", "href": "https://www.livecoding.tw/" },
         { "e": "span", "t": " 線上直播寫程式，歡迎大家來粉絲頁按讚與訂閱 Yotutbe 頻道喔！最後，若文章或作品有榮幸被引用的話，希望您可以來信或臉書告知一下讓我有小小的喜悅與驚喜喔。" }
       ]
     }

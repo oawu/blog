@@ -9,11 +9,7 @@
       "t":"目前已將 Live Demo 關閉並且不維護囉，請大家先參考 GitHub 的原始碼吧！"
     },
     { "e":"p", "t":"這是項個人開發的工具，而且需要前後端配合一起弄的作品，主要目的是撈出藉由不規則多邊形範圍內的點座標。" },
-    {
-      "e":"figure",
-      "attr":{ "alt":"Demo 動畫" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a7e1f952d0d539bd4a245f7e2aa524ea.gif" } }]
-    },
+    { "e":"img", "alt":"Demo 動畫", "src":"https://www.ioa.tw/img/a7e1f952d0d539bd4a245f7e2aa524ea.gif" },
     { "e":"h2", "t":"前端" },
     {
       "e":"p",

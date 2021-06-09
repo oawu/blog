@@ -17,11 +17,7 @@
         { "e":"span", "t":"實作出我理想中的作品，並且可以以封裝成 .jar 的方式與朋友分享。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"用 Java 實作小畫家" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/11b570ee420c1486860a4c997797931f.jpg" } }]
-    }
+    { "e":"img", "alt":"用 Java 實作小畫家", "src":"https://www.ioa.tw/img/11b570ee420c1486860a4c997797931f.jpg" }
   ],
   "r":[
     {

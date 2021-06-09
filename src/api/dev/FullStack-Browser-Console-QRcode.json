@@ -131,31 +131,11 @@
         }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"程式碼在 js/browser_console_qrcode.js 內，程式碼有簡易註解，主要利用 Console.log 的方式去印出，其中使用基本 css 語法修飾，會使用 text-shadow 主要是要掩飾換行的行距空白，line-height 不能設太小，所以利用 text-shadow 掩飾空白處" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/2af96cf25416d0cd9d8e97ee5e3c5c12.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"瀏覽器 Console 介面內的 QR Code 樣式" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/cb9975e1894342fd8303f71cfe178947.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"滑鼠按右鍵，開啟 「檢視」 後選擇 「Console」，即可看到 QR Code" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/7227ab3ce5daa206b342802190d586a0.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"若使用 Google Chrome 則可以使用 Chrome 快捷鍵，Mac Chrome 電腦鍵盤快捷鍵 Cmd + Option + j，Windows、Linux Chrome 電腦鍵盤快捷鍵 Ctrl + Shift + j" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/f80bad8840b029a293310623dceac0e9.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"若各位大大覺得有趣或不錯的話，請幫我在 GitHub 上按個喜歡吧！若想引用的話，按喜歡後全部授權給你喲" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/422dc9974d1ce70c858c998dbe8468b8.png" } }]
-    }
+    { "e":"img", "alt":"程式碼在 js/browser_console_qrcode.js 內，程式碼有簡易註解，主要利用 Console.log 的方式去印出，其中使用基本 css 語法修飾，會使用 text-shadow 主要是要掩飾換行的行距空白，line-height 不能設太小，所以利用 text-shadow 掩飾空白處", "src":"https://www.ioa.tw/img/2af96cf25416d0cd9d8e97ee5e3c5c12.png" },
+    { "e":"img", "alt":"瀏覽器 Console 介面內的 QR Code 樣式", "src":"https://www.ioa.tw/img/cb9975e1894342fd8303f71cfe178947.png" },
+    { "e":"img", "alt":"滑鼠按右鍵，開啟 「檢視」 後選擇 「Console」，即可看到 QR Code", "src":"https://www.ioa.tw/img/7227ab3ce5daa206b342802190d586a0.png" },
+    { "e":"img", "alt":"若使用 Google Chrome 則可以使用 Chrome 快捷鍵，Mac Chrome 電腦鍵盤快捷鍵 Cmd + Option + j，Windows、Linux Chrome 電腦鍵盤快捷鍵 Ctrl + Shift + j", "src":"https://www.ioa.tw/img/f80bad8840b029a293310623dceac0e9.png" },
+    { "e":"img", "alt":"若各位大大覺得有趣或不錯的話，請幫我在 GitHub 上按個喜歡吧！若想引用的話，按喜歡後全部授權給你喲", "src":"https://www.ioa.tw/img/422dc9974d1ce70c858c998dbe8468b8.png" }
   ],
   "r":[
     {

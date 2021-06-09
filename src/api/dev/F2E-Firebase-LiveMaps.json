@@ -32,9 +32,9 @@
     },
     { "e":"p", "t":"基本的 Google Maps JavaScript API 的應用這邊就不多介紹了，這次的練習主要著重在 Firebase 的應用，藉由 Hosting 來取得 Https 的協定，然後在建立起專案，並且利用 Realtime Database 來實作即時性的功能。" },
     {
-      "e":"figure",
-      "attr":{ "alt":"LiveMaps 是一個即時地圖聊天室，讓你在世界上任何位置都可以發出自己的感想動態" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/20433570f9c35704cb565f793a53afda.gif" } }]
+      "e":"img",
+      "alt":"LiveMaps 是一個即時地圖聊天室，讓你在世界上任何位置都可以發出自己的感想動態",
+      "src":"https://www.ioa.tw/img/20433570f9c35704cb565f793a53afda.gif"
     },
     {
       "e":"p",

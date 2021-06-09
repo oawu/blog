@@ -48,7 +48,10 @@ Vue.component('el', {
     }
   },
   template: El.render(`
-    component => *if=el.e=='pre'   *bind=attr   :is=el.e
+    figure => *if=el.e=='img'   *bind=attr
+      img => *bind=attr
+
+    pre => *else-if=el.e=='pre'   *bind=attr   :is=el.e
       label => *if=el.copy   @click=copy(el.e, el.copy)
       div => *if=el.s
         el => *for=(el, i) in el.s   :key=i   :el=el

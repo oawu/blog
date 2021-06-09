@@ -17,9 +17,9 @@
     },
     { "e":"p", "t":"此次的合作開發是採用前後端分離的做法，這次協助的部分主要是針對前端的版型、JavaScript 做加強，版型的部分我依然採用白沙屯 GPS 系統、大庄媽 GPS 系統的樣式做修改，加強了右上角的下拉選單，可以檢視路關、選擇各個 GPS 點的功能！" },
     {
-      "e":"figure",
-      "attr":{ "alt":"選擇多個 GPS 點" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/42b31e6f432ec9b8846acd8d7d8a0dbc.jpg" } }]
+      "e":"img",
+      "alt":"選擇多個 GPS 點",
+      "src":"https://www.ioa.tw/img/42b31e6f432ec9b8846acd8d7d8a0dbc.jpg"
     }
   ],
   "r":[

@@ -23,16 +23,8 @@
       "e":"p",
       "t":"首先建立要用的 HTML 結構，基本上就是 span 代表一個位數，裡面的 i 代表 10 個數字。"
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"基本上就是 span 代表一個位數，裡面的 i 代表 10 個數字" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/2801c06c35f663ef0c30af54e3296a88.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"瀏覽器畫面" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/375a359957fa2610ba8ae738f43c1c1c.png" } }]
-    },
+    { "e":"img", "alt":"基本上就是 span 代表一個位數，裡面的 i 代表 10 個數字", "src":"https://www.ioa.tw/img/2801c06c35f663ef0c30af54e3296a88.png" },
+    { "e":"img", "alt":"瀏覽器畫面", "src":"https://www.ioa.tw/img/375a359957fa2610ba8ae738f43c1c1c.png" },
     {
       "e":"p",
       "s":[
@@ -43,16 +35,8 @@
         { "e":"span", "t":"，此時看到瀏覽器畫面 span 內的 i 都疊在一起了。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"設定 scss(css)，將 span 給予 position: relative; 的屬性，然後針對子元素 i 設定 position: absolute" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/014d67cb0d6e860623e6411bd907fd7d.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"瀏覽器畫面 span 內的 i 都疊在一起了" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/81e99970fb8d9146573f67f6621992b3.png" } }]
-    },
+    { "e":"img", "alt":"設定 scss(css)，將 span 給予 position: relative; 的屬性，然後針對子元素 i 設定 position: absolute", "src":"https://www.ioa.tw/img/014d67cb0d6e860623e6411bd907fd7d.png" },
+    { "e":"img", "alt":"瀏覽器畫面 span 內的 i 都疊在一起了", "src":"https://www.ioa.tw/img/81e99970fb8d9146573f67f6621992b3.png" },
     {
       "e":"p",
       "s":[
@@ -65,35 +49,15 @@
         { "e":"span", "t":" 的位置。瀏覽器使用開發者檢視，可以發現每個 i 都因為 for 迴圈加上使用 calc，所以有不同的設定值。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"利用 scss 的 for 迴圈，針對 nth-child 設定 top 的位置" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/3493aaa5d8bb32e5fe24a0672d06d262.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"瀏覽器畫面" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/9824199dce9cf2b03a36c83b6d1badc7.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"使用開發者檢視，可以發現每個 i 都因為 for 迴圈加上使用 calc，所以有不同的設定值" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/4ae48229b9aba63b55e048019d4b9c78.png" } }]
-    },
+    { "e":"img", "alt":"利用 scss 的 for 迴圈，針對 nth-child 設定 top 的位置", "src":"https://www.ioa.tw/img/3493aaa5d8bb32e5fe24a0672d06d262.png" },
+    { "e":"img", "alt":"瀏覽器畫面", "src":"https://www.ioa.tw/img/9824199dce9cf2b03a36c83b6d1badc7.png" },
+    { "e":"img", "alt":"使用開發者檢視，可以發現每個 i 都因為 for 迴圈加上使用 calc，所以有不同的設定值", "src":"https://www.ioa.tw/img/4ae48229b9aba63b55e048019d4b9c78.png" },
     {
       "e":"p",
       "t":"接著改變一下 HTML，將每個 span 加上 n5 的 class，並且修改 scss，將原本的 for 迴圈移除，改在 span 設定，使用雙層迴圈，分別針對 n0~n9 去設定 i 的不同位置。開啟瀏覽器，可以發現 i 被移到指定的 5。"
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"接著改變一下 HTML，將每個 span 加上 n5 的 class，並且修改 scss，將原本的 for 迴圈移除，改在 span 設定，使用雙層迴圈，分別針對 n0~n9 去設定 i 的不同位置" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/013a8babf4a02fe47258e221af01a503.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"開啟瀏覽器，可以發現 i 被移到指定的 5" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/5ad5cced6346490c45727f7697db085b.png" } }]
-    },
+    { "e":"img", "alt":"接著改變一下 HTML，將每個 span 加上 n5 的 class，並且修改 scss，將原本的 for 迴圈移除，改在 span 設定，使用雙層迴圈，分別針對 n0~n9 去設定 i 的不同位置", "src":"https://www.ioa.tw/img/013a8babf4a02fe47258e221af01a503.png" },
+    { "e":"img", "alt":"開啟瀏覽器，可以發現 i 被移到指定的 5", "src":"https://www.ioa.tw/img/5ad5cced6346490c45727f7697db085b.png" },
     {
       "e":"p",
       "s":[
@@ -102,35 +66,15 @@
         { "e":"span", "t":" 來取得指定的 span。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"使用 JavaScript 輔助，使用簡單的數學運算(/、%、pow)，切割出各個位數，並且利用 jQuery 的 eq 來取得指定的 span" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/5e32728d07ec829704fab4fb4ba1715b.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"瀏覽器畫面，可以看到已經可以跑到指定的位置了" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a4e3096f78b39cbcd0af7acc5f407c54.png" } }]
-    },
+    { "e":"img", "alt":"使用 JavaScript 輔助，使用簡單的數學運算(/、%、pow)，切割出各個位數，並且利用 jQuery 的 eq 來取得指定的 span", "src":"https://www.ioa.tw/img/5e32728d07ec829704fab4fb4ba1715b.png" },
+    { "e":"img", "alt":"瀏覽器畫面，可以看到已經可以跑到指定的位置了", "src":"https://www.ioa.tw/img/a4e3096f78b39cbcd0af7acc5f407c54.png" },
     {
       "e":"p",
       "t":"加上個 input，並且修改一下 JavaScript，讓使用者輸入數字時改變計數器。"
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"加上個 input，並且修改一下 JavaScript，讓使用者輸入數字時改變計數器" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/155ad1d26642e4ba9c0e63266ae03667.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"修改一下 JavaScript，讓使用者輸入數字時改變計數器" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/7e52aa0de7da600ff7cc78ee2bf961e9.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"瀏覽器畫面，可以讓使用者輸入數字時改變計數器" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a1e57c86c9a5e066e9ee2415f9142e60.png" } }]
-    },
+    { "e":"img", "alt":"加上個 input，並且修改一下 JavaScript，讓使用者輸入數字時改變計數器", "src":"https://www.ioa.tw/img/155ad1d26642e4ba9c0e63266ae03667.png" },
+    { "e":"img", "alt":"修改一下 JavaScript，讓使用者輸入數字時改變計數器", "src":"https://www.ioa.tw/img/7e52aa0de7da600ff7cc78ee2bf961e9.png" },
+    { "e":"img", "alt":"瀏覽器畫面，可以讓使用者輸入數字時改變計數器", "src":"https://www.ioa.tw/img/a1e57c86c9a5e066e9ee2415f9142e60.png" },
     {
       "e":"p",
       "s":[
@@ -139,21 +83,9 @@
         { "e":"span", "t":"，如此就可以將不再位置內的 i 隱藏囉！同時 i 加上 transition 優化 top 移動的效果！" }
       ]
     },
-    {
-      "e":"figure",
-      "attr": { "alt":"最後在 span 上加入 overflow: hidden;，如此就可以將不再位置內的 i 隱藏囉" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/98b84e653734213eed5d74fa27f1c5a6.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"隱藏其他的數字" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/1e2167c0a3602c58619e834128ee8c5b.png" } }]
-    },
-    {
-      "e":"figure",
-      "attr": { "alt":"加上 transition 優化 top 移動的效果" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a1e13883ff3d61d48914c7ae70c27955.png" } }]
-    }
+    { "e":"img", "alt":"最後在 span 上加入 overflow: hidden;，如此就可以將不再位置內的 i 隱藏囉", "src":"https://www.ioa.tw/img/98b84e653734213eed5d74fa27f1c5a6.png" },
+    { "e":"img", "alt":"隱藏其他的數字", "src":"https://www.ioa.tw/img/1e2167c0a3602c58619e834128ee8c5b.png" },
+    { "e":"img", "alt":"加上 transition 優化 top 移動的效果", "src":"https://www.ioa.tw/img/a1e13883ff3d61d48914c7ae70c27955.png" }
   ],
   "r":[
     {

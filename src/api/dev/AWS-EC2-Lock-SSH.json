@@ -128,12 +128,7 @@
         { "e":"span", "t":"，那就把腦筋動到 Volume 上吧！" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/956a3006c41b6528e0213c160ef53fd7.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/956a3006c41b6528e0213c160ef53fd7.jpg" },
     { "e":"h2", "t":"複製 Volume" },
     {
       "e":"p",
@@ -150,12 +145,7 @@
         { "e":"code", "t":"vol-xxx" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/84e4057829dd65edc3f322a6c8f48b52.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/84e4057829dd65edc3f322a6c8f48b52.jpg" },
     {
       "e":"p",
       "s":[
@@ -164,12 +154,7 @@
         { "e":"span", "t":" ID 後會跳至 Volumes 頁面，檢視其細節，如下圖可以得知當初我並未對硬碟座加密，所以看來是有機會的可以讀出內容" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/b76e7b18a5b5264e532654a427796284.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/b76e7b18a5b5264e532654a427796284.jpg" },
     {
       "e":"p",
       "s":[
@@ -191,19 +176,9 @@
         { "e":"b",    "t":"快照" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/5a0efe88aacd66ff2ca651ead106e2cb.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/5a0efe88aacd66ff2ca651ead106e2cb.jpg" },
     { "e":"p", "t":"然後點擊去 Snapshots 頁面上看所產生的 Volume Snapshot" },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/8822751f9f380176300a16bc129ff56a.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/8822751f9f380176300a16bc129ff56a.jpg" },
     {
       "e":"p",
       "s":[
@@ -213,12 +188,7 @@
         { "e":"code", "t":"snap-xxx" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/9a559abd274fddbc029a80cbf8313cb1.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/9a559abd274fddbc029a80cbf8313cb1.jpg" },
     {
       "e":"p",
       "s":[
@@ -229,12 +199,7 @@
         { "e":"span", "t":"，建立一份與原本一樣的 Volume" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/87fb064f0c419fa5ccc6a031199e0556.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/87fb064f0c419fa5ccc6a031199e0556.jpg" },
     {
       "e":"p",
       "s":[
@@ -242,12 +207,7 @@
         { "e":"code", "t":"vol-ooo" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/8974810b521f17964c83b34c27fef917.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/8974810b521f17964c83b34c27fef917.jpg" },
     { "e":"p", "t":"以上流程就是 Volume1 ➜ Snapshot ➜ Volume2，所以 Volume1 內容 == Volume2 內容" },
     { "e":"h2", "t":"掛載 Volume 至新的 EC2" },
     {
@@ -272,12 +232,7 @@
         { "e":"code", "t":"i-ooo" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/63bb34e4f2abfbe80cb08b8a76de7748.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/63bb34e4f2abfbe80cb08b8a76de7748.jpg" },
     { "e":"p", "t":"當然新的 EC2 一開始會有一顆預載的 8G 硬碟，所以回到 Volumes 頁面看，也會看到多出來的那顆硬碟" },
     {
       "e":"p",
@@ -294,12 +249,7 @@
         { "e":"code", "t":"vol-aaa" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/bd66351452d383269680ed62f9284024.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/bd66351452d383269680ed62f9284024.jpg" },
     {
       "e":"p",
       "s":[
@@ -313,12 +263,7 @@
         { "e":"code", "t":"Attach Volume" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/178347c9c8e54834407d60fb5c1531ab.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/178347c9c8e54834407d60fb5c1531ab.jpg" },
     {
       "e":"p",
       "s":[
@@ -334,12 +279,7 @@
         { "e":"b",    "t":"Reboot" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/de61146933c6d24413418c0dbd45063b.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/de61146933c6d24413418c0dbd45063b.jpg" },
     { "e":"h2", "t":"讀取掛載的 Volume" },
     {
       "e":"p",
@@ -350,18 +290,8 @@
         { "e":"code", "t":"sudo -s" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/1a395e5e475863e5e2df8311185fbfe2.jpg" }
-      ]
-    },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/97ee128e811a606210f6de6e74589ded.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/1a395e5e475863e5e2df8311185fbfe2.jpg" },
+    { "e":"img", "src":"https://www.ioa.tw/img/97ee128e811a606210f6de6e74589ded.jpg" },
     {
       "e":"p",
       "s":[
@@ -406,12 +336,7 @@
         { "e":"span", "t":"，所以掛載多顆硬碟時要注意一下才不會認錯顆" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/40aad4083aed42b1c1dd2fbc5a8ba997.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/40aad4083aed42b1c1dd2fbc5a8ba997.jpg" },
     {
       "e":"p",
       "s":[
@@ -424,12 +349,7 @@
         { "e":"span", "t":" 目錄" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/29477d6dda0da80a60f82440da6efb27.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/29477d6dda0da80a60f82440da6efb27.jpg" },
     {
       "e":"p",
       "s":[
@@ -465,12 +385,7 @@
         { "e":"span", "t":" 目錄，那就代表完成了" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/867377451487ea7c8898355902e7f93c.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/867377451487ea7c8898355902e7f93c.jpg" },
     {
       "e":"p",
       "s":[
@@ -487,12 +402,7 @@
         { "e":"span", "t":" 目錄內的內容，完全的可以讀出資料就代表完成了！！！！😂" }
       ]
     },
-    {
-      "e":"figure",
-      "s":[
-        { "e":"img", "src":"https://www.ioa.tw/img/ebff779e93b2015131c9ad451d3be3f0.jpg" }
-      ]
-    },
+    { "e":"img", "src":"https://www.ioa.tw/img/ebff779e93b2015131c9ad451d3be3f0.jpg" },
     { "e":"h2", "t":"結論" },
     { "e":"p", "t":"上述的過程是我自己的處理經驗流程，但是事後經由我自己的不斷再次嘗試，其實有更好的處理方式，方法總結如下：" },
     {

@@ -22,9 +22,9 @@
       ]
     },
     {
-      "e":"figure",
-      "attr":{ "alt":"各種 Material UI 元素" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/974ac5e64379b2a5379aca8e72223e9e.jpg" } }]
+      "e":"img",
+      "alt":"各種 Material UI 元素",
+      "src":"https://www.ioa.tw/img/974ac5e64379b2a5379aca8e72223e9e.jpg"
     },
     { "e":"h2", "t":"以下是基本的介紹：" },
     {

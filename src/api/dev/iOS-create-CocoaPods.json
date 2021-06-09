@@ -328,7 +328,7 @@
                       { "e":"code", "t":"pod trunk info OAPodTest" },
                       { "e":"span", "t":" 檢查是否有存在以及其線上相關版號資訊！" }
                     ] },
-                    { "e":"figure", "attr":{ "alt":"成功資訊" }, "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/3593d8b07ff9e731583a8387fc8a29cc.png" } }] }
+                    { "e":"img", "alt":"成功資訊", "src":"https://www.ioa.tw/img/3593d8b07ff9e731583a8387fc8a29cc.png" }
                   ]
                 }
               ]

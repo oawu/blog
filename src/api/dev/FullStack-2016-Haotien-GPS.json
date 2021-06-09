@@ -23,20 +23,12 @@
         { "e":"span", "t":"）。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"使用 JavaScript 去取得 Google 文件上的路徑資訊" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a093510f2e9b485005247921b6460484.jpg" } }]
-    },
+    { "e":"img", "alt":"使用 JavaScript 去取得 Google 文件上的路徑資訊", "src":"https://www.ioa.tw/img/a093510f2e9b485005247921b6460484.jpg" },
     {
       "e":"p",
       "t":"而 GPS 訊號端則是使用 楊協達 先生所撰寫的 Android App 來取得每個點的位置，而 App 再使用 Sheets API POST 上去記錄每個點，如此一來 Google 文件上就可以紀錄著所有行經路線。接著前端 JavaScript 在使用 Sheets JavaScript API 去將文件上的資料以 Json 格式取下來，並且做陣列處理。"
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"Google 文件上的路徑紀錄" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/9328f937892b3555707a60047a45df18.jpg" } }]
-    },
+    { "e":"img", "alt":"Google 文件上的路徑紀錄", "src":"https://www.ioa.tw/img/9328f937892b3555707a60047a45df18.jpg" },
     {
       "e":"p",
       "s":[

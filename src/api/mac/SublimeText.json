@@ -40,17 +40,19 @@
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" },
-            { "e":"br" },
-            { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/1.jpg" }] }
+            { "e":"p", "s": [
+              { "e":"span", "t":"畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }
+            ] },
+            { "e":"img", "src":"/img/mac-sublimeText/1.jpg" }
           ]
         },
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"Swift.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" },
-            { "e":"br" },
-            { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/2.jpg" }] }
+            { "e":"p", "s": [
+              { "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"Swift.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }
+            ] },
+            { "e":"img", "src":"/img/mac-sublimeText/2.jpg" }
           ]
         },
         {
@@ -84,7 +86,11 @@
         },
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Default (OSX).sublime-keymap" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/4.jpg" }] }]
+          "s":[
+            {"e":"p", "s": [
+              { "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Default (OSX).sublime-keymap" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內即可，如下圖：" }
+            ]},
+            { "e":"img", "src":"/img/mac-sublimeText/4.jpg" }]
         }
       ]
     },
@@ -102,7 +108,12 @@
                 { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.zip", "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.zip" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"將 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 解開壓縮，解開後會是一個名為 " }, { "e":"code", "t":"OA Theme" }, { "e":"span", "t":" 目錄" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"將剛剛解開壓縮的 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 目錄複製至 " }, { "e":"code", "t":"Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/5.png" }] }] }
+                { "e":"li", "s":[
+                  {"e": "p", "s": [
+                    { "e":"span", "t":"將剛剛解開壓縮的 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 目錄複製至 " }, { "e":"code", "t":"Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }
+                  ]},
+                  { "e":"img", "src":"/img/mac-sublimeText/5.png" }
+                ] }
               ]
             }
           ]
@@ -117,7 +128,10 @@
                 { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.sublime-package", "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.sublime-package" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"剛下載的檔案名稱可能為 " }, { "e":"code", "t":"OA+Theme.sublime-package" }, { "e":"span", "t":"，請先將他更名為 " }, { "e":"code", "t":"OA Theme.sublime-package", "copy":"OA Theme.sublime-package" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"OA Theme.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/6.png" }] }] }
+                { "e":"li", "s":[
+                  {"e": "p", "s": [{ "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"OA Theme.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }]},
+                  { "e":"img", "src":"/img/mac-sublimeText/6.png" }
+                ] }
               ]
             }
           ]
@@ -223,7 +237,10 @@
         },
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內，將原本的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 取代" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/3.jpg" }] }]
+          "s":[
+            {"e": "p", "s": [{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內，將原本的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 取代" }, { "e":"span", "t":" 目錄內即可，如下圖：" }]},
+            { "e":"img", "src":"/img/mac-sublimeText/3.jpg" }
+          ]
         }
       ]
     },

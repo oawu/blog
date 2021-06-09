@@ -532,7 +532,7 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"lines xcode" },
+      "class":"lines xcode",
       "copy": "Api.get.path { json in\n    // 取得資料後要做的事\n}\nApi.post.location { json in\n    // 完成 Post 後要做的事\n}",
       "s":[
         {

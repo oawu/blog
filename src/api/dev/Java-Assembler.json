@@ -21,11 +21,7 @@
         { "e":"span", "t":" 介面更容易表現出理想的操作介面，更可以讓使用者更加方便轉換組合語言。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"Java Assembler" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/fd3b42f24e5b8e9a406f9a270f872137.jpg" } }]
-    }
+    { "e":"img", "alt":"Java Assembler", "src":"https://www.ioa.tw/img/fd3b42f24e5b8e9a406f9a270f872137.jpg" }
   ],
   "r":[
     {

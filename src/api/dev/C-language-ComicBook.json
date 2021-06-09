@@ -24,16 +24,8 @@
         { "e":"span", "t":" 方式開啟。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"此實作是使用 C語言 Console 界面繪出模擬 BBS 版型" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/d8344f56652ed6cc3e94b74ebedc0e0e.jpg" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"並且利用 wget 將知名網站 8comic 上的原始碼轉譯出漫畫並下載，簡單說就是使用 C語言 製作一個爬蟲，並且以 Console 的方式模擬 BBS 介面的排版" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/a2258bd047835755a9186c03dc1666d9.jpg" } }]
-    },
+    { "e":"img", "alt":"此實作是使用 C語言 Console 界面繪出模擬 BBS 版型", "src":"https://www.ioa.tw/img/d8344f56652ed6cc3e94b74ebedc0e0e.jpg" },
+    { "e":"img", "alt":"並且利用 wget 將知名網站 8comic 上的原始碼轉譯出漫畫並下載，簡單說就是使用 C語言 製作一個爬蟲，並且以 Console 的方式模擬 BBS 介面的排版", "src":"https://www.ioa.tw/img/a2258bd047835755a9186c03dc1666d9.jpg" },
     {
       "e":"p",
       "s":[
@@ -50,21 +42,9 @@
         { "e":"span", "t":"可以正常下載漫畫。" }
       ]
     },
-    {
-      "e":"figure",
-      "attr":{ "alt":"並且利用 wget 將知名網站 8comic 上的原始碼轉譯出漫畫並下載" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/efca6b8b52b1cadd17e49b3aeff05602.jpg" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"聲明、介紹與使用方式" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/357b25954b93e933b03cce11b3ed23b6.jpg" } }]
-    },
-    {
-      "e":"figure",
-      "attr":{ "alt":"下載完後會儲存於 Download 目錄下" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/95f4b67124260130daad6f228e749b4d.jpg" } }]
-    },
+    { "e":"img", "alt":"並且利用 wget 將知名網站 8comic 上的原始碼轉譯出漫畫並下載", "src":"https://www.ioa.tw/img/efca6b8b52b1cadd17e49b3aeff05602.jpg" },
+    { "e":"img", "alt":"聲明、介紹與使用方式", "src":"https://www.ioa.tw/img/357b25954b93e933b03cce11b3ed23b6.jpg" },
+    { "e":"img", "alt":"下載完後會儲存於 Download 目錄下", "src":"https://www.ioa.tw/img/95f4b67124260130daad6f228e749b4d.jpg" },
     {
       "e":"p",
       "s":[
