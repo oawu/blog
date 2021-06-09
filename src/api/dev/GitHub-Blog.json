@@ -5,27 +5,27 @@
   "a":[
     {
       "e":"blockquote",
-      "attr": { "class": "warning" },
+      "class": "warning",
       "t":"目前已將 Live Demo 關閉並且不維護囉，請大家先參考 GitHub 的原始碼吧！"
     },
     {
       "e":"p",
       "s":[
         { "e":"span", "t":"使用 " },
-        { "e":"a", "t":"GitHub", "attr":{ "href":"https://github.com/", "target":"_blank" } },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/" },
         { "e":"span", "t":" 架設個人 Blog 不僅可以節省伺服器空間，同時也可以使用 Markdown 語法做文章管理，坊間也有很多類似的工具 " },
-        { "e":"a", "t":"octopress", "attr":{ "href":"http://octopress.org/", "target":"_blank" } },
+        { "e":"a", "t":"octopress", "href":"http://octopress.org/" },
         { "e":"span", "t":"、" },
-        { "e":"a", "t":"pelican", "attr":{ "href":"http://www.pelican.com/", "target":"_blank" } },
+        { "e":"a", "t":"pelican", "href":"http://www.pelican.com/" },
         { "e":"span", "t":"，但是最後決定自己做一套使用 " },
-        { "e":"a", "t":"PHP", "attr":{ "href":"http://www.pelican.com/", "target":"_blank" } },
+        { "e":"a", "t":"PHP", "href":"http://www.pelican.com/" },
         { "e":"span", "t":"、以及 command line 建置出個人的部落格！" }
       ]
     },
     { "e":"p", "t":"看到這標題我想板上很多大大們可能會覺的市面上已經很多資源了，沒想到還有人自己刻，而我也是寫完分享給朋友，才知道已經有人做過，不過既然刻了，就分享一下！" },
     {
       "e":"p",
-      "s":[ { "e":"span", "t":"首先，目的是為了利用 GitHub 所提供的 " }, { "e":"a", "t":"GitHub.io", "attr":{ "href":"https://pages.github.com/", "target":"_blank" } }, { "e":"span", "t":" 以及 Branch gh-pages 建置出靜態的網站，所以必須利用 php 去將 .md 的 Markdown 文件轉成 .html 的靜態文件，並且加入 " }, { "e":"b", "t":"標簽" },
+      "s":[ { "e":"span", "t":"首先，目的是為了利用 GitHub 所提供的 " }, { "e":"a", "t":"GitHub.io", "href":"https://pages.github.com/" }, { "e":"span", "t":" 以及 Branch gh-pages 建置出靜態的網站，所以必須利用 php 去將 .md 的 Markdown 文件轉成 .html 的靜態文件，並且加入 " }, { "e":"b", "t":"標簽" },
         { "e":"span", "t":"、" },
         { "e":"b", "t":"分頁" },
         { "e":"span", "t":" 等功能！" }
@@ -41,7 +41,7 @@
         { "e":"span", "t":" function，可以使用 " },
         { "e":"code", "t":"templates/" },
         { "e":"span", "t":" 內的版型匯出 html，最後也會產生 sitmap、robots.txt 加強 SEO 搜尋排行曝光度。若有用過 " },
-        { "e":"a", "t":"CodeIgniter", "attr":{ "href":"https://codeigniter.org.tw/", "target":"_blank" } },
+        { "e":"a", "t":"CodeIgniter", "href":"https://codeigniter.org.tw/" },
         { "e":"span", "t":" 的話，應該就會很熟悉 load_view 的用法！" }
       ]
     },
@@ -49,7 +49,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"如果想要將他變成自己的 Blog 的話，在 GitHub 上有一個名為 " },
-        { "e":"a", "t":"pure", "attr":{ "href":"https://github.com/comdan66/blog/tree/pure", "target":"_blank" } },
+        { "e":"a", "t":"pure", "href":"https://github.com/comdan66/blog/tree/pure" },
         { "e":"span", "t":" 的 Branch，裡面就是一個乾淨的版本，可以直接修改 " },
         { "e":"code", "t":"config/" },
         { "e":"span", "t":" 內的設定檔，不過記得修改完後，要再用 " },
@@ -63,7 +63,7 @@
     },
     {
       "e":"div",
-      "attr": { "class":"iframe" },
+      "class":"iframe",
       "s": [
         {
           "e":"iframe",
@@ -71,8 +71,7 @@
             "allowfullscreen":"",
             "frameborder":"0",
             "src":"https://www.youtube.com/embed/pUBWKUEb7Do"
-          },
-          "s":[]
+          }
         }
       ]
     }
@@ -81,9 +80,9 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/blog", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "attr":{ "href":"https://www.youtube.com/watch?v=pUBWKUEb7Do", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1419438051.A.B58.html", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/blog" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "href":"https://www.youtube.com/watch?v=pUBWKUEb7Do" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1419438051.A.B58.html" }] }
       ]
     }
   ],

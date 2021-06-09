@@ -237,11 +237,13 @@ body {
   display: inline-block;
   width: 100%;
   margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
   + %-block {
     margin-top: 18px;
   }
 }
-header {
+#main header {
   @extend %-h234;
   
   padding-bottom: 28px;
@@ -287,7 +289,7 @@ section {
     margin: 0;
     line-height: 1.2;
     &:not(:first-child) {
-      margin-top: 52px;
+      margin-top: 72px;
     }
     &:first-child {
       margin-top: 20px;
@@ -297,12 +299,18 @@ section {
     // @include range-width(0, 350px + 1px) {
     //   font-size: 22px;
     // };
+    + h2:not(:first-child) {
+      margin-top: 48px;
+    }
+    + h3:not(:first-child) {
+      margin-top: 32px;
+    }
   }
   h3 {
     @extend %-h234;
     margin: 0;
     &:not(:first-child) {
-      margin-top: 32px;
+      margin-top: 52px;
     }
     // font-weight: bold;
   }
@@ -325,7 +333,11 @@ section {
     @include border-radius(3px);
 
     code {
-      background-color: var(--ui-color-opaqueSeparator);
+      // color: white;
+      background-color: var(--ui-color-codeBlockquoteBackground);
+      &:after {
+        color: var(--ui-color-codeCopyBlockquoteColor);
+      }
     }
     
     &:after {
@@ -375,28 +387,27 @@ section {
     display: inline-block;
     width: 100%;
     margin: 0;
-    padding: 16px 8px;
+    padding: 20px;
     font-family: Hack, Content-font, Roboto, sans-serif;
     
-    word-break: normal;
-    white-space: pre;
-    word-spacing: normal;
-    overflow: auto;
     @include border-radius(3px);
-
-    label {
+    > label {
       position: absolute;
       right: 0;
       top: 0;
+
       z-index: 20;
+
+      display: inline-block;
       width: 36px;
       height: 28px;
       line-height: 28px;
-      text-align: center;
-      cursor: pointer;
-      background-color: rgba(120, 120, 120, .5);
-      font-size: 16px;
+
       color: white;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      background-color: rgba(120, 120, 120, .5);
       
       @include opacity(.8);
       @include transition(opacity .3s);
@@ -412,15 +423,49 @@ section {
       }
     }
 
-    div {
+    > div {
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      
+      display: block;
+      word-break: normal;
+      white-space: pre;
+      word-spacing: normal;
+      overflow-x: auto;
+
+      font-size: small;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, .3);
+        @include border-radius(4px);  
+      }
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        height: 9px;
+      }
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 24px + 26px - 8px;
+        height: 100%;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, .05);
+        @include border-radius(3px);
+        @include box-shadow(0 0 4px 1px rgba(0, 0, 0, .3));
+      }
+    }
+
+    > div div {
       $h: 22px;
       z-index: 5;
       position: relative;
       display: block;
-      font-size: small;
-      // height: $h;
       line-height: $h;
-      padding-left: 12px;
       counter-increment: line;
       @include border-radius(2px);
       @include transition(background-color .3s);
@@ -431,134 +476,74 @@ section {
         top: 0;
         display: inline-block;
 
-        width: 26px;
+        width: 32px;
         height: $h;
         line-height: $h;
         text-align: right;
-        @include transition(color .3s);
+        color: rgba(255, 255, 255, 1);
+        @include opacity(.45);
+        @include transition(opacity .3s);
         
         font-size: small;
         font-family: Content-font, Roboto, sans-serif;
       }
     }
 
-    &.code {
-      &:after {
+
+    &.lines {
+      padding-left: 8px;
+      > div:after {
         content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        display: inline-block;
-        width: 24px + 26px - 8px;
-        height: 100%;
-        z-index: 10;
-        background-color: rgba(255, 255, 255, .01);
-        @include box-shadow(0 0 4px 1px rgba(0, 0, 0, .3));
       }
-      div {
-        padding-left: 26px + 16px + 8px;
+      > div div {
+        padding-left: 26px + 16px + 12px;
+        background-color: transparent;
+        @include transition(background-color .3s);
+        
         &:before {
           content: counter(line);
         }
+        &:hover {
+          &:before {
+            @include opacity(.85);
+          }
+          background-color: rgba(255, 255, 255, .1);
+        }
       }
     }
-    &.zshrc {
-      color: rgba(255, 255, 255, 1.00);
-      background-color: rgba(36, 36, 40, 1.00);
-      .r {
-        color: rgba(255, 55, 95, 1.00);
-      }
-      .y {
-        color: rgba(255, 232, 148, 1.00);
-      }
-      .g {
-        color: rgba(125, 140, 152, 1.00);
-      }
-      .b {
-        color: rgba(100, 210, 255, 1.00);
-      }
 
-      div {
-        &:before {
-          color: rgba(110, 110, 110, 1.00);
-        }
-      }
-    }
-    &.term {
-      color: rgba(255, 255, 255, .90);
-      background-color: rgba(36, 36, 40, 1.00);
-      div {
-        &:before {
-          color: rgba(110, 110, 110, 1.00);
-        }
-        &:hover {
-          background-color: rgba(100, 100, 100, .2);
-          &:before {
-            color: rgba(255, 255, 255, 1.00);
-          }
-        }
-      }
-    }
-    &.gitconfig {
-      color: rgba(255, 255, 255, 1.00);
-      background-color: rgba(36, 36, 40, 1.00);
-      .r { color: rgba(255, 51, 92, 1.00); }
-      .y { color: rgba(255, 233, 143, 1.00); }
-      div {
-        &:before {
-          color: rgba(110, 110, 113, 1.00);
-        }
-        &:hover {
-          background-color: rgba(100, 111, 131, .2);
-          &:before {
-            color: rgba(255, 255, 255, 1.00);
-          }
-        }
-      }
-    }
-    &.language-Swift {
+    &.xcode {
       color: rgba(255, 255, 255, 1.00);
       background-color: rgba(32, 32, 37, 1.00);
 
-      .r { color: rgba(247, 67, 157, 1.00); }
-      .b { color: rgba(62, 190, 224, 1.00); }
-      .p { color: rgba(217, 186, 255, 1.00); }
-      .r2 { color: rgba(255, 96, 99, 1.00); }
-      .p2 { color: rgba(182, 126, 249, 1.00); }
-      .b2 { color: rgba(117, 225, 255, 1.00); }
-      .y { color: rgba(255, 233, 127, 1.00); }
-      .g { color: rgba(120, 133, 145, 1.00); } // gray
-      .gr { color: rgba(182, 254, 238, 1.00); } // green
-      .gr2 { color: rgba(100, 215, 192, 1.00); } // green
-      div {
-        &:before {
-          color: rgba(110, 110, 113, 1.00);
-        }
-        &:hover {
-          background-color: rgba(100, 111, 131, .2);
-          &:before {
-            color: rgba(255, 255, 255, 1.00);
-          }
-        }
-      }
+      .red1 { color: rgba(247, 67, 157, 1.00); }
+      .red2 { color: rgba(255, 96, 99, 1.00); }
+
+      .blue1 { color: rgba(62, 190, 224, 1.00); }
+      .blue2 { color: rgba(117, 225, 255, 1.00); }
+      
+      .purple1 { color: rgba(182, 126, 249, 1.00); }
+      .purple2 { color: rgba(217, 186, 255, 1.00); }
+
+      .yellow { color: rgba(255, 233, 127, 1.00); }
+      .gray { color: rgba(120, 133, 145, 1.00); } // gray
+      .green1 { color: rgba(182, 254, 238, 1.00); } // green
+      .green2 { color: rgba(100, 215, 192, 1.00); } // green
     }
-    &.php {
-      color: rgba(255, 255, 255, 1.00);
+    &:not(.xcode) {
+      color: rgba(255, 255, 255, .90);
       background-color: rgba(36, 36, 40, 1.00);
-
-      .b { color: rgba(100, 210, 255, 1.00); }
-
-      div {
-        &:before {
-          color: rgba(146, 146, 148, 1.00);
-        }
-        &:hover {
-          background-color: rgba(68, 68, 72, 1.00);
-          &:before {
-            color: rgba(166, 166, 168, 1.00);
-          }
-        }
+      .gray {
+        color: rgba(125, 140, 152, 1.00);
+      }
+      .red {
+        color: rgba(255, 55, 95, 1.00);
+      }
+      .blue {
+        color: rgba(100, 210, 255, 1.00);
+      }
+      .yellow {
+        color: rgba(255, 232, 148, 1.00);
       }
     }
   }
@@ -569,13 +554,16 @@ section {
     pre + pre {
       margin-top: 4px;
     }
-    padding-left: 36px;
 
     li + li {
       margin-top: 4px;
     }
+    padding-left: 36px;
     ul, ol {
-      padding-left: 32px;
+      padding-left: 28px;
+      ul, ol {
+        padding-left: 24px;
+      }
     }
   }
 
@@ -685,7 +673,8 @@ section {
     padding: 2px 6px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    background-color: var(--ui-color-tertiarySystemGroupedBackground);
+    color: var(--ui-color-codeColor);
+    background-color: var(--ui-color-codeBackground);
 
     font-size: small;
     font-family: Hack, Content-font, Roboto, sans-serif;
@@ -1128,10 +1117,13 @@ $menuWidth4: 250px;
 
 @include range-width(0, $mainWidth4 + 1px) {
   #app {
-    // padding-top: 24px + 44px;
+    padding-top: 24px + 44px;
     padding-bottom: 24px;
-    padding-right: 0 + 32px;
-    padding-left: 0 + 32px;
+    padding-right: 0 + 16px;
+    padding-left: 0 + 16px;
+  }
+  #main header {
+    margin-top: 12px;
   }
 
   #cover {

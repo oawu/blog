@@ -16,7 +16,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"可以先挑想安裝的 " }, { "e":"a", "t":"版本", "attr": { "href":"http://download.redis.io/releases/", "target":"_blank" } }]
+          "s":[{ "e":"span", "t":"可以先挑想安裝的 " }, { "e":"a", "t":"版本", "href":"http://download.redis.io/releases/" }]
         },
         {
           "e":"li",
@@ -67,7 +67,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"使用 " },
-            { "e":"a", "t":"phpRedisAdmin", "attr":{ "href":"https://github.com/erikdubbelboer/phpRedisAdmin", "target":"_blank" } }
+            { "e":"a", "t":"phpRedisAdmin", "href":"https://github.com/erikdubbelboer/phpRedisAdmin" }
           ]
         },
         {
@@ -131,9 +131,9 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Redis | OA's 常用設定", "attr":{ "href":"https://comdan66.github.io/configs/book/mds/mac/redis.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"補充", "attr":{ "href":"https://blog.miniasp.com/post/2018/09/26/Redis-Desktop-Manager-for-Windows-Build-from-Source.aspx", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"UI", "attr":{ "href":"https://redisdesktop.com/", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Redis | OA's 常用設定", "href":"https://comdan66.github.io/configs/book/mds/mac/redis.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"補充", "href":"https://blog.miniasp.com/post/2018/09/26/Redis-Desktop-Manager-for-Windows-Build-from-Source.aspx" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"UI", "href":"https://redisdesktop.com/" }] }
       ]
     }
   ],

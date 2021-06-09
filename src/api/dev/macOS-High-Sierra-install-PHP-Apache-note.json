@@ -12,13 +12,13 @@
         {
           "e":"a",
           "t":"Homebrew",
-          "attr":{ "target":"_blank", "href":"https://brew.sh/index_zh-tw.html" }
+          "href":"https://brew.sh/index_zh-tw.html"
         },
         { "e":"span", "t":" 來解決這項問題，找了大半天終於讓我找到一篇完整的介紹，以下就用" },
         {
           "e":"a",
           "t":"此篇",
-          "attr":{ "target":"_blank", "href":"https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions" }
+          "href":"https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions"
         },
         { "e":"span", "t":"來說明利用 Homebrew 來針對 PHP 版本控制的方法吧！" }
       ]
@@ -216,7 +216,7 @@
             ] },
             {
               "e":"blockquote",
-              "attr": { "class": "warning" },
+              "class": "warning",
               "t":"注意！這裡只有改到 cli 部分，Apache 還沒改掉所以 phpinfo 出來應該還是 7.1"
             }
           ]
@@ -235,7 +235,6 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"code term" },
       "s":[
         { "e":"div", "t":"LoadModule php5_module /usr/local/Cellar/php56/5.6.31_7/libexec/apache2/libphp5.so" },
         { "e":"div", "t":"LoadModule php7_module /usr/local/Cellar/php70/7.0.24_16/libexec/apache2/libphp7.so" },
@@ -245,9 +244,8 @@
     { "e":"p", "t":"將其改成" },
     {
       "e":"pre",
-      "attr":{ "class":"code term" },
+      "copy": "LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so\nLoadModule php7_module /usr/local/opt/php70/libexec/apache2/libphp7.so\nLoadModule php7_module /usr/local/opt/php71/libexec/apache2/libphp7.so",
       "s":[
-        { "e":"label", "copy": "LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so\nLoadModule php7_module /usr/local/opt/php70/libexec/apache2/libphp7.so\nLoadModule php7_module /usr/local/opt/php71/libexec/apache2/libphp7.so" },
         { "e":"div", "t":"LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so" },
         { "e":"div", "t":"LoadModule php7_module /usr/local/opt/php70/libexec/apache2/libphp7.so" },
         { "e":"div", "t":"LoadModule php7_module /usr/local/opt/php71/libexec/apache2/libphp7.so" }
@@ -256,7 +254,6 @@
     { "e":"p", "t":"但只能一個，因為要以 5.6 為例子，所以其他註解起來" },
     {
       "e":"pre",
-      "attr":{ "class":"code term" },
       "s":[
         { "e":"div", "t":"LoadModule php5_module /usr/local/opt/php56/libexec/apache2/libphp5.so" },
         { "e":"div", "t":"#LoadModule php7_module /usr/local/opt/php70/libexec/apache2/libphp7.so" },
@@ -265,7 +262,7 @@
     },
     {
       "e":"blockquote",
-      "attr": { "class": "warning" },
+      "class": "warning",
       "t":"注意！這裡改的是 Apache 部分，CLI 則不是這樣改的～"
     },
     {
@@ -274,7 +271,7 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"code term" },
+      "class":"lines",
       "s":[
         { "e":"label", "copy": "DirectoryIndex" },
         { "e":"div", "t":"<IfModule dir_module>" },
@@ -287,9 +284,9 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"code term" },
+      "class":"lines",
+      "copy": "<IfModule dir_module>\n    DirectoryIndex index.php index.html\n</IfModule>\n<FilesMatch \\.php$>\n    SetHandler application/x-httpd-php\n</FilesMatch",
       "s":[
-        { "e":"label", "copy": "<IfModule dir_module>\n    DirectoryIndex index.php index.html\n</IfModule>\n<FilesMatch \\.php$>\n    SetHandler application/x-httpd-php\n</FilesMatch" },
         { "e":"div", "t":"<IfModule dir_module>" },
         { "e":"div", "t":"    DirectoryIndex index.php index.html" },
         { "e":"div", "t":"</IfModule>" },
@@ -332,7 +329,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"macOS 10.13 High Sierra Apache Setup: Multiple PHP Versions | Grav", "attr":{ "target":"_blank", "href":"https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"macOS 10.13 High Sierra Apache Setup: Multiple PHP Versions | Grav", "href":"https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions" }] }
       ]
     }
   ],

@@ -7,9 +7,9 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"OA-scrollSliderView 這是一個前端 " },
-        { "e":"a", "t":"jQuery", "attr":{ "href":"https://jquery.com/", "target":"_blank" } },
+        { "e":"a", "t":"jQuery", "href":"https://jquery.com/" },
         { "e":"span", "t":" Extend Function，主要架構於 jQuery，此版本是支援 " },
-        { "e":"a", "t":"Responsive Web Design(RWD)", "attr":{ "href":"http://www.ibest.tw/page01.php", "target":"_blank" } },
+        { "e":"a", "t":"Responsive Web Design(RWD)", "href":"http://www.ibest.tw/page01.php" },
         { "e":"span", "t":" 的頁面。" }
       ]
     }
@@ -18,8 +18,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/OA-scrollSliderView/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/OA-scrollSliderView", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-scrollSliderView/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-scrollSliderView" }] }
       ]
     }
   ],

@@ -7,11 +7,11 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"雲林六房媽一年一度過爐活動今年也與我的 GPS 系統結合，六房媽在幾年前早已經有在做繞境定位，剛好有朋友介紹讓我與" },
-        { "e":"a", "t":"神之路關", "attr":{ "href":"http://www.godroad.tw/", "target":"_blank" } },
+        { "e":"a", "t":"神之路關", "href":"http://www.godroad.tw/" },
         { "e":"span", "t":"的開發團隊認識，所以這次的六房媽過爐活動就與" },
-        { "e":"a", "t":"林啟元", "attr":{ "href":"https://www.facebook.com/pozzyboy", "target":"_blank" } },
+        { "e":"a", "t":"林啟元", "href":"https://www.facebook.com/pozzyboy" },
         { "e":"span", "t":"先生合作開發，首次與 " },
-        { "e":"a", "t":"ASP.NET", "attr":{ "href":"http://aps.net/", "target":"_blank" } },
+        { "e":"a", "t":"ASP.NET", "href":"http://aps.net/" },
         { "e":"span", "t":" 後端結合。" }
       ]
     },
@@ -19,15 +19,15 @@
     {
       "e":"figure",
       "attr":{ "alt":"選擇多個 GPS 點" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/42b31e6f432ec9b8846acd8d7d8a0dbc.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/42b31e6f432ec9b8846acd8d7d8a0dbc.jpg" } }]
     }
   ],
   "r":[
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"http://map.godroad.tw/E160522/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/LiuFangMazu", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://map.godroad.tw/E160522/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/LiuFangMazu" }] }
       ]
     }
   ],

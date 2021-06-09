@@ -14,7 +14,7 @@
         { "e":"span", "t":"以下會用 " },
         { "e":"code", "t":"OAPodTest" },
         { "e":"span", "t":" 當作套件名稱範例，各位要做自己的套件請用自己的名稱捏！\n由於 pod 套件可與 " },
-        { "e":"a",    "t":"GitHub", "attr":{ "href":"https://github.com/", "target":"_blank" } },
+        { "e":"a",    "t":"GitHub", "href":"https://github.com/" },
         { "e":"span", "t":" 綁定，讓他自動去抓上面的原始碼，所以請先開一個 GitHub repository！" }
       ]
     },
@@ -22,7 +22,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"這是我自己的 GitHun Repository：" },
-        { "e":"a",    "t":"https://github.com/comdan66/OAPodTest", "attr":{ "href":"https://github.com/comdan66/OAPodTest", "target":"_blank" } }
+        { "e":"a",    "t":"https://github.com/comdan66/OAPodTest", "href":"https://github.com/comdan66/OAPodTest" }
       ]
     },
     {
@@ -51,9 +51,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"What platform do you want to use?? [ iOS / macOS ]" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"此 lib 是給哪種系統平台用？" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"➜ iOS" }
           ]
         },
@@ -61,9 +61,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"What language do you want to use?? [ Swift / ObjC ]" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"此 lib 是主要哪種語言？" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"➜ Swift" }
           ]
         },
@@ -71,9 +71,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"Would you like to include a demo application with your library? [ Yes / No ]" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"此 lib 裡面要不要給予 Demo 範例" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"➜ Yes" }
           ]
         },
@@ -81,9 +81,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"Which testing frameworks will you use? [ Quick / None ]" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"測試框架，不知道用在哪ＸＤ" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"➜ None" }
           ]
         },
@@ -91,9 +91,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"Would you like to do view based testing? [ Yes / No ]" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"不知道ＸＤ" },
-            { "e":"br",   "s":[] },
+            { "e":"br" },
             { "e":"span", "t":"➜ No" }
           ]
         }
@@ -175,11 +175,34 @@
             { "e":"p", "t":"ReplaceMe.swift 內容範例" },
             {
               "e":"pre",
-              "attr":{ "class":"code language-Swift" },
+              "class":"lines xcode",
               "s":[
-                { "e": "div", "s": [{ "e": "span", "t": "public func ", "attr": { "class": "r" } }, { "e": "span", "t": "testFunc", "attr": { "class": "b" } }, { "e": "span", "t": "(" }, { "e": "span", "t": "_ ", "attr": { "class": "r" } }, { "e": "span", "t": "a: " }, { "e": "span", "t": "Int", "attr": { "class": "p" } }, { "e": "span", "t": ") -> " }, { "e": "span", "t": "String ", "attr": { "class": "p" } }, { "e": "span", "t": "{" }] },
-                { "e": "div", "s": [{ "e": "span", "t": "    return ", "attr": { "class": "r" } }, { "e": "span", "t": "String", "attr": { "class": "p" } }, { "e": "span", "t": "." }, { "e": "span", "t": "init", "attr": { "class": "p" } }, { "e": "span", "t": "(format: " }, { "e": "span", "t": "\"Int: %d\"", "attr": { "class": "r2" } }, { "e": "span", "t": ", a)" }] },
-                { "e": "div", "s": [{ "e": "span", "t": "}" }] }
+                { "e": "div", "s": [
+                  { "e": "span", "t": "public func ", "class": "red1" },
+                  { "e": "span", "t": "testFunc", "class": "blue1" },
+                  { "e": "span", "t": "(" },
+                  { "e": "span", "t": "_ ", "class": "red1" },
+                  { "e": "span", "t": "a: " },
+                  { "e": "span", "t": "Int", "class": "purple2" },
+                  { "e": "span", "t": ") -> " },
+                  { "e": "span", "t": "String ", "class": "purple2" },
+                  { "e": "span", "t": "{" }
+                ]
+              },
+                { "e": "div", "s": [
+                  { "e": "span", "t": "    return ", "class": "red1" },
+                  { "e": "span", "t": "String", "class": "purple2" },
+                  { "e": "span", "t": "." },
+                  { "e": "span", "t": "init", "class": "purple2" },
+                  { "e": "span", "t": "(format: " },
+                  { "e": "span", "t": "\"Int: %d\"", "class": "red2" },
+                  { "e": "span", "t": ", a)" }
+                ]
+              },
+                { "e": "div", "s": [
+                    { "e": "span", "t": "}" }
+                  ]
+                }
               ]
             }
           ]
@@ -238,11 +261,11 @@
                     { "e":"p", "t":"全部加入並且丟到 origin，執行指令：" },
                     {
                       "e":"pre",
-                      "attr":{ "class":"code term" },
+                      "class":"lines",
                       "s":[
-                        { "e":"div", "s": [{ "e":"span", "t":"git add -A" }] },
-                        { "e":"div", "s": [{ "e":"span", "t":"git ci -m 'Fix .podspec'" }] },
-                        { "e":"div", "s": [{ "e":"span", "t":"git ps master" }] }
+                        { "e":"div", "t":"git add -A" },
+                        { "e":"div", "t":"git ci -m 'Fix .podspec'" },
+                        { "e":"div", "t":"git ps master" }
                       ]
                     }
                   ]
@@ -305,7 +328,7 @@
                       { "e":"code", "t":"pod trunk info OAPodTest" },
                       { "e":"span", "t":" 檢查是否有存在以及其線上相關版號資訊！" }
                     ] },
-                    { "e":"figure", "attr":{ "alt":"成功資訊" }, "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/3593d8b07ff9e731583a8387fc8a29cc.png" }, "s":[] }] }
+                    { "e":"figure", "attr":{ "alt":"成功資訊" }, "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/3593d8b07ff9e731583a8387fc8a29cc.png" } }] }
                   ]
                 }
               ]
@@ -331,7 +354,7 @@
             { "e":"span", "t":"開新的 ios Swift 專案名稱為 " },
             { "e":"code", "t":"Test" },
             { "e":"span", "t":"，並且做 " },
-            { "e":"a", "t":"pod init", "attr":{ "href":"https://www.ioa.tw/Develop/iOS-CocoaPods-note.html", "target":"_blank" } }
+            { "e":"a", "t":"pod init", "href":"https://www.ioa.tw/Develop/iOS-CocoaPods-note.html" }
           ]
         },
         {
@@ -419,7 +442,8 @@
             {
               "e":"a",
               "t":"CocoaPods.org",
-              "attr":{ "href":"https://cocoapods.org/", "target":"_blank" } }
+              "href":"https://cocoapods.org/"
+            }
           ]
         },
         {
@@ -428,7 +452,7 @@
             {
               "e":"a",
               "t":"https://medium.com/practical-code-labs/how-to-create-private-cocoapods-in-swift-3cc199976a18",
-              "attr":{ "href":"https://medium.com/practical-code-labs/how-to-create-private-cocoapods-in-swift-3cc199976a18", "target":"_blank" }
+              "href":"https://medium.com/practical-code-labs/how-to-create-private-cocoapods-in-swift-3cc199976a18"
             }
           ]
         },
@@ -438,7 +462,7 @@
             {
               "e":"a",
               "t":"https://www.jianshu.com/p/4b63dfbd8be7",
-              "attr":{ "href":"https://www.jianshu.com/p/4b63dfbd8be7", "target":"_blank" }
+              "href":"https://www.jianshu.com/p/4b63dfbd8be7"
             }
           ]
         }

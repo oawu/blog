@@ -8,7 +8,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"span", "t":"開啟 " }, { "e":"b", "t":"Safari" }] },
-        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.google.com/intl/zh-TW_ALL/chrome/", "attr":{ "href":"https://www.google.com/intl/zh-TW_ALL/chrome/", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.google.com/intl/zh-TW_ALL/chrome/", "href":"https://www.google.com/intl/zh-TW_ALL/chrome/" }] },
         { "e":"li", "s":[{ "e":"span", "t":"把它移到" }, { "e":"b", "t":"應用程式資料夾" }, { "e":"span", "t":"，並開啟。" }] }
       ]
     }
@@ -19,7 +19,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=lYoqoTwNGvQ", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=lYoqoTwNGvQ" }]
         }
       ]
     }

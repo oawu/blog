@@ -58,7 +58,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "attr":{ "href":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "href":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html" }] }
       ]
     }
   ],

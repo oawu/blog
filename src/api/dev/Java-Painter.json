@@ -13,21 +13,21 @@
         { "e":"span", "t":"、" },
         { "e":"b", "t":"多型" },
         { "e":"span", "t":"..等特性更加熟悉！有別於上學期的 C，Java 可以利用 " },
-        { "e":"a", "t":"GUI 介面", "attr":{ "href":"https://zh.wikipedia.org/wiki/Swing_(Java)", "target":"_blank" } },
+        { "e":"a", "t":"GUI 介面", "href":"https://zh.wikipedia.org/wiki/Swing_(Java)" },
         { "e":"span", "t":"實作出我理想中的作品，並且可以以封裝成 .jar 的方式與朋友分享。" }
       ]
     },
     {
       "e":"figure",
       "attr":{ "alt":"用 Java 實作小畫家" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/11b570ee420c1486860a4c997797931f.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/11b570ee420c1486860a4c997797931f.jpg" } }]
     }
   ],
   "r":[
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/freshman-java-painter", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/freshman-java-painter" }] }
       ]
     }
   ],

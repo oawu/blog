@@ -14,7 +14,7 @@
             {
               "e":"a",
               "t":"https://cocoapods.org/",
-              "attr":{ "href":"https://cocoapods.org/", "target":"_blank" }
+              "href":"https://cocoapods.org/"
             }
           ]
         },
@@ -70,7 +70,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"CocoaPods.org", "attr":{ "href":"https://cocoapods.org/", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"CocoaPods.org", "href":"https://cocoapods.org/" }] }
       ]
     }
   ],

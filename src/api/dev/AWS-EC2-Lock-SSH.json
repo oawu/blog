@@ -131,13 +131,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/956a3006c41b6528e0213c160ef53fd7.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/956a3006c41b6528e0213c160ef53fd7.jpg" }
       ]
     },
     { "e":"h2", "t":"複製 Volume" },
@@ -159,13 +153,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/84e4057829dd65edc3f322a6c8f48b52.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/84e4057829dd65edc3f322a6c8f48b52.jpg" }
       ]
     },
     {
@@ -179,13 +167,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/b76e7b18a5b5264e532654a427796284.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/b76e7b18a5b5264e532654a427796284.jpg" }
       ]
     },
     {
@@ -212,26 +194,14 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/5a0efe88aacd66ff2ca651ead106e2cb.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/5a0efe88aacd66ff2ca651ead106e2cb.jpg" }
       ]
     },
     { "e":"p", "t":"然後點擊去 Snapshots 頁面上看所產生的 Volume Snapshot" },
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/8822751f9f380176300a16bc129ff56a.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/8822751f9f380176300a16bc129ff56a.jpg" }
       ]
     },
     {
@@ -246,13 +216,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/9a559abd274fddbc029a80cbf8313cb1.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/9a559abd274fddbc029a80cbf8313cb1.jpg" }
       ]
     },
     {
@@ -268,13 +232,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/87fb064f0c419fa5ccc6a031199e0556.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/87fb064f0c419fa5ccc6a031199e0556.jpg" }
       ]
     },
     {
@@ -287,13 +245,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/8974810b521f17964c83b34c27fef917.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/8974810b521f17964c83b34c27fef917.jpg" }
       ]
     },
     { "e":"p", "t":"以上流程就是 Volume1 ➜ Snapshot ➜ Volume2，所以 Volume1 內容 == Volume2 內容" },
@@ -306,10 +258,7 @@
         { "e":"span", "t":"，方法可以參考 " },
         {
           "e":"a",
-          "attr":{
-            "href":"https://www.ioa.tw/AWS/EC2-Ubuntu.html",
-            "target":"_blank"
-          },
+          "href":"https://www.ioa.tw/AWS/EC2-Ubuntu.html",
           "t":"此篇"
         }
       ]
@@ -326,13 +275,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/63bb34e4f2abfbe80cb08b8a76de7748.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/63bb34e4f2abfbe80cb08b8a76de7748.jpg" }
       ]
     },
     { "e":"p", "t":"當然新的 EC2 一開始會有一顆預載的 8G 硬碟，所以回到 Volumes 頁面看，也會看到多出來的那顆硬碟" },
@@ -354,13 +297,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/bd66351452d383269680ed62f9284024.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/bd66351452d383269680ed62f9284024.jpg" }
       ]
     },
     {
@@ -379,13 +316,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/178347c9c8e54834407d60fb5c1531ab.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/178347c9c8e54834407d60fb5c1531ab.jpg" }
       ]
     },
     {
@@ -406,13 +337,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/de61146933c6d24413418c0dbd45063b.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/de61146933c6d24413418c0dbd45063b.jpg" }
       ]
     },
     { "e":"h2", "t":"讀取掛載的 Volume" },
@@ -428,25 +353,13 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/1a395e5e475863e5e2df8311185fbfe2.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/1a395e5e475863e5e2df8311185fbfe2.jpg" }
       ]
     },
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/97ee128e811a606210f6de6e74589ded.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/97ee128e811a606210f6de6e74589ded.jpg" }
       ]
     },
     {
@@ -496,13 +409,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/40aad4083aed42b1c1dd2fbc5a8ba997.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/40aad4083aed42b1c1dd2fbc5a8ba997.jpg" }
       ]
     },
     {
@@ -520,13 +427,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/29477d6dda0da80a60f82440da6efb27.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/29477d6dda0da80a60f82440da6efb27.jpg" }
       ]
     },
     {
@@ -567,13 +468,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/867377451487ea7c8898355902e7f93c.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/867377451487ea7c8898355902e7f93c.jpg" }
       ]
     },
     {
@@ -595,13 +490,7 @@
     {
       "e":"figure",
       "s":[
-        {
-          "e":"img",
-          "attr":{
-            "src":"https://www.ioa.tw/img/ebff779e93b2015131c9ad451d3be3f0.jpg"
-          },
-          "s":[]
-        }
+        { "e":"img", "src":"https://www.ioa.tw/img/ebff779e93b2015131c9ad451d3be3f0.jpg" }
       ]
     },
     { "e":"h2", "t":"結論" },
@@ -729,10 +618,7 @@
           "s":[
             {
               "e":"a",
-              "attr":{
-                "href":"https://docs.aws.amazon.com/zh_tw/AWSEC2/latest/UserGuide/ebs-using-volumes.html",
-                "target":"_blank"
-              },
+              "href":"https://docs.aws.amazon.com/zh_tw/AWSEC2/latest/UserGuide/ebs-using-volumes.html",
               "t":"使 Amazon EBS 磁碟區可供在 Linux 上使用 - Amazon Elastic Compute Cloud"
             }
           ]
@@ -742,10 +628,7 @@
           "s":[
             {
               "e":"a",
-              "attr":{
-                "href":"https://unix.stackexchange.com/questions/143925/locked-myself-out-of-amazon-ec2-ssh-this-service-allows-sftp-connections-only",
-                "target":"_blank"
-              },
+              "href":"https://unix.stackexchange.com/questions/143925/locked-myself-out-of-amazon-ec2-ssh-this-service-allows-sftp-connections-only",
               "t":"Locked myself out of Amazon EC2 SSH - This service allows sftp connections only"
             }
           ]
@@ -755,10 +638,7 @@
           "s":[
             {
               "e":"a",
-              "attr":{
-                "href":"https://www.cnblogs.com/pu20065226/p/10962906.html",
-                "target":"_blank"
-              },
+              "href":"https://www.cnblogs.com/pu20065226/p/10962906.html",
               "t":"This service allows sftp connections only - pu20065226 - 博客园"
             }
           ]

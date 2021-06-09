@@ -7,8 +7,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.sourcetreeapp.com/", "attr":{ "href":"https://www.sourcetreeapp.com/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"span", "t":"備用載點 － " }, { "e":"a", "t":"Sourcetree_4.1.1_237.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/Sourcetree_4.1.1_237.zip", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.sourcetreeapp.com/", "href":"https://www.sourcetreeapp.com/" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"備用載點 － " }, { "e":"a", "t":"Sourcetree_4.1.1_237.zip", "href":"https://cdn.ioa.tw/MacEnvInit/2021/Sourcetree_4.1.1_237.zip" }] },
         { "e":"li", "s":[{ "e":"span", "t":"解壓縮完後，把它移到" }, { "e":"b", "t":"應用程式資料夾" }, { "e":"span", "t":"，並開啟" }] },
         { "e":"li", "s":[
           {"e":"p", "s":[
@@ -27,7 +27,7 @@
               "e":"li",
               "s":[
                 { "e":"span", "t":"Account － " },
-                { "e":"code", "attr": {"class": "green"}, "t":"勾選" },
+                { "e":"code", "class": "green", "t":"勾選" },
                 { "e":"span", "t":" " },
                 { "e":"code", "t":"Set global…" },
                 { "e":"span", "t":" 並且輸入你本地端的 Git 帳戶，然後 " },
@@ -129,7 +129,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=LoZLPcMPmiM", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=LoZLPcMPmiM" }]
         }
       ]
     }

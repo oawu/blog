@@ -11,14 +11,14 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"官網下載 － " },
-            { "e":"a", "t":"https://sequelpro.com/download", "attr":{ "href":"https://sequelpro.com/download", "target":"_blank" } }
+            { "e":"a", "t":"https://sequelpro.com/download", "href":"https://sequelpro.com/download" }
           ]
         },
         {
           "e":"li",
           "s":[
             { "e":"span", "t":"備用載點 － " },
-            { "e":"a", "t":"sequel-pro-1.1.2.dmg", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/sequel-pro-1.1.2.dmg", "target":"_blank" } }
+            { "e":"a", "t":"sequel-pro-1.1.2.dmg", "href":"https://cdn.ioa.tw/MacEnvInit/sequel-pro-1.1.2.dmg" }
           ]
         },
         {
@@ -75,7 +75,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"Password 輸入剛剛 " },
-            { "e":"a", "t":"MySQL", "attr":{ "href":"https://www.ioa.tw/macOS/MySQL.html", "target":"_blank" } },
+            { "e":"a", "t":"MySQL", "href":"https://www.ioa.tw/macOS/MySQL.html" },
             { "e":"span", "t":" 設定的密碼" }
           ]
         },
@@ -112,7 +112,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c" }]
         }
       ]
     }

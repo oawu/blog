@@ -19,7 +19,7 @@
               "e":"p",
               "s":[
                 { "e":"span", "t":"下載安裝 Xcode － " },
-                { "e":"a", "t":"https://itunes.apple.com/tw/app/xcode/id497799835?mt=12", "attr":{ "href":"https://itunes.apple.com/tw/app/xcode/id497799835?mt=12", "target":"_blank" } }
+                { "e":"a", "t":"https://itunes.apple.com/tw/app/xcode/id497799835?mt=12", "href":"https://itunes.apple.com/tw/app/xcode/id497799835?mt=12" }
               ]
             },
             {
@@ -35,7 +35,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"下載安裝 Line － " },
-            { "e":"a", "t":"https://itunes.apple.com/tw/app/line/id539883307?mt=12", "attr":{ "href":"https://itunes.apple.com/tw/app/line/id539883307?mt=12", "target":"_blank" } }
+            { "e":"a", "t":"https://itunes.apple.com/tw/app/line/id539883307?mt=12", "href":"https://itunes.apple.com/tw/app/line/id539883307?mt=12" }
           ]
         },
         {
@@ -45,7 +45,7 @@
               "e":"p",
               "s":[
                 { "e":"span", "t":"下載安裝 LunarCal － " },
-                { "e":"a", "t":"https://itunes.apple.com/tw/app/lunarcal/id459976036?mt=12", "attr":{ "href":"https://itunes.apple.com/tw/app/lunarcal/id459976036?mt=12", "target":"_blank" } }
+                { "e":"a", "t":"https://itunes.apple.com/tw/app/lunarcal/id459976036?mt=12", "href":"https://itunes.apple.com/tw/app/lunarcal/id459976036?mt=12" }
               ]
             },
             {
@@ -61,21 +61,21 @@
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+                            { "e":"code", "t":"勾選", "class":"green" },
                             { "e":"span", "t":" 在登入時自動開啟" }
                           ]
                         },
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                            { "e":"code", "t":"取消", "class":"red" },
                             { "e":"span", "t":" 游標停滯時自動滑出" }
                           ]
                         },
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                            { "e":"code", "t":"取消", "class":"red" },
                             { "e":"span", "t":" 游標離開時自動關閉" }
                           ]
                         },
@@ -89,7 +89,7 @@
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                            { "e":"code", "t":"取消", "class":"red" },
                             { "e":"span", "t":" 顯示日期與時間" }
                           ]
                         }
@@ -108,7 +108,7 @@
               "e":"p",
               "s":[
                 { "e":"span", "t":"下載安裝 Sip(Apple Store 已無販售，付費版本請看 " },
-                { "e":"a", "t":"螢幕顏色吸取器 － Sip", "attr":{ "href":"https://www.ioa.tw/macOS/Sip.html", "target":"_blank" } },
+                { "e":"a", "t":"螢幕顏色吸取器 － Sip", "href":"https://www.ioa.tw/macOS/Sip.html" },
                 { "e":"span", "t":")" }
               ]
             },
@@ -128,7 +128,7 @@
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                            { "e":"code", "t":"取消", "class":"red" },
                             { "e":"span", "t":" Number of colors in color history" }
                           ]
                         }
@@ -146,14 +146,14 @@
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                            { "e":"code", "t":"取消", "class":"red" },
                             { "e":"span", "t":" CSS 將 All caps" }
                           ]
                         },
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                            { "e":"code", "t":"取消", "class":"red" },
                             { "e":"span", "t":" 將不必要的類型" }
                           ]
                         }
@@ -290,13 +290,13 @@
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"b", "t":"一般" }, { "e":"span", "t":" － " }, { "e":"code", "t":"開啟新 Finder 視窗時顯示" }, { "e":"span", "t":"，點選 " }, { "e":"code", "t":"其他" }, { "e":"span", "t":"，然後選 " }, { "e":"code", "t":"www" }, { "e":"span", "t":" 目錄" }, { "e":"blockquote", "s":[{ "e": "span", "t":"如果找不到就按 "}, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"g" }, { "e":"span", "t":"，輸入 " }, { "e":"code", "t":"~/" }, { "e":"span", "t":" 前往，然後即可選擇 " }, { "e":"code", "t":"www" }, { "e":"span", "t":" 目錄" }] }] },
-                { "e":"li", "s":[{ "e":"b", "t":"標記" }, { "e":"span", "t":" － " }, { "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 所有標記" }] },
+                { "e":"li", "s":[{ "e":"b", "t":"標記" }, { "e":"span", "t":" － " }, { "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 所有標記" }] },
                 { "e":"li", "s":[{ "e":"b", "t":"側邊欄" }, { "e":"span", "t":" － 只勾選 " }, { "e":"code", "t":"AirDrop" }, { "e":"span", "t":"、" }, { "e":"code", "t":"應用程式" }, { "e":"span", "t":"、" }, { "e":"code", "t":"文件" }, { "e":"span", "t":"、" }, { "e":"code", "t":"下載項目" }, { "e":"span", "t":"、" }, { "e":"code", "t":"圖片" }, { "e":"span", "t":"、" }, { "e":"code", "t":"Home" }, { "e":"span", "t":"、" }, { "e":"code", "t":"外接磁碟" }] },
                 { "e":"li", "s":[
                   { "e":"p", "s":[
                     { "e":"b", "t":"進階" }
                   ] },
-                  { "e":"ul", "s":[{ "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 顯示所有檔案副檔名" }] }, { "e":"li", "s":[{ "e":"code", "t":"執行搜尋時" }, { "e":"span", "t":" 改為 " }, { "e":"code", "t":"搜尋目前的檔案夾" }] }] }
+                  { "e":"ul", "s":[{ "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 顯示所有檔案副檔名" }] }, { "e":"li", "s":[{ "e":"code", "t":"執行搜尋時" }, { "e":"span", "t":" 改為 " }, { "e":"code", "t":"搜尋目前的檔案夾" }] }] }
                 ] }
               ]
             }
@@ -367,15 +367,15 @@
                         },
                         {
                           "e":"li",
-                          "s":[{ "e":"code", "t":"勾選", "attr": {"class": "green"} }, { "e":"span", "t":" 放大，並且拉到 " }, { "e":"code", "t":"最大" }, { "e":"span", "t":"，可依據自己需求而定" }]
+                          "s":[{ "e":"code", "t":"勾選", "class": "green" }, { "e":"span", "t":" 放大，並且拉到 " }, { "e":"code", "t":"最大" }, { "e":"span", "t":"，可依據自己需求而定" }]
                         },
                         {
                           "e":"li",
-                          "s":[{ "e":"code", "t":"勾選", "attr": {"class": "green"} }, { "e":"span", "t":" 自動隱藏顯示 Dock" }]
+                          "s":[{ "e":"code", "t":"勾選", "class": "green" }, { "e":"span", "t":" 自動隱藏顯示 Dock" }]
                         },
                         {
                           "e":"li",
-                          "s":[{ "e":"code", "t":"取消", "attr": {"class": "red"} }, { "e":"span", "t":" 在 Dock 中顯示最近使用過的應用程式" }]
+                          "s":[{ "e":"code", "t":"取消", "class": "red" }, { "e":"span", "t":" 在 Dock 中顯示最近使用過的應用程式" }]
                         }
                       ]
                     }
@@ -385,7 +385,7 @@
                   "e":"li",
                   "s": [
                     {"e": "span", "t":"時鐘 － "},
-                    {"e": "code", "t":"勾選", "attr": {"class":"green"}},
+                    {"e": "code", "t":"勾選", "class":"green"},
                     {"e": "span", "t":" 顯示時間秒數"}
                   ]
                 }
@@ -398,14 +398,14 @@
           "s":[
             {"e": "span", "t":"指揮中心 － "},
             {"e": "span", "t":"鍵盤和滑鼠快捷鍵 "},
-            {"e": "code", "t":"全部取消", "attr": {"class":"red"}}
+            {"e": "code", "t":"全部取消", "class":"red"}
           ]
         },
         {
           "e":"li",
           "s":[
             {"e": "span", "t":"Siri － "},
-            {"e": "code", "t":"取消", "attr": {"class":"red"} },
+            {"e": "code", "t":"取消", "class":"red" },
             { "e":"span", "t":" 啟用「跟 Siri 對話」" }
           ]
         },
@@ -413,7 +413,7 @@
           "e":"li",
           "s":[
             {"e": "span", "t":"Spolight － "},
-            {"e": "code", "t":"全部取消", "attr": {"class":"red"} },
+            {"e": "code", "t":"全部取消", "class":"red" },
             { "e":"span", "t":" 因為我不常使用到它，所以可以依據自己需求而決定" }
           ]
         },
@@ -423,7 +423,7 @@
             { "e":"span", "t":"通知 － " },
             { "e":"code", "t":"勿擾模式" },
             { "e":"span", "t":" " },
-            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+            { "e":"code", "t":"勾選", "class":"green" },
             { "e":"span", "t":" 當顯示器進入睡眠時 " }
           ]
         },
@@ -461,8 +461,8 @@
                             {
                               "e":"ul",
                               "s":[
-                                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 啟用/停用隱藏 Dock " }] },
-                                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 顯示「啟動台」並設定快捷鍵 " }, { "e":"code", "t":"F4" }] }
+                                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 啟用/停用隱藏 Dock " }] },
+                                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 顯示「啟動台」並設定快捷鍵 " }, { "e":"code", "t":"F4" }] }
                               ]
                             }
                           ]
@@ -484,14 +484,14 @@
                           "e":"li",
                           "s":[
                             { "e":"span", "t":"Spolight － "},
-                            { "e": "code", "t":"全部取消", "attr": {"class":"red"} }
+                            { "e": "code", "t":"全部取消", "class":"red" }
                           ]
                         },
                         {
                           "e":"li",
                           "s":[
                             { "e":"span", "t":"輔助使用 － "},
-                            { "e": "code", "t":"全部取消", "attr": {"class":"red"} }
+                            { "e": "code", "t":"全部取消", "class":"red" }
                           ]
                         },
                         {
@@ -501,7 +501,7 @@
                             {
                               "e":"ul",
                               "s":[
-                                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 顯示輔助說明選單 " }] },
+                                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 顯示輔助說明選單 " }] },
                                 { "e":"li", "s":[{ "e":"span", "t":"按 " }, { "e":"code", "t":"+" }, { "e":"span", "t":" > 應用程式選 " }, { "e":"code", "t":"Finder" }, { "e":"span", "t":" > 選單名稱輸入 " }, { "e":"code", "t":"顯示上一個標籤頁", "copy":"顯示上一個標籤頁" }, { "e":"span", "t":"，鍵盤快捷鍵設定 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"option" }, { "e":"span", "t":" + " }, { "e":"code", "t":"←" }] },
                                 { "e":"li", "s":[{ "e":"span", "t":"按 " }, { "e":"code", "t":"+" }, { "e":"span", "t":" > 應用程式選 " }, { "e":"code", "t":"Finder" }, { "e":"span", "t":" > 選單名稱輸入 " }, { "e":"code", "t":"顯示下一個標籤頁", "copy":"顯示下一個標籤頁" }, { "e":"span", "t":"，鍵盤快捷鍵設定 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"option" }, { "e":"span", "t":" + " }, { "e":"code", "t":"→" }] },
                                 { "e":"li", "s":[{ "e":"span", "t":"按 " }, { "e":"code", "t":"+" }, { "e":"span", "t":" > 應用程式選 " }, { "e":"code", "t":"預覽程式" }, { "e":"span", "t":" > 選單名稱輸入 " }, { "e":"code", "t":"工具->調整大小⋯", "copy":"工具->調整大小⋯" }, { "e":"span", "t":"，鍵盤快捷鍵設定 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"r" }] }
@@ -527,7 +527,7 @@
                 {
                   "e":"li",
                   "s":[
-                    { "e":"code", "t":"取消", "attr": {"class":"red"} },
+                    { "e":"code", "t":"取消", "class":"red" },
                     { "e":"span", "t":" 捲動方向：自然" }
                   ]
                 },
@@ -570,11 +570,11 @@
                     {
                       "e":"ul",
                       "s":[
-                        { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 查詢和資料偵測器" }] },
-                        { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 輔助按鈕" }] },
-                        { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 點一下來選按" }] },
-                        { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 靜安點按(此選項必須觸碰板使用中才會顯示)" }] },
-                        { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 用力長按和觸覺回饋" }] },
+                        { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 查詢和資料偵測器" }] },
+                        { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 輔助按鈕" }] },
+                        { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 點一下來選按" }] },
+                        { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 靜安點按(此選項必須觸碰板使用中才會顯示)" }] },
+                        { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 用力長按和觸覺回饋" }] },
                         { "e":"li", "s":[{ "e":"code", "t":"按一下" }, { "e":"span", "t":" 拉到 " }, { "e":"code", "t":"輕微" }] },
                         { "e":"li", "s":[{ "e":"code", "t":"軌跡速度" }, { "e":"span", "t":" 拉到 " }, { "e":"code", "t":"倒數第四線" }] }
                       ]
@@ -585,7 +585,7 @@
                   "e":"li",
                   "s":[
                     { "e":"span", "t":" 捲動與縮放 － " },
-                    { "e":"code", "t":"只勾選", "attr": {"class":"green"} },
+                    { "e":"code", "t":"只勾選", "class":"green" },
                     { "e":"span", "t":" 放大或縮小" }
                   ]
                 },
@@ -593,7 +593,7 @@
                   "e":"li",
                   "s":[
                     { "e":"span", "t":" 更多手勢 － " },
-                    { "e":"code", "t":"只勾選", "attr": {"class":"green"} },
+                    { "e":"code", "t":"只勾選", "class":"green" },
                     { "e":"span", "t":" 在頁面之間滑動" }
                   ]
                 }
@@ -608,19 +608,19 @@
             {
               "e":"ul",
               "s":[
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" iCloud Driver，並選擇 " }, { "e":"code", "t":"從 Mac 中移除" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 打開照片" }, { "e":"blockquote", "s":[{ "e": "span", "t":"第一次設定會出現要你打開照片，就選 "}, { "e":"code", "t":"打開照片" }, { "e":"span", "t":" 吧，然後選 " }, { "e":"code", "t":"開始使用" }, { "e":"span", "t":"，再選 " }, { "e":"code", "t":"稍後再說" }, { "e":"span", "t":"，然後關閉視窗，" }, { "e":"code", "t":"再重新取消" }, { "e":"span", "t":" 一次照片" }] }] },
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 郵件" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 聯絡人" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 行事曆" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 提醒事項" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" Safari" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 備忘錄" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 鑰匙圈" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"勾選", "attr": {"class":"green"} }, { "e":"span", "t":" 尋找我的 Mac" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 股市，並選擇 " }, { "e":"code", "t":"從 Mac 中移除" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" 家庭" }] },
-                { "e":"li", "s":[{ "e":"code", "t":"取消", "attr": {"class":"red"} }, { "e":"span", "t":" Siri" }] }
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" iCloud Driver，並選擇 " }, { "e":"code", "t":"從 Mac 中移除" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 打開照片" }, { "e":"blockquote", "s":[{ "e": "span", "t":"第一次設定會出現要你打開照片，就選 "}, { "e":"code", "t":"打開照片" }, { "e":"span", "t":" 吧，然後選 " }, { "e":"code", "t":"開始使用" }, { "e":"span", "t":"，再選 " }, { "e":"code", "t":"稍後再說" }, { "e":"span", "t":"，然後關閉視窗，" }, { "e":"code", "t":"再重新取消" }, { "e":"span", "t":" 一次照片" }] }] },
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 郵件" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 聯絡人" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 行事曆" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 提醒事項" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" Safari" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 備忘錄" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 鑰匙圈" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"勾選", "class":"green" }, { "e":"span", "t":" 尋找我的 Mac" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 股市，並選擇 " }, { "e":"code", "t":"從 Mac 中移除" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" 家庭" }] },
+                { "e":"li", "s":[{ "e":"code", "t":"取消", "class":"red" }, { "e":"span", "t":" Siri" }] }
               ]
             }
           ]
@@ -629,7 +629,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"藍芽 － " },
-            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+            { "e":"code", "t":"勾選", "class":"green" },
             { "e":"span", "t":" 在選單列中顯示藍芽 " }
           ]
         },
@@ -657,21 +657,21 @@
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+                            { "e":"code", "t":"勾選", "class":"green" },
                             { "e":"span", "t":" 減少動態效果" }
                           ]
                         },
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+                            { "e":"code", "t":"勾選", "class":"green" },
                             { "e":"span", "t":" 減少透明度" }
                           ]
                         },
                         {
                           "e":"li",
                           "s":[
-                            { "e":"code", "t":"游標", "attr": {"class":"green"} },
+                            { "e":"code", "t":"游標", "class":"green" },
                             { "e":"span", "t":" 設定在 " },
                             { "e":"code", "t":"左邊第三線" }
                           ]

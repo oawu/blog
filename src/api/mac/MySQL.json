@@ -10,7 +10,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"官網頁面", "attr":{ "href":"https://downloads.mysql.com/archives/community/", "target":"_blank" } },
+            { "e":"a", "t":"官網頁面", "href":"https://downloads.mysql.com/archives/community/" },
             { "e":"span", "t":"選擇版本 " },
             { "e":"code", "t":"5.7.31" },
             { "e":"span", "t":" 作業系統選 " },
@@ -21,14 +21,14 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"官網載點 － " },
-            { "e":"a", "t":"mysql-5.7.31-macos10.14-x86_64.dmg", "attr":{ "href":"https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.31-macos10.14-x86_64.dmg", "target":"_blank" } }
+            { "e":"a", "t":"mysql-5.7.31-macos10.14-x86_64.dmg", "href":"https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.31-macos10.14-x86_64.dmg" }
           ]
         },
         {
           "e":"li",
           "s":[
             { "e":"span", "t":"備用載點 － " },
-            { "e":"a", "t":"mysql-5.7.31-macos10.14-x86_64.dmg", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/mysql-5.7.31-macos10.14-x86_64.dmg", "target":"_blank" } }
+            { "e":"a", "t":"mysql-5.7.31-macos10.14-x86_64.dmg", "href":"https://cdn.ioa.tw/MacEnvInit/mysql-5.7.31-macos10.14-x86_64.dmg" }
           ]
         },
         {
@@ -49,7 +49,7 @@
             ] },
             {
               "e":"blockquote",
-              "attr":{"class": "warning"},
+              "class": "warning",
               "s":[{ "e": "span", "t":"如果點擊兩下都沒反應或者跳出「因為Apple無法檢查是否包含惡意軟體。」，可能是被 macOS 擋下來了，可以點擊點選螢幕左上角的 "}, { "e": "code", "t":""}, { "e": "span", "t":" > "}, { "e": "code", "t":"系統偏好設定"}, { "e": "span", "t":" > "}, { "e": "code", "t":"安全性與隱私權"}, { "e": "span", "t":" > "}, { "e": "code", "t":"一般"}, { "e": "span", "t":" > "}, { "e": "code", "t":"強制打開"}, { "e": "span", "t":" > "}, { "e": "code", "t":"打開"}]
             }
           ]
@@ -105,7 +105,7 @@
           "s":[
             { "e":"span", "t":"摘要 － " },
             { "e":"span", "t":"會給予 " },
-            { "e":"code", "t":"預設密碼", "attr": {"class":"red"} },
+            { "e":"code", "t":"預設密碼", "class":"red" },
             { "e":"span", "t":" 請務必先將他存儲起來！ " }
           ]
         },
@@ -168,7 +168,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"輸入剛剛安裝完成時系統給予的 " },
-            { "e":"code", "t":"預設密碼", "attr": {"class":"red"} }
+            { "e":"code", "t":"預設密碼", "class":"red" }
           ]
         },
         {
@@ -216,14 +216,14 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"span", "t":"打開 " }, { "e":"code", "t":"iTerm2" }, { "e":"span", "t":" 終端機" }] },
-        { "e":"li", "s":[{ "e":"span", "t":"進入 MySQL，終端機執行指令 " }, { "e":"code", "t":"mysql -u root -p", "copy":"mysql -u root -p" }, { "e":"span", "t":"後，輸入 " }, { "e":"code", "t":"MySQL 密碼", "attr": {"class":"red"} }] },
+        { "e":"li", "s":[{ "e":"span", "t":"進入 MySQL，終端機執行指令 " }, { "e":"code", "t":"mysql -u root -p", "copy":"mysql -u root -p" }, { "e":"span", "t":"後，輸入 " }, { "e":"code", "t":"MySQL 密碼", "class":"red" }] },
         { "e":"li", "s":[{ "e":"span", "t":"選擇資料庫，指令 " }, { "e":"code", "t":"use mysql;", "copy":"use mysql;" }] },
         { "e":"li", "s":[
           { "e":"p", "s":[
             { "e":"span", "t":"設定密碼，指令 " },
             { "e":"code", "t":"update user set password=PASSWORD(\"你的新密碼\") where User='root';", "copy":"update user set password=PASSWORD(\"1234\") where User='root';" }
           ] },
-          { "e":"blockquote", "s":[{ "e":"span", "t":"注意！設置密碼時，要記得加上引號，假設密碼為 1234，應該為:" }, { "e":"br", "s":[] }, { "e":"code", "t":"update user set password=PASSWORD(\"1234\") where User='root';" }] }
+          { "e":"blockquote", "s":[{ "e":"span", "t":"注意！設置密碼時，要記得加上引號，假設密碼為 1234，應該為:" }, { "e":"br" }, { "e":"code", "t":"update user set password=PASSWORD(\"1234\") where User='root';" }] }
         ] },
         { "e":"li", "s":[{ "e":"span", "t":"刷新 MySQL，指令 " }, { "e":"code", "t":"flush privileges;", "copy":"flush privileges;" }] },
         { "e":"li", "s":[{ "e":"span", "t":"離開 MySQL，指令 " }, { "e":"code", "t":"quit", "copy":"quit" }] }
@@ -236,16 +236,16 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c" }]
         },
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"[備份] macOS 上安裝 MySQL 5.", "attr":{ "href":"/?k=mac&id=Backup-MySQL", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"[備份] macOS 上安裝 MySQL 5.", "href":"/?k=mac&id=Backup-MySQL" }]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx", "attr":{ "href":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx", "target":"_blank" } }
+            { "e":"a", "t":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx", "href":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx" }
           ]
         }
       ]

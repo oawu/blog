@@ -90,7 +90,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=nIf-_9mTGOg", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=nIf-_9mTGOg" }]
         }
       ]
     }

@@ -29,26 +29,25 @@
             ] },
             {
               "e":"pre",
-              "attr":{ "class":"code gitconfig" },
+              "class":"lines",
+              "copy": "[user]\n    name = OA Wu\n    email = comdan66@gmail.com\n[alias]\n    st = status\n    co = checkout\n    rb = rebase\n    cp = cherry-pick\n    ci = commit\n    ss = stash\n    cn = clean\n    pu = push origin\n    ps = push origin\n    sl = shortlog -s -n",
               "s":[
-                { "e":"label", "copy": "[user]\n    name = OA Wu\n    email = comdan66@gmail.com\n[alias]\n    st = status\n    co = checkout\n    rb = rebase\n    cp = cherry-pick\n    ci = commit\n    ss = stash\n    cn = clean\n    pu = push origin\n    ps = push origin\n    sl = shortlog -s -n" },
-
                 { "e":"div", "s":[
                   { "e": "span", "t": "[user]" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    name " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "OA Wu", "attr": { "class": "y" } }
+                  { "e": "span", "t": "OA Wu", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    email " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "comdan66@gmail.com", "attr": { "class": "y" } }
+                  { "e": "span", "t": "comdan66@gmail.com", "class": "yellow" }
                 ] },
-                { "e":"div", "s":[] },
+                { "e":"div", "t":" " },
 
                 { "e":"div", "s":[
                   { "e": "span", "t": "[alias]" }
@@ -56,63 +55,63 @@
 
                 { "e":"div", "s":[
                   { "e": "span", "t": "    st " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "status", "attr": { "class": "y" } }
+                  { "e": "span", "t": "status", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    co " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "checkout", "attr": { "class": "y" } }
+                  { "e": "span", "t": "checkout", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    rb " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "rebase", "attr": { "class": "y" } }
+                  { "e": "span", "t": "rebase", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    cp " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "cherry-pick", "attr": { "class": "y" } }
+                  { "e": "span", "t": "cherry-pick", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    ci " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "commit", "attr": { "class": "y" } }
+                  { "e": "span", "t": "commit", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    ss " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "stash", "attr": { "class": "y" } }
+                  { "e": "span", "t": "stash", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    cn " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "clean", "attr": { "class": "y" } }
+                  { "e": "span", "t": "clean", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    pu " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "push origin", "attr": { "class": "y" } }
+                  { "e": "span", "t": "push origin", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    ps " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "push origin", "attr": { "class": "y" } }
+                  { "e": "span", "t": "push origin", "class": "yellow" }
                 ] },
                 { "e":"div", "s":[
                   { "e": "span", "t": "    sl " },
-                  { "e": "span", "t": "=", "attr": { "class": "r" } },
+                  { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "shortlog -s -n", "attr": { "class": "y" } }
+                  { "e": "span", "t": "shortlog -s -n", "class": "yellow" }
                 ] }
               ]
             }
@@ -140,7 +139,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=QYgOGgcydSU", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=QYgOGgcydSU" }]
         }
       ]
     }

@@ -229,42 +229,102 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"code zshrc" },
+      "class":"lines",
+      "copy":"\n  <VirtualHost _default_:443>\n    # 你的 Domain\n    ServerName  your.url.tw\n    ServerAlias your.url.tw\n\n    # 你的 E-Mail\n    ServerAdmin your.email@gmail.com\n\n    # 你的專案目錄\n    DocumentRoot /var/www\n\n    # Log 的儲存位置\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    # SSL 設定\n    SSLEngine on\n    SSLCertificateFile /etc/dehydrated/certs/your.url.tw/cert.pem\n    SSLCertificateKeyFile /etc/dehydrated/certs/your.url.tw/privkey.pem\n    SSLCertificateChainFile /etc/dehydrated/certs/your.url.tw/chain.pem\n\n    # 記得也要是你的專案目錄\n    <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n    </Directory>\n  </VirtualHost>",
       "s":[
-        { "e":"label", "copy":"\n  <VirtualHost _default_:443>\n    # 你的 Domain\n    ServerName  your.url.tw\n    ServerAlias your.url.tw\n\n    # 你的 E-Mail\n    ServerAdmin your.email@gmail.com\n\n    # 你的專案目錄\n    DocumentRoot /var/www\n\n    # Log 的儲存位置\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    # SSL 設定\n    SSLEngine on\n    SSLCertificateFile /etc/dehydrated/certs/your.url.tw/cert.pem\n    SSLCertificateKeyFile /etc/dehydrated/certs/your.url.tw/privkey.pem\n    SSLCertificateChainFile /etc/dehydrated/certs/your.url.tw/chain.pem\n\n    # 記得也要是你的專案目錄\n    <Directory /var/www>\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n    </Directory>\n  </VirtualHost>" },
-        { "e":"div", "s":[{"e": "span", "t": "<IfModule", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "mod_ssl.c", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "<IfModule", "class": "red" },
+          {"e": "span", "t": " " },
+          {"e": "span", "t": "mod_ssl.c", "class": "yellow" },
+          {"e": "span", "t": ">", "class": "red" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "<VirtualHost", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "_default_:443", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-        { "e":"div", "t":"        # 你的 Domain", "attr": {"class": "g"} },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerName", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAlias", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "    " },
+          {"e": "span", "t": "<VirtualHost", "class": "red" },
+          {"e": "span", "t": " " },
+          {"e": "span", "t": "_default_:443", "class": "yellow" },
+          {"e": "span", "t": ">", "class": "red" }] },
+        { "e":"div", "t":"        # 你的 Domain", "class": "gray" },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "ServerName", "class": "blue" },
+          {"e": "span", "t": " your.url.tw" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "ServerAlias", "class": "blue" },
+          {"e": "span", "t": " your.url.tw" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "t":"        # 你的 E-Mail", "attr": {"class": "g"} },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAdmin", "attr": {"class": "b"} }, {"e": "span", "t": " your.email@gmail.com" }] },
+        { "e":"div", "t":"        # 你的 E-Mail", "class": "gray" },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "ServerAdmin", "class": "blue" },
+          {"e": "span", "t": " your.email@gmail.com" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "t":"        # 你的專案目錄", "attr": {"class": "g"} },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "DocumentRoot", "attr": {"class": "b"} }, {"e": "span", "t": " /var/www" }] },
+        { "e":"div", "t":"        # 你的專案目錄", "class": "gray" },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "DocumentRoot", "class": "blue" },
+          {"e": "span", "t": " /var/www" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "t":"        # Log 的儲存位置", "attr": {"class": "g"} },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ErrorLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "CustomLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
+        { "e":"div", "t":"        # Log 的儲存位置", "class": "gray" },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "ErrorLog", "class": "blue" },
+          {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "CustomLog", "class": "blue" },
+          {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "t":"        # SSL 設定", "attr": {"class": "g"} },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLEngine", "attr": {"class": "b"} }, {"e": "span", "t": " on" }] },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/cert.pem" }] },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateKeyFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/privkey.pem" }] },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateChainFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/chain.pem" }] },
+        { "e":"div", "t":"        # SSL 設定", "class": "gray" },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "SSLEngine", "class": "blue" },
+          {"e": "span", "t": " on" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "SSLCertificateFile", "class": "blue" },
+          {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/cert.pem" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "SSLCertificateKeyFile", "class": "blue" },
+          {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/privkey.pem" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "SSLCertificateChainFile", "class": "blue" },
+          {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/chain.pem" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "t":"        # 記得也要是你的專案目錄", "attr": {"class": "g"} },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "<Directory", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "/var/www", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Options", "attr": {"class": "b"} }, {"e": "span", "t": " FollowSymLinks MultiViews" }] },
-        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "AllowOverride", "attr": {"class": "b"} }, {"e": "span", "t": " All" }] },
-        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Order", "attr": {"class": "b"} }, {"e": "span", "t": " allow,deny" }] },
-        { "e":"div", "s":[{"e": "span", "t": "            " }, {"e": "span", "t": "Allow", "attr": {"class": "b"} }, {"e": "span", "t": " from all" }] },
-        { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "</Directory>", "attr": {"class": "r"} }] },
-        { "e":"div", "s":[{"e": "span", "t": "    </VirtualHost>", "attr": {"class": "r"} }] },
+        { "e":"div", "t":"        # 記得也要是你的專案目錄", "class": "gray" },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "<Directory", "class": "red" },
+          {"e": "span", "t": " " },
+          {"e": "span", "t": "/var/www", "class": "yellow" },
+          {"e": "span", "t": ">", "class": "red" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "            " },
+          {"e": "span", "t": "Options", "class": "blue" },
+          {"e": "span", "t": " FollowSymLinks MultiViews" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "            " },
+          {"e": "span", "t": "AllowOverride", "class": "blue" },
+          {"e": "span", "t": " All" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "            " },
+          {"e": "span", "t": "Order", "class": "blue" },
+          {"e": "span", "t": " allow,deny" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "            " },
+          {"e": "span", "t": "Allow", "class": "blue" },
+          {"e": "span", "t": " from all" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "        " },
+          {"e": "span", "t": "</Directory>", "class": "red" }] },
+        { "e":"div", "s":[
+          {"e": "span", "t": "    </VirtualHost>", "class": "red" }] },
         { "e":"div", "t":" " },
-        { "e":"div", "s":[{"e": "span", "t": "</IfModule>", "attr": {"class": "r"} }] }
+        { "e":"div", "s":[
+          {"e": "span", "t": "</IfModule>", "class": "red" }] }
       ]
     },
 
@@ -281,8 +341,7 @@
             },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
-              "s":[{ "e":"div", "t":"Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details." }]
+              "t":"Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xe\" for details."
             }
           ]
         },
@@ -323,8 +382,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "attr":{ "href":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/", "attr":{ "href":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "href": "http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/", "href":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/" }] }
       ]
     }
   ],

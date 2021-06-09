@@ -17,7 +17,7 @@
             {
               "e":"a",
               "t":"PHP",
-              "attr":{ "href":"https://zh.wikipedia.org/zh-tw/PHP", "target":"_blank" }
+              "href":"https://zh.wikipedia.org/zh-tw/PHP"
             }
           ]
         },
@@ -25,7 +25,7 @@
           "e":"li",
           "s":[
             { "e":"p", "s":[
-              { "e":"a", "t":"AWS", "attr":{ "href":"https://aws.amazon.com/tw/", "target":"_blank" } },
+              { "e":"a", "t":"AWS", "href":"https://aws.amazon.com/tw/" },
               { "e":"span", "t":" 系統架設" }
             ] },
             {
@@ -37,7 +37,7 @@
                     {
                       "e":"a",
                       "t":"EC2",
-                      "attr":{ "href":"https://aws.amazon.com/tw/ec2/", "target":"_blank" }
+                      "href":"https://aws.amazon.com/tw/ec2/"
                     },
                     { "e":"span", "t":" － 後端伺服器" }
                   ]
@@ -48,7 +48,7 @@
                     {
                       "e":"a",
                       "t":"RDS",
-                      "attr":{ "href":"https://aws.amazon.com/tw/rds/", "target":"_blank" }
+                      "href":"https://aws.amazon.com/tw/rds/"
                     },
                     { "e":"span", "t":" － 資料庫" }
                   ]
@@ -59,7 +59,7 @@
                     {
                       "e":"a",
                       "t":"S3",
-                      "attr":{ "href":"https://aws.amazon.com/tw/s3/", "target":"_blank" }
+                      "href":"https://aws.amazon.com/tw/s3/"
                     },
                     { "e":"span", "t":" － 雲端空間" }
                   ]
@@ -70,7 +70,7 @@
                     {
                       "e":"a",
                       "t":"CloudFront",
-                      "attr":{ "href":"https://aws.amazon.com/tw/cloudfront/", "target":"_blank" }
+                      "href":"https://aws.amazon.com/tw/cloudfront/"
                     },
                     { "e":"span", "t":" － CDN" }
                   ]
@@ -81,7 +81,7 @@
                     {
                       "e":"a",
                       "t":"Certificate Manager",
-                      "attr":{ "href":"https://aws.amazon.com/tw/certificate-manager/", "target":"_blank" }
+                      "href":"https://aws.amazon.com/tw/certificate-manager/"
                     },
                     { "e":"span", "t":" － 憑證管理" }
                   ]
@@ -101,7 +101,7 @@
         {
           "e":"a",
           "t":"2016 的心得",
-          "attr":{ "href":"https://www.ioa.tw/Develop/FullStack-2016-Baishatun-GPS.html", "target":"_blank" }
+          "href":"https://www.ioa.tw/Develop/FullStack-2016-Baishatun-GPS.html"
         },
         { "e":"span", "t":"！" }
       ]
@@ -117,7 +117,7 @@
             {
               "e":"a",
               "t":"白沙屯 GPS",
-              "attr":{ "href":"https://itunes.apple.com/tw/app/id1455045995", "target":"_blank" }
+              "href":"https://itunes.apple.com/tw/app/id1455045995"
             }
           ]
         },
@@ -128,7 +128,7 @@
             {
               "e":"a",
               "t":"2019 白沙屯 GPS",
-              "attr":{ "href":"https://gps.godmaps.tw/", "target":"_blank" }
+              "href":"https://gps.godmaps.tw/"
             }
           ]
         },
@@ -139,7 +139,7 @@
             {
               "e":"a",
               "t":"白沙屯媽祖在哪裡？",
-              "attr":{ "href":"https://www.facebook.com/baishatunGPS/", "target":"_blank" }
+              "href":"https://www.facebook.com/baishatunGPS/"
             }
           ]
         }
@@ -167,26 +167,26 @@
         {
           "e":"a",
           "t":"NSLayoutConstraint",
-          "attr":{ "href":"https://developer.apple.com/documentation/uikit/nslayoutconstraint", "target":"_blank" }
+          "href":"https://developer.apple.com/documentation/uikit/nslayoutconstraint"
         },
         { "e":"span", "t":" 的方式將版型兜出來，可能是 css 切版習慣了，所以還是偏愛 Constraint 的方式來調整版型，所以自己寫了個簡單的 Lib 來使用，例如以下的方式讓我自己方便調整版型！" }
       ]
     },
     {
       "e":"pre",
-      "attr":{ "class":"code language-Swift" },
+      "class":"lines xcode",
+      "copy": "OA.layout(self.view, nameView) (\n    $0.at(.left, .equal, .left, 8)\n    $0.at(.right, .equal, .right, 8)\n    $0.at(.top, .equal, self.view.safeAreaLayoutGuide, .top, 8)\n    $0.at(.height, .equal, 8)\n}",
       "s":[
-        { "e":"label", "copy": "OA.layout(self.view, nameView) (\n    $0.at(.left, .equal, .left, .8)\n    $0.at(.right, .equal, .right, .8)\n    $0.at(.top, .equal, self.view.safeAreaLayoutGuide, .top, .8)\n    $0.at(.height, .equal, .8)\n}" },
         {
           "e":"div",
           "s": [
-            { "e": "span", "t": "OA", "attr": { "class": "gr" } },
+            { "e": "span", "t": "OA", "class": "green1" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "layout", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "layout", "class": "green2" },
             { "e": "span", "t": "(" },
-            { "e": "span", "t": "self", "attr": { "class": "r" } },
+            { "e": "span", "t": "self", "class": "red1" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "view", "attr": { "class": "p2" } },
+            { "e": "span", "t": "view", "class": "purple1" },
             { "e": "span", "t": ", nameView) (" }
           ]
         },
@@ -194,53 +194,15 @@
           "e":"div",
           "s": [
             { "e": "span", "t": "    $0." },
-            { "e": "span", "t": "at", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "at", "class": "green2" },
             { "e": "span", "t": "(." },
-            { "e": "span", "t": "left", "attr": { "class": "p2" } },
+            { "e": "span", "t": "left", "class": "purple1" },
             { "e": "span", "t": ", ." },
-            { "e": "span", "t": "equal", "attr": { "class": "p2" } },
+            { "e": "span", "t": "equal", "class": "purple1" },
             { "e": "span", "t": ", ." },
-            { "e": "span", "t": "left", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "8", "attr": { "class": "y" } },
-            { "e": "span", "t": ")" }
-          ]
-        },
-        {
-          "e":"div",
-          "s": [
-            { "e": "span", "t": "    $0." },
-            { "e": "span", "t": "at", "attr": { "class": "gr2" } },
-            { "e": "span", "t": "(." },
-            { "e": "span", "t": "right", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "equal", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "right", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "8", "attr": { "class": "y" } },
-            { "e": "span", "t": ")" }
-          ]
-        },
-        {
-          "e":"div",
-          "s": [
-            { "e": "span", "t": "    $0." },
-            { "e": "span", "t": "at", "attr": { "class": "gr2" } },
-            { "e": "span", "t": "(." },
-            { "e": "span", "t": "top", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "equal", "attr": { "class": "p2" } },
+            { "e": "span", "t": "left", "class": "purple1" },
             { "e": "span", "t": ", " },
-            { "e": "span", "t": "self", "attr": { "class": "r" } },
-            { "e": "span", "t": "." },
-            { "e": "span", "t": "view", "attr": { "class": "p2" } },
-            { "e": "span", "t": "." },
-            { "e": "span", "t": "safeAreaLayoutGuide", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "top", "attr": { "class": "p2" } },
-            { "e": "span", "t": ", ." },
-            { "e": "span", "t": "8", "attr": { "class": "y" } },
+            { "e": "span", "t": "8", "class": "yellow" },
             { "e": "span", "t": ")" }
           ]
         },
@@ -248,13 +210,51 @@
           "e":"div",
           "s": [
             { "e": "span", "t": "    $0." },
-            { "e": "span", "t": "at", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "at", "class": "green2" },
             { "e": "span", "t": "(." },
-            { "e": "span", "t": "height", "attr": { "class": "p2" } },
+            { "e": "span", "t": "right", "class": "purple1" },
             { "e": "span", "t": ", ." },
-            { "e": "span", "t": "equal", "attr": { "class": "p2" } },
+            { "e": "span", "t": "equal", "class": "purple1" },
             { "e": "span", "t": ", ." },
-            { "e": "span", "t": "8", "attr": { "class": "y" } },
+            { "e": "span", "t": "right", "class": "purple1" },
+            { "e": "span", "t": ", " },
+            { "e": "span", "t": "8", "class": "yellow" },
+            { "e": "span", "t": ")" }
+          ]
+        },
+        {
+          "e":"div",
+          "s": [
+            { "e": "span", "t": "    $0." },
+            { "e": "span", "t": "at", "class": "green2" },
+            { "e": "span", "t": "(." },
+            { "e": "span", "t": "top", "class": "purple1" },
+            { "e": "span", "t": ", ." },
+            { "e": "span", "t": "equal", "class": "purple1" },
+            { "e": "span", "t": ", " },
+            { "e": "span", "t": "self", "class": "red1" },
+            { "e": "span", "t": "." },
+            { "e": "span", "t": "view", "class": "purple1" },
+            { "e": "span", "t": "." },
+            { "e": "span", "t": "safeAreaLayoutGuide", "class": "purple1" },
+            { "e": "span", "t": ", ." },
+            { "e": "span", "t": "top", "class": "purple1" },
+            { "e": "span", "t": ", " },
+            { "e": "span", "t": "8", "class": "yellow" },
+            { "e": "span", "t": ")" }
+          ]
+        },
+        {
+          "e":"div",
+          "s": [
+            { "e": "span", "t": "    $0." },
+            { "e": "span", "t": "at", "class": "green2" },
+            { "e": "span", "t": "(." },
+            { "e": "span", "t": "height", "class": "purple1" },
+            { "e": "span", "t": ", ." },
+            { "e": "span", "t": "equal", "class": "purple1" },
+            { "e": "span", "t": ", " },
+            { "e": "span", "t": "8", "class": "yellow" },
             { "e": "span", "t": ")" }
           ]
         },
@@ -274,7 +274,7 @@
         {
           "e":"a",
           "t":"SwiftSVG",
-          "attr":{ "href":"http://mchoe.github.io/SwiftSVG/", "target":"_blank" }
+          "href":"http://mchoe.github.io/SwiftSVG/"
         },
         { "e":"span", "t":" 這個套件，所以 App 中的圖示，都是採用 SVG 的方式呈現。" }
       ]
@@ -287,34 +287,34 @@
         {
           "e":"a",
           "t":"AFNetworking",
-          "attr":{ "href":"https://github.com/AFNetworking/AFNetworking", "target":"_blank" }
+          "href":"https://github.com/AFNetworking/AFNetworking"
         },
         { "e":"span", "t":"，上去 GitHub 看了一下，感覺他們推薦使用 " },
         {
           "e":"a",
           "t":"Alamofire",
-          "attr":{ "href":"https://github.com/Alamofire/Alamofire", "target":"_blank" }
+          "href":"https://github.com/Alamofire/Alamofire"
         },
         { "e":"span", "t":"，所以這專案我採用 Alamofire，使用方式網路上很多資源，而我把它進階包了一下，因為 " },
         {
           "e":"a",
           "t":"closure",
-          "attr":{ "href":"https://docs.swift.org/swift-book/LanguageGuide/Closures.html", "target":"_blank" }
+          "href":"https://docs.swift.org/swift-book/LanguageGuide/Closures.html"
         },
         { "e":"span", "t":" 擺在後面可以直接這樣用，所以語意上好像更清楚了（？），範例如下：" }
       ]
     },
     {
       "e":"pre",
-      "attr":{ "class":"code language-Swift" },
+      "class":"lines xcode",
+      "copy": "class Api {\n    static var get = ApiGet()\n    static var post = ApiGet()\n}",
       "s":[
-        { "e":"label", "copy": "class Api {\n    static var get = ApiGet()\n    static var post = ApiGet()\n}" },
         {
           "e":"div",
           "s":[
-            { "e": "span", "t": "class", "attr": { "class": "r" } },
+            { "e": "span", "t": "class", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "Api", "attr": { "class": "b2" } },
+            { "e": "span", "t": "Api", "class": "blue2" },
             { "e": "span", "t": " {" }
           ]
         },
@@ -322,11 +322,11 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "    " },
-            { "e": "span", "t": "static var", "attr": { "class": "r" } },
+            { "e": "span", "t": "static var", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "get", "attr": { "class": "b" } },
+            { "e": "span", "t": "get", "class": "blue1" },
             { "e": "span", "t": " = " },
-            { "e": "span", "t": "ApiGet", "attr": { "class": "gr" } },
+            { "e": "span", "t": "ApiGet", "class": "green1" },
             { "e": "span", "t": "()" }
           ]
         },
@@ -334,11 +334,11 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "    " },
-            { "e": "span", "t": "static var", "attr": { "class": "r" } },
+            { "e": "span", "t": "static var", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "post", "attr": { "class": "b" } },
+            { "e": "span", "t": "post", "class": "blue1" },
             { "e": "span", "t": " = " },
-            { "e": "span", "t": "ApiGet", "attr": { "class": "gr" } },
+            { "e": "span", "t": "ApiGet", "class": "green1" },
             { "e": "span", "t": "()" }
           ]
         },
@@ -352,15 +352,15 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"code language-Swift" },
+      "class":"lines xcode",
+      "copy": "class ApiGet {\n    public func path(_ closure: @escaping (([String: Any]) -> ())) {\n        Alamofire.request(\"API\", method: .get).validate().responseJSON { response in\n            switch response.result {\n            case .success(let json):\n                return closure(json as! [String : Any])\n            case .failure(let error):\n                return // Error Func\n        }\n    }\n}\nclass ApiPost {\n    public func path(_ closure: @escaping (([String: Any]) -> ())) {\n        // 以下省略\n    }\n}",
       "s":[
-        { "e":"label", "copy": "class ApiGet {\n    public func path(_ closure: @escaping (([String: Any]) -> ())) {\n        Alamofire.request(\"API\", method: .get).validate().responseJSON { response in\n            switch response.result {\n            case .success(let json):\n                return closure(json as! [String : Any])\n            case .failure(let error):\n                return // Error Func\n        }\n    }\n}\nclass ApiPost {\n    public func path(_ closure: @escaping (([String: Any]) -> ())) {\n        // 以下省略\n    }\n}" },
         {
           "e":"div",
           "s":[
-            { "e": "span", "t": "class", "attr": { "class": "r" } },
+            { "e": "span", "t": "class", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "ApiGet", "attr": { "class": "b2" } },
+            { "e": "span", "t": "ApiGet", "class": "blue2" },
             { "e": "span", "t": " {" }
           ]
         },
@@ -368,17 +368,17 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "    " },
-            { "e": "span", "t": "public func", "attr": { "class": "r" } },
+            { "e": "span", "t": "public func", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "path", "attr": { "class": "b" } },
+            { "e": "span", "t": "path", "class": "blue1" },
             { "e": "span", "t": "(" },
-            { "e": "span", "t": "_", "attr": { "class": "r" } },
+            { "e": "span", "t": "_", "class": "red1" },
             { "e": "span", "t": " closure: " },
-            { "e": "span", "t": "@escaping", "attr": { "class": "r" } },
+            { "e": "span", "t": "@escaping", "class": "red1" },
             { "e": "span", "t": " (([" },
-            { "e": "span", "t": "String", "attr": { "class": "p" } },
+            { "e": "span", "t": "String", "class": "purple2" },
             { "e": "span", "t": ": " },
-            { "e": "span", "t": "Any", "attr": { "class": "r" } },
+            { "e": "span", "t": "Any", "class": "red1" },
             { "e": "span", "t": "]) -> " },
             { "e": "span", "t": "())) {" }
           ]
@@ -387,28 +387,28 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "        " },
-            { "e": "span", "t": "Alamofire", "attr": { "class": "gr" } },
+            { "e": "span", "t": "Alamofire", "class": "green1" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "request", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "request", "class": "green2" },
             { "e": "span", "t": "(" },
-            { "e": "span", "t": "\"API\"", "attr": { "class": "r2" } },
+            { "e": "span", "t": "\"API\"", "class": "red2" },
             { "e": "span", "t": ", method: " },
-            { "e": "span", "t": ".get", "attr": { "class": "p2" } },
+            { "e": "span", "t": ".get", "class": "purple1" },
             { "e": "span", "t": ")." },
-            { "e": "span", "t": "validate", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "validate", "class": "green2" },
             { "e": "span", "t": "()." },
-            { "e": "span", "t": "responseJSON", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "responseJSON", "class": "green2" },
             { "e": "span", "t": " { response " },
-            { "e": "span", "t": "in", "attr": { "class": "r" } }
+            { "e": "span", "t": "in", "class": "red1" }
           ]
         },
         {
           "e":"div",
           "s":[
             { "e": "span", "t": "            " },
-            { "e": "span", "t": "switch", "attr": { "class": "r" } },
+            { "e": "span", "t": "switch", "class": "red1" },
             { "e": "span", "t": " response." },
-            { "e": "span", "t": "result", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "result", "class": "green2" },
             { "e": "span", "t": " {" }
           ]
         },
@@ -416,11 +416,11 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "            " },
-            { "e": "span", "t": "case", "attr": { "class": "r" } },
+            { "e": "span", "t": "case", "class": "red1" },
             { "e": "span", "t": " ." },
-            { "e": "span", "t": "success", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "success", "class": "green2" },
             { "e": "span", "t": "(" },
-            { "e": "span", "t": "let", "attr": { "class": "r" } },
+            { "e": "span", "t": "let", "class": "red1" },
             { "e": "span", "t": " json):" }
           ]
         },
@@ -428,13 +428,13 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "                " },
-            { "e": "span", "t": "return", "attr": { "class": "r" } },
+            { "e": "span", "t": "return", "class": "red1" },
             { "e": "span", "t": " closure(json " },
-            { "e": "span", "t": "as", "attr": { "class": "r" } },
+            { "e": "span", "t": "as", "class": "red1" },
             { "e": "span", "t": "! [" },
-            { "e": "span", "t": "String", "attr": { "class": "p" } },
+            { "e": "span", "t": "String", "class": "purple2" },
             { "e": "span", "t": " : " },
-            { "e": "span", "t": "Any", "attr": { "class": "r" } },
+            { "e": "span", "t": "Any", "class": "red1" },
             { "e": "span", "t": "])" }
           ]
         },
@@ -442,11 +442,11 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "            " },
-            { "e": "span", "t": "case", "attr": { "class": "r" } },
+            { "e": "span", "t": "case", "class": "red1" },
             { "e": "span", "t": " ." },
-            { "e": "span", "t": "failure", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "failure", "class": "green2" },
             { "e": "span", "t": "(" },
-            { "e": "span", "t": "let", "attr": { "class": "r" } },
+            { "e": "span", "t": "let", "class": "red1" },
             { "e": "span", "t": " error):" }
           ]
         },
@@ -454,9 +454,9 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "                " },
-            { "e": "span", "t": "return", "attr": { "class": "r" } },
+            { "e": "span", "t": "return", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "// Error Func", "attr": { "class": "g" } }
+            { "e": "span", "t": "// Error Func", "class": "gray" }
           ]
         },
         {
@@ -479,14 +479,14 @@
         },
         {
           "e":"div",
-          "s":[]
+          "t":" "
         },
         {
           "e":"div",
           "s":[
-            { "e": "span", "t": "class", "attr": { "class": "r" } },
+            { "e": "span", "t": "class", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "ApiPost", "attr": { "class": "b2" } },
+            { "e": "span", "t": "ApiPost", "class": "blue2" },
             { "e": "span", "t": " {" }
           ]
         },
@@ -494,17 +494,17 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "    " },
-            { "e": "span", "t": "public func", "attr": { "class": "r" } },
+            { "e": "span", "t": "public func", "class": "red1" },
             { "e": "span", "t": " " },
-            { "e": "span", "t": "path", "attr": { "class": "b" } },
+            { "e": "span", "t": "path", "class": "blue1" },
             { "e": "span", "t": "(" },
-            { "e": "span", "t": "_", "attr": { "class": "r" } },
+            { "e": "span", "t": "_", "class": "red1" },
             { "e": "span", "t": " closure: " },
-            { "e": "span", "t": "@escaping", "attr": { "class": "r" } },
+            { "e": "span", "t": "@escaping", "class": "red1" },
             { "e": "span", "t": " (([" },
-            { "e": "span", "t": "String", "attr": { "class": "p" } },
+            { "e": "span", "t": "String", "class": "purple2" },
             { "e": "span", "t": ": " },
-            { "e": "span", "t": "Any", "attr": { "class": "r" } },
+            { "e": "span", "t": "Any", "class": "red1" },
             { "e": "span", "t": "]) -> " },
             { "e": "span", "t": "())) {" }
           ]
@@ -513,7 +513,7 @@
           "e":"div",
           "s":[
             { "e": "span", "t": "        " },
-            { "e": "span", "t": "// 以下省略", "attr": { "class": "g" } }
+            { "e": "span", "t": "// 以下省略", "class": "gray" }
           ]
         },
         {
@@ -532,26 +532,26 @@
     },
     {
       "e":"pre",
-      "attr":{ "class":"code language-Swift" },
+      "attr":{ "class":"lines xcode" },
+      "copy": "Api.get.path { json in\n    // 取得資料後要做的事\n}\nApi.post.location { json in\n    // 完成 Post 後要做的事\n}",
       "s":[
-        { "e":"label", "copy": "Api.get.path { json in\n    // 取得資料後要做的事\n}\nApi.post.location { json in\n    // 完成 Post 後要做的事\n}" },
         {
           "e":"div",
           "s":[
-            { "e": "span", "t": "Api", "attr": { "class": "gr" } },
+            { "e": "span", "t": "Api", "class": "green1" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "get", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "get", "class": "green2" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "path", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "path", "class": "green2" },
             { "e": "span", "t": " { json " },
-            { "e": "span", "t": "in", "attr": { "class": "r" } }
+            { "e": "span", "t": "in", "class": "red1" }
           ]
         },
         {
           "e":"div",
           "s":[
             { "e": "span", "t": "    " },
-            { "e": "span", "t": "// 取得資料後要做的事", "attr": { "class": "g" } }
+            { "e": "span", "t": "// 取得資料後要做的事", "class": "gray" }
           ]
         },
         {
@@ -562,25 +562,25 @@
         },
         {
           "e":"div",
-          "s":[]
+          "t":" "
         },
         {
           "e":"div",
           "s":[
-            { "e": "span", "t": "Api", "attr": { "class": "gr" } },
+            { "e": "span", "t": "Api", "class": "green1" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "post", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "post", "class": "green2" },
             { "e": "span", "t": "." },
-            { "e": "span", "t": "location", "attr": { "class": "gr2" } },
+            { "e": "span", "t": "location", "class": "green2" },
             { "e": "span", "t": " { json " },
-            { "e": "span", "t": "in", "attr": { "class": "r" } }
+            { "e": "span", "t": "in", "class": "red1" }
           ]
         },
         {
           "e":"div",
           "s":[
             { "e": "span", "t": "    " },
-            { "e": "span", "t": "// 完成 Post 後要做的事", "attr": { "class": "g" } }
+            { "e": "span", "t": "// 完成 Post 後要做的事", "class": "gray" }
           ]
         },
         {
@@ -598,7 +598,7 @@
         {
           "e":"a",
           "t":"NSURLConnection",
-          "attr":{ "href":"https://developer.apple.com/documentation/foundation/nsurlconnection", "target":"_blank" }
+          "href":"https://developer.apple.com/documentation/foundation/nsurlconnection"
         },
         { "e":"span", "t":" 之類的，打造出自己的 Call Api 工具，這等之後熟一點後，在重新送一版好了ＸＤ" }
       ]
@@ -611,13 +611,13 @@
         {
           "e":"a",
           "t":"MapKit",
-          "attr":{ "href":"https://developer.apple.com/documentation/mapkit", "target":"_blank" }
+          "href":"https://developer.apple.com/documentation/mapkit"
         },
         { "e":"span", "t":"，但想到活動時，可能會有很多人不習慣 Apple Maps 的樣式，於是才依然使用 " },
         {
           "e":"a",
           "t":"Google Maps",
-          "attr":{ "href":"https://developers.google.com/maps/documentation/ios-sdk/start", "target":"_blank" }
+          "href":"https://developers.google.com/maps/documentation/ios-sdk/start"
         },
         { "e":"span", "t":"。" }
       ]
@@ -629,13 +629,13 @@
         {
           "e":"a",
           "t":"官方文件",
-          "attr":{ "href":"https://developers.google.com/maps/documentation/ios-sdk/start", "target":"_blank" }
+          "href":"https://developers.google.com/maps/documentation/ios-sdk/start"
         },
         { "e":"span", "t":" 照著走就可以完成了，所以沒太大的難點，而使用方式也跟 " },
         {
           "e":"a",
           "t":"JavaScript",
-          "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/tutorial", "target":"_blank" }
+          "href":"https://developers.google.com/maps/documentation/javascript/tutorial"
         },
         { "e":"span", "t":" 大同小異。" }
       ]
@@ -647,19 +647,19 @@
         {
           "e":"a",
           "t":"GMSMarker",
-          "attr":{ "href":"https://developers.google.com/maps/documentation/ios-sdk/marker", "target":"_blank" }
+          "href":"https://developers.google.com/maps/documentation/ios-sdk/marker"
         },
         { "e":"span", "t":"，並取代其 " },
         {
           "e":"a",
           "t":"iconView",
-          "attr":{ "href":"https://developers.google.com/maps/documentation/ios-sdk/marker#use_the_markers_iconview_property", "target":"_blank" }
+          "href":"https://developers.google.com/maps/documentation/ios-sdk/marker#use_the_markers_iconview_property"
         },
         { "e":"span", "t":" 即可，只是在算中心點位置時要特別注意 " },
         {
           "e":"a",
           "t":"groundAnchor",
-          "attr":{ "href":"https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker.html#a65c160c7a9d3aadbbfc0a9a640fa826b", "target":"_blank" }
+          "href":"https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker.html#a65c160c7a9d3aadbbfc0a9a640fa826b"
         },
         { "e":"span", "t":" 的算法。" }
       ]
@@ -671,13 +671,13 @@
         {
           "e":"a",
           "t":"CAAnimationGroup",
-          "attr":{ "href":"https://developer.apple.com/documentation/quartzcore/caanimationgroup", "target":"_blank" }
+          "href":"https://developer.apple.com/documentation/quartzcore/caanimationgroup"
         },
         { "e":"span", "t":" 的用法，並且使用 " },
         {
           "e":"a",
           "t":"CAMediaTimingFunction",
-          "attr":{ "href":"https://developer.apple.com/documentation/quartzcore/camediatimingfunction", "target":"_blank" }
+          "href":"https://developer.apple.com/documentation/quartzcore/camediatimingfunction"
         },
         { "e":"span", "t":" 來呈現動畫的效果，不過我對 iOS App 的 UI 效能還沒有很熟，所以我也不知道我的作法會不會有效能上的問題就是了ＸＤ" }
       ]
@@ -691,7 +691,7 @@
         {
           "e":"a",
           "t":"iOS App 上架: 一步一腳印的新手教學和更新流程 - AppCoda",
-          "attr":{ "href":"https://www.appcoda.com.tw/ios-app-submission/", "target":"_blank" }
+          "href":"https://www.appcoda.com.tw/ios-app-submission/"
         },
         { "e":"span", "t":"」這篇的步驟完成的，以上都順利，只是還是被 Reject 了一次，但好像第一次都被 Reject 好像都是正常的ＸＤ？" }
       ]
@@ -723,12 +723,12 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"https://gps.godmaps.tw/", "attr":{ "href":"https://gps.godmaps.tw/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://www.appcoda.com.tw/ios-app-submission/", "attr":{ "href":"https://www.appcoda.com.tw/ios-app-submission/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://www.appcoda.com.tw/intermediate-swift-tips/", "attr":{ "href":"https://www.appcoda.com.tw/intermediate-swift-tips/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://stackoverflow.com/questions/29311093/place-activity-indicator-over-uitable-view", "attr":{ "href":"https://stackoverflow.com/questions/29311093/place-activity-indicator-over-uitable-view", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"http://mchoe.github.io/SwiftSVG/", "attr":{ "href":"http://mchoe.github.io/SwiftSVG/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/Alamofire/Alamofire", "attr":{ "href":"https://github.com/Alamofire/Alamofire", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"https://gps.godmaps.tw/", "href":"https://gps.godmaps.tw/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://www.appcoda.com.tw/ios-app-submission/", "href":"https://www.appcoda.com.tw/ios-app-submission/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://www.appcoda.com.tw/intermediate-swift-tips/", "href":"https://www.appcoda.com.tw/intermediate-swift-tips/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://stackoverflow.com/questions/29311093/place-activity-indicator-over-uitable-view", "href":"https://stackoverflow.com/questions/29311093/place-activity-indicator-over-uitable-view" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"http://mchoe.github.io/SwiftSVG/", "href":"http://mchoe.github.io/SwiftSVG/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/Alamofire/Alamofire", "href":"https://github.com/Alamofire/Alamofire" }] }
       ]
     }
   ],

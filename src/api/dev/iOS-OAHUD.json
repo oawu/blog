@@ -8,7 +8,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"簡略講解一下，首先我看了 " },
-        { "e":"a", "t":"MBProgressHUD", "attr":{ "href":"https://github.com/jdg/MBProgressHUD", "target":"_blank" } },
+        { "e":"a", "t":"MBProgressHUD", "href":"https://github.com/jdg/MBProgressHUD" },
         { "e":"span", "t":" 的做法，其中的 " },
         { "e":"code", "t":"showHUDAddedTo:(UIView *)view" },
         { "e":"span", "t":" 讓我也模仿著做，於是我做了一個類似的 show，然後加在該 view 之下，一開始還做得很開心，不過當我用 TabBarController、NavigationController 時發現，只有中間的 view 區段被覆蓋，當中的 NavBar 跟 TabBar 都沒有被覆蓋到..於是我只好換個方向。" }
@@ -17,13 +17,13 @@
     {
       "e":"figure",
       "attr":{ "alt":"OAHUD 動畫 Demo" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/190fc5d105750eec0d25598ee8b92604.gif" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/190fc5d105750eec0d25598ee8b92604.gif" } }]
     },
     {
       "e":"p",
       "s":[
         { "e":"span", "t":"接著我 Google 到了這篇文章 " },
-        { "e":"a", "t":"http://nobodyyu.github.io/2015/05/04/make-HUD-by-your-self/", "attr":{ "href":"http://nobodyyu.github.io/2015/05/04/make-HUD-by-your-self/", "target":"_blank" } },
+        { "e":"a", "t":"http://nobodyyu.github.io/2015/05/04/make-HUD-by-your-self/", "href":"http://nobodyyu.github.io/2015/05/04/make-HUD-by-your-self/" },
         { "e":"span", "t":"，我於似乎看到了關鍵字 window，所以接著開始研究 UIWindow，接著開始使用 UIWindow 然後加入 ViewController 實驗！" }
       ]
     },
@@ -31,14 +31,14 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"當中當然一直失敗啊，直到我看到了 " },
-        { "e":"a", "t":"DaiInboxHUD", "attr":{ "href":"https://github.com/DaidoujiChen/DaiInboxHUD", "target":"_blank" } },
+        { "e":"a", "t":"DaiInboxHUD", "href":"https://github.com/DaidoujiChen/DaiInboxHUD" },
         { "e":"span", "t":" 這個資源，恩..很多看不懂ＸＤ，不過今天下午還是抽空把它嗑了！因為這包 Code 我看到了很多用法，其中像是 objc/runtime.h、objc_setAssociatedObject、objc_getAssociatedObject 雖然我還沒有很熟，所以有使用錯誤的話請跟我說..裡面像是彈出的動畫，也參考了它！" }
       ]
     },
     {
       "e":"figure",
       "attr":{ "alt":"預設的 OAHUD 樣式" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/727c39c50d8c9c944269d800696c71fa.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/727c39c50d8c9c944269d800696c71fa.jpg" } }]
     },
     {
       "e":"p",
@@ -47,7 +47,7 @@
     {
       "e":"figure",
       "attr":{ "alt":"多樣的樣式設定" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/0625086673943c2aa52bf0c856fae255.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/0625086673943c2aa52bf0c856fae255.jpg" } }]
     },
     { "e":"p", "t":"不過使用起來沒有想像中的頓，於是先這樣使用啦！中間旋轉的部分是使用兩張 view，第一層的 view 加上 CAGradientLayer 的彩色圖層以及 CABasicAnimation 來達到選轉效果，然後第二層的 view 使用與底層一樣的顏色，並且縮小一點點將第一層蓋住，這樣就可以做出類似旋轉的彩色圈圈！" }
   ],
@@ -55,12 +55,12 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://github.com/comdan66/OAHUD/blob/master/OAHUD.gif", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/OAHUD", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT MacDev", "attr":{ "href":"https://www.ptt.cc/bbs/MacDev/M.1436456012.A.ACC.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"MBProgressHUD", "attr":{ "href":"https://github.com/jdg/MBProgressHUD", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"DaiInboxHUD", "attr":{ "href":"https://github.com/DaidoujiChen/DaiInboxHUD", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"make HUD by your self", "attr":{ "href":"http://nobodyyu.github.io/2015/05/04/make-HUD-by-your-self/", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://github.com/comdan66/OAHUD/blob/master/OAHUD.gif" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OAHUD" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT MacDev", "href":"https://www.ptt.cc/bbs/MacDev/M.1436456012.A.ACC.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"MBProgressHUD", "href":"https://github.com/jdg/MBProgressHUD" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"DaiInboxHUD", "href":"https://github.com/DaidoujiChen/DaiInboxHUD" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"make HUD by your self", "href":"http://nobodyyu.github.io/2015/05/04/make-HUD-by-your-self/" }] }
       ]
     }
   ],

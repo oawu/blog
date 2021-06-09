@@ -1,5 +1,5 @@
 @charset "UTF-8";
-section code:after, section pre label:before, section blockquote.info:before, section blockquote.warning:before {
+section code:after, section pre > label:before, section blockquote.info:before, section blockquote.warning:before {
   font-family: "icon";
   speak: none;
   font-style: normal;
@@ -66,11 +66,15 @@ section code:after, section pre label:before, section blockquote.info:before, se
   --ui-color-systemGray4: #d1d1d6;
   --ui-color-systemGray5: #e5e5ea;
   --ui-color-systemGray6: #f2f2f7;
+  --ui-color-codeColor: black;
+  --ui-color-codeBackground: #e8e8ed;
+  --ui-color-codeBlockquoteBackground: #c6c6c8;
+  --ui-color-codeCopyBlockquoteColor: #005aff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ui-color-label: white;
+    --ui-color-label: rgba(255, 255, 255, 0.9);
     --ui-color-secondaryLabel: rgba(235, 235, 245, 0.6);
     --ui-color-tertiaryLabel: rgba(235, 235, 245, 0.3);
     --ui-color-quaternaryLabel: rgba(235, 235, 245, 0.18);
@@ -105,6 +109,10 @@ section code:after, section pre label:before, section blockquote.info:before, se
     --ui-color-systemGray4: #3a3a3c;
     --ui-color-systemGray5: #2c2c2e;
     --ui-color-systemGray6: #1c1c1e;
+    --ui-color-codeColor: white;
+    --ui-color-codeBackground: #404042;
+    --ui-color-codeBlockquoteBackground: #7c7c7e;
+    --ui-color-codeCopyBlockquoteColor: #64d2ff;
   }
 }
 body {
@@ -273,12 +281,12 @@ body {
   }
 }
 
-footer, #prev-next, section h3, section h2, section, header {
+footer, #prev-next, section h3, section h2, section, #main header {
   position: relative;
   display: inline-block;
   width: 100%;
 }
-section footer + p, section #prev-next + p, section footer + blockquote, section #prev-next + blockquote, section footer + ul, section #prev-next + ul, section footer + ol, section #prev-next + ol, section footer + pre, section #prev-next + pre, section footer + figure, section #prev-next + figure, section footer + table, section #prev-next + table, section footer + .iframe, section #prev-next + .iframe, section h3 + p, section h3 + blockquote, section h3 + ul, section h3 + ol, section h3 + pre, section h3 + figure, section h3 + table, section h3 + .iframe, section h2 + p, section h2 + blockquote, section h2 + ul, section h2 + ol, section h2 + pre, section h2 + figure, section h2 + table, section h2 + .iframe, section section + p, section section + blockquote, section section + ul, section section + ol, section section + pre, section section + figure, section section + table, section section + .iframe, section header + p, section header + blockquote, section header + ul, section header + ol, section header + pre, section header + figure, section header + table, section header + .iframe {
+section footer + p, section #prev-next + p, section footer + blockquote, section #prev-next + blockquote, section footer + ul, section #prev-next + ul, section footer + ol, section #prev-next + ol, section footer + pre, section #prev-next + pre, section footer + figure, section #prev-next + figure, section footer + table, section #prev-next + table, section footer + .iframe, section #prev-next + .iframe, section h3 + p, section h3 + blockquote, section h3 + ul, section h3 + ol, section h3 + pre, section h3 + figure, section h3 + table, section h3 + .iframe, section h2 + p, section h2 + blockquote, section h2 + ul, section h2 + ol, section h2 + pre, section h2 + figure, section h2 + table, section h2 + .iframe, section section + p, section section + blockquote, section section + ul, section section + ol, section section + pre, section section + figure, section section + table, section section + .iframe, #main section header + p, section #main header + p, #main section header + blockquote, section #main header + blockquote, #main section header + ul, section #main header + ul, #main section header + ol, section #main header + ol, #main section header + pre, section #main header + pre, #main section header + figure, section #main header + figure, #main section header + table, section #main header + table, #main section header + .iframe, section #main header + .iframe {
   margin-top: 18px;
 }
 
@@ -287,29 +295,31 @@ section p, section blockquote, section ul, section ol, section pre, section figu
   display: inline-block;
   width: 100%;
   margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 section p + p, section blockquote + p, section ul + p, section ol + p, section pre + p, section figure + p, section table + p, section .iframe + p, section p + blockquote, section blockquote + blockquote, section ul + blockquote, section ol + blockquote, section pre + blockquote, section figure + blockquote, section table + blockquote, section .iframe + blockquote, section p + ul, section blockquote + ul, section ul + ul, section ol + ul, section pre + ul, section figure + ul, section table + ul, section .iframe + ul, section p + ol, section blockquote + ol, section ul + ol, section ol + ol, section pre + ol, section figure + ol, section table + ol, section .iframe + ol, section p + pre, section blockquote + pre, section ul + pre, section ol + pre, section pre + pre, section figure + pre, section table + pre, section .iframe + pre, section p + figure, section blockquote + figure, section ul + figure, section ol + figure, section pre + figure, section figure + figure, section table + figure, section .iframe + figure, section p + table, section blockquote + table, section ul + table, section ol + table, section pre + table, section figure + table, section table + table, section .iframe + table, section p + .iframe, section blockquote + .iframe, section ul + .iframe, section ol + .iframe, section pre + .iframe, section figure + .iframe, section table + .iframe, section .iframe + .iframe {
   margin-top: 18px;
 }
 
-header {
+#main header {
   padding-bottom: 28px;
   margin-bottom: 28px;
   margin-top: 48px;
 }
-header * {
+#main header * {
   display: inline-block;
   width: 100%;
 }
-header h1 {
+#main header h1 {
   line-height: 1.2;
   margin: 0;
 }
-header span {
+#main header span {
   margin-top: 8px;
   color: var(--ui-color-secondaryLabel);
 }
-header:after {
+#main header:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -325,16 +335,22 @@ section h2 {
   line-height: 1.2;
 }
 section h2:not(:first-child) {
-  margin-top: 52px;
+  margin-top: 72px;
 }
 section h2:first-child {
   margin-top: 20px;
+}
+section h2 + h2:not(:first-child) {
+  margin-top: 48px;
+}
+section h2 + h3:not(:first-child) {
+  margin-top: 32px;
 }
 section h3 {
   margin: 0;
 }
 section h3:not(:first-child) {
-  margin-top: 32px;
+  margin-top: 52px;
 }
 section a {
   color: var(--ui-color-link);
@@ -350,7 +366,10 @@ section blockquote {
   border-radius: 3px;
 }
 section blockquote code {
-  background-color: var(--ui-color-opaqueSeparator);
+  background-color: var(--ui-color-codeBlockquoteBackground);
+}
+section blockquote code:after {
+  color: var(--ui-color-codeCopyBlockquoteColor);
 }
 section blockquote:after {
   content: "";
@@ -400,31 +419,28 @@ section pre {
   display: inline-block;
   width: 100%;
   margin: 0;
-  padding: 16px 8px;
+  padding: 20px;
   font-family: Hack, Content-font, Roboto, sans-serif;
-  word-break: normal;
-  white-space: pre;
-  word-spacing: normal;
-  overflow: auto;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-section pre label {
+section pre > label {
   position: absolute;
   right: 0;
   top: 0;
   z-index: 20;
+  display: inline-block;
   width: 36px;
   height: 28px;
   line-height: 28px;
-  text-align: center;
-  cursor: pointer;
-  background-color: rgba(120, 120, 120, 0.5);
-  font-size: 16px;
   color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgba(120, 120, 120, 0.5);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   -webkit-transition: opacity 0.3s;
@@ -435,20 +451,61 @@ section pre label {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-section pre label:hover {
+section pre > label:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-section pre label:before {
+section pre > label:before {
   content: "򠀨";
 }
-section pre div {
+section pre > div {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  display: block;
+  word-break: normal;
+  white-space: pre;
+  word-spacing: normal;
+  overflow-x: auto;
+  font-size: small;
+  -webkit-overflow-scrolling: touch;
+}
+section pre > div::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+section pre > div::-webkit-scrollbar {
+  background-color: transparent;
+  height: 9px;
+}
+section pre > div:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 42px;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+section pre > div div {
   z-index: 5;
   position: relative;
   display: block;
-  font-size: small;
   line-height: 22px;
-  padding-left: 12px;
   counter-increment: line;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -460,152 +517,98 @@ section pre div {
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-section pre div:before {
+section pre > div div:before {
   position: absolute;
   left: 0;
   top: 0;
   display: inline-block;
-  width: 26px;
+  width: 32px;
   height: 22px;
   line-height: 22px;
   text-align: right;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=45);
+  opacity: 0.45;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   font-size: small;
   font-family: Content-font, Roboto, sans-serif;
 }
-section pre.code:after {
+section pre.lines {
+  padding-left: 8px;
+}
+section pre.lines > div:after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: inline-block;
-  width: 42px;
-  height: 100%;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.01);
-  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
 }
-section pre.code div {
-  padding-left: 50px;
+section pre.lines > div div {
+  padding-left: 54px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
-section pre.code div:before {
+section pre.lines > div div:before {
   content: counter(line);
 }
-section pre.zshrc {
-  color: white;
-  background-color: #242428;
+section pre.lines > div div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
-section pre.zshrc .r {
-  color: #ff375f;
+section pre.lines > div div:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
 }
-section pre.zshrc .y {
-  color: #ffe894;
-}
-section pre.zshrc .g {
-  color: #7d8c98;
-}
-section pre.zshrc .b {
-  color: #64d2ff;
-}
-section pre.zshrc div:before {
-  color: #6e6e6e;
-}
-section pre.term {
-  color: rgba(255, 255, 255, 0.9);
-  background-color: #242428;
-}
-section pre.term div:before {
-  color: #6e6e6e;
-}
-section pre.term div:hover {
-  background-color: rgba(100, 100, 100, 0.2);
-}
-section pre.term div:hover:before {
-  color: white;
-}
-section pre.gitconfig {
-  color: white;
-  background-color: #242428;
-}
-section pre.gitconfig .r {
-  color: #ff335c;
-}
-section pre.gitconfig .y {
-  color: #ffe98f;
-}
-section pre.gitconfig div:before {
-  color: #6e6e71;
-}
-section pre.gitconfig div:hover {
-  background-color: rgba(100, 111, 131, 0.2);
-}
-section pre.gitconfig div:hover:before {
-  color: white;
-}
-section pre.language-Swift {
+section pre.xcode {
   color: white;
   background-color: #202025;
 }
-section pre.language-Swift .r {
+section pre.xcode .red1 {
   color: #f7439d;
 }
-section pre.language-Swift .b {
-  color: #3ebee0;
-}
-section pre.language-Swift .p {
-  color: #d9baff;
-}
-section pre.language-Swift .r2 {
+section pre.xcode .red2 {
   color: #ff6063;
 }
-section pre.language-Swift .p2 {
-  color: #b67ef9;
+section pre.xcode .blue1 {
+  color: #3ebee0;
 }
-section pre.language-Swift .b2 {
+section pre.xcode .blue2 {
   color: #75e1ff;
 }
-section pre.language-Swift .y {
+section pre.xcode .purple1 {
+  color: #b67ef9;
+}
+section pre.xcode .purple2 {
+  color: #d9baff;
+}
+section pre.xcode .yellow {
   color: #ffe97f;
 }
-section pre.language-Swift .g {
+section pre.xcode .gray {
   color: #788591;
 }
-section pre.language-Swift .gr {
+section pre.xcode .green1 {
   color: #b6feee;
 }
-section pre.language-Swift .gr2 {
+section pre.xcode .green2 {
   color: #64d7c0;
 }
-section pre.language-Swift div:before {
-  color: #6e6e71;
-}
-section pre.language-Swift div:hover {
-  background-color: rgba(100, 111, 131, 0.2);
-}
-section pre.language-Swift div:hover:before {
-  color: white;
-}
-section pre.php {
-  color: white;
+section pre:not(.xcode) {
+  color: rgba(255, 255, 255, 0.9);
   background-color: #242428;
 }
-section pre.php .b {
+section pre:not(.xcode) .gray {
+  color: #7d8c98;
+}
+section pre:not(.xcode) .red {
+  color: #ff375f;
+}
+section pre:not(.xcode) .blue {
   color: #64d2ff;
 }
-section pre.php div:before {
-  color: #929294;
-}
-section pre.php div:hover {
-  background-color: #444448;
-}
-section pre.php div:hover:before {
-  color: #a6a6a8;
+section pre:not(.xcode) .yellow {
+  color: #ffe894;
 }
 section ul, section ol {
   padding-left: 36px;
@@ -620,7 +623,10 @@ section ul li + li, section ol li + li {
   margin-top: 4px;
 }
 section ul ul, section ul ol, section ol ul, section ol ol {
-  padding-left: 32px;
+  padding-left: 28px;
+}
+section ul ul ul, section ul ul ol, section ul ol ul, section ul ol ol, section ol ul ul, section ol ul ol, section ol ol ul, section ol ol ol {
+  padding-left: 24px;
 }
 section figure {
   width: auto;
@@ -728,7 +734,8 @@ section code {
   padding: 2px 6px;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  background-color: var(--ui-color-tertiarySystemGroupedBackground);
+  color: var(--ui-color-codeColor);
+  background-color: var(--ui-color-codeBackground);
   font-size: small;
   font-family: Hack, Content-font, Roboto, sans-serif;
   -webkit-border-radius: 3px;
@@ -1379,9 +1386,14 @@ footer time:before {
 }
 @media screen and (max-width: 750px) and (min-width: 0) {
   #app {
+    padding-top: 68px;
     padding-bottom: 24px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  #main header {
+    margin-top: 12px;
   }
 
   #cover {

@@ -8,8 +8,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://macdown.uranusjr.com/", "attr":{ "href":"https://macdown.uranusjr.com/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"span", "t":"備用載點 － " }, { "e":"a", "t":"MacDown.app.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/MacDown.app.zip", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://macdown.uranusjr.com/", "href":"https://macdown.uranusjr.com/" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"備用載點 － " }, { "e":"a", "t":"MacDown.app.zip", "href":"https://cdn.ioa.tw/MacEnvInit/MacDown.app.zip" }] },
         {
           "e":"li",
           "s":[

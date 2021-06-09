@@ -4,7 +4,7 @@
   "i":"2021-06-02",
   "a":[
 
-    { "e":"blockquote", "attr":{"class": "info"}, "s": [
+    { "e":"blockquote", "class": "info", "s": [
       { "e": "span", "t":"若無特殊需求，安裝最新版本的 " },
       { "e": "code", "t":"Sublime Text 4" },
       { "e": "span", "t":" 即可！" }
@@ -14,7 +14,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.sublimetext.com/download", "attr":{ "href":"https://www.sublimetext.com/download", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"官網下載 － " }, { "e":"a", "t":"https://www.sublimetext.com/download", "href":"https://www.sublimetext.com/download" }] },
         { "e":"li", "s":[{ "e":"span", "t":"點擊 macOS 下載，完成來後，就移到" }, { "e":"b", "t":"應用程式目錄" }, { "e":"span", "t":"，並開啟" }] }
       ]
     },
@@ -22,7 +22,7 @@
     {
       "e":"p",
       "s":[
-        { "e":"span", "t":"官方網站介紹 － " }, { "e":"a", "t":"https://packagecontrol.io/installation", "attr":{ "href":"https://packagecontrol.io/installation", "target":"_blank" } }
+        { "e":"span", "t":"官方網站介紹 － " }, { "e":"a", "t":"https://packagecontrol.io/installation", "href":"https://packagecontrol.io/installation" }
       ]
     },
     {
@@ -34,7 +34,7 @@
             { "e":"span", "t":"下載 " },
             { "e":"b", "t":"Swift.sublime-package" },
             { "e":"span", "t":" 網址 " },
-            { "e":"a", "t":"https://packagecontrol.io/installation", "attr":{ "href":"https://packagecontrol.io/installation", "target":"_blank" } }
+            { "e":"a", "t":"https://packagecontrol.io/installation", "href":"https://packagecontrol.io/installation" }
           ]
         },
         {
@@ -42,7 +42,7 @@
           "s":[
             { "e":"span", "t":"畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" },
             { "e":"br" },
-            { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/1.jpg" }, "s":[] }] }
+            { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/1.jpg" }] }
           ]
         },
         {
@@ -50,7 +50,7 @@
           "s":[
             { "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"Swift.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" },
             { "e":"br" },
-            { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/2.jpg" }, "s":[] }] }
+            { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/2.jpg" }] }
           ]
         },
         {
@@ -68,7 +68,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"Default (OSX).sublime-keymap", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/Default+(OSX).sublime-keymap", "target":"_blank" } }]
+          "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"Default (OSX).sublime-keymap", "href":"https://cdn.ioa.tw/MacEnvInit/2021/Default+(OSX).sublime-keymap" }]
         },
         {
           "e":"li",
@@ -84,7 +84,7 @@
         },
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Default (OSX).sublime-keymap" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/4.jpg" }, "s":[] }] }]
+          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Default (OSX).sublime-keymap" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/4.jpg" }] }]
         }
       ]
     },
@@ -99,10 +99,10 @@
             {
               "e":"ul",
               "s":[
-                { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.zip", "target":"_blank" } }] },
+                { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.zip", "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.zip" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"將 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 解開壓縮，解開後會是一個名為 " }, { "e":"code", "t":"OA Theme" }, { "e":"span", "t":" 目錄" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"將剛剛解開壓縮的 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 目錄複製至 " }, { "e":"code", "t":"Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/5.png" }, "s":[] }] }] }
+                { "e":"li", "s":[{ "e":"span", "t":"將剛剛解開壓縮的 " }, { "e":"code", "t":"OA Theme.zip" }, { "e":"span", "t":" 目錄複製至 " }, { "e":"code", "t":"Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/5.png" }] }] }
               ]
             }
           ]
@@ -114,10 +114,10 @@
             {
               "e":"ul",
               "s":[
-                { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.sublime-package", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.sublime-package", "target":"_blank" } }] },
+                { "e":"li", "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"OA Theme.sublime-package", "href":"https://cdn.ioa.tw/MacEnvInit/2021/OA+Theme.sublime-package" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"剛下載的檔案名稱可能為 " }, { "e":"code", "t":"OA+Theme.sublime-package" }, { "e":"span", "t":"，請先將他更名為 " }, { "e":"code", "t":"OA Theme.sublime-package", "copy":"OA Theme.sublime-package" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"一樣先將畫面切換到 " }, { "e":"b", "t":"Sublime Text" }, { "e":"span", "t":" 點選左上角 " }, { "e":"code", "t":"Sublime Text" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Preferences" }, { "e":"span", "t":" > " }, { "e":"code", "t":"Browser Packages…" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"OA Theme.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/6.png" }, "s":[] }] }] }
+                { "e":"li", "s":[{ "e":"span", "t":"選擇與 " }, { "e":"b", "t":" Packages " }, { "e":"span", "t":" 同一層的 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 並將剛剛下載的 " }, { "e":"code", "t":"OA Theme.sublime-package" }, { "e":"span", "t":" 複製到 " }, { "e":"code", "t":"Installed Packages" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/6.png" }] }] }
               ]
             }
           ]
@@ -211,7 +211,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"Preferences.sublime-settings", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/2021/Preferences.sublime-settings", "target":"_blank" } }]
+          "s":[{ "e":"span", "t":"下載 " }, { "e":"a", "t":"Preferences.sublime-settings", "href":"https://cdn.ioa.tw/MacEnvInit/2021/Preferences.sublime-settings" }]
         },
         {
           "e":"li",
@@ -223,7 +223,7 @@
         },
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內，將原本的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 取代" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "attr":{ "src":"/img/mac-sublimeText/3.jpg" }, "s":[] }] }]
+          "s":[{ "e":"span", "t":"將剛剛下載的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 複製至 " }, { "e":"code", "t":"User" }, { "e":"span", "t":" 目錄內，將原本的 " }, { "e":"code", "t":"Preferences.sublime-settings" }, { "e":"span", "t":" 取代" }, { "e":"span", "t":" 目錄內即可，如下圖：" }, { "e":"br" }, { "e":"figure", "s":[{ "e":"img", "src":"/img/mac-sublimeText/3.jpg" }] }]
         }
       ]
     },
@@ -240,7 +240,7 @@
             { "e":"span", "t":" 終端機(若尚未安裝 " },
             { "e":"code", "t":"iTerm2" },
             { "e":"span", "t":" 請先參考 " },
-            { "e":"a", "t":"此篇", "attr":{ "href":"https://www.ioa.tw/macOS/iTerm2.html", "target":"_blank" } },
+            { "e":"a", "t":"此篇", "href":"https://www.ioa.tw/macOS/iTerm2.html" },
             { "e":"span", "t":" 安裝)，建立 bin 目錄執行指令 " },
             { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
           ]
@@ -272,22 +272,22 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=nPlPOmX1aME", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=nPlPOmX1aME" }]
         },
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"[備份] Sublime Text 3、2 安裝設定", "attr":{ "href":"/?k=mac&id=Backup-SublimeText", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"[備份] Sublime Text 3、2 安裝設定", "href":"/?k=mac&id=Backup-SublimeText" }]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"https://gist.github.com/barnes7td/3804534", "attr":{ "href":"https://gist.github.com/barnes7td/3804534", "target":"_blank" } }
+            { "e":"a", "t":"https://gist.github.com/barnes7td/3804534", "href":"https://gist.github.com/barnes7td/3804534" }
           ]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"https://stackoverflow.com/questions/25152711/subl-command-not-working-command-not-found", "attr":{ "href":"https://stackoverflow.com/questions/25152711/subl-command-not-working-command-not-found", "target":"_blank" } }
+            { "e":"a", "t":"https://stackoverflow.com/questions/25152711/subl-command-not-working-command-not-found", "href":"https://stackoverflow.com/questions/25152711/subl-command-not-working-command-not-found" }
           ]
         }
       ]

@@ -11,7 +11,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"官網下載 － " },
-            { "e":"a", "t":"https://www.sublimetext.com/3", "attr":{ "href":"https://www.sublimetext.com/3", "target":"_blank" } }
+            { "e":"a", "t":"https://www.sublimetext.com/3", "href":"https://www.sublimetext.com/3" }
           ]
         },
         {
@@ -32,7 +32,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"官方網站介紹 － " },
-            { "e":"a", "t":"https://packagecontrol.io/installation#st3", "attr":{ "href":"https://packagecontrol.io/installation#st3", "target":"_blank" } }
+            { "e":"a", "t":"https://packagecontrol.io/installation#st3", "href":"https://packagecontrol.io/installation#st3" }
           ]
         },
         {
@@ -159,7 +159,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"下載 " },
-            { "e":"a", "t":"Preferences.sublime-settings", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/Preferences.sublime-settings", "target":"_blank" } }
+            { "e":"a", "t":"Preferences.sublime-settings", "href":"https://cdn.ioa.tw/MacEnvInit/Preferences.sublime-settings" }
           ]
         },
         {
@@ -201,7 +201,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"下載 " },
-            { "e":"a", "t":"Default (OSX).sublime-keymap", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/Default+(OSX).sublime-keymap", "target":"_blank" } }
+            { "e":"a", "t":"Default (OSX).sublime-keymap", "href":"https://cdn.ioa.tw/MacEnvInit/Default+(OSX).sublime-keymap" }
           ]
         },
         {
@@ -237,7 +237,7 @@
             { "e":"span", "t":" 終端機(若尚未安裝 " },
             { "e":"code", "t":"iTerm2" },
             { "e":"span", "t":" 請先參考 " },
-            { "e":"a", "t":"此篇", "attr":{ "href":"https://www.ioa.tw/macOS/iTerm2.html", "target":"_blank" } },
+            { "e":"a", "t":"此篇", "href":"https://www.ioa.tw/macOS/iTerm2.html" },
             { "e":"span", "t":" 安裝)，建立 bin 目錄執行指令 " },
             { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
           ]
@@ -277,7 +277,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"官網下載 － " },
-            { "e":"a", "t":"https://www.sublimetext.com/2", "attr":{ "href":"https://www.sublimetext.com/2", "target":"_blank" } }
+            { "e":"a", "t":"https://www.sublimetext.com/2", "href":"https://www.sublimetext.com/2" }
           ]
         },
         {
@@ -298,7 +298,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"網站介紹 － " },
-            { "e":"a", "t":"https://packagecontrol.io/installation#st2", "attr":{ "href":"https://packagecontrol.io/installation#st2", "target":"_blank" } }
+            { "e":"a", "t":"https://packagecontrol.io/installation#st2", "href":"https://packagecontrol.io/installation#st2" }
           ]
         },
         { "e":"li", "t":"打開 Sublime Text 2，按下 ctrl + `" },
@@ -400,9 +400,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"下載 " },
-            { "e":"a", "t":"OA.tmTheme", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/OA.tmTheme", "target":"_blank" } },
+            { "e":"a", "t":"OA.tmTheme", "href":"https://cdn.ioa.tw/MacEnvInit/OA.tmTheme" },
             { "e":"span", "t":" 與 " },
-            { "e":"a", "t":"Theme － OA.zip", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/Theme%20-%20OA.zip", "target":"_blank" } }
+            { "e":"a", "t":"Theme － OA.zip", "href":"https://cdn.ioa.tw/MacEnvInit/Theme%20-%20OA.zip" }
           ]
         },
         {
@@ -472,7 +472,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"下載 " },
-            { "e":"a", "t":"Preferences.sublime-settings", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/Preferences.sublime-settings", "target":"_blank" } }
+            { "e":"a", "t":"Preferences.sublime-settings", "href":"https://cdn.ioa.tw/MacEnvInit/Preferences.sublime-settings" }
           ]
         },
         {
@@ -514,7 +514,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"下載 " },
-            { "e":"a", "t":"Default (OSX).sublime-keymap", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/Default+(OSX).sublime-keymap", "target":"_blank" } }
+            { "e":"a", "t":"Default (OSX).sublime-keymap", "href":"https://cdn.ioa.tw/MacEnvInit/Default+(OSX).sublime-keymap" }
           ]
         },
         {
@@ -552,7 +552,7 @@
             { "e":"span", "t":" 終端機(若尚未安裝 " },
             { "e":"code", "t":"iTerm2" },
             { "e":"span", "t":" 請先參考 " },
-            { "e":"a", "t":"此篇", "attr":{ "href":"https://www.ioa.tw/macOS/iTerm2.html", "target":"_blank" } },
+            { "e":"a", "t":"此篇", "href":"https://www.ioa.tw/macOS/iTerm2.html" },
             { "e":"span", "t":" 安裝)，建立 bin 目錄執行指令 " },
             { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
           ]
@@ -611,13 +611,13 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=nPlPOmX1aME", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=nPlPOmX1aME" }]
         },
         {
           "e":"li",
           "s":[
             { "e":"span", "t":"安裝指令參考 " },
-            { "e":"a", "t":"https://gist.github.com/barnes7td/3804534", "attr":{ "href":"https://gist.github.com/barnes7td/3804534", "target":"_blank" } }
+            { "e":"a", "t":"https://gist.github.com/barnes7td/3804534", "href":"https://gist.github.com/barnes7td/3804534" }
           ]
         }
       ]

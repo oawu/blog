@@ -355,7 +355,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"先開啟 " },
-            { "e":"code", "t":"伺服器", "attr": {"class": "green"} },
+            { "e":"code", "t":"伺服器", "class": "green" },
             { "e":"span", "t":" 的 " },
             { "e":"code", "t":"authorized_keys" },
             { "e":"span", "t":"，輸入指令：" },
@@ -366,7 +366,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"再開啟 " },
-            { "e":"code", "t":"本機端", "attr": {"class": "red"} },
+            { "e":"code", "t":"本機端", "class": "red" },
             { "e":"span", "t":" 的終端機，複製 Public key，輸入指令：" },
             { "e":"code", "t":"pbcopy < ~/.ssh/id_rsa.pub", "copy":"pbcopy < ~/.ssh/id_rsa.pub" }
           ]
@@ -375,7 +375,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"然後回 " },
-            { "e":"code", "t":"伺服器", "attr": {"class": "green"} },
+            { "e":"code", "t":"伺服器", "class": "green" },
             { "e":"span", "t":" 在 " },
             { "e":"code", "t":"authorized_keys" },
             { "e":"span", "t":" 最後面貼上你剛剛複製的本機端 Public key" }
@@ -407,16 +407,16 @@
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "attr":{ "href":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "target":"_blank" } }
+            { "e":"a", "t":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html", "href":"http://comdan66.github.io/configs/book/mds/ec2-ubuntu/apache.html" }
           ]
         },
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/", "attr":{ "href":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/", "href":"https://note.artchiu.org/2016/06/17/lets-encrypt-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-%E9%9D%9E%E5%AE%98%E6%96%B9/" }]
         },
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"https://help.ubuntu.com/community/UbuntuTime", "attr":{ "href":"https://help.ubuntu.com/community/UbuntuTime", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"https://help.ubuntu.com/community/UbuntuTime", "href":"https://help.ubuntu.com/community/UbuntuTime" }]
         }
       ]
     }

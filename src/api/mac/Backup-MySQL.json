@@ -10,7 +10,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"官網頁面", "attr":{ "href":"http://dev.mysql.com/downloads/file.php?id=454017", "target":"_blank" } },
+            { "e":"a", "t":"官網頁面", "href":"http://dev.mysql.com/downloads/file.php?id=454017" },
             {
               "e":"span",
               "t":"下方 "
@@ -28,7 +28,7 @@
               "e":"span",
               "t":"備用載點 － "
             },
-            { "e":"a", "t":"mysql-5.6.21-osx10.9-x86_64.dmg", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/mysql-5.6.21-osx10.9-x86_64.dmg", "target":"_blank" } }
+            { "e":"a", "t":"mysql-5.6.21-osx10.9-x86_64.dmg", "href":"https://cdn.ioa.tw/MacEnvInit/mysql-5.6.21-osx10.9-x86_64.dmg" }
           ]
         },
         {
@@ -335,10 +335,7 @@
               "t":"注意！設置密碼時，要記得加上引號，假設密碼為 1234，應該為:"
             },
             {
-              "e":"br",
-              "s":[
-                
-              ]
+              "e":"br"
             },
             {
               "e":"code",
@@ -355,12 +352,12 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=xRyxQ1qmj2c" }]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx", "attr":{ "href":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx", "target":"_blank" } }
+            { "e":"a", "t":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx", "href":"http://stackoverflow.com/questions/6474775/setting-the-mysql-root-user-password-on-osx" }
           ]
         }
       ]

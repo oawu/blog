@@ -6,7 +6,7 @@
 
     {
       "e":"blockquote",
-      "attr":{"class": "warning"},
+      "class": "warning",
       "t":"安裝時需注意自己電腦內的位置，以下為 OA 本人的設定值，請注意自己的路徑是否正確。"
     },
 
@@ -93,7 +93,7 @@
                   "s":[
                     { "e":"span", "t":"重啟 Apache，終端機執行指令 " },
                     { "e":"code", "t":"sudo apachectl -k restart", "copy":"sudo apachectl -k restart" },
-                    { "e":"blockquote", "attr":{"class": "info"}, "t": "重啟 Apache 如有發生錯誤是正常的現象，後續步驟會修正！" }
+                    { "e":"blockquote", "class": "info", "t": "重啟 Apache 如有發生錯誤是正常的現象，後續步驟會修正！" }
                   ]
                 }
               ]
@@ -223,11 +223,8 @@
             ] },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
-              "s":[
-                { "e":"label", "copy": "127.0.0.1 dev.case.ioa.tw" },
-                { "e":"div", "t":"127.0.0.1 dev.case.ioa.tw" }
-              ]
+              "copy": "127.0.0.1 dev.case.ioa.tw",
+              "t":"127.0.0.1    dev.case.ioa.tw"
             }
           ]
         }
@@ -270,9 +267,9 @@
             ] },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
+              "class":"lines",
+              "copy": "# root\n<VirtualHost *:80>\n  ServerAdmin comdan66@gmail.com\n  DocumentRoot \"/Users/oa/www\"\n  <Directory \"/Users/oa/www\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>\n# Case\n<VirtualHost *:80>\n  ServerName dev.case.ioa.tw\n  ServerAlias dev.case.ioa.tw\n  DocumentRoot \"/Users/oa/www/case\"\n  <Directory \"/Users/oa/www/case\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>",
               "s":[
-                { "e":"label", "copy": "# root\n<VirtualHost *:80>\n  ServerAdmin comdan66@gmail.com\n  DocumentRoot \"/Users/oa/www\"\n  <Directory \"/Users/oa/www\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>\n# Case\n<VirtualHost *:80>\n  ServerName dev.case.ioa.tw\n  ServerAlias dev.case.ioa.tw\n  DocumentRoot \"/Users/oa/www/case\"\n  <Directory \"/Users/oa/www/case\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>" },
                 { "e":"div", "t":"# root" },
                 { "e":"div", "t":"<VirtualHost *:80>" },
                 { "e":"div", "t":"  ServerAdmin comdan66@gmail.com" },
@@ -330,7 +327,7 @@
 
 
     { "e":"h2", "t":"設定 https 的 SSL 功能" },
-    { "e":"blockquote", "attr":{"class": "info"}, "t": "此功能一般來說不太會用到，所以不一定要安裝，不需要此功能的話就直接跳過吧！" },
+    { "e":"blockquote", "class": "info", "t": "此功能一般來說不太會用到，所以不一定要安裝，不需要此功能的話就直接跳過吧！" },
 
     { "e":"p", "t":"本機開發時若需 https 功能，可藉由 openssl 輔助，方法如下：" },
     {
@@ -349,27 +346,18 @@
             {"e": "p", "t": "將以下三個註解拿掉"},
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
-              "s":[
-                { "e":"label", "copy":"mod_socache_shmcb.so" },
-                { "e":"div", "t": "LoadModule socache_shmcb_module lib/httpd/modules/mod_socache_shmcb.so" }
-              ]
+              "copy":"mod_socache_shmcb.so",
+              "t": "LoadModule socache_shmcb_module lib/httpd/modules/mod_socache_shmcb.so"
             },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
-              "s":[
-                { "e":"label", "copy":"mod_ssl.so" },
-                { "e":"div", "t":"LoadModule ssl_module lib/httpd/modules/mod_ssl.so" }
-              ]
+              "copy":"mod_ssl.so",
+              "t":"LoadModule ssl_module lib/httpd/modules/mod_ssl.so"
             },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
-              "s":[
-                { "e":"label", "copy":"httpd-ssl.conf" },
-                { "e":"div", "t":"Include /usr/local/etc/httpd/extra/httpd-ssl.conf" }
-              ]
+              "copy":"httpd-ssl.conf",
+              "t":"Include /usr/local/etc/httpd/extra/httpd-ssl.conf"
             }
           ]
         },
@@ -418,9 +406,9 @@
             ] },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
+              "class":"lines",
+              "copy": "<VirtualHost *:443>\n    DocumentRoot \"/Users/oa/www\"\n    ServerName localhost\n    SSLEngine on\n    SSLCertificateFile \"/usr/local/etc/httpd/server.crt\"\n    SSLCertificateKeyFile \"/usr/local/etc/httpd/server.key\"\n</VirtualHost>",
               "s":[
-                { "e":"label", "copy": "<VirtualHost *:443>\n    DocumentRoot \"/Users/oa/www\"\n    ServerName localhost\n    SSLEngine on\n    SSLCertificateFile \"/usr/local/etc/httpd/server.crt\"\n    SSLCertificateKeyFile \"/usr/local/etc/httpd/server.key\"\n</VirtualHost>" },
                 { "e":"div", "t":"<VirtualHost *:443>" },
                 { "e":"div", "t":"    DocumentRoot \"/Users/oa/www\"" },
                 { "e":"div", "t":"    ServerName localhost" },
@@ -512,18 +500,18 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=V32zn8xtGnM", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=V32zn8xtGnM" }]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"macOS 11.0 Big Sur Apache Setup: Multiple PHP Versions | Grav CMS", "attr":{ "href":"https://getgrav.org/blog/macos-bigsur-apache-multiple-php-versions", "target":"_blank" } }
+            { "e":"a", "t":"macOS 11.0 Big Sur Apache Setup: Multiple PHP Versions | Grav CMS", "href":"https://getgrav.org/blog/macos-bigsur-apache-multiple-php-versions" }
           ]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"https://getgrav.org/blog/macos-mojave-apache-ssl", "attr":{ "href":"https://getgrav.org/blog/macos-mojave-apache-ssl", "target":"_blank" } }
+            { "e":"a", "t":"https://getgrav.org/blog/macos-mojave-apache-ssl", "href":"https://getgrav.org/blog/macos-mojave-apache-ssl" }
           ]
         }
       ]

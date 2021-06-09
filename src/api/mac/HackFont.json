@@ -11,14 +11,14 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"官網下載 － " },
-            { "e":"a", "attr":{ "href":"https://sourcefoundry.org/hack/", "target":"_blank" }, "t":"https://sourcefoundry.org/hack/" }
+            { "e":"a", "t":"https://sourcefoundry.org/hack/", "href":"https://sourcefoundry.org/hack/" }
           ]
         },
         {
           "e":"li",
           "s":[
             { "e":"span", "t":"備用載點 － " },
-            { "e":"a", "attr":{ "href":"https://cdn.ioa.tw/MacEnvInit/Hack-v3.003-ttf.zip", "target":"_blank" }, "t":"Hack-v3.003-ttf.zip" }
+            { "e":"a", "t":"Hack-v3.003-ttf.zip", "href":"https://cdn.ioa.tw/MacEnvInit/Hack-v3.003-ttf.zip" }
           ]
         },
         {
@@ -34,7 +34,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=VSSxnZdog7U", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=VSSxnZdog7U" }]
         }
       ]
     }

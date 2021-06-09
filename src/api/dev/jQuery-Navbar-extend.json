@@ -7,11 +7,11 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"這是一個前端 " },
-        { "e":"a", "t":"jQuery", "attr":{ "href":"https://jquery.com/", "target":"_blank" } },
+        { "e":"a", "t":"jQuery", "href":"https://jquery.com/" },
         { "e":"span", "t":" Extend Function，主要架構於 jQuery 以及 " },
-        { "e":"a", "t":"SCSS", "attr":{ "href":"http://sass-lang.com/", "target":"_blank" } },
+        { "e":"a", "t":"SCSS", "href":"http://sass-lang.com/" },
         { "e":"span", "t":"、" },
-        { "e":"a", "t":"SASS", "attr":{ "href":"https://zh.wikipedia.org/wiki/Sass", "target":"_blank" } },
+        { "e":"a", "t":"SASS", "href":"https://zh.wikipedia.org/wiki/Sass" },
         { "e":"span", "t":"。開發者可自行設定 SCSS 變數、jQuery Extend Options 來更換樣式。" }
       ]
     }
@@ -20,8 +20,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/OA-navbar/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/OA-navbar", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-navbar/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-navbar" }] }
       ]
     }
   ],

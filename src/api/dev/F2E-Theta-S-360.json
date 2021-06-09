@@ -5,7 +5,7 @@
   "a":[
     {
       "e":"blockquote",
-      "attr": { "class": "warning" },
+      "class": "warning",
       "t":"目前已將 Live Demo 關閉並且不維護囉，請大家先參考 GitHub 的原始碼吧！"
     },
     {
@@ -22,32 +22,32 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"由於 RICOH Theta S 360 全景相機具備兩鏡頭，所以可以產出一張由兩顆鏡頭組成的 360 度的相片，照片是以水平呈現，所以瀏覽起來效果不佳。目前據我所知 RICOH Theta S 官網也有提供上傳瀏覽 " },
-        { "e":"a", "t":"360 度相片播放器", "attr":{ "href":"https://theta360.com/s/ky0a4C1uh1JWl1Q56C8NZm3OO", "target":"_blank" } },
+        { "e":"a", "t":"360 度相片播放器", "href":"https://theta360.com/s/ky0a4C1uh1JWl1Q56C8NZm3OO" },
         { "e":"span", "t":" 的功能，但當時官網的播放器是使用 " },
-        { "e":"a", "t":"Flash", "attr":{ "href":"https://get.adobe.com/tw/flashplayer/", "target":"_blank" } },
+        { "e":"a", "t":"Flash", "href":"https://get.adobe.com/tw/flashplayer/" },
         { "e":"span", "t":" 來呈現的(目前好像改成使用 " },
-        { "e":"a", "t":"Canvas", "attr":{ "href":"http://www.w3schools.com/html/html5_canvas.asp", "target":"_blank" } },
+        { "e":"a", "t":"Canvas", "href":"http://www.w3schools.com/html/html5_canvas.asp" },
         { "e":"span", "t":")，身為前端工程師的我，當然立馬想使用 " },
-        { "e":"a", "t":"JavaScript", "attr":{ "href":"https://zh.wikipedia.org/zh-tw/JavaScript", "target":"_blank" } },
+        { "e":"a", "t":"JavaScript", "href":"https://zh.wikipedia.org/zh-tw/JavaScript" },
         { "e":"span", "t":" 去實作 360 度全景相片播放器！" }
       ]
     },
     {
       "e":"figure",
       "attr":{ "alt":"由於 RICOH Theta S 360 全景相機具備兩鏡頭，所以可以產出一張由兩顆鏡頭組成的 360度的相片，照片是以水平呈現" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/2c958e4a66ad0a490dbbb4e387246341.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/2c958e4a66ad0a490dbbb4e387246341.jpg" } }]
     },
     {
       "e":"figure",
       "attr":{ "alt":"使用 360 度全景相片播放器呈現的方式，此方式對於瀏覽操作流程上較為方便與美觀" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/247ab8e06f34004ad0ae948ec18beafd.png" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/247ab8e06f34004ad0ae948ec18beafd.png" } }]
     },
     { "e":"h2", "t":"前端" },
     {
       "e":"p",
       "s":[
         { "e":"span", "t":"既然要在網頁前端呈現球狀的方式，那就利用一些 library 實作，專案內我參考了 " },
-        { "e":"a", "t":"theta-viewer.js", "attr":{ "href":"https://github.com/shokai/theta-viewer.js", "target":"_blank" } },
+        { "e":"a", "t":"theta-viewer.js", "href":"https://github.com/shokai/theta-viewer.js" },
         { "e":"span", "t":"，細看 theta-viewer.js 的內容可以發現裡面有著三個主要物件，分別是 " },
         { "e":"b", "t":"async.js" },
         { "e":"span", "t":"、" },
@@ -55,26 +55,26 @@
         { "e":"span", "t":"、" },
         { "e":"b", "t":"OrbitControls.js" },
         { "e":"span", "t":"，而我只是將它進一步的使用與改造而已，例如: 可以取得轉向後的座標存進資料庫.. 等。還有一項功能較為特殊，主要是利用 JavaScript 的 " },
-        { "e":"a", "t":"document.execCommand", "attr":{ "href":"https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand", "target":"_blank" } },
+        { "e":"a", "t":"document.execCommand", "href":"https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand" },
         { "e":"span", "t":" 來執行觸發剪貼簿的功能，用 JavaScript 直接將複製的網址存入剪貼簿內，如此一來就不用再按滑鼠右鍵。" }
       ]
     },
     {
       "e":"figure",
       "attr":{ "alt":"Theta S 本身有 GPS 內建定位功能，所以在上傳時候可以使用 php 去讀取 exif 的經緯度資料，並一起新增於資料庫內，前端輸出再搭配 Google Maps 即可做出此相簿地圖的功能" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/ab8f52e7a142094ad5e57b799bd80e38.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/ab8f52e7a142094ad5e57b799bd80e38.jpg" } }]
     },
     {
       "e":"figure",
       "attr":{ "alt":"此功能較為特殊，主要利用 JavaScript 的 document.execCommand 來執行觸發剪貼簿的功能，用 JavaScript 直接將複製的網址存入剪貼簿內，如此一來就不用再按滑鼠右鍵" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/beded1a9f1b7136e44d06afe7159ea48.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/beded1a9f1b7136e44d06afe7159ea48.jpg" } }]
     },
     { "e":"h2", "t":"後端" },
     {
       "e":"p",
       "s":[
         { "e":"span", "t":"其框架使用個人的 framework " },
-        { "e":"a", "t":"OACI", "attr":{ "href":"https://github.com/comdan66/oaci", "target":"_blank" } },
+        { "e":"a", "t":"OACI", "href":"https://github.com/comdan66/oaci" },
         { "e":"span", "t":"，也就是 OA's CodeIgniter 實作，功能主要就是 " },
         { "e":"b", "t":"登入" },
         { "e":"span", "t":"、" },
@@ -82,35 +82,35 @@
         { "e":"span", "t":"、" },
         { "e":"b", "t":"縮圖" },
         { "e":"span", "t":"，比較特別的是因為 360 圖檔較大，所以這次也使用 " },
-        { "e":"a", "t":"AWS S3", "attr":{ "href":"https://aws.amazon.com/tw/s3/", "target":"_blank" } },
+        { "e":"a", "t":"AWS S3", "href":"https://aws.amazon.com/tw/s3/" },
         { "e":"span", "t":" 作為儲存空間！登入(目前尚未開放註冊)後，即可使用上傳功能將 360 度相片上傳，網頁是 RWD 設計，所以在上傳 360 度相片的流程上也不會是問題。登入後還可瀏覽尚未公開的 360 度相片，雖然未公開，但使用者可以將網址分享給朋友，由於網址 token 使用 " },
-        { "e":"a", "t":"MD5", "attr":{ "href":"https://zh.wikipedia.org/wiki/MD5", "target":"_blank" } },
+        { "e":"a", "t":"MD5", "href":"https://zh.wikipedia.org/wiki/MD5" },
         { "e":"span", "t":" 編碼過，所以只有知道網址的人才可以瀏覽。Theta S 本身有 GPS 內建定位功能，所以在上傳時候可以使用 php 去讀取 exif 的經緯度資料，並一起新增於資料庫內，前端輸出再搭配 Google Maps 即可做出此相簿地圖的功能。" }
       ]
     },
     {
       "e":"figure",
       "attr":{ "alt":"登入(目前尚未開放註冊)後，即可使用上傳功能，將 360 度相片上傳" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/6cc90904421d373405923b0b00436074.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/6cc90904421d373405923b0b00436074.jpg" } }]
     },
     {
       "e":"figure",
       "attr":{ "alt":"由於網頁也製作成手機相容的 RWD 設計，所以在上傳 360 度相片的流程上也不會是問題" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/59e3a6543a8b10004c76a5d4ff6023f3.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/59e3a6543a8b10004c76a5d4ff6023f3.jpg" } }]
     },
     {
       "e":"figure",
       "attr":{ "alt":"登入後可以瀏覽尚未公開的 360 度相片，雖然未公開，但使用者可以將網址分享給朋友，由於網址 token 使用 MD5 編碼過，所以只有知道該照片網址的人才可以瀏覽" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/fe90630c507eccfd8c952e0928d56b02.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/fe90630c507eccfd8c952e0928d56b02.jpg" } }]
     },
     { "e":"h2", "t":"壓縮圖檔" },
     {
       "e":"p",
       "s":[
         { "e":"span", "t":"主要是因為檔案大怕前端傳輸太久，所以這次加入 " },
-        { "e":"a", "t":"TinyPNG", "attr":{ "href":"https://tinypng.com/", "target":"_blank" } },
+        { "e":"a", "t":"TinyPNG", "href":"https://tinypng.com/" },
         { "e":"span", "t":" 作為壓縮圖片的方式，以減少圖片大小，提升傳輸速度以及成本，原本用 " },
-        { "e":"a", "t":"https://compressor.io/", "attr":{ "href":"https://compressor.io/", "target":"_blank" } },
+        { "e":"a", "t":"https://compressor.io/", "href":"https://compressor.io/" },
         { "e":"span", "t":" 但是處理時間花太久了，所以就先不慘用。" }
       ]
     },
@@ -122,11 +122,11 @@
         { "e":"span", "t":"、" },
         { "e":"b", "t":"ThetaS" },
         { "e":"span", "t":" 兩包專案，基本上 " },
-        { "e":"a", "t":"360", "attr":{ "href":"https://github.com/comdan66/360", "target":"_blank" } },
+        { "e":"a", "t":"360", "href":"https://github.com/comdan66/360" },
         { "e":"span", "t":" 是一包前後端寫在一起的專案，而 " },
-        { "e":"a", "t":"ThetaS", "attr":{ "href":"https://works.ioa.tw/ThetaS/index.html", "target":"_blank" } },
+        { "e":"a", "t":"ThetaS", "href":"https://works.ioa.tw/ThetaS/index.html" },
         { "e":"span", "t":" 則是純前端的架構，ThetaS 藉由 360 專案提供的 api 所實作的網站，而 360 則是架設在 AWS EC2 上面，ThetaS 則是架構在 " },
-        { "e":"a", "t":"GitHub.io", "attr":{ "href":"https://pages.github.com/", "target":"_blank" } },
+        { "e":"a", "t":"GitHub.io", "href": "https://pages.github.com/" },
         { "e":"span", "t":" 的服務上，會這樣拆開的原因主要是因為想練習前後端分離的架構模式，另一方面則是藉由 GitHub.io 的服務減低 AWS EC2 的負擔。" }
       ]
     }
@@ -135,11 +135,11 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/ThetaS/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/ThetaS", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1450408446.A.009.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/919907694713263/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"shokai/theta-viewer.js", "attr":{ "href":"https://github.com/shokai/theta-viewer.js", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/ThetaS/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/ThetaS" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1450408446.A.009.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/919907694713263/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"shokai/theta-viewer.js", "href":"https://github.com/shokai/theta-viewer.js" }] }
       ]
     }
   ],

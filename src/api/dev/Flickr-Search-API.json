@@ -11,9 +11,9 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"專案內利用了 " },
-        { "e":"a", "t":"Flickr API", "attr":{ "href":"https://www.flickr.com/services/api/", "target":"_blank" } },
+        { "e":"a", "t":"Flickr API", "href":"https://www.flickr.com/services/api/" },
         { "e":"span", "t":" 製作，作品中 JavaScrip 經由 Flickr Tag API 撈出符合關鍵字的照片集，然後再利用瀑布流套件 " },
-        { "e":"a", "t":"Masonry", "attr":{ "href":"http://masonry.desandro.com/", "target":"_blank" } },
+        { "e":"a", "t":"Masonry", "href":"http://masonry.desandro.com/" },
         { "e":"span", "t":" 完成瀑布流效果的搜尋結果。" }
       ]
     },
@@ -56,8 +56,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/flickr/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/flickr", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/flickr/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/flickr" }] }
       ]
     }
   ],

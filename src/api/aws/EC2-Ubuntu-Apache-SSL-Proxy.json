@@ -7,11 +7,11 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"專案有時候會使用到 " },
-        { "e":"a", "t":"Node.js", "attr": {"href": "https://nodejs.org/en/", "target":"_blank" } },
+        { "e":"a", "t":"Node.js", "href": "https://nodejs.org/en/" },
         { "e":"span", "t":" 架設 " },
-        { "e":"a", "t":"Socket", "attr": {"href": "https://zh.wikipedia.org/wiki/%E7%B6%B2%E8%B7%AF%E6%8F%92%E5%BA%A7", "target":"_blank" } },
+        { "e":"a", "t":"Socket", "href": "https://zh.wikipedia.org/wiki/%E7%B6%B2%E8%B7%AF%E6%8F%92%E5%BA%A7" },
         { "e":"span", "t":" 伺服器，而且必須使用 HTTPs 的服務。通常是先使用 " },
-        { "e":"a", "t":"Let's Encrypt", "attr": {"href": "/?k=aws&id=EC2-Ubuntu-LetsEncrypt", "target":"_blank" } },
+        { "e":"a", "t":"Let's Encrypt", "href": "/?k=aws&id=EC2-Ubuntu-LetsEncrypt" },
         { "e":"span", "t":" Build 出 SSL 金鑰，再使用 " },
         { "e":"b", "t":"Node.js" },
         { "e":"span", "t":" start 一個使用該金鑰的 https server，最後再將 EC2 對外 port 打開即可！" }
@@ -45,7 +45,7 @@
           { "e":"span", "t":"建立 " },
           { "e":"code", "t":"Apache Http VirtualHost" },
           { "e":"span", "t":"，可以參考 " }, 
-          { "e":"a", "t":"此篇", "attr": {"href": "/?k=aws&id=EC2-Ubuntu-Apache", "target":"_blank" } }
+          { "e":"a", "t":"此篇", "href": "/?k=aws&id=EC2-Ubuntu-Apache" }
         ] },
         { "e":"li", "s":[
           { "e":"span", "t":"建立 " },
@@ -53,7 +53,7 @@
           { "e":"span", "t":" 金鑰與 " }, 
           { "e":"code", "t":"Apache Https VirtualHost" },
           { "e":"span", "t":"，可以參考 " }, 
-          { "e":"a", "t":"此篇", "attr": {"href": "/?k=aws&id=EC2-Ubuntu-LetsEncrypt", "target":"_blank" } }
+          { "e":"a", "t":"此篇", "href": "/?k=aws&id=EC2-Ubuntu-LetsEncrypt" }
         ] },
         { "e":"li", "s":[
           { "e":"p", "s":[
@@ -69,48 +69,98 @@
           ] }, 
           {
             "e":"pre",
-            "attr":{ "class":"code zshrc" },
+            "class":"lines",
+            "copy":"\n\n    # 覆寫\n    RewriteEngine On\n    RewriteCond %{QUERY_STRING} transport=websocket    [NC]\n    RewriteRule /(.*)           ws://127.0.0.1:8101/$1 [P,L]\n\n    # 啟用代理\n    ProxyRequests On\n    ProxyPass / http://127.0.0.1:8101/\n    ProxyPassReverse / http://127.0.0.1:8101/",
             "s":[
-              { "e":"label", "copy":"\n\n    # 覆寫\n    RewriteEngine On\n    RewriteCond %{QUERY_STRING} transport=websocket    [NC]\n    RewriteRule /(.*)           ws://127.0.0.1:8101/$1 [P,L]\n\n    # 啟用代理\n    ProxyRequests On\n    ProxyPass / http://127.0.0.1:8101/\n    ProxyPassReverse / http://127.0.0.1:8101/" },
-              { "e":"div", "s":[{"e": "span", "t": "<IfModule", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "mod_ssl.c", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-
+              { "e":"div", "s":[
+                {"e": "span", "t": "<IfModule", "class": "red" },
+                {"e": "span", "t": " " },
+                {"e": "span", "t": "mod_ssl.c", "class": "yellow" },
+                {"e": "span", "t": ">", "class": "red" }
+              ] },
               { "e":"div", "t":" " },
-              { "e":"div", "s":[{"e": "span", "t": "    " }, {"e": "span", "t": "<VirtualHost", "attr": {"class": "r"} }, {"e": "span", "t": " " }, {"e": "span", "t": "_default_:443", "attr": {"class": "y"} }, {"e": "span", "t": ">", "attr": {"class": "r"} }] },
-              { "e":"div", "t":"        # 你的 Domain", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerName", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAlias", "attr": {"class": "b"} }, {"e": "span", "t": " your.url.tw" }] },
-
+              { "e":"div", "s":[
+                {"e": "span", "t": "    " },
+                {"e": "span", "t": "<VirtualHost", "class": "red" },
+                {"e": "span", "t": " " },
+                {"e": "span", "t": "_default_:443", "class": "yellow" },
+                {"e": "span", "t": ">", "class": "red" }] },
+              { "e":"div", "t":"        # 你的 Domain", "class": "gray" },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ServerName", "class": "blue" },
+                {"e": "span", "t": " your.url.tw" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ServerAlias", "class": "blue" },
+                {"e": "span", "t": " your.url.tw" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"        # 你的 E-Mail", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ServerAdmin", "attr": {"class": "b"} }, {"e": "span", "t": " your.email@gmail.com" }] },
-
+              { "e":"div", "t":"        # 你的 E-Mail", "class": "gray" },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ServerAdmin", "class": "blue" },
+                {"e": "span", "t": " your.email@gmail.com" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"        # 覆寫", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "RewriteEngine", "attr": {"class": "b"} }, {"e": "span", "t": " On" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "RewriteCond", "attr": {"class": "b"} }, {"e": "span", "t": " %{QUERY_STRING} transport=websocket    [NC]" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "RewriteRule", "attr": {"class": "b"} }, {"e": "span", "t": " /(.*)           ws://127.0.0.1:8101/$1 [P,L]" }] },
-
+              { "e":"div", "t":"        # 覆寫", "class": "gray" },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "RewriteEngine", "class": "blue" },
+                {"e": "span", "t": " On" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "RewriteCond", "class": "blue" },
+                {"e": "span", "t": " %{QUERY_STRING} transport=websocket    [NC]" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "RewriteRule", "class": "blue" },
+                {"e": "span", "t": " /(.*)           ws://127.0.0.1:8101/$1 [P,L]" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"        # 啟用代理", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ProxyRequests", "attr": {"class": "b"} }, {"e": "span", "t": " On" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ProxyPass", "attr": {"class": "b"} }, {"e": "span", "t": " / http://127.0.0.1:8101/" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ProxyPassReverse", "attr": {"class": "b"} }, {"e": "span", "t": " / http://127.0.0.1:8101/" }] },
-
+              { "e":"div", "t":"        # 啟用代理", "class": "gray" },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ProxyRequests", "class": "blue" },
+                {"e": "span", "t": " On" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ProxyPass", "class": "blue" },
+                {"e": "span", "t": " / http://127.0.0.1:8101/" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ProxyPassReverse", "class": "blue" },
+                {"e": "span", "t": " / http://127.0.0.1:8101/" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"        # Log 的儲存位置", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "ErrorLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "CustomLog", "attr": {"class": "b"} }, {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
-
+              { "e":"div", "t":"        # Log 的儲存位置", "class": "gray" },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "ErrorLog", "class": "blue" },
+                {"e": "span", "t": " ${APACHE_LOG_DIR}/error.log" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "CustomLog", "class": "blue" },
+                {"e": "span", "t": " ${APACHE_LOG_DIR}/access.log combined" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"        # SSL 設定", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLEngine", "attr": {"class": "b"} }, {"e": "span", "t": " on" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/cert.pem" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateKeyFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/privkey.pem" }] },
-              { "e":"div", "s":[{"e": "span", "t": "        " }, {"e": "span", "t": "SSLCertificateChainFile", "attr": {"class": "b"} }, {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/chain.pem" }] },
-
-              { "e":"div", "s":[{"e": "span", "t": "    </VirtualHost>", "attr": {"class": "r"} }] },
+              { "e":"div", "t":"        # SSL 設定", "class": "gray" },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "SSLEngine", "class": "blue" },
+                {"e": "span", "t": " on" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "SSLCertificateFile", "class": "blue" },
+                {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/cert.pem" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "SSLCertificateKeyFile", "class": "blue" },
+                {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/privkey.pem" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "        " },
+                {"e": "span", "t": "SSLCertificateChainFile", "class": "blue" },
+                {"e": "span", "t": " /etc/dehydrated/certs/your.url.tw/chain.pem" }] },
+              { "e":"div", "s":[
+                {"e": "span", "t": "    </VirtualHost>", "class": "red" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "s":[{"e": "span", "t": "</IfModule>", "attr": {"class": "r"} }] }
+              { "e":"div", "s":[
+                {"e": "span", "t": "</IfModule>", "class": "red" }] }
             ]
           }
         ] }

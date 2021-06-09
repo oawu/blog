@@ -27,12 +27,37 @@ Vue.component('el', {
       document.body.removeChild(el)
     }
   },
+  computed: {
+    attr() {
+      let clas = this.el.class || null
+      clas = clas ? { class: clas } : {}
+
+      let href = this.el.href || null
+      href = href ? { href, target: "_blank" } : {}
+
+      let src = this.el.src || null
+      src = src ? { src } : {}
+
+      let alt = this.el.alt || null
+      alt = alt ? { alt } : {}
+
+      let attr = this.el.attr || null
+      attr = attr ? { ...attr } : {}
+
+      return { ...attr, ...clas, ...href, ...src, ...alt, ...attr }
+    }
+  },
   template: El.render(`
-    component => *if=el.s   v-bind=el.attr   :is=el.e
+    component => *if=el.e=='pre'   *bind=attr   :is=el.e
+      label => *if=el.copy   @click=copy(el.e, el.copy)
+      div => *if=el.s
+        el => *for=(el, i) in el.s   :key=i   :el=el
+      div => *else   *text=el.t
+
+    component => *else-if=el.s   *bind=attr   :is=el.e
       el => *for=(el, i) in el.s   :key=i   :el=el
-    template => *else
-      component => *if=el.copy   *text=el.t   v-bind=el.attr   :is=el.e   @click=copy(el.e, el.copy)   :copy=true
-      component => *else   *text=el.t   v-bind=el.attr   :is=el.e
+    component => *else-if=el.copy   *text=el.t   *bind=attr   :is=el.e   @click=copy(el.e, el.copy)   :copy=true
+    component => *else   *text=el.t   *bind=attr   :is=el.e
     `)
 })
 

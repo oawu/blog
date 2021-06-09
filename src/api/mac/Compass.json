@@ -9,7 +9,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"http://compass-style.org/install/", "attr":{ "href":"http://compass-style.org/install/", "target":"_blank" } }]
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"http://compass-style.org/install/", "href":"http://compass-style.org/install/" }]
         },
         {
           "e":"li",
@@ -40,7 +40,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=9Ut_y7BcyQg", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=9Ut_y7BcyQg" }]
         }
       ]
     }

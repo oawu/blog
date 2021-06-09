@@ -40,7 +40,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rvm.io/", "attr":{ "href":"https://rvm.io/", "target":"_blank" } }] },
+        { "e":"li", "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rvm.io/", "href":"https://rvm.io/" }] },
         { "e":"li", "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"curl -L https://get.rvm.io | bash -s stable", "copy":"curl -L https://get.rvm.io | bash -s stable" }] },
         { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
         { "e":"li", "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"rvm -v", "copy":"rvm -v" }] }
@@ -53,7 +53,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://www.ruby-lang.org/zh_tw/", "attr":{ "href":"https://www.ruby-lang.org/zh_tw/", "target":"_blank" } }]
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://www.ruby-lang.org/zh_tw/", "href":"https://www.ruby-lang.org/zh_tw/" }]
         },
         {
           "e":"li",
@@ -76,7 +76,7 @@
 
             {
               "e":"blockquote",
-              "attr":{"class": "info"},
+              "class": "info",
               "s":[
                 {"e":"span","t": "若有出現 readline.c 的錯誤時，可以試著執行指令 "},
                 {"e":"code","t": "rvm package install readline && rvm install 2.5.3 -C --with-readline-dir=$rvm_path/usr","copy": "rvm package install readline && rvm install 2.5.3 -C --with-readline-dir=$rvm_path/usr"}
@@ -95,7 +95,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rubygems.org/", "attr":{ "href":"https://rubygems.org/", "target":"_blank" } }]
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rubygems.org/", "href":"https://rubygems.org/" }]
         },
         {
           "e":"li",
@@ -184,7 +184,7 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=sQ5WyNwGhuE", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=sQ5WyNwGhuE" }]
         },
         {
           "e":"li",
@@ -195,11 +195,8 @@
             },
             {
               "e":"a",
-              "attr":{
-                "href":"https://rvm.io/rvm/install/",
-                "target":"_blank"
-              },
-              "t":"https://rvm.io/rvm/install/"
+              "t":"https://rvm.io/rvm/install/",
+              "href":"https://rvm.io/rvm/install/"
             }
           ]
         },
@@ -212,11 +209,8 @@
             },
             {
               "e":"a",
-              "attr":{
-                "href":"https://readmoo.com/book/210010467000101",
-                "target":"_blank"
-              },
-              "t":"https://readmoo.com/book/210010467000101"
+              "t":"https://readmoo.com/book/210010467000101",
+              "href":"https://readmoo.com/book/210010467000101"
             }
           ]
         },
@@ -229,11 +223,8 @@
             },
             {
               "e":"a",
-              "attr":{
-                "href":"http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails",
-                "target":"_blank"
-              },
-              "t":"http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails"
+              "t":"http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails",
+              "href":"http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails"
             }
           ]
         }

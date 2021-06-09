@@ -8,11 +8,11 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"會實作出此專案主要目的是為了取得雙北市行政區域範圍座標，但因為 " },
-        { "e":"a", "t":"Google Maps JavaScript API", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/?hl=zh-tw", "target":"_blank" } },
+        { "e":"a", "t":"Google Maps JavaScript API", "href":"https://developers.google.com/maps/documentation/javascript/?hl=zh-tw" },
         { "e":"span", "t":" 找不到可以取得行政區的範圍座標，故才自己畫完雙北市的範圍座標，並且藉此分享出來給大家使用，各位大大也可以使用 " },
-        { "e":"a", "t":"GitHub Fork", "attr":{ "href":"https://help.github.com/articles/fork-a-repo/", "target":"_blank" } },
+        { "e":"a", "t":"GitHub Fork", "href":"https://help.github.com/articles/fork-a-repo/" },
         { "e":"span", "t":" 新增、修改完後，跟我發送個 " },
-        { "e":"a", "t":"Pull Request", "attr":{ "href":"https://help.github.com/articles/using-pull-requests/", "target":"_blank" } },
+        { "e":"a", "t":"Pull Request", "href":"https://help.github.com/articles/using-pull-requests/" },
         { "e":"span", "t":" 讓我合併，大家一起維護並且分享，建立更多的行政區域範圍座標，並且提供給更多需要的人！" }
       ]
     }
@@ -21,14 +21,14 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/TaipeiTowns/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/TaipeiTowns", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/916800425023990/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1449695345.A.4C2.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"臺北市鄰界圖", "attr":{ "href":"http://data.taipei/opendata/datalist/datasetMeta?oid=6d864ede-c482-4f33-bb89-5be19dc772e1", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"交通路網數值圖服務網", "attr":{ "href":"https://gist-map.motc.gov.tw/Complex/MapTopic", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Shapefile to GeoJSON", "attr":{ "href":"http://kuro.tw/posts/2015/05/05/note-shapefile-to-geojson", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"村里界圖(WGS84經緯度)", "attr":{ "href":"https://sheethub.com/data.gov.tw/村里界圖(WGS84經緯度)", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/TaipeiTowns/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/TaipeiTowns" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/916800425023990/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1449695345.A.4C2.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"臺北市鄰界圖", "href":"http://data.taipei/opendata/datalist/datasetMeta?oid=6d864ede-c482-4f33-bb89-5be19dc772e1" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"交通路網數值圖服務網", "href":"https://gist-map.motc.gov.tw/Complex/MapTopic" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Shapefile to GeoJSON", "href":"http://kuro.tw/posts/2015/05/05/note-shapefile-to-geojson" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"村里界圖(WGS84經緯度)", "href":"https://sheethub.com/data.gov.tw/村里界圖(WGS84經緯度)" }] }
       ]
     }
   ],

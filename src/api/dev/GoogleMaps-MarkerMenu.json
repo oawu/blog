@@ -7,9 +7,9 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"此作品主要在於開發出可以在 Google Maps 上面編輯基本路徑的功能，利用 " },
-        { "e":"a", "t":"Google Maps JavaScript API", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/?hl=zh-tw", "target":"_blank" } },
+        { "e":"a", "t":"Google Maps JavaScript API", "href":"https://developers.google.com/maps/documentation/javascript/?hl=zh-tw" },
         { "e":"span", "t":" 設計出規劃路線的工具，並且可以匯出路間經緯度 " },
-        { "e":"a", "t":"Excel", "attr":{ "href":"https://products.office.com/zh-tw/excel", "target":"_blank" } },
+        { "e":"a", "t":"Excel", "href":"https://products.office.com/zh-tw/excel" },
         { "e":"span", "t":"。" }
       ]
     },
@@ -17,11 +17,11 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"在 Google Maps 上顯示選單，主要是使用 " },
-        { "e":"a", "t":"Google Maps JavaScript Events", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/events?hl=zh-tw", "target":"_blank" } },
+        { "e":"a", "t":"Google Maps JavaScript Events", "href":"https://developers.google.com/maps/documentation/javascript/events?hl=zh-tw" },
         { "e":"span", "t":" 來實作，並且搭配 " },
-        { "e":"a", "t":"Marker", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/markers", "target":"_blank" } },
+        { "e":"a", "t":"Marker", "href":"https://developers.google.com/maps/documentation/javascript/markers" },
         { "e":"span", "t":"、" },
-        { "e":"a", "t":"Polyline", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/examples/polyline-simple?hl=zh-tw", "target":"_blank" } },
+        { "e":"a", "t":"Polyline", "href":"https://developers.google.com/maps/documentation/javascript/examples/polyline-simple?hl=zh-tw" },
         { "e":"span", "t":" 來繪製出路線圖，並且針對 Marker 綁定 Event 來實作 " },
         { "e":"b", "t":"刪除節點" },
         { "e":"span", "t":" 的功能。" }
@@ -31,11 +31,11 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"此實作中有一項特別的技巧，就是在 Ployline 上點擊滑鼠右鍵時，必須要可以 插入節點 的功能，難點是在於 Maps 上的 " },
-        { "e":"a", "t":"Google Maps Position", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/examples/control-positioning?hl=zh-tw", "target":"_blank" } },
+        { "e":"a", "t":"Google Maps Position", "href":"https://developers.google.com/maps/documentation/javascript/examples/control-positioning?hl=zh-tw" },
         { "e":"span", "t":" 與 " },
-        { "e":"a", "t":"Google Maps Point", "attr":{ "href":"https://developers.google.com/maps/documentation/javascript/examples/icon-complex", "target":"_blank" } },
+        { "e":"a", "t":"Google Maps Point", "href":"https://developers.google.com/maps/documentation/javascript/examples/icon-complex" },
         { "e":"span", "t":" 物件的" },
-        { "e":"a", "t":"轉換", "attr":{ "href":"https://github.com/comdan66/OA-googleMapsMenu/blob/master/js/public.js#L51", "target":"_blank" } },
+        { "e":"a", "t":"轉換", "href":"https://github.com/comdan66/OA-googleMapsMenu/blob/master/js/public.js#L51" },
         { "e":"span", "t":"，必須將點擊位置的經緯度經計算後得知在地圖元素上相對應的 left、top 數值，再將選單顯示在該位置上。" }
       ]
     },
@@ -46,8 +46,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/OA-googleMapsMenu/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/OA-googleMapsMenu", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-googleMapsMenu/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-googleMapsMenu" }] }
       ]
     }
   ],

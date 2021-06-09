@@ -36,7 +36,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+            { "e":"code", "t":"勾選", "class":"green" },
             { "e":"span", "t":" 新增的 IP 再點選右上角 " },
             { "e":"code", "t":"Actions" },
             { "e":"span", "t":" 按鈕，然後選擇 " },
@@ -94,7 +94,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+            { "e":"code", "t":"勾選", "class":"green" },
             { "e":"span", "t":" IP 再點選右上角 " },
             { "e":"code", "t":"Actions" },
             { "e":"span", "t":" 按鈕，然後選擇 " },
@@ -120,7 +120,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"code", "t":"勾選", "attr": {"class":"green"} },
+            { "e":"code", "t":"勾選", "class":"green" },
             { "e":"span", "t":" " },
             { "e":"code", "t":"Allow this Elastic IP address to be reassociated" }
           ]

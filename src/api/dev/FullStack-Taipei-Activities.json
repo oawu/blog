@@ -7,19 +7,19 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"這是項利用" },
-        { "e":"a", "t":"新北市政府資料開放平台", "attr":{ "href":"http://data.ntpc.gov.tw/", "target":"_blank" } },
+        { "e":"a", "t":"新北市政府資料開放平台", "href":"http://data.ntpc.gov.tw/" },
         { "e":"span", "t":"提供的" },
-        { "e":"a", "t":"新北市政府文化局藝文活動", "attr":{ "href":"http://data.ntpc.gov.tw/od/detail?oid=781B822E-214A-4B9A-B4DB-32C9F4626D98", "target":"_blank" } },
+        { "e":"a", "t":"新北市政府文化局藝文活動", "href":"http://data.ntpc.gov.tw/od/detail?oid=781B822E-214A-4B9A-B4DB-32C9F4626D98" },
         { "e":"span", "t":" API 所製作的台北 • 藝文活動。使用 " },
-        { "e":"a", "t":"PHP", "attr":{ "href":"https://zh.wikipedia.org/zh-tw/PHP", "target":"_blank" } },
+        { "e":"a", "t":"PHP", "href":"https://zh.wikipedia.org/zh-tw/PHP" },
         { "e":"span", "t":" 將 API 資料取下來後編輯成 " },
-        { "e":"a", "t":"HTML", "attr":{ "href":"https://zh.wikipedia.org/zh-tw/HTML", "target":"_blank" } },
+        { "e":"a", "t":"HTML", "href":"https://zh.wikipedia.org/zh-tw/HTML" },
         { "e":"span", "t":" 頁面，並且放置到 " },
-        { "e":"a", "t":"Amazon S3", "attr":{ "href":"https://aws.amazon.com/tw/s3/", "target":"_blank" } },
+        { "e":"a", "t":"Amazon S3", "href":"https://aws.amazon.com/tw/s3/" },
         { "e":"span", "t":"。放置部署過程中同時將頁面所需的 " },
-        { "e":"a", "t":"SCSS", "attr":{ "href":"https://zh.wikipedia.org/wiki/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8", "target":"_blank" } },
+        { "e":"a", "t":"SCSS", "href":"https://zh.wikipedia.org/wiki/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8" },
         { "e":"span", "t":"、" },
-        { "e":"a", "t":"JavaScript", "attr":{ "href":"https://zh.wikipedia.org/wiki/JavaScript", "target":"_blank" } },
+        { "e":"a", "t":"JavaScript", "href":"https://zh.wikipedia.org/wiki/JavaScript" },
         { "e":"span", "t":" 一起上傳至 S3。" }
       ]
     },
@@ -27,9 +27,9 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"上傳 S3 過程採用 PHP 執行，關鍵程式碼在" },
-        { "e":"a", "t":"這裡", "attr":{ "href":"https://github.com/comdan66/taipei_activities/blob/master/cmd/put.php", "target":"_blank" } },
+        { "e":"a", "t":"這裡", "href":"https://github.com/comdan66/taipei_activities/blob/master/cmd/put.php" },
         { "e":"span", "t":"，主要是利用 S3 針對檔案都有 tag 的特性，對上傳檔案做 " },
-        { "e":"a", "t":"md5_file", "attr":{ "href":"http://php.net/manual/en/function.md5-file.php", "target":"_blank" } },
+        { "e":"a", "t":"md5_file", "href":"http://php.net/manual/en/function.md5-file.php" },
         { "e":"span", "t":"，達成差異化更新的步驟！" }
       ]
     },
@@ -46,25 +46,25 @@
     {
       "e":"figure",
       "attr":{ "alt":"使用 php 將 API 資料取下來後編輯成 HTML 頁面，並且放置到 Amazon S3。放置部署過程中同時將頁面所需的 css、JavaScript，並且一起上傳至 S3" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/352deb6b4fcc5b26a1f3b30ef0dc1a5d.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/352deb6b4fcc5b26a1f3b30ef0dc1a5d.jpg" } }]
     },
     {
       "e":"p",
       "s":[
         { "e":"span", "t":"網頁排版盡量參照 " },
-        { "e":"a", "t":"Material Design", "attr":{ "href":"https://material.google.com/", "target":"_blank" } },
+        { "e":"a", "t":"Material Design", "href":"https://material.google.com/" },
         { "e":"span", "t":"，同時具有" },
-        { "e":"a", "t":"響應式網頁設計（RWD）", "attr":{ "href":"http://www.ibest.tw/page01.php", "target":"_blank" } },
+        { "e":"a", "t":"響應式網頁設計（RWD）", "href":"http://www.ibest.tw/page01.php" },
         { "e":"span", "t":"的版型，讓手機用戶也可以方便瀏覽與輕鬆操作。切版使用 " },
-        { "e":"a", "t":"Compass", "attr":{ "href":"http://compass-style.org/", "target":"_blank" } },
+        { "e":"a", "t":"Compass", "href":"http://compass-style.org/" },
         { "e":"span", "t":" 編譯 " },
-        { "e":"a", "t":"SCSS", "attr":{ "href":"http://sass-lang.com/", "target":"_blank" } },
+        { "e":"a", "t":"SCSS", "href":"http://sass-lang.com/" },
         { "e":"span", "t":"，頁面上使用 JavaScript 完成互動功能，如：快速搜尋，利用 jQuery 的 " },
-        { "e":"a", "t":"selector", "attr":{ "href":"https://api.jquery.com/category/selectors/", "target":"_blank" } },
+        { "e":"a", "t":"selector", "href":"https://api.jquery.com/category/selectors/" },
         { "e":"span", "t":" " },
         { "e":"code", "t":"[name*=\"value\"]" },
         { "e":"span", "t":" 完成模糊搜尋，並且利用網址的 " },
-        { "e":"a", "t":"Hash", "attr":{ "href":"http://www.w3schools.com/jsref/prop_loc_hash.asp", "target":"_blank" } },
+        { "e":"a", "t":"Hash", "href":"http://www.w3schools.com/jsref/prop_loc_hash.asp" },
         { "e":"span", "t":" 來做分類查詢。" }
       ]
     },
@@ -73,7 +73,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"若是覺得不錯，可以對 " },
-        { "e":"a", "t":"GitHub", "attr":{ "href":"https://github.com/comdan66/taipei_activities", "target":"_blank" } },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/taipei_activities" },
         { "e":"span", "t":" 按個星星，鼓勵一下作者吧：）" }
       ]
     }
@@ -82,11 +82,11 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/taipei_activities", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"新北市政府資料開放平台", "attr":{ "href":"http://data.ntpc.gov.tw/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"新北市政府文化局藝文活動", "attr":{ "href":"http://data.ntpc.gov.tw/od/detail?oid=781B822E-214A-4B9A-B4DB-32C9F4626D98", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1467160346.A.EE9.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/1020671314636900/", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/taipei_activities" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"新北市政府資料開放平台", "href":"http://data.ntpc.gov.tw/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"新北市政府文化局藝文活動", "href":"http://data.ntpc.gov.tw/od/detail?oid=781B822E-214A-4B9A-B4DB-32C9F4626D98" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1467160346.A.EE9.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/1020671314636900/" }] }
       ]
     }
   ],

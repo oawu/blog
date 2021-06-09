@@ -7,24 +7,24 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"這套前端工具主要是參考 " },
-        { "e":"a", "t":"Material UI", "attr":{ "href":"https://www.google.com/design/spec/material-design/introduction.html", "target":"_blank" } },
+        { "e":"a", "t":"Material UI", "href":"https://www.google.com/design/spec/material-design/introduction.html" },
         { "e":"span", "t":" 風格設計，並且這是一個藉由 " },
-        { "e":"a", "t":"Compass", "attr":{ "href":"http://compass-style.org/", "target":"_blank" } },
+        { "e":"a", "t":"Compass", "href":"http://compass-style.org/" },
         { "e":"span", "t":"、" },
-        { "e":"a", "t":"HTML", "attr":{ "href":"http://www.w3schools.com/html/", "target":"_blank" } },
+        { "e":"a", "t":"HTML", "href":"http://www.w3schools.com/html/" },
         { "e":"span", "t":" 以及 " },
-        { "e":"a", "t":"jQuery", "attr":{ "href":"https://jquery.com/", "target":"_blank" } },
+        { "e":"a", "t":"jQuery", "href":"https://jquery.com/" },
         { "e":"span", "t":"..等各種前端工具實作的 Material UI Design for Web，開發者可以自行使用 " },
-        { "e":"a", "t":"SCSS", "attr":{ "href":"http://sass-lang.com/", "target":"_blank" } },
+        { "e":"a", "t":"SCSS", "href":"http://sass-lang.com/" },
         { "e":"span", "t":" 或者 " },
-        { "e":"a", "t":"CSS", "attr":{ "href":"https://developer.mozilla.org/zh-TW/docs/Web/CSS", "target":"_blank" } },
+        { "e":"a", "t":"CSS", "href":"https://developer.mozilla.org/zh-TW/docs/Web/CSS" },
         { "e":"span", "t":" 來做修改，目前是使用 jQuery 來達到更多 UI 回饋效果。" }
       ]
     },
     {
       "e":"figure",
       "attr":{ "alt":"各種 Material UI 元素" },
-      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/974ac5e64379b2a5379aca8e72223e9e.jpg" }, "s":[] }]
+      "s":[{ "e":"img", "attr":{ "src":"https://www.ioa.tw/img/974ac5e64379b2a5379aca8e72223e9e.jpg" } }]
     },
     { "e":"h2", "t":"以下是基本的介紹：" },
     {
@@ -34,9 +34,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"此作品開發工具主要使用 " },
-            { "e":"a", "t":"Gulp", "attr":{ "href":"http://gulpjs.com/", "target":"_blank" } },
+            { "e":"a", "t":"Gulp", "href":"http://gulpjs.com/" },
             { "e":"span", "t":"、Compass 以及 jQuery 語言所建立，主要架構則使用 " },
-            { "e":"a", "t":"OAF2E v1.2", "attr":{ "href":"https://github.com/comdan66/oaf2e/tree/version/1.2", "target":"_blank" } },
+            { "e":"a", "t":"OAF2E v1.2", "href":"https://github.com/comdan66/oaf2e/tree/version/1.2" },
             { "e":"span", "t":"。" }
           ]
         },
@@ -44,9 +44,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"相關概念也參考了 " },
-            { "e":"a", "t":"Tedshd's GitHub", "attr":{ "href":"https://github.com/tedshd", "target":"_blank" } },
+            { "e":"a", "t":"Tedshd's GitHub", "href":"https://github.com/tedshd" },
             { "e":"span", "t":" 所設計的 " },
-            { "e":"a", "t":"material_design_for_web", "attr":{ "href":"https://github.com/tedshd/material_design_for_web", "target":"_blank" } },
+            { "e":"a", "t":"material_design_for_web", "href":"https://github.com/tedshd/material_design_for_web" },
             { "e":"span", "t":"。" }
           ]
         },
@@ -58,20 +58,20 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "attr":{ "href":"https://works.ioa.tw/OA-material/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://works.ioa.tw/OA-material/index.html", "attr":{ "href":"https://works.ioa.tw/OA-material/index.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "attr":{ "href":"https://github.com/comdan66/OA-material", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/comdan66/OA-material", "attr":{ "href":"https://github.com/comdan66/OA-material", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job 2", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html", "attr":{ "href":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/766343336736367/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://www.facebook.com/groups/f2e.tw/permalink/766343336736367/", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/766343336736367/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan 2", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/871517822885584/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://www.facebook.com/groups/f2e.tw/permalink/871517822885584/", "attr":{ "href":"https://www.facebook.com/groups/f2e.tw/permalink/871517822885584/", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Tedshd's GitHub", "attr":{ "href":"https://github.com/tedshd/material_design_for_web", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/tedshd/material_design_for_web", "attr":{ "href":"https://github.com/tedshd/material_design_for_web", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-material/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://works.ioa.tw/OA-material/index.html", "href":"https://works.ioa.tw/OA-material/index.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-material" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/comdan66/OA-material", "href":"https://github.com/comdan66/OA-material" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job 2", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/766343336736367/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://www.facebook.com/groups/f2e.tw/permalink/766343336736367/", "href":"https://www.facebook.com/groups/f2e.tw/permalink/766343336736367/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan 2", "href":"https://www.facebook.com/groups/f2e.tw/permalink/871517822885584/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://www.facebook.com/groups/f2e.tw/permalink/871517822885584/", "href":"https://www.facebook.com/groups/f2e.tw/permalink/871517822885584/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Tedshd's GitHub", "href":"https://github.com/tedshd/material_design_for_web" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/tedshd/material_design_for_web", "href":"https://github.com/tedshd/material_design_for_web" }] }
       ]
     }
   ],

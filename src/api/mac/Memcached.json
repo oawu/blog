@@ -28,7 +28,7 @@
             { "e":"span", "t":"Memcached 相依於 " },
             { "e":"b", "t":"libevent" },
             { "e":"span", "t":", 所以在安裝之前要先安裝 " },
-            { "e":"a", "t":"libevent", "attr":{ "href":"http://libevent.org", "target":"_blank" } },
+            { "e":"a", "t":"libevent", "href":"http://libevent.org" },
             { "e":"span", "t":"。" },
             {
               "e":"ul",
@@ -108,10 +108,10 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"memcache.php_ByHarunYayli", "attr":{ "href":"https://github.com/comdan66/memcache.php_ByHarunYayli", "target":"_blank" } }, { "e":"span", "t":" (推薦) " }] },
-        { "e":"li", "s":[{ "e":"a", "t":"phpMemAdmin", "attr":{ "href":"https://github.com/clickalicious/phpmemadmin", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"memcached", "attr":{ "href":"https://github.com/memcached/memcached", "target":"_blank" } }] },
-        { "e":"li", "s":[{ "e":"a", "t":"phpMemcacheAdmin", "attr":{ "href":"https://github.com/hgschmie/phpmemcacheadmin", "target":"_blank" } }] }
+        { "e":"li", "s":[{ "e":"a", "t":"memcache.php_ByHarunYayli", "href":"https://github.com/comdan66/memcache.php_ByHarunYayli" }, { "e":"span", "t":" (推薦) " }] },
+        { "e":"li", "s":[{ "e":"a", "t":"phpMemAdmin", "href":"https://github.com/clickalicious/phpmemadmin" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"memcached", "href":"https://github.com/memcached/memcached" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"phpMemcacheAdmin", "href":"https://github.com/hgschmie/phpmemcacheadmin" }] }
       ]
     }
   ],
@@ -124,11 +124,8 @@
           "s":[
             {
               "e":"a",
-              "attr":{
-                "href":"https://www.hacksparrow.com/install-memcached-on-mac-os-x.html",
-                "target":"_blank"
-              },
-              "t":"Install Memcached on Mac OS X"
+              "t":"Install Memcached on Mac OS X",
+              "href":"https://www.hacksparrow.com/install-memcached-on-mac-os-x.html"
             }
           ]
         }

@@ -5,10 +5,10 @@
   "a":[
     {
       "e":"blockquote",
-      "attr":{"class": "info"},
+      "class": "info",
       "s":[
         { "e":"span", "t":"請先安裝 " },
-        { "e":"a", "t":"Apache", "attr":{ "href":"/?k=mac&id=Apache", "target":"_blank" } }
+        { "e":"a", "t":"Apache", "href":"/?k=mac&id=Apache" }
       ]
     },
     { "e":"h2", "t":"安裝 imagick" },
@@ -51,7 +51,7 @@
         { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 5.6\\nexport PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 5.6\\nexport PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"' >> ~/.zshrc" }] },
         { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
         { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 5.6\\nLoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 5.6\\nLoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so' >> /usr/local/etc/httpd/httpd.conf" }] },
-        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick － " }, { "e":"code", "t":"已棄用", "attr": {"class":"red"} }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick － " }, { "e":"code", "t":"已棄用", "class":"red" }] },
         { "e":"li", "s":[{ "e":"p", "t":"安裝 redis" },
           {"e": "ul", "s": [
             {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
@@ -189,7 +189,7 @@
         { "e":"li", "s":[{ "e":"span", "t":"CLI 新增指令，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 8.0\\nexport PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# PHP 8.0\\nexport PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"\\nexport PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"' >> ~/.zshrc" }] },
         { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
         { "e":"li", "s":[{ "e":"span", "t":"Apache 加入 Module，終端機執行指令 " }, { "e":"code", "t":"echo '\\n# PHP 8.0\\nLoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so' >> /usr/local/etc/httpd/httpd.conf", "copy":"echo '\\n# PHP 8.0\\nLoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so' >> /usr/local/etc/httpd/httpd.conf" }] },
-        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick － " }, { "e":"code", "t":"未支援", "attr": {"class":"red"} }] },
+        { "e":"li", "s":[{ "e":"span", "t":"安裝 imagick － " }, { "e":"code", "t":"未支援", "class":"red" }] },
         { "e":"li", "s":[{ "e":"p", "t":"安裝 redis" },
           {"e": "ul", "s": [
             {"e": "li", "s": [{"e": "span", "t": "終端機執行指令 "}, {"e": "code", "t": "pecl install redis", "copy": "pecl install redis" }, {"e": "span", "t": "，中間有個 " }, {"e": "code", "t": "enable igbinary serializer support? [no] :" }, {"e": "span", "t": "、" }, {"e": "code", "t": "enable lzf compression support? [no] :" }, {"e": "span", "t": " 與 " }, {"e": "code", "t": "enable zstd compression support? [no] :" }, {"e": "span", "t": "，都直接按 " }, {"e": "code", "t": "enter" }] },
@@ -217,9 +217,8 @@
             ] },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
+              "copy": "<IfModule dir_module>\n  DirectoryIndex index.php index.html\n</IfModule>",
               "s":[
-                { "e":"label", "copy": "<IfModule dir_module>\n  DirectoryIndex index.php index.html\n</IfModule>" },
                 { "e":"div", "t":"<IfModule dir_module>" },
                 { "e":"div", "t":"  DirectoryIndex index.php index.html" },
                 { "e":"div", "t":"</IfModule>" }
@@ -227,9 +226,8 @@
             },
             {
               "e":"pre",
-              "attr":{ "class":"code term" },
+              "copy": "<FilesMatch \\.php$>\n  SetHandler application/x-httpd-php\n</FilesMatch>",
               "s":[
-                { "e":"label", "copy": "<FilesMatch \\.php$>\n  SetHandler application/x-httpd-php\n</FilesMatch>" },
                 { "e":"div", "t":"<FilesMatch \\.php$>" },
                 { "e":"div", "t":"  SetHandler application/x-httpd-php" },
                 { "e":"div", "t":"</FilesMatch>" }
@@ -249,35 +247,35 @@
           {"e":"p","t":"將不使用的版本隱藏，以下為使用 PHP 7.3 的範例樣式"},
           {
             "e":"pre",
-            "attr":{ "class":"code zshrc" },
+            "class":"lines",
             "s":[
-              { "e":"div", "t":"# PHP 5.6", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 5.6", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@5.6/bin:$PATH\"", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@5.6/sbin:$PATH\"", "class": "gray" },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"# PHP 7.0", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.0/bin:$PATH\"", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.0/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.0", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.0/bin:$PATH\"", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.0/sbin:$PATH\"", "class": "gray" },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"# PHP 7.1", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.1/bin:$PATH\"", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.1/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.1", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.1/bin:$PATH\"", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.1/sbin:$PATH\"", "class": "gray" },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"# PHP 7.2", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.2/bin:$PATH\"", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.2/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.2", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.2/bin:$PATH\"", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.2/sbin:$PATH\"", "class": "gray" },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"# PHP 7.3", "attr": {"class": "g"} },
-              { "e":"div", "s":[{"e": "span", "t": "export", "attr": {"class": "r"} }, {"e": "span", "t": " PATH" }, {"e": "span", "t": "=", "attr": {"class": "r"} }, {"e": "span", "t": "\"/usr/local/opt/php@7.3/bin:$PATH\"", "attr": {"class": "y"} }] },
-              { "e":"div", "s":[{"e": "span", "t": "export", "attr": {"class": "r"} }, {"e": "span", "t": " PATH" }, {"e": "span", "t": "=", "attr": {"class": "r"} }, {"e": "span", "t": "\"/usr/local/opt/php@7.3/sbin:$PATH\"", "attr": {"class": "y"} }] },
+              { "e":"div", "t":"# PHP 7.3", "class": "gray" },
+              { "e":"div", "s":[{"e": "span", "t": "export", "class": "red" }, {"e": "span", "t": " PATH" }, {"e": "span", "t": "=", "class": "red" }, {"e": "span", "t": "\"/usr/local/opt/php@7.3/bin:$PATH\"", "class": "yellow" }] },
+              { "e":"div", "s":[{"e": "span", "t": "export", "class": "red" }, {"e": "span", "t": " PATH" }, {"e": "span", "t": "=", "class": "red" }, {"e": "span", "t": "\"/usr/local/opt/php@7.3/sbin:$PATH\"", "class": "yellow" }] },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"# PHP 7.4", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.4/bin:$PATH\"", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.4/sbin:$PATH\"", "attr": {"class": "g"} },
+              { "e":"div", "t":"# PHP 7.4", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.4/bin:$PATH\"", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@7.4/sbin:$PATH\"", "class": "gray" },
               { "e":"div", "t":" " },
-              { "e":"div", "t":"# PHP 8.0", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"", "attr": {"class": "g"} },
-              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"", "attr": {"class": "g"} }
+              { "e":"div", "t":"# PHP 8.0", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@8.0/bin:$PATH\"", "class": "gray" },
+              { "e":"div", "t":"# export PATH=\"/usr/local/opt/php@8.0/sbin:$PATH\"", "class": "gray" }
             ]
           }
         ] },
@@ -310,28 +308,28 @@
             { "e":"p", "t":"將不使用的版本隱藏，以下為使用 PHP 7.3 的範例樣式" },
             {
               "e":"pre",
-              "attr":{ "class":"code zshrc" },
+              "class":"lines",
               "s":[
-                { "e":"div", "t":"# PHP 5.6", "attr": {"class": "g"} },
-                { "e":"div", "t":"# LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 5.6", "class": "gray" },
+                { "e":"div", "t":"# LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so", "class": "gray" },
                 { "e":"div", "t":" " },
-                { "e":"div", "t":"# PHP 7.0", "attr": {"class": "g"} },
-                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.0/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.0", "class": "gray" },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.0/lib/httpd/modules/libphp7.so", "class": "gray" },
                 { "e":"div", "t":" " },
-                { "e":"div", "t":"# PHP 7.1", "attr": {"class": "g"} },
-                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.1", "class": "gray" },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.1/lib/httpd/modules/libphp7.so", "class": "gray" },
                 { "e":"div", "t":" " },
-                { "e":"div", "t":"# PHP 7.2", "attr": {"class": "g"} },
-                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.2", "class": "gray" },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so", "class": "gray" },
                 { "e":"div", "t":" " },
-                { "e":"div", "t":"# PHP 7.3", "attr": {"class": "g"} },
-                { "e":"div", "s":[{"e": "span", "t": "LoadModule", "attr": {"class": "b"} }, {"e": "span", "t": " php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so" }] },
+                { "e":"div", "t":"# PHP 7.3", "class": "gray" },
+                { "e":"div", "s":[{"e": "span", "t": "LoadModule", "class": "blue" }, {"e": "span", "t": " php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so" }] },
                 { "e":"div", "t":" " },
-                { "e":"div", "t":"# PHP 7.4", "attr": {"class": "g"} },
-                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so", "attr": {"class": "g"} },
+                { "e":"div", "t":"# PHP 7.4", "class": "gray" },
+                { "e":"div", "t":"# LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so", "class": "gray" },
                 { "e":"div", "t":" " },
-                { "e":"div", "t":"# PHP 8.0", "attr": {"class": "g"} },
-                { "e":"div", "t":"# LoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so", "attr": {"class": "g"} }
+                { "e":"div", "t":"# PHP 8.0", "class": "gray" },
+                { "e":"div", "t":"# LoadModule php8_module /usr/local/opt/php@8.0/lib/httpd/modules/libphp8.so", "class": "gray" }
               ]
             }
           ]
@@ -477,12 +475,12 @@
       "s":[
         {
           "e":"li",
-          "s":[{ "e":"a", "t":"Youtube 影音教學版", "attr":{ "href":"https://www.youtube.com/watch?v=AV_6pXd-Crk", "target":"_blank" } }]
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=AV_6pXd-Crk" }]
         },
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"macOS 11.0 Big Sur Apache Setup: Multiple PHP Versions | Grav CMS", "attr":{ "href":"https://getgrav.org/blog/macos-bigsur-apache-multiple-php-versions", "target":"_blank" } }
+            { "e":"a", "t":"macOS 11.0 Big Sur Apache Setup: Multiple PHP Versions | Grav CMS", "href":"https://getgrav.org/blog/macos-bigsur-apache-multiple-php-versions" }
           ]
         }
       ]

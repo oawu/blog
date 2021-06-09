@@ -84,7 +84,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"a", "t":"https://cocoapods.org/", "attr":{ "href":"https://cocoapods.org/", "target":"_blank" } }
+            { "e":"a", "t":"https://cocoapods.org/", "href":"https://cocoapods.org/" }
           ]
         }
       ]
