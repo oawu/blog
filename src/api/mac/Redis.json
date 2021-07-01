@@ -1,6 +1,6 @@
 {
   "k":"Redis",
-  "t":"macOS 上安裝 Redis",
+  "title":"macOS 上安裝 Redis",
   "i":"2021-06-02",
   "a":[
     { "e":"h2", "t":"安裝方法有兩種：" },

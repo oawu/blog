@@ -237,10 +237,10 @@ body {
   display: inline-block;
   width: 100%;
   margin: 0;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
   + %-block {
-    margin-top: 18px;
+    margin-top: 20px;
   }
 }
 #main header {
@@ -843,6 +843,7 @@ footer {
 .articles {
   display: inline-block;
   width: 100%;
+  margin-top: 10px;
 
   display: grid;
   grid-template-rows: auto;
@@ -872,6 +873,31 @@ footer {
       color: var(--ui-color-secondaryLabel);
       font-size: small;
       line-height: 1.625;
+
+    }
+    // &.m {
+    //   padding: 0;
+    //   b {
+    //     padding: 0 20px;
+    //     padding-top: 16px;
+    //     @include overflow-docx3();
+    //   }
+    //   span {
+    //     padding: 0 16px;
+    //     padding-bottom: 16px;
+    //     margin-top: 8px;
+    //   }
+    // }
+  }
+  figure {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    border: 1px solid rgba(255, 0, 0, .3);
+    padding-bottom: 52.5%;
+    img {
+      width: 100%;
     }
   }
 }

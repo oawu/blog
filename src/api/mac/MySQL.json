@@ -1,6 +1,6 @@
 {
   "k":"MySQL",
-  "t":"macOS 上安裝 MySQL",
+  "title":"macOS 上安裝 MySQL",
   "i":"2021-06-02",
   "a":[
     { "e":"h2", "t":"5.7 安裝步驟" },

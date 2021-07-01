@@ -1,6 +1,6 @@
 {
   "k":"EC2-Ubuntu-Apache-SSL-Proxy",
-  "t":"EC2 Ubuntu Apache SSL Proxy",
+  "title":"EC2 Ubuntu Apache SSL Proxy",
   "i":"2020-03-17",
   "a":[
     {

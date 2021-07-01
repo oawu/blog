@@ -299,7 +299,7 @@ section p, section blockquote, section ul, section ol, section pre, section figu
   overflow-wrap: break-word;
 }
 section p + p, section blockquote + p, section ul + p, section ol + p, section pre + p, section figure + p, section table + p, section .iframe + p, section p + blockquote, section blockquote + blockquote, section ul + blockquote, section ol + blockquote, section pre + blockquote, section figure + blockquote, section table + blockquote, section .iframe + blockquote, section p + ul, section blockquote + ul, section ul + ul, section ol + ul, section pre + ul, section figure + ul, section table + ul, section .iframe + ul, section p + ol, section blockquote + ol, section ul + ol, section ol + ol, section pre + ol, section figure + ol, section table + ol, section .iframe + ol, section p + pre, section blockquote + pre, section ul + pre, section ol + pre, section pre + pre, section figure + pre, section table + pre, section .iframe + pre, section p + figure, section blockquote + figure, section ul + figure, section ol + figure, section pre + figure, section figure + figure, section table + figure, section .iframe + figure, section p + table, section blockquote + table, section ul + table, section ol + table, section pre + table, section figure + table, section table + table, section .iframe + table, section p + .iframe, section blockquote + .iframe, section ul + .iframe, section ol + .iframe, section pre + .iframe, section figure + .iframe, section table + .iframe, section .iframe + .iframe {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 #main header {
@@ -896,6 +896,7 @@ footer time:before {
 .articles {
   display: inline-block;
   width: 100%;
+  margin-top: 10px;
   display: grid;
   grid-template-rows: auto;
 }
@@ -923,6 +924,17 @@ footer time:before {
   color: var(--ui-color-secondaryLabel);
   font-size: small;
   line-height: 1.625;
+}
+.articles figure {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  height: auto;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  padding-bottom: 52.5%;
+}
+.articles figure img {
+  width: 100%;
 }
 
 #loading {

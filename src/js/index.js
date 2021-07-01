@@ -69,7 +69,7 @@ Vue.component('main-article', {
   template: El.render(`
     article#article
       header
-        h1 => *text=article.t
+        h1 => *text=article.title
         span => *text=article.st   *if=article.st
 
       section
@@ -88,7 +88,7 @@ Vue.component('main-article', {
           b => *text=article.n.t
       
       footer
-        time => *text=Datetime(article.i).ago   :datetime=Datetime(article.i)
+        time => *text=Datetime(article.at).ago   :datetime=Datetime(article.at)
       `)
 
 })
@@ -104,7 +104,9 @@ Vue.component('main-articles', {
         h1 => *text=title
 
       div.articles
-        a => *for=(article, i) in articles   :key=i   :href=article.u
+        a => *for=(article, i) in articles   :key=i   :href=article.u   :class={m: article.m}
+          figure => *if=article.m
+            //img => :src=article.m
           b => *text=article.t
           span => *if=article.st   *text=article.st`)
 })
@@ -159,6 +161,7 @@ Load.init({
       { k: 'note',    st: 0, c: '1e', t: '隨筆雜記' },
       { k: 'mazu',    st: 0, c: '1a', t: '鄉土北港' },
       { k: 'unbox',   st: 0, c: 'f', t: '開箱文章' },
+      { k: 'album',   st: 0, c: '14', t: '生活相簿' },
       { k: 'license', st: 0, c: '16', t: '授權聲明' }
     ],
   },
@@ -207,7 +210,7 @@ Load.init({
           loading => *if=!main
 
           template => *else
-            main-articles => *if=main.s   :title=main.t   :articles=main.s
+            main-articles => *if=main.s   :title=main.title   :articles=main.s
             main-article => *if=main.a   :article=main
   `)
 })
