@@ -1,7 +1,7 @@
 {
   "title":"開箱文章",
-  "p":false,
-  "s":[
+  "type":"articles",
+  "items":[
     {
       "k":"Nintendo-Switch",
       "t":"Nintendo Switch",

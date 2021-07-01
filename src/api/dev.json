@@ -1,7 +1,7 @@
 {
   "title":"開發心得",
-  "p":false,
-  "s":[
+  "type":"articles",
+  "items":[
     {
       "k":"AWS-EC2-Lock-SSH",
       "t":"EC2 被鎖住不能使用 SSH 登入 怎麼辦？",

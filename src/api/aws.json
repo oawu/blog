@@ -1,7 +1,7 @@
 {
   "title":"AWS 筆記",
-  "p":false,
-  "s":[
+  "type":"articles",
+  "items":[
     {
       "k":"Create-EC2-Instance",
       "t":"AWS 開設 EC2 Instance",

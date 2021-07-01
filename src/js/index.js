@@ -210,7 +210,7 @@ Load.init({
           loading => *if=!main
 
           template => *else
-            main-articles => *if=main.s   :title=main.title   :articles=main.s
+            main-articles => *if=main.items   :title=main.title   :articles=main.items
             main-article => *if=main.a   :article=main
   `)
 })

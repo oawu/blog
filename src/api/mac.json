@@ -1,7 +1,7 @@
 {
   "title":"蘋果環境",
-  "p":false,
-  "s":[
+  "type":"articles",
+  "items":[
     {
       "k":"Base",
       "t":"設定 Xcode 與基礎環境",

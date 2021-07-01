@@ -2,9 +2,8 @@
   "k":"EC2-Ubuntu-NodeJS",
   "title":"EC2 Ubuntu 安裝 Node.js",
   "at":"2020-03-17",
+  "type":"article",
   "a":[
-
-
     { "e":"h2", "t":"安裝 Node.js" },
     { "e":"p", "t": "方法有兩種，自己選擇" },
     {

@@ -1,7 +1,7 @@
 {
   "title":"生活相簿",
-  "p":true,
-  "s":[
+  "type":"albums",
+  "items":[
     {
       "k":"Create-EC2-Instance",
       "t":"AWS 開設 EC2 開設 EC2 開設 EC2 Instance",
