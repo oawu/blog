@@ -2,7 +2,7 @@
   "k":"macOS-High-Sierra-install-PHP-Apache-note",
   "title":"2017 macOS High Sierra 安裝 PHP Apache 筆記",
   "st":"被迫更新至最新 macOS 版本，安裝後端環境筆記",
-  "i":"2017-11-27",
+  "at":"2017-11-27",
   "a":[
     { "e":"p", "t":"最近因為需要開發 iOS App 所以逼得我自己需要把 Mac OS 更新到最新版本，但更新完後發現內建在 OSX 中的 PHP 版本居然變成了 7，變成 PHP 7 是不打緊，只是我需要的 PHP-imagick 套件一直安裝不起來，覺得氣餒，所以為了解決這問題下了一點點功課。" },
     {
