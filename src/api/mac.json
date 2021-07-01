@@ -3,142 +3,119 @@
   "type":"articles",
   "items":[
     {
-      "k":"Base",
-      "t":"設定 Xcode 與基礎環境",
-      "i":"2021-06-02",
-      "g":["macOS", "Xcode", "Finder", "系統"]
+      "id":"Base",
+      "title":"設定 Xcode 與基礎環境",
+      "tags":["macOS", "Xcode", "Finder", "系統"]
     },
     {
-      "k":"Chrome",
-      "t":"macOS 上安裝 Chrome 瀏覽器",
-      "i":"2021-06-02",
-      "g":["Google", "Chrome", "瀏覽器"]
+      "id":"Chrome",
+      "title":"macOS 上安裝 Chrome 瀏覽器",
+      "tags":["Google", "Chrome", "瀏覽器"]
     },
     {
-      "k":"HackFont",
-      "t":"程式碼等寬字型字體 Hack Font",
-      "i":"2021-06-02",
-      "g":["字型"]
+      "id":"HackFont",
+      "title":"程式碼等寬字型字體 Hack Font",
+      "tags":["字型"]
     },
     {
-      "k":"iTerm2",
-      "t":"macOS 開發者必安裝的終端機 - iTerm2",
-      "i":"2021-06-02",
-      "g":["iTerm2", "終端機", "Zsh", "SSH"]
+      "id":"iTerm2",
+      "title":"macOS 開發者必安裝的終端機 - iTerm2",
+      "tags":["iTerm2", "終端機", "Zsh", "SSH"]
     },
     {
-      "k":"SublimeText",
-      "t":"macOS 上安裝 Sublime Text 文字編輯器",
-      "i":"2021-06-02",
-      "g":["Sublime", "文字編輯", "寫程式"]
+      "id":"SublimeText",
+      "title":"macOS 上安裝 Sublime Text 文字編輯器",
+      "tags":["Sublime", "文字編輯", "寫程式"]
     },
     {
-      "k":"Sourcetree",
-      "t":"macOS 上安裝 Sourcetree Git 管理介面",
-      "i":"2021-06-02",
-      "g":["Git", "Sourcetree", "bitbucket", "管控工具"]
+      "id":"Sourcetree",
+      "title":"macOS 上安裝 Sourcetree Git 管理介面",
+      "tags":["Git", "Sourcetree", "bitbucket", "管控工具"]
     },
     {
-      "k":"BetterTouchTool",
-      "t":"macOS 必裝的輔助工具 BetterTouchTool",
-      "i":"2021-06-02",
-      "g":["macOS", "BetterTouchTool", "系統輔助"]
+      "id":"BetterTouchTool",
+      "title":"macOS 必裝的輔助工具 BetterTouchTool",
+      "tags":["macOS", "BetterTouchTool", "系統輔助"]
     },
     {
-      "k":"GitSetting",
-      "t":"OA 個人常用的 Git 設定",
-      "i":"2021-06-02",
-      "g":["Git", "管控工具"]
+      "id":"GitSetting",
+      "title":"OA 個人常用的 Git 設定",
+      "tags":["Git", "管控工具"]
     },
     {
-      "k":"Apache",
-      "t":"macOS 上安裝 Apache",
-      "i":"2021-06-02",
-      "g":["Apache", "後端", "http"]
+      "id":"Apache",
+      "title":"macOS 上安裝 Apache",
+      "tags":["Apache", "後端", "http"]
     },
     {
-      "k":"PHP",
-      "t":"macOS 上安裝 PHP 語言",
-      "i":"2021-06-02",
-      "g":["PHP", "後端"]
+      "id":"PHP",
+      "title":"macOS 上安裝 PHP 語言",
+      "tags":["PHP", "後端"]
     },
     {
-      "k":"MySQL",
-      "t":"macOS 上安裝 MySQL",
-      "i":"2021-06-02",
-      "g":["MySQL", "後端"]
+      "id":"MySQL",
+      "title":"macOS 上安裝 MySQL",
+      "tags":["MySQL", "後端"]
     },
     {
-      "k":"SequelPro",
-      "t":"macOS 上安裝 Sequel Pro 資料庫管理介面",
-      "i":"2021-06-02",
-      "g":["MySQL", "Sequel Pro", "後端"]
+      "id":"SequelPro",
+      "title":"macOS 上安裝 Sequel Pro 資料庫管理介面",
+      "tags":["MySQL", "Sequel Pro", "後端"]
     },
     {
-      "k":"RubyOnRails",
-      "t":"macOS 上安裝 Ruby on Rails",
-      "i":"2021-06-02",
-      "g":["Ruby", "Rails", "Ruby on Rails", "後端"]
+      "id":"RubyOnRails",
+      "title":"macOS 上安裝 Ruby on Rails",
+      "tags":["Ruby", "Rails", "Ruby on Rails", "後端"]
     },
     {
-      "k":"Compass",
-      "t":"macOS 上安裝 Compass",
-      "i":"2021-06-02",
-      "g":["Gem", "Compass", "SCSS", "CSS", "前端"]
+      "id":"Compass",
+      "title":"macOS 上安裝 Compass",
+      "tags":["Gem", "Compass", "SCSS", "CSS", "前端"]
     },
     {
-      "k":"Node",
-      "t":"macOS 上安裝 Node.js",
-      "i":"2021-06-02",
-      "g":["Node.js", "Gulp", "前端", "後端"]
+      "id":"Node",
+      "title":"macOS 上安裝 Node.js",
+      "tags":["Node.js", "Gulp", "前端", "後端"]
     },
     {
-      "k":"CocoaPods",
-      "t":"macOS 上安裝 CocoaPods iOS 套件管理",
-      "i":"2021-06-02",
-      "g":["iOS", "Xcode", "CocoaPods", "App"]
+      "id":"CocoaPods",
+      "title":"macOS 上安裝 CocoaPods iOS 套件管理",
+      "tags":["iOS", "Xcode", "CocoaPods", "App"]
     },
     {
-      "k":"Redis",
-      "t":"macOS 上安裝 Redis",
-      "i":"2021-06-02",
-      "g":["Redis", "後端"]
+      "id":"Redis",
+      "title":"macOS 上安裝 Redis",
+      "tags":["Redis", "後端"]
     },
     {
-      "k":"Memcached",
-      "t":"macOS 上安裝 Memcached",
-      "i":"2021-06-02",
-      "g":["Memcached", "後端"]
+      "id":"Memcached",
+      "title":"macOS 上安裝 Memcached",
+      "tags":["Memcached", "後端"]
     },
     {
-      "k":"Sip",
-      "t":"macOS 螢幕顏色吸取器 - Sip",
-      "i":"2021-06-02",
-      "g":["Sip", "前端", "取色"]
+      "id":"Sip",
+      "title":"macOS 螢幕顏色吸取器 - Sip",
+      "tags":["Sip", "前端", "取色"]
     },
     {
-      "k":"MacDown",
-      "t":"macOS 上安裝 Markdown 文件編輯器",
-      "i":"2021-06-02",
-      "g":["Markdown", "文件編輯"]
+      "id":"MacDown",
+      "title":"macOS 上安裝 Markdown 文件編輯器",
+      "tags":["Markdown", "文件編輯"]
     },
     {
-      "k":"Other",
-      "t":"其他雜記",
-      "i":"2021-06-02",
-      "g":[]
+      "id":"Other",
+      "title":"其他雜記",
+      "tags":[]
     },
     {
-      "k":"Backup-SublimeText",
-      "t":"[備份] Sublime Text 3、2 安裝設定",
-      "i":"2021-06-02",
-      "g":[]
+      "id":"Backup-SublimeText",
+      "title":"[備份] Sublime Text 3、2 安裝設定",
+      "tags":[]
     },
     {
-      "k":"Backup-MySQL",
-      "t":"[備份] macOS 上安裝 MySQL 5.6",
-      "i":"2021-06-02",
-      "g":[]
+      "id":"Backup-MySQL",
+      "title":"[備份] macOS 上安裝 MySQL 5.6",
+      "tags":[]
     }
   ]
 }
