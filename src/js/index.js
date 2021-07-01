@@ -80,10 +80,10 @@ Vue.component('main-article', {
           el => *for=(el, i) in article.r   :key=i   :el=el
 
       div#prev-next => *if=article.p || article.n   :class='n' + [article.p, article.n].filter(t => t).length
-        a.icon-a.prev => *if=article.p   :href=article.p.u
+        a.icon-a.prev => *if=article.p   :href=article.p.url
           span => *text='上一篇'
           b => *text=article.p.t
-        a.icon-b.next => *if=article.n   :href=article.n.u
+        a.icon-b.next => *if=article.n   :href=article.n.url
           span => *text='下一篇'
           b => *text=article.n.t
       
@@ -104,7 +104,7 @@ Vue.component('main-articles', {
         h1 => *text=title
 
       div.articles
-        a => *for=(article, i) in articles   :key=i   :href=article.u   :class={m: article.m}
+        a => *for=(article, i) in articles   :key=i   :href=article.url
           figure => *if=article.m
             //img => :src=article.m
           b => *text=article.t
@@ -166,7 +166,9 @@ Load.init({
     ],
   },
   mounted () {
-    this.load(this.items.map(t => (t.u = 'index' + EXT + '?k=' + t.k, t)).filter(({ k }) => Params.k === k).shift() || this.items[0])
+    this.load(this.items
+      .map(t => (t.url = 'index' + EXT + '?k=' + t.k, t))
+      .filter(({ k }) => Params.k === k).shift() || this.items[0])
   },
   methods: {
     load (item) {
@@ -174,15 +176,18 @@ Load.init({
         .enqueue(next => next(this.item = item))
         .enqueue(next => API.GET('/api/' + this.item.k + '.json').fail(_ => this.is404 = true).done(next))
         .enqueue((next, main) => {
-          if (!main.s) return next(main)
+          if (!main.items) return next(main)
           
-          const i = main.s.map(t => (t.u = '/index' + EXT + '?k=' + this.item.k + '&id=' + t.k, t)).map(({ k }) => k).indexOf(decodeURI(Params.id))
+          const i = main.items
+            .map(t => (t.url = '/index' + EXT + '?k=' + this.item.k + '&id=' + t.k, t))
+            .map(({ k }) => k)
+            .indexOf(decodeURI(Params.id))
 
           if (i == -1) return next(main, Params.id && Toastr.failure('找不到資料！'))
 
-          const item = main.s[i]
-          const p = i == 0 ? null : main.s[i - 1]
-          const n = i == main.s.length - 1 ? null : main.s[i + 1]
+          const item = main.items[i]
+          const p = i == 0 ? null : main.items[i - 1]
+          const n = i == main.items.length - 1 ? null : main.items[i + 1]
           return item ? API.GET('/api/' + this.item.k + '/' + item.k + '.json').done(main => next({ ...main, p, n })).fail(_ => next(main, Toastr.failure('找不到資料！'))) : next(main)
         })
         .enqueue((next, main) => next(this.main = main))
@@ -194,7 +199,7 @@ Load.init({
       toastr
 
       div#menu => :class={ on: on }
-        a => *for=t in items   :key=t.k   :class=['icon-' + t.c, { active: item === t }]   :href=t.u
+        a => *for=t in items   :key=t.k   :class=['icon-' + t.c, { active: item === t }]   :href=t.url
           span => *text=t.t   :text=t.st
 
       header#header
