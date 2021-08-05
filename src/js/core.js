@@ -188,62 +188,6 @@ API.Q = { q: Queue(), enqueue (closure) { return this.q.enqueue((...args) => (cl
 // Load
 const Load = {
   mount (option) { return document.body.appendChild(new Vue(option).$mount().$el) },
-  init (option) { return typeof option == 'function' ? option() : $(_ => {
-
-  // Vue.component('main-list', {
-  //   props: {
-  //     item: { type: Object, required: true }
-  //   },
-  //   template: El.render(`
-  //     div => *text='b'
-  //   `)
-  // })
-
-  // Vue.component('layout', {
-  //   props: {
-  //     page: { type: Object, required: true }
-  //   },
-  //   data: _ => ({
-  //     on: false,
-  //     now: null,
-  //     title: "OA Wu's Blog",
-  //     items: Menu,
-  //     toastrs: Toastr.items,
-  //   }),
-  //   mounted () {
-  //     this.click(this.items[1])
-  //   },
-  //   methods: {
-  //     click (item) {
-  //       this.now = item.k
-  //       this.$emit('click', item)
-  //     }
-  //   },
-  //   template: El.render(`
-  //     main#app
-  //       div#menu => :class={ on: on }
-  //         label => *for=item in items   :key=item.k   :class=['icon-' + item.c, { active: now === item.k }]   @click=click(item)
-  //           span => *text=item.t   :text=item.s ? item.s.length : 0
-
-  //       header#header
-  //         label.icon-0 => @click=on=true
-  //         span => *text=title
-
-  //       label#cover => *if=on   @click=on=false
-
-  //       div#main
-  //         slot
-
-  //       div#toastr => *if=toastrs.length
-  //         div.toastr => *for=(item, i) in toastrs   :key=item._id   :class=item.type
-  //           b => *if=item.title   *text=item.title
-  //           span => *if=item.content   *text=item.content
-  //           label.icon-c => @click=Toastr.close(item)
-  //           i
-  //   `) })
-
-    this.mount(option)
-
-  }) }
+  init (option) { return typeof option == 'function' ? option() : $(_ => this.mount(option)) }
 }
 
