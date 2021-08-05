@@ -23,7 +23,7 @@
         { "e":"span", "t":" 的 " },
         { "e":"a", "t":"RubyGems", "href":"https://rubygems.org/" },
         { "e":"span", "t":" 相關工具，以及導入 " },
-        { "e":"a", "t":"OA's ElasticSearch", "href":"https://www.ioa.tw/Develop/PHP-ElasticSearch-PDO.html" },
+        { "e":"a", "t":"OA's ElasticSearch", "href":"/index.html?k=dev&id=PHP-ElasticSearch-PDO" },
         { "e":"span", "t":" 工具，並且與前端工具 " },
         { "e":"a", "t":"Compass", "href":"http://compass-style.org/" },
         { "e":"span", "t":"、" },
@@ -96,7 +96,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"匯入 " },
-            { "e":"a", "t":"OA-ElasticSearch", "href":"https://www.ioa.tw/Develop/PHP-ElasticSearch-PDO.html" },
+            { "e":"a", "t":"OA-ElasticSearch", "href":"/index.html?k=dev&id=PHP-ElasticSearch-PDO" },
             { "e":"span", "t":" 加入 " },
             { "e":"a", "t":"ElasticSearch", "href":"https://www.elastic.co/" },
             { "e":"span", "t":" 的使用以及相關管理指令。" }

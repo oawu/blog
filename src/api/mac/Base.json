@@ -108,7 +108,7 @@
               "e":"p",
               "s":[
                 { "e":"span", "t":"下載安裝 Sip(Apple Store 已無販售，付費版本請看 " },
-                { "e":"a", "t":"螢幕顏色吸取器 － Sip", "href":"https://www.ioa.tw/macOS/Sip.html" },
+                { "e":"a", "t":"螢幕顏色吸取器 － Sip", "href":"/index.html?k=mac&id=Sip" },
                 { "e":"span", "t":")" }
               ]
             },

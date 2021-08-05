@@ -256,7 +256,7 @@
             { "e":"span", "t":" 終端機(若尚未安裝 " },
             { "e":"code", "t":"iTerm2" },
             { "e":"span", "t":" 請先參考 " },
-            { "e":"a", "t":"此篇", "href":"https://www.ioa.tw/macOS/iTerm2.html" },
+            { "e":"a", "t":"此篇", "href":"/index.html?k=mac&id=iTerm2" },
             { "e":"span", "t":" 安裝)，建立 bin 目錄執行指令 " },
             { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
           ]

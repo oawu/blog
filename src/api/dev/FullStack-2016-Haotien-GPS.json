@@ -19,7 +19,7 @@
         { "e":"span", "t":" 的串接，專案這次使用 Google 文件 的 " },
         { "e":"a", "t":"Google Sheets JavaScript API", "href":"https://www.google.com.tw/intl/zh-TW/docs/about/" },
         { "e":"span", "t":" 當作路徑的儲存的空間，如此一來流量就不會是問題（關於用 Google 試算表當 API 的方法可以參考" },
-        { "e":"a", "t":"此篇", "href":"https://www.ioa.tw/Develop/GoogleSheets-API.html" },
+        { "e":"a", "t":"此篇", "href":"/index.html?k=dev&id=GoogleSheets-API" },
         { "e":"span", "t":"）。" }
       ]
     },

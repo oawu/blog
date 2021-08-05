@@ -218,7 +218,7 @@
         { "e":"span", "t":"，方法可以參考 " },
         {
           "e":"a",
-          "href":"https://www.ioa.tw/AWS/EC2-Ubuntu.html",
+          "href":"/index.html?k=aws&id=EC2-Ubuntu",
           "t":"此篇"
         }
       ]

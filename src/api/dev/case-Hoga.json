@@ -40,7 +40,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"網站性質主要已公告資訊為主，所以功能面不外乎 Banner 輪播、列表呈現、表單功能，而這部分的 JavaScript 也是獨立完成。而後台上稿則是沿用" },
-        { "e":"a", "t":"宙思設計", "href":"https://www.ioa.tw/Develop/FullStack-2016-ZEUS-Design-Studio.html" },
+        { "e":"a", "t":"宙思設計", "href":"https://www.zeusdesign.com.tw/" },
         { "e":"span", "t":"官網後台 Layout 並新增所需功能而完成。" }
       ]
     }

@@ -75,7 +75,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"Password 輸入剛剛 " },
-            { "e":"a", "t":"MySQL", "href":"https://www.ioa.tw/macOS/MySQL.html" },
+            { "e":"a", "t":"MySQL", "href":"/index.html?k=mac&id=MySQL" },
             { "e":"span", "t":" 設定的密碼" }
           ]
         },

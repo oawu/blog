@@ -354,7 +354,7 @@
             { "e":"span", "t":"開新的 ios Swift 專案名稱為 " },
             { "e":"code", "t":"Test" },
             { "e":"span", "t":"，並且做 " },
-            { "e":"a", "t":"pod init", "href":"https://www.ioa.tw/Develop/iOS-CocoaPods-note.html" }
+            { "e":"a", "t":"pod init", "href":"/index.html?k=dev&id=iOS-CocoaPods-note" }
           ]
         },
         {

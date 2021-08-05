@@ -19,7 +19,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"巢穴地圖的 Google 文件轉化成地圖呈現亦是使用之前實作的 " },
-        { "e":"a", "t":"Google 試算表取得 API", "href":"https://www.ioa.tw/Develop/GoogleSheets-API.html" },
+        { "e":"a", "t":"Google 試算表取得 API", "href":"/index.html?k=dev&id=GoogleSheets-API" },
         { "e":"span", "t":" 的方式，藉由 " },
         { "e":"a", "t":"JavaScript", "href":"https://zh.wikipedia.org/zh-tw/JavaScript" },
         { "e":"span", "t":" 的 " },
