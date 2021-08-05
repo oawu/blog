@@ -610,6 +610,15 @@ section pre:not(.xcode) .blue {
 section pre:not(.xcode) .yellow {
   color: #ffe894;
 }
+section pre:not(.xcode) .purple {
+  color: #b883fa;
+}
+section pre:not(.xcode) .green {
+  color: #b0fdb0;
+}
+section pre:not(.xcode) .orange {
+  color: #eb9634;
+}
 section ul, section ol {
   padding-left: 36px;
 }

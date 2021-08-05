@@ -73,7 +73,7 @@ Vue.component('main-article', {
         span => *text=article.subtitle   *if=article.subtitle
 
       section
-        el => *for=(el, i) in article.a   :key=i   :el=el
+        el => *for=(el, i) in article.els   :key=i   :el=el
 
         template => *if=article.r.length
           h2 => *text='相關參考'
@@ -82,15 +82,14 @@ Vue.component('main-article', {
       div#prev-next => *if=article.other   :class='n' + Object.keys(article.other).length
         a.icon-a.prev => *if=article.other.prev   :href=article.other.prev.url
           span => *text='上一篇'
-          b => *text=article.other.prev.t
+          b => *text=article.other.prev.title
         a.icon-b.next => *if=article.other.next   :href=article.other.next.url
           span => *text='下一篇'
-          b => *text=article.other.next.t
+          b => *text=article.other.next.title
       
       footer
         time => *text=Datetime(article.at).ago   :datetime=Datetime(article.at)
       `)
-
 })
 
 Vue.component('main-articles', {
@@ -107,6 +106,22 @@ Vue.component('main-articles', {
         a => *for=(article, i) in articles   :key=i   :href=article.url
           b => *text=article.title
           span => *if=article.subtitle   *text=article.subtitle`)
+})
+
+Vue.component('main-albums', {
+  props: {
+    title: { type: String, required: true },
+    albums: { type: Array, required: true },
+  },
+  template: El.render(`
+    div#albums
+      header
+        h1 => *text=title
+
+      div.albums
+        a => *for=(album, i) in albums   :key=i   :href=album.url
+          b => *text=album.title
+          span => *if=album.subtitle   *text=album.subtitle`)
 })
 
 Vue.component('loading', {
@@ -127,9 +142,9 @@ Vue.component('p404', {
       p
         span         => *text='建議您回'
         a.icon-d     => *text='首頁'   :href='/'
-        span         => *text='，或者'
-        label.icon-1 => *text='搜尋'
-        span         => *text='一下吧！'`)
+        // span         => *text='，或者'
+        // label.icon-1 => *text='搜尋'
+        span         => *text='吧！'`)
 })
 
 Vue.component('toastr', {
@@ -156,10 +171,11 @@ Load.init({
       { key: 'dev',     icon: 'e',  title: '開發心得', subtitle: 0 },
       { key: 'mac',     icon: '1b', title: '蘋果環境', subtitle: 0 },
       { key: 'aws',     icon: '22', title: 'AWS筆記', subtitle: 0 },
+      { key: 'rpi',     icon: '29', title: '樹莓派',  subtitle: 0 },
       { key: 'note',    icon: '1e', title: '隨筆雜記', subtitle: 0 },
       { key: 'mazu',    icon: '1a', title: '鄉土北港', subtitle: 0 },
       { key: 'unbox',   icon: 'f',  title: '開箱文章', subtitle: 0 },
-      { key: 'album',   icon: '14', title: '生活相簿', subtitle: 0 },
+      // { key: 'album',   icon: '14', title: '生活相簿', subtitle: 0 },
       { key: 'license', icon: '16', title: '授權聲明', subtitle: 0 }
     ],
   },
@@ -186,7 +202,9 @@ Load.init({
           const item = main.items[i]
           const p = i == 0 ? null : main.items[i - 1]
           const n = i == main.items.length - 1 ? null : main.items[i + 1]
-          const other = p || n ? { prev: p, next: n } : {}
+          const other = {}
+          p && (other.prev = p)
+          n && (other.next = n)
 
           return item ? API.GET('/api/' + this.item.key + '/' + item.id + '.json').done(main => next({ ...main, other })).fail(_ => next(main, Toastr.failure('找不到資料！'))) : next(main)
         })
@@ -215,7 +233,8 @@ Load.init({
           loading => *if=!main
 
           template => *else
-            main-articles => *if=main.items   :title=main.title   :articles=main.items
-            main-article => *if=main.a   :article=main
+            main-articles => *if=main.type=='articles'   :title=main.title   :articles=main.items
+            main-article  => *if=main.type=='article'    :article=main
+            main-albums   => *if=main.type=='albums'     :title=main.title   :albums=main.items
   `)
 })

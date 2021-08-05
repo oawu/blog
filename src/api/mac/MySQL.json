@@ -2,7 +2,7 @@
   "title":"macOS 上安裝 MySQL",
   "at":"2021-06-02",
   "type":"article",
-  "a":[
+  "els":[
     { "e":"h2", "t":"5.7 安裝步驟" },
     {
       "e":"ul",

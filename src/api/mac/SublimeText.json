@@ -2,7 +2,7 @@
   "title":"macOS 上安裝 Sublime Text 文字編輯器",
   "at":"2021-06-02",
   "type":"article",
-  "a":[
+  "els":[
     { "e":"blockquote", "class": "info", "s": [
       { "e": "span", "t":"若無特殊需求，安裝最新版本的 " },
       { "e": "code", "t":"Sublime Text 4" },
