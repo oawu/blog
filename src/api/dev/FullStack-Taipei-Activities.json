@@ -43,7 +43,7 @@
         { "e":"li", "t":"針對差異做更新、刪除、上傳" }
       ]
     },
-    { "e":"img", "alt":"使用 php 將 API 資料取下來後編輯成 HTML 頁面，並且放置到 Amazon S3。放置部署過程中同時將頁面所需的 css、JavaScript，並且一起上傳至 S3", "src":"https://www.ioa.tw/img/352deb6b4fcc5b26a1f3b30ef0dc1a5d.jpg" },
+    { "e":"img", "alt":"使用 php 將 API 資料取下來後編輯成 HTML 頁面，並且放置到 Amazon S3。放置部署過程中同時將頁面所需的 css、JavaScript，並且一起上傳至 S3", "src":"/img/dev/FullStack-Taipei-Activities/352deb6b4fcc5b26a1f3b30ef0dc1a5d.jpg" },
     {
       "e":"p",
       "s":[

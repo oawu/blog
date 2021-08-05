@@ -13,9 +13,9 @@
         { "e":"span", "t":"承接的網站外包案，不過這專案我並非為全端作業，而是只實作後端與系統的部分，前端刻板則由宙思設計所製作。" }
       ]
     },
-    { "e":"img", "src":"https://www.ioa.tw/img/d7ceb9e061d00b645fc1f2cf624a518c.jpg" },
-    { "e":"img", "alt":"列表頁包含了多樣的查詢方式", "src":"https://www.ioa.tw/img/22dc0059c9191aaec4961014b0e86afc.jpg" },
-    { "e":"img", "alt":"響應式網頁設計", "src":"https://www.ioa.tw/img/2565348142f6e1b459a59b8d099bf8a6.jpg" },
+    { "e":"img", "src":"/img/dev/case-Chitorch/d7ceb9e061d00b645fc1f2cf624a518c.jpg" },
+    { "e":"img", "alt":"列表頁包含了多樣的查詢方式", "src":"/img/dev/case-Chitorch/22dc0059c9191aaec4961014b0e86afc.jpg" },
+    { "e":"img", "alt":"響應式網頁設計", "src":"/img/dev/case-Chitorch/2565348142f6e1b459a59b8d099bf8a6.jpg" },
     {
       "e":"p",
       "s":[

@@ -31,9 +31,9 @@
         { "e":"span", "t":"部分，有興趣的可以繼續往下看！" }
       ]
     },
-    { "e":"img", "alt":"整個網站的主軸，利用 Google Maps JavaScript API 來繪製動態的遶境路線圖，並且以動畫來意會活動當天的動線", "src":"https://www.ioa.tw/img/9b654637f4f4da577d0f73f82722e7bb.jpg" },
-    { "e":"img", "alt":"手動編輯相關北港陣頭文獻資料，從高中、大學就累績的相關資料，經由北港前輩們提點修正的相關文獻，搭配自己攝影的相關紀錄照片，以圖文方式介紹北港", "src":"https://www.ioa.tw/img/9d56f0abf95574383d1bf2f83225c88f.jpg" },
-    { "e":"img", "alt":"以 Google Maps 為主題，將北港有特色的店家、景點以地圖的方式呈現，並且以文章介紹其內容，或者提供相關部落客的網址，以提供網友來北港遊玩前的準備資訊", "src":"https://www.ioa.tw/img/96c38be56451046f9a441d3d5dec92d9.jpg" },
+    { "e":"img", "alt":"整個網站的主軸，利用 Google Maps JavaScript API 來繪製動態的遶境路線圖，並且以動畫來意會活動當天的動線", "src":"/img/dev/FullStack-2016-Mazu-GPS/9b654637f4f4da577d0f73f82722e7bb.jpg" },
+    { "e":"img", "alt":"手動編輯相關北港陣頭文獻資料，從高中、大學就累績的相關資料，經由北港前輩們提點修正的相關文獻，搭配自己攝影的相關紀錄照片，以圖文方式介紹北港", "src":"/img/dev/FullStack-2016-Mazu-GPS/9d56f0abf95574383d1bf2f83225c88f.jpg" },
+    { "e":"img", "alt":"以 Google Maps 為主題，將北港有特色的店家、景點以地圖的方式呈現，並且以文章介紹其內容，或者提供相關部落客的網址，以提供網友來北港遊玩前的準備資訊", "src":"/img/dev/FullStack-2016-Mazu-GPS/96c38be56451046f9a441d3d5dec92d9.jpg" },
     {
       "e":"p",
       "s":[
@@ -66,8 +66,8 @@
         { "e":"span", "t":"，所以不成問題。" }
       ]
     },
-    { "e":"img", "alt":"北港農曆三月十九各陣頭 GPS 定位，有鑒於近年來北港廟會的時程都不斷延遲，於是便製作了一個可以追蹤目前相關陣頭的 GPS 位置，再搭配 Google Maps 來顯示並且可以有效管理與掌握", "src":"https://www.ioa.tw/img/b6299be6727a803af9ca6fbc2cf6b48c.jpg" },
-    { "e":"img", "alt":"由於 AWS S3 架構方便、便宜、大頻寬，所以將其進階運用，使用 S3 來存放大量的聊天室內容，當使用者留言時，EC2 再將其資訊補至 S3，而聊天室每 10 秒再藉由 Ajax 往 S3 取得聊天室內容", "src":"https://www.ioa.tw/img/0e0e26b5949f7965054ec0f2f8276e1a.jpg" },
+    { "e":"img", "alt":"北港農曆三月十九各陣頭 GPS 定位，有鑒於近年來北港廟會的時程都不斷延遲，於是便製作了一個可以追蹤目前相關陣頭的 GPS 位置，再搭配 Google Maps 來顯示並且可以有效管理與掌握", "src":"/img/dev/FullStack-2016-Mazu-GPS/b6299be6727a803af9ca6fbc2cf6b48c.jpg" },
+    { "e":"img", "alt":"由於 AWS S3 架構方便、便宜、大頻寬，所以將其進階運用，使用 S3 來存放大量的聊天室內容，當使用者留言時，EC2 再將其資訊補至 S3，而聊天室每 10 秒再藉由 Ajax 往 S3 取得聊天室內容", "src":"/img/dev/FullStack-2016-Mazu-GPS/0e0e26b5949f7965054ec0f2f8276e1a.jpg" },
     {
       "e":"p",
       "s":[
@@ -103,8 +103,8 @@
       ]
     },
     { "e":"p", "t":"既然有作 Output 的快取，所以我也順便將 HTML 壓縮，因為 Output Cache，也就是說 Request 進來是不會去執行 php，那就無法紀錄瀏覽人數的紀錄了，為了解決這個問題，這部分我使用 AJAX 去實作人氣累計的功能。" },
-    { "e":"img", "alt":"網站要撐住大流量不敗的第一項法則就是做快取，其中我將 output 的資訊全部大量的做成快取，當後台有修改資料再針對相關的頁面清除快取，抑或者每小時重置一次快取。而系統為加強效能問題，除了 output 快取外，也對 config、Model 做相關的優化快取", "src":"https://www.ioa.tw/img/ae0e8f15d3d73d6aadbcfdbc3884896c.jpg" },
-    { "e":"img", "alt":"因為都將相關靜態檔案(css、img、js)都放置 S3，所以在網站上的 Request 數量大大降低，這對 Server 效能是一項有力的優化", "src":"https://www.ioa.tw/img/c8c6c00dcc2be52dab5b09dbdc10c316.jpg" },
+    { "e":"img", "alt":"網站要撐住大流量不敗的第一項法則就是做快取，其中我將 output 的資訊全部大量的做成快取，當後台有修改資料再針對相關的頁面清除快取，抑或者每小時重置一次快取。而系統為加強效能問題，除了 output 快取外，也對 config、Model 做相關的優化快取", "src":"/img/dev/FullStack-2016-Mazu-GPS/ae0e8f15d3d73d6aadbcfdbc3884896c.jpg" },
+    { "e":"img", "alt":"因為都將相關靜態檔案(css、img、js)都放置 S3，所以在網站上的 Request 數量大大降低，這對 Server 效能是一項有力的優化", "src":"/img/dev/FullStack-2016-Mazu-GPS/c8c6c00dcc2be52dab5b09dbdc10c316.jpg" },
     {
       "e":"p",
       "s":[
@@ -126,8 +126,8 @@
         { "e":"span", "t":" 後，不僅後端效能提升了，前端感受體驗也會順暢許多！" }
       ]
     },
-    { "e":"img", "alt":"一般架構下，若是路徑資訊的 .json API 不放 S3，而改放在伺服器的話，活動當天勢必會有龐大的流量進來，又加上固定時間會背景執行 AJAX 取得最新路徑，如此龐大的流量加上固定時間 AJAX 的 Request 勢必會衝垮伺服器的", "src":"https://www.ioa.tw/img/af7bd99310f330afd9296c1e10b19726.jpg" },
-    { "e":"img", "alt":"若將 API 的結果以 .json 檔案放置在 S3 的話，讓所有用戶端的 Request 往 S3 取得，而 S3 可以支援大量的流量，並且計費極低，完完全全可以頂住流量問題，再搭配上 CDN 後，不僅後端效能提升了，前端感受體驗也會順暢許多", "src":"https://www.ioa.tw/img/2b8ea71de924ff9adcb9d156fb835533.jpg" },
+    { "e":"img", "alt":"一般架構下，若是路徑資訊的 .json API 不放 S3，而改放在伺服器的話，活動當天勢必會有龐大的流量進來，又加上固定時間會背景執行 AJAX 取得最新路徑，如此龐大的流量加上固定時間 AJAX 的 Request 勢必會衝垮伺服器的", "src":"/img/dev/FullStack-2016-Mazu-GPS/af7bd99310f330afd9296c1e10b19726.jpg" },
+    { "e":"img", "alt":"若將 API 的結果以 .json 檔案放置在 S3 的話，讓所有用戶端的 Request 往 S3 取得，而 S3 可以支援大量的流量，並且計費極低，完完全全可以頂住流量問題，再搭配上 CDN 後，不僅後端效能提升了，前端感受體驗也會順暢許多", "src":"/img/dev/FullStack-2016-Mazu-GPS/2b8ea71de924ff9adcb9d156fb835533.jpg" },
     {
       "e":"p",
       "s":[
@@ -150,8 +150,8 @@
         { "e":"span", "t":"，以達到有效的管理。由於 AWS S3 架構方便、便宜、大頻寬，所以將其進階運用，使用 S3 來存放大量的聊天室內容，當使用者留言時，EC2 再將其資訊補至 S3，而聊天室每 10 秒再藉由 Ajax 往 S3 取得聊天室內容。" }
       ]
     },
-    { "e":"img", "alt":"網站不只前台技術，後台也有多項 CRUD 的功，其中也包含了地圖編輯，後台人員可以自行的編輯遶境路線圖抑或者地圖資訊，此功能對於網站維護是一項重點任務", "src":"https://www.ioa.tw/img/21c5e4fb23f0b6b75cc998caf07eac23.jpg" },
-    { "e":"img", "alt":"網站除了地圖重點外，多項內容則是使用文章的方式顯示，所以文章編輯器是必備的一項功能", "src":"https://www.ioa.tw/img/836097c84b190d75e4dde248a2bb9135.jpg" },
+    { "e":"img", "alt":"網站不只前台技術，後台也有多項 CRUD 的功，其中也包含了地圖編輯，後台人員可以自行的編輯遶境路線圖抑或者地圖資訊，此功能對於網站維護是一項重點任務", "src":"/img/dev/FullStack-2016-Mazu-GPS/21c5e4fb23f0b6b75cc998caf07eac23.jpg" },
+    { "e":"img", "alt":"網站除了地圖重點外，多項內容則是使用文章的方式顯示，所以文章編輯器是必備的一項功能", "src":"/img/dev/FullStack-2016-Mazu-GPS/836097c84b190d75e4dde248a2bb9135.jpg" },
     {
       "e":"p",
       "s":[
@@ -164,8 +164,8 @@
         { "e":"span", "t":"，可能有些頁面是使用 S3 吧，所以都撐得住！這是目前我個人做過最高流量的網站，相對的也是個人里程碑，回到做網站初衷，我只是個熱愛故鄉的鄉土文化，想為家鄉盡一分力，利用自己的專長技術，支援這個從小的信仰如此簡單。" }
       ]
     },
-    { "e":"img", "alt":"在各陣頭上放置此 App 即可在固定的時間區間回傳最新的定位資訊，App 並且可以鎖定以防止工作人員誤觸的風險。活動當天是使用 iPhone 4s 在香案車上使用充電器以保持穩定電量", "src":"https://www.ioa.tw/img/10d307ea0b375424d99c6a9af559ee6c.jpg" },
-    { "e":"img", "alt":"活動當天管理人員必然會在外面忙碌，所以有關電腦的相關設定或者 GPS Tracker 狀態管理、聊天室的狀況，都做成手機 App，以達到有效的管理", "src":"https://www.ioa.tw/img/af3518b15f8ecd7d15c67df4029a4ce5.jpg" }
+    { "e":"img", "alt":"在各陣頭上放置此 App 即可在固定的時間區間回傳最新的定位資訊，App 並且可以鎖定以防止工作人員誤觸的風險。活動當天是使用 iPhone 4s 在香案車上使用充電器以保持穩定電量", "src":"/img/dev/FullStack-2016-Mazu-GPS/10d307ea0b375424d99c6a9af559ee6c.jpg" },
+    { "e":"img", "alt":"活動當天管理人員必然會在外面忙碌，所以有關電腦的相關設定或者 GPS Tracker 狀態管理、聊天室的狀況，都做成手機 App，以達到有效的管理", "src":"/img/dev/FullStack-2016-Mazu-GPS/af3518b15f8ecd7d15c67df4029a4ce5.jpg" }
   ],
   "r":[
     {
