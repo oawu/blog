@@ -43,7 +43,7 @@
         { "e":"span", "t":"迷宮還有另外一項隱藏視角，就是當 " },
         { "e":"a", "t":"Git", "href":"https://git-scm.com/" },
         { "e":"span", "t":" 切換到 " },
-        { "e":"a", "t":"3D", "href":"https://github.com/comdan66/OA-maze/tree/3D" },
+        { "e":"a", "t":"3D", "href":"https://github.com/oawu/OA-maze/tree/3D" },
         { "e":"span", "t":" Branch 時，即可檢視 3D 介面的迷宮模式，此項是利用 css 的旋轉(transform、rotateX、rotateY、translateZ)，將原本的每個節點元素各自新增出六個元素充當六個面，再分別調整每個元素內的各個面旋轉、位移角度。" }
       ]
     }
@@ -53,7 +53,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-maze/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-maze" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/OA-maze" }] }
       ]
     }
   ],

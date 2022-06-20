@@ -131,7 +131,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Redis | OA's 常用設定", "href":"https://comdan66.github.io/configs/book/mds/mac/redis.html" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Redis | OA's 常用設定", "href":"https://oawu.github.io/configs/book/mds/mac/redis.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"補充", "href":"https://blog.miniasp.com/post/2018/09/26/Redis-Desktop-Manager-for-Windows-Build-from-Source.aspx" }] },
         { "e":"li", "s":[{ "e":"a", "t":"UI", "href":"https://redisdesktop.com/" }] }
       ]

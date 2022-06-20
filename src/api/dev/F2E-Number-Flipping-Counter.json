@@ -13,9 +13,9 @@
         { "e":"span", "t":" 實作" },
         { "e":"b", "t":"數字翻轉計數器" },
         { "e":"span", "t":"，藉由設定每個計數器元素的 class 來達成不同數字的顯示，分別以 n0~n9 的 class 來設定子元素 top 的位置。GitHub 內的關鍵 css 與 JavaScript 分別在" },
-        { "e":"a", "t":"這裡", "href":"https://github.com/comdan66/number_flipping_counter/blob/master/scss/counter.scss" },
+        { "e":"a", "t":"這裡", "href":"https://github.com/oawu/number_flipping_counter/blob/master/scss/counter.scss" },
         { "e":"span", "t":"和" },
-        { "e":"a", "t":"這裡", "href":"https://github.com/comdan66/number_flipping_counter/blob/master/js/counter.js" },
+        { "e":"a", "t":"這裡", "href":"https://github.com/oawu/number_flipping_counter/blob/master/js/counter.js" },
         { "e":"span", "t":"，以下依照步驟配合圖片講解一下！" }
       ]
     },
@@ -92,7 +92,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/number_flipping_counter/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/number_flipping_counter/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/number_flipping_counter/" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1465779607.A.89F.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/1012215045482527/" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Facebook JavaScript.tw", "href":"https://www.facebook.com/groups/javascript.tw/permalink/790143711086969" }] }

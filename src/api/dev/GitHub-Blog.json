@@ -49,7 +49,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"如果想要將他變成自己的 Blog 的話，在 GitHub 上有一個名為 " },
-        { "e":"a", "t":"pure", "href":"https://github.com/comdan66/blog/tree/pure" },
+        { "e":"a", "t":"pure", "href":"https://github.com/oawu/blog/tree/pure" },
         { "e":"span", "t":" 的 Branch，裡面就是一個乾淨的版本，可以直接修改 " },
         { "e":"code", "t":"config/" },
         { "e":"span", "t":" 內的設定檔，不過記得修改完後，要再用 " },
@@ -80,7 +80,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/blog" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/blog" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "href":"https://www.youtube.com/watch?v=pUBWKUEb7Do" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1419438051.A.B58.html" }] }
       ]

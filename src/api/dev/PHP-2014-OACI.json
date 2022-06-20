@@ -34,7 +34,7 @@
     {
       "e":"p",
       "s":[
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/oaci#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/oaci#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4" },
         { "e":"span", "t":" 上的 Readme 有初步的簡介這套 Framework 幾項主要功能，並且實作範例，讓使用者能順利了解。" }
       ]
     },
@@ -110,7 +110,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "href":"https://www.youtube.com/watch?&amp;v=svomGfqxZvg" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/oaci" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/oaci" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PHP ActiveRecord", "href":"http://www.phpactiverecord.org/" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PHP ActiveRecord GitHub", "href":"https://github.com/jpfuentes2/php-activerecord" }] }
       ]

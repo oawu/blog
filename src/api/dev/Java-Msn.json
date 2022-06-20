@@ -26,7 +26,7 @@
     {
       "e":"p",
       "s":[
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/sophomore-java-msn" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/sophomore-java-msn" },
         { "e":"span", "t":" 上目前提供 " },
         { "e":"a", "t":".jar 檔案", "href":"https://zh.wikipedia.org/wiki/JAR_(%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F)" },
         { "e":"span", "t":"，之後會補上原始碼，而以下是的 Demo 影片，裡面會有詳細的功能介紹。" }
@@ -51,7 +51,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub jar 檔案", "href":"https://github.com/comdan66/sophomore-java-msn" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub jar 檔案", "href":"https://github.com/oawu/sophomore-java-msn" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "href":"https://www.youtube.com/watch?v=Z8ozcKeDsbk" }] }
       ]
     }

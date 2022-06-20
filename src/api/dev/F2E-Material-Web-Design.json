@@ -36,7 +36,7 @@
             { "e":"span", "t":"此作品開發工具主要使用 " },
             { "e":"a", "t":"Gulp", "href":"http://gulpjs.com/" },
             { "e":"span", "t":"、Compass 以及 jQuery 語言所建立，主要架構則使用 " },
-            { "e":"a", "t":"OAF2E v1.2", "href":"https://github.com/comdan66/oaf2e/tree/version/1.2" },
+            { "e":"a", "t":"OAF2E v1.2", "href":"https://github.com/oawu/oaf2e/tree/version/1.2" },
             { "e":"span", "t":"。" }
           ]
         },
@@ -60,8 +60,8 @@
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-material/index.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"https://works.ioa.tw/OA-material/index.html", "href":"https://works.ioa.tw/OA-material/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-material" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/comdan66/OA-material", "href":"https://github.com/comdan66/OA-material" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/OA-material" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"https://github.com/oawu/OA-material", "href":"https://github.com/oawu/OA-material" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1418573892.A.E39.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job 2", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1439537367.A.64B.html" }] },

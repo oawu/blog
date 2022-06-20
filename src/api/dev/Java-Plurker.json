@@ -33,7 +33,7 @@
         { "e":"span", "t":"會取名 " },
         { "e":"b", "t":"Plurker" },
         { "e":"span", "t":" 主要是因為噗浪英文名稱 “Plurk”，所以加個 “er”，" },
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/junior-java-plurker" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/junior-java-plurker" },
         { "e":"span", "t":" 上有提供當年的程式碼，有興趣的各位歡迎點閱，不過年代久遠，所以程式碼架構與寫法並不是很美觀，所以建議先觀看以下是的 Demo 影片，影片裡面會有詳細的功能介紹！" }
       ]
     },
@@ -56,7 +56,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/junior-java-plurker" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/junior-java-plurker" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "href":"https://www.youtube.com/watch?v=12P3aX6LQac" }] }
       ]
     }

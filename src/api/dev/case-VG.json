@@ -33,7 +33,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://www.vgmold.com.tw/" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/vg" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/vg" }] }
       ]
     }
   ],

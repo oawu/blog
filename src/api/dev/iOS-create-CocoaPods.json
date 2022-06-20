@@ -22,7 +22,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"這是我自己的 GitHun Repository：" },
-        { "e":"a",    "t":"https://github.com/comdan66/OAPodTest", "href":"https://github.com/comdan66/OAPodTest" }
+        { "e":"a",    "t":"https://github.com/oawu/OAPodTest", "href":"https://github.com/oawu/OAPodTest" }
       ]
     },
     {
@@ -232,7 +232,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"首次部署記得檢查此 Git 有無設定 github 的 origin，沒有的話可以執行指令 " },
-            { "e":"code", "t":"git remote add origin https://github.com/comdan66/OAPodTest.git" },
+            { "e":"code", "t":"git remote add origin https://github.com/oawu/OAPodTest.git" },
             { "e":"span", "t":" 設定。" }
           ]
         },

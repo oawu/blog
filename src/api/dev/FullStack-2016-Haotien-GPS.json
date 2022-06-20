@@ -43,7 +43,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://www.haotien.org.tw/GPS/HaotienGPS.html"}] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/haotien" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/haotien" }] }
       ]
     }
   ],

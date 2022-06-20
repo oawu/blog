@@ -25,7 +25,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"網站後端主要需求是使用 php 去處理使用留言寄信的功能，所以就沒使用框架，而前端框架則是使用 " },
-        { "e":"a", "t":"OAF2E", "href":"https://github.com/comdan66/oaf2e" },
+        { "e":"a", "t":"OAF2E", "href":"https://github.com/oawu/oaf2e" },
         { "e":"span", "t":" 實作，所以使用 " },
         { "e":"a", "t":"Compass", "href":"http://compass-style.org/" },
         { "e":"span", "t":" 來編譯 " },
@@ -39,7 +39,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://www.harmonizedesign.com/" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/harmonize" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/harmonize" }] },
         { "e":"li", "s":[{ "e":"a", "t":"The history of aeronautics", "href":"http://jonathannicol.com/projects/parallax-scrolling/" }] }
       ]
     }

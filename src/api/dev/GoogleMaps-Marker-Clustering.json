@@ -12,7 +12,7 @@
         { "e":"span", "t":" 玩家都應該有過當 " },
         { "e":"a", "t":"Marker", "href":"https://developers.google.com/maps/documentation/javascript/markers?hl=zh-tw" },
         { "e":"span", "t":" 太多時，視角一拉遠後全部 Marker 擠在一起的困擾吧！沒錯 " },
-        { "e":"a", "t":"OA's Marker Clustering", "href":"https://github.com/comdan66/OA-markerClustering" },
+        { "e":"a", "t":"OA's Marker Clustering", "href":"https://github.com/oawu/OA-markerClustering" },
         { "e":"span", "t":" 就是要來處理這個困擾！網路上也有很多關於 Marker Clustering 的 Library，但想要比較能夠掌握概況以及視需求去做調整功能，所以刻了一套可以自訂 Marker Clustering 的地圖工具。" }
       ]
     },
@@ -63,7 +63,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[ { "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-markerClustering/index.html" } ] },
-        { "e":"li", "s":[ { "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-markerClustering/" } ] },
+        { "e":"li", "s":[ { "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/OA-markerClustering/" } ] },
         { "e":"li", "s":[ { "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1475629747.A.CC8.html" } ] },
         { "e":"li", "s":[ { "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/1089454517758579/" } ] },
         { "e":"li", "s":[ { "e":"a", "t":"Facebook JavaScript.tw", "href":"https://www.facebook.com/groups/javascript.tw/permalink/875068025927870" } ] }

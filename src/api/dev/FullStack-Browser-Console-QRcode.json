@@ -22,7 +22,7 @@
         { "e":"span", "t":"這是個無聊靈機一動的小作！大家應該都有打開 Facebook 網頁的 Console 介面吧，這個是我自己實作的，所以分享一下！沒錯，就是來畫 Console，利用 console.log 印出字串，再利用 css 修飾一下，QR Code 的黑、白點則是使用 " },
         { "e":"a", "t":"JavaScript", "href":"https://zh.wikipedia.org/zh-tw/JavaScript" },
         { "e":"span", "t":" 二維陣列來表示！有興趣的話可以參考一下喲！要用的話，幫我按個 " },
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/browser_console_qrcode" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/browser_console_qrcode" },
         { "e":"span", "t":" " },
         { "e":"b", "t":"星星" },
         { "e":"span", "t":"後就拿去用吧！" }
@@ -64,7 +64,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"關鍵" },
-            { "e":"a", "t":"程式碼", "href":"https://github.com/comdan66/browser_console_qrcode/blob/master/js/browser_console_qrcode.js" },
+            { "e":"a", "t":"程式碼", "href":"https://github.com/oawu/browser_console_qrcode/blob/master/js/browser_console_qrcode.js" },
             { "e":"span", "t":"在 " },
             { "e":"code", "t":"js/browser_console_qrcode.js" },
             { "e":"span", "t":" 內，程式碼有簡易註解，請各位大大服用。" }
@@ -90,7 +90,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"GitHub 在" },
-            { "e":"a", "t":"這裡", "href":"https://github.com/comdan66/browser_console_qrcode" },
+            { "e":"a", "t":"這裡", "href":"https://github.com/oawu/browser_console_qrcode" },
             { "e":"span", "t":"，" },
             { "e":"a", "t":"Demo", "href":"https://works.ioa.tw/browser_console_qrcode/index.html" },
             { "e":"span", "t":" 的話看這裡，可以的話幫我按一下 " },
@@ -118,7 +118,7 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"若各位大大覺得有趣或不錯的話，請幫我在 " },
-            { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/browser_console_qrcode" },
+            { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/browser_console_qrcode" },
             { "e":"span", "t":" 上按個星星喜歡吧。" }
           ]
         },
@@ -142,7 +142,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/browser_console_qrcode/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/browser_console_qrcode" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/browser_console_qrcode" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1465179541.A.7AE.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/1008440282526670/" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Facebook JavaScript.tw", "href":"https://www.facebook.com/groups/javascript.tw/permalink/786607411440599" }] }

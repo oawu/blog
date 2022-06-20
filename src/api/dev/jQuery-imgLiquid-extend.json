@@ -31,7 +31,7 @@
         { "e":"span", "t":"其中功能也加入很多方式使用，包含了搭配" },
         { "e":"a", "t":"元素屬性", "href":"http://w3school.com.cn/html/html_attributes.asp" },
         { "e":"span", "t":"設定..等功能，若要更清楚瞭解可以置 " },
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/OA-imgLiquid#%E7%9B%AE%E9%8C%84" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/OA-imgLiquid#%E7%9B%AE%E9%8C%84" },
         { "e":"span", "t":" 查看說明。" }
       ]
     }
@@ -41,7 +41,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-imgLiquid/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-imgLiquid" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/OA-imgLiquid" }] }
       ]
     }
   ],

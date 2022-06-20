@@ -35,7 +35,7 @@
         { "e":"span", "t":" 與 " },
         { "e":"a", "t":"Google Maps Point", "href":"https://developers.google.com/maps/documentation/javascript/examples/icon-complex" },
         { "e":"span", "t":" 物件的" },
-        { "e":"a", "t":"轉換", "href":"https://github.com/comdan66/OA-googleMapsMenu/blob/master/js/public.js#L51" },
+        { "e":"a", "t":"轉換", "href":"https://github.com/oawu/OA-googleMapsMenu/blob/master/js/public.js#L51" },
         { "e":"span", "t":"，必須將點擊位置的經緯度經計算後得知在地圖元素上相對應的 left、top 數值，再將選單顯示在該位置上。" }
       ]
     },
@@ -47,7 +47,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/OA-googleMapsMenu/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OA-googleMapsMenu" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/OA-googleMapsMenu" }] }
       ]
     }
   ],

@@ -15,7 +15,7 @@
                 {"e": "span", "t": "下載 "},
                 {"e": "code", "t": "Adafruit_Python_DHT"},
                 {"e": "span", "t": "，終端機執行指令："},
-                {"e": "code", "t": "git clone https://github.com/comdan66/Adafruit_Python_DHT.git", "copy": "git clone https://github.com/comdan66/Adafruit_Python_DHT.git"}
+                {"e": "code", "t": "git clone https://github.com/oawu/Adafruit_Python_DHT.git", "copy": "git clone https://github.com/oawu/Adafruit_Python_DHT.git"}
               ] },
               { "e": "li", "s": [
                 {"e": "span", "t": "進入目錄，終端機執行指令："},

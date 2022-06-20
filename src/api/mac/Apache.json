@@ -268,11 +268,11 @@
             {
               "e":"pre",
               "class":"lines",
-              "copy": "# root\n<VirtualHost *:80>\n  ServerAdmin comdan66@gmail.com\n  DocumentRoot \"/Users/oa/www\"\n  <Directory \"/Users/oa/www\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>\n# Case\n<VirtualHost *:80>\n  ServerName dev.case.ioa.tw\n  ServerAlias dev.case.ioa.tw\n  DocumentRoot \"/Users/oa/www/case\"\n  <Directory \"/Users/oa/www/case\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>",
+              "copy": "# root\n<VirtualHost *:80>\n  ServerAdmin oawu.tw@gmail.com\n  DocumentRoot \"/Users/oa/www\"\n  <Directory \"/Users/oa/www\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>\n# Case\n<VirtualHost *:80>\n  ServerName dev.case.ioa.tw\n  ServerAlias dev.case.ioa.tw\n  DocumentRoot \"/Users/oa/www/case\"\n  <Directory \"/Users/oa/www/case\">\n      Options FollowSymLinks MultiViews\n      AllowOverride All\n      Order allow,deny\n      Allow from all\n  </Directory>\n</VirtualHost>",
               "s":[
                 { "e":"div", "t":"# root" },
                 { "e":"div", "t":"<VirtualHost *:80>" },
-                { "e":"div", "t":"  ServerAdmin comdan66@gmail.com" },
+                { "e":"div", "t":"  ServerAdmin oawu.tw@gmail.com" },
                 { "e":"div", "t":"  DocumentRoot \"/Users/oa/www\"" },
                 { "e":"div", "t":" " },
                 { "e":"div", "t":"  <Directory \"/Users/oa/www\">" },

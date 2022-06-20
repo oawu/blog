@@ -97,7 +97,7 @@
         { "e":"span", "t":" 作為暫存的機制，利用這項前端瀏覽器的功能，我將它拿來記錄使用者瀏覽過的鄉鎮，同時也可以拿來做為收藏鄉鎮的功能。在地圖上更可以藉由讀取 LocalStorage 來實作記錄上次的地圖位置，而上一段所提到的 navigator.geolocation 取得客戶端 GPS 位置，也可以利用 LocalStorage 來實作 Cache 的機制，而這些功能程式碼我都放置在 " },
         { "e":"code", "t":"/weather/js/public.js" },
         { "e":"span", "t":" 內，各位若有興趣歡迎" },
-        { "e":"a", "t":"點開", "href":"https://github.com/comdan66/weather/blob/master/js/public.js" },
+        { "e":"a", "t":"點開", "href":"https://github.com/oawu/weather/blob/master/js/public.js" },
         { "e":"span", "t":"來看喔！" }
       ]
     },
@@ -143,7 +143,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://works.ioa.tw/weather/index.html" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/weather" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/weather" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1438158895.A.071.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job 2", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1468801854.A.43B.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/865165516854148/" }] },

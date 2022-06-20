@@ -17,9 +17,9 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"此專案因為只負責前端部分的切版，所以就使用了 " },
-        { "e":"a", "t":"OAF2E", "href":"https://github.com/comdan66/oaf2e" },
+        { "e":"a", "t":"OAF2E", "href":"https://github.com/oawu/oaf2e" },
         { "e":"span", "t":" " },
-        { "e":"a", "t":"version 1.8", "href":"https://github.com/comdan66/oaf2e/tree/version/1.8" },
+        { "e":"a", "t":"version 1.8", "href":"https://github.com/oawu/oaf2e/tree/version/1.8" },
         { "e":"span", "t":" 框架，架構中主要是使用 " },
         { "e":"a", "t":"Compass", "href":"http://compass-style.org/" },
         { "e":"span", "t":" 來編譯 " },
@@ -39,7 +39,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://www.egbto.com.tw/" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/bto" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/bto" }] }
       ]
     }
   ],

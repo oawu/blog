@@ -27,7 +27,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"上傳 S3 過程採用 PHP 執行，關鍵程式碼在" },
-        { "e":"a", "t":"這裡", "href":"https://github.com/comdan66/taipei_activities/blob/master/cmd/put.php" },
+        { "e":"a", "t":"這裡", "href":"https://github.com/oawu/taipei_activities/blob/master/cmd/put.php" },
         { "e":"span", "t":"，主要是利用 S3 針對檔案都有 tag 的特性，對上傳檔案做 " },
         { "e":"a", "t":"md5_file", "href":"http://php.net/manual/en/function.md5-file.php" },
         { "e":"span", "t":"，達成差異化更新的步驟！" }
@@ -69,7 +69,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"若是覺得不錯，可以對 " },
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/taipei_activities" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/taipei_activities" },
         { "e":"span", "t":" 按個星星，鼓勵一下作者吧：）" }
       ]
     }
@@ -78,7 +78,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/taipei_activities" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/taipei_activities" }] },
         { "e":"li", "s":[{ "e":"a", "t":"新北市政府資料開放平台", "href":"http://data.ntpc.gov.tw/" }] },
         { "e":"li", "s":[{ "e":"a", "t":"新北市政府文化局藝文活動", "href":"http://data.ntpc.gov.tw/od/detail?oid=781B822E-214A-4B9A-B4DB-32C9F4626D98" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1467160346.A.EE9.html" }] },

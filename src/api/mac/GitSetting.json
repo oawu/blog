@@ -30,7 +30,7 @@
             {
               "e":"pre",
               "class":"lines",
-              "copy": "[user]\n    name = OA Wu\n    email = comdan66@gmail.com\n[alias]\n    st = status\n    co = checkout\n    rb = rebase\n    cp = cherry-pick\n    ci = commit\n    ss = stash\n    cn = clean\n    pu = push origin\n    ps = push origin\n    sl = shortlog -s -n",
+              "copy": "[user]\n    name = OA Wu\n    email = oawu.tw@gmail.com\n[alias]\n    st = status\n    co = checkout\n    rb = rebase\n    cp = cherry-pick\n    ci = commit\n    ss = stash\n    cn = clean\n    pu = push origin\n    ps = push origin\n    sl = shortlog -s -n",
               "s":[
                 { "e":"div", "s":[
                   { "e": "span", "t": "[user]" }
@@ -45,7 +45,7 @@
                   { "e": "span", "t": "    email " },
                   { "e": "span", "t": "=", "class": "red" },
                   { "e": "span", "t": " " },
-                  { "e": "span", "t": "comdan66@gmail.com", "class": "yellow" }
+                  { "e": "span", "t": "oawu.tw@gmail.com", "class": "yellow" }
                 ] },
                 { "e":"div", "t":" " },
 

@@ -72,9 +72,9 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Youtube 影片", "href":"https://www.youtube.com/watch?&amp;v=HTgfTjmS2UI" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/catmap_ios" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"WEB GitHub 原始碼", "href":"https://github.com/comdan66/catmap_php" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"Facebook Video Demo", "href":"https://www.facebook.com/comdan66/videos/1115490615130946/" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/catmap_ios" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"WEB GitHub 原始碼", "href":"https://github.com/oawu/catmap_php" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Facebook Video Demo", "href":"https://www.facebook.com/oawu.tw/videos/1115490615130946/" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT MacDev", "href":"https://www.ptt.cc/bbs/MacDev/M.1436114088.A.832.html" }] }
       ]
     }

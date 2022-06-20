@@ -74,7 +74,7 @@
         { "e":"span", "t":"後端 php 這次我就使用很潮的 " },
         { "e":"a", "t":"PHP7", "href":"http://php.net/manual/en/migration70.new-features.php" },
         { "e":"span", "t":"，整體用下來的感覺貌似有變快，因為我的排程變快許多，整體來說算是很滿意，Framework 則有些 Function 需稍做調整，不過大致上都很健康，當然也順便將我的 " },
-        { "e":"a", "t":"OACI", "href":"https://github.com/comdan66/oaci" },
+        { "e":"a", "t":"OACI", "href":"https://github.com/oawu/oaci" },
         { "e":"span", "t":" 給更新到可與 PHP7 相容！" }
       ]
     },
@@ -82,7 +82,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"框架是使用 " },
-        { "e":"a", "t":"OACI", "href":"https://github.com/comdan66/oaci" },
+        { "e":"a", "t":"OACI", "href":"https://github.com/oawu/oaci" },
         { "e":"span", "t":"，這是一套自行修改的 Framework，將原本的 " },
         { "e":"a", "t":"CodeIgniter", "href":"https://codeigniter.org.tw/" },
         { "e":"span", "t":" " },
@@ -109,7 +109,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"上面提到活動期間會使用 GPS 回傳即時定點位置的功能以及效能問題，那就順便分享調整效能的經驗。需要做到及時回傳位置的話，就代表需要 GPS Tracker 配合，Tracker 我採用自己開發的 " },
-        { "e":"a", "t":"iOS App", "href":"https://github.com/comdan66/mazu/tree/master/ios/MazuMarch" },
+        { "e":"a", "t":"iOS App", "href":"https://github.com/oawu/mazu/tree/master/ios/MazuMarch" },
         { "e":"span", "t":"。活動期間將各個 Tracker 部署到各個陣頭後，在固定時間內 Tracker 會將經緯度以及相關資訊回傳至伺服器，伺服器再將座標存入資料庫，並且將路徑資訊整理完後，以 " },
         { "e":"a", "t":".json", "href":"http://www.json.org/" },
         { "e":"span", "t":" 格式的方式上傳至 S3，同時 GPS 活動頁上再利用 JavaScript 的 " },
@@ -146,7 +146,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"其實這次開發很多功能，例如：網站不只前台技術，後台也有多項 CRUD 的功，其中也包含了地圖編輯，後台人員可以自行的編輯遶境路線圖抑或者地圖資訊，此功能對於網站維護是一項重點任務。網站除了地圖重點外，多項內容則是使用文章的方式顯示，所以文章編輯器是必備的一項功能。活動當天管理人員必然會在外面忙碌，所以有關電腦的相關設定或者 GPS Tracker 狀態管理、聊天室的狀況，都做成" },
-        { "e":"a", "t":"手機 App", "href":"https://github.com/comdan66/mazu/tree/master/ios/MazuMarchAdmin" },
+        { "e":"a", "t":"手機 App", "href":"https://github.com/oawu/mazu/tree/master/ios/MazuMarchAdmin" },
         { "e":"span", "t":"，以達到有效的管理。由於 AWS S3 架構方便、便宜、大頻寬，所以將其進階運用，使用 S3 來存放大量的聊天室內容，當使用者留言時，EC2 再將其資訊補至 S3，而聊天室每 10 秒再藉由 Ajax 往 S3 取得聊天室內容。" }
       ]
     },
@@ -171,7 +171,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/mazu" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/mazu" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Yunlin", "href":"https://www.ptt.cc/bbs/Yunlin/M.1460567509.A.8BE.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT Soft_Job", "href":"https://www.ptt.cc/bbs/Soft_Job/M.1460607450.A.36A.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"Facebook Front-End Developers Taiwan", "href":"https://www.facebook.com/groups/f2e.tw/permalink/980856278618404/" }] }

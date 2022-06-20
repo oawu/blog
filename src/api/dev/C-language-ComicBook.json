@@ -36,7 +36,7 @@
         { "e":"span", "t":"、網頁語言工具..等。下載後的漫畫皆會存在客戶端的資料夾裡面，搭配 " },
         { "e":"a", "t":"JavaScript", "href":"https://zh.wikipedia.org/zh-tw/JavaScript" },
         { "e":"span", "t":"、HTML 來達到瀏覽效果，所以只要開啟資料夾內的 index.html 即可方便看漫畫，有興趣也歡迎至 " },
-        { "e":"a", "t":"GitHub", "href":"https://github.com/comdan66/c-comic-book" },
+        { "e":"a", "t":"GitHub", "href":"https://github.com/oawu/c-comic-book" },
         { "e":"span", "t":" 下載執行檔、原始碼試試，不過此作目前已經沒在維護，若 8comic 網站有更新原始碼的話，則" },
         { "e":"b", "t":"不保證" },
         { "e":"span", "t":"可以正常下載漫畫。" }
@@ -49,7 +49,7 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"其中 BBS 介面的方式是自行制定一套檔案規則，並且放置在 " },
-        { "e":"a", "t":"Interface/", "href":"https://github.com/comdan66/c-comic-book/tree/master/Interface" },
+        { "e":"a", "t":"Interface/", "href":"https://github.com/oawu/c-comic-book/tree/master/Interface" },
         { "e":"span", "t":" 目錄下，當要產生畫面時，C語言 去讀取自訂的字串規格，並且在 Console 上格式化即可達到想要的畫面。換句話就是自行實作一個簡單的 " },
         { "e":"a", "t":"MVC", "href":"https://zh.wikipedia.org/zh-tw/MVC" },
         { "e":"span", "t":" 架構的 View。" }
@@ -60,7 +60,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/c-comic-book" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/c-comic-book" }] }
       ]
     }
   ],

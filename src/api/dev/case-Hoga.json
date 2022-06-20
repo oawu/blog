@@ -25,7 +25,7 @@
         { "e":"span", "t":"、" },
         { "e":"b", "t":"系統架設" },
         { "e":"span", "t":"皆是獨立完成。網站框架是使用 OACI " },
-        { "e":"a", "t":"version 4.1", "href":"https://github.com/comdan66/oaci/tree/version/4.1" },
+        { "e":"a", "t":"version 4.1", "href":"https://github.com/oawu/oaci/tree/version/4.1" },
         { "e":"span", "t":" 語言則是 " },
         { "e":"a", "t":"PHP", "href":"https://zh.wikipedia.org/zh-tw/PHP" },
         { "e":"span", "t":"，而前端刻板則是搭配 OACI 的框架使用 " },
@@ -50,7 +50,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://www.hogaoptical.com.tw/" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/hoga" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/hoga" }] }
       ]
     }
   ],

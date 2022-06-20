@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/comdan66/Lalilo.git"
+    "url": "git+https://github.com/oawu/Lalilo.git"
   },
   "keywords": [
     "SCSS",
@@ -19,7 +19,7 @@
   ],
   "author": {
     "name": "OA Wu",
-    "email": "comdan66@gmail.com",
+    "email": "oawu.tw@gmail.com",
     "url": "https://www.ioa.tw"
   },
   "license": "MIT",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "@oawu/core": "git+https://github.com/comdan66/LaliloCore.git",
+    "@oawu/core": "git+https://github.com/oawu/LaliloCore.git",
     "@oawu/cli-progress": "^1.0.13",
     "@oawu/helper": "^1.0.3",
     "@oawu/queue": "^1.0.10",

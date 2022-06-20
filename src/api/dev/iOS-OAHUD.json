@@ -43,8 +43,8 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://github.com/comdan66/OAHUD/blob/master/OAHUD.gif" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/OAHUD" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"https://github.com/oawu/OAHUD/blob/master/OAHUD.gif" }] },
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/OAHUD" }] },
         { "e":"li", "s":[{ "e":"a", "t":"PTT MacDev", "href":"https://www.ptt.cc/bbs/MacDev/M.1436456012.A.ACC.html" }] },
         { "e":"li", "s":[{ "e":"a", "t":"MBProgressHUD", "href":"https://github.com/jdg/MBProgressHUD" }] },
         { "e":"li", "s":[{ "e":"a", "t":"DaiInboxHUD", "href":"https://github.com/DaidoujiChen/DaiInboxHUD" }] },

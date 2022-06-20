@@ -17,9 +17,9 @@
       "e":"p",
       "s":[
         { "e":"span", "t":"此專案是常見的官網實作，主要由後台的上稿系統挑選完稿後，前台即可顯示所編輯的資料，而前端部分有常見的 Banner 輪播、資訊列表、聯絡我們功能！後端 php 框架是使用 " },
-        { "e":"a", "t":"OACI", "href":"https://github.com/comdan66/oaci" },
+        { "e":"a", "t":"OACI", "href":"https://github.com/oawu/oaci" },
         { "e":"span", "t":" " },
-        { "e":"a", "t":"version 1.7", "href":"https://github.com/comdan66/oaci/tree/version/1.7" },
+        { "e":"a", "t":"version 1.7", "href":"https://github.com/oawu/oaci/tree/version/1.7" },
         { "e":"span", "t":" 所實作，前端則使用搭配框架上的 " },
         { "e":"a", "t":"Compass", "href":"http://compass-style.org/" },
         { "e":"span", "t":" 來編輯 " },
@@ -43,7 +43,7 @@
       "e":"ul",
       "s":[
         { "e":"li", "s":[{ "e":"a", "t":"Live Demo", "href":"http://www.ofna-bio.com/" }] },
-        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/comdan66/ofna" }] }
+        { "e":"li", "s":[{ "e":"a", "t":"GitHub 原始碼", "href":"https://github.com/oawu/ofna" }] }
       ]
     }
   ],
