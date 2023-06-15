@@ -1,0 +1,51 @@
+{
+  "title":"開箱文章",
+  "type":"articles",
+  "items":[
+    {
+      "id":"Nintendo-Switch",
+      "title":"Nintendo Switch",
+      "tags":["開箱", "Nintendo", "Switch", "薩爾達傳說", "荒野之息"]
+    },
+    {
+      "id":"PORTER-AMAZE-2WAY",
+      "title":"PORTER AMAZE 2WAY",
+      "tags":["開箱", "包包", "PORTER"]
+    },
+    {
+      "id":"Plantronics-BackBeat-FIT",
+      "title":"Plantronics BackBeat FIT",
+      "tags":["開箱", "運動", "耳機", "Plantronics"]
+    },
+    {
+      "id":"SAILOR-REGLUS-pen",
+      "title":"SAILOR REGLUS 鋼筆",
+      "tags":["開箱", "鋼筆", "SAILOR", "寫樂"]
+    },
+    {
+      "id":"Apple-Watch-Sport",
+      "title":"Apple Watch Sport",
+      "tags":["開箱", "Apple", "Watch", "穿戴", "手錶"]
+    },
+    {
+      "id":"PORTER-TANKER-3WAY",
+      "title":"PORTER TANKER 3WAY",
+      "tags":["開箱", "包包", "PORTER"]
+    },
+    {
+      "id":"vivosmart-HR",
+      "title":"vívosmart HR",
+      "tags":["開箱", "穿戴", "手環"]
+    },
+    {
+      "id":"Apple-iPad-with-Retina-Display",
+      "title":"配備 Retina 顯示器的 iPad",
+      "tags":["開箱", "Apple", "iPad"]
+    },
+    {
+      "id":"SYM-GT125",
+      "title":"SYM GT 125 噴射 前碟煞版",
+      "tags":["開箱", "機車"]
+    }
+  ]
+}

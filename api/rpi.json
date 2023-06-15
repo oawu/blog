@@ -1,0 +1,36 @@
+{
+  "title": "樹莓派開發筆記",
+  "type":"articles",
+  "items":[
+    {
+      "id":"init",
+      "title":"初始設定",
+      "tags":["Raspberry Pi"]
+    },
+    {
+      "id":"DHT22",
+      "title":"DHT22 溫度、濕度模組",
+      "tags":["Raspberry Pi", "DHT22"]
+    },
+    {
+      "id":"BMP180",
+      "title":"BMP180 溫度、氣壓模組",
+      "tags":["Raspberry Pi", "BMP180", "I2C"]
+    },
+    {
+      "id":"LCD1602",
+      "title":"LCD1602 介面顯示模組",
+      "tags":["Raspberry Pi", "LCD1602", "I2C"]
+    },
+    {
+      "id":"I2C",
+      "title":"I2C 工具",
+      "tags":["Raspberry Pi", "I2C"]
+    },
+    {
+      "id":"other",
+      "title":"其他常用指令",
+      "tags":["Raspberry Pi"]
+    }
+  ]
+}

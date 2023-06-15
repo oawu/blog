@@ -1,0 +1,99 @@
+{
+  "title":"macOS 上安裝 CocoaPods iOS 套件管理",
+  "at":"2021-06-02",
+  "type":"article",
+  "els":[
+    { "e":"h2", "t":"安裝步驟" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"code", "t":"sudo gem install cocoapods -n /usr/local/bin", "copy":"sudo gem install cocoapods -n /usr/local/bin" },
+            { "e":"span", "t":"，會有點久，別緊張 😉" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"pod --version", "copy":"pod --version" }]
+        }
+      ]
+    },
+    { "e":"h2", "t":"初始化專案" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"在專案目錄下，終端機執行指令 " },
+            { "e":"code", "t":"pod init", "copy":"pod init" }
+          ]
+        }
+      ]
+    },
+    { "e":"h2", "t":"範例" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"安裝 " },
+            { "e":"b", "t":"AlamofireObjectMapper" },
+            { "e":"span", "t":"，在專案下 " },
+            { "e":"b", "t":"Podfile" },
+            { "e":"span", "t":" 加入 " },
+            { "e":"code", "t":"pod 'OAKit', '~> 0.3.2'", "copy":"pod 'OAKit', '~> 0.3.2'" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"執行 " },
+            { "e":"code", "t":"pod install", "copy":"pod install" },
+            { "e":"span", "t":"，第一次會很久" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"原本應該開啟 .xcodeproj 改開啟 "
+            },
+            {
+              "e":"b",
+              "t":".xcworkspace"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"a", "t":"https://cocoapods.org/", "href":"https://cocoapods.org/" }
+          ]
+        }
+      ]
+    }
+  ],
+  "g":[
+    "iOS",
+    "Xcode",
+    "CocoaPods",
+    "App"
+  ]
+}

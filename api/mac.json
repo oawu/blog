@@ -1,0 +1,121 @@
+{
+  "title":"蘋果環境",
+  "type":"articles",
+  "items":[
+    {
+      "id":"Base",
+      "title":"設定 Xcode 與基礎環境",
+      "tags":["macOS", "Xcode", "Finder", "系統"]
+    },
+    {
+      "id":"Chrome",
+      "title":"macOS 上安裝 Chrome 瀏覽器",
+      "tags":["Google", "Chrome", "瀏覽器"]
+    },
+    {
+      "id":"HackFont",
+      "title":"程式碼等寬字型字體 Hack Font",
+      "tags":["字型"]
+    },
+    {
+      "id":"iTerm2",
+      "title":"macOS 開發者必安裝的終端機 - iTerm2",
+      "tags":["iTerm2", "終端機", "Zsh", "SSH"]
+    },
+    {
+      "id":"SublimeText",
+      "title":"macOS 上安裝 Sublime Text 文字編輯器",
+      "tags":["Sublime", "文字編輯", "寫程式"]
+    },
+    {
+      "id":"Sourcetree",
+      "title":"macOS 上安裝 Sourcetree Git 管理介面",
+      "tags":["Git", "Sourcetree", "bitbucket", "管控工具"]
+    },
+    {
+      "id":"BetterTouchTool",
+      "title":"macOS 必裝的輔助工具 BetterTouchTool",
+      "tags":["macOS", "BetterTouchTool", "系統輔助"]
+    },
+    {
+      "id":"GitSetting",
+      "title":"OA 個人常用的 Git 設定",
+      "tags":["Git", "管控工具"]
+    },
+    {
+      "id":"Apache",
+      "title":"macOS 上安裝 Apache",
+      "tags":["Apache", "後端", "http"]
+    },
+    {
+      "id":"PHP",
+      "title":"macOS 上安裝 PHP 語言",
+      "tags":["PHP", "後端"]
+    },
+    {
+      "id":"MySQL",
+      "title":"macOS 上安裝 MySQL",
+      "tags":["MySQL", "後端"]
+    },
+    {
+      "id":"SequelPro",
+      "title":"macOS 上安裝 Sequel Pro 資料庫管理介面",
+      "tags":["MySQL", "Sequel Pro", "後端"]
+    },
+    {
+      "id":"RubyOnRails",
+      "title":"macOS 上安裝 Ruby on Rails",
+      "tags":["Ruby", "Rails", "Ruby on Rails", "後端"]
+    },
+    {
+      "id":"Compass",
+      "title":"macOS 上安裝 Compass",
+      "tags":["Gem", "Compass", "SCSS", "CSS", "前端"]
+    },
+    {
+      "id":"Node",
+      "title":"macOS 上安裝 Node.js",
+      "tags":["Node.js", "Gulp", "前端", "後端"]
+    },
+    {
+      "id":"CocoaPods",
+      "title":"macOS 上安裝 CocoaPods iOS 套件管理",
+      "tags":["iOS", "Xcode", "CocoaPods", "App"]
+    },
+    {
+      "id":"Redis",
+      "title":"macOS 上安裝 Redis",
+      "tags":["Redis", "後端"]
+    },
+    {
+      "id":"Memcached",
+      "title":"macOS 上安裝 Memcached",
+      "tags":["Memcached", "後端"]
+    },
+    {
+      "id":"Sip",
+      "title":"macOS 螢幕顏色吸取器 - Sip",
+      "tags":["Sip", "前端", "取色"]
+    },
+    {
+      "id":"MacDown",
+      "title":"macOS 上安裝 Markdown 文件編輯器",
+      "tags":["Markdown", "文件編輯"]
+    },
+    {
+      "id":"Other",
+      "title":"其他雜記",
+      "tags":[]
+    },
+    {
+      "id":"Backup-SublimeText",
+      "title":"[備份] Sublime Text 3、2 安裝設定",
+      "tags":[]
+    },
+    {
+      "id":"Backup-MySQL",
+      "title":"[備份] macOS 上安裝 MySQL 5.6",
+      "tags":[]
+    }
+  ]
+}

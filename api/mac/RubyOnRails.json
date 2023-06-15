@@ -1,0 +1,240 @@
+{
+  "title":"macOS 上安裝 Ruby on Rails",
+  "at":"2021-06-02",
+  "type":"article",
+  "els":[
+    { "e":"h2", "t":"安裝之前" },
+
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"更新 macOS，點選左上角 " },
+            { "e":"code", "t":"" },
+            { "e":"span", "t":" > " },
+            { "e":"code", "t":"關於這台 Mac" },
+            { "e":"span", "t":" > " },
+            { "e":"code", "t":"軟體更新…" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"安裝更新 " },
+            { "e":"code", "t":"xcode" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"更新 xcode command line，終端機執行指令 " },
+            { "e":"code", "t":"xcode-select --install", "copy":"xcode-select --install" }
+          ]
+        }
+      ]
+    },
+
+    { "e":"h2", "t":"安裝 RVM" },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rvm.io/", "href":"https://rvm.io/" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"curl -L https://get.rvm.io | bash -s stable", "copy":"curl -L https://get.rvm.io | bash -s stable" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"rvm -v", "copy":"rvm -v" }] }
+      ]
+    },
+
+    { "e":"h2", "t":"安裝 Ruby" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://www.ruby-lang.org/zh_tw/", "href":"https://www.ruby-lang.org/zh_tw/" }]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"列出可以安裝的 Ruby 版本 " },
+            { "e":"code", "t":"rvm list known", "copy":"rvm list known" },
+            { "e":"span", "t":"，按 " },
+            { "e":"code", "t":"q" },
+            { "e":"span", "t":" 可以離開" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"p", "s":[
+              { "e":"span", "t":"假設安裝 2.5.3 終端機執行指令 " },
+              { "e":"code", "t":"rvm install 2.5.3", "copy":"rvm install 2.5.3" },
+              { "e":"span", "t":"，這邊可能會有點久，別緊張 😉" }
+            ] },
+
+            {
+              "e":"blockquote",
+              "class": "info",
+              "s":[
+                {"e":"span","t": "若有出現 readline.c 的錯誤時，可以試著執行指令 "},
+                {"e":"code","t": "rvm package install readline && rvm install 2.5.3 -C --with-readline-dir=$rvm_path/usr","copy": "rvm package install readline && rvm install 2.5.3 -C --with-readline-dir=$rvm_path/usr"}
+              ]
+            }
+          ]
+        },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"ruby -v", "copy":"ruby -v" }] }
+      ]
+    },
+    
+    { "e":"h2", "t":"安裝 RubyGems" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rubygems.org/", "href":"https://rubygems.org/" }]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"安裝最新版本，終端機執行指令 " },
+            { "e":"code", "t":"rvm rubygems current", "copy":"rvm rubygems current" }
+          ]
+        },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"gem -v", "copy":"gem -v" }] }
+      ]
+    },
+    
+    { "e":"h2", "t":"安裝 Bundler" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"終端機執行指令 "
+            },
+            {
+              "e":"code",
+              "t":"sudo gem install bundler",
+              "copy":"sudo gem install bundler"
+            },
+            {
+              "e":"span",
+              "t":"，這邊也可能會有點久，別緊張 😉"
+            }
+          ]
+        }
+      ]
+    },
+    { "e":"h2", "t":"安裝 Rails" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"如果是要安裝目前最穩定版本，終端機執行指令 "
+            },
+            {
+              "e":"code",
+              "t":"sudo gem install rails",
+              "copy":"sudo gem install rails"
+            },
+            {
+              "e":"span",
+              "t":"，這邊也可能會有點久，別緊張 😉"
+            }
+          ]
+        },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"rails -v", "copy":"rails -v" }] }
+      ]
+    },
+    {
+      "e":"blockquote",
+      "s":[
+        {
+          "e":"p",
+          "s":[
+            {
+              "e":"span",
+              "t":"如果是要安裝特別版本 "
+            },
+            {
+              "e":"code",
+              "t":"gem install rails -v=6.1.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=sQ5WyNwGhuE" }]
+        },
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"RVM － "
+            },
+            {
+              "e":"a",
+              "t":"https://rvm.io/rvm/install/",
+              "href":"https://rvm.io/rvm/install/"
+            }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"Rails 101 － "
+            },
+            {
+              "e":"a",
+              "t":"https://readmoo.com/book/210010467000101",
+              "href":"https://readmoo.com/book/210010467000101"
+            }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"五樓專業團隊 － "
+            },
+            {
+              "e":"a",
+              "t":"http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails",
+              "href":"http://pm.5fpro.com/projects/public-wiki/wiki/MaxOS_-_Ruby_on_Rails"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "g":[
+    "Ruby",
+    "Rails",
+    "Ruby on Rails",
+    "後端"
+  ]
+}

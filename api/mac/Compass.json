@@ -1,0 +1,55 @@
+{
+  "title":"macOS 上安裝 Compass",
+  "at":"2021-06-02",
+  "type":"article",
+  "els":[
+    { "e":"h2", "t":"安裝步驟" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"http://compass-style.org/install/", "href":"http://compass-style.org/install/" }]
+        },
+        {
+          "e":"li",
+          "t":"以下都會有點久，別緊張 😉"
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"sudo gem update --system", "copy":"sudo gem update --system" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"sudo gem install compass -n /usr/local/bin", "copy":"sudo gem install compass -n /usr/local/bin" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }]
+        },
+        {
+          "e":"li",
+          "s":[{ "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " }, { "e":"code", "t":"compass -v", "copy":"compass -v" }]
+        }
+      ]
+    }
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[{ "e":"a", "t":"Youtube 影音教學版", "href":"https://www.youtube.com/watch?v=9Ut_y7BcyQg" }]
+        }
+      ]
+    }
+  ],
+  "g":[
+    "Gem",
+    "Compass",
+    "SCSS",
+    "CSS",
+    "前端"
+  ]
+}

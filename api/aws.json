@@ -1,0 +1,51 @@
+{
+  "title":"AWS 筆記",
+  "type":"articles",
+  "items":[
+    {
+      "id":"Create-EC2-Instance",
+      "title":"AWS 開設 EC2 Instance",
+      "tags":["AWS", "EC2"]
+    },
+    {
+      "id":"Create-Elastic-IPs",
+      "title":"AWS Elastic IPs",
+      "tags":["AWS", "EC2", "Elastic IPs"]
+    },
+    {
+      "id":"EC2-Ubuntu",
+      "title":"EC2 上的 Ubuntu",
+      "tags":["AWS", "EC2", "Git", "Zsh", "SSH"]
+    },
+    {
+      "id":"EC2-Ubuntu-Apache",
+      "title":"EC2 Ubuntu 安裝 Apache",
+      "tags":["AWS", "EC2", "Apache", "http"]
+    },
+    {
+      "id":"EC2-Ubuntu-PHP",
+      "title":"EC2 Ubuntu 安裝 PHP",
+      "tags":["AWS", "EC2", "PHP"]
+    },
+    {
+      "id":"EC2-Ubuntu-LetsEncrypt",
+      "title":"EC2 Ubuntu 安裝 Let's Encrypt",
+      "tags":["AWS", "EC2", "Let's Encrypt", "https"]
+    },
+    {
+      "id":"EC2-Ubuntu-NodeJS",
+      "title":"EC2 Ubuntu 安裝 Node.js",
+      "tags":["AWS", "EC2", "Node.js"]
+    },
+    {
+      "id":"EC2-Ubuntu-MySQL",
+      "title":"EC2 Ubuntu 安裝 MySQL",
+      "tags":["AWS", "EC2", "MySQL"]
+    },
+    {
+      "id":"EC2-Ubuntu-Apache-SSL-Proxy",
+      "title":"EC2 Ubuntu Apache SSL Proxy",
+      "tags":["AWS", "EC2", "Apache", "SSL", "Proxy"]
+    }
+  ]
+}
