@@ -45,78 +45,130 @@
     {
       "e":"ul",
       "s":[
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"終端機執行指令 " },
-            { "e":"code",
-              "t":   "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
-              "copy":"/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"載入指令，終端機執行指令 " },
-            { "e":"code",
-              "t":   "eval \"$(/opt/homebrew/bin/brew shellenv)\"",
-              "copy":"eval \"$(/opt/homebrew/bin/brew shellenv)\"" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"顯示版本，終端機執行指令 " },
-            { "e":"code", "t":"brew --version", "copy":"brew --version" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"檢查，終端機執行指令 " },
-            { "e":"code", "t":"brew doctor", "copy":"brew doctor" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"更新，終端機執行指令 " },
-            { "e":"code", "t":"brew update", "copy":"brew update" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"安裝 ZSH，終端機執行指令 " },
-            { "e":"code", "t":"brew install zsh", "copy":"brew install zsh" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"終端機執行指令 " },
-            { "e":"code", "t":"sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"", "copy":"sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"設置 Homebrew Bin 檔位置，終端機執行指令 " },
-            { "e":"code",
-              "t":   "echo \"\\n# Brew\\nexport PATH=\\\"\\$PATH:/opt/homebrew/bin\\\"\" >> ~/.zshrc",
-              "copy":"echo \"\\n# Brew\\nexport PATH=\\\"\\$PATH:/opt/homebrew/bin\\\"\" >> ~/.zshrc" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"更新設定檔，終端機執行指令 " },
-            { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
-          ]
-        },
-        { "e":"li", "t":"重開 iTerm" }
+        { "e":"li", "s":[
+          { "e":"p", "t":"安裝" },
+
+          {
+            "e":"ul",
+            "s":[
+
+              { "e":"li", "s":[
+                { "e":"span", "t":"方法 1（快速），終端機執行以下指令：" },
+                { "e":"code",
+                  "t":   "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\" && eval \"$(/opt/homebrew/bin/brew shellenv)\" && brew --version && brew doctor && brew update && brew install zsh && sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"",
+                  "copy":"/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\" && eval \"$(/opt/homebrew/bin/brew shellenv)\" && brew --version && brew doctor && brew update && brew install zsh && sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" }] },
+
+              { "e":"li", "s":[
+                { "e":"p", "t":"方法 2" },
+                {
+                  "e":"ul",
+                  "s":[
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+                          "copy":"/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"" }
+                      ]
+                    },
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"載入指令，終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "eval \"$(/opt/homebrew/bin/brew shellenv)\"",
+                          "copy":"eval \"$(/opt/homebrew/bin/brew shellenv)\"" }
+                      ]
+                    },
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"顯示版本，終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "brew --version",
+                          "copy":"brew --version" }
+                      ]
+                    },
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"檢查，終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "brew doctor",
+                          "copy":"brew doctor" }
+                      ]
+                    },
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"更新，終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "brew update",
+                          "copy":"brew update" }
+                      ]
+                    },
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"安裝 ZSH，終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "brew install zsh",
+                          "copy":"brew install zsh" }
+                      ]
+                    },
+                    {
+                      "e":"li",
+                      "s":[
+                        { "e":"span", "t":"終端機執行指令 " },
+                        { "e":"code",
+                          "t":   "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"",
+                          "copy":"sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" }
+                      ]
+                    }
+                  ]
+                }]
+              }
+            ]
+          }
+        ]},
+        { "e":"li", "s":[
+          { "e":"p", "t":"設定" },
+
+          {
+            "e":"ul",
+            "s":[
+              {
+                "e":"li",
+                "s":[
+                  { "e":"span", "t":"設置 Homebrew Bin 檔位置，終端機執行指令 " },
+                  { "e":"code",
+                    "t":   "echo \"\\n# Brew\\nexport PATH=\\\"\\$PATH:/opt/homebrew/bin\\\"\" >> ~/.zshrc",
+                    "copy":"echo \"\\n# Brew\\nexport PATH=\\\"\\$PATH:/opt/homebrew/bin\\\"\" >> ~/.zshrc" }
+                ]
+              },
+              {
+                "e":"li",
+                "s":[
+                  { "e":"span", "t":"更新設定檔，終端機執行指令 " },
+                  { "e":"code",
+                    "t":   "source ~/.zshrc",
+                    "copy":"source ~/.zshrc" }
+                ]
+              },
+              { "e":"li", "t":"重開 iTerm" }    
+            ]
+          }
+        ]}
       ]
+
     },
+
+
+
+
+
+
     { "e":"h2", "t":"建立 SSH" },
     {
       "e":"ul",

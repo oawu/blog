@@ -1,8 +1,16 @@
 {
-  "title":"macOS 上安裝 Ruby on Rails",
+  "title":"[備份] macOS 上安裝 Ruby on Rails",
   "at":"2021-06-02",
   "type":"article",
   "els":[
+    {
+      "e":"blockquote",
+      "class": "warning",
+      "s":[
+        { "e":"span", "t":"此教學文章可能與現今 macOS 版本有差異，請斟酌使用！ " }
+      ]
+    },
+
     { "e":"h2", "t":"安裝之前" },
 
     {

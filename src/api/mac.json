@@ -63,14 +63,9 @@
       "tags":["MySQL", "Sequel Pro", "後端"]
     },
     {
-      "id":"RubyOnRails",
-      "title":"macOS 上安裝 Ruby on Rails",
-      "tags":["Ruby", "Rails", "Ruby on Rails", "後端"]
-    },
-    {
-      "id":"Compass",
-      "title":"macOS 上安裝 Compass",
-      "tags":["Gem", "Compass", "SCSS", "CSS", "前端"]
+      "id":"RVM",
+      "title":"macOS 上安裝 RVM",
+      "tags":["RVM", "後端"]
     },
     {
       "id":"Node",
@@ -115,6 +110,16 @@
     {
       "id":"Backup-MySQL",
       "title":"[備份] macOS 上安裝 MySQL 5.6",
+      "tags":[]
+    },
+    {
+      "id":"Backup-RubyOnRails",
+      "title":"[備份] macOS 上安裝 Ruby on Rails",
+      "tags":[]
+    },
+    {
+      "id":"Backup-Compass",
+      "title":"[備份] macOS 上安裝 Compass",
       "tags":[]
     }
   ]

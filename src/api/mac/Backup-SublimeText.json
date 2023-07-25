@@ -3,6 +3,13 @@
   "at":"2021-06-02",
   "type":"article",
   "els":[
+    {
+      "e":"blockquote",
+      "class": "warning",
+      "s":[
+        { "e":"span", "t":"此教學文章可能與現今 macOS 版本有差異，請斟酌使用！ " }
+      ]
+    },
     { "e":"h2", "t":"Sublime Text 3" },
     {
       "e":"ul",

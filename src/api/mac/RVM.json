@@ -1,0 +1,91 @@
+{
+  "title":"macOS 上安裝 RVM",
+  "at":"2021-06-02",
+  "type":"article",
+  "els":[
+    { "e":"h2", "t":"安裝之前" },
+
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"更新 macOS，點選左上角 " },
+            { "e":"code", "t":"" },
+            { "e":"span", "t":" > " },
+            { "e":"code", "t":"關於這台 Mac" },
+            { "e":"span", "t":" > " },
+            { "e":"code", "t":"軟體更新…" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"安裝更新 " },
+            { "e":"code", "t":"xcode" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"更新 xcode command line，終端機執行指令 " },
+            { "e":"code", "t":"xcode-select --install", "copy":"xcode-select --install" }
+          ]
+        }
+      ]
+    },
+
+    { "e":"h2", "t":"安裝 RVM" },
+    {
+      "e":"ul",
+      "s":[
+        { "e":"li", "s":[{ "e":"span", "t":" － " }, { "e":"a", "t":"https://rvm.io/", "href":"https://rvm.io/" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"curl -L https://get.rvm.io | bash -s stable", "copy":"curl -L https://get.rvm.io | bash -s stable" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
+        { "e":"li", "s":[
+          { "e":"span", "t":"檢查是否安裝成功，終端機執行指令 " },
+          { "e":"code", "t":"rvm -v", "copy":"rvm -v" }
+
+        ] }
+      ]
+    },
+    {
+      "e":"blockquote",
+      "class": "info",
+      "s":[
+        {"e":"span","t": "若想安裝 Ruby 或 RubyGems 或 Rails 可以參考 "},
+        { "e":"a", "t":"macOS 上安裝 Ruby on Rails", "href":"/?k=mac&id=Backup-RubyOnRails" },
+        {"e":"span","t": " 但文章可能與現今 macOS 版本有差異，需斟酌！"}
+      ]
+    }
+
+  ],
+  "r":[
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            {
+              "e":"span",
+              "t":"RVM － "
+            },
+            {
+              "e":"a",
+              "t":"https://rvm.io/rvm/install/",
+              "href":"https://rvm.io/rvm/install/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "g":[
+    "Ruby",
+    "Rails",
+    "Ruby on Rails",
+    "後端"
+  ]
+}
