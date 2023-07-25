@@ -1,6 +1,6 @@
 {
   "title":"macOS 上安裝 RVM",
-  "at":"2021-06-02",
+  "at":"2023-07-26",
   "type":"article",
   "els":[
     { "e":"h2", "t":"安裝之前" },
@@ -40,7 +40,7 @@
     {
       "e":"ul",
       "s":[
-        { "e":"li", "s":[{ "e":"span", "t":" － " }, { "e":"a", "t":"https://rvm.io/", "href":"https://rvm.io/" }] },
+        { "e":"li", "s":[{ "e":"span", "t":"官方網站 － " }, { "e":"a", "t":"https://rvm.io/", "href":"https://rvm.io/" }] },
         { "e":"li", "s":[{ "e":"span", "t":"終端機執行指令 " }, { "e":"code", "t":"curl -L https://get.rvm.io | bash -s stable", "copy":"curl -L https://get.rvm.io | bash -s stable" }] },
         { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] },
         { "e":"li", "s":[

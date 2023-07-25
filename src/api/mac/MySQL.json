@@ -1,6 +1,6 @@
 {
   "title":"macOS 上安裝 MySQL",
-  "at":"2021-06-02",
+  "at":"2023-07-26",
   "type":"article",
   "els":[
     { "e":"h2", "t":"5.7 安裝步驟" },
@@ -50,7 +50,7 @@
             {
               "e":"blockquote",
               "class": "warning",
-              "s":[{ "e": "span", "t":"如果點擊兩下都沒反應或者跳出「因為Apple無法檢查是否包含惡意軟體。」，可能是被 macOS 擋下來了，可以點擊點選螢幕左上角的 "}, { "e": "code", "t":""}, { "e": "span", "t":" > "}, { "e": "code", "t":"系統偏好設定"}, { "e": "span", "t":" > "}, { "e": "code", "t":"安全性與隱私權"}, { "e": "span", "t":" > "}, { "e": "code", "t":"一般"}, { "e": "span", "t":" > "}, { "e": "code", "t":"強制打開"}, { "e": "span", "t":" > "}, { "e": "code", "t":"打開"}]
+              "s":[{ "e": "span", "t":"如果點擊兩下都沒反應或者跳出「因為Apple無法檢查是否包含惡意軟體。」，可能是被 macOS 擋下來了，可以點擊點選螢幕左上角的 "}, { "e": "code", "t":""}, { "e": "span", "t":" > "}, { "e": "code", "t":"系統設定"}, { "e": "span", "t":" > "}, { "e": "code", "t":"安全性與隱私權"}, { "e": "span", "t":" > "}, { "e": "code", "t":"安全性"}, { "e": "span", "t":" > "}, { "e": "code", "t":"強制打開"}]
             }
           ]
         },
@@ -113,7 +113,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"安裝完成後，打開 " },
-            { "e":"code", "t":"系統偏好設定" },
+            { "e": "code", "t":""},
+            { "e":"span", "t":" > " },
+            { "e":"code", "t":"系統設定" },
             { "e":"span", "t":" > " },
             { "e":"code", "t":"MySQL" },
             { "e":"span", "t":" > " },
@@ -124,11 +126,11 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"若 " },
-            { "e":"code", "t":"系統偏好設定" },
+            { "e":"code", "t":"系統設定" },
             { "e":"span", "t":" 裡面沒看到 " },
             { "e":"code", "t":"MySQL" },
             { "e":"span", "t":" 的話，請重開 " },
-            { "e":"code", "t":"系統偏好設定" }
+            { "e":"code", "t":"系統設定" }
           ]
         }
       ]
@@ -142,7 +144,9 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"終端機執行指令 " },
-            { "e":"code", "t":"echo '\\n# MySQL\\nexport PATH=\"/usr/local/mysql/bin:$PATH\"' >> ~/.zshrc", "copy":"echo '\\n# MySQL\\nexport PATH=\"/usr/local/mysql/bin:$PATH\"' >> ~/.zshrc" }
+            { "e":"code",
+              "t":   "echo \"\\n# MySQL\\nexport PATH=\\\"\\$PATH:/usr/local/mysql/bin\\\"\" >> ~/.zshrc",
+              "copy":"echo \"\\n# MySQL\\nexport PATH=\\\"\\$PATH:/usr/local/mysql/bin\\\"\" >> ~/.zshrc" }
           ]
         },
         { "e":"li", "s":[{ "e":"span", "t":"重新載入終端機設定，終端機執行指令 " }, { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }] }

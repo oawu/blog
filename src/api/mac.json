@@ -78,6 +78,11 @@
       "tags":["iOS", "Xcode", "CocoaPods", "App"]
     },
     {
+      "id":"MacDown",
+      "title":"macOS 上安裝 Markdown 文件編輯器",
+      "tags":["Markdown", "文件編輯"]
+    },
+    {
       "id":"Redis",
       "title":"macOS 上安裝 Redis",
       "tags":["Redis", "後端"]
@@ -91,11 +96,6 @@
       "id":"Sip",
       "title":"macOS 螢幕顏色吸取器 - Sip",
       "tags":["Sip", "前端", "取色"]
-    },
-    {
-      "id":"MacDown",
-      "title":"macOS 上安裝 Markdown 文件編輯器",
-      "tags":["Markdown", "文件編輯"]
     },
     {
       "id":"Other",

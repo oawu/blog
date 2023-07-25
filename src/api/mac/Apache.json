@@ -1,6 +1,6 @@
 {
   "title":"macOS 上安裝 Apache",
-  "at":"2021-06-02",
+  "at":"2023-07-26",
   "type":"article",
   "els":[
 
@@ -91,9 +91,9 @@
                 {
                   "e":"li",
                   "s":[
-                    { "e":"span", "t":"重啟伺服器，終端機執行指令 " },
+                    { "e":"span", "t":"啟動伺服器，終端機執行指令 " },
                     { "e":"code", "t":"brew services start httpd", "copy":"brew services start httpd" },
-                    { "e":"blockquote", "class": "info", "t": "重啟 Apache 如有發生錯誤是正常的現象，後續步驟會修正！" }
+                    { "e":"blockquote", "class": "info", "t": "啟動如有發生錯誤是正常的現象，後續步驟會修正！" }
                   ]
                 }
               ]
