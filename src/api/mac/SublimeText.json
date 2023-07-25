@@ -149,8 +149,8 @@
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SublimeLinter" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SublimeLinter" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SublimeLinter", "copy":"SublimeLinter" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SublimeLinter" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }
@@ -164,8 +164,8 @@
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SCSS" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SCSS" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SCSS", "copy":"SCSS" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SCSS" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }
@@ -179,8 +179,8 @@
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"theme" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"UI: Select Theme" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"oa" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"OA.sublime-theme" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"theme", "copy":"theme" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"UI: Select Theme", "copy":"UI: Select Theme" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"oa", "copy":"oa" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"OA.sublime-theme" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }
@@ -194,8 +194,8 @@
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"color" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"UI:: Select Color Scheme" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"oa" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"OA Theme/OA Theme.sublime-package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"color", "copy":"color" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"UI:: Select Color Scheme", "copy":"UI:: Select Color Scheme" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"oa", "copy":"oa" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"OA Theme/OA Theme.sublime-package" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }
@@ -209,8 +209,8 @@
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"a file icon" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"A File Icon" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"a file icon", "copy":"a file icon" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"A File Icon" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }
@@ -245,40 +245,67 @@
     },
 
     { "e":"h3", "t":"安裝指令" },
+
+
+
     {
       "e":"ul",
       "s":[
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"打開 " },
-            { "e":"code", "t":"iTerm2" },
-            { "e":"span", "t":" 終端機(若尚未安裝 " },
-            { "e":"code", "t":"iTerm2" },
-            { "e":"span", "t":" 請先參考 " },
-            { "e":"a", "t":"此篇", "href":"/index.html?k=mac&id=iTerm2" },
-            { "e":"span", "t":" 安裝)，建立 bin 目錄執行指令 " },
-            { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[{ "e":"span", "t":"打開終端機，輸入指令 " }, { "e":"code", "t":"ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  ~/bin/subl", "copy":"ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  ~/bin/subl" }]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"新增 Sublime Text 指令，終端機執行指令 " },
-            { "e":"code", "t":"echo '\\n# My bin files\\nexport PATH=$PATH:$HOME/bin' >> ~/.zshrc", "copy":"echo '\\n# My bin files\\nexport PATH=$PATH:$HOME/bin' >> ~/.zshrc" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"重新載入終端機設定，終端機執行指令 " },
-            { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
-          ]
-        }
+
+        { "e":"li", "s":[
+          { "e":"span", "t":"方法 1（快速），終端機執行以下指令：" },
+          { "e":"code",
+            "t":   "mkdir ~/bin && ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl && echo \"\\n# My bin files\\nexport PATH=\\\"\\$PATH:\\$HOME/bin\\\"\" >> ~/.zshrc && source ~/.zshrc",
+            "copy":"mkdir ~/bin && ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl ~/bin/subl && echo \"\\n# My bin files\\nexport PATH=\\\"\\$PATH:\\$HOME/bin\\\"\" >> ~/.zshrc && source ~/.zshrc" }] },
+
+        { "e":"li", "s":[
+          { "e":"p", "t":"方法 2" },
+          {
+            "e":"ul",
+            "s":[
+              {
+                "e":"li",
+                "s":[
+                  { "e":"span", "t":"打開 " },
+                  { "e":"code", "t":"iTerm2" },
+                  { "e":"span", "t":" 終端機（若尚未安裝 " },
+                  { "e":"code", "t":"iTerm2" },
+                  { "e":"span", "t":" 請先參考 " },
+                  { "e":"a", "t":"此篇", "href":"/index.html?k=mac&id=iTerm2" },
+                  { "e":"span", "t":" 安裝）" }
+                ]
+              },
+              {
+                "e":"li",
+                "s":[
+                  { "e":"span", "t":"建立 bin 目錄，終端機執行指令 " },
+                  { "e":"code", "t":"mkdir ~/bin", "copy":"mkdir ~/bin" }
+                ]
+              },
+              {
+                "e":"li",
+                "s":[{ "e":"span", "t":"打開終端機，終端機執行指令 " }, { "e":"code",
+                  "t":   "ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  $HOME/bin/subl",
+                  "copy":"ln -s /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl  $HOME/bin/subl" }]
+              },
+              {
+                "e":"li",
+                "s":[
+                  { "e":"span", "t":"新增 Sublime Text 指令，終端機執行指令 " },
+                  { "e":"code",
+                    "t":   "echo \"\\n# My bin files\\nexport PATH=\\\"\\$PATH:\\$HOME/bin\\\"\" >> ~/.zshrc",
+                    "copy":"echo \"\\n# My bin files\\nexport PATH=\\\"\\$PATH:\\$HOME/bin\\\"\" >> ~/.zshrc" }
+                ]
+              },
+              {
+                "e":"li",
+                "s":[
+                  { "e":"span", "t":"重新載入終端機設定，終端機執行指令 " },
+                  { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
+                ]
+              }
+            ]
+          }] }
       ]
     }
   ],

@@ -28,36 +28,6 @@
             { "e":"b", "t":"應用程式資料夾" },
             { "e":"span", "t":"，並開啟" }
           ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"第一次開啟後請按 " },
-            { "e":"code", "t":"command" },
-            { "e":"span", "t":" + " },
-            { "e":"code", "t":"q" },
-            { "e":"span", "t":" 關閉後，再重開一次 iterm2，此時系統會跳出請你去設定權限的東西，就讓它通過就好，記得先解左下方的鎖！" }
-          ]
-        },
-        {
-          "e":"li",
-          "s":[
-            { "e":"span", "t":"若無跳出，請選點選螢幕左上角的 " },
-            { "e":"code", "t":"" },
-            { "e":"span", "t":" > " },
-            { "e":"code", "t":"系統偏好設定" },
-            { "e":"span", "t":" > " },
-            { "e":"code", "t":"安全性與隱私權" },
-            { "e":"span", "t":" > " },
-            { "e":"code", "t":"隱私權" },
-            { "e":"span", "t":" 先解開左下角 " },
-            { "e":"code", "t":"鎖頭" },
-            { "e":"span", "t":" 後，再選 " },
-            { "e":"code", "t":"輔助使用" },
-            { "e":"span", "t":" " },
-            { "e":"code", "t":"勾選", "class": "green" },
-            { "e":"span", "t":" AEServer" }
-          ]
         }
       ]
     },
@@ -71,7 +41,7 @@
       ]}
     ]},
 
-    { "e":"h2", "t":"安裝 Homebrew" },
+    { "e":"h2", "t":"安裝 Homebrew 與 ZSH" },
     {
       "e":"ul",
       "s":[
@@ -79,7 +49,18 @@
           "e":"li",
           "s":[
             { "e":"span", "t":"終端機執行指令 " },
-            { "e":"code", "t":"ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"", "copy":"ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"" }
+            { "e":"code",
+              "t":   "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+              "copy":"/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"載入指令，終端機執行指令 " },
+            { "e":"code",
+              "t":   "eval \"$(/opt/homebrew/bin/brew shellenv)\"",
+              "copy":"eval \"$(/opt/homebrew/bin/brew shellenv)\"" }
           ]
         },
         {
@@ -103,17 +84,10 @@
             { "e":"code", "t":"brew update", "copy":"brew update" }
           ]
         },
-        { "e":"li", "t":"重開 iTerm" }
-      ]
-    },
-    { "e":"h2", "t":"安裝 Zsh" },
-    {
-      "e":"ul",
-      "s":[
         {
           "e":"li",
           "s":[
-            { "e":"span", "t":"終端機執行指令 " },
+            { "e":"span", "t":"安裝 ZSH，終端機執行指令 " },
             { "e":"code", "t":"brew install zsh", "copy":"brew install zsh" }
           ]
         },
@@ -122,6 +96,22 @@
           "s":[
             { "e":"span", "t":"終端機執行指令 " },
             { "e":"code", "t":"sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"", "copy":"sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\"" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"設置 Homebrew Bin 檔位置，終端機執行指令 " },
+            { "e":"code",
+              "t":   "echo \"\\n# Brew\\nexport PATH=\\\"\\$PATH:/opt/homebrew/bin\\\"\" >> ~/.zshrc",
+              "copy":"echo \"\\n# Brew\\nexport PATH=\\\"\\$PATH:/opt/homebrew/bin\\\"\" >> ~/.zshrc" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"更新設定檔，終端機執行指令 " },
+            { "e":"code", "t":"source ~/.zshrc", "copy":"source ~/.zshrc" }
           ]
         },
         { "e":"li", "t":"重開 iTerm" }
@@ -251,7 +241,7 @@
                     { "e":"span", "t":" > " },
                     { "e":"code", "t":"Directory" },
                     { "e":"span", "t":"，輸入位置開啟時的位置 " },
-                    { "e":"code", "t":"~/www" }
+                    { "e":"code", "t":"~/www", "copy": "~/www" }
                   ]
                 },
                 {
@@ -306,6 +296,20 @@
                     { "e":"code", "t":"120" },
                     { "e":"span", "t":"，Rows 調整為 " },
                     { "e":"code", "t":"38" }
+                  ]
+                },
+                {
+                  "e":"li",
+                  "s":[
+                    { "e":"code", "t":"Terminal" },
+                    { "e":"span", "t":" > " },
+                    { "e":"code", "t":"Scrollback Buffer" },
+                    { "e":"span", "t":" > " },
+                    { "e":"code", "t":"Scrollback lines" },
+                    { "e":"span", "t":" 調整為 " },
+                    { "e":"code", "t":"3,000", "copy": "3000" },
+                    { "e":"span", "t":"，此數值可依據自己需求而定，若想要無限保留則可以勾選 " },
+                    { "e":"code", "t":"Unlimited scrollback" }
                   ]
                 }
               ]
@@ -443,7 +447,7 @@
                     { "e":"span", "t":" + " },
                     { "e":"code", "t":"↑" },
                     { "e":"span", "t":"，Action 選 " },
-                    { "e":"code", "t":"Select Split Pane on Above", "copy":"Select Split Pane on Above" }
+                    { "e":"code", "t":"Select Split Pane Above", "copy":"Select Split Pane Above" }
                   ]
                 },
                 {
@@ -461,7 +465,7 @@
                     { "e":"span", "t":" + " },
                     { "e":"code", "t":"↓" },
                     { "e":"span", "t":"，Action 選 " },
-                    { "e":"code", "t":"Select Split Pane on Below", "copy":"Select Split Pane on Below" }
+                    { "e":"code", "t":"Select Split Pane Below", "copy":"Select Split Pane Below" }
                   ]
                 }
               ]

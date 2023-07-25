@@ -19,76 +19,7 @@
         },
         {
           "e":"li",
-          "s":[
-            {"e":"p", "s":[
-              {"e":"span", "t":"如有安全性提醒，就選擇 "},
-              {"e":"code", "t":"打開"}
-            ]},
-            { "e":"ul", "s":[
-
-              {
-                "e":"li",
-                "s":[
-                  { "e":"span", "t":"選擇 " },
-                  { "e":"code", "t":"Continue to use BetterTouchTool" }
-                ]
-              },
-              {
-                "e":"li",
-                "s":[
-                  { "e":"span", "t":"選擇 " },
-                  { "e":"code", "t":"Allow" }
-                ]
-              },
-              {
-                "e":"li",
-                "s":[
-                  { "e":"span", "t":"如果跳出提醒可以更新，先選 " },
-                  { "e":"code", "t":"Check For Updates" },
-                  { "e":"span", "t":" 然後跳出更新提示時，在選擇 Keep" }
-                ]
-              },
-              {
-                "e":"li",
-                "s":[
-                  { "e":"span", "t":"選擇 " },
-                  { "e":"code", "t":"Open System Preferences => Security & Privacy" }
-                ]
-              },
-              {
-                "e":"li",
-                "s":[
-                  { "e":"span", "t":"先解開左下角 " },
-                  { "e":"code", "t":"鎖頭" },
-                  { "e":"span", "t":" 後，再選 " },
-                  { "e":"span", "t":" " },
-                  { "e":"code", "t":"勾選", "class": "green" },
-                  { "e":"span", "t":" BetterTouchTool.app" },
-                  { "e":"blockquote", "class": "info", "s": [
-                    { "e":"span", "t":"應該要跳出 " },
-                    { "e":"code", "t":"安全性與隱私" },
-                    { "e":"span", "t":"，若無跳出，請選點選螢幕左上角的 " },
-                    { "e":"code", "t":"" },
-                    { "e":"span", "t":" > " },
-                    { "e":"code", "t":"系統偏好設定" },
-                    { "e":"span", "t":" > " },
-                    { "e":"code", "t":"安全性與隱私權" },
-                    { "e":"span", "t":" > " },
-                    { "e":"code", "t":"隱私權" },
-                    { "e":"span", "t":" > " },
-                    { "e":"code", "t":"輔助使用" }
-                  ] }
-                ]
-              },
-              {
-                "e":"li",
-                "s":[
-                  {"e":"span", "t": "接著點選 "},
-                  {"e":"code", "t": "start using BTT & open preferences"}
-                ]
-              }
-            ]}
-          ]
+          "t":"如有安全性提醒，就依據步驟同意即可！"
         }
       ]
     },
@@ -190,7 +121,7 @@
                     { "e":"span", "t":" + " },
                     { "e":"code", "t":"↑" },
                     { "e":"span", "t":"，設定為 " },
-                    { "e":"code", "t":"Maximize Window to Next Monitor" }
+                    { "e":"code", "t":"Maximize Window to Next Monitor", "copy":"Maximize Window to Next Monitor" }
                   ]
                 },
                 {
@@ -203,7 +134,7 @@
                     { "e":"span", "t":" + " },
                     { "e":"code", "t":"↓" },
                     { "e":"span", "t":"，設定為 " },
-                    { "e":"code", "t":"Maximize Window to Next Monitor" }
+                    { "e":"code", "t":"Maximize Window to Next Monitor", "copy":"Maximize Window to Next Monitor" }
                   ]
                 }
               ]
@@ -247,7 +178,7 @@
                     { "e":"span", "t":"，然後下方勾選 " },
                     { "e":"code", "t":"cmd" },
                     { "e":"span", "t":"，最後 Predefined Action 選擇 " },
-                    { "e":"code", "t":"3F Swipe Left(Page Back)" }
+                    { "e":"code", "t":"3F Swipe Left(Page Back)", "copy":"3F Swipe Left(Page Back)" }
                   ]
                 },
                 {
@@ -258,7 +189,7 @@
                     { "e":"span", "t":"，然後下方勾選 " },
                     { "e":"code", "t":"cmd" },
                     { "e":"span", "t":"，最後 Predefined Action 選擇 " },
-                    { "e":"code", "t":"3F Swipe Right(Page Forward)" }
+                    { "e":"code", "t":"3F Swipe Right(Page Forward)", "copy":"3F Swipe Right(Page Forward)" }
                   ]
                 }
               ]
