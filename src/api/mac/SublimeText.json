@@ -159,13 +159,13 @@
         {
           "e":"li",
           "s":[
-            { "e":"p", "t":"SCSS" },
+            { "e":"p", "t":"sass" },
             {
               "e":"ul",
               "s":[
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
-                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"SCSS", "copy":"SCSS" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"SCSS" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"sass", "copy":"sass" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"sass" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }
@@ -211,6 +211,51 @@
                 { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"a file icon", "copy":"a file icon" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"A File Icon" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
+            }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"p", "t":"Git Blame" },
+            {
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"git blame", "copy":"git blame" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"git blame" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
+            }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"p", "t":"Swift" },
+            {
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"swift", "copy":"swift" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"swift" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
+              ]
+            }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"p", "t":"Golang" },
+            {
+              "e":"ul",
+              "s":[
+                { "e":"li", "s":[{ "e":"span", "t":"打開 Sublime Text，按下 " }, { "e":"code", "t":"command" }, { "e":"span", "t":" + " }, { "e":"code", "t":"shift" }, { "e":"span", "t":" + " }, { "e":"code", "t":"p" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"輸入 " }, { "e":"code", "t":"install", "copy":"install" }, { "e":"span", "t":" 選擇 " }, { "e":"code", "t":"Package Control: Install Package" }] },
+                { "e":"li", "s":[{ "e":"span", "t":"接著輸入 " }, { "e":"code", "t":"golang", "copy":"golang" }, { "e":"span", "t":"，選擇 " }, { "e":"code", "t":"golang" }] },
                 { "e":"li", "s":[{ "e":"span", "t":"重新開啟 " }, { "e":"code", "t":"Sublime Text" }] }
               ]
             }

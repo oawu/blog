@@ -104,6 +104,26 @@
           ]
         }
       ]
+    },
+    { "e":"h2", "t":"支援 MySQL 8 版本" },
+    {
+      "e":"ul",
+      "s":[
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"官網下載 － " },
+            { "e":"a", "t":"https://sequelpro.com/test-builds", "href":"https://sequelpro.com/test-builds" }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"span", "t":"備用載點 － " },
+            { "e":"a", "t":"Sequel-Pro-Build-97c1b85783.zip", "href":"https://cdn.ioa.tw/MacEnvInit/Sequel-Pro-Build-97c1b85783.zip" }
+          ]
+        }
+      ]
     }
   ],
   "r":[

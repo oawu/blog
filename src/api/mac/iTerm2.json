@@ -232,10 +232,8 @@
                         {
                           "e":"li",
                           "s":[
-                            { "e":"span", "t":"左下頭像 > " },
-                            { "e":"code", "t":"View profile" },
-                            { "e":"span", "t":" > " },
-                            { "e":"code", "t":"Settings" },
+                            { "e":"span", "t":"右上齒輪 > " },
+                            { "e":"code", "t":"Personal BitBucket settings" },
                             { "e":"span", "t":" > " },
                             { "e":"code", "t":"SSH keys" },
                             { "e":"span", "t":" > " },
@@ -276,8 +274,22 @@
           "e":"li",
           "s":[
             { "e":"p", "s":[
-              { "e":"span", "t":"Profiles" },
-              { "e":"span", "t":"，先選擇左邊的 " },
+              { "e":"code", "t":"General" },
+              { "e":"span", "t":" > " },
+              { "e":"code", "t":"Selection" },
+              { "e":"span", "t":" " },
+              { "e":"code", "t":"取消", "class":"red" },
+              { "e":"span", "t":" Clicking on a command selects it to restrict Find and Filter" }
+            ] }
+          ]
+        },
+        {
+          "e":"li",
+          "s":[
+            { "e":"p", "s":[
+              { "e":"code", "t":"Profiles" },
+              { "e":"span", "t":" － " },
+              { "e":"span", "t":"先選擇左邊的 " },
               { "e":"code", "t":"Default" },
               { "e":"span", "t":" 再進行以下設定" }
             ] },
@@ -371,7 +383,7 @@
         {
           "e":"li",
           "s":[
-            { "e":"p", "t":"Keys" },
+            { "e":"code", "t":"Keys" },
             {
               "e":"ul",
               "s":[
